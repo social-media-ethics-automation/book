@@ -1484,17 +1484,17 @@ title="Print to PDF"
 <h2>Statements: Steps that Run In Order<a class="headerlink" href="#statements-steps-that-run-in-order" title="Permalink to this headline">#</a></h2>
 <p>Python is in a group of programming languages called <a class="reference external" href="https://en.wikipedia.org/wiki/Imperative_programming">imperative programming languages</a>. At their core, programs written in imperative programming languages consist of a list of “statements” to be run in order.</p>
 <p>So a program in one of these languages would look like:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">statement</span> <span class="mi">1</span>
-<span class="n">statement</span> <span class="mi">2</span>
-<span class="n">statement</span> <span class="mi">3</span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>statement 1
+statement 2
+statement 3
 </pre></div>
 </div>
 <p>And when the program is run, statement 1 runs first, then statement 2, then, finally, statement 3.</p>
 <p>You might recognize this as the same style of instructions as a cooking recipe, like making a scrambled egg:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">Put</span> <span class="n">frying</span> <span class="n">pan</span> <span class="n">on</span> <span class="n">stove</span> <span class="ow">and</span> <span class="n">turn</span> <span class="n">it</span> <span class="n">on</span><span class="o">.</span>
-<span class="mf">2.</span> <span class="n">Crack</span> <span class="n">egg</span><span class="p">,</span> <span class="ow">and</span> <span class="n">pour</span> <span class="n">into</span> <span class="n">the</span> <span class="n">frying</span> <span class="n">pan</span> <span class="p">(</span><span class="n">throwing</span> <span class="n">away</span> <span class="n">the</span> <span class="n">shell</span><span class="p">)</span><span class="o">.</span>
-<span class="mf">3.</span> <span class="n">Add</span> <span class="n">salt</span> <span class="ow">and</span> <span class="n">pepper</span><span class="o">.</span>
-<span class="mf">3.</span> <span class="n">Stir</span> <span class="n">egg</span> <span class="k">while</span> <span class="n">it</span> <span class="n">cooks</span><span class="p">,</span> <span class="n">until</span> <span class="n">fully</span> <span class="n">cooked</span><span class="o">.</span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>1. Put frying pan on stove and turn it on.
+2. Crack egg, and pour into the frying pan (throwing away the shell).
+3. Add salt and pepper.
+3. Stir egg while it cooks, until fully cooked.
 </pre></div>
 </div>
 <p>In fact, the format of a cooking recipe is basically an imperative programming language where the cook acts as a “human computer” following the cooking instructions.</p>
@@ -1503,57 +1503,57 @@ title="Print to PDF"
 A human computer running a cooking program. In other words: “someone following a recipe” (<a class="reference external" href="https://www.pexels.com/photo/a-man-cooking-at-the-kitchen-6944110/">photo source</a>)</p>
 </div></blockquote>
 <p>Twitter bots are generally organized in this same way, so one bot might be organized like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">Log</span> <span class="n">into</span> <span class="n">Twitter</span>
-<span class="mf">2.</span> <span class="n">Post</span> <span class="n">offense</span> <span class="n">tweet</span> <span class="mi">1</span>
-<span class="mf">3.</span> <span class="n">Private</span> <span class="n">message</span> <span class="n">user</span> <span class="mi">2</span>
-<span class="mf">4.</span> <span class="n">Block</span> <span class="n">user</span> <span class="mi">3</span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>1. Log into Twitter
+2. Post offense tweet 1
+3. Private message user 2
+4. Block user 3
 </pre></div>
 </div>
 </section>
 <section id="variables-save-information-for-later">
 <h2>Variables: Save information for later<a class="headerlink" href="#variables-save-information-for-later" title="Permalink to this headline">#</a></h2>
-<p>The next organizing feature of programming languages like Python are “variables.”</p>
-<p>Variables are a way of saving information for later use. If we are</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TODO</span><span class="p">:</span> <span class="n">recipe</span> <span class="k">with</span> <span class="n">an</span> <span class="n">ingredient</span> <span class="n">made</span> <span class="ow">or</span> <span class="n">mixed</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">separate</span> <span class="n">bowl</span><span class="p">,</span> <span class="n">to</span> <span class="n">be</span> <span class="n">added</span> <span class="n">later</span>
+<p>The next organizing feature of programming languages like Python are “variables.” Variables are a way of saving information for later use.</p>
+<p>In a cooking recipe, an equivalent would be to put some of the preparation you’ve been doing to the side, so you can use it later:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>TODO: recipe with an ingredient made or mixed in a separate bowl, to be added later
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TODO</span><span class="p">:</span> <span class="n">social</span> <span class="n">media</span> <span class="n">example</span> <span class="n">where</span> <span class="n">something</span> <span class="ow">is</span> <span class="n">saved</span> <span class="ow">and</span> <span class="n">loaded</span> <span class="n">again</span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>TODO: social media example where something is saved and loaded again
 </pre></div>
 </div>
 </section>
 <section id="loops-repeating-actions">
 <h2>Loops: Repeating Actions<a class="headerlink" href="#loops-repeating-actions" title="Permalink to this headline">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TODO</span><span class="p">:</span> <span class="n">recipe</span> <span class="k">with</span> <span class="n">a</span> <span class="n">repeated</span> <span class="n">instruction</span><span class="p">,</span> <span class="n">like</span> <span class="k">for</span> <span class="n">each</span> <span class="n">egg</span><span class="p">,</span> <span class="k">break</span> <span class="n">it</span> <span class="ow">and</span> <span class="n">throw</span> <span class="n">out</span> <span class="n">the</span> <span class="n">shell</span><span class="p">,</span> <span class="ow">or</span> <span class="n">put</span> <span class="n">frosting</span> <span class="n">on</span> <span class="n">each</span> <span class="n">cupcake</span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>TODO: recipe with a repeated instruction, like for each egg, break it and throw out the shell, or put frosting on each cupcake
 </pre></div>
 </div>
 </section>
 <section id="code-blocks-grouping-statements">
 <h2>Code Blocks: Grouping statements<a class="headerlink" href="#code-blocks-grouping-statements" title="Permalink to this headline">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TODO</span><span class="p">:</span> <span class="n">recipe</span> <span class="k">with</span> <span class="n">a</span> <span class="nb">set</span> <span class="n">of</span> <span class="n">steps</span> <span class="n">to</span> <span class="n">repeat</span><span class="p">,</span> <span class="n">like</span> <span class="n">a</span> <span class="n">complicated</span> <span class="nb">set</span> <span class="n">of</span> <span class="n">toppings</span> <span class="k">for</span> <span class="n">each</span> <span class="n">cupcake</span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>TODO: recipe with a set of steps to repeat, like a complicated set of toppings for each cupcake
 </pre></div>
 </div>
 <section id="pausing-scheduling">
 <h3>Pausing/Scheduling<a class="headerlink" href="#pausing-scheduling" title="Permalink to this headline">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TODO</span><span class="p">:</span> <span class="n">recipe</span><span class="p">:</span> <span class="n">pull</span> <span class="n">the</span> <span class="n">muffins</span> <span class="n">out</span> <span class="n">of</span> <span class="n">the</span> <span class="n">oven</span> <span class="n">after</span> <span class="mi">10</span> <span class="n">minutes</span><span class="o">.</span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>TODO: recipe: pull the muffins out of the oven after 10 minutes.
 </pre></div>
 </div>
 </section>
 </section>
 <section id="conditionals-what-you-do-depends">
 <h2>Conditionals: What you do depends<a class="headerlink" href="#conditionals-what-you-do-depends" title="Permalink to this headline">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TODO</span><span class="p">:</span> <span class="n">recipe</span> <span class="n">where</span> <span class="n">at</span> <span class="mi">10</span> <span class="n">minutes</span> <span class="n">you</span> <span class="n">pull</span> <span class="n">out</span> <span class="n">the</span> <span class="n">muffins</span> <span class="ow">and</span> <span class="n">put</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">toothpick</span><span class="o">.</span> <span class="o">**</span><span class="n">If</span><span class="o">**</span> <span class="n">the</span> <span class="n">toothpick</span> <span class="ow">is</span> <span class="n">clean</span><span class="p">,</span> <span class="n">they</span> <span class="n">are</span> <span class="n">done</span><span class="p">,</span> <span class="n">otherwise</span><span class="p">,</span> <span class="n">put</span> <span class="n">them</span> <span class="ow">in</span> <span class="k">for</span> <span class="n">another</span> <span class="mi">2</span> <span class="n">minutes</span> <span class="ow">and</span> <span class="n">check</span> <span class="n">again</span><span class="o">.</span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>TODO: recipe where at 10 minutes you pull out the muffins and put in a toothpick. **If** the toothpick is clean, they are done, otherwise, put them in for another 2 minutes and check again.
 </pre></div>
 </div>
 </section>
 <section id="events-when-you-do-something-depends">
 <h2>Events: When you do something depends<a class="headerlink" href="#events-when-you-do-something-depends" title="Permalink to this headline">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TODO</span><span class="p">:</span> <span class="n">Kettle</span><span class="p">:</span> <span class="n">put</span> <span class="n">on</span> <span class="n">heat</span> <span class="ow">and</span> <span class="n">leave</span> <span class="n">until</span> <span class="n">the</span> <span class="n">kettle</span> <span class="n">whistles</span><span class="p">,</span> <span class="n">then</span> <span class="n">make</span> <span class="n">tea</span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>TODO: Kettle: put on heat and leave until the kettle whistles, then make tea
 </pre></div>
 </div>
 </section>
 <section id="functions-libraries-run-another-program">
 <h2>Functions/Libraries: Run another program<a class="headerlink" href="#functions-libraries-run-another-program" title="Permalink to this headline">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TODO</span><span class="p">:</span> <span class="n">recipe</span><span class="p">:</span> <span class="n">step</span> <span class="mi">1</span><span class="p">:</span> <span class="n">make</span> <span class="n">a</span> <span class="n">base</span> <span class="n">dough</span> <span class="p">(</span><span class="n">see</span> <span class="n">recipe</span> <span class="n">on</span> <span class="n">page</span> <span class="mi">42</span><span class="p">)</span><span class="o">.</span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>TODO: recipe: step 1: make a base dough (see recipe on page 42).
 </pre></div>
 </div>
 </section>

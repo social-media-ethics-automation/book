@@ -1411,11 +1411,6 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#install-helpful-library">
-   Install helpful library
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#variables-and-assignment-single">
    Variables and assignment (single “=”)
   </a>
@@ -1460,11 +1455,6 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#install-helpful-library">
-   Install helpful library
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#variables-and-assignment-single">
    Variables and assignment (single “=”)
   </a>
@@ -1506,30 +1496,6 @@ title="Print to PDF"
 <blockquote>
 <div><p>I was at UW (University of Washington, Seattle), the other day.</p>
 </div></blockquote>
-<section id="install-helpful-library">
-<h2>Install helpful library<a class="headerlink" href="#install-helpful-library" title="Permalink to this headline">#</a></h2>
-<p>Before we begin, run the code below to install a helpful library, then refresh your browser tab.</p>
-<p>Once you’ve done that, when you right click here, one of the bottom options should be “Variable Inspector.” Open that and then drag it to the side to make two divided tabs (as I’ll demonstrate).</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install lckr-jupyterlab-variableinspector
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
-Collecting lckr-jupyterlab-variableinspector
-  Using cached lckr_jupyterlab_variableinspector-3.0.9.tar.gz (60 kB)
-  Installing build dependencies: started
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
-WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 <section id="variables-and-assignment-single">
 <h2>Variables and assignment (single “=”)<a class="headerlink" href="#variables-and-assignment-single" title="Permalink to this headline">#</a></h2>
 <p>Variables are a place in the computer where a piece of information is saved with a particular name.</p>
@@ -1548,6 +1514,11 @@ WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_days</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">num_days</span> <span class="o">*</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
 </pre></div>
 </div>
 </div>
@@ -1583,6 +1554,11 @@ WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">minutes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1576800
 </pre></div>
 </div>
 </div>
@@ -1633,7 +1609,7 @@ WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [2],</span> in <span class="ni">&lt;cell line: 14&gt;</span><span class="nt">()</span>
+<span class="nn">Input In [6],</span> in <span class="ni">&lt;cell line: 14&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">display</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="ne">---&gt; </span><span class="mi">14</span> <span class="n">display</span><span class="p">(</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
