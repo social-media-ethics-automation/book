@@ -1,0 +1,17 @@
+name: Copy Book to Docs (for github pages hosting)
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - run: cp -a book_contents/_build/html/. docs/
+      - run: touch docs/.nojekyll
+      - uses: EndBug/add-and-commit@v9
+        with:
+          author_name: copy_book_to_build
+          message: 'Preparing book for github pages: copying book build from _build/html to /docs'
+          
+      - run: echo "🍏 This job's status is ${{ job.status }}."
