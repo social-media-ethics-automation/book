@@ -1,0 +1,12 @@
+# Colonialism in Tech
+- Silicon Valley Centralization
+  - Software companies are based in Silicon valley in California, but their users live around the world
+  - See book: [Coding places : software practice in a South American city](https://alliance-primo.hosted.exlibrisgroup.com/permalink/f/kjtuig/CP71113610430001451)
+- [One Laptop Per Child](https://www.theverge.com/2018/4/16/17233946/olpcs-100-laptop-education-where-is-it-now):
+  - “In late 2005, tech visionary and MIT Media Lab founder Nicholas Negroponte [introduced a] $100 laptop would have all the features of an ordinary computer but require so little electricity that a child could power it with a hand crank”
+  - He wanted to give every child in the world a laptop, so they could learn computers
+  - But…
+    - It didn’t work well (hand-powered generator unreliable, screen to small to read)
+    - It didn’t come with very good instructions
+    - It wasn’t designed for what kids around the world would actually want (no input from actual kids around the world, just what the project leaders guessed would be wanted)
+    - Project failed

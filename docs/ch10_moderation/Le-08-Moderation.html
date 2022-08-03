@@ -1,0 +1,1655 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>10.2. Default and named parameters &#8212; Introduction to Social Media, Ethics, and Computer Programming</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="11. Content Moderators" href="../ch11_moderators/00_moderators.html" />
+    <link rel="prev" title="10.1. Content Moderation" href="01_moderation.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Social Media, Ethics, and Computer Programming</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction to Social Media, Ethics, and Computer Programming
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Book
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch01_intro/00_intro.html">
+   1. Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch01_intro/01_sacco_tweet.html">
+     1.1. The case of Justine Sacco’s racist joke tweet
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch01_intro/02_kumail.html">
+     1.2. Kumail Nanjiani’s Reflections on Ethics in Tech
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch02_definitions/00_intro.html">
+   2. Definitions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch02_definitions/01_social_media.html">
+     2.1. Social Media
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ch02_definitions/02_ethics/00_ethics.html">
+     2.2. Ethics
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/02_ethics/01_golden_rule.html">
+       2.2.1. The “Golden Rule”
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/02_ethics/02_ethics_frameworks.html">
+       2.2.2. Ethics Frameworks
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/02_ethics/03_other_frameworks.html">
+       2.2.3. Other Frameworks
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/02_ethics/04_using_frameworks.html">
+       2.2.4. Using Frameworks
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ch02_definitions/03_programming/00_programming.html">
+     2.3. Computer Programming
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/03_programming/01_language_translation.html">
+       2.3.1. Language Translation (Analogy)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/03_programming/02_first_programmers.html">
+       2.3.2. Talking to Computers (the first programmers)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/03_programming/03_compilers.html">
+       2.3.3. A better way: Compilers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/03_programming/04_a_twitter_bot.html">
+       2.3.4. An example twitter bot
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/03_programming/Le-01-Intro.html">
+       2.3.5. Lecture 1 Demo
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/03_programming/Lab-1-Setup.html">
+       2.3.6. 01.5 Lab: Setup
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch03_bots/00_bots.html">
+   3. Bots
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch03_bots/01_bots.html">
+     3.1. Bots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch03_bots/Le-02-Bots.html">
+     3.2. Lab: Basic Python Concepts
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch04_history/00_history.html">
+   4. History of Social Media
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch04_history/01_history.html">
+     4.1. History of Social Media
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch04_history/Le-03-Social_Media_History.html">
+     4.2. Demo: Basic Python Concepts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch04_history/Lab-2a-Python-concepts.html">
+     4.5. Lab: Python programming concept practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch04_history/Lab-2b-Bot-Practice.html">
+     4.6. Lab: Twitter Bot Practice
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch05_authenticity/00_authenticity.html">
+   5. Authenticity
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch05_authenticity/01_authenticity.html">
+     5.1. Authenticity
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch06_trolling/00_trolling.html">
+   6. Trolling
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch06_trolling/01_trolling.html">
+     6.1. Trolling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch06_trolling/Le-04-authenticity-trolling.html">
+     6.2. Lab: tweet source, reply bot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch07_virality/00_virality.html">
+   7. Virality and Context Collapse
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch07_virality/01_virality.html">
+     7.1. Virality and Context Collapse
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch07_virality/Le-05-Virality.html">
+     7.2. Demo of getting image data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch07_virality/Lab-3-Conditionals.html">
+     7.3. Lab: Conditionals
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch08_data_mining/00_data_mining.html">
+   8. Data and Data Mining
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch08_data_mining/01_data_mining.html">
+     8.1. Data and Data Mining
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch08_data_mining/Le-06-DataMining.html">
+     8.2. Demo of getting image data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch09_recommendations/00_recommendations.html">
+   9. Recommendation Algorithms
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch09_recommendations/01_recommendations.html">
+     9.1. Recommendation Algorithms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch09_recommendations/Le-07-Recommendations.html">
+     9.2. Demos of Functions, Dictionaries, and Recommendations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch09_recommendations/Lab-4-Pandas_Intro.html">
+     9.4. Lab: Pandas Intro
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="00_moderation.html">
+   10. Content Moderation
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="01_moderation.html">
+     10.1. Content Moderation
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     10.2. Default and named parameters
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch11_moderators/00_moderators.html">
+   11. Content Moderators
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch11_moderators/01_moderators.html">
+     11.1. Content Moderators
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch11_moderators/Le-09-Moderators.html">
+     11.2. Demo: Sentiment Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch11_moderators/Lab-5-Functions.html">
+     11.3. Lab: Functions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch12_crowd_work/00_crowd_work.html">
+   12. Crowd Work
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch12_crowd_work/01_crowd_work.html">
+     12.1. Crowd Work
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch12_crowd_work/Lab-6-Nested-Loops.html">
+     12.2. Lab: Nested Loops Review
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch13_harassment/00_harassment.html">
+   13. Harassment
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch13_harassment/01_harassment.html">
+     13.1. Harassment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch13_harassment/Le-11-Harassment.html">
+     13.2. Demo of recursion
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch14_public_shaming/00_public_shaming.html">
+   14. Public Shaming
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch14_public_shaming/01_public_shaming.html">
+     14.1. Public Shaming
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch14_public_shaming/Lab-7-Recursion.html">
+     14.2. Lab: Recursion
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch15_privacy/00_privacy.html">
+   15. Privacy
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch15_privacy/01_privacy.html">
+     15.1. Privacy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch15_privacy/Le-13-privacy.html">
+     15.2. Demo: recursion with real tweets
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch16_mental_health/00_mental_health.html">
+   16. Mental Health
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch16_mental_health/01_mental_health.html">
+     16.1. Mental Health
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch16_mental_health/Lab-8-Scheduling.html">
+     16.2. Scheduling Tasks Demo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ch17_capitalism/00_capitalism.html">
+   17. Capitalism
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ch18_colonialism/00_colonialism.html">
+   18. Colonialism
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ch19_conclusions/00_conclusions.html">
+   19. Conclusions
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/main?urlpath=tree/docs/ch10_moderation/Le-08-Moderation.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fch10_moderation/Le-08-Moderation.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/ch10_moderation/Le-08-Moderation.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   10.2. Default and named parameters
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#returns">
+   10.3. Returns
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#update-recommendation-algorithm-from-last-time">
+   10.4. Update recommendation algorithm from last time
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Default and named parameters</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   10.2. Default and named parameters
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#returns">
+   10.3. Returns
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#update-recommendation-algorithm-from-last-time">
+   10.4. Update recommendation algorithm from last time
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Demo: Writing Functions</span>
+<span class="c1">## Install variable inspector (then reload browser tab)</span>
+<span class="o">!</span>pip install lckr-jupyterlab-variableinspector
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
+Collecting lckr-jupyterlab-variableinspector
+  Using cached lckr_jupyterlab_variableinspector-3.0.9.tar.gz (60 kB)
+  Installing build dependencies: started
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
+WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
+</pre></div>
+</div>
+</div>
+</div>
+<section id="default-and-named-parameters">
+<h1><span class="section-number">10.2. </span>Default and named parameters<a class="headerlink" href="#default-and-named-parameters" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">say_hello</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">say_hello</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">say_hello</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Kyle&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello Kyle
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">pause_before_saying_hello</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">pause_time</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">pause_time</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pause_before_saying_hello</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pause_before_saying_hello</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Kyle&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello Kyle
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pause_before_saying_hello</span><span class="p">(</span><span class="n">pause_time</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pause_before_saying_hello</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Kyle&quot;</span><span class="p">,</span> <span class="n">pause_time</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello Kyle
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="returns">
+<h1><span class="section-number">10.3. </span>Returns<a class="headerlink" href="#returns" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mult</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">num1</span> <span class="o">*</span> <span class="n">num2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_val</span> <span class="o">=</span> <span class="n">mult</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">make_hello_message</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Hello &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;! How are you today?&quot;</span>
+    <span class="k">return</span> <span class="n">message</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hi_kyle_message</span> <span class="o">=</span> <span class="n">make_hello_message</span><span class="p">(</span><span class="s2">&quot;Kyle&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="update-recommendation-algorithm-from-last-time">
+<h1><span class="section-number">10.4. </span>Update recommendation algorithm from last time<a class="headerlink" href="#update-recommendation-algorithm-from-last-time" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make sure tweepy library is installed</span>
+<span class="o">!</span>pip install tweepy 
+<span class="kn">import</span> <span class="nn">tweepy</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load my twitter keys</span>
+<span class="kn">import</span> <span class="nn">my_bot_keys</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># log into tweepy</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span>
+    <span class="n">bearer_token</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">bearer_token</span><span class="p">,</span>
+    <span class="n">consumer_key</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">consumer_secret</span><span class="p">,</span>                   
+    <span class="n">access_token</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">access_token_secret</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">id_from_username</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
+    <span class="n">user_info</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">)</span>
+    <span class="n">user_id</span> <span class="o">=</span> <span class="n">user_info</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">id</span>
+    <span class="k">return</span> <span class="n">user_id</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Changes from 09 lecture: </span>
+<span class="c1">#</span>
+<span class="c1">#  - I have taken the code to get from a username to a user id and </span>
+<span class="c1">#    put it in its own function above (id_from_username), which </span>
+<span class="c1">#    makes my code below slightly shorter and easier to read</span>
+<span class="c1">#</span>
+<span class="c1">#  - I have made an optional parameter num_followers_to_check, with</span>
+<span class="c1">#    a default of 3, so I can change how many users the person is </span>
+<span class="c1">#    following to start with, so I can change that value when I </span>
+<span class="c1">#    call the function</span>
+
+
+<span class="k">def</span> <span class="nf">get_follow_suggestions</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">num_followers_to_check</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+    <span class="c1"># for a given user, I need to user id</span>
+    <span class="n">user_id</span> <span class="o">=</span> <span class="n">id_from_username</span><span class="p">(</span><span class="n">username</span><span class="p">)</span>
+
+    <span class="c1"># find the people that user currently follows</span>
+    <span class="n">follow_users</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_users_following</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">user_id</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="n">num_followers_to_check</span><span class="p">)</span>
+
+    <span class="c1"># dictionary to track who my follow follows are, as possible suggestions</span>
+    <span class="c1"># The keys will be the username, and the values will be how often they</span>
+    <span class="c1"># appeared as follow follows</span>
+    <span class="n">possible_suggestion_counts</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="c1"># for each of those people, see who they follow</span>
+    <span class="k">for</span> <span class="n">follow_user</span> <span class="ow">in</span> <span class="n">follow_users</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;looking for followings of user: &quot;</span> <span class="o">+</span> <span class="n">follow_user</span><span class="o">.</span><span class="n">username</span><span class="p">)</span>
+        <span class="n">follow_follow_users</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_users_following</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">follow_user</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">follow_follow_user</span> <span class="ow">in</span> <span class="n">follow_follow_users</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+            <span class="n">possible_suggestion</span> <span class="o">=</span> <span class="n">follow_follow_user</span><span class="o">.</span><span class="n">username</span>
+
+            <span class="c1"># If this possible suggestion is not yet in the dictionary,</span>
+            <span class="c1"># add it with a count of one</span>
+            <span class="k">if</span> <span class="n">possible_suggestion</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">possible_suggestion_counts</span><span class="p">:</span>
+                <span class="n">possible_suggestion_counts</span><span class="p">[</span><span class="n">possible_suggestion</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span> <span class="c1">#otherwise, update the count in the dictionary</span>
+                <span class="n">possible_suggestion_counts</span><span class="p">[</span><span class="n">possible_suggestion</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+
+    <span class="c1"># recommend that I follow the people who those people follow most</span>
+    <span class="n">ordered_suggestions</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">possible_suggestion_counts</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">ordered_suggestions</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_follow_suggestions</span><span class="p">(</span><span class="s2">&quot;UW&quot;</span><span class="p">,</span> <span class="n">num_followers_to_check</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>looking for followings of user: uw_ada
+looking for followings of user: CornickLeslie
+looking for followings of user: ATI_Talent
+looking for followings of user: gb_mackensen
+looking for followings of user: UWAnesthPainMed
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;uwcse&#39;, 2),
+ (&#39;DenzilJS&#39;, 2),
+ (&#39;uw_chiefs&#39;, 2),
+ (&#39;dilithium21&#39;, 2),
+ (&#39;TVerneus&#39;, 2),
+ (&#39;MiattaEWilliams&#39;, 2),
+ (&#39;scamaefuna&#39;, 2),
+ (&#39;sifeld&#39;, 2),
+ (&#39;basakcoruhUW&#39;, 2),
+ (&#39;womenofimpacti1&#39;, 2),
+ (&#39;seanflack29&#39;, 2),
+ (&#39;NEJM&#39;, 2),
+ (&#39;avidan_michael&#39;, 2),
+ (&#39;mbruchas&#39;, 2),
+ (&#39;fac_uw&#39;, 2),
+ (&#39;drwilvancleve&#39;, 2),
+ (&#39;UWContinuum&#39;, 1),
+ (&#39;ByrneHaber&#39;, 1),
+ (&#39;AskEARN&#39;, 1),
+ (&#39;disabilitystats&#39;, 1),
+ (&#39;JillHoughton&#39;, 1),
+ (&#39;LangTeachingLab&#39;, 1),
+ (&#39;awkawk&#39;, 1),
+ (&#39;SSIReview&#39;, 1),
+ (&#39;MAWConsultngLLC&#39;, 1),
+ (&#39;feather&#39;, 1),
+ (&#39;uw_ece&#39;, 1),
+ (&#39;WeThe15&#39;, 1),
+ (&#39;steven_aquino&#39;, 1),
+ (&#39;AmbRice46&#39;, 1),
+ (&#39;LFLegal&#39;, 1),
+ (&#39;veron4ica&#39;, 1),
+ (&#39;jcmankoff&#39;, 1),
+ (&#39;independenceinc&#39;, 1),
+ (&#39;LynnThoman&#39;, 1),
+ (&#39;RebeccaCokley&#39;, 1),
+ (&#39;projectlets&#39;, 1),
+ (&#39;SFdirewolf&#39;, 1),
+ (&#39;CripCampFilm&#39;, 1),
+ (&#39;DisInHigherEd&#39;, 1),
+ (&#39;ChronInvisSTEM&#39;, 1),
+ (&#39;theADHDacademic&#39;, 1),
+ (&#39;TiffanyHaddish&#39;, 1),
+ (&#39;halfaccess&#39;, 1),
+ (&#39;InclusHub&#39;, 1),
+ (&#39;ted_drake&#39;, 1),
+ (&#39;dequesystems&#39;, 1),
+ (&#39;BeMyEyes&#39;, 1),
+ (&#39;autistichoya&#39;, 1),
+ (&#39;sinsinvalid&#39;, 1),
+ (&#39;LevelAccessA11y&#39;, 1),
+ (&#39;webaim&#39;, 1),
+ (&#39;TheA11yFiles&#39;, 1),
+ (&#39;merrierm&#39;, 1),
+ (&#39;TPGinteractive&#39;, 1),
+ (&#39;athersharif&#39;, 1),
+ (&#39;A11YProject&#39;, 1),
+ (&#39;A11yByChat&#39;, 1),
+ (&#39;NCILAdvocacy&#39;, 1),
+ (&#39;NOD_ItsAbility&#39;, 1),
+ (&#39;AUCDNews&#39;, 1),
+ (&#39;AcademicAbleism&#39;, 1),
+ (&#39;DisInGradSchool&#39;, 1),
+ (&#39;AbleismAcademia&#39;, 1),
+ (&#39;DisabilityHistr&#39;, 1),
+ (&#39;DisabledAcadem&#39;, 1),
+ (&#39;chron_ac&#39;, 1),
+ (&#39;caitskirby&#39;, 1),
+ (&#39;AimiHamraie&#39;, 1),
+ (&#39;UWRehabMed&#39;, 1),
+ (&#39;ctr4neurotech&#39;, 1),
+ (&#39;TaskarCenter&#39;, 1),
+ (&#39;nalyak&#39;, 1),
+ (&#39;AccessNerds&#39;, 1),
+ (&#39;CanIPlayThat&#39;, 1),
+ (&#39;CyclopediaBrain&#39;, 1),
+ (&#39;NACDD&#39;, 1),
+ (&#39;DisabilityRtsOR&#39;, 1),
+ (&#39;HarkinAtDrake&#39;, 1),
+ (&#39;uwcreate&#39;, 1),
+ (&#39;AAPD&#39;, 1),
+ (&#39;DisabilityIN&#39;, 1),
+ (&#39;educause&#39;, 1),
+ (&#39;HarkinSummit&#39;, 1),
+ (&#39;reladner&#39;, 1),
+ (&#39;CDETweets&#39;, 1),
+ (&#39;UW_CCER&#39;, 1),
+ (&#39;adagreatlakes&#39;, 1),
+ (&#39;kristagreear&#39;, 1),
+ (&#39;ncldorg&#39;, 1),
+ (&#39;teachaccess&#39;, 1),
+ (&#39;seattletimes&#39;, 1),
+ (&#39;DREAMdisability&#39;, 1),
+ (&#39;NDRNadvocates&#39;, 1),
+ (&#39;NewEnglandADA&#39;, 1),
+ (&#39;adapacific&#39;, 1),
+ (&#39;SO_Washington&#39;, 1),
+ (&#39;NationalRamp&#39;, 1),
+ (&#39;UWRecreation&#39;, 1),
+ (&#39;UWundergrad&#39;, 1),
+ (&#39;2022USAGames&#39;, 1),
+ (&#39;SBCTCWashington&#39;, 1),
+ (&#39;UWDawgDaze&#39;, 1),
+ (&#39;UWResilience&#39;, 1),
+ (&#39;DubsUW&#39;, 1),
+ (&#39;SpecialOlympics&#39;, 1),
+ (&#39;uwadvising&#39;, 1),
+ (&#39;NAD1880&#39;, 1),
+ (&#39;VilissaThompson&#39;, 1),
+ (&#39;SouthwestADA&#39;, 1),
+ (&#39;UWArtSci&#39;, 1),
+ (&#39;UWMedicine&#39;, 1),
+ (&#39;uwstudentlife&#39;, 1),
+ (&#39;NARICInfo&#39;, 1),
+ (&#39;msiyamwa&#39;, 1),
+ (&#39;OlympiaWatch&#39;, 1),
+ (&#39;WAHouseDems&#39;, 1),
+ (&#39;EB3__&#39;, 1),
+ (&#39;StemUwb&#39;, 1),
+ (&#39;birdref90&#39;, 1),
+ (&#39;Bothell_Kenmore&#39;, 1),
+ (&#39;Kaepernick7&#39;, 1),
+ (&#39;theslants&#39;, 1),
+ (&#39;SimonTheTam&#39;, 1),
+ (&#39;TheCROWuwb&#39;, 1),
+ (&#39;UWFosterSchool&#39;, 1),
+ (&#39;BeginAtBothell&#39;, 1),
+ (&#39;PeterFabianLab&#39;, 1),
+ (&#39;CityofBothell&#39;, 1),
+ (&#39;DrAMcConnell1&#39;, 1),
+ (&#39;Hilary_A_Godwin&#39;, 1),
+ (&#39;erikasarmstrong&#39;, 1),
+ (&#39;ChristinaDAbreu&#39;, 1),
+ (&#39;NoralynDP&#39;, 1),
+ (&#39;jfigueroaflores&#39;, 1),
+ (&#39;gillianrhayes&#39;, 1),
+ (&#39;Renetta_Tull&#39;, 1),
+ (&#39;UWGOV&#39;, 1),
+ (&#39;JenniferCohenUW&#39;, 1),
+ (&#39;davinaduerr&#39;, 1),
+ (&#39;SlatterVandana&#39;, 1),
+ (&#39;dsfrockt&#39;, 1),
+ (&#39;KAppel49&#39;, 1),
+ (&#39;insidehighered&#39;, 1),
+ (&#39;ZacharyRWood&#39;, 1),
+ (&#39;Talk_Tara&#39;, 1),
+ (&#39;TammyGocial&#39;, 1),
+ (&#39;reineayiti&#39;, 1),
+ (&#39;vulnerablepops&#39;, 1),
+ (&#39;BurnsArdolino&#39;, 1),
+ (&#39;BethanyZSutton&#39;, 1),
+ (&#39;emissy0601&#39;, 1),
+ (&#39;ACEducation&#39;, 1),
+ (&#39;aacu&#39;, 1),
+ (&#39;womeninhighered&#39;, 1),
+ (&#39;uw_stem&#39;, 1),
+ (&#39;HuskyDSA&#39;, 1),
+ (&#39;CIG_UW&#39;, 1),
+ (&#39;uwearthlab&#39;, 1),
+ (&#39;chariteach&#39;, 1),
+ (&#39;UWHusky100&#39;, 1),
+ (&#39;trappedinlab&#39;, 1),
+ (&#39;vijisathy&#39;, 1),
+ (&#39;DrMrsKellyHogan&#39;, 1),
+ (&#39;KizzyPhD&#39;, 1),
+ (&#39;CitizenV8&#39;, 1),
+ (&#39;kaitlynkinzel&#39;, 1),
+ (&#39;OUtreachAii&#39;, 1),
+ (&#39;Melanie_e_t&#39;, 1),
+ (&#39;EvergreenStCol&#39;, 1),
+ (&#39;tblarnell&#39;, 1),
+ (&#39;EconAllianceSC&#39;, 1),
+ (&#39;EvergreenHosp&#39;, 1),
+ (&#39;BrianaHeng&#39;, 1),
+ (&#39;jstafford13&#39;, 1),
+ (&#39;HERSNetwork&#39;, 1),
+ (&#39;UWSoN&#39;, 1),
+ (&#39;SecCardona&#39;, 1),
+ (&#39;tableaupublic&#39;, 1),
+ (&#39;tableau&#39;, 1),
+ (&#39;AlaskaAir&#39;, 1),
+ (&#39;Ferebee2PhD&#39;, 1),
+ (&#39;UCSUSA&#39;, 1),
+ (&#39;huskyband&#39;, 1),
+ (&#39;ProfBeccaPrice&#39;, 1),
+ (&#39;CoryChampagne&#39;, 1),
+ (&#39;gwkimura&#39;, 1),
+ (&#39;tressiemcphd&#39;, 1),
+ (&#39;TheRealBuzz&#39;, 1),
+ (&#39;AstroVicGlover&#39;, 1),
+ (&#39;MitchSJackson&#39;, 1),
+ (&#39;Marine_Madness&#39;, 1),
+ (&#39;savingoceans&#39;, 1),
+ (&#39;ShimaAbadi&#39;, 1),
+ (&#39;rachelescherr&#39;, 1),
+ (&#39;stiber&#39;, 1),
+ (&#39;ewarren&#39;, 1),
+ (&#39;thelma_madzima&#39;, 1),
+ (&#39;drcynthiacchang&#39;, 1),
+ (&#39;aswwulobbyist&#39;, 1),
+ (&#39;SeanMarsh4&#39;, 1),
+ (&#39;WAComDirector&#39;, 1),
+ (&#39;amyklobuchar&#39;, 1),
+ (&#39;UWEnvironment&#39;, 1),
+ (&#39;DebHaalandNM&#39;, 1),
+ (&#39;EWUCyber&#39;, 1),
+ (&#39;DrGlitterbear&#39;, 1),
+ (&#39;HollyTheHusky&#39;, 1),
+ (&#39;nicolejbolduc&#39;, 1),
+ (&#39;haschweingruber&#39;, 1),
+ (&#39;frizzlerichard&#39;, 1),
+ (&#39;KamalaHarris&#39;, 1),
+ (&#39;saintmarys&#39;, 1),
+ (&#39;The74&#39;, 1),
+ (&#39;AVID4College&#39;, 1),
+ (&#39;PresidentCasey&#39;, 1),
+ (&#39;kevincarey1&#39;, 1),
+ (&#39;CCAS_NEIU&#39;, 1),
+ (&#39;Carlsonics&#39;, 1),
+ (&#39;AlexMWilliams_&#39;, 1),
+ (&#39;KaitlynVitez&#39;, 1),
+ (&#39;will_patch&#39;, 1),
+ (&#39;higheredwonk&#39;, 1),
+ (&#39;Don_Yu_&#39;, 1),
+ (&#39;srsowens&#39;, 1),
+ (&#39;bterrylong&#39;, 1),
+ (&#39;StMarysMD&#39;, 1),
+ (&#39;USC&#39;, 1),
+ (&#39;SchulerScholar&#39;, 1),
+ (&#39;gtadmission&#39;, 1),
+ (&#39;FandMCollege&#39;, 1),
+ (&#39;DaniDougPost&#39;, 1),
+ (&#39;KellyyMaee&#39;, 1),
+ (&#39;srebeducation&#39;, 1),
+ (&#39;TamaraHiler&#39;, 1),
+ (&#39;draabailey&#39;, 1),
+ (&#39;MSCollegeOpp&#39;, 1),
+ (&#39;rayalq&#39;, 1),
+ (&#39;etkeld&#39;, 1),
+ (&#39;cbinkley&#39;, 1),
+ (&#39;laurenmlumpkin&#39;, 1),
+ (&#39;biancaquilan&#39;, 1),
+ (&#39;UNCF&#39;, 1),
+ (&#39;bellwethered&#39;, 1),
+ (&#39;TrellisFdn&#39;, 1),
+ (&#39;DaleWhittaker&#39;, 1),
+ (&#39;OppInsights&#39;, 1),
+ (&#39;ECMCSuccess&#39;, 1),
+ (&#39;FirstgenCenter&#39;, 1),
+ (&#39;ScottJaschik&#39;, 1),
+ (&#39;tmcf_hbcu&#39;, 1),
+ (&#39;JonMarcusBoston&#39;, 1),
+ (&#39;collegefund&#39;, 1),
+ (&#39;yvonn3munoz&#39;, 1),
+ (&#39;SupportGenHope&#39;, 1),
+ (&#39;UCAdvocacy&#39;, 1),
+ (&#39;JennaSTalbot&#39;, 1),
+ (&#39;WhitebdAdvisor&#39;, 1),
+ (&#39;_BillMoses&#39;, 1),
+ (&#39;ssnyderinq&#39;, 1),
+ (&#39;kgsouthern&#39;, 1),
+ (&#39;oliviarsanchez&#39;, 1),
+ (&#39;szarlotka&#39;, 1),
+ (&#39;katebellows&#39;, 1),
+ (&#39;NSPA_Tweets&#39;, 1),
+ (&#39;NaomiJayHarris&#39;, 1),
+ (&#39;nick4iezos&#39;, 1),
+ (&#39;blackfirstgens&#39;, 1),
+ (&#39;AEDukehighered&#39;, 1),
+ (&#39;StephenMoret&#39;, 1),
+ (&#39;jesseocnl&#39;, 1),
+ (&#39;American_CAC&#39;, 1),
+ (&#39;kristinHCM&#39;, 1),
+ (&#39;dtshapiro&#39;, 1),
+ (&#39;drseangallagher&#39;, 1),
+ (&#39;rachela_hall&#39;, 1),
+ (&#39;fernandesglobe&#39;, 1),
+ (&#39;Education_AIR&#39;, 1),
+ (&#39;ErnestEzeugo&#39;, 1),
+ (&#39;ProfessorFlores&#39;, 1),
+ (&#39;A2Arnett&#39;, 1),
+ (&#39;tim_renick&#39;, 1),
+ (&#39;ssmallwd&#39;, 1),
+ (&#39;jillbarshay&#39;, 1),
+ (&#39;Wildavsky&#39;, 1),
+ (&#39;LoisElfman&#39;, 1),
+ (&#39;richardwhitmir&#39;, 1),
+ (&#39;FeliciaMello&#39;, 1),
+ (&#39;franciediep&#39;, 1),
+ (&#39;NPEdAccess&#39;, 1),
+ (&#39;kevinrmcclure&#39;, 1),
+ (&#39;lilah_burke&#39;, 1),
+ (&#39;HughTFerguson&#39;, 1),
+ (&#39;DeleceWrites&#39;, 1),
+ (&#39;meganzahneis&#39;, 1),
+ (&#39;lauraperna1&#39;, 1),
+ (&#39;NISOD&#39;, 1),
+ (&#39;MichelleDimino&#39;, 1),
+ (&#39;Brown_e_Points&#39;, 1),
+ (&#39;CQuintanaDC&#39;, 1),
+ (&#39;mikeitzkowitz&#39;, 1),
+ (&#39;KirkCarapezza&#39;, 1),
+ (&#39;SaraWeissman&#39;, 1),
+ (&#39;JenniferZeisler&#39;, 1),
+ (&#39;Wil_EdTrust&#39;, 1),
+ (&#39;territaylor&#39;, 1),
+ (&#39;kclarkcollege&#39;, 1),
+ (&#39;kresgedu&#39;, 1),
+ (&#39;JonBoeckenstedt&#39;, 1),
+ (&#39;AcceptGroup&#39;, 1),
+ (&#39;MACooperPhD&#39;, 1),
+ (&#39;danielmrossman&#39;, 1),
+ (&#39;ajmilammdphd&#39;, 1),
+ (&#39;MerriBremer&#39;, 1),
+ (&#39;JensEichhornMD&#39;, 1),
+ (&#39;jeffreygeske&#39;, 1),
+ (&#39;CreightonDon&#39;, 1),
+ (&#39;ArisKaratasakis&#39;, 1),
+ (&#39;LauraMendezPino&#39;, 1),
+ (&#39;AshleyKyalwazi&#39;, 1),
+ (&#39;mv3foundation&#39;, 1),
+ (&#39;CynthiaTaub&#39;, 1),
+ (&#39;beccaaron1&#39;, 1),
+ (&#39;jastburyMD&#39;, 1),
+ (&#39;BuddheSujatha&#39;, 1),
+ (&#39;cardioPCImom&#39;, 1),
+ (&#39;mathur_a&#39;, 1),
+ (&#39;igeorge1975&#39;, 1),
+ (&#39;larrysdeanmd&#39;, 1),
+ (&#39;kibelani&#39;, 1),
+ (&#39;jbarnescm&#39;, 1),
+ (&#39;HarmonyKalau&#39;, 1),
+ (&#39;drankitjain&#39;, 1),
+ (&#39;JuliaRitterhoff&#39;, 1),
+ (&#39;RobertLobatoMD&#39;, 1),
+ (&#39;Alina_Khurgel&#39;, 1),
+ (&#39;BAshinne&#39;, 1),
+ (&#39;bhatt_verma&#39;, 1),
+ (&#39;LizPerpetua&#39;, 1),
+ (&#39;stefan_harb&#39;, 1),
+ (&#39;uwashfellows&#39;, 1),
+ (&#39;WomenAs1&#39;, 1),
+ (&#39;KateKearney4&#39;, 1),
+ (&#39;EricLineburger&#39;, 1),
+ (&#39;KaulP&#39;, 1),
+ (&#39;EMARIANOMD&#39;, 1),
+ (&#39;DrDeepa1020&#39;, 1),
+ (&#39;KarstenBartels&#39;, 1),
+ (&#39;UW&#39;, 1),
+ (&#39;MadalinaGarbi&#39;, 1),
+ (&#39;DrTimps&#39;, 1),
+ (&#39;petervonhomeyer&#39;, 1),
+ (&#39;dr_benoy_n_shah&#39;, 1),
+ (&#39;97mjr&#39;, 1),
+ (&#39;rashika_ck&#39;, 1),
+ (&#39;MonicaVavilala&#39;, 1),
+ (&#39;RadToTheBone592&#39;, 1),
+ (&#39;DanielHDrake&#39;, 1),
+ (&#39;MarcVorpahl&#39;, 1),
+ (&#39;gstuber&#39;, 1),
+ (&#39;stormyascott&#39;, 1),
+ (&#39;FloraMLi&#39;, 1),
+ (&#39;chrisryanburke&#39;, 1),
+ (&#39;caitlinbmurray&#39;, 1),
+ (&#39;TonyaPalermo&#39;, 1),
+ (&#39;SvatiShah&#39;, 1),
+ (&#39;UWAnesthPainMed&#39;, 1),
+ (&#39;deepak_neuro&#39;, 1),
+ (&#39;FAERanesthesia&#39;, 1),
+ (&#39;iars360&#39;, 1),
+ (&#39;HIPRC&#39;, 1),
+ (&#39;UWRadiology&#39;, 1),
+ (&#39;KhorsandiMaziar&#39;, 1),
+ (&#39;srdjanjelacic&#39;, 1),
+ (&#39;JAMA_current&#39;, 1),
+ (&#39;saraceciliamtz&#39;, 1),
+ (&#39;echocardiac&#39;, 1),
+ (&#39;NMerke&#39;, 1),
+ (&#39;Behrens_MD&#39;, 1),
+ (&#39;Echo_DGK_GER&#39;, 1),
+ (&#39;craigefleishman&#39;, 1),
+ (&#39;deedskhatibs&#39;, 1),
+ (&#39;nishath_quader&#39;, 1),
+ (&#39;saricmu&#39;, 1),
+ (&#39;drwooda&#39;, 1),
+ (&#39;LaraOyetunji&#39;, 1),
+ (&#39;ASALifeline&#39;, 1),
+ (&#39;katie_gibson311&#39;, 1),
+ (&#39;MayoClinicCVS&#39;, 1),
+ (&#39;CathElectroSurg&#39;, 1),
+ (&#39;AntonioBarros_&#39;, 1),
+ (&#39;ACCinTouch&#39;, 1),
+ (&#39;vonBardelebenRS&#39;, 1),
+ (&#39;HanCardiomd&#39;, 1),
+ (&#39;dottormaisano&#39;, 1),
+ (&#39;treemi&#39;, 1),
+ (&#39;DouglasEWood1&#39;, 1),
+ (&#39;DineshKurian&#39;, 1),
+ (&#39;CrystalCWMD&#39;, 1),
+ (&#39;SapnaKmd&#39;, 1),
+ (&#39;uw_wims&#39;, 1),
+ (&#39;drjenniferbest&#39;, 1),
+ (&#39;michellengo1019&#39;, 1),
+ (&#39;MarieAngele20&#39;, 1),
+ (&#39;VMAnesthesia&#39;, 1),
+ (&#39;DrRajNathwani&#39;, 1),
+ (&#39;UW_CLUE&#39;, 1),
+ (&#39;UWDeptMedicine&#39;, 1),
+ (&#39;FlanBrain&#39;, 1),
+ (&#39;UWBiostat&#39;, 1),
+ (&#39;UWBioE&#39;, 1),
+ (&#39;DrChenMD&#39;, 1),
+ (&#39;banksdabanks&#39;, 1),
+ (&#39;JamiePrivratsky&#39;, 1),
+ (&#39;EAiwerioghene&#39;, 1),
+ (&#39;mburgosmd&#39;, 1),
+ (&#39;DepthAnesthesia&#39;, 1),
+ (&#39;divenitsky&#39;, 1),
+ (&#39;MayoAnesRes&#39;, 1),
+ (&#39;BCMAnesRes&#39;, 1),
+ (&#39;NMAnesthesia&#39;, 1),
+ (&#39;WUSTL_AnesRsrch&#39;, 1),
+ (&#39;WashUanesthesia&#39;, 1),
+ (&#39;APSForg&#39;, 1),
+ (&#39;Latinos_Anest&#39;, 1),
+ (&#39;PiantadosiSean&#39;, 1),
+ (&#39;Andrea_Grote_&#39;, 1),
+ (&#39;FutureAnesRes&#39;, 1),
+ (&#39;pry_medstisle&#39;, 1),
+ (&#39;_botttt&#39;, 1),
+ (&#39;antpebbles&#39;, 1),
+ (&#39;US_ASP&#39;, 1),
+ (&#39;AmandaKumarMD&#39;, 1),
+ (&#39;soares_heidi&#39;, 1),
+ (&#39;womenMDinanesth&#39;, 1),
+ (&#39;YosiraGuevara&#39;, 1),
+ (&#39;AWowolo&#39;, 1),
+ (&#39;AmandaMilburn8&#39;, 1),
+ (&#39;brettstaceymd&#39;, 1),
+ (&#39;reece_nguyen&#39;, 1),
+ (&#39;Inside_TheMatch&#39;, 1),
+ (&#39;paulbhalla&#39;, 1),
+ (&#39;fredhutch&#39;, 1),
+ (&#39;harborviewmc&#39;, 1),
+ (&#39;KathrynGlas&#39;, 1),
+ (&#39;njimenez_md&#39;, 1),
+ (&#39;dremilym&#39;, 1),
+ (&#39;HarrietHopfMD&#39;, 1),
+ (&#39;bulgercot&#39;, 1),
+ (&#39;SOCCA_CritCare&#39;, 1),
+ (&#39;uwfm&#39;, 1),
+ (&#39;AirliftNW&#39;, 1),
+ (&#39;HughHemmings&#39;, 1),
+ (&#39;AlexanderVanErp&#39;, 1),
+ (&#39;Vanhoy_MD&#39;, 1),
+ (&#39;WashAcad&#39;, 1),
+ (&#39;MitochondriaMe1&#39;, 1),
+ (&#39;Anaes_Journal&#39;, 1),
+ (&#39;RCoANews&#39;, 1),
+ (&#39;BJAJournals&#39;, 1),
+ (&#39;mswami001&#39;, 1),
+ (&#39;PREHABmontreal&#39;, 1),
+ (&#39;AskTeendoc&#39;, 1),
+ (&#39;NickJohnsonMD&#39;, 1),
+ (&#39;ChrisTroianos&#39;, 1),
+ (&#39;victoryapiehl&#39;, 1),
+ (&#39;PainintheRain1&#39;, 1),
+ (&#39;AbaPhysicians&#39;, 1),
+ (&#39;uwlabmedpath&#39;, 1),
+ (&#39;ASRA_Society&#39;, 1),
+ (&#39;ESRA_Society&#39;, 1),
+ (&#39;dustinrlong&#39;, 1),
+ (&#39;Elisabe16642664&#39;, 1),
+ (&#39;KushangPatelPhD&#39;, 1),
+ (&#39;oMichaelJo&#39;, 1),
+ (&#39;mike_wall61&#39;, 1),
+ (&#39;MicheleCuratolo&#39;, 1),
+ (&#39;daryloakes4&#39;, 1),
+ (&#39;yzhangmd1&#39;, 1),
+ (&#39;arianneinthelab&#39;, 1),
+ (&#39;NikraDoc&#39;, 1),
+ (&#39;RealMilesBerger&#39;, 1),
+ (&#39;BrotmanBaty&#39;, 1),
+ (&#39;TianLab&#39;, 1)]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./ch10_moderation"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="01_moderation.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">10.1. </span>Content Moderation</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../ch11_moderators/00_moderators.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>Content Moderators</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Kyle Thayer<br/>
+  
+      &copy; Copyright 2022.<br/>
+    <div class="extra_footer">
+      <script src="https://hypothes.is/embed.js" async></script>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

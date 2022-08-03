@@ -1,0 +1,37 @@
+# Perspectives on the Ethics of Public Shaming
+- [Morally Motivated Networked Harassment as Normative Reinforcement](https://journals.sagepub.com/doi/full/10.1177/20563051211021378)   (from last time)
+  - Identify the target who violated a community norm
+  - Amplifier promotes story to their social network (often different than target’s network)
+  - Amplifiers’ audience attacks the target
+  - Target experiences negativity, frequently self-censors and withdraws. Simultaneously, the amplifiers’ network reinforces their values.
+  - Speech is removed from the public sphere
+- [Jennifer Jacquet: ‘The power of shame is that it can be used by the weak against the strong’](https://www.theguardian.com/books/2015/mar/06/is-shame-necessary-review)
+  - “The real power of shame is it can scale. It can work against entire countries and can be used by the weak against the strong. Guilt, on the other hand, because it operates entirely within individual psychology, doesn’t scale.”
+  - “We still care about individual rights and protection. Transgressions that have a clear impact on broader society – like environmental pollution – and transgressions for which there is no obvious formal route to punishment are, for instance, more amenable to its use. It should be reserved for bad behaviour that affects most or all of us.”
+  - “A good rule of thumb is to go after groups, but I don’t exempt individuals, especially not if they are politically powerful or sizeably impact society. But we must ask ourselves about the way those individuals are shamed and whether the punishment is proportional.”
+- [Nation Demands Fresh Celebrity Meat - The Onion](https://www.theonion.com/nation-demands-fresh-celebrity-meat-1819571041)
+  - Satirized public shaming as fulfilling the desire to
+    - “to put on a pedestal, worship, envy, download sex tapes of, and then topple and completely destroy.”
+    - Satirizes public shaming as entertainment and objectification
+  - Schadenfreude: [enjoyment obtained from the troubles of others](https://www.merriam-webster.com/dictionary/schadenfreude)
+  - Note that this article from 2009 is focusing on “celebrities,” but as the comedian Bo Burnham argues:
+    - “[This] celebrity pressure I had experienced on stage has now been democratized and given to everybody [through social media]. And everyone is feeling this pressure of having an audience, of having to perform, of having a sort of, like, proper noun version of your own name and then the self in your heart.” ([NPR Fresh Air Interview](https://www.npr.org/transcripts/630069876))
+- [Stop canceling normal people who go viral](https://www.vox.com/the-goods/22716772/west-elm-caleb-couch-guy-tiktok-cancel)
+  - “Millions of people became invested in this (niche! not very interesting!) drama because it gives us something easy to be angry or curious or self-righteous about, something to project our own experiences onto, and thereby contributing even more content to the growing avalanche. Naturally, some decided to go look up the central character’s address, phone number, and workplace and share it on the internet.”
+  - “‘It’s on social media, so it’s public!’ one could argue as a case for people’s right to act like forensic analysts on social media, and that is true. But this justification is typically valid when a) the person posting is someone of note, like a celebrity or a politician, and b) when the stakes are even a little bit high. In most cases of normal-person canceling, neither standard is met. Instead, it’s mob justice and vigilante detective work typically reserved for, say, unmasking the Zodiac killer, except weaponized against normal people.”
+  - “Platforms like TikTok, where even people with few or no followers often go viral overnight, expedite the shaming process.”
+- [Enforcing Social Norms: The Morality of Public Shaming](https://philpapers.org/archive/BILESN.pdf)
+  - Different motivations
+    - “Actions aimed at inducing shame”
+    - “[S]eeking to draw attention to a social norm violation, and to rally others to their cause. They may or may not also be aiming to induce shame.” (they focus on this and count it as “public shaming”)
+  - Constraints on moral public shaming
+    - Proportionality: negative consequences not worse than the positive consequences
+    - Necessity: not another more effective method of achieving goal
+    - Respect for Privacy
+    - Non-Abusiveness
+    - Reintegration:
+      - “Public shaming must aim at, and make possible, the reintegration of the norm violator back into the community, rather than permanently stigmatizing them.”
+
+## Reflection questions
+- What do you consider to be the most important factors in making an instance of public shaming bad?
+- What do you consider to be the most important factors in making an instance of public shaming good (if you think that is possible)?

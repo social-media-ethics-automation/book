@@ -1,0 +1,1276 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>9.1. Recommendation Algorithms &#8212; Introduction to Social Media, Ethics, and Computer Programming</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9.2. Demos of Functions, Dictionaries, and Recommendations" href="Le-07-Recommendations.html" />
+    <link rel="prev" title="9. Recommendation Algorithms" href="00_recommendations.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Social Media, Ethics, and Computer Programming</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction to Social Media, Ethics, and Computer Programming
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Book
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch01_intro/00_intro.html">
+   1. Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch01_intro/01_sacco_tweet.html">
+     1.1. The case of Justine Sacco’s racist joke tweet
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch01_intro/02_kumail.html">
+     1.2. Kumail Nanjiani’s Reflections on Ethics in Tech
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch02_definitions/00_intro.html">
+   2. Definitions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch02_definitions/01_social_media.html">
+     2.1. Social Media
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ch02_definitions/02_ethics/00_ethics.html">
+     2.2. Ethics
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/02_ethics/01_golden_rule.html">
+       2.2.1. The “Golden Rule”
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/02_ethics/02_ethics_frameworks.html">
+       2.2.2. Ethics Frameworks
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/02_ethics/03_other_frameworks.html">
+       2.2.3. Other Frameworks
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/02_ethics/04_using_frameworks.html">
+       2.2.4. Using Frameworks
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ch02_definitions/03_programming/00_programming.html">
+     2.3. Computer Programming
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/03_programming/01_language_translation.html">
+       2.3.1. Language Translation (Analogy)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/03_programming/02_first_programmers.html">
+       2.3.2. Talking to Computers (the first programmers)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/03_programming/03_compilers.html">
+       2.3.3. A better way: Compilers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/03_programming/04_a_twitter_bot.html">
+       2.3.4. An example twitter bot
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/03_programming/Le-01-Intro.html">
+       2.3.5. Lecture 1 Demo
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/03_programming/Lab-1-Setup.html">
+       2.3.6. 01.5 Lab: Setup
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch03_bots/00_bots.html">
+   3. Bots
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch03_bots/01_bots.html">
+     3.1. Bots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch03_bots/Le-02-Bots.html">
+     3.2. Lab: Basic Python Concepts
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch04_history/00_history.html">
+   4. History of Social Media
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch04_history/01_history.html">
+     4.1. History of Social Media
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch04_history/Le-03-Social_Media_History.html">
+     4.2. Demo: Basic Python Concepts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch04_history/Lab-2a-Python-concepts.html">
+     4.5. Lab: Python programming concept practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch04_history/Lab-2b-Bot-Practice.html">
+     4.6. Lab: Twitter Bot Practice
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch05_authenticity/00_authenticity.html">
+   5. Authenticity
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch05_authenticity/01_authenticity.html">
+     5.1. Authenticity
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch06_trolling/00_trolling.html">
+   6. Trolling
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch06_trolling/01_trolling.html">
+     6.1. Trolling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch06_trolling/Le-04-authenticity-trolling.html">
+     6.2. Lab: tweet source, reply bot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch07_virality/00_virality.html">
+   7. Virality and Context Collapse
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch07_virality/01_virality.html">
+     7.1. Virality and Context Collapse
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch07_virality/Le-05-Virality.html">
+     7.2. Demo of getting image data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch07_virality/Lab-3-Conditionals.html">
+     7.3. Lab: Conditionals
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch08_data_mining/00_data_mining.html">
+   8. Data and Data Mining
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch08_data_mining/01_data_mining.html">
+     8.1. Data and Data Mining
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch08_data_mining/Le-06-DataMining.html">
+     8.2. Demo of getting image data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="00_recommendations.html">
+   9. Recommendation Algorithms
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     9.1. Recommendation Algorithms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Le-07-Recommendations.html">
+     9.2. Demos of Functions, Dictionaries, and Recommendations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Lab-4-Pandas_Intro.html">
+     9.4. Lab: Pandas Intro
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch10_moderation/00_moderation.html">
+   10. Content Moderation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch10_moderation/01_moderation.html">
+     10.1. Content Moderation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch10_moderation/Le-08-Moderation.html">
+     10.2. Default and named parameters
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch11_moderators/00_moderators.html">
+   11. Content Moderators
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch11_moderators/01_moderators.html">
+     11.1. Content Moderators
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch11_moderators/Le-09-Moderators.html">
+     11.2. Demo: Sentiment Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch11_moderators/Lab-5-Functions.html">
+     11.3. Lab: Functions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch12_crowd_work/00_crowd_work.html">
+   12. Crowd Work
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch12_crowd_work/01_crowd_work.html">
+     12.1. Crowd Work
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch12_crowd_work/Lab-6-Nested-Loops.html">
+     12.2. Lab: Nested Loops Review
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch13_harassment/00_harassment.html">
+   13. Harassment
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch13_harassment/01_harassment.html">
+     13.1. Harassment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch13_harassment/Le-11-Harassment.html">
+     13.2. Demo of recursion
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch14_public_shaming/00_public_shaming.html">
+   14. Public Shaming
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch14_public_shaming/01_public_shaming.html">
+     14.1. Public Shaming
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch14_public_shaming/Lab-7-Recursion.html">
+     14.2. Lab: Recursion
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch15_privacy/00_privacy.html">
+   15. Privacy
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch15_privacy/01_privacy.html">
+     15.1. Privacy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch15_privacy/Le-13-privacy.html">
+     15.2. Demo: recursion with real tweets
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch16_mental_health/00_mental_health.html">
+   16. Mental Health
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch16_mental_health/01_mental_health.html">
+     16.1. Mental Health
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch16_mental_health/Lab-8-Scheduling.html">
+     16.2. Scheduling Tasks Demo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ch17_capitalism/00_capitalism.html">
+   17. Capitalism
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ch18_colonialism/00_colonialism.html">
+   18. Colonialism
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ch19_conclusions/00_conclusions.html">
+   19. Conclusions
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fch09_recommendations/01_recommendations.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/ch09_recommendations/01_recommendations.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#readings-due">
+   9.1.1. Readings Due
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   9.1.2. Recommendation Algorithms
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#discussion">
+     Discussion
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#individual-concerns-with-recommendation-algorithms">
+   9.1.3. Individual Concerns with Recommendation Algorithms
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gaming-the-recommendation-algorithm">
+     Gaming the Recommendation Algorithm
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#discussion-questions">
+     Discussion Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#societal-concerns-with-recommendation-algorithms">
+   9.1.4. Societal Concerns with Recommendation Algorithms
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#epistemic-bubbles-echo-chambers">
+     Epistemic Bubbles / Echo Chambers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#amplifying-polarization-and-negativity">
+     Amplifying Polarization and Negativity
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#radicalization-rohingya-genocide-in-myanmar-since-2016">
+     Radicalization:  Rohingya Genocide in Myanmar since 2016
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#radicalization-the-flat-earth-movement">
+     Radicalization: The Flat Earth Movement
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Discussion Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programming">
+   9.1.5. Programming
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#functions">
+     Functions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dictionaries">
+     Dictionaries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#demo">
+     Demo
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Recommendation Algorithms</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#readings-due">
+   9.1.1. Readings Due
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   9.1.2. Recommendation Algorithms
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#discussion">
+     Discussion
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#individual-concerns-with-recommendation-algorithms">
+   9.1.3. Individual Concerns with Recommendation Algorithms
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gaming-the-recommendation-algorithm">
+     Gaming the Recommendation Algorithm
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#discussion-questions">
+     Discussion Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#societal-concerns-with-recommendation-algorithms">
+   9.1.4. Societal Concerns with Recommendation Algorithms
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#epistemic-bubbles-echo-chambers">
+     Epistemic Bubbles / Echo Chambers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#amplifying-polarization-and-negativity">
+     Amplifying Polarization and Negativity
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#radicalization-rohingya-genocide-in-myanmar-since-2016">
+     Radicalization:  Rohingya Genocide in Myanmar since 2016
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#radicalization-the-flat-earth-movement">
+     Radicalization: The Flat Earth Movement
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Discussion Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programming">
+   9.1.5. Programming
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#functions">
+     Functions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dictionaries">
+     Dictionaries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#demo">
+     Demo
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="recommendation-algorithms">
+<h1><span class="section-number">9.1. </span>Recommendation Algorithms<a class="headerlink" href="#recommendation-algorithms" title="Permalink to this headline">#</a></h1>
+<section id="readings-due">
+<h2><span class="section-number">9.1.1. </span>Readings Due<a class="headerlink" href="#readings-due" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.wired.com/story/weddings-social-media-apps-photos-memories-miscarriage-problem/">I Called Off My Wedding. The Internet Will Never Forget</a></p>
+<ul>
+<li><p>Possibly better article on the miscarriage problem: <a class="reference external" href="https://www.wired.com/story/weddings-social-media-apps-photos-memories-miscarriage-problem/">https://www.wired.com/story/weddings-social-media-apps-photos-memories-miscarriage-problem/</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.washingtonpost.com/technology/2021/10/26/facebook-angry-emoji-algorithm/">Five points for anger, one for a ‘like’: How Facebook’s formula fostered rage and misinformation</a></p></li>
+</ul>
+</section>
+<section id="id1">
+<h2><span class="section-number">9.1.2. </span>Recommendation Algorithms<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Algorithm: A series of steps or rules (or a specific computer program) designed to achieve some goal.</p>
+<ul>
+<li><p>A cooking recipe is an example of an algorithm</p></li>
+</ul>
+</li>
+<li><p>Social media networks use algorithms to recommend various things to users of their platform, such as:</p>
+<ul>
+<li><p>Posts</p></li>
+<li><p>Friends / connections</p></li>
+<li><p>Topics</p></li>
+<li><p>Advertisements</p></li>
+<li><p>Reminders</p></li>
+</ul>
+</li>
+<li><p>Recommendations based on many different factors (many we talked about last time), such as:</p>
+<ul>
+<li><p>Time since posting (e.g., show new posts, remind of posts _ years ago)</p></li>
+<li><p>Friends/followers</p></li>
+<li><p>Posts / likes</p></li>
+<li><p>Which posts you click on or pause on</p></li>
+<li><p>How people who are like you or are near you behave (they know approximately where you are)</p></li>
+<li><p>Phone numbers, email addresses (<a class="reference external" href="https://techcrunch.com/2019/03/03/facebook-phone-number-look-up/">sometimes collected deceptively</a>)</p></li>
+</ul>
+</li>
+<li><p>Social media recommendation algorithms are normally secret, and are modified regularly</p></li>
+</ul>
+<section id="discussion">
+<h3>Discussion<a class="headerlink" href="#discussion" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>What experiences do you have of social media sites making particularly good recommendations for you?</p></li>
+<li><p>What experiences do you have of social media sites making particularly bad recommendations for you?</p></li>
+</ul>
+</section>
+</section>
+<section id="individual-concerns-with-recommendation-algorithms">
+<h2><span class="section-number">9.1.3. </span>Individual Concerns with Recommendation Algorithms<a class="headerlink" href="#individual-concerns-with-recommendation-algorithms" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Friends</p>
+<ul>
+<li><p>Good: Helping you connect with people you want to connect with</p></li>
+<li><p>Concerns:  Recommending an ex or an abuser who has many shared connections with you</p></li>
+</ul>
+</li>
+<li><p>Reminders</p>
+<ul>
+<li><p>Good: Users enjoy the nostalgia</p></li>
+<li><p>Bad: Unwanted or painful reminders, such as: <a class="reference external" href="https://www.theatlantic.com/family/archive/2018/11/digital-reminders-miscarriages/575050/">miscarriages</a>, funerals, <a class="reference external" href="https://www.wired.com/story/weddings-social-media-apps-photos-memories-miscarriage-problem/">break-ups</a></p></li>
+</ul>
+</li>
+<li><p>Ads:</p>
+<ul>
+<li><p>Good: Site doesn’t charge users money, users might find products they want</p></li>
+<li><p>Bad: Discrimination, <a class="reference external" href="https://www.forbes.com/sites/kashmirhill/2012/02/16/how-target-figured-out-a-teen-girl-was-pregnant-before-her-father-did/">revealing private information</a></p></li>
+</ul>
+</li>
+<li><p>Content (posts, photos, articles, etc.)</p>
+<ul>
+<li><p>Good: Users find content they are interested in</p></li>
+<li><p>Bad: We’ll get into some of this…</p></li>
+</ul>
+</li>
+</ul>
+<section id="gaming-the-recommendation-algorithm">
+<h3>Gaming the Recommendation Algorithm<a class="headerlink" href="#gaming-the-recommendation-algorithm" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Clickbait</p></li>
+<li><p>Adding photos and media</p></li>
+<li><p>Trolling</p></li>
+<li><p>Coordinated actions (posting, likes, tagging, hashtags, etc.)</p></li>
+<li><p>May be done with bots</p></li>
+<li><p>How users’ race affects strategies for the algorithm:</p></li>
+<li><p>Perspectives of various black youtubers: <a class="reference external" href="https://www.youtube.com/watch?v=41B5YonixBs">Break Bread</a> by <a class="reference external" href="https://www.youtube.com/watch?v=41B5YonixBs">F.D Signifier</a> (<a class="reference external" href="https://www.youtube.com/watch?v=41B5YonixBs&amp;t=2010s">33:30</a>-34:32, <a class="reference external" href="https://www.youtube.com/watch?v=41B5YonixBs&amp;t=2355s">39:15</a>-41:55, <a class="reference external" href="https://www.youtube.com/watch?v=41B5YonixBs&amp;t=3948s">105:48</a>-1:07:11)</p></li>
+</ul>
+</section>
+<section id="discussion-questions">
+<h3>Discussion Questions<a class="headerlink" href="#discussion-questions" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>What responsibilities do you think social media platforms should have in regards to the concerns we just discussed?</p></li>
+<li><p>What strategies do you think might work to improve how social media platforms use recommendations?</p></li>
+</ul>
+</section>
+</section>
+<section id="societal-concerns-with-recommendation-algorithms">
+<h2><span class="section-number">9.1.4. </span>Societal Concerns with Recommendation Algorithms<a class="headerlink" href="#societal-concerns-with-recommendation-algorithms" title="Permalink to this headline">#</a></h2>
+<section id="epistemic-bubbles-echo-chambers">
+<h3><a class="reference external" href="https://en.wikipedia.org/wiki/Echo_chamber_(media)#Echo_chambers_vs_epistemic_bubbles">Epistemic Bubbles / Echo Chambers</a><a class="headerlink" href="#epistemic-bubbles-echo-chambers" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Connections and conversations can exclude some perspectives (whether intentional or not)</p>
+<ul>
+<li><p>Ideas and views get repeated without challenge or alternatives</p></li>
+</ul>
+</li>
+<li><p>This allows groups to freely have conversations among themselves without external challenge. These groups may range from:</p>
+<ul>
+<li><p>Hate groups</p></li>
+<li><p>Fan groups</p></li>
+<li><p>Marginalized communities (e.g., <a class="reference external" href="https://en.wikipedia.org/wiki/Safe_space">safe spaces</a>)</p></li>
+</ul>
+</li>
+<li><p>Increases polarization</p>
+<ul>
+<li><p>In some ways, this is the opposite of context collapse, where the insider/outsider context never collapses</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="amplifying-polarization-and-negativity">
+<h3>Amplifying Polarization and Negativity<a class="headerlink" href="#amplifying-polarization-and-negativity" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>If social media sites simply amplify content that gets strong reactions, they will often amplify the most negative and polarizing content.</p>
+<ul>
+<li><p><a class="reference external" href="https://www.washingtonpost.com/technology/2021/10/26/facebook-angry-emoji-algorithm/">Five points for anger, one for a ‘like’: How Facebook’s formula fostered rage and misinformation</a></p></li>
+<li><p><a class="reference external" href="https://www.msnbc.com/opinion/twitter-s-algorithm-might-amplify-ratioed-conservatives-time-rethink-dunking-n1283364">Twitter’s algorithm might amplify ‘ratioed’ conservatives.</a></p>
+<ul>
+<li><p>“An analysis […] suggested that when users swarm tweets to denounce them with quote tweets and replies, they might be cueing Twitter’s algorithm to see them as particularly engaging, which in turn might be prompting Twitter to amplify those tweets. The upshot is that when people enthusiastically gather to denounce the latest Bad Tweet of the Day, they may actually be ensuring more people see it than had they never decided to pile on in the first place.</p></li>
+<li><p>That possibility raises serious questions of what constitutes responsible civic behavior on Twitter and whether the platform is in yet another way incentivizing combative behavior.”</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.economist.com/graphic-detail/2021/11/13/according-to-twitter-twitters-algorithm-favours-conservatives">According to Twitter, Twitter’s algorithm favours conservatives</a> (<a class="reference external" href="https://web.archive.org/web/20220106162108/https://www.economist.com/graphic-detail/2021/11/13/according-to-twitter-twitters-algorithm-favours-conservatives">copy on archive.org</a>)</p>
+<ul>
+<li><p>“Whereas Google gave higher rankings to more reliable sites, we found that Twitter boosted the least reliable sources, regardless of their politics.”</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="radicalization-rohingya-genocide-in-myanmar-since-2016">
+<h3>Radicalization:  Rohingya Genocide in Myanmar since 2016<a class="headerlink" href="#radicalization-rohingya-genocide-in-myanmar-since-2016" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.bbc.com/news/world-asia-46105934">Facebook admits it was used to ‘incite offline violence’ in Myanmar</a>  (2018, BBC)</p></li>
+<li><p><a class="reference external" href="https://www.theguardian.com/technology/2021/dec/06/rohingya-sue-facebook-myanmar-genocide-us-uk-legal-action-social-media-violence">Rohingya sue Facebook for £150bn over Myanmar genocide</a> (2021, The Guardian)</p>
+<ul>
+<li><p>Facebook’s negligence facilitated the genocide of Rohingya Muslims in Myanmar after the social media network’s algorithms amplified hate speech and the platform failed to take down inflammatory posts, according to legal action launched in the US and the UK.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="radicalization-the-flat-earth-movement">
+<h3>Radicalization: The Flat Earth Movement<a class="headerlink" href="#radicalization-the-flat-earth-movement" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Flat Earth:</p>
+<ul>
+<li><p>“Flat Earth is a belief that the earth isn’t a globe, but is actually flat, a fact that has been kept from Us, meaning normal people, by a nebulous, powerful Them for nefarious, inscrutable purposes.”</p>
+<ul>
+<li><p><a class="reference external" href="https://youtu.be/JTfhYyTuT44?t=1151">In Search of a Flat Earth</a> (19:11-19:27) - Dan Olson - Folding Ideas</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>YouTube’s role in creating this movement:</p>
+<ul>
+<li><p>“Modern Flat Earth [movement] was essentially created by content algorithms trying to maximize retention and engagement by serving users suggestions for things that are, effectively, incrementally more concentrated versions of the thing they were already looking at. Bizarre cranks peddling random theories are an aspect of civilization that has always been with us, so it was inevitable that they would end up on YouTube, but the algorithm made sure they found an audience. These systems were accidentally identifying people susceptible to conspiratorial and reactionary thinking and sending them increasingly deeper into Flat Earth evangelism.”</p>
+<ul>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=JTfhYyTuT44&amp;t=2077s">In Search of a Flat Earth</a> (34:37 - 37:40) - Dan Olson - Folding Ideas</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>More Info: <a class="reference external" href="https://www.bbc.com/news/technology-47279253">YouTube aids flat earth conspiracy theorists, research suggests</a></p></li>
+</ul>
+</section>
+<section id="id2">
+<h3>Discussion Questions<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>What responsibilities do you think social media platforms should have in regards to larger social trends?</p></li>
+<li><p>What strategies do you think might work to improve how social media platforms use recommendations?</p></li>
+</ul>
+</section>
+</section>
+<section id="programming">
+<h2><span class="section-number">9.1.5. </span>Programming<a class="headerlink" href="#programming" title="Permalink to this headline">#</a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Reusable sections of code (an algorithm!)</p></li>
+<li><p>Function with no parameters</p></li>
+</ul>
+<div class="highlight-def notranslate"><div class="highlight"><pre><span></span>  # do various actions, like this:
+  print(&quot;This is a function!&quot;)
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Function with parameters</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="n">arg_1</span><span class="p">,</span> <span class="n">arg_2</span><span class="p">):</span>
+  <span class="c1"># do various actions, like this:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is a function that got:&quot;</span> <span class="o">+</span> <span class="n">arg_1</span> <span class="o">+</span> <span class="n">arg_2</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Read more: <a class="reference external" href="https://www.w3schools.com/python/python_functions.asp">https://www.w3schools.com/python/python_functions.asp</a></p></li>
+</ul>
+</section>
+<section id="dictionaries">
+<h3>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>A data structure with a set of “keys” that refer to a set of “values.” Sort of like saving a bunch of variables in another variable.</p></li>
+<li><p>Create an empty dictionary:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">example_dictionary</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">Create</span> <span class="n">a</span> <span class="n">dictionary</span> <span class="k">with</span> <span class="n">some</span> <span class="n">keys</span> <span class="ow">and</span> <span class="n">values</span><span class="p">:</span>
+<span class="n">example_dictionary</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;first_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Kyle&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;last_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Thayer&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Get a value from a dictionary:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">person</span> <span class="o">=</span> <span class="n">example_dictionary</span><span class="p">[</span><span class="s2">&quot;first_name&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Set a value from a dictionary:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">Example_dictionary</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">38</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Read more: <a class="reference external" href="https://www.w3schools.com/python/python_dictionaries.asp">https://www.w3schools.com/python/python_dictionaries.asp</a></p></li>
+</ul>
+</section>
+<section id="demo">
+<h3>Demo<a class="headerlink" href="#demo" title="Permalink to this headline">#</a></h3>
+<p>Recommend a new person to follow</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./ch09_recommendations"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="00_recommendations.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">9. </span>Recommendation Algorithms</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Le-07-Recommendations.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">9.2. </span>Demos of Functions, Dictionaries, and Recommendations</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Kyle Thayer<br/>
+  
+      &copy; Copyright 2022.<br/>
+    <div class="extra_footer">
+      <script src="https://hypothes.is/embed.js" async></script>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

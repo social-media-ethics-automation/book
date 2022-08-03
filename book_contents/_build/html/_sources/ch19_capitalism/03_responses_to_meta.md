@@ -1,0 +1,12 @@
+# Responses to Meta’s Business Strategies
+- Competing social media companies
+  - Google+
+    - Never got enough users to take off
+  - Unique features (e.g., Twitter character limit, Vine and TikTok short videos, etc.)
+  - China - alternate market, different governmental concerns and resources
+  - [Mastodon](https://en.wikipedia.org/wiki/Mastodon_(software)) - open source - not for profit
+- Privacy
+  - EUs [General Data Protection Regulation (GDPR)](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation) law
+  - Apple introduced [app tracking transparency in 2021](http://theverge.com/2021/12/11/22828713/apple-app-tracking-transparancy-psa-privacy-ads-cohorts)
+    - [Facebook says Apple iOS privacy change will result in $10 billion revenue hit this year](https://www.cnbc.com/2022/02/02/facebook-says-apple-ios-privacy-change-will-cost-10-billion-this-year.html)
+    - Note: [Apple’s profits](https://www.investopedia.com/how-apple-makes-money-4798689) are not from behavioral data, but from hardware (e.g., iPhone) and services (e.g., iCloud, Apple Music, Apple TV+)

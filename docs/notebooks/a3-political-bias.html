@@ -1,0 +1,1484 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>A3: Political Bias &#8212; Introduction to Social Media, Ethics, and Computer Programming</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Social Media, Ethics, and Computer Programming</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction to Social Media, Ethics, and Computer Programming
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Book
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch01_intro/00_intro.html">
+   1. Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch01_intro/01_sacco_tweet.html">
+     1.1. The case of Justine Sacco’s racist joke tweet
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch01_intro/02_kumail.html">
+     1.2. Kumail Nanjiani’s Reflections on Ethics in Tech
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch02_definitions/00_intro.html">
+   2. Definitions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch02_definitions/01_social_media.html">
+     2.1. Social Media
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ch02_definitions/02_ethics/00_ethics.html">
+     2.2. Ethics
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/02_ethics/01_golden_rule.html">
+       2.2.1. The “Golden Rule”
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/02_ethics/02_ethics_frameworks.html">
+       2.2.2. Ethics Frameworks
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/02_ethics/03_other_frameworks.html">
+       2.2.3. Other Frameworks
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/02_ethics/04_using_frameworks.html">
+       2.2.4. Using Frameworks
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ch02_definitions/03_programming/00_programming.html">
+     2.3. Computer Programming
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/03_programming/01_language_translation.html">
+       2.3.1. Language Translation (Analogy)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/03_programming/02_first_programmers.html">
+       2.3.2. Talking to Computers (the first programmers)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/03_programming/03_compilers.html">
+       2.3.3. A better way: Compilers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/03_programming/04_a_twitter_bot.html">
+       2.3.4. An example twitter bot
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/03_programming/Le-01-Intro.html">
+       2.3.5. Lecture 1 Demo
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch02_definitions/03_programming/Lab-1-Setup.html">
+       2.3.6. 01.5 Lab: Setup
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch03_bots/00_bots.html">
+   3. Bots
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch03_bots/01_bots.html">
+     3.1. Bots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch03_bots/Le-02-Bots.html">
+     3.2. Lab: Basic Python Concepts
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch04_data/00_data.html">
+   4. Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch04_data/01_data.html">
+     4.1. Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch05_history/00_history.html">
+   5. History of Social Media
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch05_history/01_history.html">
+     5.1. History of Social Media
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch05_history/Le-03-Social_Media_History.html">
+     5.2. Demo: Basic Python Concepts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch05_history/Lab-2a-Python-concepts.html">
+     5.5. Lab: Python programming concept practice
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch05_history/Lab-2b-Bot-Practice.html">
+     5.6. Lab: Twitter Bot Practice
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch06_authenticity/00_authenticity.html">
+   6. Authenticity
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch06_authenticity/01_authenticity.html">
+     6.1. Authenticity
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch07_trolling/00_trolling.html">
+   7. Trolling
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch07_trolling/01_trolling.html">
+     7.1. Trolling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch07_trolling/Le-04-authenticity-trolling.html">
+     7.2. Lab: tweet source, reply bot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch08_data_mining/00_data_mining.html">
+   8. Data Mining
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch08_data_mining/01_data_mining.html">
+     8.1. Data Mining
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch08_data_mining/Le-06-DataMining.html">
+     8.2. Demo of getting image data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch09_privacy/00_privacy.html">
+   9. Privacy
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch09_privacy/01_privacy.html">
+     9.1. Privacy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch09_privacy/Le-13-privacy.html">
+     9.2. Demo: recursion with real tweets
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch10_accessibility/00_accessibility.html">
+   10. Accessibility
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch10_accessibility/01_accessibility.html">
+     10.1. Accessibility
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch11_virality/00_virality.html">
+   11. Virality
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch11_virality/01_virality.html">
+     11.1. Virality and Context Collapse
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch11_virality/Le-05-Virality.html">
+     11.2. Demo of getting image data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch11_virality/Lab-3-Conditionals.html">
+     11.3. Lab: Conditionals
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch12_recommendations/00_recommendations.html">
+   12. Recommendation Algorithms
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch12_recommendations/01_recommendations.html">
+     12.1. Recommendation Algorithms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch12_recommendations/Le-07-Recommendations.html">
+     12.2. Demos of Functions, Dictionaries, and Recommendations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch12_recommendations/Lab-4-Pandas_Intro.html">
+     12.4. Lab: Pandas Intro
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch13_mental_health/00_mental_health.html">
+   13. Mental Health
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch13_mental_health/01_mental_health.html">
+     13.1. Mental Health
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch13_mental_health/Lab-8-Scheduling.html">
+     13.2. Scheduling Tasks Demo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch14_moderation/00_moderation.html">
+   14. Content Moderation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch14_moderation/01_moderation.html">
+     14.1. Content Moderation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch14_moderation/Le-08-Moderation.html">
+     14.2. Default and named parameters
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch15_moderators/00_moderators.html">
+   15. Content Moderators
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch15_moderators/01_moderators.html">
+     15.1. Content Moderators
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch15_moderators/Le-09-Moderators.html">
+     15.2. Demo: Sentiment Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch15_moderators/Lab-5-Functions.html">
+     15.3. Lab: Functions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch16_crowd_work/00_crowd_work.html">
+   16. Crowd Work
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch16_crowd_work/01_crowd_work.html">
+     16.1. Crowd Work
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch16_crowd_work/Lab-6-Nested-Loops.html">
+     16.2. Lab: Nested Loops Review
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch17_harassment/00_harassment.html">
+   17. Harassment
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+  <label for="toctree-checkbox-19">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch17_harassment/01_harassment.html">
+     17.1. Harassment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch17_harassment/Le-11-Harassment.html">
+     17.2. Demo of recursion
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ch18_public_shaming/00_public_shaming.html">
+   18. Public Shaming
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+  <label for="toctree-checkbox-20">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch18_public_shaming/01_public_shaming.html">
+     18.1. Public Shaming
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch18_public_shaming/Lab-7-Recursion.html">
+     18.2. Lab: Recursion
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ch19_capitalism/00_capitalism.html">
+   19. Capitalism
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ch20_colonialism/00_colonialism.html">
+   20. Colonialism
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ch21_conclusions/00_conclusions.html">
+   21. Conclusions
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/main?urlpath=tree/docs/notebooks/a3-political-bias.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/a3-political-bias.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/notebooks/a3-political-bias.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   A3: Political Bias
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#our-usual-twitter-set-up-code">
+     Our usual twitter set-up code:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#install-libraries-for-handling-website-urls-and-for-loading-csvs">
+     Install libraries for handling website urls and for loading csvs
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-the-media-site-info">
+     Load the media site info
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#now-reorganize-the-information-for-easier-use">
+     Now reorganize the information for easier use
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#demo-of-looking-up-media-site-info">
+     Demo of looking up media site info
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#utility-functions-find-all-the-urls-in-the-text-and-turn-shortened-urls-into-full-urls">
+     Utility functions: find all the urls in the text, and turn shortened urls into full urls
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#demo-of-how-to-use-the-function-find-expanded-urls">
+     Demo of how to use the function
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       find_expanded_urls
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#your-code">
+   Your Code!
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-functions-to-look-up-bias-an-reliability-for-a-website">
+     Create functions to look up bias an reliability for a website
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#test-your-code-for-find-bias-and-find-reliability">
+     Test your code for find_bias and find_reliability
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Your Code!
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-a-function-that-for-a-given-query-displays-the-average-bias-and-reliability-for-sites-linked-to-from-the-found-tweets">
+     Create a function that, for a given query, displays the average bias and reliability for sites linked to from the found tweets
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#test-of-your-code">
+     Test of your code
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Your Code!
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#search-1-follow-up-questions">
+     Search 1 follow-up questions
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#search-2-follow-up-questions">
+     Search 2 follow-up questions
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#search-3-follow-up-questions">
+     Search 3 follow-up questions
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#final-reflection-questions">
+     Final Reflection questions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>A3: Political Bias</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   A3: Political Bias
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#our-usual-twitter-set-up-code">
+     Our usual twitter set-up code:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#install-libraries-for-handling-website-urls-and-for-loading-csvs">
+     Install libraries for handling website urls and for loading csvs
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-the-media-site-info">
+     Load the media site info
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#now-reorganize-the-information-for-easier-use">
+     Now reorganize the information for easier use
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#demo-of-looking-up-media-site-info">
+     Demo of looking up media site info
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#utility-functions-find-all-the-urls-in-the-text-and-turn-shortened-urls-into-full-urls">
+     Utility functions: find all the urls in the text, and turn shortened urls into full urls
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#demo-of-how-to-use-the-function-find-expanded-urls">
+     Demo of how to use the function
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       find_expanded_urls
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#your-code">
+   Your Code!
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-functions-to-look-up-bias-an-reliability-for-a-website">
+     Create functions to look up bias an reliability for a website
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#test-your-code-for-find-bias-and-find-reliability">
+     Test your code for find_bias and find_reliability
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Your Code!
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-a-function-that-for-a-given-query-displays-the-average-bias-and-reliability-for-sites-linked-to-from-the-found-tweets">
+     Create a function that, for a given query, displays the average bias and reliability for sites linked to from the found tweets
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#test-of-your-code">
+     Test of your code
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Your Code!
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#search-1-follow-up-questions">
+     Search 1 follow-up questions
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#search-2-follow-up-questions">
+     Search 2 follow-up questions
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#search-3-follow-up-questions">
+     Search 3 follow-up questions
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#final-reflection-questions">
+     Final Reflection questions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="a3-political-bias">
+<h1>A3: Political Bias<a class="headerlink" href="#a3-political-bias" title="Permalink to this headline">#</a></h1>
+<p>In this assignment, you will be trying to calcualate the political bias and reliability of tweets in tweet searches.</p>
+<p>To do this, you will use some website bias and reliability ratings based on the Media Bias Chart (<a class="reference external" href="https://adfontesmedia.com/static-mbc">https://adfontesmedia.com/static-mbc</a>). When you find tweets that link to a website, if you have a rating for it you will find the bias and reliability ratings, and at the end you will report the average bias and average reliability of the tweets in your search.</p>
+<p>There are, of course, many problems with trying to calculate political bias and reliability in this way, which you will answer questions about after the programming section of the assignment.</p>
+<p>In the programming portion, there are many pieces already created for you, but there are labeled sections where you will have to write the code yourself.</p>
+<section id="our-usual-twitter-set-up-code">
+<h2>Our usual twitter set-up code:<a class="headerlink" href="#our-usual-twitter-set-up-code" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make sure tweepy library is installed</span>
+<span class="o">!</span>pip install tweepy 
+<span class="kn">import</span> <span class="nn">tweepy</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: tweepy in c:\users\susan notess\appdata\local\packages\pythonsoftwarefoundation.python.3.9_qbz5n2kfra8p0\localcache\local-packages\python39\site-packages (4.10.0)
+Requirement already satisfied: requests-oauthlib&lt;2,&gt;=1.2.0 in c:\users\susan notess\appdata\local\packages\pythonsoftwarefoundation.python.3.9_qbz5n2kfra8p0\localcache\local-packages\python39\site-packages (from tweepy) (1.3.1)
+Requirement already satisfied: oauthlib&lt;4,&gt;=3.2.0 in c:\users\susan notess\appdata\local\packages\pythonsoftwarefoundation.python.3.9_qbz5n2kfra8p0\localcache\local-packages\python39\site-packages (from tweepy) (3.2.0)
+Requirement already satisfied: requests&lt;3,&gt;=2.27.0 in c:\users\susan notess\appdata\local\packages\pythonsoftwarefoundation.python.3.9_qbz5n2kfra8p0\localcache\local-packages\python39\site-packages (from tweepy) (2.28.1)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in c:\users\susan notess\appdata\local\packages\pythonsoftwarefoundation.python.3.9_qbz5n2kfra8p0\localcache\local-packages\python39\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (1.26.9)
+Requirement already satisfied: certifi&gt;=2017.4.17 in c:\users\susan notess\appdata\local\packages\pythonsoftwarefoundation.python.3.9_qbz5n2kfra8p0\localcache\local-packages\python39\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (2022.6.15)
+Requirement already satisfied: charset-normalizer&lt;3,&gt;=2 in c:\users\susan notess\appdata\local\packages\pythonsoftwarefoundation.python.3.9_qbz5n2kfra8p0\localcache\local-packages\python39\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (2.1.0)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in c:\users\susan notess\appdata\local\packages\pythonsoftwarefoundation.python.3.9_qbz5n2kfra8p0\localcache\local-packages\python39\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (3.3)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load my twitter keys</span>
+<span class="kn">import</span> <span class="nn">my_bot_keys</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># log into tweepy</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span>
+    <span class="n">bearer_token</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">bearer_token</span><span class="p">,</span>
+    <span class="n">consumer_key</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">consumer_secret</span><span class="p">,</span>                   
+    <span class="n">access_token</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">access_token_secret</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="install-libraries-for-handling-website-urls-and-for-loading-csvs">
+<h2>Install libraries for handling website urls and for loading csvs<a class="headerlink" href="#install-libraries-for-handling-website-urls-and-for-loading-csvs" title="Permalink to this headline">#</a></h2>
+<p>You will need <code class="docutils literal notranslate"><span class="pre">URLExtract</span></code> and <code class="docutils literal notranslate"><span class="pre">urllib3</span></code> to find website urls in tweet text, and turn shortened urls (like <a class="reference external" href="https://bit.ly/3gE1Nsl">https://bit.ly/3gE1Nsl</a>) into the full urls where you can tell what news organization (if any) it points to.</p>
+<p>You will also need <code class="docutils literal notranslate"><span class="pre">pandas</span></code> to load the csv data file of media website bias and reliability</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install URLExtract
+<span class="o">!</span>pip install urllib3
+<span class="kn">from</span> <span class="nn">urlextract</span> <span class="kn">import</span> <span class="n">URLExtract</span>
+<span class="kn">import</span> <span class="nn">urllib.request</span> <span class="k">as</span> <span class="nn">urlreq</span>
+<span class="n">extractor</span> <span class="o">=</span> <span class="n">URLExtract</span><span class="p">()</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting URLExtract
+  Downloading urlextract-1.6.0-py3-none-any.whl (20 kB)
+Collecting filelock
+  Downloading filelock-3.7.1-py3-none-any.whl (10 kB)
+Collecting uritools
+  Downloading uritools-4.0.0-py3-none-any.whl (10 kB)
+Collecting platformdirs
+  Downloading platformdirs-2.5.2-py3-none-any.whl (14 kB)
+Requirement already satisfied: idna in c:\users\susan notess\appdata\local\packages\pythonsoftwarefoundation.python.3.9_qbz5n2kfra8p0\localcache\local-packages\python39\site-packages (from URLExtract) (3.3)
+Installing collected packages: uritools, platformdirs, filelock, URLExtract
+Successfully installed URLExtract-1.6.0 filelock-3.7.1 platformdirs-2.5.2 uritools-4.0.0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: urllib3 in c:\users\susan notess\appdata\local\packages\pythonsoftwarefoundation.python.3.9_qbz5n2kfra8p0\localcache\local-packages\python39\site-packages (1.26.9)
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [4],</span> in <span class="ni">&lt;cell line: 6&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">urllib.request</span> <span class="k">as</span> <span class="nn">urlreq</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">extractor</span> <span class="o">=</span> <span class="n">URLExtract</span><span class="p">()</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="load-the-media-site-info">
+<h2>Load the media site info<a class="headerlink" href="#load-the-media-site-info" title="Permalink to this headline">#</a></h2>
+<p>Our measure of media website bias and reliability is based on the Media Bias Chart 9.0 (<a class="reference external" href="https://adfontesmedia.com/static-mbc">https://adfontesmedia.com/static-mbc</a>)</p>
+<p>I have made a csv (comma separated varaible) file with some of the sites shown on that chart. I made my own simplification based on the grid in the graphic with bias ranging from -4 to +4, and reliability from -4 to +2 as follows:
+<img alt="Media bias chart with grid, showing the range labels" src="../_images/bias_chart_divisions.jpg" /></p>
+<p>These are saved in the file <code class="docutils literal notranslate"><span class="pre">media_info.csv</span></code>, where each row of text is the info for one media site. For example:
+<code class="docutils literal notranslate"><span class="pre">wsws.org,-3,-1</span></code>
+Means that the site <a class="reference external" href="http://wsws.org">wsws.org</a> has a bias of -3 (Hyper-Partisan Left) and a reliability of -1 (Opinion OR High Variation in Reliability).</p>
+<p>If you want to modify the <code class="docutils literal notranslate"><span class="pre">media_info.csv</span></code> file, you can open it by right-clicking and selecting Open With -&gt; Editor. You can then modify entries, or add new ones for more sites (like from the interactive media bias chart here: <a class="reference external" href="https://adfontesmedia.com/interactive-media-bias-chart/">https://adfontesmedia.com/interactive-media-bias-chart/</a>). Then save it and rerun this code and the code below.</p>
+<p><img alt="Show context menues for right clicking the csv file, then choosing Open With, then choosing Editor" src="../_images/open_csv_editor.jpg" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">media_info_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;media_info.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="now-reorganize-the-information-for-easier-use">
+<h2>Now reorganize the information for easier use<a class="headerlink" href="#now-reorganize-the-information-for-easier-use" title="Permalink to this headline">#</a></h2>
+<p>Get a list of just the media websites in the variable <code class="docutils literal notranslate"><span class="pre">media_sites</span></code></p>
+<p>Make a dictionary where you can look up the bias for a site in the variable <code class="docutils literal notranslate"><span class="pre">media_bias_lookup</span></code></p>
+<p>Make a dictionary where you can look up the reliability for a site in the variable <code class="docutils literal notranslate"><span class="pre">media_reliability_lookup</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">media_sites</span> <span class="o">=</span> <span class="n">media_info_df</span><span class="p">[</span><span class="s1">&#39;site&#39;</span><span class="p">]</span>
+
+<span class="n">media_bias_lookup</span> <span class="o">=</span> <span class="p">{</span><span class="n">m_info</span><span class="p">[</span><span class="s1">&#39;site&#39;</span><span class="p">]:</span> <span class="n">m_info</span><span class="p">[</span><span class="s1">&#39;bias&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">m_info</span> <span class="ow">in</span> <span class="n">media_info_df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">()}</span>
+<span class="n">media_reliability_lookup</span> <span class="o">=</span> <span class="p">{</span><span class="n">m_info</span><span class="p">[</span><span class="s1">&#39;site&#39;</span><span class="p">]:</span> <span class="n">m_info</span><span class="p">[</span><span class="s1">&#39;reliability&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">m_info</span> <span class="ow">in</span> <span class="n">media_info_df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">()}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="demo-of-looking-up-media-site-info">
+<h2>Demo of looking up media site info<a class="headerlink" href="#demo-of-looking-up-media-site-info" title="Permalink to this headline">#</a></h2>
+<p>This is a demo of how to get information from the variables from the code above. You will need to access this info yourself below</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># media_sites has a list of sites to look for in the tweets</span>
+<span class="c1"># you can loop through them like this</span>
+<span class="k">for</span> <span class="n">site</span> <span class="ow">in</span> <span class="n">media_sites</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;, &#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="c1"># media_bias_lookup lets you look up the bias for a site from the media_sites list</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">media_bias_lookup</span><span class="p">[</span><span class="s2">&quot;pbs.org&quot;</span><span class="p">])</span>
+
+<span class="c1"># media_reliability_lookup lets you look up the reliability for a site from the media_sites list</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">media_reliability_lookup</span><span class="p">[</span><span class="s2">&quot;pbs.org&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="utility-functions-find-all-the-urls-in-the-text-and-turn-shortened-urls-into-full-urls">
+<h2>Utility functions: find all the urls in the text, and turn shortened urls into full urls<a class="headerlink" href="#utility-functions-find-all-the-urls-in-the-text-and-turn-shortened-urls-into-full-urls" title="Permalink to this headline">#</a></h2>
+<p>The function <code class="docutils literal notranslate"><span class="pre">follow_url_redirects</span></code> takes a potentially shortened url (like <a class="reference external" href="https://bit.ly/3gE1Nsl">https://bit.ly/3gE1Nsl</a>), and turns it into the full url with the news site. Note: You do not need to use this function directly.</p>
+<p>The function <code class="docutils literal notranslate"><span class="pre">find_expanded_urls</span></code> takes a piece of text that has urls in it, and returns a list of the expanded version of all those urls. Note: You <strong>will</strong> have to use this function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="k">def</span> <span class="nf">follow_url_redirects</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="n">still_redirecting</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">new_url</span> <span class="o">=</span> <span class="n">url</span>
+    <span class="n">status_code</span> <span class="o">=</span> <span class="mi">301</span>
+    <span class="n">num_tries</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">still_redirecting</span> <span class="ow">and</span> <span class="n">num_tries</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">new_url</span><span class="p">,</span> <span class="n">allow_redirects</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">status_code</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span>
+            <span class="k">if</span> <span class="s1">&#39;Location&#39;</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">headers</span><span class="p">:</span> 
+                <span class="n">new_url</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;Location&#39;</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">status_code</span> <span class="o">==</span> <span class="mi">301</span> <span class="ow">and</span> <span class="s1">&#39;Location&#39;</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">headers</span><span class="p">:</span>
+                <span class="n">still_redirecting</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">still_redirecting</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">except</span> <span class="ne">BaseException</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- Warning: could not load url: &quot;</span> <span class="o">+</span> <span class="n">url</span> <span class="o">+</span> <span class="s2">&quot;, err: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">err</span><span class="p">))</span>
+            <span class="n">still_redirecting</span> <span class="o">=</span> <span class="kc">False</span>
+        
+    <span class="k">return</span> <span class="n">new_url</span>
+
+<span class="k">def</span> <span class="nf">find_expanded_urls</span><span class="p">(</span><span class="n">piece_of_text</span><span class="p">):</span>
+    <span class="n">urls</span> <span class="o">=</span> <span class="n">extractor</span><span class="o">.</span><span class="n">find_urls</span><span class="p">(</span><span class="n">piece_of_text</span><span class="p">)</span>
+    <span class="n">fullURLs</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">urls</span><span class="p">:</span>
+        <span class="n">fullURL</span> <span class="o">=</span> <span class="n">follow_url_redirects</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">fullURLs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fullURL</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">fullURLs</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="demo-of-how-to-use-the-function-find-expanded-urls">
+<h2>Demo of how to use the function <code class="docutils literal notranslate"><span class="pre">find_expanded_urls</span></code><a class="headerlink" href="#demo-of-how-to-use-the-function-find-expanded-urls" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">urls</span> <span class="o">=</span> <span class="n">find_expanded_urls</span><span class="p">(</span><span class="s2">&quot;An article on misuse of facial recognition https://bit.ly/3gE1Nsl. a documentary on bias and algorithms: https://bit.ly/3Lr0Xx7&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">urls</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="your-code">
+<h1>Your Code!<a class="headerlink" href="#your-code" title="Permalink to this headline">#</a></h1>
+<section id="create-functions-to-look-up-bias-an-reliability-for-a-website">
+<h2>Create functions to look up bias an reliability for a website<a class="headerlink" href="#create-functions-to-look-up-bias-an-reliability-for-a-website" title="Permalink to this headline">#</a></h2>
+<p>You need to create two functions: <code class="docutils literal notranslate"><span class="pre">find_bias</span></code> and <code class="docutils literal notranslate"><span class="pre">find_reliability</span></code></p>
+<p>Note: These two functions should look very similar.</p>
+<ul class="simple">
+<li><p>They should each take as an argument a url.</p></li>
+<li><p>They should then do a for loop over all the sites in the <code class="docutils literal notranslate"><span class="pre">media_sites</span></code> list.</p>
+<ul>
+<li><p>If that site string (e.g., “<a class="reference external" href="http://reuters.com">reuters.com</a>”) appears in the given url string (e.g, “<a class="reference external" href="https://www.reuters.com/lifestyle/sports/">https://www.reuters.com/lifestyle/sports/</a>…”), then the function should return the bias or reliability for that site in the <code class="docutils literal notranslate"><span class="pre">media_bias_lookup</span></code>/<code class="docutils literal notranslate"><span class="pre">media_reliability_lookup</span></code> dictionary.</p></li>
+</ul>
+</li>
+<li><p>If none of the media_sites sites is found in the url, then no need to do anything as the function will by default return “None”.</p></li>
+</ul>
+<p>Suggestion: write the code first not in a function, and then turn it into a function at the end</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#TODO: Your code here!</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="test-your-code-for-find-bias-and-find-reliability">
+<h2>Test your code for find_bias and find_reliability<a class="headerlink" href="#test-your-code-for-find-bias-and-find-reliability" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># youtube isn&#39;t in the list, so should return None for bias</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">find_bias</span><span class="p">(</span><span class="s2">&quot;https://www.youtube.com/watch?v=JTfhYyTuT44&quot;</span><span class="p">))</span>
+
+<span class="c1"># reuters should return -1 for bias</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">find_bias</span><span class="p">(</span><span class="s2">&quot;https://www.reuters.com/lifestyle/sports/alpine-skiing-womens-downhill-pushed-back-by-least-30-mins-due-wind-2022-02-15/&quot;</span><span class="p">))</span>
+
+<span class="c1"># reuters should return 2 for reliability</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">find_reliability</span><span class="p">(</span><span class="s2">&quot;https://www.reuters.com/lifestyle/sports/alpine-skiing-womens-downhill-pushed-back-by-least-30-mins-due-wind-2022-02-15/&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Your Code!<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<section id="create-a-function-that-for-a-given-query-displays-the-average-bias-and-reliability-for-sites-linked-to-from-the-found-tweets">
+<h2>Create a function that, for a given query, displays the average bias and reliability for sites linked to from the found tweets<a class="headerlink" href="#create-a-function-that-for-a-given-query-displays-the-average-bias-and-reliability-for-sites-linked-to-from-the-found-tweets" title="Permalink to this headline">#</a></h2>
+<p>Create a function <code class="docutils literal notranslate"><span class="pre">find_twitter_bias_and_reliability</span></code> that takes a query and optionally max_results (by default 10). You can also make an optional <code class="docutils literal notranslate"><span class="pre">show_progress</span></code> argument as well if you want (see lecture 12 demo).</p>
+<p>What your function should do:</p>
+<p>Do a twitter search (you can do our normal <code class="docutils literal notranslate"><span class="pre">search_recent_tweets</span></code>, or if you want, you can experiment with <code class="docutils literal notranslate"><span class="pre">search_all_tweets</span></code>).</p>
+<p>Create some variables to track the total number of links you were able to evaluate for bias/reliabilty, and the total sum of the bias and the total sum of the reliability you encounter with those links.</p>
+<p>Next loop through all the tweets in your search.</p>
+<p>For each tweet, use the <code class="docutils literal notranslate"><span class="pre">find_expanded_urls</span></code> function to get all the expanded urls in the tweet. Also, print the tweet text/link.</p>
+<p>For each url in those urls:</p>
+<ul class="simple">
+<li><p>try to find the bias and the reliability of the url (using your <code class="docutils literal notranslate"><span class="pre">find_bias</span></code> and <code class="docutils literal notranslate"><span class="pre">find_reliability</span></code>)</p></li>
+<li><p>If you were able to find the bias and reliability</p>
+<ul>
+<li><p>add to the count of urls you were able to evaluate</p></li>
+<li><p>add the bias to the total bias you found from links</p></li>
+<li><p>add the reliability to the total reliability found from your links</p></li>
+<li><p>Also, print the url and the bias/responsibility info</p></li>
+</ul>
+</li>
+<li><p>If you were not able to find the bias and reliability</p>
+<ul>
+<li><p>Print the url and say you weren’t able to evaluate it.</p></li>
+</ul>
+</li>
+</ul>
+<p>After all of that, print out the total number of urls you were able to evaluate.</p>
+<p>If you were able to evaluate at least 1 url, then print out the average bias and average reliability for all the urls in your search.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#TODO: Your code here!</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="test-of-your-code">
+<h2>Test of your code<a class="headerlink" href="#test-of-your-code" title="Permalink to this headline">#</a></h2>
+<p>This should test your code with a search for “senate,” making sure it has a link to some website, that it doesn’t link to twitter (many tweets refer to other tweets), and that it isn’t a retweet. Also, have it request 100 tweets.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;senate has:links -is:retweet -url:twitter.com&#39;</span>
+<span class="n">find_twitter_bias_and_reliability</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id2">
+<h1>Your Code!<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h1>
+<p>Do three more searches of your own choosing which give at least some urls that your code can evaluate.</p>
+<p>You can search for different news topics, political figures, or other interests. You can also search for tweets from a particular user (though if you are using search_recent_tweets, it only gets their tweets from the last 7 days)</p>
+<p>You can also try searching for phrases used specifically by different groups. For example, if you want searches that are more likely to turn up unreliable or conspiracy theory sites, you can try searches like:</p>
+<ul class="simple">
+<li><p>Soros</p></li>
+<li><p>“covid cult”</p></li>
+<li><p>#Censorship</p></li>
+<li><p>shitlibs</p></li>
+</ul>
+<p>You can do other modifications to your search as well (like restricting more websites in the search than just <a class="reference external" href="http://twitter.com">twitter.com</a>).</p>
+<p>After each search there are some questions to answer. And some final reflection questions at the end as well.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Search 1 code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="search-1-follow-up-questions">
+<h2>Search 1 follow-up questions<a class="headerlink" href="#search-1-follow-up-questions" title="Permalink to this headline">#</a></h2>
+<p>Write at least 2 sentences in response to each of these questions (you can edit this text):</p>
+<ul class="simple">
+<li><p>Looking at your calculated average bias and reliability, and skimming through the tweets, how well do you think those averages represent the tweets in the search?</p></li>
+<li><p>Are there particular sites that showed up a lot that your program wasn’t able to find bias/reliability websites for? How hard do you think it would be to evaluate those sites too?</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Search 2 code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="search-2-follow-up-questions">
+<h2>Search 2 follow-up questions<a class="headerlink" href="#search-2-follow-up-questions" title="Permalink to this headline">#</a></h2>
+<p>Write at least 2 sentences in response to each of these questions (you can edit this text):</p>
+<ul class="simple">
+<li><p>Looking at your calculated average bias and reliability, and skimming through the tweets, how well do you think those averages represent the tweets in the search?</p></li>
+<li><p>Are there particular sites that showed up a lot that your program wasn’t able to find bias/reliability websites for? How hard do you think it would be to evaluate those sites too?</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Search 3 code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="search-3-follow-up-questions">
+<h2>Search 3 follow-up questions<a class="headerlink" href="#search-3-follow-up-questions" title="Permalink to this headline">#</a></h2>
+<p>Write at least 2 sentences in response to each of these questions (you can edit this text):</p>
+<ul class="simple">
+<li><p>Looking at your calculated average bias and reliability, and skimming through the tweets, how well do you think those averages represent the tweets in the search?</p></li>
+<li><p>Are there particular sites that showed up a lot that your program wasn’t able to find bias/reliability websites for? How hard do you think it would be to evaluate those sites too?</p></li>
+</ul>
+</section>
+<section id="final-reflection-questions">
+<h2>Final Reflection questions<a class="headerlink" href="#final-reflection-questions" title="Permalink to this headline">#</a></h2>
+<p>Write at least 2 sentences in response to each of these questions (you can edit this text):</p>
+<ul class="simple">
+<li><p>In what ways do you feel like the info from the Media Bias Chart works well?</p></li>
+<li><p>In what ways do you feel like the info from the Media Bias Chart works poorly?</p></li>
+<li><p>If you could redesign the Media Bias Chart, what would you want to do (e.g., add some other dimension besides just bias/responsibility, change how it is evaluated, add more news sources, consider different countries)?</p></li>
+<li><p>If you were able to run your <code class="docutils literal notranslate"><span class="pre">find_twitter_bias_and_reliability</span></code> function on the whole history of a twitter user (e.g, thousands of tweets), how accurately do you think you’d be able to judge that users’ political views and susceptibility to consipracy theories?</p></li>
+<li><p>What might a social media company or an advertizer (including political campaigns) want to do with information on a users’ political views and susceptibility to consipracy theories?</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Kyle Thayer<br/>
+  
+      &copy; Copyright 2022.<br/>
+    <div class="extra_footer">
+      <script src="https://hypothes.is/embed.js" async></script>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

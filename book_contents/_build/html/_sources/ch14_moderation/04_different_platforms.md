@@ -1,0 +1,18 @@
+# Comparing Different Platforms
+- 4chan/8chan - minimal moderation
+- Reddit - different moderators in each subreddit, some very toxic, others not
+  - [Study finds Reddit’s controversial ban of its most toxic subreddits actually worked](https://techcrunch.com/2017/09/11/study-finds-reddits-controversial-ban-of-its-most-toxic-subreddits-actually-worked/)
+    - “Reddit finally banned a handful of its most hateful and deplorable subreddits, including r/coontown and r/fatpeoplehate.”
+    - “Post-ban, hate speech by the same users was reduced by as much as 80-90 percent.”
+    - “Members of banned communities left Reddit at significantly higher rates than control groups.”
+    - “Migration was common, both to similar subreddits (i.e. overtly racist ones) and tangentially related ones (r/The_Donald).”
+    - “However, within those communities, hate speech did not reliably increase, although there were slight bumps as the invaders encountered and tested new rules and moderators.”
+- [News sites got rid of having comment sections at the end of articles in 2013](https://www.wired.com/2015/10/brief-history-of-the-demise-of-the-comments-timeline/)
+- Public Figure Exception?
+- Facebook
+  - https://www.technologyreview.com/2021/03/11/1020600/facebook-responsible-ai-misinformation/
+    - “The more likely a post is to violate Facebook’s community standards, the more user engagement it receives, because the algorithms that maximize engagement reward inflammatory content.”
+- Political Leaders Exception
+  - Twitter/Facebook/etc. Had an [exception to their normal moderation policies for political leaders](https://help.twitter.com/en/rules-and-policies/public-interest), where they wouldn’t ban them even if they violated site policies (most notably applied to Donald Trump)
+  - These policies changed some when Donald Trump was banned from Twitter and then Facebook after the January 6th Insurrection
+    - [Facebook to end special treatment for politicians after Trump ban](https://www.theverge.com/2021/6/3/22474738/facebook-ending-political-figure-exemption-moderation-policy)
