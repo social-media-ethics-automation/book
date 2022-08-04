@@ -39,20 +39,78 @@ Twitter bots are generally organized in this same way, so one bot might be organ
 ## Variables: Save information for later
 The next organizing feature of programming languages like Python are "variables." Variables are a way of saving information for later use.
 
-In a cooking recipe, an equivalent would be to put some of the preparation you've been doing to the side, so you can use it later:
+In a cooking recipe, an equivalent would be something like putting ingredients in a bowl to use later, like:
 ```text
-TODO: recipe with an ingredient made or mixed in a separate bowl, to be added later
+TODO: Pound cake directions, something like
+1. Put one pound of butter in a bowl
+2. Add one pound of sugar to the bowl and mix
+...
+```
+
+Sometimes in cooking, you use multiple bowls to mix different parts of the recipe separately:
+```text
+...
+while the dough is rising:
+- mix the powdered sugar, butter, and milk in another bowl to make the frosting
+```
+
+In a computer program, when you save information for later use, instead of putting it in a bowl, give it a name, which you can use to get the information later.
+
+```text
+1. Save my first name in a variable called "first_name"
+2. Save my last name in a variable called "last_name"
+3. Display my full name as what is stored in the variable "first_name" followed
+   by a space, followed by what is stored in the variable "last_name"
 ```
 
 ```text
-TODO: social media example where something is saved and loaded again
+1. Find my latest tweet, and save it as a variable named "my_latest_tweet"
+2. Search for all tweets that are a reply to the tweet saved in the variable "my_latest_tweet"
 ```
 
 ## Loops: Repeating Actions
+Next up is loops, which are used to repeat actions.
+
+In cooking you can repeat an action a set number of times:
 ```text
-TODO: recipe with a repeated instruction, like for each egg, break it and throw out the shell, or put frosting on each cupcake
+...
+5. Stir 10 times [Better example???]
+...
 ```
 
+Or you can repeat the same action, but to different items:
+```text
+...
+7. Put frosting on each of the cupcakes.
+...
+```
+
+Or you can repeat the same action until you get a certain result:
+```text
+5. Continue stirring until the batter is smooth
+```
+
+In computer programming you can repeat an action a set number of times
+
+```text
+1. Tweet "Warner Brothers should #ReleaseTheSnyderCut" 100 times
+```
+ (footnote: https://www.rollingstone.com/tv-movies/tv-movie-features/justice-league-the-snyder-cut-bots-fans-1384231/)
+
+Or a computer program can repeat an action to a set of items
+
+```text
+...
+3. Like each of the tweets that were replies to my_latest_tweet
+...
+```
+
+Or a computer program can repeat an action until a condition is met:
+```text
+...
+- Keep sending private messages to this person until they block me
+...
+```
 
 
 ## Code Blocks: Grouping statements

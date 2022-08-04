@@ -9,7 +9,7 @@ In our constructing that sentence, we used a number of English language rules, s
 - Ending the sentence with a period `.`
 - Making a parenthetical remark with a matching opening parenthese `(` and closing parenthese `)`. This parenthetical remark clarified the part of the sentence before it `UW`.
 
-Programming languages also have their own set of rules for combining and organizing pieces of code, which we will look at in these section.
+Programming languages also have their own set of rules for combining and organizing pieces of code, which we will look at in these sections.
 
 ```{tableofcontents}
 ```
