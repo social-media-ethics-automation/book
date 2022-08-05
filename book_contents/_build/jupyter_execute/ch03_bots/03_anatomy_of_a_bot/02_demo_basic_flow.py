@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Demo and Practice: Python Control Flow
+# # Demo: Statements and Variables
 
 # Programming languages work like other languages, you combine pieces together according to specific rules in order to create meaning.
 # 

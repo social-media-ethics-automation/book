@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Practice: Python Control Flow
+# # Practice: Statements and Variables
 
 # ## Variable Inspector
 # Before we begin, run the code below to install a helpful library, then refresh your browser tab.
