@@ -1,4 +1,4 @@
-# Reflections: Data and Social media
+# Design Activity: Data and Social media
 
 Look at a social media site:
 Identify different pieces of data on the site and answer these questions:

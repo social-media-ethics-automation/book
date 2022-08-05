@@ -1,4 +1,4 @@
-# How data is saved in a computer
+# Data Types
 - Different types of storage
   - Integer (whole number)
   - Float (number with decimal points)
@@ -16,16 +16,3 @@
   - Name
   - Address
   - Relationship status
-
-
-## Python data types:
-numbers, strings [text], lists, dictionaries
-
-
-# TODO: make this into section:
-- Representing Data in a Computer
-    - Python Data Types
-    - Demo: Data Types
-    - Self-Check Quiz: Data Types
-    - Practice: Data Types
-    - Design Activity: Selecting Data Types

@@ -3,11 +3,6 @@
 
 # # Demo: Statements and Variables
 
-# Programming languages work like other languages, you combine pieces together according to specific rules in order to create meaning.
-# 
-# E.g.: Conside the rules to construct a sentence and determing it's meaning:
-# > I was at UW (University of Washington, Seattle), the other day.
-
 # ## Variables and assignment (single "=")
 # Variables are a place in the computer where a piece of information is saved with a particular name.
 # 
