@@ -1,6 +1,6 @@
 # Kumail Nanjiani's Reflections on Ethics in Tech
 
-Kumail Nanjiani (a star of the [Silicon Valley](https://www.imdb.com/title/tt2575988/) TV Show), posted on twitter (@kumailn) November 1, 2017:
+Kumail Nanjiani was a star of the [Silicon Valley](https://www.imdb.com/title/tt2575988/) TV Show, which was about the tech industry. He posted these reflections on ethics in tech on twitter (@kumailn) on November 1, 2017:
 
 > As a cast member on a show about tech, our job entails visiting tech companies/conferences etc. We meet ppl eager to show off new tech.
 >

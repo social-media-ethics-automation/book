@@ -2,7 +2,7 @@
 
 ![](logo.png)
 
-Automation drives our experience of social media platforms, from timeline feeds to disinformation bots. Students examine social media phenomena, like viral memes, parasocial relationships, and harassment campaigns. Students then explore the ethics of automation on social media platforms through experimenting with computer programs that automate social media actions. We assume no prior programming experience.
+Automation drives our experience of social media platforms, from timeline feeds to disinformation bots. This book examines social media phenomena, like viral memes, parasocial relationships, and harassment campaigns. This book then explores the ethics of automation on social media platforms through experimenting with computer programs that automate social media actions. We assume no prior programming experience.
 
 **What is this book is about:**
 - Social Media

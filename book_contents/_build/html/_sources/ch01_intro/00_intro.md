@@ -1,20 +1,16 @@
 # Introduction
 
-TODO: Write some engaging questions here
+- How does social media influence our world and us, in good and bad ways?
 
-**What is this book is about:**
-- Social Media
-  - What it does, how it works, how people use it, different uses and abuses
-- Ethics
-  - Individual Behaviors
-  - Group Behaviors
-  - Design and management decisions
-- Automation
-  - Learn basic programming skills in Python
-  - Create twitter bots
-  - Find and process information from twitter
+- How do the decisions made by the creators of social media platforms affect how it is used and what people do?
 
-Let's begin by looking at the case of Justine Sacco’s racist joke tweet
+- How do social media bots change what happens?
+
+- What can we learn about people from social media data?
+
+- What are the ethical trade offs made in all of these situations?
+
+In this book, we will try to start answering questions like this. To get us started let's look at a particular situation that happened on Social Media: the case of Justine Sacco’s racist joke tweet, and then read actor Kumail Nanjiani's reflections on ethics in tech.
 
 ```{tableofcontents}
 ```
