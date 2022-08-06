@@ -1,4 +1,5 @@
 # Examples of Bots (or apps)
+There are many types of bots in the social media world. Some examples of different bots:
 
 ## Friendly, helpful
 - Auto caption: https://twitter.com/headlinerclip
@@ -18,4 +19,4 @@
   - Bay found that 50.9% of people tweeting negatively about “The Last Jedi” were “politically motivated or not even human,” with a number of these users appearing to be Russian trolls.
 
 ## Corrupted bots
-- E.g., Microsoft Tay
+- E.g., [Microsoft Tay](https://www.vice.com/en_us/article/mg7g3y/how-to-make-a-not-racist-bot)
