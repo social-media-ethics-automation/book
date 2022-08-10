@@ -1004,7 +1004,7 @@ WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
 <p>Now that I am logged in with the twitter <code class="docutils literal notranslate"><span class="pre">client</span></code>, I can ask the client post a tweet (<code class="docutils literal notranslate"><span class="pre">create_tweet</span></code>)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;This is tweet was posted by a computer program!&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;This tweet was posted by a computer program!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1033,7 +1033,7 @@ WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
 <span class="n">client</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">consumer_key</span><span class="o">=</span><span class="n">bot_keys</span><span class="o">.</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">bot_keys</span><span class="o">.</span><span class="n">consumer_secret</span><span class="p">,</span>
                        <span class="n">access_token</span><span class="o">=</span><span class="n">bot_keys</span><span class="o">.</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">bot_keys</span><span class="o">.</span><span class="n">access_token_secret</span><span class="p">)</span>
 
-<span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;This is tweet was posted by a computer program!&quot;</span><span class="p">)</span>
+<span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;This tweet was posted by a computer program!&quot;</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
       <span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;test Computer program posting tweet &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>

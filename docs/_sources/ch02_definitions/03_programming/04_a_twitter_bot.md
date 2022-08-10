@@ -8,7 +8,7 @@ import bot_keys
 client = tweepy.Client(consumer_key=bot_keys.consumer_key, consumer_secret=bot_keys.consumer_secret,
                        access_token=bot_keys.access_token, access_token_secret=bot_keys.access_token_secret)
 
-client.create_tweet(text="This is tweet was posted by a computer program!")
+client.create_tweet(text="This tweet was posted by a computer program!")
 ```
 
 ## Reflection Questions

@@ -19,22 +19,22 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 ------------------
 # before tweeting, we recommend you display the output first:
 
-display("This is tweet was posted by a computer program!")
+display("This tweet was posted by a computer program!")
 
 
 # this is the basic structure to post a tweet. if you want, try running this code block and
 # check your twitter account to see if it worked!
 
-client.create_tweet(text="This is tweet was posted by a computer program!")
+client.create_tweet(text="This tweet was posted by a computer program!")
 ------------------
 
 [1;31m---------------------------------------------------------------------------[0m
 [1;31mNameError[0m                                 Traceback (most recent call last)
 Input [1;32mIn [3][0m, in [0;36m<cell line: 9>[1;34m()[0m
-[0;32m      3[0m display([38;5;124m"[39m[38;5;124mThis is tweet was posted by a computer program![39m[38;5;124m"[39m)
+[0;32m      3[0m display([38;5;124m"[39m[38;5;124mThis tweet was posted by a computer program![39m[38;5;124m"[39m)
 [0;32m      6[0m [38;5;66;03m# this is the basic structure to post a tweet. if you want, try running this code block and[39;00m
 [0;32m      7[0m [38;5;66;03m# check your twitter account to see if it worked![39;00m
-[1;32m----> 9[0m [43mclient[49m[38;5;241m.[39mcreate_tweet(text[38;5;241m=[39m[38;5;124m"[39m[38;5;124mThis is tweet was posted by a computer program![39m[38;5;124m"[39m)
+[1;32m----> 9[0m [43mclient[49m[38;5;241m.[39mcreate_tweet(text[38;5;241m=[39m[38;5;124m"[39m[38;5;124mThis tweet was posted by a computer program![39m[38;5;124m"[39m)
 
 [1;31mNameError[0m: name 'client' is not defined
 NameError: name 'client' is not defined

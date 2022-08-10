@@ -1470,7 +1470,7 @@ client = tweepy.Client(
    consumer_key=consumer_key, consumer_secret=consumer_secret,
    access_token=access_token, access_token_secret=access_token_secret
 )
-client.create_tweet(text="<strong style="color:black;background-color:lightgreen">This is tweet was posted by a computer program!</strong>")
+client.create_tweet(text="<strong style="color:black;background-color:lightgreen">This tweet was posted by a computer program!</strong>")
 </pre>
 <p>The first five highlighted pieces of code are for the special passwords you can get when you get approved for developer access to twitter [TODO: link] (I’ve put fake values in them for now):</p>
 <ul class="simple">
@@ -1506,7 +1506,7 @@ client.create_tweet(text="<strong style="color:black;background-color:lightgreen
 <span class="p">)</span>
 
 <span class="c1"># TODO: modify the text in the quotes below to change what this bot tweets:</span>
-<span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;This is tweet was posted by a computer program!&quot;</span><span class="p">)</span>
+<span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;This tweet was posted by a computer program!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>With those, hopefully a future human reader will have a better chance of understanding how to modify the program to do what they want.</p>
@@ -1540,7 +1540,7 @@ client.create_tweet(text="<strong style="color:black;background-color:lightgreen
 </div>
 <p>The purpose of this code is to take all the developer access passwords you entered above, and give them to the tweepy code so that the tweepy code can log into your twitter account and provide the needed passwords for whatever twitter action you want to do.</p>
 <p>The final line of code is:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;This is tweet was posted by a computer program!&quot;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;This tweet was posted by a computer program!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>This is the line of code where a tweet is actually posted. The action is called “create_tweet” since the code is creating a tweet. Inside the double quotes is the text that is going to be tweeted.</p>
@@ -1570,7 +1570,7 @@ client.create_tweet(text="<strong style="color:black;background-color:lightgreen
 
 <span class="c1"># Post a tweet</span>
 <span class="c1"># TODO: modify the text in the quotes below to change what this bot tweets:</span>
-<span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;This is tweet was posted by a computer program!&quot;</span><span class="p">)</span>
+<span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;This tweet was posted by a computer program!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Now that we’ve looked over the code and commented it, let’s go to the next page, where you can try running it!</p>

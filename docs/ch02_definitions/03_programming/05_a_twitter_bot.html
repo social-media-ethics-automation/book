@@ -1340,7 +1340,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="a-program-that-posts-one-tweet">
 <h1><span class="section-number">2.3.5. </span>A program that posts one tweet<a class="headerlink" href="#a-program-that-posts-one-tweet" title="Permalink to this headline">#</a></h1>
-<p>Below is a computer program written in the Python programming language. The program will post a single tweet that says: “This is tweet was posted by a computer program!”.</p>
+<p>Below is a computer program written in the Python programming language. The program will post a single tweet that says: “This tweet was posted by a computer program!”.</p>
 <p>Don’t worry if you don’t understand any of this Python code yet; we will build an understanding of code like this throughout the book.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tweepy</span>
 
@@ -1352,7 +1352,7 @@ title="Print to PDF"
 <span class="n">client</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">consumer_key</span><span class="o">=</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">consumer_secret</span><span class="p">,</span>
                        <span class="n">access_token</span><span class="o">=</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">access_token_secret</span><span class="p">)</span>
 
-<span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;This is tweet was posted by a computer program!&quot;</span><span class="p">)</span>
+<span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;This tweet was posted by a computer program!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Though you may not understand anything in the above code yet, I want to point out a couple things:</p>

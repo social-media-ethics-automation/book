@@ -351,13 +351,13 @@ import tweepy
 
 # before tweeting, we recommend you display the output first:
 
-display("This is tweet was posted by a computer program!")
+display("This tweet was posted by a computer program!")
 
 
 # this is the basic structure to post a tweet. if you want, try running this code block and
 # check your twitter account to see if it worked!
 
-client.create_tweet(text="This is tweet was posted by a computer program!")
+client.create_tweet(text="This tweet was posted by a computer program!")
 
 
 # 6. Display something you learned in the class so far.

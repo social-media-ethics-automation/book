@@ -1,5 +1,5 @@
 # A program that posts one tweet
-Below is a computer program written in the Python programming language. The program will post a single tweet that says: "This is tweet was posted by a computer program!".
+Below is a computer program written in the Python programming language. The program will post a single tweet that says: "This tweet was posted by a computer program!".
 
 Don't worry if you don't understand any of this Python code yet; we will build an understanding of code like this throughout the book.
 
@@ -10,7 +10,7 @@ import bot_keys
 client = tweepy.Client(consumer_key=bot_keys.consumer_key, consumer_secret=bot_keys.consumer_secret,
                        access_token=bot_keys.access_token, access_token_secret=bot_keys.access_token_secret)
 
-client.create_tweet(text="This is tweet was posted by a computer program!")
+client.create_tweet(text="This tweet was posted by a computer program!")
 ```
 
 Though you may not understand anything in the above code yet, I want to point out a couple things:

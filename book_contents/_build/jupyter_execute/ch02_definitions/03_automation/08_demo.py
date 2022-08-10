@@ -63,7 +63,7 @@ client = tweepy.Client(
 
 # Post a tweet
 # TODO: modify the text in the quotes below to change what this bot tweets:
-client.create_tweet(text="This is tweet was posted by a computer program!")
+client.create_tweet(text="This tweet was posted by a computer program!")
 
 
 # In[ ]:

@@ -22,7 +22,7 @@ client = tweepy.Client(
    consumer_key=consumer_key, consumer_secret=consumer_secret,
    access_token=access_token, access_token_secret=access_token_secret
 )
-client.create_tweet(text="<strong style="color:black;background-color:lightgreen">This is tweet was posted by a computer program!</strong>")
+client.create_tweet(text="<strong style="color:black;background-color:lightgreen">This tweet was posted by a computer program!</strong>")
 </pre>
 
 The first five highlighted pieces of code are for the special passwords you can get when you get approved for developer access to twitter [TODO: link] (I've put fake values in them for now):
@@ -65,7 +65,7 @@ client = tweepy.Client(
 )
 
 # TODO: modify the text in the quotes below to change what this bot tweets:
-client.create_tweet(text="This is tweet was posted by a computer program!")
+client.create_tweet(text="This tweet was posted by a computer program!")
 ```
 
 With those, hopefully a future human reader will have a better chance of understanding how to modify the program to do what they want.
@@ -112,7 +112,7 @@ The purpose of this code is to take all the developer access passwords you enter
 
 The final line of code is:
 ```python
-client.create_tweet(text="This is tweet was posted by a computer program!")
+client.create_tweet(text="This tweet was posted by a computer program!")
 ```
 
 This is the line of code where a tweet is actually posted. The action is called "create_tweet" since the code is creating a tweet. Inside the double quotes is the text that is going to be tweeted.
@@ -144,7 +144,7 @@ client = tweepy.Client(
 
 # Post a tweet
 # TODO: modify the text in the quotes below to change what this bot tweets:
-client.create_tweet(text="This is tweet was posted by a computer program!")
+client.create_tweet(text="This tweet was posted by a computer program!")
 ```
 
 Now that we've looked over the code and commented it, let's go to the next page, where you can try running it!
