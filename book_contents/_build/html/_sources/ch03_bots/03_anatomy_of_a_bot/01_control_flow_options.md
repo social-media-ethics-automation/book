@@ -42,6 +42,31 @@ Twitter bots are generally organized in this same way, so one bot might be organ
 - Block those users
 ```
 
+````{admonition} Click to see actual code
+:class: dropdown
+```python
+import tweepy
+
+# Load all your developer access passwords into Python
+# TODO: Put your twitter account's special developer access passwords below:
+bearer_token = "n4tossfgsafs_fake_bearer_token_isa53#$%$"
+consumer_key = "sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG"
+consumer_secret = "45adf$T$A_fake_consumer_secret_JESdsg"
+access_token = "56sd5Ss4tsea_fake_access_token_%YE%hDsdr"
+access_token_secret = "j^$dr_fake_consumer_key_^A5s#DR5s"
+
+# Give the tweepy code your developer access passwords so
+# it can perform twitter actions
+client = tweepy.Client(
+   bearer_token=bearer_token,
+   consumer_key=consumer_key, consumer_secret=consumer_secret,
+   access_token=access_token, access_token_secret=access_token_secret
+)
+
+TODO: Write the rest of this code
+```
+````
+
 We will show how to use statements in Python in the next section.
 
 ## Variables: Save information for later
@@ -69,9 +94,22 @@ For example I might save my first and last name separately in the computer, then
 - Create the text of my full name by combining what is in the variable "first_name",
   followed by a space, followed by what is in the variable "last_name", then save
   it in a new variable called "full_name"
-- Send a private message saying "Hello my name is ___" but filling in the blank
+- Post a tweet saying "Hello my name is ___" but filling in the blank
   with what is in the variable "full_name"
 ```
+````{admonition} Click to see actual code
+:class: dropdown
+```python
+# TODO: Import tweepy and copy in login steps here
+
+first_name = "Kyle"
+last_name = "Thayer"
+full_name = first_name + " " + full_name
+
+client.create_tweet(text="Hello my name is " + full_name)
+```
+````
+
 
 Or, when I am looking something up, like my latest tweets, I can save that in a variable so I can look up replies to those tweets the next step:
 ```text
@@ -79,7 +117,7 @@ Or, when I am looking something up, like my latest tweets, I can save that in a 
 - Search for all tweets that are a reply to the tweet saved in the variable "my_latest_tweet"
 ```
 
-We will show how to use cariables in Python in the next section.
+We will show how to use variables in Python in the next section.
 
 
 ## Events: When you do something depends
@@ -184,9 +222,10 @@ Sometimes in programming, we want to group several steps (i.e., statements) toge
 In a recipe, you might create a block of instructions like this:
 ```text
 - for each of the cupcakes:
-  - put on a layer of white frosting
-  - with pink frosting, make a flower on top
-  - add sprinkles
+  - put on a layer of yellow frosting
+  - use red frosting to draw a red balloon shape
+  - use blue frosting to draw a blue balloon shape
+  - use black frosting to draw a string holding the balloons
 ```
 
 In a computer program, you might make a code block of statements like this:
@@ -231,7 +270,9 @@ In this book, we will be using the [tweepy](https://www.tweepy.org/) code librar
 - retweet
 - search_recent_tweets
 - follow_user
-- etc.
+- etc.[^tweepy_functions_footnote]
+
+[^tweepy_functions_footnote]: You can get a full list of tweepy functions on [this Tweepy documentation page](https://docs.tweepy.org/en/stable/client.html#tweepy.Client). There is a table part way down showing "Twitter API v2 Endpoint" and "Client Methods." The "Client Methods" are the functions you can use, and the rest of that webpage is information on how to use those functions. Unfortunately it is not easy to read this information, but we will cover more on how to read it in chapter ???.
 
 You may be able to figure out what the purpose of each of those tweepy functions are based on the name, though we'll look at the specifics of how to use them throughout the book.
 

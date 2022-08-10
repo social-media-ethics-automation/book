@@ -90,9 +90,9 @@ Note: We'll demonstrate dictionaries later in Chapter 5: History of Social Media
 We can represent much more information with lists, and dictionaries, and lists of dictionaries and dictionaries of lists, etc.
 
 ### Strings (Text)
-Text is generally stored as a list of characters (like the example before of e, t, h, i, c, s), which is called a "string" (that is a bunch of characters strung together).
+Text is generally stored as a list of characters (like the example before of e, t, h, i, c, s). These lists of characters are called "strings" (that is a bunch of characters strung together).
 
-[![A photo of a string banner with shiny letters hanging on it spelling "HAPPY BIRTHDAY"](happy_birthday_banner.jpg)](https://www.pexels.com/photo/a-rocking-horse-and-birthday-decorations-7600328/)
+[![A photo of a string banner with shiny individual letters hanging on it spelling "HAPPY BIRTHDAY"](happy_birthday_banner.jpg)](https://www.pexels.com/photo/a-rocking-horse-and-birthday-decorations-7600328/)
 
 A list of characters then can represent words, sentences, books, etc.
 

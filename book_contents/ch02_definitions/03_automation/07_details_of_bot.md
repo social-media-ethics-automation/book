@@ -42,7 +42,9 @@ _Note: all the highlighted sections of code are surrounded by double quotes. In 
 
 ## Adding code comments
 
-The goal of programming language code is to be readable by both humans and computers, but sometimes the meaning of code isn't always clear to humans trying to read it. In order to aid humans reading the code, most programming languages allow "comments," which are pieces of code that the computer will ignore. These comments allow the person writing the code to leave a note to future people reading the code, knowing that the computer won't read it (like an [aside](https://en.wikipedia.org/wiki/Aside) in play).
+The goal of programming language code is to be readable by both humans and computers, but sometimes the meaning of code isn't always clear to humans trying to read it. In order to aid humans reading the code, programming languages allow programmers to do things to make the code more readable, such as add extra blank lines between sections of code. Blank lines can be used to have some lines of code be visually grouped together, and some be separated, so humans can better follow the outline of the code.
+
+Most programming languages also allow "comments," which are pieces of code that the computer will ignore. These comments allow the person writing the code to leave a note to future people reading the code, knowing that the computer won't read it (like an [aside](https://en.wikipedia.org/wiki/Aside) in a play).
 
 In Python, you can add a comment by use the `#` symbol. Python will ignore everything on a line that comes after the `#`. But humans programmers will often look for the meaning of the program in these comments.
 
