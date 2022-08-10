@@ -16,6 +16,8 @@ Automation drives our experience of social media platforms, from timeline feeds 
   - Create twitter bots
   - Find and process information from twitter
 
-
+````{admonition} Full Table of Contents
+:class: dropdown
 ```{tableofcontents}
 ```
+````
