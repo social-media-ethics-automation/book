@@ -2,6 +2,8 @@
 
 Kumail Nanjiani was a star of the [Silicon Valley](https://www.imdb.com/title/tt2575988/) TV Show, which was about the tech industry. He posted these reflections on ethics in tech on twitter (@kumailn) on November 1, 2017:
 
+![Photo of Kumail Nanjiani](kumail.png) [Image source](https://commons.wikimedia.org/wiki/File:Kumail_Nanjiani_by_Gage_Skidmore_2.jpg)
+
 > As a cast member on a show about tech, our job entails visiting tech companies/conferences etc. We meet ppl eager to show off new tech.
 >
 > Often we'll see tech that is scary. I don't mean weapons etc. I mean altering video, tech that violates privacy, stuff w obv ethical issues.
@@ -18,6 +20,8 @@ Kumail Nanjiani was a star of the [Silicon Valley](https://www.imdb.com/title/tt
 >
 > You can't put this stuff back in the box. Once it's out there, it's out there. And there are no guardians. It's terrifying. The end.
 
-![Photo of Kumail Nanjiani](kumail.png)
+> - Kumail Nanjiani
 
-Kumail Nanjiani, [Image source](https://commons.wikimedia.org/wiki/File:Kumail_Nanjiani_by_Gage_Skidmore_2.jpg)
+
+## Reflection questions:
+TODO: 
