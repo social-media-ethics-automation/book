@@ -1,0 +1,12 @@
+# Social Media Examples
+- Platforms with a social goal
+  - Connection text/picture: Facebook, Twitter, LinkedIn, WeChat, Weibo, QQ, etc.
+  - Video: Youtube, TickTock
+  - Audio: Clubhouse
+  - Dating/Sex: Bumble, Tinder, OKCupid, OnlyFans, etc.
+  - Gaming: Discord
+  - Minimalist: [Yo](https://en.wikipedia.org/wiki/Yo_(app))
+  - [Social Media Platforms for Low-Income Blind People in India](https://www.adityavashistha.com/uploads/2/0/8/0/20800650/vism_assets_2015.pdf) ([follow-up on abuse](https://www.adityavashistha.com/uploads/2/0/8/0/20800650/threats_chi_2019.pdf))
+- Platforms with a different goal, but with a social component
+  - Amazon reviews and Customer questions & answers
+  - News sites with comment sections
