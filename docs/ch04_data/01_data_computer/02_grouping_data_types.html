@@ -1488,10 +1488,24 @@ title="Print to PDF"
 <ul class="simple">
 <li><p>1, 2, 3, 4, 5, 6, 7, 8, 9, 10</p></li>
 </ul>
+<div class="dropdown admonition">
+<p class="admonition-title">Click to see example Python code</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save a list of the numbers from 1 to 10 in a variable called one_to_ten</span>
+<span class="n">one_to_ten</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
 <p>Or we can make a list of letters [which happen to form a word] like this:</p>
 <ul class="simple">
 <li><p>e, t, h, i, c, s</p></li>
 </ul>
+<div class="dropdown admonition">
+<p class="admonition-title">Click to see example Python code</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save a list of letters in a variable called key_word</span>
+<span class="n">key_word</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;t&quot;</span><span class="p">,</span> <span class="s2">&quot;h&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
 <p>The items in these lists are normally numbered with an “index”, so you can ask for the 1st item, or 2nd item, or any other.</p>
 <p>Note: Largely due to <a class="reference external" href="https://en.wikipedia.org/wiki/Zero-based_numbering#Origin">historical peculiarities in the development of programming languages</a>, most programming languages (including Python) number the 1st item in a list as item <code class="docutils literal notranslate"><span class="pre">0</span></code>. So:</p>
 <ul class="simple">
@@ -1500,6 +1514,19 @@ title="Print to PDF"
 <li><p>3rd item has index 2</p></li>
 <li><p>etc.</p></li>
 </ul>
+<div class="dropdown admonition">
+<p class="admonition-title">Click to see example Python code</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save a list of letters in a variable called key_word</span>
+<span class="n">key_word</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;t&quot;</span><span class="p">,</span> <span class="s2">&quot;h&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span><span class="p">]</span>
+
+<span class="c1"># Get the first letter (&quot;e&quot;), and save it in variable first_letter</span>
+<span class="n">first_letter</span> <span class="o">=</span> <span class="n">key_word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">Get</span> <span class="n">the</span> <span class="n">second</span> <span class="n">letter</span> <span class="p">(</span><span class="s2">&quot;t&quot;</span><span class="p">),</span> <span class="ow">and</span> <span class="n">save</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">variable</span> <span class="n">second_letter</span>
+<span class="n">second_letter</span> <span class="o">=</span> <span class="n">key_word</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
 <p>Note: We’ll demonstrate lists later in Chapter 5: History of Social Media.</p>
 </section>
 <section id="dictionaries">
@@ -1525,6 +1552,24 @@ title="Print to PDF"
 <li><p>Green: 205</p></li>
 <li><p>Blue: 170</p></li>
 </ul>
+<div class="dropdown admonition">
+<p class="admonition-title">Click to see example Python code</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save dictionaries for RGB values for two colors in separate variables</span>
+
+<span class="n">purple</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;Red&quot;</span><span class="p">:</span> <span class="mi">128</span><span class="p">,</span>
+  <span class="s2">&quot;Green&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s2">&quot;Blue&quot;</span><span class="p">:</span> <span class="mi">128</span>
+<span class="p">}</span>
+
+<span class="n">medium_aqua_marine</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;Red&quot;</span><span class="p">:</span> <span class="mi">102</span><span class="p">,</span>
+  <span class="s2">&quot;Green&quot;</span><span class="p">:</span> <span class="mi">205</span><span class="p">,</span>
+  <span class="s2">&quot;Blue&quot;</span><span class="p">:</span> <span class="mi">170</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
 <p>We can also use any piece of information we want for the “name” in a dictionary. So if we wanted, we could make a color the “name” in a dictionary. For example, in this one, names are colors (in terms of red, green, and blue), and the values are the [most common names of that color in different languages]{<a class="reference external" href="https://uwdata.github.io/color-naming-in-different-languages/vis/full_color_maps.html">https://uwdata.github.io/color-naming-in-different-languages/vis/full_color_maps.html</a>}:</p>
 <p>Most common name for a given color in English:</p>
 <ul class="simple">
@@ -1536,6 +1581,38 @@ title="Print to PDF"
 <li><p><span style="background-color:rgb(231,37,37)">   </span>{Red: 231, Green, 37, Blue: 37}: 빨강</p></li>
 <li><p><span style="background-color:rgb(167,37,128)">   </span>{Red: 168, Green, 37, Blue: 128}: 자주</p></li>
 </ul>
+<div class="dropdown admonition">
+<p class="admonition-title">Click to see example Python code</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># Save dictionaries for RGB values for two colors in separate variables</span>
+
+<span class="n">color_1</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;Red&quot;</span><span class="p">:</span> <span class="mi">231</span><span class="p">,</span>
+  <span class="s2">&quot;Green&quot;</span><span class="p">:</span> <span class="mi">37</span><span class="p">,</span>
+  <span class="s2">&quot;Blue&quot;</span><span class="p">:</span> <span class="mi">37</span>
+<span class="p">}</span>
+
+<span class="n">color_2</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;Red&quot;</span><span class="p">:</span> <span class="mi">168</span><span class="p">,</span>
+  <span class="s2">&quot;Green&quot;</span><span class="p">:</span> <span class="mi">37</span><span class="p">,</span>
+  <span class="s2">&quot;Blue&quot;</span><span class="p">:</span> <span class="mi">128</span>
+<span class="p">}</span>
+
+
+<span class="c1"># Save dictionaries that given a color will give you the most</span>
+<span class="c1"># common name for that color (one dictionary for English, one for Korean)</span>
+<span class="n">most_common_english_name</span><span class="p">{</span>
+  <span class="n">color_1</span><span class="p">:</span> <span class="s2">&quot;Red&quot;</span><span class="p">,</span>
+  <span class="n">color_2</span><span class="p">:</span> <span class="s2">&quot;Magenta&quot;</span>
+<span class="p">}</span>
+
+<span class="n">most_common_korean_name</span><span class="p">{</span>
+  <span class="n">color_1</span><span class="p">:</span> <span class="s2">&quot;빨강&quot;</span><span class="p">,</span>
+  <span class="n">color_2</span><span class="p">:</span> <span class="s2">&quot;자주&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
 <p>Note: We’ll demonstrate dictionaries later in Chapter 5: History of Social Media, and Chapter 8: Data Mining.</p>
 </section>
 </section>
