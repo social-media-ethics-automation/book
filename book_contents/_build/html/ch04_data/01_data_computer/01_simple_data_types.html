@@ -1495,6 +1495,28 @@ title="Print to PDF"
 <section id="booleans-true-false">
 <h2>Booleans (True / False)<a class="headerlink" href="#booleans-true-false" title="Permalink to this headline">#</a></h2>
 <p>Binary consisting of 0s and 1s make it easy to represent true and false values, where 1 often represents true and 0 represents false. Most programming languages have built in ways of representing True and False values.</p>
+<p>Booleans are often created when doing sort of comparison or test, like:</p>
+<ul class="simple">
+<li><p>Is this piece of text less than or equal to 280 characters long?</p></li>
+<li><p>Does this piece of text end in a question mark?</p></li>
+</ul>
+<div class="dropdown admonition">
+<p class="admonition-title">Click to see example Python code</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save a boolean value in a variable called is_tweet_long</span>
+<span class="n">is_tweet_long</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1"># Save a boolean value in a variable based on a comparison.</span>
+<span class="c1"># The code checks if a wallet has more in it than the cost of the item</span>
+<span class="c1">#   which will be True or False, and be saved in has_enough_money</span>
+<span class="n">has_enough_money</span> <span class="o">=</span> <span class="n">money_in_wallet</span> <span class="o">&gt;</span> <span class="n">cost_of_item</span>
+
+<span class="c1"># Save a boolean value in a variable based on a function call.</span>
+<span class="c1"># The code checks if the text of a tweet (stored in tweet_text) starts</span>
+<span class="c1">#   with &quot;Hello&quot;, which will be True or False, and be saved in is_greeting</span>
+<span class="n">is_greeting</span> <span class="o">=</span> <span class="n">tweet_text</span><span class="o">.</span><span class="n">starts_with</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </section>
 <section id="numbers">
 <h2>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline">#</a></h2>
@@ -1505,10 +1527,24 @@ title="Print to PDF"
 </ul>
 <p>In both of those storage methods, there are limits to how much space is used to save each number, limiting how big (or small) the numbers can be, and causing rounding with floating point numbers.</p>
 <p>Additionally programming languages might include ways of representing fractions, or <a class="reference external" href="https://en.wikipedia.org/wiki/Complex_number">complex numbers</a>.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Click to see example Python code</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save an integer value in a variable called max_tweet_length</span>
+<span class="n">max_tweet_length</span> <span class="o">=</span> <span class="mi">280</span>
+
+<span class="c1"># Save a floating point number in a variable called average_tweet_length</span>
+<span class="n">average_tweet_length</span> <span class="o">=</span> <span class="mf">133.5</span>
+</pre></div>
+</div>
+</div>
 </section>
 <section id="characters-letters-and-other-symbols">
 <h2>Characters (Letters and other symbols)<a class="headerlink" href="#characters-letters-and-other-symbols" title="Permalink to this headline">#</a></h2>
 <p>Computers can store “characters” can be letters, numerals, or other symbols (like math symbols, spaces, and “<a class="reference external" href="https://en.wikipedia.org/wiki/Newline">newlines</a>” which go to the next line when you press “Enter”). Some ways of storing characters, like <a class="reference external" href="https://en.wikipedia.org/wiki/Unicode">unicode</a>, support storing symbols and letters from many languages, and also <a class="reference external" href="https://unicode.org/emoji/charts/full-emoji-list.html">emojis</a>.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Click to see note about Python</p>
+<p>Python does not directly let you save characters. Instead characters are always stored in “strings,”” which we will cover shortly.</p>
+</div>
 </section>
 </section>
 

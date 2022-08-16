@@ -8,8 +8,24 @@ The first way of combining data is by making a list with data.
 So we can make a list of the numbers from 1 to 10:
  - 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 
+ ````{admonition} Click to see example Python code
+ :class: dropdown
+ ```python
+ # Save a list of the numbers from 1 to 10 in a variable called one_to_ten
+ one_to_ten = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ ```
+ ````
+
 Or we can make a list of letters [which happen to form a word] like this:
  - e, t, h, i, c, s
+
+ ````{admonition} Click to see example Python code
+ :class: dropdown
+ ```python
+ # Save a list of letters in a variable called key_word
+key_word = ["e", "t", "h", "i", "c", "s"]
+ ```
+ ````
 
  The items in these lists are normally numbered with an "index", so you can ask for the 1st item, or 2nd item, or any other.
 
@@ -18,6 +34,22 @@ Note: Largely due to [historical peculiarities in the development of programming
 - 2nd item has index 1
 - 3rd item has index 2
 - etc.
+
+````{admonition} Click to see example Python code
+:class: dropdown
+```python
+# Save a list of letters in a variable called key_word
+key_word = ["e", "t", "h", "i", "c", "s"]
+
+# Get the first letter ("e"), and save it in variable first_letter
+first_letter = key_word[0]
+
+Get the second letter ("t"), and save it in variable second_letter
+second_letter = key_word[1]
+```
+````
+
+
 
 Note: We'll demonstrate lists later in Chapter 5: History of Social Media.
 
@@ -43,6 +75,25 @@ So as an example of using a dictionary, if you want to combine some pieces of in
 - Green: 205
 - Blue: 170
 
+````{admonition} Click to see example Python code
+:class: dropdown
+```python
+# Save dictionaries for RGB values for two colors in separate variables
+
+purple = {
+  "Red": 128,
+  "Green": 0,
+  "Blue": 128
+}
+
+medium_aqua_marine = {
+  "Red": 102,
+  "Green": 205,
+  "Blue": 170
+}
+```
+````
+
 We can also use any piece of information we want for the "name" in a dictionary. So if we wanted, we could make a color the "name" in a dictionary. For example, in this one, names are colors (in terms of red, green, and blue), and the values are the [most common names of that color in different languages]{https://uwdata.github.io/color-naming-in-different-languages/vis/full_color_maps.html}:
 
 Most common name for a given color in English:
@@ -52,5 +103,39 @@ Most common name for a given color in English:
 Most common name for a given color in Korean:
 - <span style="background-color:rgb(231,37,37)"> &nbsp; </span>{Red: 231, Green, 37, Blue: 37}: 빨강
 - <span style="background-color:rgb(167,37,128)"> &nbsp; </span>{Red: 168, Green, 37, Blue: 128}: 자주
+
+````{admonition} Click to see example Python code
+:class: dropdown
+```python
+
+# Save dictionaries for RGB values for two colors in separate variables
+
+color_1 = {
+  "Red": 231,
+  "Green": 37,
+  "Blue": 37
+}
+
+color_2 = {
+  "Red": 168,
+  "Green": 37,
+  "Blue": 128
+}
+
+
+# Save dictionaries that given a color will give you the most
+# common name for that color (one dictionary for English, one for Korean)
+most_common_english_name{
+  color_1: "Red",
+  color_2: "Magenta"
+}
+
+most_common_korean_name{
+  color_1: "빨강",
+  color_2: "자주"
+}
+```
+````
+
 
 Note: We'll demonstrate dictionaries later in Chapter 5: History of Social Media, and Chapter 8: Data Mining.
