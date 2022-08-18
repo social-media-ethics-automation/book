@@ -5,10 +5,9 @@ Before electronic computers were generally available, when scientists wanted the
 
 ![Black and white photo of two rows of women standing for a group photo. They appear to be all white women except one in the center, who is Black (Janez Lawson).](human_computers_cropped.jpg)
 
+When scientists wanted these human computers to do a task for them, they would give these human computers instructions for what they wanted calculated. These instructions were given in a regular human languages (like English), and in math notation. Then the human computers would send back the results of whatever calculation they had been asked to perform.
 
-As electronic computers became faster more available, scientists began to rely on electronic computers to automatically perform their calculations.
-
-But giving instructions to electronic computers was not straightforward. But before we get into that, lets look at an analogy: language translation.
+But human computers were eventually replaced by electronic computers, and communication with electronic computers was not straightforward.
 
 ## Learn More
 - [When Computers Were Human](https://www.nasa.gov/feature/jpl/when-computers-were-human)

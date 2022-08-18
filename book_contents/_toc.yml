@@ -29,8 +29,8 @@ parts:
         - file: ch02_definitions/02_ethics/05_using_frameworks
       - file: ch02_definitions/03_automation/00_automation
         sections:
-        - file: ch02_definitions/03_automation/01_human_computers
-        - file: ch02_definitions/03_automation/02_language_translation
+        - file: ch02_definitions/03_automation/01_language_translation
+        - file: ch02_definitions/03_automation/02_human_computers
         - file: ch02_definitions/03_automation/03_binary
         - file: ch02_definitions/03_automation/04_first_programmers
         - file: ch02_definitions/03_automation/05_compilers

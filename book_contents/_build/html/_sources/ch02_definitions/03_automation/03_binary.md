@@ -1,6 +1,8 @@
 # Computers Speak Binary
 
-Now let's turn to computers (the electronic ones, not the human ones).
+As electronic computers became faster more available, scientists began to rely on electronic computers to automatically perform their calculations instead of on human computers.
+
+But computers don't speak human languages like the human computers did. Instead, computers speak binary:
 
 ![a diagram with ](english_binary.png)
 
