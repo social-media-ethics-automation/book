@@ -1,16 +1,16 @@
 # The case of Justine Sacco’s racist joke tweet
 
-In 2013, Justine Sacco, a PR director at IAC, was boarding a flight to South Africa, and posted the following racist and insensitive joke tweet, which went viral while she was in-flight and unable to check twitter:
+In 2013, Justine Sacco, a PR director at IAC, was boarding a flight to South Africa, and posted the following racist and insensitive joke tweet, which went viral while she was in-flight and unable to check Twitter:
 > ![Screenshot of Justine Sacco's tweet, which says: Going to Africa. Hope I don't get AIDS. Just kidding. I'm white!](sacco_tweet.png)
 
 ## Timeline of events:
 1. Justine Sacco, a PR director at IAC with only 170 followers posted racist joke tweet right before getting on 11 hour flight to South Africa
-1. Someone emailed the tweet to valleywag.gawker.com. Valleywag wrote post on it and tweeted the post.
-1. Word spread and Justine's tweet went viral. Twitter users found other recent offensive tweets by Justine about countries she was traveling in.
-1. IAC (Justine's employer) called tweet “outrageous, offensive” but “Unfortunately, the employee in question is unreachable on an international flight.”
-1. Twitter users, now knowing that Justine is on a flight, started the hashtag #hasjustinelanedyet, which started trending on twitter (including some celebrities tweeting about it).
+1. Someone emailed the tweet to valleywag.gawker.com. Valleywag wrote a post on it and tweeted the post.
+1. Word spread, and Justine's tweet went viral. Twitter users found other recent offensive tweets by Justine about countries she was traveling in.
+1. IAC (Justine's employer) called the tweet “outrageous, offensive” but “Unfortunately, the employee in question is unreachable on an international flight.”
+1. Twitter users, now knowing that Justine is on a flight, started the hashtag #hasjustinelanedyet, which started trending on Twitter (including some celebrities tweeting about it).
 1. Twitter users were able to deduce which flight Justine was on.
-1. One twitter user got a photo of Justine turning on her phone after getting off the plane. That user also talked to her father at the airport, and tweeted about the photo and their responses.
+1. One Twitter user got a photo of Justine turning on her phone after getting off the plane. That user also talked to her father at the airport, and tweeted about the photo and their responses.
    * ![Photo of Justine Sacco in airport holding her phone up to her ear.](sacco_airport.png)
 1. Justine lost her job at IAC, apologized, and was later rehired by IAC.
 
@@ -25,9 +25,9 @@ Rather than talk about whether any or all of the responses to Justine’s racist
 
 
 ## Reflection questions
-- What motivated twitter users put time and energy into this?
-- What things about the design of twitter enabled these events to happen?
+- What motivated Twitter users to put time and energy into this?
+- What things about the design of Twitter enabled these events to happen?
   - ![Screenshot of Sacco's tweet, with the text grayed out. Twitter interface has: user name and image, options for Reply, Retweet, Favorite and More; Counts of Retweets and Favorites; and time (10:19Am - 20 Dec 13) and location (Hillingdon, London)](sacco_tweet_interface.png)
   - For example, you might notice that the interface shows where Sacco was located when tweeting, Hillingdon, London, which is where Heathrow Airport is located, helping people deduce which flight she was on.
-- What financial motivations does twitter have? How does that influence twitters design?
-- What changes to twitter could have changed how this story went?
+- What financial motivations does Twitter have? How does that influence Twitter's design?
+- What changes to Twitter could have changed how this story went?
