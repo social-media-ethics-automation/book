@@ -2,10 +2,10 @@
 ## Authors
 
 ### Dr. Kyle Thayer
-TODO: Info about Kyle
+Kyle is an educator teaching classes that ...
 
 ```{image} kylethayer.jpg
-:alt: Photo of Kyle Thayer (a white male with glasses and a beard)
+:alt: Photo of Kyle Thayer (a white person with glasses and a beard)
 :width: 200px
 ```
 
