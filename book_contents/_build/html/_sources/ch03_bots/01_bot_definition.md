@@ -9,3 +9,6 @@ There are other ways of programming with social media that we won't consider a b
 Bots on the other hand, will do actions through social media accounts and can appear to be like any other user. The bot might be the only thing posting to the account, or human users might sometimes use a bot to post for them.
 
 Note that sometimes people use "bots" to mean inauthentically run accounts, such as those run by actual humans, but are paid to post things like advertisements or political content. We will not consider those to be bots, since they aren't run by a computer.
+
+
+- Donkey bot???? https://www.theguardian.com/commentisfree/2011/mar/04/oman-sultan-qaboos-despot
