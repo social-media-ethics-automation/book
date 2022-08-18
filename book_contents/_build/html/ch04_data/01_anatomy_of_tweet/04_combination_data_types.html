@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>4.1.1. Some Simple Data Types &#8212; Social Media, Ethics, and Automation</title>
+    <title>4.1.4. Combination Data Types &#8212; Social Media, Ethics, and Automation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="4.1.2. Grouping data" href="02_grouping_data_types.html" />
-    <link rel="prev" title="4.1. Anatomy of a Tweet" href="00_intro.html" />
+    <link rel="next" title="4.1.5. Data Constraints" href="05_data_constraints.html" />
+    <link rel="prev" title="4.1.3. Grouping data" href="03_grouping_data_types.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -365,29 +365,34 @@ const thebe_selector_output = ".output, .cell_output"
      </i>
     </label>
     <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="01_tweet_data.html">
+       4.1.1. Data in a Tweet
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="02_basic_data_types.html">
+       4.1.2. Basic Data Types
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="03_grouping_data_types.html">
+       4.1.3. Grouping data
+      </a>
+     </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       4.1.1. Some Simple Data Types
+       4.1.4. Combination Data Types
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="02_grouping_data_types.html">
-       4.1.2. Grouping data
+      <a class="reference internal" href="05_data_constraints.html">
+       4.1.5. Data Constraints
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="03_combination_data_types.html">
-       4.1.3. Combination Data Types
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="04_data_constraints.html">
-       4.1.4. Data Constraints
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="05_reflection_questions.html">
-       4.1.5. Reflection Questions
+      <a class="reference internal" href="06_reflection_questions.html">
+       4.1.6. Reflection Questions
       </a>
      </li>
     </ul>
@@ -1342,7 +1347,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/kylethayer/social_media_ethics_programming_v0/issues/new?title=Issue%20on%20page%20%2Fch04_data/01_data_computer/01_simple_data_types.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/kylethayer/social_media_ethics_programming_v0/issues/new?title=Issue%20on%20page%20%2Fch04_data/01_anatomy_of_tweet/04_combination_data_types.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1370,7 +1375,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/ch04_data/01_data_computer/01_simple_data_types.md"
+        <a href="../../_sources/ch04_data/01_anatomy_of_tweet/04_combination_data_types.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1430,18 +1435,30 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#booleans-true-false">
-   Booleans (True / False)
+  <a class="reference internal nav-link" href="#strings-text">
+   Strings (Text)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#numbers">
-   Numbers
+  <a class="reference internal nav-link" href="#images-sounds-videos">
+   Images / Sounds / Videos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metadata">
+     Metadata
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dates-and-times">
+   Dates and Times
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#characters-letters-and-other-symbols">
-   Characters (Letters and other symbols)
+  <a class="reference internal nav-link" href="#custom-combined-data-types">
+   Custom combined data types
   </a>
  </li>
 </ul>
@@ -1453,7 +1470,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Some Simple Data Types</h1>
+                <h1>Combination Data Types</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1464,18 +1481,30 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#booleans-true-false">
-   Booleans (True / False)
+  <a class="reference internal nav-link" href="#strings-text">
+   Strings (Text)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#numbers">
-   Numbers
+  <a class="reference internal nav-link" href="#images-sounds-videos">
+   Images / Sounds / Videos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metadata">
+     Metadata
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dates-and-times">
+   Dates and Times
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#characters-letters-and-other-symbols">
-   Characters (Letters and other symbols)
+  <a class="reference internal nav-link" href="#custom-combined-data-types">
+   Custom combined data types
   </a>
  </li>
 </ul>
@@ -1488,62 +1517,114 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="some-simple-data-types">
-<h1><span class="section-number">4.1.1. </span>Some Simple Data Types<a class="headerlink" href="#some-simple-data-types" title="Permalink to this headline">#</a></h1>
-<p>First we’ll look at a few simple data storage types, called <a class="reference external" href="https://en.wikipedia.org/wiki/Primitive_data_type">primitive data types</a>.</p>
-<p>Note: We’ll demonstrate these later in this chapter.</p>
-<section id="booleans-true-false">
-<h2>Booleans (True / False)<a class="headerlink" href="#booleans-true-false" title="Permalink to this headline">#</a></h2>
-<p>Binary consisting of 0s and 1s make it easy to represent true and false values, where 1 often represents true and 0 represents false. Most programming languages have built in ways of representing True and False values.</p>
-<p>Booleans are often created when doing sort of comparison or test, like:</p>
-<ul class="simple">
-<li><p>Is this piece of text less than or equal to 280 characters long?</p></li>
-<li><p>Does this piece of text end in a question mark?</p></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="combination-data-types">
+<h1><span class="section-number">4.1.4. </span>Combination Data Types<a class="headerlink" href="#combination-data-types" title="Permalink to this headline">#</a></h1>
+<p>We can represent much more information with lists, and dictionaries, and lists of dictionaries and dictionaries of lists, etc.</p>
+<section id="strings-text">
+<h2>Strings (Text)<a class="headerlink" href="#strings-text" title="Permalink to this headline">#</a></h2>
+<p>Text is generally stored as a list of characters (like the example before of e, t, h, i, c, s). These lists of characters are called “strings” (that is a bunch of characters strung together).</p>
+<p><a class="reference external" href="https://www.pexels.com/photo/a-rocking-horse-and-birthday-decorations-7600328/"><img alt="A photo of a string banner with shiny individual letters hanging on it spelling &quot;HAPPY BIRTHDAY&quot;" src="../../_images/happy_birthday_banner.jpg" /></a></p>
+<p>A list of characters then can represent words, sentences, books, etc.</p>
 <div class="dropdown admonition">
 <p class="admonition-title">Click to see example Python code</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save a boolean value in a variable called is_tweet_long</span>
-<span class="n">is_tweet_long</span> <span class="o">=</span> <span class="kc">True</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save a string with the word ethics in a variable called key_word</span>
+<span class="n">key_word</span> <span class="o">=</span> <span class="s2">&quot;ethics&quot;</span>
 
-<span class="c1"># Save a boolean value in a variable based on a comparison.</span>
-<span class="c1"># The code checks if a wallet has more in it than the cost of the item</span>
-<span class="c1">#   which will be True or False, and be saved in has_enough_money</span>
-<span class="n">has_enough_money</span> <span class="o">=</span> <span class="n">money_in_wallet</span> <span class="o">&gt;</span> <span class="n">cost_of_item</span>
+<span class="c1"># Get the first letter (&quot;e&quot;), and save it in variable first_letter</span>
+<span class="n">first_letter</span> <span class="o">=</span> <span class="n">key_word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
-<span class="c1"># Save a boolean value in a variable based on a function call.</span>
-<span class="c1"># The code checks if the text of a tweet (stored in tweet_text) starts</span>
-<span class="c1">#   with &quot;Hello&quot;, which will be True or False, and be saved in is_greeting</span>
-<span class="n">is_greeting</span> <span class="o">=</span> <span class="n">tweet_text</span><span class="o">.</span><span class="n">starts_with</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
+<span class="n">Get</span> <span class="n">the</span> <span class="n">second</span> <span class="n">letter</span> <span class="p">(</span><span class="s2">&quot;t&quot;</span><span class="p">),</span> <span class="ow">and</span> <span class="n">save</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">variable</span> <span class="n">second_letter</span>
+<span class="n">second_letter</span> <span class="o">=</span> <span class="n">key_word</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
-</section>
-<section id="numbers">
-<h2>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline">#</a></h2>
-<p>Numbers are normally stored in two different ways:</p>
-<ul class="simple">
-<li><p>Integer: whole numbers like 5, 37, -10, and 0</p></li>
-<li><p>Floating point numbers: these can represent decimals like: 0.75, -1.333, and 3 x 10 ^ 8</p></li>
-</ul>
-<p>In both of those storage methods, there are limits to how much space is used to save each number, limiting how big (or small) the numbers can be, and causing rounding with floating point numbers.</p>
-<p>Additionally programming languages might include ways of representing fractions, or <a class="reference external" href="https://en.wikipedia.org/wiki/Complex_number">complex numbers</a>.</p>
+<p>Additionally, text can be stored with extra formatting information (like fonts, colors, in a <a class="reference external" href="https://en.wikipedia.org/wiki/Document_file_format">Document File Format</a> like with Word Documents, PDF files, <a class="reference external" href="https://www.w3schools.com/html/html_intro.asp">html website files</a>, etc.).</p>
 <div class="dropdown admonition">
-<p class="admonition-title">Click to see example Python code</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save an integer value in a variable called max_tweet_length</span>
-<span class="n">max_tweet_length</span> <span class="o">=</span> <span class="mi">280</span>
-
-<span class="c1"># Save a floating point number in a variable called average_tweet_length</span>
-<span class="n">average_tweet_length</span> <span class="o">=</span> <span class="mf">133.5</span>
+<p class="admonition-title">Click to see example HTML code</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> This is the title of the article! <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> This is the first paragraph in the first section of the article. <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> This is the second paragraph in the first section of the article. <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> This is the first paragraph in the second section of the article. <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> This is the second paragraph in the second section of the article. <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 </div>
+<p>Note: We’ll demonstrate strings later in this chapter, and in more detail in Chapter 7: Trolling</p>
 </section>
-<section id="characters-letters-and-other-symbols">
-<h2>Characters (Letters and other symbols)<a class="headerlink" href="#characters-letters-and-other-symbols" title="Permalink to this headline">#</a></h2>
-<p>Computers can store “characters” can be letters, numerals, or other symbols (like math symbols, spaces, and “<a class="reference external" href="https://en.wikipedia.org/wiki/Newline">newlines</a>” which go to the next line when you press “Enter”). Some ways of storing characters, like <a class="reference external" href="https://en.wikipedia.org/wiki/Unicode">unicode</a>, support storing symbols and letters from many languages, and also <a class="reference external" href="https://unicode.org/emoji/charts/full-emoji-list.html">emojis</a>.</p>
+<section id="images-sounds-videos">
+<h2>Images / Sounds / Videos<a class="headerlink" href="#images-sounds-videos" title="Permalink to this headline">#</a></h2>
+<p>While we wont interact very much with how images, sound, and video are stored, we wanted to at least briefly discuss it here.</p>
+<p><strong>Images</strong> are created by defining a grid of dots, called pixels. Each pixel has three numbers that define the color (red, green, and blue), and the grid is created as a list of lists.</p>
+<p>[TODO: pixilated image]</p>
+<p><strong>Sounds</strong> are represented as the position of the speaker diaphragm over time (a sound wave). The position is saved as a number, and there positions saved at each time point, so the sound wave is saved as a list of numbers.</p>
+<p>[TODO: sound wave image]</p>
+<p><strong>Videos</strong> are represented as a squence of images (a list of images), along with a sound wave to be played at the same time.</p>
+<p>[TODO: gif]</p>
+<p>In most cases, after the initial data representation is created, the computer runs a compression algorithm, which takes the image, sound, or video, and finds a way of storing it in much less computer memory, often losing some of the quality when doing so.</p>
+<p>[TODO: show compression fragments]</p>
+<section id="metadata">
+<h3>Metadata<a class="headerlink" href="#metadata" title="Permalink to this headline">#</a></h3>
+<p>In addition to the main components of the images, sound, and video data, this information is often stored with <strong>metadata</strong>, which is extra data that tells you more about the data. This metadata might include:</p>
+<ul class="simple">
+<li><p>The time the image/sound/video was created</p></li>
+<li><p>The location wher the image/sound/video was taken</p></li>
+<li><p>The type of camera or recording device used to create the image/sound/video</p></li>
+<li><p>etc.</p></li>
+</ul>
+</section>
+</section>
+<section id="dates-and-times">
+<h2>Dates and Times<a class="headerlink" href="#dates-and-times" title="Permalink to this headline">#</a></h2>
+<p>There are several options for how to save dates and times. Some options include a series of numbers (year, month, day, hour, minute, and second), or a string that includes all of those. You can also include time zone as well.</p>
+<p>Dates end up being one of the trickier data types to work with in practice. One of the main reasons for this is that dates and times are different in different time zones, TODO: Finish</p>
+<p>Note: We’ll show these a little bit in chapter 18: Public Shaming</p>
+</section>
+<section id="custom-combined-data-types">
+<h2>Custom combined data types<a class="headerlink" href="#custom-combined-data-types" title="Permalink to this headline">#</a></h2>
+<p>TODO: Example of user info for a social media site</p>
+<p>List of users:</p>
+<p>User 1:</p>
+<ul class="simple">
+<li><p>Username: &#64;kylemthayer (a String)</p></li>
+<li><p>First name: Kyle (a String)</p></li>
+<li><p>Last Name: Thayer (a String)</p></li>
+<li><p>Profile Picture: [TODO picture here] (an image)</p></li>
+<li><p>Friends: &#64;SusanNotess, &#64;UW, &#64;UW_iSchool, … (a list of Strings)</p></li>
+</ul>
+<p>User 2:</p>
+<ul class="simple">
+<li><p>Username: &#64;SusanNotess (a String)</p></li>
+<li><p>First name: Susan (a String)</p></li>
+<li><p>Last Name: Notess (a String)</p></li>
+<li><p>Profile Picture: [TODO picture here] (an image)</p></li>
+<li><p>Friends: &#64;kylemthayer, ??? (a list of Strings)</p></li>
+</ul>
 <div class="dropdown admonition">
-<p class="admonition-title">Click to see note about Python</p>
-<p>Python does not directly let you save characters. Instead characters are always stored in “strings,”” which we will cover shortly.</p>
+<p class="admonition-title">Click to see example Python code</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">users</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span>
+    <span class="n">username</span><span class="p">:</span> <span class="s2">&quot;@kylemthayer&quot;</span><span class="p">,</span>
+    <span class="n">first_name</span><span class="p">:</span> <span class="s2">&quot;Kyle&quot;</span><span class="p">,</span>
+    <span class="n">last_name</span><span class="p">:</span> <span class="s2">&quot;Thayer&quot;</span><span class="p">,</span>
+    <span class="n">profile_picture</span><span class="p">:</span> <span class="s2">&quot;kylethayer.jpg&quot;</span><span class="p">,</span>
+    <span class="n">friends</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;@SusanNotess&quot;</span><span class="p">,</span> <span class="s2">&quot;@UW&quot;</span><span class="p">,</span> <span class="s2">&quot;@UW_iSchool&quot;</span><span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="n">username</span><span class="p">:</span> <span class="s2">&quot;@SusanNotess&quot;</span><span class="p">,</span>
+    <span class="n">first_name</span><span class="p">:</span> <span class="s2">&quot;Susan&quot;</span><span class="p">,</span>
+    <span class="n">last_name</span><span class="p">:</span> <span class="s2">&quot;Notess&quot;</span><span class="p">,</span>
+    <span class="n">profile_picture</span><span class="p">:</span> <span class="s2">&quot;susannotess.jpg&quot;</span><span class="p">,</span>
+    <span class="n">friends</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;@kylemthayer&quot;</span><span class="p">]</span>
+  <span class="p">},</span>
+<span class="p">]</span>
+</pre></div>
+</div>
 </div>
 </section>
 </section>
@@ -1561,7 +1642,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./ch04_data\01_data_computer"
+            path: "./ch04_data\01_anatomy_of_tweet"
         },
         predefinedOutput: true
     }
@@ -1575,17 +1656,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="00_intro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="03_grouping_data_types.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">4.1. </span>Anatomy of a Tweet</p>
+            <p class="prev-next-title"><span class="section-number">4.1.3. </span>Grouping data</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="02_grouping_data_types.html" title="next page">
+    <a class='right-next' id="next-link" href="05_data_constraints.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.1.2. </span>Grouping data</p>
+        <p class="prev-next-title"><span class="section-number">4.1.5. </span>Data Constraints</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

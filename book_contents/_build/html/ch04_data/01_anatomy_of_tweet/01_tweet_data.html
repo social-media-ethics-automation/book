@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>4.1. Anatomy of a Tweet &#8212; Social Media, Ethics, and Automation</title>
+    <title>4.1.1. Data in a Tweet &#8212; Social Media, Ethics, and Automation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="4.1.1. Some Simple Data Types" href="01_simple_data_types.html" />
-    <link rel="prev" title="4. Data" href="../00_data.html" />
+    <link rel="next" title="4.1.2. Basic Data Types" href="02_basic_data_types.html" />
+    <link rel="prev" title="4.1. Anatomy of a Tweet" href="00_intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -356,7 +356,7 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul class="current">
    <li class="toctree-l2 current active has-children">
-    <a class="current reference internal" href="#">
+    <a class="reference internal" href="00_intro.html">
      4.1. Anatomy of a Tweet
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
@@ -364,30 +364,35 @@ const thebe_selector_output = ".output, .cell_output"
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="01_simple_data_types.html">
-       4.1.1. Some Simple Data Types
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       4.1.1. Data in a Tweet
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="02_grouping_data_types.html">
-       4.1.2. Grouping data
+      <a class="reference internal" href="02_basic_data_types.html">
+       4.1.2. Basic Data Types
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="03_combination_data_types.html">
-       4.1.3. Combination Data Types
+      <a class="reference internal" href="03_grouping_data_types.html">
+       4.1.3. Grouping data
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="04_data_constraints.html">
-       4.1.4. Data Constraints
+      <a class="reference internal" href="04_combination_data_types.html">
+       4.1.4. Combination Data Types
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="05_reflection_questions.html">
-       4.1.5. Reflection Questions
+      <a class="reference internal" href="05_data_constraints.html">
+       4.1.5. Data Constraints
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="06_reflection_questions.html">
+       4.1.6. Reflection Questions
       </a>
      </li>
     </ul>
@@ -1342,7 +1347,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/kylethayer/social_media_ethics_programming_v0/issues/new?title=Issue%20on%20page%20%2Fch04_data/01_data_computer/00_intro.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/kylethayer/social_media_ethics_programming_v0/issues/new?title=Issue%20on%20page%20%2Fch04_data/01_anatomy_of_tweet/01_tweet_data.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1370,7 +1375,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/ch04_data/01_data_computer/00_intro.md"
+        <a href="../../_sources/ch04_data/01_anatomy_of_tweet/01_tweet_data.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1419,7 +1424,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Anatomy of a Tweet</h1>
+                <h1>Data in a Tweet</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1431,30 +1436,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="anatomy-of-a-tweet">
-<h1><span class="section-number">4.1. </span>Anatomy of a Tweet<a class="headerlink" href="#anatomy-of-a-tweet" title="Permalink to this headline">#</a></h1>
-<p>[TODO: What is data?]</p>
-<p>TODO: New outline of first section:</p>
-<p>Anatomy of a tweet</p>
-<ul class="simple">
-<li><p>show a screenshot of a tweet, pointing out all the pieces of data (also pieces of data that aren’t visible)</p></li>
-<li><p>go through the different types of data (numbers, strings, dates, locations, users, etc. )</p>
-<ul>
-<li><p>first common data types, then combined data types (list of people who liked it, dictionary to hold it all together etc.)</p></li>
-</ul>
-</li>
-</ul>
-<p>We previously covered in chapter 2 how <a class="reference internal" href="../../ch02_definitions/03_automation/03_binary.html"><span class="doc std std-doc">computers speak binary</span></a>, and all data and instructions are turned into binary, and gave examples of how images or text can be represented with binary. There are many ways of representing data on a computer (called “data types”), so we’ll look at a few types of them here.</p>
-<p>As we’ve said previously, don’t worry if you don’t understand all of these data types yet. We’ll be covering various ones in more detail throughout the book.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="01_simple_data_types.html">4.1.1. Some Simple Data Types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_grouping_data_types.html">4.1.2. Grouping data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_combination_data_types.html">4.1.3. Combination Data Types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04_data_constraints.html">4.1.4. Data Constraints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05_reflection_questions.html">4.1.5. Reflection Questions</a></li>
-</ul>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="data-in-a-tweet">
+<h1><span class="section-number">4.1.1. </span>Data in a Tweet<a class="headerlink" href="#data-in-a-tweet" title="Permalink to this headline">#</a></h1>
+<p>TODO: Show screenshot of tweet, then show it again with pieces of data highlighted</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1470,7 +1454,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./ch04_data\01_data_computer"
+            path: "./ch04_data\01_anatomy_of_tweet"
         },
         predefinedOutput: true
     }
@@ -1484,17 +1468,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../00_data.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="00_intro.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">4. </span>Data</p>
+            <p class="prev-next-title"><span class="section-number">4.1. </span>Anatomy of a Tweet</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="01_simple_data_types.html" title="next page">
+    <a class='right-next' id="next-link" href="02_basic_data_types.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.1.1. </span>Some Simple Data Types</p>
+        <p class="prev-next-title"><span class="section-number">4.1.2. </span>Basic Data Types</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

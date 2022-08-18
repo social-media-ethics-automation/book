@@ -52,13 +52,14 @@ parts:
       - file: ch03_bots/05_learn_more
     - file: ch04_data/00_data
       sections:
-      - file: ch04_data/01_data_computer/00_intro
+      - file: ch04_data/01_anatomy_of_tweet/00_intro
         sections:
-        - file: ch04_data/01_data_computer/01_simple_data_types
-        - file: ch04_data/01_data_computer/02_grouping_data_types
-        - file: ch04_data/01_data_computer/03_combination_data_types
-        - file: ch04_data/01_data_computer/04_data_constraints
-        - file: ch04_data/01_data_computer/05_reflection_questions
+        - file: ch04_data/01_anatomy_of_tweet/01_tweet_data
+        - file: ch04_data/01_anatomy_of_tweet/02_basic_data_types
+        - file: ch04_data/01_anatomy_of_tweet/03_grouping_data_types
+        - file: ch04_data/01_anatomy_of_tweet/04_combination_data_types
+        - file: ch04_data/01_anatomy_of_tweet/05_data_constraints
+        - file: ch04_data/01_anatomy_of_tweet/06_reflection_questions
       - file: ch04_data/02_data_simplification
       - file: ch04_data/03_who_data_fits
       - file: ch04_data/04_form_fails
