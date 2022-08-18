@@ -3,13 +3,13 @@
 Request user engagement
 [![](reply_tweet_viral.png)](https://twitter.com/historyadjunct/status/1477282737430147073?s=20)
 
-TikTok Duet feature (building positively on source)
+TikTok Duet feature
+- (building positively on source)
+  - Cat drinking: https://www.youtube.com/watch?v=_C1FZ4HtzGY
+  - grocery store musical: https://twitter.com/emmaspacelynn/status/1312952644193996800?s=20&t=6TQ-6lGQN9W5UcA4p4QCWw
 
-https://www.youtube.com/watch?v=_C1FZ4HtzGY
-
-TikTok Duet feature (building antagonistically to the purpose of original source)
-
-https://www.youtube.com/watch?v=TY2l8yd5tys
+- building antagonistically to the purpose of original source
+  - girlfriend/hostage: https://www.youtube.com/watch?v=TY2l8yd5tys
 
 Viral for being “bad” or embarrassing
 - “Star Wars Kid” (15 year old)
@@ -31,3 +31,6 @@ Viral for being “bad” or embarrassing
   - Overlaps with trolling
   - The cooking videos
   - Politicians and political commentators (see also part of [this video](https://www.youtube.com/watch?v=Gq0ZHgKT2tc&t=345s))
+
+Appropriation of AAVE
+- so many examples, like "Woke", "on fleek", ""

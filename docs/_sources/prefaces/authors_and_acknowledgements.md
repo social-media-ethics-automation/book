@@ -3,6 +3,12 @@
 
 ### Dr. Kyle Thayer
 TODO: Info about Kyle
+![Photo of Kyle Thayer (a white male with glasses and a beard)](kylethayer.jpg)
+
+```{image} kylethayer.jpg
+:alt: Photo of Kyle Thayer (a white male with glasses and a beard)
+:width: 200px
+```
 
 ### Dr. Susan Notess
 TODO: Info about Susan
