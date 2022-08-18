@@ -10,7 +10,7 @@ TODO: Info about Kyle
 ```
 
 ### Dr. Susan Notess
-TODO: Info about Susan
+Susan is a philosopher working in ethics (among other things). They did their PhD at Durham University in England, and they are originally from Colorado. Susan tweets at @susannotess. Susan is currently a freelance researcher, but from (October maybe?!) they will be undertaking a British Academy Postdoctoral (research) Fellowship at University College London. TODO: change if this isn't going to work out.
 
 ## Contributors
 We would like to thank the following people for their contributions: Emily Giverts (who made the first version of the programming exercises) and Kristen Thayer (for programming ideas, explanations, and analogies)
