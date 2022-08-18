@@ -1,6 +1,8 @@
-# Some Simple Data Types
+# Basic Data Types
 
-First we'll look at a few simple data storage types, called [primitive data types](https://en.wikipedia.org/wiki/Primitive_data_type).
+First we'll look at a few basic data storage types.
+
+TODO: Make this centered around tweet example
 
 Note: We'll demonstrate these later in this chapter.
 
