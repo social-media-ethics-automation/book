@@ -13,5 +13,9 @@
     - Blog post on the trend of money/respect vanishing when women become a significant part of a field: Your Power is in Another Castle: https://amy.dev/?p=489
 
 
+Also reference of men taking over women's industries:
+- https://twitter.com/SarahTaber_bww/status/1516595427784769546, https://twitter.com/SarahTaber_bww/status/1516595432775987206
+- https://twitter.com/shereebekker/status/1504899936843935746
+
 ## Learn more
 - https://www.smithsonianmag.com/science-nature/history-human-computers-180972202/
