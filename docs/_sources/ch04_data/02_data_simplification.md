@@ -1,6 +1,8 @@
 
 # All data is a simplification of reality
 
+## TODO: Start with some sort of statistic or figure [ideally about social media], then deconstruct it in the end
+
 Data often give the appearance of being something concrete and reliable, especially if it is numerical data, but there are many potential pitfalls in dealing with any data set, such as:
 - missing data
 - erroneous data (e.g., mislabeled, typos)
