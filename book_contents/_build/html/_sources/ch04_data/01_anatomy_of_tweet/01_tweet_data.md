@@ -18,6 +18,8 @@ In this screenshot of twitter, we can see the following information:
 - The date of the tweet: Feb 10, 2020
 - The text of the tweet: "This is Woods. He’s here to help with the dishes. Specifically the pre-rinse, where he licks every item he can. 12/10"
 - The photos in the tweet: Three photos of a puppy on a dishwasher
-- The number of quote tweets: 1,533
+- The number of replies: 1,533
 - The number of retweets: 26.2K
 - The number of likes: 197.8K
+
+Now let's look at how different pieces of this information are saved

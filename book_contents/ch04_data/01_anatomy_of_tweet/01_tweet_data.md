@@ -21,3 +21,5 @@ In this screenshot of twitter, we can see the following information:
 - The number of replies: 1,533
 - The number of retweets: 26.2K
 - The number of likes: 197.8K
+
+Now let's look at how different pieces of this information are saved
