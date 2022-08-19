@@ -7,7 +7,7 @@
 - Persona / Brand
   - We all act in different ways in different groups / situations
 - [Corporate brand authenticity](https://www.vice.com/en/article/pangw8/brand-twitter-is-absurd-and-it-will-only-get-worse)?
-  - ![Screenshot of twitter: @sunnydelight (orange juice) tweeted "I can't do this anymore", then @LittleDebbie (pastries) tweeted: If you, like @sunnydelight was yesterday, feel like giving up, here are some tips: --be realistic about what you can do --speak w/loved ones who will hep break you from negative self-talk --give yourself an incentive for finishing --remember the "why" of your "this"](little_debbie_tweet.png)
+  - ![Screenshot of twitter: @sunnydelight (orange juice) tweeted "I can't do this anymore", then @LittleDebbie (pastries) tweeted: If you, like @sunnydelight was yesterday, feel like giving up, here are some tips: --be realistic about what you can do --speak w/loved ones who will help break you from negative self-talk --give yourself an incentive for finishing --remember the "why" of your "this"](little_debbie_tweet.png)
 - Parasocial Relationships
   - (StrucciMovies: [Fake Friends Series](https://www.youtube.com/watch?v=x3vD_CAYt4g&list=PL7-HzFax9fcxbuDiKPZGdIV69N5-MszEa)) (Sarah Z: [How Fans Treat Creators](https://www.youtube.com/watch?v=f0l_biTU3Vg) 33 min)
   - ![g of Mr. Rogers saying to the camera: "I like you just the way you are"](mr_rogers.gif)
