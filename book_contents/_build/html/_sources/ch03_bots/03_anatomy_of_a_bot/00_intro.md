@@ -7,7 +7,7 @@ With all languages (including programming languages), you combine pieces of the 
 In our constructing that sentence, we used a number of English language rules, such as:
 - Putting the subject `I` before the verb `was`
 - Ending the sentence with a period `.`
-- Making a parenthetical remark with a matching opening parenthese `(` and closing parenthese `)`. This parenthetical remark clarified the part of the sentence before it `UW`.
+- Making a parenthetical remark with a matching opening parenthesis `(` and closing parenthesis `)`. This parenthetical remark clarified the part of the sentence before it `UW`.
 
 Programming languages also have their own set of rules for combining and organizing pieces of code in order to create meaning. We will look at some of these rules in these sections:
 

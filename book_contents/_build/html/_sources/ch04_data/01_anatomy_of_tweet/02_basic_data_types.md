@@ -2,12 +2,16 @@
 
 First we'll look at a few basic data storage types.
 
-TODO: Make this centered around tweet example
-
-Note: We'll demonstrate these later in this chapter.
-
 ## Booleans (True / False)
 Binary consisting of 0s and 1s make it easy to represent true and false values, where 1 often represents true and 0 represents false. Most programming languages have built in ways of representing True and False values.
+
+```{figure} dog_tweet_binary.png
+---
+name: tweet_binary_fig
+alt: Screenshot of the tweet from before, but with the blue checkmark highlighted
+---
+```
+
 
 Booleans are often created when doing sort of comparison or test, like:
 - Is this piece of text less than or equal to 280 characters long?
