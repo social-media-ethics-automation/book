@@ -3,7 +3,7 @@ In order to have computers do an automated activity, we will need to communicate
 
  ![Diagram of me (English speaker), and another person (Arabic speaker), and a bunch of translators who speak multiple languages: English-French, Spanish-French, English-German, Arabic-Farsi, French-Arabic](translators.png)
 
-Imagine I am an English speaker who wants to communicate with someone else who speaks Arabic. Neither of us speaks the other one's language. If we have access to people who speak multiple languages, it is possible for them to act as translators, taking what someone says say and repeating it in another language, until we are able to get our messages back and forth.
+Imagine I am an English speaker who wants to communicate with someone else who speaks Arabic. Neither of us speaks the other one's language. If we have access to people who speak multiple languages, it is possible for them to act as translators, taking what someone says and repeating it in another language, until we are able to get our messages back and forth.
 
 So, given the set of bilingual translators in the above diagram, how can we translate between English and Arabic?
 

@@ -32,11 +32,11 @@ The first five highlighted pieces of code are for the special passwords you can 
 - access token
 - access token secret
 
-These special passwords are needed for different actions on twitter. Rathan than worry about which of these passwords are needed for which action, I'll just always including all of them.
+These special passwords are needed for different actions on twitter. Rather than worry about which of these passwords are needed for which action, I'll just always include all of them.
 
 The final highlighted piece of code (in the parentheses after `create_tweet`) is the text of what will be tweeted when this bot runs. You can change the text there to change what gets tweeted.
 
-So, by changing those sections of code, you run this program to post whatever tweet you want to your twitter account. It is, of course, much easier to just open twitter and tweet, but as we get to more complicated programs, we'll start to see more of the power and dangers of automation on social media.
+So, by changing those sections of code, you run this program to post whatever tweet you want to your twitter account. It is, of course, much easier to just open twitter and tweet, but as we get to more complicated programs, we'll start to see more of the power (and pitfalls) of automation on social media.
 
 _Note: all the highlighted sections of code are surrounded by double quotes. In the Python programming language, putting something in quotes indicates that you want the computer to think of the things inside the quotes as pieces of text, in this case passwords and tweet contents._
 
