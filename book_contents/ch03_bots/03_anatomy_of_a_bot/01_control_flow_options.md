@@ -2,7 +2,7 @@
 
 In order to understand how a bot is built and can work, we will now look at the different ways computer programs can be organized. We will cover a bunch of examples quickly here, to hopefully give you an idea of many options for how to write a program. Don't worry if you don't follow all of it, as we will go back over these one at a time in more detail throughout the book.
 
-In this section we will not show actual Python computer programs (that will be in the next section). Instead here we will focus on what programmers call "[psuedocode](https://en.wikipedia.org/wiki/Pseudocode)," which is an human language outline of a program. Psuedocode is intended to be easier to read and write. Pseudocode is often used by programmers to plan how they want their programs to work, and once the programmer is somewhat confident in their pseudocode, they will then try to write it in actual programming language code.
+In this section we will not show actual Python computer programs (that will be in the next section). Instead here we will focus on what programmers call "[psuedocode](https://en.wikipedia.org/wiki/Pseudocode)," which is a human language outline of a program. Psuedocode is intended to be easier to read and write. Pseudocode is often used by programmers to plan how they want their programs to work, and once the programmer is somewhat confident in their pseudocode, they will then try to write it in actual programming language code.
 
 ```{note}
 The programs outlined below in pseudocode are meant to demonstrate what could be done with a computer program, not what should be done or what would necessarily be a good idea.

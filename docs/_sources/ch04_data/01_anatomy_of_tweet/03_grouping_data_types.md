@@ -2,7 +2,7 @@
 
 Once we have some types of data representation on a computer, we can create different groupings of data to represent more types of data. We'll look at two types of groupings here, then look at what we can do with those groupings.
 
-## Lists
+## Lists (Arrays)
 The first way of combining data is by making a list with data.
 
 So we can make a list of the numbers from 1 to 10:
@@ -56,7 +56,14 @@ Note: We'll demonstrate lists later in Chapter 5: History of Social Media.
 ## Dictionaries
 The other method of grouping data that we will discuss here is called a "dictionary" (sometimes also called a "maps").
 
-Dictionaries allow programmers to combine several pieces of data, naming each piece. When we do this, the dictionary will have a number of names, and for each of those names a piece of information (called a "value" in this context). You can think of this as like a language dictionary where there is a word and a definition for each word. Then you can look up any name or word and find the value or definition.
+You can think of this as like a language dictionary where there is a word and a definition for each word. Then you can look up any name or word and find the value or definition.
+
+Example: English Language Dictionary:
+- Social Media: [TODO: define]
+- Ethics: Thinking systematically about what makes something morally right or wrong, or using ethical systems to analyze moral concerns in different situations: [example definition]
+- Automation: [TODO: define]
+
+Dictionaries allow programmers to combine several pieces of data, naming each piece. When we do this, the dictionary will have a number of names, and for each of those names a piece of information (called a "value" in this context).
 
 Dictionary:
 - Name 1: Value 1
