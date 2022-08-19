@@ -1,19 +1,16 @@
 # Anatomy of a Tweet
 
-[TODO: What is data?]
+In order to understand how data is represented on a computer (following up on [Chapter 2.3.3: Computers Speak Binary](../../ch02_definitions/03_automation/03_binary.md)), we will look at all the data in an example a tweet:
 
-TODO: New outline of first section:
+```{figure} dog_tweet.png
+---
+name: tweet_fig
+alt: Screenshot of tweet from user WeRateDogs® (@dog_rates). Tweet text is "This is Woods. He’s here to help with the dishes. Specifically the pre-rinse, where he licks every item he can. 12/10". The tweet also has three photos of a tiny cute puppy standing on the open door of a dishwasher. The tweet was posted on Feb 10, 2020. The account that posted it has a blue check. The tweet has 1,533 quote tweets, 26.6K retweets, and 197.8K likes.
+---
+A tweet with photos of a cute puppy! ([source](https://twitter.com/dog_rates/status/1227037345712627718?s=20&t=HSoEMJwlOlIz8GdAEYHg4g))
+```
 
-Anatomy of a tweet
-- show a screenshot of a tweet, pointing out all the pieces of data (also pieces of data that aren't visible)
-- go through the different types of data (numbers, strings, dates, locations, users, etc. )
-  - first common data types, then combined data types (list of people who liked it, dictionary to hold it all together etc.)
 
-
-
-We previously covered in chapter 2 how [computers speak binary](../../ch02_definitions/03_automation/03_binary.md), and all data and instructions are turned into binary, and gave examples of how images or text can be represented with binary. There are many ways of representing data on a computer (called "data types"), so we'll look at a few types of them here.
-
-As we've said previously, don't worry if you don't understand all of these data types yet. We'll be covering various ones in more detail throughout the book.
 
 ```{tableofcontents}
 ```

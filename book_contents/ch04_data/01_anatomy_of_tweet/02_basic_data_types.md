@@ -51,10 +51,47 @@ average_tweet_length = 133.5
 ```
 ````
 
-## Characters (Letters and other symbols)
+
+## Strings (Text)
+Text is generally stored as a list of characters (like the example before of e, t, h, i, c, s). These lists of characters are called "strings" (that is a bunch of characters strung together).
+
 Computers can store "characters" can be letters, numerals, or other symbols (like math symbols, spaces, and "[newlines](https://en.wikipedia.org/wiki/Newline)" which go to the next line when you press "Enter"). Some ways of storing characters, like [unicode](https://en.wikipedia.org/wiki/Unicode), support storing symbols and letters from many languages, and also [emojis](https://unicode.org/emoji/charts/full-emoji-list.html).
 
-````{admonition} Click to see note about Python
+[![A photo of a string banner with shiny individual letters hanging on it spelling "HAPPY BIRTHDAY"](happy_birthday_banner.jpg)](https://www.pexels.com/photo/a-rocking-horse-and-birthday-decorations-7600328/)
+
+A list of characters then can represent words, sentences, books, etc.
+
+````{admonition} Click to see example Python code
 :class: dropdown
-Python does not directly let you save characters. Instead characters are always stored in "strings,"" which we will cover shortly.
+```python
+# Save a string with the word ethics in a variable called key_word
+key_word = "ethics"
+
+# Get the first letter ("e"), and save it in variable first_letter
+first_letter = key_word[0]
+
+Get the second letter ("t"), and save it in variable second_letter
+second_letter = key_word[1]
+```
 ````
+
+Additionally, text can be stored with extra formatting information (like fonts, colors, in a [Document File Format](https://en.wikipedia.org/wiki/Document_file_format) like with Word Documents, PDF files, [html website files](https://www.w3schools.com/html/html_intro.asp), etc.).
+
+````{admonition} Click to see example HTML code
+:class: dropdown
+```html
+<article>
+  <h1> This is the title of the article! </h1>
+  <section>
+    <p> This is the first paragraph in the first section of the article. </p>
+    <p> This is the second paragraph in the first section of the article. </p>
+  </section>
+  <section>
+    <p> This is the first paragraph in the second section of the article. </p>
+    <p> This is the second paragraph in the second section of the article. </p>
+  </section>
+</article>
+```
+````
+
+Note: We'll demonstrate strings later in this chapter, and in more detail in Chapter 7: Trolling
