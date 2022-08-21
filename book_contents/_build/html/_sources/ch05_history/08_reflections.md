@@ -6,4 +6,4 @@
 - Where do the goals of social media companies align with the goals of social media users?
 - Where do the goals of social media companies not align with the goals of social media users
 
-- compare interfaces of two social media sites. (provide some historical examples too) What does each emphasize and make easiest (friction)
+- Compare interfaces of two social media sites. (provide some historical examples too) What does each emphasize and make easiest (friction)
