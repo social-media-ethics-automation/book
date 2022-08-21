@@ -1501,16 +1501,19 @@ title="Print to PDF"
 <p>Binary consisting of 0s and 1s make it easy to represent true and false values, where 1 often represents true and 0 represents false. Most programming languages have built in ways of representing True and False values.</p>
 <figure class="align-default" id="tweet-binary-fig">
 <img alt="Screenshot of the tweet from before, but with the blue checkmark highlighted" src="../../_images/dog_tweet_binary.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3 </span><span class="caption-text">A blue checkmark is something an account either has or doesn’t so it can be stored as a binary value.</span><a class="headerlink" href="#tweet-binary-fig" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
 <p>Booleans are often created when doing sort of comparison or test, like:</p>
 <ul class="simple">
-<li><p>Is this piece of text less than or equal to 280 characters long?</p></li>
-<li><p>Does this piece of text end in a question mark?</p></li>
+<li><p>Do I have enough money in my wallet to pay for the item?</p></li>
+<li><p>Does this tweet start with “hello” (meaning it is a greeting)?</p></li>
 </ul>
 <div class="dropdown admonition">
 <p class="admonition-title">Click to see example Python code</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save a boolean value in a variable called is_tweet_long</span>
-<span class="n">is_tweet_long</span> <span class="o">=</span> <span class="kc">True</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save a boolean value in a variable called does_user_have_blue_checkmark</span>
+<span class="n">does_user_have_blue_checkmark</span> <span class="o">=</span> <span class="kc">True</span>
 
 <span class="c1"># Save a boolean value in a variable based on a comparison.</span>
 <span class="c1"># The code checks if a wallet has more in it than the cost of the item</span>
@@ -1532,6 +1535,12 @@ title="Print to PDF"
 <li><p>Integer: whole numbers like 5, 37, -10, and 0</p></li>
 <li><p>Floating point numbers: these can represent decimals like: 0.75, -1.333, and 3 x 10 ^ 8</p></li>
 </ul>
+<figure class="align-default" id="tweet-numbers-fig">
+<img alt="Screenshot of the tweet from before, but with the numbers highlighted: replies, retweets, likes" src="../../_images/dog_tweet_with_numbers.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.4 </span><span class="caption-text">The number of replies, retweets, and likes can be represented as integer numbers (197.8K can be stored as a whole number like 197,800).</span><a class="headerlink" href="#tweet-numbers-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>In both of those storage methods, there are limits to how much space is used to save each number, limiting how big (or small) the numbers can be, and causing rounding with floating point numbers.</p>
 <p>Additionally programming languages might include ways of representing fractions, or <a class="reference external" href="https://en.wikipedia.org/wiki/Complex_number">complex numbers</a>.</p>
 <div class="dropdown admonition">
@@ -1547,7 +1556,14 @@ title="Print to PDF"
 </section>
 <section id="strings-text">
 <h2>Strings (Text)<a class="headerlink" href="#strings-text" title="Permalink to this headline">#</a></h2>
+<p>TODO: REWRITE THIS SECTION</p>
 <p>Text is generally stored as a list of characters (like the example before of e, t, h, i, c, s). These lists of characters are called “strings” (that is a bunch of characters strung together).</p>
+<figure class="align-default" id="tweet-strings-fig">
+<img alt="Screenshot of the tweet from before, but with pieces of text highlighted: The user name, twitter handle, and the tweet text" src="../../_images/dog_tweet_with_strings.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.5 </span><span class="caption-text">The user name, twitter handle, and the tweet text can all be represented with strings.</span><a class="headerlink" href="#tweet-strings-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Computers can store “characters” can be letters, numerals, or other symbols (like math symbols, spaces, and “<a class="reference external" href="https://en.wikipedia.org/wiki/Newline">newlines</a>” which go to the next line when you press “Enter”). Some ways of storing characters, like <a class="reference external" href="https://en.wikipedia.org/wiki/Unicode">unicode</a>, support storing symbols and letters from many languages, and also <a class="reference external" href="https://unicode.org/emoji/charts/full-emoji-list.html">emojis</a>.</p>
 <p><a class="reference external" href="https://www.pexels.com/photo/a-rocking-horse-and-birthday-decorations-7600328/"><img alt="A photo of a string banner with shiny individual letters hanging on it spelling &quot;HAPPY BIRTHDAY&quot;" src="../../_images/happy_birthday_banner.jpg" /></a></p>
 <p>A list of characters then can represent words, sentences, books, etc.</p>
