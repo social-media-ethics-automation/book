@@ -7,7 +7,7 @@
   - Sharing with friends, experience archive, persona creation, idea sharing, etc.
   - Making money through sponsors, ads, being an influencer (Attention Economy)
 
-## What are the goals of social media companies
+## What are the drivers of social media companies
 - Money (we'll talk about this more in the chapter on capitalism)
   - Ads
   - User data (the user is the product)
