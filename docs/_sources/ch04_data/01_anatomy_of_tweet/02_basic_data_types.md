@@ -10,18 +10,19 @@ Binary consisting of 0s and 1s make it easy to represent true and false values, 
 name: tweet_binary_fig
 alt: Screenshot of the tweet from before, but with the blue checkmark highlighted
 ---
+A blue checkmark is something an account either has or doesn't so it can be stored as a binary value.
 ```
 
 
 Booleans are often created when doing sort of comparison or test, like:
-- Is this piece of text less than or equal to 280 characters long?
-- Does this piece of text end in a question mark?
+- Do I have enough money in my wallet to pay for the item?
+- Does this tweet start with "hello" (meaning it is a greeting)?
 
 ````{admonition} Click to see example Python code
 :class: dropdown
 ```python
-# Save a boolean value in a variable called is_tweet_long
-is_tweet_long = True
+# Save a boolean value in a variable called does_user_have_blue_checkmark
+does_user_have_blue_checkmark = True
 
 # Save a boolean value in a variable based on a comparison.
 # The code checks if a wallet has more in it than the cost of the item
@@ -40,6 +41,14 @@ Numbers are normally stored in two different ways:
 - Integer: whole numbers like 5, 37, -10, and 0
 - Floating point numbers: these can represent decimals like: 0.75, -1.333, and 3 x 10 ^ 8
 
+```{figure} dog_tweet_with_numbers.png
+---
+name: tweet_numbers_fig
+alt: "Screenshot of the tweet from before, but with the numbers highlighted: replies, retweets, likes"
+---
+The number of replies, retweets, and likes can be represented as integer numbers (197.8K can be stored as a whole number like 197,800).
+```
+
 In both of those storage methods, there are limits to how much space is used to save each number, limiting how big (or small) the numbers can be, and causing rounding with floating point numbers.
 
 Additionally programming languages might include ways of representing fractions, or [complex numbers](https://en.wikipedia.org/wiki/Complex_number).
@@ -57,7 +66,17 @@ average_tweet_length = 133.5
 
 
 ## Strings (Text)
+TODO: REWRITE THIS SECTION
+
 Text is generally stored as a list of characters (like the example before of e, t, h, i, c, s). These lists of characters are called "strings" (that is a bunch of characters strung together).
+
+```{figure} dog_tweet_with_strings.png
+---
+name: tweet_strings_fig
+alt: "Screenshot of the tweet from before, but with pieces of text highlighted: The user name, twitter handle, and the tweet text"
+---
+The user name, twitter handle, and the tweet text can all be represented with strings.
+```
 
 Computers can store "characters" can be letters, numerals, or other symbols (like math symbols, spaces, and "[newlines](https://en.wikipedia.org/wiki/Newline)" which go to the next line when you press "Enter"). Some ways of storing characters, like [unicode](https://en.wikipedia.org/wiki/Unicode), support storing symbols and letters from many languages, and also [emojis](https://unicode.org/emoji/charts/full-emoji-list.html).
 
