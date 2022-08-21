@@ -9,7 +9,7 @@ The programs outlined below in pseudocode are meant to demonstrate what could be
 ```
 
 ## Statements: Steps that Run In Order
-Python is in a group of programming languages called [imperative programming languages](https://en.wikipedia.org/wiki/Imperative_programming).[^language_types_footnote] At their core, programs written in imperative programming languages consist of a list of "statements" to be run in order.
+Python is in a group of programming languages called [imperative programming languages](https://en.wikipedia.org/wiki/Imperative_programming)[^language_types_footnote]. At their core, programs written in imperative programming languages consist of a list of "statements" to be run in order.
 
 [^language_types_footnote]: There are other types of programming organizations as well, such as [functional programming](https://en.wikipedia.org/wiki/Functional_programming) (like [Excel](https://www.microsoft.com/en-us/research/blog/lambda-the-ultimatae-excel-worksheet-function/) and [Google Sheets](https://www.google.com/sheets/about/)),  [visual programming](https://en.wikipedia.org/wiki/Visual_programming_language) (like the educational [Scratch](https://scratch.mit.edu/), or the 3D Graphics [Blender node editor](https://docs.blender.org/manual/en/2.79/editors/node_editor/introduction.html])), [declarative programming](https://en.wikipedia.org/wiki/Declarative_programming) (like HTML and CSS web content) [object oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming) (can be done in Python, JavaScript, and many others), and [many more](https://en.wikipedia.org/wiki/Programming_paradigm).
 
@@ -21,12 +21,14 @@ So a program in one of these languages would look like:
 ```
 And when the program is run, statement 1 runs first, then statement 2, then, finally, statement 3.
 
-You might recognize this as the same style of instructions as a cooking recipe, like making a scrambled egg:
+You might recognize this as the same style of instructions as a cooking recipe, like making dumplings:
 ```text
-- Put frying pan on stove and turn it on.
-- Crack egg, and pour into the frying pan (throwing away the shell).
-- Add salt and pepper.
-- Stir egg while it cooks, until fully cooked.
+- Make dumpling dough.
+- Make chicken filling.
+- Flatten small balls of dough.
+- Put some filling on each piece of dough.
+- Fold dough around the filling.
+- Steam the dumplings.
 ```
 
 In fact, the format of a cooking recipe is basically an imperative programming language where the cook acts as a "human computer" following the cooking instructions.
@@ -72,17 +74,22 @@ We will show how to use statements in Python in the next section.
 ## Variables: Save information for later
 Variables are a way of saving information on the computer, so we can use it later in the computer program.
 
-In a cooking recipe, the equivalent would be spaces or containers to hold ingredients. So you might place the ingredients on the counter in preparation for cooking. Or you might combine some ingredients in a mixing bowl, so the mixing bowl holds the combined ingredients through each step, like:
+In a cooking recipe, the equivalent would be spaces, containers, bowls, or cups to hold ingredients. So you might place the ingredients on the counter in preparation for cooking. Or you might combine some ingredients in a mixing bowl, so the mixing bowl holds the combined ingredients through each step, like:
 ```text
-TODO: Pound cake directions, something like
-- Put one pound of butter in a bowl
-- Add one pound of sugar to the bowl and mix
+To make the dumpling filling:
+- Put flour in a mixing bowl [or on an empty flat surface???]
+- Add water to the mixing bowl
+- Add ???
+- Knead until ???
 ```
 
 Sometimes in cooking, you use multiple mixing bowls to mix different parts of the recipe separately:
 ```text
-- while the dough is rising in the first bowl:
-  - mix the powdered sugar, butter, and milk in another bowl to make the frosting
+To make the dumpling filling:
+- In a separate mixing bowl:
+  - Add shredded chicken
+  - Add ???
+  - Mix
 ```
 
 In a computer program, when you save information for later use, instead of putting it in a bowl, you give it a name. The computer then makes a place in its memory with that name, and saves the information you asked it to save. Then you can use that name later in the program to ask the computer what was saved in that spot.
@@ -125,8 +132,7 @@ Events let us perform a programming action in response to something happening. T
 
 Within cooking this might look like:
 ```text
-- Put the tea kettle on a burner turned to high and leave it
-- When kettle whistles, that means the water is boiling, and you can make tea
+- When the guests arrive, put the dumplings on plates and serve them.
 ```
 
 Within programming, it might look like:
@@ -140,8 +146,14 @@ One of the most common events to program for is around time: We can also tell pr
 
 In cooking this might look like:
 ```text
-- Put the muffins in the oven, and let them bake for 10 minutes.
+- Steam the dumplings for 10 minutes
 ```
+
+or
+```text
+- Start the process of making dumplings 2 hours before guests arrive.
+```
+
 
 In programming, it might look like:
 ```text
@@ -162,11 +174,9 @@ We will show how to use other Events and Scheduling in Python in Chapter 18: Pub
 ## Conditionals: What you do depends
 Conditionals let us change what we do depending on the situation.
 
-In cooking, we might use a toothpick to see if the muffins are done and change our course of action depending on that test:
+In cooking, we might ????????? and change our course of action depending on that test:
 ```text
-- After 10 minutes pull out the muffins and poke through with a toothpick.
-  - If the toothpick comes out clean, the muffins are done
-  - If the toothpick comes out with batter, put them in for another 2 minutes
+- ?? What is something to test or check with different courses of action ???
 ```
 
 In programming, we might do this:
@@ -184,17 +194,18 @@ Loops are used to repeat actions, though there are several different types of re
 
 In cooking you can repeat an action a set number of times:
 ```text
-- Stir 10 times [Better example???]
+- Knead the dough 10 times
 ```
 
 Or you can repeat the same action, but to different items:
 ```text
-- Put frosting on each of the cupcakes.
+- For all the balls of dumpling dough
+  - fill them with dumpling filling and fold them
 ```
 
 Or you can repeat the same action until you get a certain result:
 ```text
-- Continue stirring until the batter is smooth
+- Continue kneading the dough until it has the right consistency???
 ```
 
 In computer programming you can repeat an action a set number of times
@@ -221,11 +232,12 @@ Sometimes in programming, we want to group several steps (i.e., statements) toge
 
 In a recipe, you might create a block of instructions like this:
 ```text
-- for each of the cupcakes:
-  - put on a layer of yellow frosting
-  - use red frosting to draw a red balloon shape
-  - use blue frosting to draw a blue balloon shape
-  - use black frosting to draw a string holding the balloons
+- for each of the balls of dumpling dough:
+  - flatten it into a thin circle
+  - place one spoonful of filling in the middle of the circle
+  - fold the dough over the filling
+  - pinch the edges to seal it
+  - place the dumpling on the steamer or something???
 ```
 
 In a computer program, you might make a code block of statements like this:
@@ -254,12 +266,13 @@ The final programming organization feature we will cover here is functions and l
 
 In cooking this might look like a step of asking the cook to make something from another recipe.
 ```text
-- make a base dough (see recipe on page 42).
+- make the [alternate???] dumpling dough (see recipe on page 42).
 ```
 
 The recipe also could ask you to make a different version of a recipe from another page:
 ```text
-- make a base dough (see recipe on page 42), but mix in two tablespoons of cocoa powder.
+- to make dumplings vegan, make the [alternate???] dumpling
+  dough (see recipe on page 42), but subsititute ??? for eggs???.
 ```
 
 In programming, a function is a small program that you can run from another place in the code (programmer call this "calling" a function). Functions also can accept data and options for how they run. Code libraries are a collection of functions and data that help with certain tasks.
