@@ -146,7 +146,7 @@ User 2:
 - Username: Dr Susan Notess (a String)
 - Twitter handle: @SusanNotess (a String)
 - Profile Picture: [TODO picture here] (an image)
-- Friends: @kylemthayer, ??? (a list of Strings)
+- Friends: @kylemthayer, @histoftech, @j_kalla, @dbroockman, @qaxaawut, @shengokai (a list of Strings)
 
 
 ````{admonition} Click to see example Python code
