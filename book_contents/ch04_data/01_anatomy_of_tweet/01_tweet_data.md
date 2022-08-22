@@ -22,4 +22,25 @@ In this screenshot of twitter, we can see the following information:
 - The number of retweets: 26.2K
 - The number of likes: 197.8K
 
-Now let's look at how different pieces of this information are saved
+## Data and Metadata
+
+One way we can categorize the data in this tweet is to separate it into data and metadata, like this:
+
+```{figure} dog_tweet_metadata.png
+---
+name: tweet_metadata_fig
+alt: 'Screenshot of the tweet above, but with a box around the tweet text and photos labeled "Data (Tweet Contents)
+", and the rest of the information outside the box is labeled "Metadata (Data About Tweet)"'
+---
+The "data" of a tweet consists of the tweet text and the photos. The "metadata" of a tweet is all the rest of the information about that tweet, such as who tweeted it, and when, and how people responded.
+```
+
+__Metadata__ is information about some data. So we often think about a dataset as consisting of the main pieces of data (whatever those are in a specific situation), and whatever other information we have about that data (metadata).
+
+For example:
+- If we think of a tweet's contents (text and photos) as the main data of a tweet, then additional information such as the user, time, and responses would be considered metadata.
+- If we download information about a set of tweets (text, user, time, etc.) to analyze later, we might consider that set of information as the main data, and our metadata might be information about our download process, such as when we collected the tweet information, which search term we used to find it, etc.
+
+
+
+Now that we've looked some at the data in a tweet, let's look next at how different pieces of this information are saved.
