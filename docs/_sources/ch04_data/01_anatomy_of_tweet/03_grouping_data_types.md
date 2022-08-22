@@ -1,9 +1,9 @@
 # Grouping data
 
-Once we have some types of data representation on a computer, we can create different groupings of data to represent more types of data. We'll look at two types of groupings here, then look at what we can do with those groupings.
+Once we have some types of data representation on a computer, we can create different groupings of data to represent more types of data. We'll look at two types of groupings here: Lists and Dictionaries.
 
 ## Lists
-The first way of combining data is by making a list with data.
+The first way of combining data is by making a list.
 
 So we can make a list of the numbers from 1 to 10:
  - 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
@@ -39,7 +39,7 @@ Additionally the text strings we saw before are actually stored internally as li
 
 The items in lists are normally numbered with an "index", so you can ask for the 1st item, or 2nd item, or any other.
 
-Note: Largely due to [historical peculiarities in the development of programming languages](https://en.wikipedia.org/wiki/Zero-based_numbering#Origin), most programming languages (including Python) number the 1st item in a list as item `0`. So:
+Note: Largely due to [historical peculiarities in the development of programming languages](https://en.wikipedia.org/wiki/Zero-based_numbering#Origin), most programming languages (including Python) number the 1st item in a list as item "0". So:
 - 1st item has index 0
 - 2nd item has index 1
 - 3rd item has index 2
@@ -75,7 +75,7 @@ There are many types of list data structures in different programming languages 
 We'll demonstrate lists later in Chapter 5: History of Social Media.
 
 ## Dictionaries
-The other method of grouping data that we will discuss here is called a "dictionary" (sometimes also called a "maps").
+The other method of grouping data that we will discuss here is called a "dictionary" (sometimes also called a "map").
 
 You can think of this as like a language dictionary where there is a word and a definition for each word. Then you can look up any name or word and find the value or definition.
 
@@ -112,7 +112,7 @@ Dictionary (with some of the data):
  ````{admonition} Click to see example Python code
  :class: dropdown
  ```python
- # Save a some info about a tweet in a variable called tweet_info
+ # Save some info about a tweet in a variable called tweet_info
  tweet_info = {
   "user_name": "WeRateDogs®",
   "user_handle": "@dog_rates",
@@ -140,13 +140,13 @@ User 1:
 - Username: kylethayer (a String)
 - Twitter handle: @kylemthayer (a String)
 - Profile Picture: [TODO picture here] (an image)
-- Friends: @SusanNotess, @UW, @UW_iSchool, ... (a list of Strings)
+- Follows: @SusanNotess, @UW, @UW_iSchool, @ajlunited, ... (a list of Strings)
 
 User 2:
 - Username: Dr Susan Notess (a String)
 - Twitter handle: @SusanNotess (a String)
 - Profile Picture: [TODO picture here] (an image)
-- Friends: @kylemthayer, ??? (a list of Strings)
+- Follows: @kylemthayer, ??? (a list of Strings)
 
 
 ````{admonition} Click to see example Python code
@@ -157,13 +157,13 @@ users = [
     username: "kylethayer",
     twitter_handle: "@kylemthayer",
     profile_picture: "kylethayer.jpg",
-    friends: ["@SusanNotess", "@UW", "@UW_iSchool"]
+    follows: ["@SusanNotess", "@UW", "@UW_iSchool", "@ajlunited"]
   },
   {
     username: "Dr Susan Notess",
     twitter_handle: "@SusanNotess",
     profile_picture: "susannotess.jpg",
-    friends: ["@kylemthayer"]
+    follows: ["@kylemthayer"]
   },
 ]
 ```

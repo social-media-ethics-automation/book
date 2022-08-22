@@ -13,13 +13,15 @@ alt: "Screenshot of the tweet from before, but with the images highlighted: The 
 The profile picture and the puppy photos in the tweet are images.
 ```
 
-While we wont interact very much with the details of how images, sound, and video are stored, we wanted to at least briefly discuss it here.
+While you won't need to know the details of how images, sound, and video are stored for this class, we wanted to at least briefly discuss it here just to give you a rough idea of how computers store these kinds of data.
 
-__Images__ are created by defining a grid of dots, called pixels. Each pixel has three numbers that define the color (red, green, and blue), and the grid is created as a list of lists.
+__Images__ are created by defining a grid of dots, called pixels. Each pixel has three numbers that define the color (red, green, and blue), and the grid is created as a list (column) of lists (rows).
 
 [TODO: pixilated image]
 
 __Sounds__ are represented as the position of the speaker diaphragm over time (a sound wave). The position is saved as a number, and there positions saved at each time point, so the sound wave is saved as a list of numbers.
+
+[TODO: Diagram of speaker]
 
 [TODO: sound wave image]
 
