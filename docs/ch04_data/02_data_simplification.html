@@ -424,12 +424,12 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="05_data_python_twitter/01_demo_data.html">
-       4.5.1. Demo: Python Data Types
+       4.5.1. Demo: Python Basic Data Types
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="05_data_python_twitter/02_practice_data.html">
-       4.5.2. Practice: Python Data Types
+       4.5.2. Practice: Python Basic Data Types
       </a>
      </li>
      <li class="toctree-l3">
@@ -444,7 +444,7 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="05_data_python_twitter/05_practice_get_twitter_info.html">
-       4.5.5. Practice: Get info from twitter
+       4.5.5. Practice: Get Data from twitter
       </a>
      </li>
     </ul>
@@ -1435,8 +1435,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#todo-start-with-some-sort-of-statistic-or-figure-ideally-about-social-media-then-deconstruct-it-in-the-end">
-   4.2.1. TODO: Start with some sort of statistic or figure [ideally about social media], then deconstruct it in the end
+  <a class="reference internal nav-link" href="#twitter-users-vs-bots">
+   4.2.1. Twitter Users vs. Bots
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1453,6 +1453,28 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#more-examples-of-simplifications">
    4.2.4. More examples of simplifications
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#revisiting-twitter-users-vs-bots">
+   4.2.5. Revisiting Twitter Users vs. Bots
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#measuring-twitter-users">
+     Measuring twitter users:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#measuring-spam-bots">
+     Measuring spam bots
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-changes-with-these-measures">
+     What changes with these measures?
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -1474,8 +1496,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#todo-start-with-some-sort-of-statistic-or-figure-ideally-about-social-media-then-deconstruct-it-in-the-end">
-   4.2.1. TODO: Start with some sort of statistic or figure [ideally about social media], then deconstruct it in the end
+  <a class="reference internal nav-link" href="#twitter-users-vs-bots">
+   4.2.1. Twitter Users vs. Bots
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1493,6 +1515,28 @@ title="Print to PDF"
    4.2.4. More examples of simplifications
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#revisiting-twitter-users-vs-bots">
+   4.2.5. Revisiting Twitter Users vs. Bots
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#measuring-twitter-users">
+     Measuring twitter users:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#measuring-spam-bots">
+     Measuring spam bots
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-changes-with-these-measures">
+     What changes with these measures?
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
                         </nav>
@@ -1505,16 +1549,28 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="all-data-is-a-simplification-of-reality">
 <h1><span class="section-number">4.2. </span>All data is a simplification of reality<a class="headerlink" href="#all-data-is-a-simplification-of-reality" title="Permalink to this headline">#</a></h1>
-<section id="todo-start-with-some-sort-of-statistic-or-figure-ideally-about-social-media-then-deconstruct-it-in-the-end">
-<h2><span class="section-number">4.2.1. </span>TODO: Start with some sort of statistic or figure [ideally about social media], then deconstruct it in the end<a class="headerlink" href="#todo-start-with-some-sort-of-statistic-or-figure-ideally-about-social-media-then-deconstruct-it-in-the-end" title="Permalink to this headline">#</a></h2>
-<p>Data often give the appearance of being something concrete and reliable, especially if it is numerical data, but there are many potential pitfalls in dealing with any data set, such as:</p>
+<p>We’ve talked about how we represent data on a computer, but let’s now step back and think about the nature of data itself.</p>
+<section id="twitter-users-vs-bots">
+<h2><span class="section-number">4.2.1. </span>Twitter Users vs. Bots<a class="headerlink" href="#twitter-users-vs-bots" title="Permalink to this headline">#</a></h2>
+<p>Let’s look at a debate around a specific data point:</p>
+<blockquote>
+<div><p>” Twitter has repeatedly said that spam bots represent less than 5% of its total user base. [Elon] Musk, meanwhile, has complained that the number is much higher, and has threatened to walk away from his agreement to buy the company.”</p>
+<p><a class="reference external" href="https://www.bloomberg.com/news/articles/2022-07-07/twitter-reiterates-that-spam-bots-are-well-under-5-of-users">Musk’s Dispute With Twitter Over Bots Continues to Dog Deal</a>, by Kurt Wagner, Bloomberg July 7, 2022</p>
+</div></blockquote>
+<p>The data in question here is over what percentage of twitter users are spam bots, which Twitter claimed was less than 5%, and Elon Musk claimed is higher than 5%.</p>
+<p>Data points often give the appearance of being concrete and reliable, especially if they are numerical. So when Twitter initially came out with a claim that less than 5% of users are spam bots, it may have been accepted by most people who heard it. Elon Musk then questioned that figure and attempted to <a class="reference external" href="https://www.npr.org/2022/07/08/1110539504/twitter-elon-musk-deal-jeopardy">back out of buying twitter</a>, and Twitter is <a class="reference external" href="https://www.npr.org/transcripts/1111032233">accusing Musk’s complaint of being an invented excuse</a> to back out of the deal, and <a class="reference external" href="https://www.npr.org/transcripts/1111032233">the case is now in court</a>.</p>
+<p>When looking at real life data claims and datasets, you will likely run into many different problems and pitfalls in using that data. Any dataset you find might have:</p>
 <ul class="simple">
 <li><p>missing data</p></li>
 <li><p>erroneous data (e.g., mislabeled, typos)</p></li>
 <li><p>biased data</p></li>
 <li><p>manipulated data</p></li>
 </ul>
-<p>But even in the best of situations, data are still a simplification of reality. Let me explain by giving a concrete example involving apples:</p>
+<p>Any one of those issues might show up in Twitter’s claim or Musk’s counter claim, but even in the best of situations there is still a fundamental issue when looking at claims like this, and that is that:</p>
+<blockquote>
+<div><p>All data is a simplification of reality.</p>
+</div></blockquote>
+<p>Let’s consider a concrete example involving apples:</p>
 </section>
 <section id="counting-apples">
 <h2><span class="section-number">4.2.2. </span>Counting Apples<a class="headerlink" href="#counting-apples" title="Permalink to this headline">#</a></h2>
@@ -1572,7 +1628,32 @@ title="Print to PDF"
 </ul>
 </li>
 </ul>
+</section>
+<section id="revisiting-twitter-users-vs-bots">
+<h2><span class="section-number">4.2.5. </span>Revisiting Twitter Users vs. Bots<a class="headerlink" href="#revisiting-twitter-users-vs-bots" title="Permalink to this headline">#</a></h2>
+<p>Let’s go back to the question of whether less than 5% of twitter users are spam bots.</p>
+<p>In this claim are several places where there are simplifications being made, particularly in the definition of “twitter users” and of “spam bots.”</p>
+<section id="measuring-twitter-users">
+<h3>Measuring twitter users:<a class="headerlink" href="#measuring-twitter-users" title="Permalink to this headline">#</a></h3>
+<p>How do we count how many users are on Twitter?</p>
+<p>It depends on if we mean how many accounts have been registered vs. how many people are log into twitter on a given day. And it also depends on how we count situations where one person has many accounts, or many people share a corporate account.</p>
+</section>
+<section id="measuring-spam-bots">
+<h3>Measuring spam bots<a class="headerlink" href="#measuring-spam-bots" title="Permalink to this headline">#</a></h3>
+<p>How do we count how many spam bots are on Twitter?</p>
+<p>The Bloomberg article we quoted mentions “spam bots” as what is being measured, but Elon Musk has used phrases like “<a class="reference external" href="https://twitter.com/elonmusk/status/1555950698252181507?s=20&amp;t=pY_aYXjSOzD-sUOW8E1e6A">fake or spam</a>” accounts and “<a class="reference external" href="https://twitter.com/elonmusk/status/1525723506805288962?s=20&amp;t=aBUK4_IT354Y9TC69PMldg">fake/spam/duplicates</a>,” which might lead to different numbers.</p>
+<p>Parag Agrawal, the Twitter CEO, additionally clarified the complications of measuring “spam” accounts, saying:</p>
+<blockquote>
+<div><p>Next, spam isn’t just ‘binary’ (human / not human). The most advanced spam campaigns use combinations of coordinated humans + automation. They also compromise real accounts, and then use them to advance their campaign. So – they are sophisticated and hard to catch.</p>
+<p>(<a class="reference external" href="https://twitter.com/paraga/status/1526237581419040768">tweet link</a>)</p>
+</div></blockquote>
+</section>
+<section id="what-changes-with-these-measures">
+<h3>What changes with these measures?<a class="headerlink" href="#what-changes-with-these-measures" title="Permalink to this headline">#</a></h3>
+<p>While we don’t have direct access to all the data ourselves, we can imagine that different definitions would lead to different results. And there isn’t a “best” or “unbiased” definition we should be using, all definitions are simplifications that will help with some tasks and hurt with others.</p>
+<p>We have to be aware that we are always making these simplifications, try to be clear about what simplifications we are making, and think through the ethical implications of the simplifications we are making.</p>
 <p>Note: This section was inspired by Kareem Carr <a class="reference external" href="https://twitter.com/kareem_carr/status/1551950155330600960">https://twitter.com/kareem_carr/status/1551950155330600960</a>, <a class="reference external" href="https://www.popularmechanics.com/science/math/a33547137/why-some-people-think-2-plus-2-equals-5/">https://www.popularmechanics.com/science/math/a33547137/why-some-people-think-2-plus-2-equals-5/</a></p>
+</section>
 </section>
 </section>
 
