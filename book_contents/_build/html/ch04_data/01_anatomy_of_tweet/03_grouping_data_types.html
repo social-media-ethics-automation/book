@@ -1445,8 +1445,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#custom-combined-data-types">
-   Custom combined data types
+  <a class="reference internal nav-link" href="#groups-within-groups">
+   Groups within Groups
   </a>
  </li>
 </ul>
@@ -1479,8 +1479,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#custom-combined-data-types">
-   Custom combined data types
+  <a class="reference internal nav-link" href="#groups-within-groups">
+   Groups within Groups
   </a>
  </li>
 </ul>
@@ -1510,24 +1510,22 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<p>In our example tweet we can see several places where data could be saved in lists:</p>
 <figure class="align-default" id="tweet-lists-fig">
 <img alt="Screenshot of the tweet from before, but with lists highlighted: images, and links to the lists of replies, retweets, and likes." src="../../_images/dog_tweet_with_lists.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 4.8 </span><span class="caption-text">There are several lists in the tweet. There is a list of three images, and there are links that will take you to the lists of replies, retweets, and likes.</span><a class="headerlink" href="#tweet-lists-fig" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Or we can make a list of letters [which happen to form a word] like this:</p>
-<ul class="simple">
-<li><p>e, t, h, i, c, s</p></li>
-</ul>
 <div class="dropdown admonition">
 <p class="admonition-title">Click to see example Python code</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save a list of letters in a variable called key_word</span>
-<span class="n">key_word</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;t&quot;</span><span class="p">,</span> <span class="s2">&quot;h&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span><span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save a list of people who liked a tweet in a variable called tweet_likes</span>
+<span class="n">tweet_likes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;@kylemthayer&quot;</span><span class="p">,</span> <span class="s2">&quot;@SusanNotess&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
-<p>The items in these lists are normally numbered with an “index”, so you can ask for the 1st item, or 2nd item, or any other.</p>
+<p>Additionally the text strings we saw before are actually stored internally as lists of characters.</p>
+<p>The items in lists are normally numbered with an “index”, so you can ask for the 1st item, or 2nd item, or any other.</p>
 <p>Note: Largely due to <a class="reference external" href="https://en.wikipedia.org/wiki/Zero-based_numbering#Origin">historical peculiarities in the development of programming languages</a>, most programming languages (including Python) number the 1st item in a list as item <code class="docutils literal notranslate"><span class="pre">0</span></code>. So:</p>
 <ul class="simple">
 <li><p>1st item has index 0</p></li>
@@ -1537,8 +1535,19 @@ title="Print to PDF"
 </ul>
 <div class="dropdown admonition">
 <p class="admonition-title">Click to see example Python code</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save a list of letters in a variable called key_word</span>
-<span class="n">key_word</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;t&quot;</span><span class="p">,</span> <span class="s2">&quot;h&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span><span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># Save a list of twitter handles in a list called book_authors</span>
+<span class="n">book_authors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;@kylemthayer&quot;</span><span class="p">,</span> <span class="s2">&quot;@SusanNotess&quot;</span><span class="p">]</span>
+
+<span class="c1"># Save the first author twitter handle in a variable called first_author</span>
+<span class="n">first_author</span> <span class="o">=</span> <span class="n">book_authors</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Save the second author twitter handle in a variable called second_author</span>
+<span class="n">second_author</span> <span class="o">=</span> <span class="n">book_authors</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+
+<span class="c1"># Save a string (a list of characters) in a variable called key_word</span>
+<span class="n">key_word</span> <span class="o">=</span> <span class="s2">&quot;ethics&quot;</span>
 
 <span class="c1"># Get the first letter (&quot;e&quot;), and save it in variable first_letter</span>
 <span class="n">first_letter</span> <span class="o">=</span> <span class="n">key_word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -1548,8 +1557,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
-<p>NOTE: There are many types of list data structures in different programming languages. Python has lists, tuples, and sets. Other languages have arrays. We will just use lists and not worry about the other similar data types.</p>
-<p>Note: We’ll demonstrate lists later in Chapter 5: History of Social Media.</p>
+<p>There are many types of list data structures in different programming languages with subtle differences we wont worry about in this class. Python has <a class="reference external" href="https://www.w3schools.com/python/python_lists.asp">lists</a>, <a class="reference external" href="https://www.w3schools.com/python/python_tuples.asp">tuples</a>, and <a class="reference external" href="https://www.w3schools.com/python/python_sets.asp">sets</a>. Other languages have a list type called <a class="reference external" href="https://en.wikipedia.org/wiki/Array_data_type">arrays</a>. We will just use lists and not worry about the other similar data types.</p>
+<p>We’ll demonstrate lists later in Chapter 5: History of Social Media.</p>
 </section>
 <section id="dictionaries">
 <h2>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">#</a></h2>
@@ -1557,110 +1566,67 @@ title="Print to PDF"
 <p>You can think of this as like a language dictionary where there is a word and a definition for each word. Then you can look up any name or word and find the value or definition.</p>
 <p>Example: English Language Dictionary:</p>
 <ul class="simple">
-<li><p>Social Media: [TODO: define]</p></li>
-<li><p>Ethics: Thinking systematically about what makes something morally right or wrong, or using ethical systems to analyze moral concerns in different situations: [example definition]</p></li>
-<li><p>Automation: [TODO: define]</p></li>
+<li><p>Social Media: An internet based platform used for people to form connections to each other and share things.</p></li>
+<li><p>Ethics: Thinking systematically about what makes something morally right or wrong, or using ethical systems to analyze moral concerns in different situations</p></li>
+<li><p>Automation: Making a process or activity that can run on its own without needing a human to guide it.</p></li>
 </ul>
-<p>Dictionaries allow programmers to combine several pieces of data, naming each piece. When we do this, the dictionary will have a number of names, and for each of those names a piece of information (called a “value” in this context).</p>
+<p>The Dictionary data type allows programmers to combine several pieces of data by naming each piece. When we do this, the dictionary will have a number of names, and for each of those names a piece of information (called a “value” in this context).</p>
 <p>Dictionary:</p>
 <ul class="simple">
 <li><p>Name 1: Value 1</p></li>
 <li><p>Name 2: Value 2</p></li>
 <li><p>Name 3: Value 3</p></li>
 </ul>
-<p>So as an example of using a dictionary, if you want to combine some pieces of information, like defining a color by <a class="reference external" href="https://www.w3schools.com/cssref/css_colors.asp">specifying the amount of red, green, and blue</a>, it might look like these:</p>
-<p><a class="reference external" href="https://www.w3schools.com/colors/color_tryit.asp?color=Purple">Purple</a> <span style="background-color:rgb(128,0,128)">   </span>:</p>
+<p>So if we look at the example tweet, we can combine all the data in a dictionary.</p>
+<figure class="align-default" id="tweet-fig">
+<img alt="Screenshot of tweet from user WeRateDogs® (&#64;dog_rates). Tweet text is &quot;This is Woods. He’s here to help with the dishes. Specifically the pre-rinse, where he licks every item he can. 12/10&quot;. The tweet also has three photos of a tiny cute puppy standing on the open door of a dishwasher. The tweet was posted on Feb 10, 2020. The account that posted it has a blue check. The tweet has 1,533 quote tweets, 26.6K retweets, and 197.8K likes." src="../../_images/dog_tweet.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.9 </span><span class="caption-text">A tweet with photos of a cute puppy! (<a class="reference external" href="https://twitter.com/dog_rates/status/1227037345712627718">source</a>)</span><a class="headerlink" href="#tweet-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Dictionary (with some of the data):</p>
 <ul class="simple">
-<li><p>Red: 128</p></li>
-<li><p>Green: 0</p></li>
-<li><p>Blue: 128</p></li>
-</ul>
-<p><a class="reference external" href="https://www.w3schools.com/colors/color_tryit.asp?color=MediumAquaMarine">Medium Aqua Marine</a> <span style="background-color:rgb(102,205,170)">   </span>:</p>
-<ul class="simple">
-<li><p>Red: 102</p></li>
-<li><p>Green: 205</p></li>
-<li><p>Blue: 170</p></li>
-</ul>
-<div class="dropdown admonition">
-<p class="admonition-title">Click to see example Python code</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save dictionaries for RGB values for two colors in separate variables</span>
-
-<span class="n">purple</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;Red&quot;</span><span class="p">:</span> <span class="mi">128</span><span class="p">,</span>
-  <span class="s2">&quot;Green&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-  <span class="s2">&quot;Blue&quot;</span><span class="p">:</span> <span class="mi">128</span>
-<span class="p">}</span>
-
-<span class="n">medium_aqua_marine</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;Red&quot;</span><span class="p">:</span> <span class="mi">102</span><span class="p">,</span>
-  <span class="s2">&quot;Green&quot;</span><span class="p">:</span> <span class="mi">205</span><span class="p">,</span>
-  <span class="s2">&quot;Blue&quot;</span><span class="p">:</span> <span class="mi">170</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div>
-<p>We can also use any piece of information we want for the “name” in a dictionary. So if we wanted, we could make a color the “name” in a dictionary. For example, in this one, names are colors (in terms of red, green, and blue), and the values are the [most common names of that color in different languages]{<a class="reference external" href="https://uwdata.github.io/color-naming-in-different-languages/vis/full_color_maps.html">https://uwdata.github.io/color-naming-in-different-languages/vis/full_color_maps.html</a>}:</p>
-<p>Most common name for a given color in English:</p>
-<ul class="simple">
-<li><p><span style="background-color:rgb(231,37,37)">   </span>{Red: 231, Green, 37, Blue: 37}: Red</p></li>
-<li><p><span style="background-color:rgb(167,37,128)">   </span>{Red: 168, Green, 37, Blue: 128}: Magenta</p></li>
-</ul>
-<p>Most common name for a given color in Korean:</p>
-<ul class="simple">
-<li><p><span style="background-color:rgb(231,37,37)">   </span>{Red: 231, Green, 37, Blue: 37}: 빨강</p></li>
-<li><p><span style="background-color:rgb(167,37,128)">   </span>{Red: 168, Green, 37, Blue: 128}: 자주</p></li>
+<li><p>user_name: “WeRateDogs®”</p></li>
+<li><p>user_handle: “&#64;dog_rates”</p></li>
+<li><p>user_has_blue_checkmark: True</p></li>
+<li><p>tweet_text: “This is Woods. He’s here to help with the dishes. Specifically the pre-rinse, where he licks every item he can. 12/10”</p></li>
+<li><p>number_of_replies: 1533</p></li>
+<li><p>number_of_retweets: 26200</p></li>
+<li><p>number_of_likes: 197800</p></li>
 </ul>
 <div class="dropdown admonition">
 <p class="admonition-title">Click to see example Python code</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
-<span class="c1"># Save dictionaries for RGB values for two colors in separate variables</span>
-
-<span class="n">color_1</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;Red&quot;</span><span class="p">:</span> <span class="mi">231</span><span class="p">,</span>
-  <span class="s2">&quot;Green&quot;</span><span class="p">:</span> <span class="mi">37</span><span class="p">,</span>
-  <span class="s2">&quot;Blue&quot;</span><span class="p">:</span> <span class="mi">37</span>
-<span class="p">}</span>
-
-<span class="n">color_2</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;Red&quot;</span><span class="p">:</span> <span class="mi">168</span><span class="p">,</span>
-  <span class="s2">&quot;Green&quot;</span><span class="p">:</span> <span class="mi">37</span><span class="p">,</span>
-  <span class="s2">&quot;Blue&quot;</span><span class="p">:</span> <span class="mi">128</span>
-<span class="p">}</span>
-
-
-<span class="c1"># Save dictionaries that given a color will give you the most</span>
-<span class="c1"># common name for that color (one dictionary for English, one for Korean)</span>
-<span class="n">most_common_english_name</span><span class="p">{</span>
-  <span class="n">color_1</span><span class="p">:</span> <span class="s2">&quot;Red&quot;</span><span class="p">,</span>
-  <span class="n">color_2</span><span class="p">:</span> <span class="s2">&quot;Magenta&quot;</span>
-<span class="p">}</span>
-
-<span class="n">most_common_korean_name</span><span class="p">{</span>
-  <span class="n">color_1</span><span class="p">:</span> <span class="s2">&quot;빨강&quot;</span><span class="p">,</span>
-  <span class="n">color_2</span><span class="p">:</span> <span class="s2">&quot;자주&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save a some info about a tweet in a variable called tweet_info</span>
+<span class="n">tweet_info</span> <span class="o">=</span> <span class="p">{</span>
+ <span class="s2">&quot;user_name&quot;</span><span class="p">:</span> <span class="s2">&quot;WeRateDogs®&quot;</span><span class="p">,</span>
+ <span class="s2">&quot;user_handle&quot;</span><span class="p">:</span> <span class="s2">&quot;@dog_rates&quot;</span><span class="p">,</span>
+ <span class="s2">&quot;user_has_blue_checkmark&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+ <span class="s2">&quot;tweet_text&quot;</span><span class="p">:</span> <span class="s2">&quot;This is Woods. He’s here to help with the dishes. Specifically the pre-rinse, where he licks every item he can. 12/10&quot;</span><span class="p">,</span>
+ <span class="s2">&quot;number_of_replies&quot;</span><span class="p">:</span> <span class="mi">1533</span><span class="p">,</span>
+ <span class="s2">&quot;number_of_retweets&quot;</span><span class="p">:</span> <span class="mi">26200</span><span class="p">,</span>
+ <span class="s2">&quot;number_of_likes&quot;</span><span class="p">:</span> <span class="mi">197800</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </div>
 <p>Note: We’ll demonstrate dictionaries later in Chapter 5: History of Social Media, and Chapter 8: Data Mining.</p>
 </section>
-<section id="custom-combined-data-types">
-<h2>Custom combined data types<a class="headerlink" href="#custom-combined-data-types" title="Permalink to this headline">#</a></h2>
-<p>TODO: Example of user info for a social media site</p>
+<section id="groups-within-groups">
+<h2>Groups within Groups<a class="headerlink" href="#groups-within-groups" title="Permalink to this headline">#</a></h2>
+<p>We can use dictionaries and lists together to make lists of dictionaries, lists of lists, dictionaries of lists, or any other combination.</p>
+<p>So for example, I could make a list of twitter users. Each twitter user could be a dictionary with info about that user, and one piece of information it might have is a list of who that user is following.</p>
 <p>List of users:</p>
 <p>User 1:</p>
 <ul class="simple">
-<li><p>Username: &#64;kylemthayer (a String)</p></li>
-<li><p>First name: Kyle (a String)</p></li>
-<li><p>Last Name: Thayer (a String)</p></li>
+<li><p>Username: kylethayer (a String)</p></li>
+<li><p>Twitter handle: &#64;kylemthayer (a String)</p></li>
 <li><p>Profile Picture: [TODO picture here] (an image)</p></li>
 <li><p>Friends: &#64;SusanNotess, &#64;UW, &#64;UW_iSchool, … (a list of Strings)</p></li>
 </ul>
 <p>User 2:</p>
 <ul class="simple">
-<li><p>Username: &#64;SusanNotess (a String)</p></li>
-<li><p>First name: Susan (a String)</p></li>
-<li><p>Last Name: Notess (a String)</p></li>
+<li><p>Username: Dr Susan Notess (a String)</p></li>
+<li><p>Twitter handle: &#64;SusanNotess (a String)</p></li>
 <li><p>Profile Picture: [TODO picture here] (an image)</p></li>
 <li><p>Friends: &#64;kylemthayer, ??? (a list of Strings)</p></li>
 </ul>
@@ -1668,16 +1634,14 @@ title="Print to PDF"
 <p class="admonition-title">Click to see example Python code</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">users</span> <span class="o">=</span> <span class="p">[</span>
   <span class="p">{</span>
-    <span class="n">username</span><span class="p">:</span> <span class="s2">&quot;@kylemthayer&quot;</span><span class="p">,</span>
-    <span class="n">first_name</span><span class="p">:</span> <span class="s2">&quot;Kyle&quot;</span><span class="p">,</span>
-    <span class="n">last_name</span><span class="p">:</span> <span class="s2">&quot;Thayer&quot;</span><span class="p">,</span>
+    <span class="n">username</span><span class="p">:</span> <span class="s2">&quot;kylethayer&quot;</span><span class="p">,</span>
+    <span class="n">twitter_handle</span><span class="p">:</span> <span class="s2">&quot;@kylemthayer&quot;</span><span class="p">,</span>
     <span class="n">profile_picture</span><span class="p">:</span> <span class="s2">&quot;kylethayer.jpg&quot;</span><span class="p">,</span>
     <span class="n">friends</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;@SusanNotess&quot;</span><span class="p">,</span> <span class="s2">&quot;@UW&quot;</span><span class="p">,</span> <span class="s2">&quot;@UW_iSchool&quot;</span><span class="p">]</span>
   <span class="p">},</span>
   <span class="p">{</span>
-    <span class="n">username</span><span class="p">:</span> <span class="s2">&quot;@SusanNotess&quot;</span><span class="p">,</span>
-    <span class="n">first_name</span><span class="p">:</span> <span class="s2">&quot;Susan&quot;</span><span class="p">,</span>
-    <span class="n">last_name</span><span class="p">:</span> <span class="s2">&quot;Notess&quot;</span><span class="p">,</span>
+    <span class="n">username</span><span class="p">:</span> <span class="s2">&quot;Dr Susan Notess&quot;</span><span class="p">,</span>
+    <span class="n">twitter_handle</span><span class="p">:</span> <span class="s2">&quot;@SusanNotess&quot;</span><span class="p">,</span>
     <span class="n">profile_picture</span><span class="p">:</span> <span class="s2">&quot;susannotess.jpg&quot;</span><span class="p">,</span>
     <span class="n">friends</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;@kylemthayer&quot;</span><span class="p">]</span>
   <span class="p">},</span>
