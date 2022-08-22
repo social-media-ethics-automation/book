@@ -75,7 +75,7 @@ There are many types of list data structures in different programming languages 
 We'll demonstrate lists later in Chapter 5: History of Social Media.
 
 ## Dictionaries
-The other method of grouping data that we will discuss here is called a "dictionary" (sometimes also called a "maps").
+The other method of grouping data that we will discuss here is called a "dictionary" (sometimes also called a "map").
 
 You can think of this as like a language dictionary where there is a word and a definition for each word. Then you can look up any name or word and find the value or definition.
 
@@ -112,7 +112,7 @@ Dictionary (with some of the data):
  ````{admonition} Click to see example Python code
  :class: dropdown
  ```python
- # Save a some info about a tweet in a variable called tweet_info
+ # Save some info about a tweet in a variable called tweet_info
  tweet_info = {
   "user_name": "WeRateDogs®",
   "user_handle": "@dog_rates",
