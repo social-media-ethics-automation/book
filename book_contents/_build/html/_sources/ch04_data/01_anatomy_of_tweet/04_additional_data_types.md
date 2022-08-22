@@ -1,4 +1,4 @@
-# Combination Data Types
+# Additional Data Types
 We can represent much more information with lists, and dictionaries, and lists of dictionaries and dictionaries of lists, etc.
 
 
@@ -35,46 +35,3 @@ There are several options for how to save dates and times. Some options include 
 Dates end up being one of the trickier data types to work with in practice. One of the main reasons for this is that dates and times are different in different time zones, TODO: Finish
 
 Note: We'll show these a little bit in chapter 18: Public Shaming
-
-## Custom combined data types
-TODO: Example of user info for a social media site
-
-
-List of users:
-
-User 1:
-- Username: @kylemthayer (a String)
-- First name: Kyle (a String)
-- Last Name: Thayer (a String)
-- Profile Picture: [TODO picture here] (an image)
-- Friends: @SusanNotess, @UW, @UW_iSchool, ... (a list of Strings)
-
-User 2:
-- Username: @SusanNotess (a String)
-- First name: Susan (a String)
-- Last Name: Notess (a String)
-- Profile Picture: [TODO picture here] (an image)
-- Friends: @kylemthayer, ??? (a list of Strings)
-
-
-````{admonition} Click to see example Python code
-:class: dropdown
-```python
-users = [
-  {
-    username: "@kylemthayer",
-    first_name: "Kyle",
-    last_name: "Thayer",
-    profile_picture: "kylethayer.jpg",
-    friends: ["@SusanNotess", "@UW", "@UW_iSchool"]
-  },
-  {
-    username: "@SusanNotess",
-    first_name: "Susan",
-    last_name: "Notess",
-    profile_picture: "susannotess.jpg",
-    friends: ["@kylemthayer"]
-  },
-]
-```
-````

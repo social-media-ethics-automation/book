@@ -2,7 +2,7 @@
 
 Once we have some types of data representation on a computer, we can create different groupings of data to represent more types of data. We'll look at two types of groupings here, then look at what we can do with those groupings.
 
-## Lists (Arrays)
+## Lists
 The first way of combining data is by making a list with data.
 
 So we can make a list of the numbers from 1 to 10:
@@ -15,6 +15,14 @@ So we can make a list of the numbers from 1 to 10:
  one_to_ten = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
  ```
  ````
+
+ ```{figure} dog_tweet_with_lists.png
+ ---
+ name: tweet_lists_fig
+ alt: "Screenshot of the tweet from before, but with lists highlighted: images, and links to the lists of replies, retweets, and likes."
+ ---
+ There are several lists in the tweet. There is a list of three images, and there are links that will take you to the lists of replies, retweets, and likes.
+ ```
 
 Or we can make a list of letters [which happen to form a word] like this:
  - e, t, h, i, c, s
@@ -49,6 +57,7 @@ second_letter = key_word[1]
 ```
 ````
 
+NOTE: There are many types of list data structures in different programming languages. Python has lists, tuples, and sets. Other languages have arrays. We will just use lists and not worry about the other similar data types.
 
 
 Note: We'll demonstrate lists later in Chapter 5: History of Social Media.
@@ -146,3 +155,47 @@ most_common_korean_name{
 
 
 Note: We'll demonstrate dictionaries later in Chapter 5: History of Social Media, and Chapter 8: Data Mining.
+
+
+## Custom combined data types
+TODO: Example of user info for a social media site
+
+
+List of users:
+
+User 1:
+- Username: @kylemthayer (a String)
+- First name: Kyle (a String)
+- Last Name: Thayer (a String)
+- Profile Picture: [TODO picture here] (an image)
+- Friends: @SusanNotess, @UW, @UW_iSchool, ... (a list of Strings)
+
+User 2:
+- Username: @SusanNotess (a String)
+- First name: Susan (a String)
+- Last Name: Notess (a String)
+- Profile Picture: [TODO picture here] (an image)
+- Friends: @kylemthayer, ??? (a list of Strings)
+
+
+````{admonition} Click to see example Python code
+:class: dropdown
+```python
+users = [
+  {
+    username: "@kylemthayer",
+    first_name: "Kyle",
+    last_name: "Thayer",
+    profile_picture: "kylethayer.jpg",
+    friends: ["@SusanNotess", "@UW", "@UW_iSchool"]
+  },
+  {
+    username: "@SusanNotess",
+    first_name: "Susan",
+    last_name: "Notess",
+    profile_picture: "susannotess.jpg",
+    friends: ["@kylemthayer"]
+  },
+]
+```
+````

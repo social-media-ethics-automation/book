@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>4.1.4. Combination Data Types &#8212; Social Media, Ethics, and Automation</title>
+    <title>4.1.4. Additional Data Types &#8212; Social Media, Ethics, and Automation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -382,7 +382,7 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       4.1.4. Combination Data Types
+       4.1.4. Additional Data Types
       </a>
      </li>
      <li class="toctree-l3">
@@ -1347,7 +1347,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/kylethayer/social_media_ethics_programming_v0/issues/new?title=Issue%20on%20page%20%2Fch04_data/01_anatomy_of_tweet/04_combination_data_types.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/kylethayer/social_media_ethics_programming_v0/issues/new?title=Issue%20on%20page%20%2Fch04_data/01_anatomy_of_tweet/04_additional_data_types.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1375,7 +1375,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/ch04_data/01_anatomy_of_tweet/04_combination_data_types.md"
+        <a href="../../_sources/ch04_data/01_anatomy_of_tweet/04_additional_data_types.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1451,11 +1451,6 @@ title="Print to PDF"
    Dates and Times
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#custom-combined-data-types">
-   Custom combined data types
-  </a>
- </li>
 </ul>
 
     </nav>
@@ -1465,7 +1460,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Combination Data Types</h1>
+                <h1>Additional Data Types</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1492,11 +1487,6 @@ title="Print to PDF"
    Dates and Times
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#custom-combined-data-types">
-   Custom combined data types
-  </a>
- </li>
 </ul>
 
                         </nav>
@@ -1507,8 +1497,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="combination-data-types">
-<h1><span class="section-number">4.1.4. </span>Combination Data Types<a class="headerlink" href="#combination-data-types" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="additional-data-types">
+<h1><span class="section-number">4.1.4. </span>Additional Data Types<a class="headerlink" href="#additional-data-types" title="Permalink to this headline">#</a></h1>
 <p>We can represent much more information with lists, and dictionaries, and lists of dictionaries and dictionaries of lists, etc.</p>
 <section id="images-sounds-videos">
 <h2>Images / Sounds / Videos<a class="headerlink" href="#images-sounds-videos" title="Permalink to this headline">#</a></h2>
@@ -1537,48 +1527,6 @@ title="Print to PDF"
 <p>There are several options for how to save dates and times. Some options include a series of numbers (year, month, day, hour, minute, and second), or a string that includes all of those. You can also include time zone as well.</p>
 <p>Dates end up being one of the trickier data types to work with in practice. One of the main reasons for this is that dates and times are different in different time zones, TODO: Finish</p>
 <p>Note: We’ll show these a little bit in chapter 18: Public Shaming</p>
-</section>
-<section id="custom-combined-data-types">
-<h2>Custom combined data types<a class="headerlink" href="#custom-combined-data-types" title="Permalink to this headline">#</a></h2>
-<p>TODO: Example of user info for a social media site</p>
-<p>List of users:</p>
-<p>User 1:</p>
-<ul class="simple">
-<li><p>Username: &#64;kylemthayer (a String)</p></li>
-<li><p>First name: Kyle (a String)</p></li>
-<li><p>Last Name: Thayer (a String)</p></li>
-<li><p>Profile Picture: [TODO picture here] (an image)</p></li>
-<li><p>Friends: &#64;SusanNotess, &#64;UW, &#64;UW_iSchool, … (a list of Strings)</p></li>
-</ul>
-<p>User 2:</p>
-<ul class="simple">
-<li><p>Username: &#64;SusanNotess (a String)</p></li>
-<li><p>First name: Susan (a String)</p></li>
-<li><p>Last Name: Notess (a String)</p></li>
-<li><p>Profile Picture: [TODO picture here] (an image)</p></li>
-<li><p>Friends: &#64;kylemthayer, ??? (a list of Strings)</p></li>
-</ul>
-<div class="dropdown admonition">
-<p class="admonition-title">Click to see example Python code</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">users</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="p">{</span>
-    <span class="n">username</span><span class="p">:</span> <span class="s2">&quot;@kylemthayer&quot;</span><span class="p">,</span>
-    <span class="n">first_name</span><span class="p">:</span> <span class="s2">&quot;Kyle&quot;</span><span class="p">,</span>
-    <span class="n">last_name</span><span class="p">:</span> <span class="s2">&quot;Thayer&quot;</span><span class="p">,</span>
-    <span class="n">profile_picture</span><span class="p">:</span> <span class="s2">&quot;kylethayer.jpg&quot;</span><span class="p">,</span>
-    <span class="n">friends</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;@SusanNotess&quot;</span><span class="p">,</span> <span class="s2">&quot;@UW&quot;</span><span class="p">,</span> <span class="s2">&quot;@UW_iSchool&quot;</span><span class="p">]</span>
-  <span class="p">},</span>
-  <span class="p">{</span>
-    <span class="n">username</span><span class="p">:</span> <span class="s2">&quot;@SusanNotess&quot;</span><span class="p">,</span>
-    <span class="n">first_name</span><span class="p">:</span> <span class="s2">&quot;Susan&quot;</span><span class="p">,</span>
-    <span class="n">last_name</span><span class="p">:</span> <span class="s2">&quot;Notess&quot;</span><span class="p">,</span>
-    <span class="n">profile_picture</span><span class="p">:</span> <span class="s2">&quot;susannotess.jpg&quot;</span><span class="p">,</span>
-    <span class="n">friends</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;@kylemthayer&quot;</span><span class="p">]</span>
-  <span class="p">},</span>
-<span class="p">]</span>
-</pre></div>
-</div>
-</div>
 </section>
 </section>
 
