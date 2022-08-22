@@ -39,7 +39,7 @@ And if there were four of us who wanted to have apples, we could give each perso
 
 ![photo of 4 plates each with one apple. Two of the apples are regular size, and two are tiny.](apples_3.png)
 
-Now, while each person has 1 apple, you might complain that it isn't fair, since the apples weren't all the same size. Two of the four apples were particularly small.
+Now, while each person has 1 apple, you might complain that it isn't fair (and if you try this with children, they will almost certainly let you know it isn't fair), since the apples weren't all the same size. Two of the four apples were particularly small.
 
 So, there was a simplification here. In this example, I decided that each of these would count as "1 apple." This way of looking at things might not work well in some situations:
 - If we want everyone to get the same amount of apples by weight, we would have to cut the apples into pieces so we could give each person the same amount.
