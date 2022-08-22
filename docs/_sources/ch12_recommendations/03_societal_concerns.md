@@ -19,6 +19,8 @@
   - [According to Twitter, Twitter’s algorithm favours conservatives](https://www.economist.com/graphic-detail/2021/11/13/according-to-twitter-twitters-algorithm-favours-conservatives) ([copy on archive.org](https://web.archive.org/web/20220106162108/https://www.economist.com/graphic-detail/2021/11/13/according-to-twitter-twitters-algorithm-favours-conservatives))
     - “Whereas Google gave higher rankings to more reliable sites, we found that Twitter boosted the least reliable sources, regardless of their politics.”
 
+see also: [Cable news has a much bigger effect on America’s polarization than social media, study finds](https://www.niemanlab.org/2022/08/cable-news-has-a-much-bigger-effect-on-americas-polarization-than-social-media-study-finds/)
+
 ## Radicalization:  Rohingya Genocide in Myanmar since 2016
 - [Facebook admits it was used to 'incite offline violence' in Myanmar](https://www.bbc.com/news/world-asia-46105934)  (2018, BBC)
 - [Rohingya sue Facebook for £150bn over Myanmar genocide](https://www.theguardian.com/technology/2021/dec/06/rohingya-sue-facebook-myanmar-genocide-us-uk-legal-action-social-media-violence) (2021, The Guardian)
