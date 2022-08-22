@@ -1567,7 +1567,7 @@ title="Print to PDF"
 <p>And when the program is run, statement 1 runs first, then statement 2, then, finally, statement 3.</p>
 <p>You might recognize this as the same style of instructions as a cooking recipe, like making dumplings:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- Make dumpling dough.
-- Make chicken filling.
+- Make veggie filling.
 - Flatten small balls of dough.
 - Put some filling on each piece of dough.
 - Fold dough around the filling.
@@ -1577,7 +1577,7 @@ title="Print to PDF"
 <p>In fact, the format of a cooking recipe is basically an imperative programming language where the cook acts as a “human computer” following the cooking instructions.</p>
 <blockquote>
 <div><p><img alt="Photo of a man in a kitchen, looking at a notebook while mixing something in a bowl. The bowl is surrounded by eggs, strawberries and other ingredients." src="../../_images/cooking.jpg" />
-A human computer running a cooking program. In other words: “someone following a recipe” (<a class="reference external" href="https://www.pexels.com/photo/a-man-cooking-at-the-kitchen-6944110/">photo source</a>)</p>
+A human computer running a cooking program. In other words: “someone following a recipe” (but probably not a dumpling recipe) (<a class="reference external" href="https://www.pexels.com/photo/a-man-cooking-at-the-kitchen-6944110/">photo source</a>)</p>
 </div></blockquote>
 <p>Twitter bots are generally organized in this same way, so one bot might be organized like this:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- Log into Twitter
@@ -1616,19 +1616,20 @@ A human computer running a cooking program. In other words: “someone following
 <h2>Variables: Save information for later<a class="headerlink" href="#variables-save-information-for-later" title="Permalink to this headline">#</a></h2>
 <p>Variables are a way of saving information on the computer, so we can use it later in the computer program.</p>
 <p>In a cooking recipe, the equivalent would be spaces, containers, bowls, or cups to hold ingredients. So you might place the ingredients on the counter in preparation for cooking. Or you might combine some ingredients in a mixing bowl, so the mixing bowl holds the combined ingredients through each step, like:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>To make the dumpling filling:
-- Put flour in a mixing bowl [or on an empty flat surface???]
-- Add water to the mixing bowl
-- Add ???
-- Knead until ???
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>To make the dumpling dough:
+- Put flour in a mixing bowl and add a bit of salt
+- Make a well in the middle of the flour
+- Crack the egg into the well (discarding the shell) and use your fingertips to gradually incorporate the flour
+- Bring together and knead for about 10 minutes until smooth and elastic, rather than rough and floury.
+- Wrap in clingfilm and rest it in the fridge for at least 30 minutes.
 </pre></div>
 </div>
 <p>Sometimes in cooking, you use multiple mixing bowls to mix different parts of the recipe separately:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>To make the dumpling filling:
-- In a separate mixing bowl:
-  - Add shredded chicken
-  - Add ???
-  - Mix
+- While the dough is chilling, In a separate mixing bowl:
+  - Combine the sauteed onions, pumpkin, and mushrooms
+  - Add a generous handful of finely chopped fresh dill and parsley
+  - Mix to combine, then taste. If it needs more salt, add more salt. If it needs some brightness, add a small amount for lemon juice or white rice vinegar, then taste it again.
 </pre></div>
 </div>
 <p>In a computer program, when you save information for later use, instead of putting it in a bowl, you give it a name. The computer then makes a place in its memory with that name, and saves the information you asked it to save. Then you can use that name later in the program to ask the computer what was saved in that spot.</p>
@@ -1665,7 +1666,7 @@ A human computer running a cooking program. In other words: “someone following
 <h2>Events: When you do something depends<a class="headerlink" href="#events-when-you-do-something-depends" title="Permalink to this headline">#</a></h2>
 <p>Events let us perform a programming action in response to something happening. The computer may sit and do nothing while waiting for an event to happen.</p>
 <p>Within cooking this might look like:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- When the guests arrive, put the dumplings on plates and serve them.
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- When the guests arrive, boil or steam the dumplings, and then plate and serve them.
 </pre></div>
 </div>
 <p>Within programming, it might look like:</p>
@@ -1677,7 +1678,7 @@ A human computer running a cooking program. In other words: “someone following
 <h3>Pausing/Scheduling<a class="headerlink" href="#pausing-scheduling" title="Permalink to this headline">#</a></h3>
 <p>One of the most common events to program for is around time: We can also tell programs to wait for a period of time, or start at a given time.</p>
 <p>In cooking this might look like:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- Steam the dumplings for 10 minutes
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- Boil the dumplings for 5 minutes
 </pre></div>
 </div>
 <p>or</p>
@@ -1699,8 +1700,11 @@ A human computer running a cooking program. In other words: “someone following
 <section id="conditionals-what-you-do-depends">
 <h2>Conditionals: What you do depends<a class="headerlink" href="#conditionals-what-you-do-depends" title="Permalink to this headline">#</a></h2>
 <p>Conditionals let us change what we do depending on the situation.</p>
-<p>In cooking, we might ????????? and change our course of action depending on that test:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- ?? What is something to test or check with different courses of action ???
+<p>In cooking, we might taste for seasoning and change our course of action depending on that test:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- Taste the filling.
+  - If it is good, proceed to the next section.
+  - If it is not quite right, decide if it needs more salt or more acid.
+  - Add some of what is needed, and repeat this step until you are happy.
 </pre></div>
 </div>
 <p>In programming, we might do this:</p>
@@ -1715,16 +1719,16 @@ A human computer running a cooking program. In other words: “someone following
 <h2>Loops: Repeating Actions<a class="headerlink" href="#loops-repeating-actions" title="Permalink to this headline">#</a></h2>
 <p>Loops are used to repeat actions, though there are several different types of repetitive actions.</p>
 <p>In cooking you can repeat an action a set number of times:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- Knead the dough 10 times
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- Cut the dough 19 times to make 20 (6 cm) squares.
 </pre></div>
 </div>
 <p>Or you can repeat the same action, but to different items:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- For all the balls of dumpling dough
-  - fill them with dumpling filling and fold them
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- For each square of dumpling dough
+  - fill them with dumpling filling and bring up the corners. Pinch together the edges to seal.
 </pre></div>
 </div>
 <p>Or you can repeat the same action until you get a certain result:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- Continue kneading the dough until it has the right consistency???
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- Continue kneading the dough until it is smooth and elastic, not rough and floury.
 </pre></div>
 </div>
 <p>In computer programming you can repeat an action a set number of times</p>
@@ -1745,12 +1749,11 @@ A human computer running a cooking program. In other words: “someone following
 <h2>Code Blocks: Grouping statements<a class="headerlink" href="#code-blocks-grouping-statements" title="Permalink to this headline">#</a></h2>
 <p>Sometimes in programming, we want to group several steps (i.e., statements) together. When we group these steps together we call it a code “block.” These blocks of code often used with conditionals (e.g., if this condition is true, do these five steps), and with loops (e.g., for each of these items, do these five steps).</p>
 <p>In a recipe, you might create a block of instructions like this:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- for each of the balls of dumpling dough:
-  - flatten it into a thin circle
-  - place one spoonful of filling in the middle of the circle
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- for each of the squares of dumpling dough:
+  - place one spoonful of filling in the middle of the square
   - fold the dough over the filling
   - pinch the edges to seal it
-  - place the dumpling on the steamer or something???
+  - set the dumpling on a piece of parchment paper to await cooking
 </pre></div>
 </div>
 <p>In a computer program, you might make a code block of statements like this:</p>
@@ -1774,12 +1777,12 @@ A human computer running a cooking program. In other words: “someone following
 <h2>Functions/Libraries: Run another program<a class="headerlink" href="#functions-libraries-run-another-program" title="Permalink to this headline">#</a></h2>
 <p>The final programming organization feature we will cover here is functions and libraries, which basically allow you to run another computer program. This could be a small program that you made that want to use, or it could be a program written by someone else that you are using.</p>
 <p>In cooking this might look like a step of asking the cook to make something from another recipe.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- make the [alternate???] dumpling dough (see recipe on page 42).
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- Make the dumpling dough (see recipe on page 42).
 </pre></div>
 </div>
 <p>The recipe also could ask you to make a different version of a recipe from another page:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- to make dumplings vegan, make the [alternate???] dumpling
-  dough (see recipe on page 42), but subsititute ??? for eggs???.
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- to make dumplings vegan, make the dumpling
+  dough (see recipe on page 42), but instead of using the egg, subsititute 2 teaspoons olive oil and 2 tablespoons hot water.
 </pre></div>
 </div>
 <p>In programming, a function is a small program that you can run from another place in the code (programmer call this “calling” a function). Functions also can accept data and options for how they run. Code libraries are a collection of functions and data that help with certain tasks.</p>
