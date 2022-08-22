@@ -146,7 +146,7 @@ User 2:
 - Username: Dr Susan Notess (a String)
 - Twitter handle: @SusanNotess (a String)
 - Profile Picture: [TODO picture here] (an image)
-- Follows: @kylemthayer, @histoftech, @j_kalla, @dbroockman, @qaxaawut, @shengokai (a list of Strings)
+- Follows: @kylemthayer, @histoftech, @j_kalla, @dbroockman, @qaxaawut, @shengokai, @laniwhatison (a list of Strings)
 
 
 ````{admonition} Click to see example Python code
@@ -163,7 +163,7 @@ users = [
     username: "Dr Susan Notess",
     twitter_handle: "@SusanNotess",
     profile_picture: "susannotess.jpg",
-    follows: ["@kylemthayer", "@histoftech", "@j_kalla", "@dbroockman", "@qaxaawut", "@shengokai"]
+    follows: ["@kylemthayer", "@histoftech", "@j_kalla", "@dbroockman", "@qaxaawut", "@shengokai", "@laniwhatison"]
   },
 ]
 ```
