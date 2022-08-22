@@ -1438,20 +1438,12 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="data-constraints">
 <h1><span class="section-number">4.1.5. </span>Data Constraints<a class="headerlink" href="#data-constraints" title="Permalink to this headline">#</a></h1>
-<p>Additional limitations on data can be added:</p>
+<p>In addition to representing data with different data storage methods, computers can also let you add additional constraints on what can be saved. So, for example, you might limit the length of a tweet to 280 characters, even though the computer can store longer strings.</p>
+<p>There are many places these constraints might be used such as:</p>
 <ul class="simple">
-<li><p>Strings (text) limits like</p>
-<ul>
-<li><p>limiting what kind of characters appear in a name (e.g., disallowing emojis)</p></li>
-<li><p>name length (e.g., minimum length, maximum length)</p></li>
-<li><p>Could be restricted to a small set of options (e.g., which country do you live in?)</p></li>
-</ul>
-</li>
-<li><p>Numbers</p>
-<ul>
-<li><p>Disallow things like ages over 150, or a year in the future</p></li>
-</ul>
-</li>
+<li><p>for an age (integer), only allow ages between 0 and 120</p></li>
+<li><p>for a country name (string), have a pre-set list of valid country names</p></li>
+<li><p>for a legal name (string), disallow emojis</p></li>
 </ul>
 </section>
 
