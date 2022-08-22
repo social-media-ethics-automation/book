@@ -17,13 +17,13 @@ While you won't need to know the details of how images, sound, and video are sto
 
 __Images__ are created by defining a grid of dots, called pixels. Each pixel has three numbers that define the color (red, green, and blue), and the grid is created as a list (column) of lists (rows).
 
-[TODO: pixilated image]
+![A very close up photo of a small section of a screen with a white heart icon. You can make out that the screen is a grid and the grid squares where the heart is have red, green, and blue bands, which look white when seen from a distance](pixel_heart.jpg)
 
 __Sounds__ are represented as the position of the speaker diaphragm over time (a sound wave). The position is saved as a number, and there positions saved at each time point, so the sound wave is saved as a list of numbers.
 
 [TODO: Diagram of speaker]
 
-[TODO: sound wave image]
+![An image of a sound wave. There is a horizontal line in the middle, and a bunch of vertical bars that are approxomitely centered. The vertical bars are different lengths makking a pattern of ups and downs that represent the sound wave.](sound_wave.png)
 
 __Videos__ are represented as a squence of images (a list of images), often with a sound wave to be played at the same time.
 
