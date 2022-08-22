@@ -1,6 +1,6 @@
 # Basic Data Types
 
-First we'll look at a few basic data storage types.
+First we'll look at a few basic data storage types. We'll also be including some code examples you can look at, though don't worry yet if you don't understand the code, since we'll be covering these in more detail throughout the rest of the book.
 
 ## Booleans (True / False)
 Binary consisting of 0s and 1s make it easy to represent true and false values, where 1 often represents true and 0 represents false. Most programming languages have built in ways of representing True and False values.
@@ -49,13 +49,13 @@ alt: "Screenshot of the tweet from before, but with the numbers highlighted: rep
 The number of replies, retweets, and likes can be represented as integer numbers (197.8K can be stored as a whole number like 197,800).
 ```
 
-In both of those storage methods, there are limits to how much space is used to save each number, limiting how big (or small) the numbers can be, and causing rounding with floating point numbers.
-
-Additionally programming languages might include ways of representing fractions, or [complex numbers](https://en.wikipedia.org/wiki/Complex_number).
-
 ````{admonition} Click to see example Python code
 :class: dropdown
 ```python
+
+# Save an integer value in a variable called num_tweet_likes
+num_tweet_likes = 197800
+
 # Save an integer value in a variable called max_tweet_length
 max_tweet_length = 280
 
@@ -64,11 +64,24 @@ average_tweet_length = 133.5
 ```
 ````
 
+When computers store numbers, there are limits to how much space is can be used to save each number. This limits how big (or small) the numbers can be, and causes rounding with floating point numbers.
+
+Additionally programming languages might include other ways of storing numbers, such as fractions, [complex numbers](https://en.wikipedia.org/wiki/Complex_number), or limited number sets (like only positive integers).
+
+
 
 ## Strings (Text)
-TODO: REWRITE THIS SECTION
+Computers typically store text by dividing the text into __characters__ (the individual letters, spaces, numerals, punctuation marks, emojis, and other symbols). These characters are then stored in order and called __strings__ (that is a bunch of characters strung together, like in {numref}`birthday_string_fig` below).
 
-Text is generally stored as a list of characters (like the example before of e, t, h, i, c, s). These lists of characters are called "strings" (that is a bunch of characters strung together).
+```{figure} happy_birthday_banner.jpg
+---
+name: birthday_string_fig
+alt: 'A photo of a string banner with shiny individual letters hanging on it spelling "HAPPY BIRTHDAY"'
+---
+A physical string of the characters: "H", "A", "P", "P", "Y", " ", "B", "I", "R", "T", "H", "D", "A", "Y". ([image source](https://www.pexels.com/photo/a-rocking-horse-and-birthday-decorations-7600328/))
+```
+
+In our example tweet, we can see some different pieces of information that might be represented with strings:
 
 ```{figure} dog_tweet_with_strings.png
 ---
@@ -78,43 +91,21 @@ alt: "Screenshot of the tweet from before, but with pieces of text highlighted: 
 The user name, twitter handle, and the tweet text can all be represented with strings.
 ```
 
-Computers can store "characters" can be letters, numerals, or other symbols (like math symbols, spaces, and "[newlines](https://en.wikipedia.org/wiki/Newline)" which go to the next line when you press "Enter"). Some ways of storing characters, like [unicode](https://en.wikipedia.org/wiki/Unicode), support storing symbols and letters from many languages, and also [emojis](https://unicode.org/emoji/charts/full-emoji-list.html).
-
-[![A photo of a string banner with shiny individual letters hanging on it spelling "HAPPY BIRTHDAY"](happy_birthday_banner.jpg)](https://www.pexels.com/photo/a-rocking-horse-and-birthday-decorations-7600328/)
-
-A list of characters then can represent words, sentences, books, etc.
 
 ````{admonition} Click to see example Python code
 :class: dropdown
 ```python
-# Save a string with the word ethics in a variable called key_word
-key_word = "ethics"
+# Save a string in a variable called user_name
+user_name = "WeRateDogs®"
 
-# Get the first letter ("e"), and save it in variable first_letter
-first_letter = key_word[0]
+# Save a string in a variable called twitter_handle
+twitter_handle = "@dog_rates"
 
-Get the second letter ("t"), and save it in variable second_letter
-second_letter = key_word[1]
+# Save a string in a variable called tweet_text
+twitter_handle = "This is Woods. He’s here to help with the dishes. Specifically the pre-rinse, where he licks every item he can. 12/10"
 ```
 ````
 
-Additionally, text can be stored with extra formatting information (like fonts, colors, in a [Document File Format](https://en.wikipedia.org/wiki/Document_file_format) like with Word Documents, PDF files, [html website files](https://www.w3schools.com/html/html_intro.asp), etc.).
-
-````{admonition} Click to see example HTML code
-:class: dropdown
-```html
-<article>
-  <h1> This is the title of the article! </h1>
-  <section>
-    <p> This is the first paragraph in the first section of the article. </p>
-    <p> This is the second paragraph in the first section of the article. </p>
-  </section>
-  <section>
-    <p> This is the first paragraph in the second section of the article. </p>
-    <p> This is the second paragraph in the second section of the article. </p>
-  </section>
-</article>
-```
-````
+Text can be stored with extra formatting information, such as fonts and colors, in different [document file formats](https://en.wikipedia.org/wiki/Document_file_format) like Word Documents, PDF files, [html website files](https://www.w3schools.com/html/html_intro.asp), etc.
 
 Note: We'll demonstrate strings later in this chapter, and in more detail in Chapter 7: Trolling
