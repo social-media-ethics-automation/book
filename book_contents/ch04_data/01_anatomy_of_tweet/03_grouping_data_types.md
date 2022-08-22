@@ -16,6 +16,8 @@ So we can make a list of the numbers from 1 to 10:
  ```
  ````
 
+In our example tweet we can see several places where data could be saved in lists:
+
  ```{figure} dog_tweet_with_lists.png
  ---
  name: tweet_lists_fig
@@ -24,18 +26,18 @@ So we can make a list of the numbers from 1 to 10:
  There are several lists in the tweet. There is a list of three images, and there are links that will take you to the lists of replies, retweets, and likes.
  ```
 
-Or we can make a list of letters [which happen to form a word] like this:
- - e, t, h, i, c, s
-
  ````{admonition} Click to see example Python code
  :class: dropdown
  ```python
- # Save a list of letters in a variable called key_word
-key_word = ["e", "t", "h", "i", "c", "s"]
+ # Save a list of people who liked a tweet in a variable called tweet_likes
+ tweet_likes = ["@kylemthayer", "@SusanNotess"]
  ```
  ````
 
- The items in these lists are normally numbered with an "index", so you can ask for the 1st item, or 2nd item, or any other.
+Additionally the text strings we saw before are actually stored internally as lists of characters.
+
+
+The items in lists are normally numbered with an "index", so you can ask for the 1st item, or 2nd item, or any other.
 
 Note: Largely due to [historical peculiarities in the development of programming languages](https://en.wikipedia.org/wiki/Zero-based_numbering#Origin), most programming languages (including Python) number the 1st item in a list as item `0`. So:
 - 1st item has index 0
@@ -46,8 +48,19 @@ Note: Largely due to [historical peculiarities in the development of programming
 ````{admonition} Click to see example Python code
 :class: dropdown
 ```python
-# Save a list of letters in a variable called key_word
-key_word = ["e", "t", "h", "i", "c", "s"]
+
+# Save a list of twitter handles in a list called book_authors
+book_authors = ["@kylemthayer", "@SusanNotess"]
+
+# Save the first author twitter handle in a variable called first_author
+first_author = book_authors[0]
+
+# Save the second author twitter handle in a variable called second_author
+second_author = book_authors[1]
+
+
+# Save a string (a list of characters) in a variable called key_word
+key_word = "ethics"
 
 # Get the first letter ("e"), and save it in variable first_letter
 first_letter = key_word[0]
@@ -57,10 +70,9 @@ second_letter = key_word[1]
 ```
 ````
 
-NOTE: There are many types of list data structures in different programming languages. Python has lists, tuples, and sets. Other languages have arrays. We will just use lists and not worry about the other similar data types.
+There are many types of list data structures in different programming languages with subtle differences we wont worry about in this class. Python has [lists](https://www.w3schools.com/python/python_lists.asp), [tuples](https://www.w3schools.com/python/python_tuples.asp), and [sets](https://www.w3schools.com/python/python_sets.asp). Other languages have a list type called [arrays](https://en.wikipedia.org/wiki/Array_data_type). We will just use lists and not worry about the other similar data types.
 
-
-Note: We'll demonstrate lists later in Chapter 5: History of Social Media.
+We'll demonstrate lists later in Chapter 5: History of Social Media.
 
 ## Dictionaries
 The other method of grouping data that we will discuss here is called a "dictionary" (sometimes also called a "maps").
@@ -68,112 +80,71 @@ The other method of grouping data that we will discuss here is called a "diction
 You can think of this as like a language dictionary where there is a word and a definition for each word. Then you can look up any name or word and find the value or definition.
 
 Example: English Language Dictionary:
-- Social Media: [TODO: define]
-- Ethics: Thinking systematically about what makes something morally right or wrong, or using ethical systems to analyze moral concerns in different situations: [example definition]
-- Automation: [TODO: define]
+- Social Media: An internet based platform used for people to form connections to each other and share things.
+- Ethics: Thinking systematically about what makes something morally right or wrong, or using ethical systems to analyze moral concerns in different situations
+- Automation: Making a process or activity that can run on its own without needing a human to guide it.
 
-Dictionaries allow programmers to combine several pieces of data, naming each piece. When we do this, the dictionary will have a number of names, and for each of those names a piece of information (called a "value" in this context).
+The Dictionary data type allows programmers to combine several pieces of data by naming each piece. When we do this, the dictionary will have a number of names, and for each of those names a piece of information (called a "value" in this context).
 
 Dictionary:
 - Name 1: Value 1
 - Name 2: Value 2
 - Name 3: Value 3
 
-So as an example of using a dictionary, if you want to combine some pieces of information, like defining a color by [specifying the amount of red, green, and blue](https://www.w3schools.com/cssref/css_colors.asp), it might look like these:
-
-[Purple](https://www.w3schools.com/colors/color_tryit.asp?color=Purple) <span style="background-color:rgb(128,0,128)"> &nbsp; </span>:
-- Red: 128
-- Green: 0
-- Blue: 128
-
-[Medium Aqua Marine](https://www.w3schools.com/colors/color_tryit.asp?color=MediumAquaMarine) <span style="background-color:rgb(102,205,170)"> &nbsp; </span>:
-- Red: 102
-- Green: 205
-- Blue: 170
-
-````{admonition} Click to see example Python code
-:class: dropdown
-```python
-# Save dictionaries for RGB values for two colors in separate variables
-
-purple = {
-  "Red": 128,
-  "Green": 0,
-  "Blue": 128
-}
-
-medium_aqua_marine = {
-  "Red": 102,
-  "Green": 205,
-  "Blue": 170
-}
+So if we look at the example tweet, we can combine all the data in a dictionary.
+```{figure} dog_tweet.png
+---
+name: tweet_fig
+alt: Screenshot of tweet from user WeRateDogs® (@dog_rates). Tweet text is "This is Woods. He’s here to help with the dishes. Specifically the pre-rinse, where he licks every item he can. 12/10". The tweet also has three photos of a tiny cute puppy standing on the open door of a dishwasher. The tweet was posted on Feb 10, 2020. The account that posted it has a blue check. The tweet has 1,533 quote tweets, 26.6K retweets, and 197.8K likes.
+---
+A tweet with photos of a cute puppy! ([source](https://twitter.com/dog_rates/status/1227037345712627718))
 ```
-````
 
-We can also use any piece of information we want for the "name" in a dictionary. So if we wanted, we could make a color the "name" in a dictionary. For example, in this one, names are colors (in terms of red, green, and blue), and the values are the [most common names of that color in different languages]{https://uwdata.github.io/color-naming-in-different-languages/vis/full_color_maps.html}:
+Dictionary (with some of the data):
+ - user_name: "WeRateDogs®"
+ - user_handle: "@dog_rates"
+ - user_has_blue_checkmark: True
+ - tweet_text: "This is Woods. He’s here to help with the dishes. Specifically the pre-rinse, where he licks every item he can. 12/10"
+ - number_of_replies: 1533
+ - number_of_retweets: 26200
+ - number_of_likes: 197800
 
-Most common name for a given color in English:
-- <span style="background-color:rgb(231,37,37)"> &nbsp; </span>{Red: 231, Green, 37, Blue: 37}: Red
-- <span style="background-color:rgb(167,37,128)"> &nbsp; </span>{Red: 168, Green, 37, Blue: 128}: Magenta
-
-Most common name for a given color in Korean:
-- <span style="background-color:rgb(231,37,37)"> &nbsp; </span>{Red: 231, Green, 37, Blue: 37}: 빨강
-- <span style="background-color:rgb(167,37,128)"> &nbsp; </span>{Red: 168, Green, 37, Blue: 128}: 자주
-
-````{admonition} Click to see example Python code
-:class: dropdown
-```python
-
-# Save dictionaries for RGB values for two colors in separate variables
-
-color_1 = {
-  "Red": 231,
-  "Green": 37,
-  "Blue": 37
+ ````{admonition} Click to see example Python code
+ :class: dropdown
+ ```python
+ # Save a some info about a tweet in a variable called tweet_info
+ tweet_info = {
+  "user_name": "WeRateDogs®",
+  "user_handle": "@dog_rates",
+  "user_has_blue_checkmark": True,
+  "tweet_text": "This is Woods. He’s here to help with the dishes. Specifically the pre-rinse, where he licks every item he can. 12/10",
+  "number_of_replies": 1533,
+  "number_of_retweets": 26200,
+  "number_of_likes": 197800
 }
-
-color_2 = {
-  "Red": 168,
-  "Green": 37,
-  "Blue": 128
-}
-
-
-# Save dictionaries that given a color will give you the most
-# common name for that color (one dictionary for English, one for Korean)
-most_common_english_name{
-  color_1: "Red",
-  color_2: "Magenta"
-}
-
-most_common_korean_name{
-  color_1: "빨강",
-  color_2: "자주"
-}
-```
-````
+ ```
+ ````
 
 
 Note: We'll demonstrate dictionaries later in Chapter 5: History of Social Media, and Chapter 8: Data Mining.
 
 
-## Custom combined data types
-TODO: Example of user info for a social media site
+## Groups within Groups
+We can use dictionaries and lists together to make lists of dictionaries, lists of lists, dictionaries of lists, or any other combination.
 
+So for example, I could make a list of twitter users. Each twitter user could be a dictionary with info about that user, and one piece of information it might have is a list of who that user is following.
 
 List of users:
 
 User 1:
-- Username: @kylemthayer (a String)
-- First name: Kyle (a String)
-- Last Name: Thayer (a String)
+- Username: kylethayer (a String)
+- Twitter handle: @kylemthayer (a String)
 - Profile Picture: [TODO picture here] (an image)
 - Friends: @SusanNotess, @UW, @UW_iSchool, ... (a list of Strings)
 
 User 2:
-- Username: @SusanNotess (a String)
-- First name: Susan (a String)
-- Last Name: Notess (a String)
+- Username: Dr Susan Notess (a String)
+- Twitter handle: @SusanNotess (a String)
 - Profile Picture: [TODO picture here] (an image)
 - Friends: @kylemthayer, ??? (a list of Strings)
 
@@ -183,16 +154,14 @@ User 2:
 ```python
 users = [
   {
-    username: "@kylemthayer",
-    first_name: "Kyle",
-    last_name: "Thayer",
+    username: "kylethayer",
+    twitter_handle: "@kylemthayer",
     profile_picture: "kylethayer.jpg",
     friends: ["@SusanNotess", "@UW", "@UW_iSchool"]
   },
   {
-    username: "@SusanNotess",
-    first_name: "Susan",
-    last_name: "Notess",
+    username: "Dr Susan Notess",
+    twitter_handle: "@SusanNotess",
     profile_picture: "susannotess.jpg",
     friends: ["@kylemthayer"]
   },
