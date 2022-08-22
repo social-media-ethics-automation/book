@@ -1495,7 +1495,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="basic-data-types">
 <h1><span class="section-number">4.1.2. </span>Basic Data Types<a class="headerlink" href="#basic-data-types" title="Permalink to this headline">#</a></h1>
-<p>First we’ll look at a few basic data storage types.</p>
+<p>First we’ll look at a few basic data storage types. We’ll also be including some code examples you can look at, though don’t worry yet if you don’t understand the code, since we’ll be covering these in more detail throughout the rest of the book.</p>
 <section id="booleans-true-false">
 <h2>Booleans (True / False)<a class="headerlink" href="#booleans-true-false" title="Permalink to this headline">#</a></h2>
 <p>Binary consisting of 0s and 1s make it easy to represent true and false values, where 1 often represents true and 0 represents false. Most programming languages have built in ways of representing True and False values.</p>
@@ -1541,11 +1541,13 @@ title="Print to PDF"
 <p><span class="caption-number">Fig. 4.5 </span><span class="caption-text">The number of replies, retweets, and likes can be represented as integer numbers (197.8K can be stored as a whole number like 197,800).</span><a class="headerlink" href="#tweet-numbers-fig" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>In both of those storage methods, there are limits to how much space is used to save each number, limiting how big (or small) the numbers can be, and causing rounding with floating point numbers.</p>
-<p>Additionally programming languages might include ways of representing fractions, or <a class="reference external" href="https://en.wikipedia.org/wiki/Complex_number">complex numbers</a>.</p>
 <div class="dropdown admonition">
 <p class="admonition-title">Click to see example Python code</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save an integer value in a variable called max_tweet_length</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># Save an integer value in a variable called num_tweet_likes</span>
+<span class="n">num_tweet_likes</span> <span class="o">=</span> <span class="mi">197800</span>
+
+<span class="c1"># Save an integer value in a variable called max_tweet_length</span>
 <span class="n">max_tweet_length</span> <span class="o">=</span> <span class="mi">280</span>
 
 <span class="c1"># Save a floating point number in a variable called average_tweet_length</span>
@@ -1553,50 +1555,39 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<p>When computers store numbers, there are limits to how much space is can be used to save each number. This limits how big (or small) the numbers can be, and causes rounding with floating point numbers.</p>
+<p>Additionally programming languages might include other ways of storing numbers, such as fractions, <a class="reference external" href="https://en.wikipedia.org/wiki/Complex_number">complex numbers</a>, or limited number sets (like only positive integers).</p>
 </section>
 <section id="strings-text">
 <h2>Strings (Text)<a class="headerlink" href="#strings-text" title="Permalink to this headline">#</a></h2>
-<p>TODO: REWRITE THIS SECTION</p>
-<p>Text is generally stored as a list of characters (like the example before of e, t, h, i, c, s). These lists of characters are called “strings” (that is a bunch of characters strung together).</p>
+<p>Computers typically store text by dividing the text into <strong>characters</strong> (the individual letters, spaces, numerals, punctuation marks, emojis, and other symbols). These characters are then stored in order and called <strong>strings</strong> (that is a bunch of characters strung together, like in <a class="reference internal" href="#birthday-string-fig"><span class="std std-numref">Fig. 4.6</span></a> below).</p>
+<figure class="align-default" id="birthday-string-fig">
+<img alt="A photo of a string banner with shiny individual letters hanging on it spelling &quot;HAPPY BIRTHDAY&quot;" src="../../_images/happy_birthday_banner.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.6 </span><span class="caption-text">A physical string of the characters: “H”, “A”, “P”, “P”, “Y”, ” “, “B”, “I”, “R”, “T”, “H”, “D”, “A”, “Y”. (<a class="reference external" href="https://www.pexels.com/photo/a-rocking-horse-and-birthday-decorations-7600328/">image source</a>)</span><a class="headerlink" href="#birthday-string-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In our example tweet, we can see some different pieces of information that might be represented with strings:</p>
 <figure class="align-default" id="tweet-strings-fig">
 <img alt="Screenshot of the tweet from before, but with pieces of text highlighted: The user name, twitter handle, and the tweet text" src="../../_images/dog_tweet_with_strings.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 4.6 </span><span class="caption-text">The user name, twitter handle, and the tweet text can all be represented with strings.</span><a class="headerlink" href="#tweet-strings-fig" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.7 </span><span class="caption-text">The user name, twitter handle, and the tweet text can all be represented with strings.</span><a class="headerlink" href="#tweet-strings-fig" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Computers can store “characters” can be letters, numerals, or other symbols (like math symbols, spaces, and “<a class="reference external" href="https://en.wikipedia.org/wiki/Newline">newlines</a>” which go to the next line when you press “Enter”). Some ways of storing characters, like <a class="reference external" href="https://en.wikipedia.org/wiki/Unicode">unicode</a>, support storing symbols and letters from many languages, and also <a class="reference external" href="https://unicode.org/emoji/charts/full-emoji-list.html">emojis</a>.</p>
-<p><a class="reference external" href="https://www.pexels.com/photo/a-rocking-horse-and-birthday-decorations-7600328/"><img alt="A photo of a string banner with shiny individual letters hanging on it spelling &quot;HAPPY BIRTHDAY&quot;" src="../../_images/happy_birthday_banner.jpg" /></a></p>
-<p>A list of characters then can represent words, sentences, books, etc.</p>
 <div class="dropdown admonition">
 <p class="admonition-title">Click to see example Python code</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save a string with the word ethics in a variable called key_word</span>
-<span class="n">key_word</span> <span class="o">=</span> <span class="s2">&quot;ethics&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save a string in a variable called user_name</span>
+<span class="n">user_name</span> <span class="o">=</span> <span class="s2">&quot;WeRateDogs®&quot;</span>
 
-<span class="c1"># Get the first letter (&quot;e&quot;), and save it in variable first_letter</span>
-<span class="n">first_letter</span> <span class="o">=</span> <span class="n">key_word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="c1"># Save a string in a variable called twitter_handle</span>
+<span class="n">twitter_handle</span> <span class="o">=</span> <span class="s2">&quot;@dog_rates&quot;</span>
 
-<span class="n">Get</span> <span class="n">the</span> <span class="n">second</span> <span class="n">letter</span> <span class="p">(</span><span class="s2">&quot;t&quot;</span><span class="p">),</span> <span class="ow">and</span> <span class="n">save</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">variable</span> <span class="n">second_letter</span>
-<span class="n">second_letter</span> <span class="o">=</span> <span class="n">key_word</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="c1"># Save a string in a variable called tweet_text</span>
+<span class="n">twitter_handle</span> <span class="o">=</span> <span class="s2">&quot;This is Woods. He’s here to help with the dishes. Specifically the pre-rinse, where he licks every item he can. 12/10&quot;</span>
 </pre></div>
 </div>
 </div>
-<p>Additionally, text can be stored with extra formatting information (like fonts, colors, in a <a class="reference external" href="https://en.wikipedia.org/wiki/Document_file_format">Document File Format</a> like with Word Documents, PDF files, <a class="reference external" href="https://www.w3schools.com/html/html_intro.asp">html website files</a>, etc.).</p>
-<div class="dropdown admonition">
-<p class="admonition-title">Click to see example HTML code</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> This is the title of the article! <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> This is the first paragraph in the first section of the article. <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> This is the second paragraph in the first section of the article. <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> This is the first paragraph in the second section of the article. <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> This is the second paragraph in the second section of the article. <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-</div>
+<p>Text can be stored with extra formatting information, such as fonts and colors, in different <a class="reference external" href="https://en.wikipedia.org/wiki/Document_file_format">document file formats</a> like Word Documents, PDF files, <a class="reference external" href="https://www.w3schools.com/html/html_intro.asp">html website files</a>, etc.</p>
 <p>Note: We’ll demonstrate strings later in this chapter, and in more detail in Chapter 7: Trolling</p>
 </section>
 </section>

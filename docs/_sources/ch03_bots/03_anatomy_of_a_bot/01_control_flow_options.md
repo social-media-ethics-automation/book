@@ -24,7 +24,7 @@ And when the program is run, statement 1 runs first, then statement 2, then, fin
 You might recognize this as the same style of instructions as a cooking recipe, like making dumplings:
 ```text
 - Make dumpling dough.
-- Make chicken filling.
+- Make veggie filling.
 - Flatten small balls of dough.
 - Put some filling on each piece of dough.
 - Fold dough around the filling.
@@ -34,7 +34,7 @@ You might recognize this as the same style of instructions as a cooking recipe, 
 In fact, the format of a cooking recipe is basically an imperative programming language where the cook acts as a "human computer" following the cooking instructions.
 
 > ![Photo of a man in a kitchen, looking at a notebook while mixing something in a bowl. The bowl is surrounded by eggs, strawberries and other ingredients.](cooking.jpg)
-> A human computer running a cooking program. In other words: "someone following a recipe" ([photo source](https://www.pexels.com/photo/a-man-cooking-at-the-kitchen-6944110/))
+> A human computer running a cooking program. In other words: "someone following a recipe" (but probably not a dumpling recipe) ([photo source](https://www.pexels.com/photo/a-man-cooking-at-the-kitchen-6944110/))
 
 Twitter bots are generally organized in this same way, so one bot might be organized like this:
 ```text
@@ -76,20 +76,21 @@ Variables are a way of saving information on the computer, so we can use it late
 
 In a cooking recipe, the equivalent would be spaces, containers, bowls, or cups to hold ingredients. So you might place the ingredients on the counter in preparation for cooking. Or you might combine some ingredients in a mixing bowl, so the mixing bowl holds the combined ingredients through each step, like:
 ```text
-To make the dumpling filling:
-- Put flour in a mixing bowl [or on an empty flat surface???]
-- Add water to the mixing bowl
-- Add ???
-- Knead until ???
+To make the dumpling dough:
+- Put flour in a mixing bowl and add a bit of salt
+- Make a well in the middle of the flour
+- Crack the egg into the well (discarding the shell) and use your fingertips to gradually incorporate the flour
+- Bring together and knead for about 10 minutes until smooth and elastic, rather than rough and floury.
+- Wrap in clingfilm and rest it in the fridge for at least 30 minutes.
 ```
 
 Sometimes in cooking, you use multiple mixing bowls to mix different parts of the recipe separately:
 ```text
 To make the dumpling filling:
-- In a separate mixing bowl:
-  - Add shredded chicken
-  - Add ???
-  - Mix
+- While the dough is chilling, In a separate mixing bowl:
+  - Combine the sauteed onions, pumpkin, and mushrooms
+  - Add a generous handful of finely chopped fresh dill and parsley
+  - Mix to combine, then taste. If it needs more salt, add more salt. If it needs some brightness, add a small amount for lemon juice or white rice vinegar, then taste it again.
 ```
 
 In a computer program, when you save information for later use, instead of putting it in a bowl, you give it a name. The computer then makes a place in its memory with that name, and saves the information you asked it to save. Then you can use that name later in the program to ask the computer what was saved in that spot.
@@ -132,7 +133,7 @@ Events let us perform a programming action in response to something happening. T
 
 Within cooking this might look like:
 ```text
-- When the guests arrive, put the dumplings on plates and serve them.
+- When the guests arrive, boil or steam the dumplings, and then plate and serve them.
 ```
 
 Within programming, it might look like:
@@ -146,7 +147,7 @@ One of the most common events to program for is around time: We can also tell pr
 
 In cooking this might look like:
 ```text
-- Steam the dumplings for 10 minutes
+- Boil the dumplings for 5 minutes
 ```
 
 or
@@ -174,9 +175,12 @@ We will show how to use other Events and Scheduling in Python in Chapter 18: Pub
 ## Conditionals: What you do depends
 Conditionals let us change what we do depending on the situation.
 
-In cooking, we might ????????? and change our course of action depending on that test:
+In cooking, we might taste for seasoning and change our course of action depending on that test:
 ```text
-- ?? What is something to test or check with different courses of action ???
+- Taste the filling.
+  - If it is good, proceed to the next section.
+  - If it is not quite right, decide if it needs more salt or more acid.
+  - Add some of what is needed, and repeat this step until you are happy.
 ```
 
 In programming, we might do this:
@@ -194,18 +198,18 @@ Loops are used to repeat actions, though there are several different types of re
 
 In cooking you can repeat an action a set number of times:
 ```text
-- Knead the dough 10 times
+- Cut the dough 19 times to make 20 (6 cm) squares.
 ```
 
 Or you can repeat the same action, but to different items:
 ```text
-- For all the balls of dumpling dough
-  - fill them with dumpling filling and fold them
+- For each square of dumpling dough
+  - fill them with dumpling filling and bring up the corners. Pinch together the edges to seal.
 ```
 
 Or you can repeat the same action until you get a certain result:
 ```text
-- Continue kneading the dough until it has the right consistency???
+- Continue kneading the dough until it is smooth and elastic, not rough and floury.
 ```
 
 In computer programming you can repeat an action a set number of times
@@ -232,12 +236,11 @@ Sometimes in programming, we want to group several steps (i.e., statements) toge
 
 In a recipe, you might create a block of instructions like this:
 ```text
-- for each of the balls of dumpling dough:
-  - flatten it into a thin circle
-  - place one spoonful of filling in the middle of the circle
+- for each of the squares of dumpling dough:
+  - place one spoonful of filling in the middle of the square
   - fold the dough over the filling
   - pinch the edges to seal it
-  - place the dumpling on the steamer or something???
+  - set the dumpling on a piece of parchment paper to await cooking
 ```
 
 In a computer program, you might make a code block of statements like this:
@@ -266,13 +269,13 @@ The final programming organization feature we will cover here is functions and l
 
 In cooking this might look like a step of asking the cook to make something from another recipe.
 ```text
-- make the [alternate???] dumpling dough (see recipe on page 42).
+- Make the dumpling dough (see recipe on page 42).
 ```
 
 The recipe also could ask you to make a different version of a recipe from another page:
 ```text
-- to make dumplings vegan, make the [alternate???] dumpling
-  dough (see recipe on page 42), but subsititute ??? for eggs???.
+- to make dumplings vegan, make the dumpling
+  dough (see recipe on page 42), but instead of using the egg, subsititute 2 teaspoons olive oil and 2 tablespoons hot water.
 ```
 
 In programming, a function is a small program that you can run from another place in the code (programmer call this "calling" a function). Functions also can accept data and options for how they run. Code libraries are a collection of functions and data that help with certain tasks.
