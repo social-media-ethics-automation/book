@@ -1412,12 +1412,36 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-and-metadata">
+   Data and Metadata
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -1429,6 +1453,19 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-and-metadata">
+   Data and Metadata
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -1462,7 +1499,23 @@ title="Print to PDF"
 <li><p>The number of retweets: 26.2K</p></li>
 <li><p>The number of likes: 197.8K</p></li>
 </ul>
-<p>Now let’s look at how different pieces of this information are saved</p>
+<section id="data-and-metadata">
+<h2>Data and Metadata<a class="headerlink" href="#data-and-metadata" title="Permalink to this headline">#</a></h2>
+<p>One way we can categorize the data in this tweet is to separate it into data and metadata, like this:</p>
+<figure class="align-default" id="tweet-metadata-fig">
+<img alt="Screenshot of the tweet above, but with a box around the tweet text and photos labeled &quot;Data (Tweet Contents) &quot;, and the rest of the information outside the box is labeled &quot;Metadata (Data About Tweet)&quot;" src="../../_images/dog_tweet_metadata.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3 </span><span class="caption-text">The “data” of a tweet consists of the tweet text and the photos. The “metadata” of a tweet is all the rest of the information about that tweet, such as who tweeted it, and when, and how people responded.</span><a class="headerlink" href="#tweet-metadata-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p><strong>Metadata</strong> is information about some data. So we often think about a dataset as consisting of the main pieces of data (whatever those are in a specific situation), and whatever other information we have about that data (metadata).</p>
+<p>For example:</p>
+<ul class="simple">
+<li><p>If we think of a tweet’s contents (text and photos) as the main data of a tweet, then additional information such as the user, time, and responses would be considered metadata.</p></li>
+<li><p>If we download information about a set of tweets (text, user, time, etc.) to analyze later, we might consider that set of information as the main data, and our metadata might be information about our download process, such as when we collected the tweet information, which search term we used to find it, etc.</p></li>
+</ul>
+<p>Now that we’ve looked some at the data in a tweet, let’s look next at how different pieces of this information are saved.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
