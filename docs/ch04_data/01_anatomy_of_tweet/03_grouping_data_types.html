@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="4.1.4. Combination Data Types" href="04_combination_data_types.html" />
+    <link rel="next" title="4.1.4. Additional Data Types" href="04_additional_data_types.html" />
     <link rel="prev" title="4.1.2. Basic Data Types" href="02_basic_data_types.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -381,8 +381,8 @@ const thebe_selector_output = ".output, .cell_output"
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="04_combination_data_types.html">
-       4.1.4. Combination Data Types
+      <a class="reference internal" href="04_additional_data_types.html">
+       4.1.4. Additional Data Types
       </a>
      </li>
      <li class="toctree-l3">
@@ -1435,13 +1435,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lists-arrays">
-   Lists (Arrays)
+  <a class="reference internal nav-link" href="#lists">
+   Lists
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dictionaries">
    Dictionaries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#custom-combined-data-types">
+   Custom combined data types
   </a>
  </li>
 </ul>
@@ -1464,13 +1469,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lists-arrays">
-   Lists (Arrays)
+  <a class="reference internal nav-link" href="#lists">
+   Lists
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dictionaries">
    Dictionaries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#custom-combined-data-types">
+   Custom combined data types
   </a>
  </li>
 </ul>
@@ -1486,8 +1496,8 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="grouping-data">
 <h1><span class="section-number">4.1.3. </span>Grouping data<a class="headerlink" href="#grouping-data" title="Permalink to this headline">#</a></h1>
 <p>Once we have some types of data representation on a computer, we can create different groupings of data to represent more types of data. We’ll look at two types of groupings here, then look at what we can do with those groupings.</p>
-<section id="lists-arrays">
-<h2>Lists (Arrays)<a class="headerlink" href="#lists-arrays" title="Permalink to this headline">#</a></h2>
+<section id="lists">
+<h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">#</a></h2>
 <p>The first way of combining data is by making a list with data.</p>
 <p>So we can make a list of the numbers from 1 to 10:</p>
 <ul class="simple">
@@ -1500,6 +1510,12 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<figure class="align-default" id="tweet-lists-fig">
+<img alt="Screenshot of the tweet from before, but with lists highlighted: images, and links to the lists of replies, retweets, and likes." src="../../_images/dog_tweet_with_lists.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.6 </span><span class="caption-text">There are several lists in the tweet. There is a list of three images, and there are links that will take you to the lists of replies, retweets, and likes.</span><a class="headerlink" href="#tweet-lists-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Or we can make a list of letters [which happen to form a word] like this:</p>
 <ul class="simple">
 <li><p>e, t, h, i, c, s</p></li>
@@ -1532,6 +1548,7 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<p>NOTE: There are many types of list data structures in different programming languages. Python has lists, tuples, and sets. Other languages have arrays. We will just use lists and not worry about the other similar data types.</p>
 <p>Note: We’ll demonstrate lists later in Chapter 5: History of Social Media.</p>
 </section>
 <section id="dictionaries">
@@ -1627,6 +1644,48 @@ title="Print to PDF"
 </div>
 <p>Note: We’ll demonstrate dictionaries later in Chapter 5: History of Social Media, and Chapter 8: Data Mining.</p>
 </section>
+<section id="custom-combined-data-types">
+<h2>Custom combined data types<a class="headerlink" href="#custom-combined-data-types" title="Permalink to this headline">#</a></h2>
+<p>TODO: Example of user info for a social media site</p>
+<p>List of users:</p>
+<p>User 1:</p>
+<ul class="simple">
+<li><p>Username: &#64;kylemthayer (a String)</p></li>
+<li><p>First name: Kyle (a String)</p></li>
+<li><p>Last Name: Thayer (a String)</p></li>
+<li><p>Profile Picture: [TODO picture here] (an image)</p></li>
+<li><p>Friends: &#64;SusanNotess, &#64;UW, &#64;UW_iSchool, … (a list of Strings)</p></li>
+</ul>
+<p>User 2:</p>
+<ul class="simple">
+<li><p>Username: &#64;SusanNotess (a String)</p></li>
+<li><p>First name: Susan (a String)</p></li>
+<li><p>Last Name: Notess (a String)</p></li>
+<li><p>Profile Picture: [TODO picture here] (an image)</p></li>
+<li><p>Friends: &#64;kylemthayer, ??? (a list of Strings)</p></li>
+</ul>
+<div class="dropdown admonition">
+<p class="admonition-title">Click to see example Python code</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">users</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span>
+    <span class="n">username</span><span class="p">:</span> <span class="s2">&quot;@kylemthayer&quot;</span><span class="p">,</span>
+    <span class="n">first_name</span><span class="p">:</span> <span class="s2">&quot;Kyle&quot;</span><span class="p">,</span>
+    <span class="n">last_name</span><span class="p">:</span> <span class="s2">&quot;Thayer&quot;</span><span class="p">,</span>
+    <span class="n">profile_picture</span><span class="p">:</span> <span class="s2">&quot;kylethayer.jpg&quot;</span><span class="p">,</span>
+    <span class="n">friends</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;@SusanNotess&quot;</span><span class="p">,</span> <span class="s2">&quot;@UW&quot;</span><span class="p">,</span> <span class="s2">&quot;@UW_iSchool&quot;</span><span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="n">username</span><span class="p">:</span> <span class="s2">&quot;@SusanNotess&quot;</span><span class="p">,</span>
+    <span class="n">first_name</span><span class="p">:</span> <span class="s2">&quot;Susan&quot;</span><span class="p">,</span>
+    <span class="n">last_name</span><span class="p">:</span> <span class="s2">&quot;Notess&quot;</span><span class="p">,</span>
+    <span class="n">profile_picture</span><span class="p">:</span> <span class="s2">&quot;susannotess.jpg&quot;</span><span class="p">,</span>
+    <span class="n">friends</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;@kylemthayer&quot;</span><span class="p">]</span>
+  <span class="p">},</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1663,10 +1722,10 @@ title="Print to PDF"
             <p class="prev-next-title"><span class="section-number">4.1.2. </span>Basic Data Types</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="04_combination_data_types.html" title="next page">
+    <a class='right-next' id="next-link" href="04_additional_data_types.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.1.4. </span>Combination Data Types</p>
+        <p class="prev-next-title"><span class="section-number">4.1.4. </span>Additional Data Types</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
