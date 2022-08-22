@@ -27,7 +27,7 @@ Any one of those issues might show up in Twitter's claim or Musk's counter claim
 Let's consider a concrete example involving apples:
 
 ## Counting Apples
-We all know simple math facts, like 2 + 2 = 4, and that we can evenly split 4 into 4 1's. So that means that if we had two apples like this:
+We all know simple math facts, like 2 + 2 = 4, and 4 = 1 x 4. So that means that if we had two apples like this:
 
 ![photo of two regular size apples](apples_1.png)
 
@@ -35,7 +35,7 @@ And we added two more apples, we would have 4 apples (because 2 + 2 = 4), like t
 
 ![photo of the two regular size apples from before, but now next to two tiny apples](apples_2.png)
 
-And if there were four of us who wanted to have apples, we could give each person 1 apple, and they would have the same number of apples, like this:
+And if there were four of us who wanted to have apples, we could give each person 1 apple, and they would have the same number of apples (because 4 = 1 x 4), like this:
 
 ![photo of 4 plates each with one apple. Two of the apples are regular size, and two are tiny.](apples_3.png)
 
@@ -55,9 +55,9 @@ As you can see in the apple example, any time we turn something into data, we ar
   - The number of times the letter 'a' (capital or lower case) appears in this sentence.
 
 ## More examples of simplifications
-So all data that you might find is a simplification. There are many seemingly simple questions that in some situations or for some people, there are no simple answers, questions like:
+So all data that you might find is a simplification. There are many seemingly simple questions that in some situations or for some people, have no simple answers, questions like:
 - What country are you from?
-  - _What if you were born in one country, but moved to another shortly after? What if you are from an area claimed by multiple countries?_
+  - _What if you were born in one country, but moved to another shortly after? What if you are from a country that no longer exists like Czechoslovakia? Or from an occupied territory?_
 - How many people live in this house?
   - _Does a college student returning home for the summer count as living in that house?_
 - How many words are in this chapter?
@@ -73,7 +73,7 @@ In this claim are several places where there are simplifications being made, par
 ### Measuring twitter users:
 How do we count how many users are on Twitter?
 
-It depends on if we mean how many accounts have been registered vs. how many people are log into twitter on a given day. And it also depends on how we count situations where one person has many accounts, or many people share a corporate account.
+It depends on if we mean how many accounts have been registered vs. how many people are logged into twitter on a given day. And it also depends on how we count situations where one person has many accounts, or many people share a corporate account.
 
 
 ### Measuring spam bots
@@ -87,7 +87,7 @@ Parag Agrawal, the Twitter CEO, additionally clarified the complications of meas
 > ([tweet link](https://twitter.com/paraga/status/1526237581419040768))
 
 ### What changes with these measures?
-While we don't have direct access to all the data ourselves, we can imagine that different definitions would lead to different results. And there isn't a "best" or "unbiased" definition we should be using, all definitions are simplifications that will help with some tasks and hurt with others.
+While we don't have direct access to all the data ourselves, we can imagine that different definitions would lead to different results. And there isn't a "best" or "unbiased" definition we should be using, since all definitions are simplifications that will help with some tasks and hurt with others.
 
 We have to be aware that we are always making these simplifications, try to be clear about what simplifications we are making, and think through the ethical implications of the simplifications we are making.
 

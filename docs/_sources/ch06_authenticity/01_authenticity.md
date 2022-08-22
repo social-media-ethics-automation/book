@@ -1,6 +1,11 @@
 # Authenticity
 
 TODO Define
+  - something about incongrous mismatch between presentation and reality
+
+Also important here a human need for connection, intimacy, proximity, etc.
+
+value (or disvalue) to both authentic and inauthentic expression. No longer playfully authentic, then is it a problem? Not necessarily disruptive?
 
 Contrast with inauthentic behaviors
 
