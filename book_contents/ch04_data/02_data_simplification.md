@@ -27,7 +27,7 @@ Any one of those issues might show up in Twitter's claim or Musk's counter claim
 Let's consider a concrete example involving apples:
 
 ## Counting Apples
-We all know simple math facts, like 2 + 2 = 4, and that we can evenly split 4 into 4 1's. So that means that if we had two apples like this:
+We all know simple math facts, like 2 + 2 = 4, and 4 = 1 x 4. So that means that if we had two apples like this:
 
 ![photo of two regular size apples](apples_1.png)
 
@@ -35,7 +35,7 @@ And we added two more apples, we would have 4 apples (because 2 + 2 = 4), like t
 
 ![photo of the two regular size apples from before, but now next to two tiny apples](apples_2.png)
 
-And if there were four of us who wanted to have apples, we could give each person 1 apple, and they would have the same number of apples, like this:
+And if there were four of us who wanted to have apples, we could give each person 1 apple, and they would have the same number of apples (because 4 = 1 x 4), like this:
 
 ![photo of 4 plates each with one apple. Two of the apples are regular size, and two are tiny.](apples_3.png)
 
@@ -57,7 +57,7 @@ As you can see in the apple example, any time we turn something into data, we ar
 ## More examples of simplifications
 So all data that you might find is a simplification. There are many seemingly simple questions that in some situations or for some people, there are no simple answers, questions like:
 - What country are you from?
-  - _What if you were born in one country, but moved to another shortly after? What if you are from an area claimed by multiple countries?_
+  - _What if you were born in one country, but moved to another shortly after? What if you are from a country that no longer exists like Czechoslovakia? Or from an occupied territory?_
 - How many people live in this house?
   - _Does a college student returning home for the summer count as living in that house?_
 - How many words are in this chapter?
