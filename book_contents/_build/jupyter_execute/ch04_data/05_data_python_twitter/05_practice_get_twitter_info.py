@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Practice: Get info from twitter
+# # Practice: Get Data from twitter
 
 # The purpose of this lab is to try running a program yourself and get an idea of things you can do with twitter, we aren't going to explain each detail of the code today, that will be covered in the future
 

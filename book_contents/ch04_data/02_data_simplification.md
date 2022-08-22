@@ -1,15 +1,30 @@
 
 # All data is a simplification of reality
 
-## TODO: Start with some sort of statistic or figure [ideally about social media], then deconstruct it in the end
+We've talked about how we represent data on a computer, but let's now step back and think about the nature of data itself.
 
-Data often give the appearance of being something concrete and reliable, especially if it is numerical data, but there are many potential pitfalls in dealing with any data set, such as:
+## Twitter Users vs. Bots
+
+Let's look at a debate around a specific data point:
+>" Twitter has repeatedly said that spam bots represent less than 5% of its total user base. [Elon] Musk, meanwhile, has complained that the number is much higher, and has threatened to walk away from his agreement to buy the company."
+>
+> [Musk’s Dispute With Twitter Over Bots Continues to Dog Deal](https://www.bloomberg.com/news/articles/2022-07-07/twitter-reiterates-that-spam-bots-are-well-under-5-of-users), by Kurt Wagner, Bloomberg July 7, 2022
+
+The data in question here is over what percentage of twitter users are spam bots, which Twitter claimed was less than 5%, and Elon Musk claimed is higher than 5%.
+
+Data points often give the appearance of being concrete and reliable, especially if they are numerical. So when Twitter initially came out with a claim that less than 5% of users are spam bots, it may have been accepted by most people who heard it. Elon Musk then questioned that figure and attempted to [back out of buying twitter](https://www.npr.org/2022/07/08/1110539504/twitter-elon-musk-deal-jeopardy), and Twitter is [accusing Musk's complaint of being an invented excuse](https://www.npr.org/transcripts/1111032233) to back out of the deal, and [the case is now in court](https://www.npr.org/transcripts/1111032233).
+
+When looking at real life data claims and datasets, you will likely run into many different problems and pitfalls in using that data. Any dataset you find might have:
 - missing data
 - erroneous data (e.g., mislabeled, typos)
 - biased data
 - manipulated data
 
-But even in the best of situations, data are still a simplification of reality. Let me explain by giving a concrete example involving apples:
+Any one of those issues might show up in Twitter's claim or Musk's counter claim, but even in the best of situations there is still a fundamental issue when looking at claims like this, and that is that:
+
+> All data is a simplification of reality.
+
+Let's consider a concrete example involving apples:
 
 ## Counting Apples
 We all know simple math facts, like 2 + 2 = 4, and that we can evenly split 4 into 4 1's. So that means that if we had two apples like this:
@@ -48,6 +63,34 @@ So all data that you might find is a simplification. There are many seemingly si
 - How many words are in this chapter?
   - _[Different programs use different rules for what counts as a "word"](https://thehappybeavers.com/blog/why-word-count-differ-programs/)_
     - E.g., this page has "2 + 2 = 4", which Microsoft Word counts as 5 words, and Google Docs counts as 3 words.
+
+## Revisiting Twitter Users vs. Bots
+
+Let's go back to the question of whether less than 5% of twitter users are spam bots.
+
+In this claim are several places where there are simplifications being made, particularly in the definition of "twitter users" and of "spam bots."
+
+### Measuring twitter users:
+How do we count how many users are on Twitter?
+
+It depends on if we mean how many accounts have been registered vs. how many people are log into twitter on a given day. And it also depends on how we count situations where one person has many accounts, or many people share a corporate account.
+
+
+### Measuring spam bots
+How do we count how many spam bots are on Twitter?
+
+The Bloomberg article we quoted mentions "spam bots" as what is being measured, but Elon Musk has used phrases like "[fake or spam](https://twitter.com/elonmusk/status/1555950698252181507?s=20&t=pY_aYXjSOzD-sUOW8E1e6A)" accounts and "[fake/spam/duplicates](https://twitter.com/elonmusk/status/1525723506805288962?s=20&t=aBUK4_IT354Y9TC69PMldg)," which might lead to different numbers.
+
+Parag Agrawal, the Twitter CEO, additionally clarified the complications of measuring "spam" accounts, saying:
+> Next, spam isn’t just ‘binary’ (human / not human). The most advanced spam campaigns use combinations of coordinated humans + automation. They also compromise real accounts, and then use them to advance their campaign. So – they are sophisticated and hard to catch.
+>
+> ([tweet link](https://twitter.com/paraga/status/1526237581419040768))
+
+### What changes with these measures?
+While we don't have direct access to all the data ourselves, we can imagine that different definitions would lead to different results. And there isn't a "best" or "unbiased" definition we should be using, all definitions are simplifications that will help with some tasks and hurt with others.
+
+We have to be aware that we are always making these simplifications, try to be clear about what simplifications we are making, and think through the ethical implications of the simplifications we are making.
+
 
 
 Note: This section was inspired by Kareem Carr https://twitter.com/kareem_carr/status/1551950155330600960, https://www.popularmechanics.com/science/math/a33547137/why-some-people-think-2-plus-2-equals-5/

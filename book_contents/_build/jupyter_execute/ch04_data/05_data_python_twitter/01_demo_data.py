@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Demo: Python Data Types
+# # Demo: Python Basic Data Types
 
 # ## Data types
 # Python automatically handles many different types of data, including:

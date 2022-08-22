@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Practice: Python Data Types
+# # Practice: Python Basic Data Types
 
 # In[ ]:
 
