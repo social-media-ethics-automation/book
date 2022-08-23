@@ -1,6 +1,6 @@
 # The "Golden Rule"
 
-One widespread ethical principle is what English speakers sometimes call the “Golden Rule”:
+One widespread ethical principle is what English speakers sometimes call the “[Golden Rule](https://en.wikipedia.org/wiki/Golden_Rule)”:
 
 - “Tsze-kung asked, saying, ‘Is there one word which may serve as a rule of practice for all one's life?’ The Master said, ‘Is not reciprocity such a word? **What you do not want done to yourself, do not do to others.**’”
   - Confucius, [Analects 15.23](https://en.wikisource.org/wiki/The_Chinese_Classics/Volume_1/Confucian_Analects/XV) (~500 BCE China)
