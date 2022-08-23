@@ -422,12 +422,12 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../ch04_data/05_data_python_twitter/01_demo_data.html">
-       4.5.1. Demo: Python Data Types
+       4.5.1. Demo: Python Basic Data Types
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../ch04_data/05_data_python_twitter/02_practice_data.html">
-       4.5.2. Practice: Python Data Types
+       4.5.2. Practice: Python Basic Data Types
       </a>
      </li>
      <li class="toctree-l3">
@@ -442,7 +442,7 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../ch04_data/05_data_python_twitter/05_practice_get_twitter_info.html">
-       4.5.5. Practice: Get info from twitter
+       4.5.5. Practice: Get Data from twitter
       </a>
      </li>
     </ul>
@@ -579,13 +579,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ch07_trolling/05_demo_reply_bot.html">
-     7.5. Demo: Trolling a Reply Bot
+    <a class="reference internal" href="../ch07_trolling/05_ethics_and_trolling.html">
+     7.5. Ethics and Trolling
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ch07_trolling/06_practice_conditionals.html">
-     7.6. Practice: Conditionals
+    <a class="reference internal" href="../ch07_trolling/06_demo_reply_bot.html">
+     7.6. Demo: Trolling a Reply Bot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch07_trolling/07_practice_conditionals.html">
+     7.7. Practice: Conditionals
     </a>
    </li>
   </ul>
@@ -898,8 +903,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ch14_moderation/03_free_speech.html">
-     14.3. Free Speech?
+    <a class="reference internal" href="../ch14_moderation/03_moderation_and_ethics.html">
+     14.3. Moderation and Ethics
     </a>
    </li>
    <li class="toctree-l2">
@@ -998,7 +1003,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ch16_crowd_work/04_networks.html">
-     16.4. Networks (in math called “Graphs”)
+     16.4. Programming: Networks (in math called “Graphs”)
     </a>
    </li>
    <li class="toctree-l2">
@@ -1040,7 +1045,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ch17_harassment/03_who_gets_harassed.html">
-     17.3. Who gets harassed?
+     17.3. Who gets harassed? [rename?]
     </a>
    </li>
    <li class="toctree-l2">
@@ -1720,12 +1725,12 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: tweepy in c:\python310\lib\site-packages (4.10.0)
 Requirement already satisfied: oauthlib&lt;4,&gt;=3.2.0 in c:\python310\lib\site-packages (from tweepy) (3.2.0)
-Requirement already satisfied: requests-oauthlib&lt;2,&gt;=1.2.0 in c:\python310\lib\site-packages (from tweepy) (1.3.1)
 Requirement already satisfied: requests&lt;3,&gt;=2.27.0 in c:\python310\lib\site-packages (from tweepy) (2.27.1)
+Requirement already satisfied: requests-oauthlib&lt;2,&gt;=1.2.0 in c:\python310\lib\site-packages (from tweepy) (1.3.1)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (1.26.9)
+Requirement already satisfied: certifi&gt;=2017.4.17 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (2022.5.18.1)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (3.3)
 Requirement already satisfied: charset-normalizer~=2.0.0 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (2.0.12)
-Requirement already satisfied: certifi&gt;=2017.4.17 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (2022.5.18.1)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (1.26.9)
 
 [notice] A new release of pip available: 22.1.2 -&gt; 22.2.2
 [notice] To update, run: python.exe -m pip install --upgrade pip
