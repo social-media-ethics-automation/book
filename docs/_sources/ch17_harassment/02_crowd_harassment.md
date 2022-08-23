@@ -1,5 +1,5 @@
 # Crowd Harassment
-- In-person crowd harassment has always been part of human cultures. For example: riots, mob violence, revolts, revolutions, oppression, government persecution (like the [FBI trying to convince MLK to commit suicide](https://en.wikipedia.org/wiki/FBI%E2%80%93King_suicide_letter))
+- In-person crowd harassment has always been part of human cultures. For example: riots, mob violence, revolts, revolutions, oppression, government persecution 
 - Social media allows for new ways of organizing and performing crowd harassment
   - https://www.youtube.com/watch?v=PeB41BBzZSo
 
