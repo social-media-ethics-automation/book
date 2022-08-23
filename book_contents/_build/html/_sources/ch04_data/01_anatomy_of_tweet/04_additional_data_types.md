@@ -57,7 +57,7 @@ The final piece of data from the tweet we will cover is the date when the tweet 
 
 ```{figure} dog_tweet_with_date.png
 ---
-name: tweet_images_fig
+name: tweet_date_fig
 alt: "Screenshot of the tweet from before, but with the date highlighted: Feb 10, 2020"
 ---
 The tweet includes the date when it was posted.
