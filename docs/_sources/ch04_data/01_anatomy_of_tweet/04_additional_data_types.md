@@ -30,12 +30,12 @@ __Sounds__ are represented as the position of the speaker diaphragm over time (a
 ```
 
 ```{image} sound_wave_this.png
-:alt: An image of a sound wave. There is a horizontal line in the middle, and a bunch of vertical bars that are approxomitely centered. The vertical bars are different lengths makking a pattern of ups and downs that represent the sound wave.
+:alt: An image of a sound wave for the word "this". There is a horizontal line in the middle, and a bunch of vertical bars that are approxomitely centered. The vertical bars are different lengths makking a pattern of ups and downs that represent the sound wave.
 :align: center
 ```
 
 
-__Videos__ are represented as a squence of images (a list of images), often with a sound wave to be played at the same time.
+__Videos__ are represented as a squence of images (a list of images) called frames, often with a sound wave to be played at the same time.
 
 ![the "mind blown" gif: animated gif of a man making hand explosion out of his forhead while stars and explosions are overlayed on top](mind_blown.gif)
 
