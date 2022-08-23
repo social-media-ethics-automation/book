@@ -95,8 +95,9 @@ parts:
       - file: ch07_trolling/02_origins_trolling
       - file: ch07_trolling/03_trolling_examples
       - file: ch07_trolling/04_responding_to_trolls
-      - file: ch07_trolling/05_demo_reply_bot
-      - file: ch07_trolling/06_practice_conditionals
+      - file: ch07_trolling/05_ethics_and_trolling
+      - file: ch07_trolling/06_demo_reply_bot
+      - file: ch07_trolling/07_practice_conditionals
     - file: ch08_data_mining/00_data_mining
       sections:
       - file: ch08_data_mining/01_data_sources
@@ -156,7 +157,7 @@ parts:
       sections:
       - file: ch14_moderation/01_moderation_tools
       - file: ch14_moderation/02_content
-      - file: ch14_moderation/03_free_speech
+      - file: ch14_moderation/03_moderation_and_ethics
       - file: ch14_moderation/04_different_platforms
       - file: ch14_moderation/05_reflections
       - file: ch14_moderation/06_demo_recursion
