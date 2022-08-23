@@ -38,7 +38,8 @@ parts:
         - file: ch02_definitions/03_automation/07_details_of_bot
         - file: ch02_definitions/03_automation/08_demo
         - file: ch02_definitions/03_automation/09_reflecting_on_programming
-      - file: ch02_definitions/04_learn_more
+      - file: ch02_definitions/04_tying_them_together
+      - file: ch02_definitions/05_learn_more
     - file: ch03_bots/00_bots
       sections:
       - file: ch03_bots/01_bot_definition
