@@ -2,7 +2,7 @@
 ## Authors
 
 ### Dr. Kyle Thayer
-Kyle is an educator teaching classes that ...
+Kyle is an educator teaching classes that try to integrate social and ethical concerns with computer programming. Kyle is an Assistant Teaching Professor at the [University of Washington](https://www.washington.edu/) [Information School](https://ischool.uw.edu/), and he recieved his PhD from the [University of Washington](https://www.washington.edu/) [Paul G. Allen School of Computer Science & Engineering](https://www.cs.washington.edu/).
 
 ```{image} kylethayer.jpg
 :alt: Photo of Kyle Thayer (a white person with glasses and a beard)
