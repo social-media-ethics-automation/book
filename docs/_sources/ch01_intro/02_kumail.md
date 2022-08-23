@@ -1,8 +1,10 @@
 # Kumail Nanjiani's Reflections on Ethics in Tech
 
+![Photo of Kumail Nanjiani](kumail.png) [Image source](https://commons.wikimedia.org/wiki/File:Kumail_Nanjiani_by_Gage_Skidmore_2.jpg)
+
+
 Kumail Nanjiani was a star of the [Silicon Valley](https://www.imdb.com/title/tt2575988/) TV Show, which was about the tech industry. He posted these reflections on ethics in tech on twitter (@kumailn) on November 1, 2017:
 
-![Photo of Kumail Nanjiani](kumail.png) [Image source](https://commons.wikimedia.org/wiki/File:Kumail_Nanjiani_by_Gage_Skidmore_2.jpg)
 
 > As a cast member on a show about tech, our job entails visiting tech companies/conferences etc. We meet ppl eager to show off new tech.
 >
@@ -19,9 +21,10 @@ Kumail Nanjiani was a star of the [Silicon Valley](https://www.imdb.com/title/tt
 > Only "Can we do this?" Never "should we do this? We've seen that same blasé attitude in how Twitter or Facebook deal w abuse/fake news.
 >
 > You can't put this stuff back in the box. Once it's out there, it's out there. And there are no guardians. It's terrifying. The end.
-
+>
 > - Kumail Nanjiani
 
 
 ## Reflection questions:
-TODO: 
+- What do you think is the responsibility of tech workers to think through the ethical implications of what they are making?
+- Why do you think the people who Kumail talked to didn't have answers to his questions?
