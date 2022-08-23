@@ -26,6 +26,10 @@ So what are the ethical questions facing the designers and programmers of social
   OR
 
   - Every individual has a right to the information posted on social media, even if they can't view images. So not including alt-text is a violation of their rights and platforms should force users to include alt-text.
+
+
+<br>
+
 - Aztec Virtue Ethics (virtue is a group effort and we all need support to find balance and moderation):
   - It is everyone's responsibility to support others, so the platform should make everyone support those who can't view images by forcing them to include alt-text.
 
@@ -45,6 +49,8 @@ So what are the ethical questions facing the designers and programmers of social
   OR
 
   - You should make adding alt-text part of the natural flow of posting images.
+
+<br>
 
 - Consequentialist:
   - There are actually very few people who can't view images, so having people do extra work for those very few people is a waste of time.
