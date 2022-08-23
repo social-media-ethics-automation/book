@@ -21,7 +21,7 @@ There are many ways to define and talk about authenticity and why it matters to 
 ```{Authenticity:}
 Authenticity is a concept we use to talk about connections and interactions when the way the connection is presented matches with the reality of how it functions. An authentic connection can be trusted because we know where we stand. An inauthentic connection offers a surprise, because what is offered is not what we get. An inauthentic connection could be a good surprise, but usually, when people use the term 'inauthentic', they are indicating that the surprise was in some way problematic: someone was duped.
 ```
-Can you think of some examples of inauthentic beaviors that are familiar from social media spaces?
+Can you think of some examples of inauthentic behaviors that are familiar from social media spaces?
 
 ## Inauthentic behavior
 - Inauthentic behavior mentioned in your pre-lecture reflections
@@ -33,4 +33,4 @@ Can you think of some examples of inauthentic beaviors that are familiar from so
   - Clickbait
   - Concern trolling
 
-Note: We will talk more about trolling in particular in the next chapter
+In this chapter we will explore how data and automation play a role in structuring the way we perceive and play out connections in social media spaces. Throughout the following sections, think about which examples seem authentic or inauthentic to you, and why. We will not talk about the above, more well-defined inauthentic behaviors until the next chapter, which is about trolling.
