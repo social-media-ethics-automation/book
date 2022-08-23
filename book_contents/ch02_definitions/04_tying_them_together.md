@@ -31,7 +31,7 @@ So what are the ethical questions facing the designers and programmers of social
 
   OR
 
-  - Everyone should be supported in finding balance and moderation, and so a platform shouldn't force users to include alt-text even when it doesn't make sense or is unnecessarily burdonsom (that wouldn't be moderation).
+  - Everyone should be supported in finding balance and moderation, and so a platform shouldn't force users to include alt-text even when it doesn't make sense or is unnecessarily burdensome (that wouldn't be moderation).
 
 ````
 
@@ -51,7 +51,7 @@ So what are the ethical questions facing the designers and programmers of social
 
   OR
 
-  - The difficulty caused to people who can't view images when there is no alt-text is very significant, so a minor burdon of having users add alt-text is worth the trade-off.
+  - The difficulty caused to people who can't view images when there is no alt-text is very significant, so a minor burden of having users add alt-text is worth the trade-off.
 
 ````
 
