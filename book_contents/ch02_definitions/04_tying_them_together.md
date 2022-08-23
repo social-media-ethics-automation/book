@@ -20,16 +20,39 @@ So what are the ethical questions facing the designers and programmers of social
 
 ````{admonition} Have a think about your answers, and then click to see some sample answers
 :class: dropdown
-- Aztec Virtue Ethics: Virtue is a group effort and we all need support to find balance and moderation, so it makes sense that users might need support from the platform's design to help them remember to add alt-text for those in their community who need to see it.
-- Natural Rights: Every individual has the right to post how they see fit, for whichever audiences they choose. If they do not want to include alt-text (perhaps because they do not consider anyone who can't view images to be part of their community or audience), then that is their prerogative.
+- Natural Rights (all humans have rights that should not be violated):
+  - Every individual has the right to post how they see fit, for whichever audiences they choose. If they do not want to include alt-text (perhaps because they do not consider anyone who can't view images to be part of their community or audience), then that is their prerogative.
+
+  OR
+
+  - Every individual has a right to the information posted on social media, even if they can't view images. So not including alt-text is a violation of their rights and platforms should force users to include alt-text.
+- Aztec Virtue Ethics (virtue is a group effort and we all need support to find balance and moderation):
+  - It is everyone's responsibility to support others, so the platform should make everyone support those who can't view images by forcing them to include alt-text.
+
+  OR
+
+  - Everyone should be supported in finding balance and moderation, and so a platform shouldn't force users to include alt-text even when it doesn't make sense or is unnecessarily burdonsom (that wouldn't be moderation).
+
 ````
 
-- Now imagine that you cannot decide between these perspectives, and suggest that we just let the platforms get the alt-text worked in when users are really ready for it. To this, a Taoist and a Consequentialist respond. What might they show us?
+- Now imagine we propose letting the platforms wait and add the ability to include alt-text when users are really ready for it. How might a Taoist and a Consequentialist respond?
 
 ````{admonition} Have a think about your answers, and then click to see some sample answers
 :class: dropdown
-- Taoist: Trying to force this issue will likely backfire. Just leave things as they are, until the users are themselves asking for this option to be integrated into the platform's design.
-- Consequentialist: Well SOME users already are asking for the integration; some are protesting it! I understand that some people will feel their freedoms have been interfered with if we make alt-text a very present part of the platform design, but if it gets us the good result that everyone can now participate fully with respect to viewing images, then surely it is worth the minor interference with the Natural Rights.
+- Taoist:
+  - Trying to force this issue will likely backfire. Just leave things as they are, until the users are themselves asking for this option to be integrated into the platform's design.
+
+  OR
+
+  - You should make adding alt-text part of the natural flow of posting images.
+
+- Consequentialist:
+  - There are actually very few people who can't view images, so having people do extra work for those very few people is a waste of time.
+
+  OR
+
+  - The difficulty caused to people who can't view images when there is no alt-text is very significant, so a minor burdon of having users add alt-text is worth the trade-off.
+
 ````
 
 This is a small example of the kind of reflection that we will be returning to again and again throughout the course. As we get more deeply acquainted with the automation side of things, we will be able to use these ethical tools to look deeper into questions of Social Media, Ethics, and Automation.
