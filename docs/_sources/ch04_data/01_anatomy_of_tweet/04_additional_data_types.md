@@ -29,7 +29,7 @@ __Sounds__ are represented as the position of the speaker diaphragm over time (a
 :align: center
 ```
 
-```{image} sound_wave.png
+```{image} sound_wave_this.png
 :alt: An image of a sound wave. There is a horizontal line in the middle, and a bunch of vertical bars that are approxomitely centered. The vertical bars are different lengths makking a pattern of ups and downs that represent the sound wave.
 :align: center
 ```
