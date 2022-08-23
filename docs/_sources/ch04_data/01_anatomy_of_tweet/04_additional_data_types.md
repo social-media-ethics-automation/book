@@ -15,15 +15,25 @@ The profile picture and the puppy photos in the tweet are images.
 
 While you won't need to know the details of how images, sound, and video are stored for this class, we wanted to at least briefly discuss it here just to give you a rough idea of how computers store these kinds of data.
 
-__Images__ are created by defining a grid of dots, called pixels. Each pixel has three numbers that define the color (red, green, and blue), and the grid is created as a list (column) of lists (rows).
+__Images__ are created by defining a grid of dots, called pixels. Each pixel has three numbers that define the color (red, green, and blue), and the grid is created as a list (rows) of lists (columns).
 
 ![A very close up photo of a small section of a screen with a white heart icon. You can make out that the screen is a grid and the grid squares where the heart is have red, green, and blue bands, which look white when seen from a distance](pixel_heart.jpg)
 
 __Sounds__ are represented as the position of the speaker diaphragm over time (a sound wave). The position is saved as a number, and there positions saved at each time point, so the sound wave is saved as a list of numbers.
 
-[TODO: Diagram of speaker]
 
-![An image of a sound wave. There is a horizontal line in the middle, and a bunch of vertical bars that are approxomitely centered. The vertical bars are different lengths makking a pattern of ups and downs that represent the sound wave.](sound_wave.png)
+% image based on: https://pixabay.com/vectors/speaker-volume-medium-loud-sound-98509/
+```{image} speaker.png
+:alt: A diagram of a speaker, where the big middle round part (diapgragm) is indicated to move in and out, producing sound waves.
+:width: 150px
+:align: center
+```
+
+```{image} sound_wave.png
+:alt: An image of a sound wave. There is a horizontal line in the middle, and a bunch of vertical bars that are approxomitely centered. The vertical bars are different lengths makking a pattern of ups and downs that represent the sound wave.
+:align: center
+```
+
 
 __Videos__ are represented as a squence of images (a list of images), often with a sound wave to be played at the same time.
 
@@ -31,7 +41,7 @@ __Videos__ are represented as a squence of images (a list of images), often with
 
 In most cases, after the initial data representation is created, the computer runs a compression algorithm, which takes the image, sound, or video, and finds a way of storing it in much less computer memory, often losing some of the quality when doing so.
 
-[TODO: show compression fragments]
+![The author of Kyle Thayer, but highly compressed, making it look somewhat blocky and colors are a little off, and it is noisy.](kylethayer_compressed.jpg)
 
 ### Metadata
 In addition to the main components of the images, sound, and video data, this information is often stored with metadata, such as:
