@@ -16,7 +16,7 @@ Now, people who design and program social media platforms can do things to encou
 
 So what are the ethical questions facing the designers and programmers of social media platforms? Are they responsible for designing their platforms around this accessibility issue, or is it the responsibility of users uploading image data to make their content accessible by using alt-text?
 
-- Imagine a debate on this question between someone using the Aztec Virtue Ethics framework, and someone using the Natural Rights framework. Remember, each framework is a tool to help us see inside the problem. What would each tool show us?
+- Imagine a debate on this question between someone using the Aztec Virtue Ethics framework, and someone using the Natural Rights framework.
 
 ````{admonition} Have a think about your answers, and then click to see some sample answers
 :class: dropdown
@@ -60,5 +60,11 @@ So what are the ethical questions facing the designers and programmers of social
   - The difficulty caused to people who can't view images when there is no alt-text is very significant, so a minor burden of having users add alt-text is worth the trade-off.
 
 ````
+
+Now look back through how those frameworks framed the issues. Remember, each framework is a tool to help us see inside the problem. What does each tool show us? What do you learn from comparing the different approaches?
+
+```{note}
+While we show how these frameworks might argue for different approaches to image alt-text, we don't want to give the impression that we are neutral about an issue like alt-text. Please provide alt-texts for images and encourage others to do the same! We will talk more about accessibility in chapter 10.
+```
 
 This is a small example of the kind of reflection that we will be returning to again and again throughout the course. As we get more deeply acquainted with the automation side of things, we will be able to use these ethical tools to look deeper into questions of Social Media, Ethics, and Automation.
