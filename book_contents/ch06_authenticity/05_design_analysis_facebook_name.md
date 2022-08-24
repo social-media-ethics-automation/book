@@ -56,4 +56,4 @@ Combine your list of critiques with someone else's (or if possible, have a whole
 You can also consider looking at the [Wikipedia page on the Facebook real-name policy controversy](https://en.wikipedia.org/wiki/Facebook_real-name_policy_controversy)
 
 ## Repeat Imagine and Design Tasks:
-Select another assumption from the list above that you think is important to address. Make sure to choose a different assumption than you used before. Choose one that you didn’t come up with yourself, if possible. Repeat the Imaging and Design steps.
+Select another assumption from the list above that you think is important to address. Make sure to choose a different assumption than you used before. Choose one that you didn’t come up with yourself, if possible. Repeat the Imagine and Design steps.
