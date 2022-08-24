@@ -11,7 +11,8 @@ Because patterns are so central to how our brains process information, patterns 
 - TV tropes TODO link
 - 'there are only seven stories' TODO link
 - the gorilla in the basketball game? haven't seen it in ages not sure if it is racist TODO check if racist
-Patterns build habits. Habits build norms. Norms build our reality.
+
+> Patterns build habits. Habits build norms. Norms build our reality.
 
 To create a social group and have it be sustainable, we depend on stable patterns, habits, and norms to create the reality of the grouping. In a diverse community, there are many subsets of patterns, habits, and norms which go into creating the overall social reality. Part of how people manage their social reality is by enforcing the patterns, habits, and norms which identify us; another way we do this is by enforcing, or policing, which subsets of patterns, habits, and norms get to be recognized as valid parts of the broader social reality. Both of these tactics can be done in appropriate, just, and responsible ways, or in highly unjust ways.
 
@@ -20,7 +21,9 @@ Trolling is a method of disrupting the way things are, including group structure
 
 As this class discusses trolling, as well as many of the other topics of social media behavior coming up in the weeks ahead, you are encouraged to bear this duality of value in mind. Trolling is a term given to describe behavior which aims to disrupt (among other things). To make value judgements or ethical judgements about instances of disruptive behavior, we will need to be thoughtful and nuanced about how we decide to pass judgements. One way to begin examining any instance of disruptive behavior is to ask _what_ is being disrupted: a pattern, a habit, a norm, a whole community? And how do we judge the value of the thing being disrupted? Returning to the difference between a coup and a revolution, we might say that a national-level disruption is a coup if it fails, and a revolution if it succeeds. Or we might say that such a disruption is a coup if it intends to disrupt a legitimate instance of political domination/statehood, but a revolution if the instance of political domination is illegitimate. If you take a close look at English-language headlines in the news about uprisings occurring near to or far from here, it should become quickly apparent that both of these reasons can drive an author's choice to style an event as a coup. To understand what the author is trying to say, we need to look inside the situation and see what assumptions are driving their choice to characterise the disruption in the way that they do.
 
-Trolling is disruptive behavior, and whether we class it as problematic or okay depends in part on how we judge the legitimacy of the social reality which is being disrupted. Trolling can be used, in principle, for good or bad ends.
+> Trolling is disruptive behavior, and whether we class it as problematic or okay depends in part on how we judge the legitimacy of the social reality which is being disrupted.
+
+Trolling can be used, in principle, for good or bad ends.
 
 ## Reflection Exercise
 Revisit the K-Pop protest trolling example in section 7.3. Take your list of ethical frameworks from Chapter 2 and work through them one by one, applying each tool to the K-Pop trolling. For each theory, think of how many different ways the theory could hook up with the example. For example, when using a virtue ethics type of tool, consider how many different people's character and flourishing could be put in focus? When using a tool based on outcomes, like consequentialism, how many different elements of the outcome can you think of? The goal here is to come up with _as many variations as you can_, to see how the tools of ethical analysis can help us see into different aspects of the situation.
