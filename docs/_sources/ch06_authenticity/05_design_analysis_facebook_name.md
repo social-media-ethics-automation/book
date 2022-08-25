@@ -1,7 +1,11 @@
 # Design Analysis: Facebook Names Rules
 We want to provide you, the reader, a chance to explore authenticity more, particularly considering how the rules built into social media platforms influence authenticity.
 
-In this activity you will be looking at Facebook's name policy, and thinking through who this version of authenticity works for, and who it doesn't.
+In this activity you will be looking at Facebook's name policy, and thinking through who this version of authenticity works for, and who it doesn't[^alternate_exercise].
+
+
+[^alternate_exercise]: You could also try this with different social media authenticity system, like [How to Get Verified on Bumble](
+https://bumble.com/en-us/the-buzz/the-end-of-catfishing-introducing-photo-verification), which has the user take photos while mimicking poses.
 
 ```{figure} facebook_name_policy.png
 ---
