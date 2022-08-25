@@ -4,7 +4,7 @@
 
 - How do the decisions made by the creators of social media platforms affect how it is used and what people do?
 
-- How do social media bots change what happens?
+- How do social media bots change the dynamics on the platform?
 
 - What can we learn about people from social media data?
 
