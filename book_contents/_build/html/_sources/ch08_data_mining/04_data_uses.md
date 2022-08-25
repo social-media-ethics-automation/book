@@ -5,3 +5,7 @@
   - Can give people ads for things they are interested in
   - If we can infer who would be likely to be addicted to gambling, we can target gambling ads to them
   - [Trump 2016 campaign 'targeted 3.5m black Americans to deter them from voting'](https://www.theguardian.com/us-news/2020/sep/28/trump-2016-campaign-targeted-35m-black-americans-to-deter-them-from-voting)
+
+
+- dangerous knowledge - knowledge that could be used to harm someone, even if the platform "tries to be good", it could be hacked or leaked, etc.
+- culpable ignorance (e.g., a platform not looking into information it would need to use to make something fair)
