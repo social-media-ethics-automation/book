@@ -19,3 +19,6 @@
 - Centralized vs. Decentralized?
   - Mastadon and Nazis: https://www.theverge.com/platform/amp/2019/7/12/20691957/mastodon-decentralized-social-network-gab-migration-fediverse-app-blocking
 - “Frictionless” interfaces
+
+
+Care & Enviro Ethics -> On reciprocal platforms vs non reciprical (friends vs follows)
