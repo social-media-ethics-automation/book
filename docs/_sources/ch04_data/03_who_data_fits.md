@@ -5,3 +5,6 @@ Because (almost) all data is a simplification of reality, those simplifications 
 - Examples:
   - Gender
   - Name (length limits, which letter systems allowed, etc.)
+
+
+- Utility Calculus - What data do we have? Need? Data select for culp ignorance

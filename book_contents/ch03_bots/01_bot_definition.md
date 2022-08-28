@@ -11,4 +11,5 @@ Bots, on the other hand, will do actions through social media accounts and can a
 Note that sometimes people use "bots" to mean inauthentically run accounts, such as those run by actual humans, but are paid to post things like advertisements or political content. We will not consider those to be bots, since they aren't run by a computer.
 
 
+- Act vs. Agent based views - "Who's a good bot?" Can a good person make a bad bot?
 - Donkey bot???? https://www.theguardian.com/commentisfree/2011/mar/04/oman-sultan-qaboos-despot

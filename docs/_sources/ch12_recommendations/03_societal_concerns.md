@@ -38,3 +38,6 @@ see also: [Cable news has a much bigger effect on America’s polarization than 
 ## Discussion Questions
 - What responsibilities do you think social media platforms should have in regards to larger social trends?
 - What strategies do you think might work to improve how social media platforms use recommendations?
+
+
+- Consequentialism (impact vs intent)
