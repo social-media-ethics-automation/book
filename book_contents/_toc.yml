@@ -77,12 +77,14 @@ parts:
       - file: ch05_history/01_pre_internet
       - file: ch05_history/02_web_1
       - file: ch05_history/03_web_2
-      - file: ch05_history/04_demo_lists
-      - file: ch05_history/05_practice_lists
-      - file: ch05_history/06_antisocial_media
-      - file: ch05_history/07_social_media_goals
-      - file: ch05_history/08_reflections
-      - file: ch05_history/09_learn_more
+      - file: ch05_history/04_list_data_python/00_intro.md
+        sections:
+          - file: ch05_history/04_list_data_python/01_demo_lists
+          - file: ch05_history/04_list_data_python/02_practice_lists
+      - file: ch05_history/05_antisocial_media
+      - file: ch05_history/06_social_media_goals
+      - file: ch05_history/07_reflections
+      - file: ch05_history/08_learn_more
     - file: ch06_authenticity/00_authenticity
       sections:
       - file: ch06_authenticity/01_authenticity

@@ -1,6 +1,6 @@
 # Social Media and “Real Life”
 
-When we (the authors) were young, as internet-based social media was starting to become commonly used, there was a popular sentiment we heard often:
+When we (the authors) were young, as internet-based social media was starting to become commonly used, a popular sentiment we often heard was:
 > “The internet isn’t real life.”
 
 This was used as a way to devalue time spent on social media sites, and to dismiss harms that occurred on them.
