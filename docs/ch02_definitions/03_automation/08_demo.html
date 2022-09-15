@@ -1360,42 +1360,6 @@ title="Launch on Binder"
 
       </li>
       
-      <li>
-        <a href="https://colab.research.google.com/github/kylethayer/social_media_ethics_automation_v0/blob/main/book_contents/ch02_definitions/03_automation/08_demo.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../_static/images/logo_colab.png">
-  </span>
-<span class="headerbtn__text-container">Colab</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="initThebeSBT()"
-  class="headerbtn headerbtn-launch-thebe"
-  data-toggle="tooltip"
-data-placement="left"
-title="Launch Thebe"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-play"></i>
-  </span>
-<span class="headerbtn__text-container">Live Code</span>
-</button>
-
-      </li>
-      
     </ul>
   </div>
 </div>
@@ -1646,6 +1610,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake tweepy is replacing the tweepy library. Fake Tweepy doesn&#x27;t need real passwords, and prevents you from accessing real twitter</strong></div></div>
 </div>
 </section>
 <section id="load-your-developer-access-passwords">
@@ -1678,6 +1644,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to log in to twitter</strong></div></div>
 </div>
 </section>
 <section id="post-a-tweet">
@@ -1691,7 +1659,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This tweet was posted by a computer program!
+<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to post this tweet (note: real tweepy shows no output here when a tweet is posted): </strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This tweet was posted by a computer program!
 </pre></div>
 </div>
 </div>
@@ -1704,8 +1672,8 @@ title="Print to PDF"
     {
         requestKernel: true,
         binderOptions: {
-            repo: "kylethayer/social_media_ethics_automation_v0",
-            ref: "main",
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
         },
         codeMirrorConfig: {
             theme: "abcdef",
