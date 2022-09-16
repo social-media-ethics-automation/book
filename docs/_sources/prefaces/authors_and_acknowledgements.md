@@ -5,7 +5,7 @@
 Kyle is an educator teaching classes that try to integrate social and ethical concerns with computer programming. Kyle is an Assistant Teaching Professor at the [University of Washington](https://www.washington.edu/) [Information School](https://ischool.uw.edu/), and he recieved his PhD from the [University of Washington](https://www.washington.edu/) [Paul G. Allen School of Computer Science & Engineering](https://www.cs.washington.edu/).
 
 ```{image} kylethayer.jpg
-:alt: Photo of Kyle Thayer (a white person with glasses and a beard)
+:alt: Photo of Kyle Thayer (a white person with glasses, short hair, and a beard)
 :width: 200px
 ```
 
@@ -13,7 +13,7 @@ Kyle is an educator teaching classes that try to integrate social and ethical co
 Susan is a philosopher working in ethics (among other things). They did their PhD at Durham University in England, and they are originally from Colorado. Susan tweets at @susannotess. Susan is currently a freelance researcher, but from (October maybe?!) they will be undertaking a British Academy Postdoctoral (research) Fellowship at University College London. TODO: change if this isn't going to work out.
 
 ```{image} SusanFace.jpg
-:alt: Photo of Susan Notess (a white person with glasses and rather better eye makeup than Kyle's)
+:alt: Photo of Susan Notess (a white person with glasses, short hair, and rather better eye makeup than Kyle's)
 :width: 200px
 ```
 
