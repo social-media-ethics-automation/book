@@ -6,6 +6,8 @@ root: intro
 parts:
   - chapters:
     - file: prefaces/authors_and_acknowledgements
+    - file: prefaces/perspectives_and_biases
+    - file: prefaces/making_twitter_account
   - caption: Book
     numbered: 3
     chapters:
@@ -230,4 +232,4 @@ parts:
         - file: ch21_conclusions/03_takeaways
   - caption: Appendix
     chapters:
-      - file: appendix/making_twitter_account
+      - file: appendix/teaching_with_this_book
