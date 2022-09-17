@@ -29,6 +29,7 @@ get_ipython().run_line_magic('run', '../../fake_tweepy/fake_tweepy.ipynb')
 
 
 # ### Load your developer access passwords
+# To use this on your real twitter account, copy your [developer access passwords](../../prefaces/making_twitter_account.md) into the code below.
 
 # In[3]:
 

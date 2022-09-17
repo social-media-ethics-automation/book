@@ -25,6 +25,6 @@ Though you may not understand anything in the above code yet, I want to point ou
 - The code above is full of English words like "import", "key", "secret", which may help you guess the meaning of the code.
 - There are also other symbols as well, though being used in a different way than in normal English, symbols like ``=``, `_`, `.`, `(`, and `)`
 - One particular piece of code gives a good hint as to what it is doing: `create_tweet`. That indeed is the part of the program where the tweet is posted.
-- There are five pieces of text with random numbers and letters that include things like "fake_consumer_key" inside. These pieces of text are meant to be replaced with a set of special passwords to your actual twitter account. You can get these special passwords if you get developer access to twitter (TODO: link to appropriate page). Once you put your special passwords in those locations then this code will post a tweet on your account.
+- There are five pieces of text with random numbers and letters that include things like "fake_consumer_key" inside. These pieces of text are meant to be replaced with a set of special passwords to your actual twitter account. You can get these special passwords if you get developer access to twitter (see the page on [](../../prefaces/making_twitter_account.md)). Once you put your special passwords in those locations then this code will post a tweet on your account.
 
 We will go through that example code in more detail next.

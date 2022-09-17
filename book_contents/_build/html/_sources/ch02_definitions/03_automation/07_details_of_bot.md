@@ -25,7 +25,7 @@ client = tweepy.Client(
 client.create_tweet(text="<strong style="color:black;background-color:lightgreen">This tweet was posted by a computer program!</strong>")
 </pre>
 
-The first five highlighted pieces of code are for the special passwords you can get when you get approved for developer access to twitter [TODO: link] (I've put fake values in them for now):
+The first five highlighted pieces of code are for the special passwords you can get when you get [developer access to twitter](../../prefaces/making_twitter_account.md) (I've put fake values in them for now):
 - bearer token
 - consumer key
 - consumer secret
