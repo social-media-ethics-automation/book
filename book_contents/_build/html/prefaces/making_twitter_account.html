@@ -1496,6 +1496,11 @@ title="Print to PDF"
    Test your keys
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#understand-twitters-rules-for-bots">
+   Understand Twitters Rules for Bots
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -1535,6 +1540,11 @@ title="Print to PDF"
    Test your keys
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#understand-twitters-rules-for-bots">
+   Understand Twitters Rules for Bots
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -1547,19 +1557,21 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="making-a-twitter-bot-account">
 <h1>Making a Twitter Bot Account<a class="headerlink" href="#making-a-twitter-bot-account" title="Permalink to this headline">#</a></h1>
-<p>In using this textbook, you will have opportunities to create and run twitter bots on your own twitter account. Our goal is to make this book work without using a real twitter account (we have made a simulated twitter account).</p>
-<p>But we encourage you to make a twitter bot account and try it out for real!</p>
+<p>In using this textbook, you will have opportunities to create and run twitter bots on your own twitter account.</p>
+<p>While we have made a fake version of Twitter for you to test all the code in this book, we highly encourage you to make a twitter bot account and try it out for real!</p>
 <section id="sign-up-for-twitter">
 <h2>Sign up for Twitter<a class="headerlink" href="#sign-up-for-twitter" title="Permalink to this headline">#</a></h2>
-<p>https://twitter.com/signup</p>
+<p><a class="reference external" href="https://twitter.com/signup">https://twitter.com/signup</a></p>
 <p>Note: If you want to make a new account and you already have one, you may need to sign out from your current account, or use a different web browser (e.g., Mozilla, Google Chrome, Microsoft Edge, Safari).</p>
 </section>
 <section id="sign-up-for-developer-access-bot-permisson">
 <h2>Sign up for “developer access” (bot permisson)<a class="headerlink" href="#sign-up-for-developer-access-bot-permisson" title="Permalink to this headline">#</a></h2>
 <p>Now that you have a twitter account, you need to get permission to use it as a bot. This is called “developer access.” The fastest way of doing this is to sign up for
 “Essential access,” so go here to sign up for essential accesss:
-https://developer.twitter.com/en/portal/petition/essential/basic-info</p>
-<p><img alt="A screenshot of the essential access form, with country set as United States, Use Case set as Student, and will twitter content be made available to a government set to No." src="../_images/twitter_developer_signup.png" /></p>
+<a class="reference external" href="https://developer.twitter.com/en/portal/petition/essential/basic-info">https://developer.twitter.com/en/portal/petition/essential/basic-info</a></p>
+<figure class="align-default" id="twitter-developer-signup-fig">
+<a class="reference internal image-reference" href="../_images/twitter_developer_signup.png"><img alt="A screenshot of the essential access form, with country set as United States, Use Case set as Student, and will twitter content be made available to a government set to No." src="../_images/twitter_developer_signup.png" style="width: 400px;" /></a>
+</figure>
 <p>Note when filling this out, that the information button on the question about sharing data with a government says that a government funded university doesn’t count.</p>
 </section>
 <section id="get-special-bot-passwords">
@@ -1576,9 +1588,13 @@ https://developer.twitter.com/en/portal/petition/essential/basic-info</p>
 <p>In order to get these 5 special passwords, do the following:</p>
 <p>Go to the twitter developer portal (https://developer.twitter.com/en/portal)</p>
 <p>In Projects &amp; Apps, press “Add App” (note in my screenshot I already have an app added).</p>
-<p><img alt="" src="../_images/twitter_add_app.png" /></p>
-<p>For the App Environment, select production
-<img alt="" src="../_images/twitter_production_environment.png" /></p>
+<figure class="align-default" id="twitter-add-app-fig">
+<img alt="A screenshot of the projects and apps view, with the &quot;Add App&quot; button circled" src="../_images/twitter_add_app.png" />
+</figure>
+<p>For the App Environment, select production</p>
+<figure class="align-default" id="twitter-production-environment-fig">
+<a class="reference internal image-reference" href="../_images/twitter_production_environment.png"><img alt="A screenshot of the &quot;Choose an App Environment&quot; view, with production circled" src="../_images/twitter_production_environment.png" style="width: 300px;" /></a>
+</figure>
 <p>Then choose whatever name you want for this “project,” for example “testbotkylethayer”</p>
 <p>Now save these keys somewhere on your computer. Later, when you write Twitter bots:</p>
 <ul class="simple">
@@ -1586,31 +1602,52 @@ https://developer.twitter.com/en/portal/petition/essential/basic-info</p>
 <li><p>“API Key Secret” will be called “consumer_secret”</p></li>
 <li><p>“Bearer Token” will be called “bearer_token”</p></li>
 </ul>
-<p><img alt="" src="../_images/twitter_API_keys.png" /></p>
-<p>Then go to the app settings for your project:
-<img alt="" src="../_images/twitter_app_settings.png" /></p>
-<p>Under User Authentication Settings, click “Set-Up”
-<img alt="" src="../_images/twitter_set_up_auth.png" /></p>
+<figure class="align-default" id="twitter-api-keys-fig">
+<a class="reference internal image-reference" href="../_images/twitter_API_keys.png"><img alt="A screenshot of the &quot;Keys and Tokens&quot; view, showing the API Key labeled &quot;consumer_key&quot;, the API Key Secret labled &quot;consumer_secret&quot;, and the Bearer Token labled &quot;bearer_token&quot;" src="../_images/twitter_API_keys.png" style="width: 500px;" /></a>
+</figure>
+<p>Then go to the app settings for your project:</p>
+<figure class="align-default" id="twitter-app-settings-fig">
+<a class="reference internal image-reference" href="../_images/twitter_app_settings.png"><img alt="A screenshot of the &quot;Keys and Tokens&quot; view, but with the &quot;App Settings&quot; button circled" src="../_images/twitter_app_settings.png" style="width: 300px;" /></a>
+</figure>
+<p>Under User Authentication Settings, click “Set-Up”</p>
+<figure class="align-default" id="twitter-set-up-auth-fig">
+<a class="reference internal image-reference" href="../_images/twitter_set_up_auth.png"><img alt="A screenshot of the overview page for the prod project, with the &quot;Set-Up&quot; button circled" src="../_images/twitter_set_up_auth.png" style="width: 500px;" /></a>
+</figure>
 <p>Enable both OAuth 2.0 and OAuth 1.0a and set your app type to “automated App or bot”:
-Note: (I am guessing you don’t need OAuth 2, but we’ll turn it on just in case)
-<img alt="" src="../_images/twitter_oath_setup.png" /></p>
-<p>Then Set OAuth 1 settings to allow read and write and direct message, and if it requires “Callback URI / Redirect URL” and “Website URL”, those can be anything, and just put “http://uw.edu”
-<img alt="" src="../_images/twitter_oath_1_settings.png" /></p>
+Note: (I am guessing you don’t need OAuth 2, but we’ll turn it on just in case)</p>
+<figure class="align-default" id="twitter-oath-setup-fig">
+<a class="reference internal image-reference" href="../_images/twitter_oath_setup.png"><img alt="A screenshot of the User authentication settings view, with OAuth 2.0 and OAth 1.0a enabled. For OAuth 2.0 Settings, the Type of App is selected to be &quot;Automated App or bot&quot;" src="../_images/twitter_oath_setup.png" style="width: 400px;" /></a>
+</figure>
+<p>Then Set OAuth 1 settings to allow read and write and direct message, and if it requires “Callback URI / Redirect URL” and “Website URL”, those can be anything, and just put “http://uw.edu”</p>
+<figure class="align-default" id="twitter-oath-1-settings-fig">
+<a class="reference internal image-reference" href="../_images/twitter_oath_1_settings.png"><img alt="A screenshot of the OAuth 1.0A Settings view, With App permissions set to &quot;Read and write and Direct message&quot;, the Callback URI to &quot;http://uw.edu&quot; and the Website URL to &quot;http://uw.edu&quot;" src="../_images/twitter_oath_1_settings.png" style="width: 400px;" /></a>
+</figure>
 <p>Save your settings. You will be given a Oath2.0 Client ID and Client Secret. I don’t think you need these, but save them somewhere on your computer just in case</p>
-<p>Now, in your app settings, press “Keys and tokens”
-<img alt="" src="../_images/twitter_keys_and_tokens.png" /></p>
-<p>And press “Generate” for “Access Token and Secret”
-<img alt="" src="../_images/twitter_generate_access_tokens.png" /></p>
+<p>Now, in your app settings, press “Keys and tokens”</p>
+<figure class="align-default" id="twitter-keys-and-tokens-fig">
+<a class="reference internal image-reference" href="../_images/twitter_keys_and_tokens.png"><img alt="A screenshot of the overview page for the prod project, with the &quot;Keys and tokens&quot; tab cicled" src="../_images/twitter_keys_and_tokens.png" style="width: 600px;" /></a>
+</figure>
+<p>And press “Generate” for “Access Token and Secret”</p>
+<figure class="align-default" id="twitter-generate-access-tokens-fig">
+<a class="reference internal image-reference" href="../_images/twitter_generate_access_tokens.png"><img alt="A screenshot of the keys and tokens tab for the prod project. There are generate (or regenerate) buttons for API Key and Secret, Bearer Token, and Access Token and Secret. The last one of these (Access Token and Secret) has the generate button circled." src="../_images/twitter_generate_access_tokens.png" style="width: 500px;" /></a>
+</figure>
 <p>Now save these keys, both somewhere on your computer. Later, when you write Twitter bots:</p>
 <ul class="simple">
 <li><p>“Access Token” will be called “access_token”</p></li>
 <li><p>“Access Token Secret” will be called “access_token_secret”</p></li>
 </ul>
-<p><img alt="" src="../_images/twitter_access_tokens.png" /></p>
+<figure class="align-default" id="twitter-access-tokens-fig">
+<a class="reference internal image-reference" href="../_images/twitter_access_tokens.png"><img alt="A screenshot of the &quot;Sva your new Access Token and Access Token Secret&quot; popup, showing the &quot;Access Token&quot; labeled &quot;access_token&quot;, and the &quot;Access Token Secret&quot; labeled &quot;access_token_secret&quot;" src="../_images/twitter_access_tokens.png" style="width: 500px;" /></a>
+</figure>
+<p>Note: If you ever lose these special passwords, or accidentally share them, you can regenerate them.</p>
 </section>
 <section id="test-your-keys">
 <h2>Test your keys<a class="headerlink" href="#test-your-keys" title="Permalink to this headline">#</a></h2>
-<p>When you get to chapter 2.3.8 (Demo: Try Running the Twitter Bot!), you can try running the code and replacing the fake special passwords with the ones from your account, and see if you can use the code to post a tweet.</p>
+<p>When you get to chapter 2.3.8 (<a class="reference internal" href="../ch02_definitions/03_automation/08_demo.html"><span class="doc std std-doc">Demo: Try Running the Twitter Bot!</span></a>), you can try running the code and replacing the fake special passwords with the ones from your account, and see if you can use the code to post an actual tweet to your account.</p>
+</section>
+<section id="understand-twitters-rules-for-bots">
+<h2>Understand Twitters Rules for Bots<a class="headerlink" href="#understand-twitters-rules-for-bots" title="Permalink to this headline">#</a></h2>
+<p>Before you try doing anything too creative with twitter bots, make sure you look over <a class="reference external" href="https://help.twitter.com/en/rules-and-policies/twitter-automation">Twitters Policy on what you are allowed to do</a>, that way you don’t get yourself banned.</p>
 </section>
 </section>
 
