@@ -41,7 +41,7 @@
 import tweepy
 
 
-# ### (Optional) Step 1b: Make a fake twitter connection (fake_tweepy library)
+# ### (Optional) Step 1b: Make a fake twitter connection with the fake_tweepy library
 # For testing purposes, we've added this line of code, which loads a fake version of tweepy, so it wont actually connect to twitter. __If you want to try to actually connect to twitter, don't run this line of code.__
 
 # In[2]:
@@ -90,7 +90,7 @@ client.create_tweet(text="This tweet was posted by a computer program!")
 
 
 # ### Step 6: Modify the code above to post a different tweet
-# Note: If you try to post the same exact tweet twice in a row, you will get an error message (it will be a lot of red text, which can be intimidating, but just know that 
+# Note: If you try to post the same exact tweet twice in a row on real twitter, you will get an error message (it will be a lot of red text, which can be intimidating, but it just means you aren't allowed to post the same tweet twice in a row).
 
 # In[ ]:
 

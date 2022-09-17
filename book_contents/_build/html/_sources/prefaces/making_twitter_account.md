@@ -7,6 +7,8 @@ While we have made a fake version of Twitter for you to test all the code in thi
 ## Sign up for Twitter
 [https://twitter.com/signup](https://twitter.com/signup)
 
+You might want to make a new twitter account, just for making twitter bots, since you don't want to accidentally get your main twitter account banned or labeled as a bot.
+
 Note: If you want to make a new account and you already have one, you may need to sign out from your current account, or use a different web browser (e.g., Mozilla, Google Chrome, Microsoft Edge, Safari).
 
 ## Sign up for "developer access" (bot permisson)
