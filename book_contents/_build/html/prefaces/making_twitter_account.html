@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Making a Twitter Account &#8212; Social Media, Ethics, and Automation</title>
+    <title>Making a Twitter Bot Account &#8212; Social Media, Ethics, and Automation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -126,7 +126,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Making a Twitter Account
+   Making a Twitter Bot Account
   </a>
  </li>
 </ul>
@@ -1454,23 +1454,90 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sign-up-for-twitter">
+   Sign up for Twitter
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sign-up-for-developer-access-bot-permisson">
+   Sign up for “developer access” (bot permisson)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-special-bot-passwords">
+   Get special “bot” passwords
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#test-your-keys">
+   Test your keys
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Making a Twitter Account</h1>
+                <h1>Making a Twitter Bot Account</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sign-up-for-twitter">
+   Sign up for Twitter
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sign-up-for-developer-access-bot-permisson">
+   Sign up for “developer access” (bot permisson)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-special-bot-passwords">
+   Get special “bot” passwords
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#test-your-keys">
+   Test your keys
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -1478,8 +1545,73 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="making-a-twitter-account">
-<h1>Making a Twitter Account<a class="headerlink" href="#making-a-twitter-account" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="making-a-twitter-bot-account">
+<h1>Making a Twitter Bot Account<a class="headerlink" href="#making-a-twitter-bot-account" title="Permalink to this headline">#</a></h1>
+<p>In using this textbook, you will have opportunities to create and run twitter bots on your own twitter account. Our goal is to make this book work without using a real twitter account (we have made a simulated twitter account).</p>
+<p>But we encourage you to make a twitter bot account and try it out for real!</p>
+<section id="sign-up-for-twitter">
+<h2>Sign up for Twitter<a class="headerlink" href="#sign-up-for-twitter" title="Permalink to this headline">#</a></h2>
+<p>https://twitter.com/signup</p>
+<p>Note: If you want to make a new account and you already have one, you may need to sign out from your current account, or use a different web browser (e.g., Mozilla, Google Chrome, Microsoft Edge, Safari).</p>
+</section>
+<section id="sign-up-for-developer-access-bot-permisson">
+<h2>Sign up for “developer access” (bot permisson)<a class="headerlink" href="#sign-up-for-developer-access-bot-permisson" title="Permalink to this headline">#</a></h2>
+<p>Now that you have a twitter account, you need to get permission to use it as a bot. This is called “developer access.” The fastest way of doing this is to sign up for
+“Essential access,” so go here to sign up for essential accesss:
+https://developer.twitter.com/en/portal/petition/essential/basic-info</p>
+<p><img alt="A screenshot of the essential access form, with country set as United States, Use Case set as Student, and will twitter content be made available to a government set to No." src="../_images/twitter_developer_signup.png" /></p>
+<p>Note when filling this out, that the information button on the question about sharing data with a government says that a government funded university doesn’t count.</p>
+</section>
+<section id="get-special-bot-passwords">
+<h2>Get special “bot” passwords<a class="headerlink" href="#get-special-bot-passwords" title="Permalink to this headline">#</a></h2>
+<p>Once you have developer access, you’ll need a set of 5 special passwords to be able to make a fully functional Twitter bot:</p>
+<ul class="simple">
+<li><p>Bearer Token</p></li>
+<li><p>Consumer Key (aka “API Key”)</p></li>
+<li><p>Consumer Secret (aka “API Key Secret”)</p></li>
+<li><p>Access Token</p></li>
+<li><p>Access Token Secret</p></li>
+</ul>
+<p>You’ll want to get all of these and then save them somewhere so that you can find them again (e.g., send yourself an email).</p>
+<p>In order to get these 5 special passwords, do the following:</p>
+<p>Go to the twitter developer portal (https://developer.twitter.com/en/portal)</p>
+<p>In Projects &amp; Apps, press “Add App” (note in my screenshot I already have an app added).</p>
+<p><img alt="" src="../_images/twitter_add_app.png" /></p>
+<p>For the App Environment, select production
+<img alt="" src="../_images/twitter_production_environment.png" /></p>
+<p>Then choose whatever name you want for this “project,” for example “testbotkylethayer”</p>
+<p>Now save these keys somewhere on your computer. Later, when you write Twitter bots:</p>
+<ul class="simple">
+<li><p>“API Key” will be called “consumer_key”</p></li>
+<li><p>“API Key Secret” will be called “consumer_secret”</p></li>
+<li><p>“Bearer Token” will be called “bearer_token”</p></li>
+</ul>
+<p><img alt="" src="../_images/twitter_API_keys.png" /></p>
+<p>Then go to the app settings for your project:
+<img alt="" src="../_images/twitter_app_settings.png" /></p>
+<p>Under User Authentication Settings, click “Set-Up”
+<img alt="" src="../_images/twitter_set_up_auth.png" /></p>
+<p>Enable both OAuth 2.0 and OAuth 1.0a and set your app type to “automated App or bot”:
+Note: (I am guessing you don’t need OAuth 2, but we’ll turn it on just in case)
+<img alt="" src="../_images/twitter_oath_setup.png" /></p>
+<p>Then Set OAuth 1 settings to allow read and write and direct message, and if it requires “Callback URI / Redirect URL” and “Website URL”, those can be anything, and just put “http://uw.edu”
+<img alt="" src="../_images/twitter_oath_1_settings.png" /></p>
+<p>Save your settings. You will be given a Oath2.0 Client ID and Client Secret. I don’t think you need these, but save them somewhere on your computer just in case</p>
+<p>Now, in your app settings, press “Keys and tokens”
+<img alt="" src="../_images/twitter_keys_and_tokens.png" /></p>
+<p>And press “Generate” for “Access Token and Secret”
+<img alt="" src="../_images/twitter_generate_access_tokens.png" /></p>
+<p>Now save these keys, both somewhere on your computer. Later, when you write Twitter bots:</p>
+<ul class="simple">
+<li><p>“Access Token” will be called “access_token”</p></li>
+<li><p>“Access Token Secret” will be called “access_token_secret”</p></li>
+</ul>
+<p><img alt="" src="../_images/twitter_access_tokens.png" /></p>
+</section>
+<section id="test-your-keys">
+<h2>Test your keys<a class="headerlink" href="#test-your-keys" title="Permalink to this headline">#</a></h2>
+<p>When you get to chapter 2.3.8 (Demo: Try Running the Twitter Bot!), you can try running the code and replacing the fake special passwords with the ones from your account, and see if you can use the code to post a tweet.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
