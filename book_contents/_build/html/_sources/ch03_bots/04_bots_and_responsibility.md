@@ -1,4 +1,10 @@
-# Reflection questions
+# Bots and Responsibility
+
+- Act vs. Agent based views - "Who's a good bot?" Can a good person make a bad bot?
+- Donkey bot???? https://www.theguardian.com/commentisfree/2011/mar/04/oman-sultan-qaboos-despot
+
+
+## Reflection questions
 - How are people’s expectations different for a bot and a “normal” user?
 - How do you think about identity and responsibility with a bot’s actions?
 - Why do you think platforms allow bots to operate?

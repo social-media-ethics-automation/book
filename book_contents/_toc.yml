@@ -51,7 +51,7 @@ parts:
           - file: ch03_bots/03_anatomy_of_a_bot/01_control_flow_options
           - file: ch03_bots/03_anatomy_of_a_bot/02_demo_basic_flow
           - file: ch03_bots/03_anatomy_of_a_bot/03_practice_basic_flow
-      - file: ch03_bots/04_reflections
+      - file: ch03_bots/04_bots_and_responsibility
       - file: ch03_bots/05_learn_more
     - file: ch04_data/00_data
       sections:
