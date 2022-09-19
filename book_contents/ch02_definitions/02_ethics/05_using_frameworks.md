@@ -15,11 +15,10 @@ Your job in this exercise is to articulate a reason for intervening (forcing you
 
 The goal of this exercise is to practice using the ethical frameworks as tools for looking at the insides of a complex ethical dilemma, and to see how each tool gives you slightly different information about what is at stake.
 
-This scenario will be hypothetical for some of you, but for others, like for one of the authors, this will be a decision you have wrestled with in real life. Every real life instance of this is a little bit different, so make sure to respect whatever decisions your groupmates may have made.
+This scenario will be hypothetical for some of you, but for others, like for one of the authors, this will be a decision you have been very close to in real life.
 
-One suggestion is to ask if anyone has seen a situation like this unfold in their family, and to invite them to share first about the reasons that were most salient to the decision that was made. Once anyone who wishes to offer experience has volunteered, then you can begin working through the theories in the list.
+If you are able to, work with others in filling out this chart or compare with others to compare what you came up with. Every real life instance of this is a little bit different, so make sure to respect whatever decisions your groupmates may have made. One suggestion is to ask if anyone has seen a situation like this unfold in their family, and to invite them to share first about the reasons that were most salient to the decision that was made. Once anyone who wishes to offer experience has volunteered, then you can begin working through the theories in the list.
 
-If you are able to, work with others in filling out this chart or compare with others to compare what you came up with.
 
 | Framework    | Intervene    | Do Not Intervene    |
 | :--- | ---: | ---: |
