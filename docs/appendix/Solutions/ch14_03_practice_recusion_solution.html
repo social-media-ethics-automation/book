@@ -347,8 +347,8 @@ const thebe_selector_output = ".output, .cell_output"
     </ul>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../ch03_bots/04_reflections.html">
-     3.4. Reflection questions
+    <a class="reference internal" href="../../ch03_bots/04_bots_and_responsibility.html">
+     3.4. Bots and Responsibility
     </a>
    </li>
    <li class="toctree-l2">
@@ -1761,36 +1761,50 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
+Collecting lckr-jupyterlab-variableinspector
+  Using cached lckr_jupyterlab_variableinspector-3.0.9.tar.gz (60 kB)
+  Installing build dependencies: started
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
 WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting lckr-jupyterlab-variableinspector
-  Using cached lckr_jupyterlab_variableinspector-3.0.9.tar.gz (60 kB)
-  Installing build dependencies: started
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
+WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
+WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
+WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
+WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
+WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: tweepy in c:\python310\lib\site-packages (4.10.0)
-Requirement already satisfied: requests-oauthlib&lt;2,&gt;=1.2.0 in c:\python310\lib\site-packages (from tweepy) (1.3.1)
 Requirement already satisfied: oauthlib&lt;4,&gt;=3.2.0 in c:\python310\lib\site-packages (from tweepy) (3.2.0)
+Requirement already satisfied: requests-oauthlib&lt;2,&gt;=1.2.0 in c:\python310\lib\site-packages (from tweepy) (1.3.1)
 Requirement already satisfied: requests&lt;3,&gt;=2.27.0 in c:\python310\lib\site-packages (from tweepy) (2.27.1)
 Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (1.26.9)
-Requirement already satisfied: certifi&gt;=2017.4.17 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (2022.5.18.1)
-Requirement already satisfied: charset-normalizer~=2.0.0 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (2.0.12)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (3.3)
+Requirement already satisfied: charset-normalizer~=2.0.0 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (2.0.12)
+Requirement already satisfied: certifi&gt;=2017.4.17 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (2022.5.18.1)
 
 [notice] A new release of pip available: 22.1.2 -&gt; 22.2.2
 [notice] To update, run: python.exe -m pip install --upgrade pip
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
-WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
-WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
-WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
-WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
-WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 9&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">tweepy</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># load my twitter keys</span>
+<span class="ne">----&gt; </span><span class="mi">9</span> <span class="kn">import</span> <span class="nn">my_bot_keys</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="c1"># log into tweepy</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="n">client</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="n">bearer_token</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">bearer_token</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">consumer_key</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">consumer_secret</span><span class="p">,</span>                   
+<span class="g g-Whitespace">     </span><span class="mi">15</span>     <span class="n">access_token</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">access_token_secret</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;my_bot_keys&#39;
 </pre></div>
 </div>
 </div>
