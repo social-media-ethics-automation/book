@@ -1630,7 +1630,12 @@ A human computer running a cooking program. In other words: “someone following
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Click to see actual code</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tweepy</span>
+<p>You are not expected to understand all this code. It is here to give you an examples of what code looks like.</p>
+<p>Note: This code is untested and we may have made programming errors</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1">########  Log Into Twitter  #######</span>
+
+<span class="kn">import</span> <span class="nn">tweepy</span>
 
 <span class="c1"># Load all your developer access passwords into Python</span>
 <span class="c1"># TODO: Put your twitter account&#39;s special developer access passwords below:</span>
@@ -1648,11 +1653,51 @@ A human computer running a cooking program. In other words: “someone following
    <span class="n">access_token</span><span class="o">=</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">access_token_secret</span>
 <span class="p">)</span>
 
-<span class="n">TODO</span><span class="p">:</span> <span class="n">Write</span> <span class="n">the</span> <span class="n">rest</span> <span class="n">of</span> <span class="n">this</span> <span class="n">code</span> <span class="p">(</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">pypi</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">project</span><span class="o">/</span><span class="n">profanity</span><span class="o">-</span><span class="n">check</span><span class="o">/</span><span class="p">)</span>
+
+<span class="c1">########  Find any new tweets that mention me that also have curse words  #######</span>
+
+<span class="c1"># get my twitter id</span>
+<span class="n">my_info</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;me&quot;</span><span class="p">,</span> <span class="n">user_auth</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">my_id</span> <span class="o">=</span> <span class="n">my_info</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">id</span>
+
+<span class="c1"># get all tweets that mention me</span>
+<span class="n">mentions</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_users_mentions</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">my_id</span><span class="p">)</span>
+
+<span class="c1"># import profanity checking library</span>
+<span class="kn">from</span> <span class="nn">profanity_check</span> <span class="kn">import</span> <span class="n">predict</span>
+
+<span class="c1"># start a list of mentions that have curse words</span>
+<span class="n">cursing_mentions</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Go through the tweets to see which ones have curse words</span>
+<span class="k">for</span> <span class="n">mention</span> <span class="ow">in</span> <span class="n">mentions</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+    <span class="c1"># check if the tweet has a curse word</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">predict</span><span class="p">(</span><span class="n">mention</span><span class="o">.</span><span class="n">text</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
+       <span class="c1"># if it did have a curse word, put it in the cursing mentions list</span>
+       <span class="n">cursing_mentions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mention</span><span class="p">)</span>
+
+
+<span class="c1">########  Look up the users who posted those tweets  ########</span>
+
+<span class="c1"># start a list of users to block (starts out empty)</span>
+<span class="n">users_to_block</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Go through each cursing mention tweet</span>
+<span class="k">for</span> <span class="n">cursing_mention</span> <span class="ow">in</span> <span class="n">cursing_mentions</span><span class="p">:</span>
+    <span class="c1"># look up the user id for each cursing tweet, and add it to the list of users to block</span>
+    <span class="n">users_to_block</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">author_id</span><span class="p">)</span>
+
+
+<span class="c1">########  Block those users  ########</span>
+
+<span class="c1"># Go through each of the users to block</span>
+<span class="k">for</span> <span class="n">user_to_block</span> <span class="ow">in</span> <span class="n">users_to_block</span><span class="p">:</span>
+    <span class="c1"># block the user</span>
+    <span class="n">client</span><span class="o">.</span><span class="n">block</span><span class="p">(</span><span class="n">target_user_id</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<p>We will show how to use statements in Python in the next section.</p>
+<p>We will show how to use statements in Python in the next section of this chapter: (<a class="reference internal" href="02_demo_basic_flow.html"><span class="doc std std-doc">Demo: Statements and Variables</span></a>).</p>
 </section>
 <section id="variables-save-information-for-later">
 <h2>Variables: Save information for later<a class="headerlink" href="#variables-save-information-for-later" title="Permalink to this headline">#</a></h2>
@@ -1687,7 +1732,9 @@ A human computer running a cooking program. In other words: “someone following
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Click to see actual code</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Import tweepy and copy in login steps here</span>
+<p>You are not expected to understand all this code. It is here to give you an examples of what code looks like.</p>
+<p>Note: This code is untested and we may have made programming errors</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Copy tweepy and login steps here</span>
 
 <span class="n">first_name</span> <span class="o">=</span> <span class="s2">&quot;Kyle&quot;</span>
 <span class="n">last_name</span> <span class="o">=</span> <span class="s2">&quot;Thayer&quot;</span>
@@ -1699,8 +1746,26 @@ A human computer running a cooking program. In other words: “someone following
 </div>
 <p>Or, when I am looking something up, like my latest tweets, I can save that in a variable so I can look up replies to those tweets the next step:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- Find my latest tweet, and save it as a variable named &quot;my_latest_tweet&quot;
-- Search for all tweets that are a reply to the tweet saved in the variable &quot;my_latest_tweet&quot;
+- Search for all tweets that are in the same conversation as my latest tweet, and save them in the variable &quot;my_latest_tweet_replies&quot;
 </pre></div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Click to see actual code</p>
+<p>You are not expected to understand all this code. It is here to give you an examples of what code looks like.</p>
+<p>Note: This code is untested and we may have made programming errors</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Copy tweepy and login steps here</span>
+
+<span class="c1"># get my twitter id</span>
+<span class="n">my_info</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;me&quot;</span><span class="p">,</span> <span class="n">user_auth</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">my_id</span> <span class="o">=</span> <span class="n">my_info</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">id</span>
+
+<span class="c1"># Get my latest tweet (and get the conversation id for that tweet)</span>
+<span class="n">my_latest_tweet</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_users_tweets</span><span class="p">(</span><span class="n">my_id</span><span class="p">,</span>  <span class="n">tweet_fields</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;conversation_id&#39;</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Search for tweets that are in the same conversation as my latest tweet</span>
+<span class="n">my_latest_tweet_conversation</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">Client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span><span class="s2">&quot;conversation_id:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">my_latest_tweet</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">conversation_id</span><span class="p">))</span>
+</pre></div>
+</div>
 </div>
 <p>We will show how to use variables in Python in the next section.</p>
 </section>
@@ -1715,6 +1780,11 @@ A human computer running a cooking program. In other words: “someone following
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- Whenever someone tags me in a post
   - like their post which has me tagged
 </pre></div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Click to see a note on Python</p>
+<p>Note: Python isn’t by default set up with event style programming. We won’t be directly doing event programming in this book.</p>
+<p>We will be doing the Pausing/Scheduling below, which you can use to do some of the same things (e.g., check in every five minutes to see if there are new tweets that tag me).</p>
 </div>
 <section id="pausing-scheduling">
 <h3>Pausing/Scheduling<a class="headerlink" href="#pausing-scheduling" title="Permalink to this headline">#</a></h3>
