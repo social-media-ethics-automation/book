@@ -1631,6 +1631,7 @@ A human computer running a cooking program. In other words: “someone following
 <div class="dropdown admonition">
 <p class="admonition-title">Click to see actual code</p>
 <p>You are not expected to understand all this code. It is here to give you an examples of what code looks like.</p>
+<p>Also, you’ll notice that the actual code has a lot more steps then our psuedocode above has.</p>
 <p>Note: This code is untested and we may have made programming errors</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="c1">########  Log Into Twitter  #######</span>
@@ -1767,7 +1768,7 @@ A human computer running a cooking program. In other words: “someone following
 </pre></div>
 </div>
 </div>
-<p>We will show how to use variables in Python in the next section.</p>
+<p>We will show how to use variables in Python in the next section (<a class="reference internal" href="02_demo_basic_flow.html"><span class="doc std std-doc">Demo: Statements and Variables</span></a>).</p>
 </section>
 <section id="events-when-you-do-something-depends">
 <h2>Events: When you do something depends<a class="headerlink" href="#events-when-you-do-something-depends" title="Permalink to this headline">#</a></h2>
@@ -1801,11 +1802,72 @@ A human computer running a cooking program. In other words: “someone following
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- Post this set of tweets, pausing 30 seconds between each tweet
 </pre></div>
 </div>
-<p>Or</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- every day at noon, post a report on the weather
+<div class="dropdown admonition">
+<p class="admonition-title">Click to see actual code</p>
+<p>You are not expected to understand all this code. It is here to give you an examples of what code looks like.</p>
+<p>Note: This code is untested and we may have made programming errors</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Copy tweepy and login steps here</span>
+
+<span class="c1"># load a library that gives us a pause action (called sleep)</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="c1"># post a tweet</span>
+<span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;I am a bot pretending to slowly type in a series of tweets.&quot;</span><span class="p">)</span>
+
+<span class="c1"># pause for 30 seconds</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+
+<span class="c1"># post a tweet</span>
+<span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;This is my second tweet.&quot;</span><span class="p">)</span>
+
+<span class="c1"># pause for 30 seconds</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+
+<span class="c1"># post a tweet</span>
+<span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;It takes a little while for me to pretend to type up each of these tweets&quot;</span><span class="p">)</span>
+
+<span class="c1"># pause for 30 seconds</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+
+<span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;here is my final tweet&quot;</span><span class="p">)</span>
+
 </pre></div>
 </div>
-<p>We will show how to use pausing in the next section.</p>
+</div>
+<p>Or</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- every day at noon, post a tweet saying &quot;It&#39;s lunchtime!&quot;
+</pre></div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Click to see actual code</p>
+<p>You are not expected to understand all this code. It is here to give you an examples of what code looks like.</p>
+<p>Note: This code is untested and we may have made programming errors</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Copy tweepy and login steps here</span>
+
+<span class="c1"># load a library that gives us a scheduling actions</span>
+<span class="kn">import</span> <span class="nn">schedule</span>
+
+<span class="c1"># Define a function that when run will say that it is lunchtime</span>
+<span class="k">def</span> <span class="nf">say_it_is_lunchtime</span><span class="p">():</span>
+    <span class="c1"># when the function is run, post a tweet</span>
+    <span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;It&#39;s lunchtime!&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># schedule the &quot;say_it_is_lunchtime&quot; function to run every day at noon</span>
+<span class="n">schedule</span><span class="o">.</span><span class="n">every</span><span class="p">()</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">at</span><span class="p">(</span><span class="s2">&quot;12:00&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">do</span><span class="p">(</span><span class="n">say_it_is_lunchtime</span><span class="p">)</span>
+
+
+<span class="c1"># Loop forever, once a second running every task that needs to be run</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="c1"># if any tasks are ready to run, run them</span>
+    <span class="n">schedule</span><span class="o">.</span><span class="n">run_pending</span><span class="p">()</span>
+    <span class="c1"># pause for 1 second before checking again</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<p>We will show how to use pausing in the next section (<a class="reference internal" href="02_demo_basic_flow.html"><span class="doc std std-doc">Demo: Statements and Variables</span></a>).</p>
 <p>We will show how to use other Events and Scheduling in Python in Chapter 18: Public Shaming.</p>
 </section>
 </section>
@@ -1821,9 +1883,30 @@ A human computer running a cooking program. In other words: “someone following
 </div>
 <p>In programming, we might do this:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- look up the latest tweet mentioning me
-  - if that tweet says &quot;delete your account&quot;, then delete my account
-  - otherwise, don&#39;t delete my account
+  - if that tweet says &quot;It&#39;s time to go&quot;, then post &quot;Let&#39;s go!&quot;
+  - otherwise, post &quot;I am still waiting&quot;
 </pre></div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Click to see actual code</p>
+<p>You are not expected to understand all this code. It is here to give you an examples of what code looks like.</p>
+<p>Note: This code is untested and we may have made programming errors</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Copy tweepy and login steps here</span>
+
+<span class="c1"># get my twitter id</span>
+<span class="n">my_info</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;me&quot;</span><span class="p">,</span> <span class="n">user_auth</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">my_id</span> <span class="o">=</span> <span class="n">my_info</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">id</span>
+
+<span class="c1"># get the latest tweet that mentions me</span>
+<span class="n">latest_mention</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_users_mentions</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">my_id</span><span class="p">)</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="k">if</span> <span class="s2">&quot;It&#39;s time to go&quot;</span> <span class="ow">in</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">text</span><span class="p">:</span>
+   <span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Let&#39;s go!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+   <span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;I am still waiting&quot;</span><span class="p">)</span>
+
+</pre></div>
+</div>
 </div>
 <p>We will show how to use conditionals in Chapter 7: Trolling.</p>
 </section>
@@ -1847,13 +1930,53 @@ A human computer running a cooking program. In other words: “someone following
 <pre>
 - Tweet this 100 times: "Warner Brothers should <a href="https://www.rollingstone.com/tv-movies/tv-movie-features/justice-league-the-snyder-cut-bots-fans-1384231/">#ReleaseTheSnyderCut</a> of the Justice League movie."
 </pre>
-<p>Or a computer program can repeat an action to a set of items</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- Like each of the tweets that were replies to my latest tweet
+<div class="dropdown admonition">
+<p class="admonition-title">Click to see actual code</p>
+<p>You are not expected to understand all this code. It is here to give you an examples of what code looks like.</p>
+<p>If you try this yourself, it wont post 100 times, since the twitter blocks you from repeating the same exact tweet repeatedly.</p>
+<p>Note: This code is untested and we may have made programming errors</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Copy tweepy and login steps here</span>
+
+<span class="c1"># repeat this action 100 times</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="c1"># post a tweet</span>
+    <span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Warner Brothers should #ReleaseTheSnyderCut of the Justice League movie.&quot;</span><span class="p">)</span>
+
 </pre></div>
 </div>
-<p>Or a computer program can repeat an action until a condition is met:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- Keep sending private messages to this person until they block me
+</div>
+<p>Or a computer program can repeat an action to a set of items</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- Like each of the tweets that were in the same conversation as my latest tweet
 </pre></div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Click to see actual code</p>
+<p>You are not expected to understand all this code. It is here to give you an examples of what code looks like.</p>
+<p>Note: This code is untested and we may have made programming errors</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Copy tweepy and login steps here</span>
+
+<span class="c1"># Get my latest tweet (and get the conversation id for that tweet)</span>
+<span class="n">my_latest_tweet</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_users_tweets</span><span class="p">(</span><span class="n">my_id</span><span class="p">,</span>  <span class="n">tweet_fields</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;conversation_id&#39;</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Search for tweets that are in the same conversation as my latest tweet</span>
+<span class="n">my_latest_tweet_conversation</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">Client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span><span class="s2">&quot;conversation_id:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">my_latest_tweet</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">conversation_id</span><span class="p">))</span>
+
+<span class="c1"># repeat this action for all the tweets in the conversation</span>
+<span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">my_latest_tweet_conversation</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+    <span class="c1"># like the tweet</span>
+    <span class="n">client</span><span class="o">.</span><span class="n">like</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<p>Or a computer program can repeat an action until a condition is met:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- Keep sending private messages to this person until they say &quot;Stop it!&quot;
+</pre></div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Click to see a note</p>
+<p>Note: I am not going to directly give you code for harassing someone.</p>
+<p>As for repeating an action until a condition is met, those are done with <a class="reference external" href="https://www.w3schools.com/python/python_while_loops.asp">while loops</a>. You can use these if you have a legitimate, non-harassment use.</p>
 </div>
 <p>We will show how to use loops in Chapter 5: History of Social Media.</p>
 </section>
