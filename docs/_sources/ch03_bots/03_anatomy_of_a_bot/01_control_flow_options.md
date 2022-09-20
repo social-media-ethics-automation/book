@@ -46,7 +46,13 @@ Twitter bots are generally organized in this same way, so one bot might be organ
 
 ````{admonition} Click to see actual code
 :class: dropdown
+You are not expected to understand all this code. It is here to give you an examples of what code looks like.
+
+Note: This code is untested and we may have made programming errors
 ```python
+
+########  Log Into Twitter  #######
+
 import tweepy
 
 # Load all your developer access passwords into Python
@@ -65,11 +71,51 @@ client = tweepy.Client(
    access_token=access_token, access_token_secret=access_token_secret
 )
 
-TODO: Write the rest of this code (https://pypi.org/project/profanity-check/)
+
+########  Find any new tweets that mention me that also have curse words  #######
+
+# get my twitter id
+my_info = client.get_user(id = "me", user_auth = True)
+my_id = my_info.data.id
+
+# get all tweets that mention me
+mentions = client.get_users_mentions(id = my_id)
+
+# import profanity checking library
+from profanity_check import predict
+
+# start a list of mentions that have curse words
+cursing_mentions = []
+
+# Go through the tweets to see which ones have curse words
+for mention in mentions.data:
+    # check if the tweet has a curse word
+    if(predict(mention.text))[0] == 1):
+       # if it did have a curse word, put it in the cursing mentions list
+       cursing_mentions.append(mention)
+
+
+########  Look up the users who posted those tweets  ########
+
+# start a list of users to block (starts out empty)
+users_to_block = []
+
+# Go through each cursing mention tweet
+for cursing_mention in cursing_mentions:
+    # look up the user id for each cursing tweet, and add it to the list of users to block
+    users_to_block.append(tweet.author_id)
+
+
+########  Block those users  ########
+
+# Go through each of the users to block
+for user_to_block in users_to_block:
+    # block the user
+    client.block(target_user_id)
 ```
 ````
 
-We will show how to use statements in Python in the next section.
+We will show how to use statements in Python in the next section of this chapter: ([](02_demo_basic_flow.ipynb)).
 
 ## Variables: Save information for later
 Variables are a way of saving information on the computer, so we can use it later in the computer program.
@@ -107,8 +153,11 @@ For example I might save my first and last name separately in the computer, then
 ```
 ````{admonition} Click to see actual code
 :class: dropdown
+You are not expected to understand all this code. It is here to give you an examples of what code looks like.
+
+Note: This code is untested and we may have made programming errors
 ```python
-# TODO: Import tweepy and copy in login steps here
+# TODO: Copy tweepy and login steps here
 
 first_name = "Kyle"
 last_name = "Thayer"
@@ -122,8 +171,28 @@ client.create_tweet(text="Hello my name is " + full_name)
 Or, when I am looking something up, like my latest tweets, I can save that in a variable so I can look up replies to those tweets the next step:
 ```text
 - Find my latest tweet, and save it as a variable named "my_latest_tweet"
-- Search for all tweets that are a reply to the tweet saved in the variable "my_latest_tweet"
+- Search for all tweets that are in the same conversation as my latest tweet, and save them in the variable "my_latest_tweet_replies"
 ```
+
+````{admonition} Click to see actual code
+:class: dropdown
+You are not expected to understand all this code. It is here to give you an examples of what code looks like.
+
+Note: This code is untested and we may have made programming errors
+```python
+# TODO: Copy tweepy and login steps here
+
+# get my twitter id
+my_info = client.get_user(id = "me", user_auth = True)
+my_id = my_info.data.id
+
+# Get my latest tweet (and get the conversation id for that tweet)
+my_latest_tweet = client.get_users_tweets(my_id,  tweet_fields=['conversation_id'])[0]
+
+# Search for tweets that are in the same conversation as my latest tweet
+my_latest_tweet_conversation = client.Client.search_recent_tweets("conversation_id:" + str(my_latest_tweet.data.conversation_id))
+```
+````
 
 We will show how to use variables in Python in the next section.
 
@@ -141,6 +210,15 @@ Within programming, it might look like:
 - Whenever someone tags me in a post
   - like their post which has me tagged
 ```
+
+
+````{admonition} Click to see a note on Python
+:class: dropdown
+Note: Python isn't by default set up with event style programming. We won't be directly doing event programming in this book.
+
+We will be doing the Pausing/Scheduling below, which you can use to do some of the same things (e.g., check in every five minutes to see if there are new tweets that tag me).
+````
+
 
 ### Pausing/Scheduling
 One of the most common events to program for is around time: We can also tell programs to wait for a period of time, or start at a given time.
