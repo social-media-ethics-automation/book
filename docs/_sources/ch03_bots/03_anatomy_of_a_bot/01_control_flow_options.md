@@ -48,6 +48,8 @@ Twitter bots are generally organized in this same way, so one bot might be organ
 :class: dropdown
 You are not expected to understand all this code. It is here to give you an examples of what code looks like.
 
+Also, you'll notice that the actual code has a lot more steps then our psuedocode above has.
+
 Note: This code is untested and we may have made programming errors
 ```python
 
@@ -194,7 +196,7 @@ my_latest_tweet_conversation = client.Client.search_recent_tweets("conversation_
 ```
 ````
 
-We will show how to use variables in Python in the next section.
+We will show how to use variables in Python in the next section ([](02_demo_basic_flow.ipynb)).
 
 
 ## Events: When you do something depends
@@ -239,13 +241,79 @@ In programming, it might look like:
 - Post this set of tweets, pausing 30 seconds between each tweet
 ```
 
+````{admonition} Click to see actual code
+:class: dropdown
+You are not expected to understand all this code. It is here to give you an examples of what code looks like.
+
+Note: This code is untested and we may have made programming errors
+```python
+# TODO: Copy tweepy and login steps here
+
+# load a library that gives us a pause action (called sleep)
+import time
+
+# post a tweet
+client.create_tweet(text="I am a bot pretending to slowly type in a series of tweets.")
+
+# pause for 30 seconds
+time.sleep(30)
+
+# post a tweet
+client.create_tweet(text="This is my second tweet.")
+
+# pause for 30 seconds
+time.sleep(30)
+
+# post a tweet
+client.create_tweet(text="It takes a little while for me to pretend to type up each of these tweets")
+
+# pause for 30 seconds
+time.sleep(30)
+
+client.create_tweet(text="here is my final tweet")
+
+```
+````
+
 Or
 
 ```text
-- every day at noon, post a report on the weather
+- every day at noon, post a tweet saying "It's lunchtime!"
 ```
 
-We will show how to use pausing in the next section.
+````{admonition} Click to see actual code
+:class: dropdown
+You are not expected to understand all this code. It is here to give you an examples of what code looks like.
+
+Note: This code is untested and we may have made programming errors
+```python
+# TODO: Copy tweepy and login steps here
+
+# load a library that gives us a scheduling actions
+import schedule
+
+# Define a function that when run will say that it is lunchtime
+def say_it_is_lunchtime():
+    # when the function is run, post a tweet
+    client.create_tweet(text="It's lunchtime!")
+
+
+# schedule the "say_it_is_lunchtime" function to run every day at noon
+schedule.every().day.at("12:00").do(say_it_is_lunchtime)
+
+
+# Loop forever, once a second running every task that needs to be run
+while True:
+    # if any tasks are ready to run, run them
+    schedule.run_pending()
+    # pause for 1 second before checking again
+    time.sleep(1)
+
+```
+````
+
+
+We will show how to use pausing in the next section ([](02_demo_basic_flow.ipynb)).
 
 We will show how to use other Events and Scheduling in Python in Chapter 18: Public Shaming.
 
@@ -264,9 +332,33 @@ In cooking, we might taste for seasoning and change our course of action dependi
 In programming, we might do this:
 ```text
 - look up the latest tweet mentioning me
-  - if that tweet says "delete your account", then delete my account
-  - otherwise, don't delete my account
+  - if that tweet says "It's time to go", then post "Let's go!"
+  - otherwise, post "I am still waiting"
 ```
+
+
+````{admonition} Click to see actual code
+:class: dropdown
+You are not expected to understand all this code. It is here to give you an examples of what code looks like.
+
+Note: This code is untested and we may have made programming errors
+```python
+# TODO: Copy tweepy and login steps here
+
+# get my twitter id
+my_info = client.get_user(id = "me", user_auth = True)
+my_id = my_info.data.id
+
+# get the latest tweet that mentions me
+latest_mention = client.get_users_mentions(id = my_id).data[0]
+
+if "It's time to go" in latest_mention.text:
+   client.create_tweet(text="Let's go!")
+else:
+   client.create_tweet(text="I am still waiting")
+
+```
+````
 
 We will show how to use conditionals in Chapter 7: Trolling.
 
@@ -296,16 +388,65 @@ In computer programming you can repeat an action a set number of times
 - Tweet this 100 times: "Warner Brothers should <a href="https://www.rollingstone.com/tv-movies/tv-movie-features/justice-league-the-snyder-cut-bots-fans-1384231/">#ReleaseTheSnyderCut</a> of the Justice League movie."
 </pre>
 
+````{admonition} Click to see actual code
+:class: dropdown
+You are not expected to understand all this code. It is here to give you an examples of what code looks like.
+
+If you try this yourself, it wont post 100 times, since the twitter blocks you from repeating the same exact tweet repeatedly.
+
+Note: This code is untested and we may have made programming errors
+```python
+# TODO: Copy tweepy and login steps here
+
+# repeat this action 100 times
+for i in range(100):
+    # post a tweet
+    client.create_tweet(text="Warner Brothers should #ReleaseTheSnyderCut of the Justice League movie.")
+
+```
+````
+
 Or a computer program can repeat an action to a set of items
 
 ```text
-- Like each of the tweets that were replies to my latest tweet
+- Like each of the tweets that were in the same conversation as my latest tweet
 ```
+
+````{admonition} Click to see actual code
+:class: dropdown
+You are not expected to understand all this code. It is here to give you an examples of what code looks like.
+
+Note: This code is untested and we may have made programming errors
+```python
+# TODO: Copy tweepy and login steps here
+
+# Get my latest tweet (and get the conversation id for that tweet)
+my_latest_tweet = client.get_users_tweets(my_id,  tweet_fields=['conversation_id'])[0]
+
+# Search for tweets that are in the same conversation as my latest tweet
+my_latest_tweet_conversation = client.Client.search_recent_tweets("conversation_id:" + str(my_latest_tweet.data.conversation_id))
+
+# repeat this action for all the tweets in the conversation
+for tweet in my_latest_tweet_conversation.data:
+    # like the tweet
+    client.like(tweet.id)
+
+```
+````
+
+
 
 Or a computer program can repeat an action until a condition is met:
 ```text
-- Keep sending private messages to this person until they block me
+- Keep sending private messages to this person until they say "Stop it!"
 ```
+
+````{admonition} Click to see a note
+:class: dropdown
+Note: I am not going to directly give you code for harassing someone.
+
+As for repeating an action until a condition is met, those are done with [while loops](https://www.w3schools.com/python/python_while_loops.asp). You can use these if you have a legitimate, non-harassment use.
+````
 
 We will show how to use loops in Chapter 5: History of Social Media.
 
