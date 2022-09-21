@@ -445,7 +445,7 @@ Or a computer program can repeat an action until a condition is met:
 :class: dropdown
 Note: I am not going to directly give you code for harassing someone.
 
-As for repeating an action until a condition is met, those are done with [while loops](https://www.w3schools.com/python/python_while_loops.asp). You can use these if you have a legitimate, non-harassment use.
+As for repeating an action until a condition is met, those are done with [while loops](https://www.w3schools.com/python/python_while_loops.asp). Feel free to use while loops when you have a legitimate, non-harassment use.
 ````
 
 We will show how to use loops in Chapter 5: History of Social Media.
@@ -511,7 +511,7 @@ In this book, we will be using the [tweepy](https://www.tweepy.org/) code librar
 
 You may be able to figure out what the purpose of each of those tweepy functions are based on the name, though we'll look at the specifics of how to use them throughout the book.
 
-If you look back over the various psuedocode examples above, most of them would involve calling various functions, such as those tweepy functions.
+If you look back over the various psuedocode and code examples above, most of them involve calling various functions, such as those tweepy functions. Additionally the scheduling example code includes defining a new function and using it.
 
 We will show examples of calling functions starting in the next section.
 
