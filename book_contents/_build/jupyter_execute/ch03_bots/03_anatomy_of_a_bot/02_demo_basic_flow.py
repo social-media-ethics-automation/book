@@ -1,7 +1,42 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Demo: Statements and Variables
+# # Demo: Statements, Variables, and Sleep
+
+# ## Statements
+# As we said before, a computer program in a programming language like Python is often composed of a list of statements, that is steps to be run in order:
+# ```text
+# - statement 1
+# - statement 2
+# - statement 3
+# ```
+# 
+# In Python, generally each new line of code is a new statement, to be run after the previous statement.
+# 
+# We will start writing statements using a line of code that looks like this:
+# 
+# ```display("Ethics might be relevant!")```
+# 
+# This line of code will display the text in the quotes ("Ethics might be relevant!") below the code, as you can see below, in a program that has one statement:
+
+# In[1]:
+
+
+display("Ethics might be relevant!")
+
+
+# Now let's try several statements in a row, with mulitple lines of code that display text:
+
+# In[2]:
+
+
+display("This book is about:")
+display("  - Social Media")
+display("  - Ethics")
+display("  - Automation")
+
+
+# Now that we've made multple statements in a row, let's do something a little more complicated than just displaying text by using variables.
 
 # ## Variables and assignment (single "=")
 # Variables are a place in the computer where a piece of information is saved with a particular name.
@@ -24,14 +59,14 @@
 # 
 # Note: Variable names can't have spaces in them, and can't start with a number
 
-# In[1]:
+# In[3]:
 
 
 num_days = 3
 num_days * 3
 
 
-# In[2]:
+# In[4]:
 
 
 # TODO: More demos: (saving, seeing result, using to save new variable)
@@ -41,7 +76,7 @@ hours = days * 24
 minutes = hours * 60
 
 
-# In[3]:
+# In[5]:
 
 
 # try updating years
@@ -50,13 +85,13 @@ years = 4
 # that were made based on years
 
 
-# In[4]:
+# In[6]:
 
 
 years = years + 1
 
 
-# In[5]:
+# In[7]:
 
 
 minutes
@@ -77,7 +112,7 @@ minutes
 # * When the code intepreter sees the function call, it runs the code in the function wiht the inputs, and then puts the output in the place where that function call was
 # * The results of the function can be stored in a variable, used in a formula, or used as an argument for another function
 
-# In[6]:
+# In[8]:
 
 
 # I need to load the time library in order to use sleep

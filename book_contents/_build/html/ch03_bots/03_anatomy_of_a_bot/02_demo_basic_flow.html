@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>3.3.2. Demo: Statements and Variables &#8212; Social Media, Ethics, and Automation</title>
+    <title>3.3.2. Demo: Statements, Variables, and Sleep &#8212; Social Media, Ethics, and Automation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -338,7 +338,7 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       3.3.2. Demo: Statements and Variables
+       3.3.2. Demo: Statements, Variables, and Sleep
       </a>
      </li>
      <li class="toctree-l3">
@@ -1506,6 +1506,11 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#statements">
+   Statements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#variables-and-assignment-single">
    Variables and assignment (single “=”)
   </a>
@@ -1539,7 +1544,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Demo: Statements and Variables</h1>
+                <h1>Demo: Statements, Variables, and Sleep</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1549,6 +1554,11 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#statements">
+   Statements
+  </a>
+ </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#variables-and-assignment-single">
    Variables and assignment (single “=”)
@@ -1584,8 +1594,59 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="demo-statements-and-variables">
-<h1><span class="section-number">3.3.2. </span>Demo: Statements and Variables<a class="headerlink" href="#demo-statements-and-variables" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="demo-statements-variables-and-sleep">
+<h1><span class="section-number">3.3.2. </span>Demo: Statements, Variables, and Sleep<a class="headerlink" href="#demo-statements-variables-and-sleep" title="Permalink to this headline">#</a></h1>
+<section id="statements">
+<h2>Statements<a class="headerlink" href="#statements" title="Permalink to this headline">#</a></h2>
+<p>As we said before, a computer program in a programming language like Python is often composed of a list of statements, that is steps to be run in order:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- statement 1
+- statement 2
+- statement 3
+</pre></div>
+</div>
+<p>In Python, generally each new line of code is a new statement, to be run after the previous statement.</p>
+<p>We will start writing statements using a line of code that looks like this:</p>
+<p><code class="docutils literal notranslate"><span class="pre">display(&quot;Ethics</span> <span class="pre">might</span> <span class="pre">be</span> <span class="pre">relevant!&quot;)</span></code></p>
+<p>This line of code will display the text in the quotes (“Ethics might be relevant!”) below the code, as you can see below, in a program that has one statement:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;Ethics might be relevant!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Ethics might be relevant!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let’s try several statements in a row, with mulitple lines of code that display text:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;This book is about:&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;  - Social Media&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;  - Ethics&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;  - Automation&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;This book is about:&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;  - Social Media&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;  - Ethics&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;  - Automation&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that we’ve made multple statements in a row, let’s do something a little more complicated than just displaying text by using variables.</p>
+</section>
 <section id="variables-and-assignment-single">
 <h2>Variables and assignment (single “=”)<a class="headerlink" href="#variables-and-assignment-single" title="Permalink to this headline">#</a></h2>
 <p>Variables are a place in the computer where a piece of information is saved with a particular name.</p>
@@ -1699,7 +1760,7 @@ title="Print to PDF"
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [6],</span> in <span class="ni">&lt;cell line: 14&gt;</span><span class="nt">()</span>
+<span class="nn">Input In [8],</span> in <span class="ni">&lt;cell line: 14&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">display</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="ne">---&gt; </span><span class="mi">14</span> <span class="n">display</span><span class="p">(</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
