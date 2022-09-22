@@ -1,4 +1,4 @@
-# History of Social Media
+# (Incomplete) History of Social Media
 
 TODO: summary statement here
 
