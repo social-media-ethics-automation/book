@@ -97,7 +97,7 @@ years = years + 1
 minutes
 
 
-# ## Calling Functions
+# ## Sleep
 # 
 # A function is a named section of pre-written code. 
 # 
@@ -212,17 +212,7 @@ my_num = 5 / 0
 # In[ ]:
 
 
-get_ipython().system('pip install tweepy')
-import tweepy
-import bot_keys
 
-client = tweepy.Client(consumer_key=bot_keys.consumer_key, consumer_secret=bot_keys.consumer_secret,
-                       access_token=bot_keys.access_token, access_token_secret=bot_keys.access_token_secret)
-
-client.create_tweet(text="This tweet was posted by a computer program!")
-
-for x in range(10):
-      client.create_tweet(text="test Computer program posting tweet " + str(x))
 
 
 # In[ ]:
