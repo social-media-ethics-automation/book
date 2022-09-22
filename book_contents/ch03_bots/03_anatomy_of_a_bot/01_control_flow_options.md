@@ -325,8 +325,9 @@ In cooking, we might taste for seasoning and change our course of action dependi
 ```text
 - Taste the filling.
   - If it is good, proceed to the next section.
-  - If it is not quite right, decide if it needs more salt or more acid.
-  - Add some of what is needed, and repeat this step until you are happy.
+  - Otherwise (if it is not quite right)
+    - If it needs more salt, add more salt
+    - If it needs some brightness, add a small amount for lemon juice or white rice vinegar
 ```
 
 In programming, we might do this:
