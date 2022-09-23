@@ -1547,6 +1547,23 @@ title="Print to PDF"
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-to-do-with-error-messages">
+   What To Do With Error Messages
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unauthorized-error">
+     Unauthorized Error:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#duplicate-error">
+     Duplicate Error:
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </nav>
@@ -1604,6 +1621,23 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#step-6-modify-the-code-above-to-post-a-different-tweet">
      Step 6: Modify the code above to post a different tweet
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-to-do-with-error-messages">
+   What To Do With Error Messages
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unauthorized-error">
+     Unauthorized Error:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#duplicate-error">
+     Duplicate Error:
     </a>
    </li>
   </ul>
@@ -1717,6 +1751,27 @@ title="Print to PDF"
 <section id="step-6-modify-the-code-above-to-post-a-different-tweet">
 <h3>Step 6: Modify the code above to post a different tweet<a class="headerlink" href="#step-6-modify-the-code-above-to-post-a-different-tweet" title="Permalink to this headline">#</a></h3>
 <p>Note: If you try to post the same exact tweet twice in a row on real twitter, you will get an error message (it will be a lot of red text, which can be intimidating, but it just means you aren’t allowed to post the same tweet twice in a row).</p>
+</section>
+</section>
+<section id="what-to-do-with-error-messages">
+<h2>What To Do With Error Messages<a class="headerlink" href="#what-to-do-with-error-messages" title="Permalink to this headline">#</a></h2>
+<p>If you run this code trying to connect to a real twitter account, there are different error messages you might get.</p>
+<p>When you get an error message, there is often a lot of text and details about when and where exactly the error happened, which can look very intimidating. But we’ll highlight the parts you need to pay attention to.</p>
+<section id="unauthorized-error">
+<h3>Unauthorized Error:<a class="headerlink" href="#unauthorized-error" title="Permalink to this headline">#</a></h3>
+<p><img alt="a screenshot of an unauthorized error message. It is a big red box with a lot of text about different pieces of code, but at the bottom, we highlighted text that says: &quot;Unauthorized: 401 Unauthorized Unauthorized&quot;" src="../../_images/error-unauthorized_small.png" /></p>
+<p>If your special passwords in bot_keys.py aren’t working, you might a 401 unauthorized error. To fix this:</p>
+<ul class="simple">
+<li><p>make sure you have all the special passwords in the bot_keys.py file (you may need to regenerate them)</p></li>
+<li><p>make sure the bot_keys file is saved (a dark circle on the tab means it isn’t saved)</p></li>
+<li><p>make sure to restart the kernal on this tab.</p></li>
+</ul>
+<p>Hopefully that fixes it, otherwise talk to your TA or the instructor</p>
+</section>
+<section id="duplicate-error">
+<h3>Duplicate Error:<a class="headerlink" href="#duplicate-error" title="Permalink to this headline">#</a></h3>
+<p><img alt="a screenshot of an Forbidden Duplicate error message. It is a big red box with a lot of text about different pieces of code, but at the bottom, we highlighted text that says: &quot;Forbidden: 403 Forbidden You are not allowed to create a tweet with duplicate content.&quot;" src="../../_images/error-duplicate_small.png" /></p>
+<p>If you get this message, it just means you are trying to post the same tweet again, which twitter doesn’t want you to do. Change the text of the tweet you are trying to make and it should hopefully work.</p>
 </section>
 </section>
 </section>

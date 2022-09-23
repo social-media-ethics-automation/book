@@ -17,31 +17,28 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# I need to load the time library in order to use sleep
-import time
 
-# TODO: Demo functions with no returns (display, print, sleep)
-message = "Hello World!"
-display(message)
+```
+num_days = 3
+```
 
-time.sleep(2)
+The code above saves the number 3 into the variable called "num_days"
 
-display(3)
+Variables can then be referred to by just typing their name. You can even make a formula with their name
 
-time.sleep(5)
+```
+num_days * 3
+```
 
-display(pi * 2)
-print(message)
+The code above will give the number 9 (3 times the number of days, which was 3)
+
+Note: Variable names can't have spaces in them, and can't start with a number
 ------------------
 
-[1;31m---------------------------------------------------------------------------[0m
-[1;31mNameError[0m                                 Traceback (most recent call last)
-Input [1;32mIn [8][0m, in [0;36m<cell line: 14>[1;34m()[0m
-[0;32m     10[0m display([38;5;241m3[39m)
-[0;32m     12[0m time[38;5;241m.[39msleep([38;5;241m5[39m)
-[1;32m---> 14[0m display([43mpi[49m [38;5;241m*[39m [38;5;241m2[39m)
-[0;32m     15[0m [38;5;28mprint[39m(message)
+[1;36m  Input [1;32mIn [4][1;36m[0m
+[1;33m    ```[0m
+[1;37m    ^[0m
+[1;31mSyntaxError[0m[1;31m:[0m invalid syntax
 
-[1;31mNameError[0m: name 'pi' is not defined
-NameError: name 'pi' is not defined
+SyntaxError: invalid syntax (3037644105.py, line 1)
 

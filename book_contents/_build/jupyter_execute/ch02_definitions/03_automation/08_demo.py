@@ -97,3 +97,25 @@ client.create_tweet(text="This tweet was posted by a computer program!")
 
 
 
+
+# ## What To Do With Error Messages
+# 
+# If you run this code trying to connect to a real twitter account, there are different error messages you might get. 
+# 
+# When you get an error message, there is often a lot of text and details about when and where exactly the error happened, which can look very intimidating. But we'll highlight the parts you need to pay attention to.
+# 
+# ### Unauthorized Error:
+# ![a screenshot of an unauthorized error message. It is a big red box with a lot of text about different pieces of code, but at the bottom, we highlighted text that says: "Unauthorized: 401 Unauthorized Unauthorized"](error-unauthorized_small.png)
+# 
+# If your special passwords in bot_keys.py aren't working, you might a 401 unauthorized error. To fix this:
+# - make sure you have all the special passwords in the bot_keys.py file (you may need to regenerate them)
+# - make sure the bot_keys file is saved (a dark circle on the tab means it isn't saved)
+# - make sure to restart the kernal on this tab.
+# 
+# Hopefully that fixes it, otherwise talk to your TA or the instructor
+# 
+# 
+# ### Duplicate Error:
+# ![a screenshot of an Forbidden Duplicate error message. It is a big red box with a lot of text about different pieces of code, but at the bottom, we highlighted text that says: "Forbidden: 403 Forbidden You are not allowed to create a tweet with duplicate content."](error-duplicate_small.png)
+# 
+# If you get this message, it just means you are trying to post the same tweet again, which twitter doesn't want you to do. Change the text of the tweet you are trying to make and it should hopefully work.

@@ -4,7 +4,7 @@
 # # Demo: Statements, Variables, and Sleep
 
 # ## Statements
-# As we said before, a computer program in a programming language like Python is often composed of a list of statements, that is steps to be run in order:
+# As we said before, a computer program in a programming language like Python is often composed of a list of statements, that is steps to be run in order (like a recipe):
 # ```text
 # - statement 1
 # - statement 2
@@ -13,7 +13,7 @@
 # 
 # In Python, generally each new line of code is a new statement, to be run after the previous statement.
 # 
-# We will start writing statements using a line of code that looks like this:
+# We will start writing statements using a line of code that looks like this which runs a function called `display`:
 # 
 # ```display("Ethics might be relevant!")```
 # 
@@ -39,34 +39,51 @@ display("  - Automation")
 # Now that we've made multple statements in a row, let's do something a little more complicated than just displaying text by using variables.
 
 # ## Variables and assignment (single "=")
-# Variables are a place in the computer where a piece of information is saved with a particular name.
 # 
-# To store something in a variable, put it on the left of a single "=" symbol, with the right side of the symbol being the thing (or formula) whose value you want to save in it. For example:
+# As we said in the previous section, Variables are a way of saving information on the computer, so we can use it later in the computer program, similar to how we might put mix ingredients in different bowls, using the mix from each bowl at the relevant time.
 # 
-# ```
-# num_days = 3
-# ```
+# In a computer program, these variables are given names so we can more easily get the information back out again.
 # 
-# The code above saves the number 3 into the variable called "num_days"
-# 
-# Variables can then be referred to by just typing their name. You can even make a formula with their name
-# 
-# ```
-# num_days * 3
-# ```
-# 
-# The code above will give the number 9 (3 times the number of days, which was 3)
-# 
-# Note: Variable names can't have spaces in them, and can't start with a number
+# To store something in a variable (called "assigning" it a value), write the variable name, followed by an "=" symbol, followed by whatever we want to save in the variable. For example:
 
 # In[3]:
+
+
+greetings_message = "Hello and welcome to programming with variables!"
+
+
+# The line of code above saved the text "Hello and welcome to programming with variables!" into a variable called "greetings_message"
+# 
+# Since this was just saving something into
+
+# In[4]:
+
+
+```
+num_days = 3
+```
+
+The code above saves the number 3 into the variable called "num_days"
+
+Variables can then be referred to by just typing their name. You can even make a formula with their name
+
+```
+num_days * 3
+```
+
+The code above will give the number 9 (3 times the number of days, which was 3)
+
+Note: Variable names can't have spaces in them, and can't start with a number
+
+
+# In[ ]:
 
 
 num_days = 3
 num_days * 3
 
 
-# In[4]:
+# In[ ]:
 
 
 # TODO: More demos: (saving, seeing result, using to save new variable)
@@ -76,7 +93,7 @@ hours = days * 24
 minutes = hours * 60
 
 
-# In[5]:
+# In[ ]:
 
 
 # try updating years
@@ -85,13 +102,13 @@ years = 4
 # that were made based on years
 
 
-# In[6]:
+# In[ ]:
 
 
 years = years + 1
 
 
-# In[7]:
+# In[ ]:
 
 
 minutes
@@ -112,7 +129,7 @@ minutes
 # * When the code intepreter sees the function call, it runs the code in the function wiht the inputs, and then puts the output in the place where that function call was
 # * The results of the function can be stored in a variable, used in a formula, or used as an argument for another function
 
-# In[8]:
+# In[2]:
 
 
 # I need to load the time library in order to use sleep
