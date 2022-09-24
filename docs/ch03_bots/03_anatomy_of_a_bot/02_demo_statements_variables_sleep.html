@@ -1598,14 +1598,14 @@ title="Print to PDF"
 <h1><span class="section-number">3.3.2. </span>Demo: Statements, Variables, and Sleep<a class="headerlink" href="#demo-statements-variables-and-sleep" title="Permalink to this headline">#</a></h1>
 <section id="statements">
 <h2>Statements<a class="headerlink" href="#statements" title="Permalink to this headline">#</a></h2>
-<p>As we said before, a computer program in a programming language like Python is often composed of a list of statements, that is steps to be run in order:</p>
+<p>As we said before, a computer program in a programming language like Python is often composed of a list of statements, that is steps to be run in order (like a recipe):</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- statement 1
 - statement 2
 - statement 3
 </pre></div>
 </div>
 <p>In Python, generally each new line of code is a new statement, to be run after the previous statement.</p>
-<p>We will start writing statements using a line of code that looks like this:</p>
+<p>We will start writing statements using a line of code that looks like this which runs a function called <code class="docutils literal notranslate"><span class="pre">display</span></code>:</p>
 <p><code class="docutils literal notranslate"><span class="pre">display(&quot;Ethics</span> <span class="pre">might</span> <span class="pre">be</span> <span class="pre">relevant!&quot;)</span></code></p>
 <p>This line of code will display the text in the quotes (“Ethics might be relevant!”) below the code, as you can see below, in a program that has one statement:</p>
 <div class="cell docutils container">
@@ -1649,27 +1649,52 @@ title="Print to PDF"
 </section>
 <section id="variables-and-assignment-single">
 <h2>Variables and assignment (single “=”)<a class="headerlink" href="#variables-and-assignment-single" title="Permalink to this headline">#</a></h2>
-<p>Variables are a place in the computer where a piece of information is saved with a particular name.</p>
-<p>To store something in a variable, put it on the left of a single “=” symbol, with the right side of the symbol being the thing (or formula) whose value you want to save in it. For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">num_days</span> <span class="o">=</span> <span class="mi">3</span>
-</pre></div>
-</div>
-<p>The code above saves the number 3 into the variable called “num_days”</p>
-<p>Variables can then be referred to by just typing their name. You can even make a formula with their name</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">num_days</span> <span class="o">*</span> <span class="mi">3</span>
-</pre></div>
-</div>
-<p>The code above will give the number 9 (3 times the number of days, which was 3)</p>
-<p>Note: Variable names can’t have spaces in them, and can’t start with a number</p>
+<p>As we said in the previous section, Variables are a way of saving information on the computer, so we can use it later in the computer program, similar to how we might put mix ingredients in different bowls, using the mix from each bowl at the relevant time.</p>
+<p>In a computer program, these variables are given names so we can more easily get the information back out again.</p>
+<p>To store something in a variable (called “assigning” it a value), write the variable name, followed by an “=” symbol, followed by whatever we want to save in the variable. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_days</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">num_days</span> <span class="o">*</span> <span class="mi">3</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greetings_message</span> <span class="o">=</span> <span class="s2">&quot;Hello and welcome to programming with variables!&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The line of code above saved the text “Hello and welcome to programming with variables!” into a variable called “greetings_message”</p>
+<p>Since this was just saving something into</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+```
+num_days = 3
+```
+
+The code above saves the number 3 into the variable called &quot;num_days&quot;
+
+Variables can then be referred to by just typing their name. You can even make a formula with their name
+
+```
+num_days * 3
+```
+
+The code above will give the number 9 (3 times the number of days, which was 3)
+
+Note: Variable names can&#39;t have spaces in them, and can&#39;t start with a number
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  Input In [4]
+    ```
+    ^
+SyntaxError: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_days</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">num_days</span> <span class="o">*</span> <span class="mi">3</span>
 </pre></div>
 </div>
 </div>
@@ -1705,11 +1730,6 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">minutes</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1576800
 </pre></div>
 </div>
 </div>
@@ -1760,7 +1780,7 @@ title="Print to PDF"
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [8],</span> in <span class="ni">&lt;cell line: 14&gt;</span><span class="nt">()</span>
+<span class="nn">Input In [2],</span> in <span class="ni">&lt;cell line: 14&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">display</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="ne">---&gt; </span><span class="mi">14</span> <span class="n">display</span><span class="p">(</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
