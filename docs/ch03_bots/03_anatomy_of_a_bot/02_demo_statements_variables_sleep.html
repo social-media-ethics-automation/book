@@ -466,7 +466,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../ch04_data/06_learn_more.html">
-     4.6. Learn more
+     4.8. Learn more
     </a>
    </li>
   </ul>
@@ -520,22 +520,22 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../ch05_history/05_antisocial_media.html">
-     5.5. The Rise of Antisocial Media
+     5.6. The Rise of Antisocial Media
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../ch05_history/06_social_media_goals.html">
-     5.6. Social Media Goals
+     5.7. Social Media Goals
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../ch05_history/07_reflections.html">
-     5.7. Reflection Activities
+     5.8. Reflection Activities
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../ch05_history/08_learn_more.html">
-     5.8. Learn More
+     5.9. Learn More
     </a>
    </li>
   </ul>
@@ -1514,25 +1514,47 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#variables-and-assignment-single">
    Variables and assignment (single “=”)
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#saving-a-text-value">
+     Saving a text value
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#displaying-a-value">
+     Displaying a value
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#storing-numbers">
+     Storing numbers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#displaying-multiple-variables">
+     Displaying multiple variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#taking-from-variables-and-storing-in-new-variable">
+     Taking from variables and storing in new variable
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#updating-a-variable-value">
+     Updating a variable value
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#other-options-for-displaying">
+     Other options for displaying
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sleep">
-   Sleep
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#for-loops">
-   for loops
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#error-demos">
-   Error demos
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#last-lecture-s-code">
-   Last lecture’s code
+  <a class="reference internal nav-link" href="#sleep-pausing">
+   Sleep (pausing)
   </a>
  </li>
 </ul>
@@ -1563,25 +1585,47 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#variables-and-assignment-single">
    Variables and assignment (single “=”)
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#saving-a-text-value">
+     Saving a text value
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#displaying-a-value">
+     Displaying a value
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#storing-numbers">
+     Storing numbers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#displaying-multiple-variables">
+     Displaying multiple variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#taking-from-variables-and-storing-in-new-variable">
+     Taking from variables and storing in new variable
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#updating-a-variable-value">
+     Updating a variable value
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#other-options-for-displaying">
+     Other options for displaying
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sleep">
-   Sleep
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#for-loops">
-   for loops
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#error-demos">
-   Error demos
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#last-lecture-s-code">
-   Last lecture’s code
+  <a class="reference internal nav-link" href="#sleep-pausing">
+   Sleep (pausing)
   </a>
  </li>
 </ul>
@@ -1607,7 +1651,7 @@ title="Print to PDF"
 <p>In Python, generally each new line of code is a new statement, to be run after the previous statement.</p>
 <p>We will start writing statements using a line of code that looks like this which runs a function called <code class="docutils literal notranslate"><span class="pre">display</span></code>:</p>
 <p><code class="docutils literal notranslate"><span class="pre">display(&quot;Ethics</span> <span class="pre">might</span> <span class="pre">be</span> <span class="pre">relevant!&quot;)</span></code></p>
-<p>This line of code will display the text in the quotes (“Ethics might be relevant!”) below the code, as you can see below, in a program that has one statement:</p>
+<p>Below you will see this line of code (one statement), and right below it will be displayed the text in the quotes (“Ethics might be relevant!”).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;Ethics might be relevant!&quot;</span><span class="p">)</span>
@@ -1651,6 +1695,8 @@ title="Print to PDF"
 <h2>Variables and assignment (single “=”)<a class="headerlink" href="#variables-and-assignment-single" title="Permalink to this headline">#</a></h2>
 <p>As we said in the previous section, Variables are a way of saving information on the computer, so we can use it later in the computer program, similar to how we might put mix ingredients in different bowls, using the mix from each bowl at the relevant time.</p>
 <p>In a computer program, these variables are given names so we can more easily get the information back out again.</p>
+<section id="saving-a-text-value">
+<h3>Saving a text value<a class="headerlink" href="#saving-a-text-value" title="Permalink to this headline">#</a></h3>
 <p>To store something in a variable (called “assigning” it a value), write the variable name, followed by an “=” symbol, followed by whatever we want to save in the variable. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1659,230 +1705,247 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>The line of code above saved the text “Hello and welcome to programming with variables!” into a variable called “greetings_message”</p>
-<p>Since this was just saving something into</p>
+<p>The line of code above saved the text “Hello and welcome to programming with variables!” into a variable called “<code class="docutils literal notranslate"><span class="pre">greetings_message</span></code>”</p>
+<p>Since this was just saving something into the computer, there is nothing displayed after we run that line of code.</p>
+<p>Note: The <code class="docutils literal notranslate"><span class="pre">=</span></code> symbol in Python does not mean the same thing it does in a math formula. In a math formula, “=” means that both sides of the equation are the same (like “1 + 1 = 2”). In Python, <code class="docutils literal notranslate"><span class="pre">=</span></code> means that the value on the right gets stored into the variable on the left (this is called “assignment”, that is, assigning a value into a variable).</p>
+</section>
+<section id="displaying-a-value">
+<h3>Displaying a value<a class="headerlink" href="#displaying-a-value" title="Permalink to this headline">#</a></h3>
+<p>If we want to see what we saved in the variable we can display it using the display function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
-```
-num_days = 3
-```
-
-The code above saves the number 3 into the variable called &quot;num_days&quot;
-
-Variables can then be referred to by just typing their name. You can even make a formula with their name
-
-```
-num_days * 3
-```
-
-The code above will give the number 9 (3 times the number of days, which was 3)
-
-Note: Variable names can&#39;t have spaces in them, and can&#39;t start with a number
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">greetings_message</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  Input In [4]
-    ```
-    ^
-SyntaxError: invalid syntax
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_days</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">num_days</span> <span class="o">*</span> <span class="mi">3</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: More demos: (saving, seeing result, using to save new variable)</span>
-<span class="n">years</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">days</span> <span class="o">=</span> <span class="n">years</span> <span class="o">*</span> <span class="mi">365</span>
-<span class="n">hours</span> <span class="o">=</span> <span class="n">days</span> <span class="o">*</span> <span class="mi">24</span>
-<span class="n">minutes</span> <span class="o">=</span> <span class="n">hours</span> <span class="o">*</span> <span class="mi">60</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># try updating years</span>
-<span class="n">years</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="c1"># it doesn&#39;t update previous variables </span>
-<span class="c1"># that were made based on years</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">years</span> <span class="o">=</span> <span class="n">years</span> <span class="o">+</span> <span class="mi">1</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">minutes</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello and welcome to programming with variables!&#39;
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="sleep">
-<h2>Sleep<a class="headerlink" href="#sleep" title="Permalink to this headline">#</a></h2>
-<p>A function is a named section of pre-written code.</p>
-<p>Functions can take inputs</p>
+<section id="storing-numbers">
+<h3>Storing numbers<a class="headerlink" href="#storing-numbers" title="Permalink to this headline">#</a></h3>
+<p>We can also store numbers in variables. For example, we can save</p>
 <ul class="simple">
-<li><p>Inputs go in parenthese after the function name</p></li>
-<li><p>These inputs are called “parameters” or “arguments”</p></li>
-<li><p>If there are multiple inputs, they are separated by commas</p></li>
-<li><p>You can also specify which input you are giving within the parenthesis by putting parameter_name=value</p></li>
+<li><p>the number of likes a tweet has in a variable called “<code class="docutils literal notranslate"><span class="pre">number_likes</span></code>”</p></li>
+<li><p>the number of replies a tweet has in a variable called “<code class="docutils literal notranslate"><span class="pre">number_replies</span></code>”</p></li>
+<li><p>the number of quote tweets a tweet has in a variable called “<code class="docutils literal notranslate"><span class="pre">number_quote_tweets</span></code>”</p></li>
 </ul>
-<p>Functions can also make outputs.</p>
-<ul class="simple">
-<li><p>Also called “returns” or “results”</p></li>
-<li><p>When the code intepreter sees the function call, it runs the code in the function wiht the inputs, and then puts the output in the place where that function call was</p></li>
-<li><p>The results of the function can be stored in a variable, used in a formula, or used as an argument for another function</p></li>
-</ul>
+<p>(We’re just invent numbers for these for now)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># I need to load the time library in order to use sleep</span>
-<span class="kn">import</span> <span class="nn">time</span>
-
-<span class="c1"># TODO: Demo functions with no returns (display, print, sleep)</span>
-<span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Hello World!&quot;</span>
-<span class="n">display</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-
-<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-
-<span class="n">display</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-
-<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-
-<span class="n">display</span><span class="p">(</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number_likes</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">number_replies</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">number_quote_tweets</span> <span class="o">=</span> <span class="mi">8</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Again, the computer shows no output after running these lines of code, but the computer now has numbers saved for “<code class="docutils literal notranslate"><span class="pre">number_likes</span></code>”, “<code class="docutils literal notranslate"><span class="pre">number_replies</span></code>”, and “<code class="docutils literal notranslate"><span class="pre">number_quote_tweets</span></code>”</p>
+</section>
+<section id="displaying-multiple-variables">
+<h3>Displaying multiple variables<a class="headerlink" href="#displaying-multiple-variables" title="Permalink to this headline">#</a></h3>
+<p>We can see what is saved in those variables by calling the <code class="docutils literal notranslate"><span class="pre">display</span></code> function again:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">number_likes</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">number_replies</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">number_quote_tweets</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello World!&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>30
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [2],</span> in <span class="ni">&lt;cell line: 14&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">display</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">14</span> <span class="n">display</span><span class="p">(</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;pi&#39; is not defined
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">string</span>
-<span class="kn">import</span> <span class="nn">math</span>
-
-<span class="c1"># TODO: Demo functions with returns (upper, isupper, sqrt, range, type)</span>
-<span class="n">message2</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
-<span class="n">message3</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-
-<span class="n">sqrt_years</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">years</span><span class="p">)</span>
-
-<span class="n">example_range</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span> <span class="nb">type</span><span class="p">(</span><span class="n">message2</span><span class="p">)</span> <span class="p">)</span>
-
-<span class="c1"># TODO: Demo a useful trick with functions (str)</span>
-<span class="n">first_name</span> <span class="o">=</span> <span class="s2">&quot;Kyle&quot;</span>
-<span class="n">last_name</span> <span class="o">=</span> <span class="s2">&quot;Thayer&quot;</span>
-
-<span class="n">combined_name</span> <span class="o">=</span> <span class="n">first_name</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">last_name</span>
-
-<span class="n">kyle_age</span> <span class="o">=</span> <span class="n">first_name</span> <span class="o">+</span> <span class="s2">&quot; is &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">38</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; years old&quot;</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="for-loops">
-<h2>for loops<a class="headerlink" href="#for-loops" title="Permalink to this headline">#</a></h2>
-<p>For loops allow you to repeat an action multiple times.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">loop_value</span> <span class="ow">in</span> <span class="n">thing_to_loop_over</span><span class="p">:</span>
-    <span class="c1"># Put actions to repeat here</span>
-</pre></div>
-</div>
-<p>For loops have to have something to loop over, which goes after “in”.</p>
-<ul class="simple">
-<li><p>You can use it with the function range to repeat an action a given number of times.</p></li>
-<li><p>You can use it on a list, though we’ll cover that more later.</p></li>
-</ul>
-<p>As the loop goes, it saves the current thing it is looking at in the temporary variable you list before the in.</p>
-<p>The commands you want to repeat need to be tabbed in one more level than the for statement to indicate they go inside the for loop.</p>
+<section id="taking-from-variables-and-storing-in-new-variable">
+<h3>Taking from variables and storing in new variable<a class="headerlink" href="#taking-from-variables-and-storing-in-new-variable" title="Permalink to this headline">#</a></h3>
+<p>In python we can look up variables and do something with them and save them into new variables. For example, if we consider “total engagement” of a tweet to be the sum of all the number of likes, replies, and quote tweets, we can calculate that and store it into a new variable:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Demo some for loops, including the one below</span>
-
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&lt;&lt;&lt;&lt;&lt; &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mi">4</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/40&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;^^^^^ &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mi">4</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/40&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&gt;&gt;&gt;&gt;&gt; &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mi">4</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/40&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;vvvvv &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mi">4</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/40&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">total_engagement</span> <span class="o">=</span> <span class="n">number_likes</span> <span class="o">+</span> <span class="n">number_replies</span> <span class="o">+</span> <span class="n">number_quote_tweets</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>And then we can see what was saved in that new variable:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#TODO: For loop &quot;are we there yet?&quot;</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="error-demos">
-<h2>Error demos<a class="headerlink" href="#error-demos" title="Permalink to this headline">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_num</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">total_engagement</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ZeroDivisionError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">Input In [3],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">my_num</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">0</span>
-
-<span class="ne">ZeroDivisionError</span>: division by zero
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="updating-a-variable-value">
+<h3>Updating a variable value<a class="headerlink" href="#updating-a-variable-value" title="Permalink to this headline">#</a></h3>
+<p>One particular trick we can do with variables is look up what is currently stored in the variable, update the value, and resave it into the same variable.</p>
+<p>For example if I have a variable called <code class="docutils literal notranslate"><span class="pre">current_likes</span></code> that has the the number 5 stored in it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">current_likes</span> <span class="o">=</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, if someone pressed the like button, we’d want to make that number one higher (6).</p>
+<p>To do this, we can look up the value in current likes and add 1 to it by writing <code class="docutils literal notranslate"><span class="pre">current_likes</span> <span class="pre">+</span> <span class="pre">1</span></code>, and then we can store this updated value into current_likes but putting <code class="docutils literal notranslate"><span class="pre">current_likes</span> <span class="pre">=</span></code> in front, like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">current_likes</span> <span class="o">=</span> <span class="n">current_likes</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Remember: the <code class="docutils literal notranslate"><span class="pre">=</span></code> sign in programming isn’t saying both sides are equal like in math, it is saying, take the value on the right of the <code class="docutils literal notranslate"><span class="pre">=</span></code>, and store it into the variable on the left of the <code class="docutils literal notranslate"><span class="pre">=</span></code>.</p>
+<p>We can display the current_likes and see it is now 6</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">current_likes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can run the same line of code again and see the number get higher each time</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">current_likes</span> <span class="o">=</span> <span class="n">current_likes</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">display</span><span class="p">(</span><span class="n">current_likes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#TODO Make code run out of order</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">current_likes</span> <span class="o">=</span> <span class="n">current_likes</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">display</span><span class="p">(</span><span class="n">current_likes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="last-lecture-s-code">
-<h2>Last lecture’s code<a class="headerlink" href="#last-lecture-s-code" title="Permalink to this headline">#</a></h2>
-<p>Now let’s look at some of the code from last lecture and see if we understand it better</p>
+<section id="other-options-for-displaying">
+<h3>Other options for displaying<a class="headerlink" href="#other-options-for-displaying" title="Permalink to this headline">#</a></h3>
+<p>Before we move on we wanted to show you two more ways of viewing a variable:</p>
+<p>There is a function called <code class="docutils literal notranslate"><span class="pre">print</span></code> that does almost the exact same thing as <code class="docutils literal notranslate"><span class="pre">display</span></code>, it “prints” the output to the screen (not to paper). Note: <code class="docutils literal notranslate"><span class="pre">print</span></code> is a commonly used function in Python, so you may see <code class="docutils literal notranslate"><span class="pre">print</span></code> if you look at other Python code.</p>
+<ul class="simple">
+<li><p>just write variable name (if it is the last thing in the code block</p></li>
+<li><p>print()</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">current_likes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+</pre></div>
+</div>
+</div>
+</div>
+<p>The other way of displaying a variable value is to just write the name of the variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">current_likes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+</pre></div>
+</div>
+</div>
+</div>
+<p>But this way of displaying a variable will only work if it is the last line of code in the code block. So if I write a bunch of variables on their own lines, only the last one will be displayed:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number_likes</span>
+<span class="n">number_replies</span>
+<span class="n">number_quote_tweets</span>
+<span class="n">current_likes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="sleep-pausing">
+<h2>Sleep (pausing)<a class="headerlink" href="#sleep-pausing" title="Permalink to this headline">#</a></h2>
+<p>One thing we can make our code do is pause before continuing. To do this we will use a function called <code class="docutils literal notranslate"><span class="pre">sleep</span></code> that comes from a code library called <code class="docutils literal notranslate"><span class="pre">time</span></code>.</p>
+<p>So we will start by importing that <code class="docutils literal notranslate"><span class="pre">sleep</span></code> function from <code class="docutils literal notranslate"><span class="pre">time</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that we have sleep imported, we can use it to pause between code actions. This will be most noticeable when we are displaying something, like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;I am displaying a message before pausing for two seconds&quot;</span><span class="p">)</span>
+
+<span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;I have finished my two second pause. Now I will pause for 3 more seconds&quot;</span><span class="p">)</span>
+
+<span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;I have finished the three second pause, and now I am done&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;I am displaying a message before pausing for two seconds&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;I have finished my two second pause. Now I will pause for 3 more seconds&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;I have finished the three second pause, and now I am done&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you run the code above you will see that the program pauses as it displays the output above.</p>
+<p>These pauses may come in handy when posting tweets, to make it look like your bot is taking time to type in the text. You will get a chance to try that in the next practice section.</p>
 </section>
 </section>
 
