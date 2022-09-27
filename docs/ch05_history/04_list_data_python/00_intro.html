@@ -466,7 +466,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../ch04_data/06_learn_more.html">
-     4.8. Learn more
+     4.10. Learn more
     </a>
    </li>
   </ul>
@@ -520,22 +520,22 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../05_antisocial_media.html">
-     5.6. The Rise of Antisocial Media
+     5.9. The Rise of Antisocial Media
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../06_social_media_goals.html">
-     5.7. Social Media Goals
+     5.10. Social Media Goals
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../07_reflections.html">
-     5.8. Reflection Activities
+     5.11. Reflection Activities
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../08_learn_more.html">
-     5.9. Learn More
+     5.12. Learn More
     </a>
    </li>
   </ul>
@@ -1493,6 +1493,21 @@ title="Print to PDF"
    5.5. TODO: Demo some for loops, including the one below
   </a>
  </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#try-running-the-following-examples">
+   5.6. try running the following examples:
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#try-out-this-example">
+   5.7. try out this example:
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   5.8. try out this example:
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -1527,6 +1542,21 @@ title="Print to PDF"
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#todo-demo-some-for-loops-including-the-one-below">
    5.5. TODO: Demo some for loops, including the one below
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#try-running-the-following-examples">
+   5.6. try running the following examples:
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#try-out-this-example">
+   5.7. try out this example:
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   5.8. try out this example:
   </a>
  </li>
 </ul>
@@ -1572,6 +1602,55 @@ print(“^^^^^ ” + str(x</em>4 + 2) + “/40”)
 print(“&gt;&gt;&gt;&gt;&gt; ” + str(x<em>4 + 3) + “/40”)
 print(“vvvvv ” + str(x</em>4 + 4) + “/40”)</p>
 <p>for loop: are we there yet</p>
+<p>Indexing
+When we think of strings, we commonly think of them as a sequence of characters, where each character has an index in the string. Each character has its own spot in the sequence, and the spots are ordered starting at index 0 going up to the end of the string.
+​
+Python lets you access a character at a specific index using the [] notation
+​
+Note: You can use either “double quotes” or ‘single quotes’ to indicate a string</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="try-running-the-following-examples">
+<h1><span class="section-number">5.6. </span>try running the following examples:<a class="headerlink" href="#try-running-the-following-examples" title="Permalink to this headline">#</a></h1>
+<p>wa = ‘Washington’
+wa[0]
+wa[1]
+wa[5:]
+wa[:5]
+wa[2:4]</p>
+<p>Return the first letter of your name</p>
+<p>Return all the letters of your name EXCEPT for the first.</p>
+<p>Loops
+For loops let you iterate over a sequence of values.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="try-out-this-example">
+<h1><span class="section-number">5.7. </span>try out this example:<a class="headerlink" href="#try-out-this-example" title="Permalink to this headline">#</a></h1>
+<p>for num in range(10):
+print(num)</p>
+<p>Create a loop of range 5, mutiplying each number by 2</p>
+<p>Create a loop of range 5, squaring each number</p>
+<p>Lists
+Variables can also store different data structures such as lists. Create a list of at least 3 food items and assign it to a variable called favorite_foods.</p>
+<p>Remember, lists have this structure:</p>
+<p>[item1, item2, item3]</p>
+<p>Lists
+Variables can also store different data structures such as lists. Create a list of at least 3 food items and assign it to a variable called favorite_foods.</p>
+<p>Remember, lists have this structure:</p>
+<p>[item1, item2, item3]</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1><span class="section-number">5.8. </span>try out this example:<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<p>states = [‘California’, ‘Washington’, ‘New York’]
+states[0]</p>
+<p>Return the second index in your list.</p>
+<p>Use the len() function to return the length of your list</p>
+<p>Loop through the list. For each iteration, print out the sentence: “NAME’s favorite food is FOOD”, replacing NAME with your name variable and food with each food in your favorite_foods list.</p>
+<p>Hint: You should print out the same number of lines as your answer for the previous question.</p>
+<p>Tweepy Review (refer to lab 1.5, but do NOT use the same answers)</p>
+<p>Search for a tweet that includes the phrase “happy wednesday”</p>
+<p>Create a variable called username and assign it to a username of an account of your choice.</p>
+<p>Get the user ID of the same account as above using the username variable. Store the user ID in the variable user_id. Show the output of the variable using the display() function.</p>
+<p>Get the user mentions using the user_id variable.</p>
+<p>Get who the user follow using the user_id variable.</p>
 </section>
 
     <script type="text/x-thebe-config">
