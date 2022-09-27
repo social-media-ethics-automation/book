@@ -3,17 +3,24 @@
 
 # # Practice: Statements and Variables
 
-# ## Variable Inspector
-# Before we begin, run the code below to install a helpful library, then refresh your browser tab.
+# This Python Notebook is a chance for you to try out the programming concepts we have covered thus far.
 # 
-# Once you've done that, when you right click here, one of the bottom options should be "Variable Inspector." Open that and then drag it to the side to make two divided tabs (as was demonstrated in the lecture). 
+# As we mentioned previously in the first bot demo (2.3.8), in order to run the code, you can look for the rocket button at the top which will give you an option to "launch binder"
 # 
-
-# In[1]:
-
-
-get_ipython().system('pip install lckr-jupyterlab-variableinspector')
-
+# ![screenshot of this page in the online textbook, with the launch binder link highlighted under the rocket button at the top.](binder_link.png)
+# 
+# If you launch binder, it will take a while to load, but eventually show you a version of this page Jupyter Notebook in a code editor called Jupyter Lab
+# 
+# ![a screenshot of this page viewed in jupyter_lab, with menus and options above the editable page](jupyter_lab.png)
+# 
+# In Jupyter Lab you can double click any section to edit it, and you can press the triangle "run" button to run the code (or display the text).
+# 
+# ![a screenshot of this page viewed in jupyter_lab,with the triangle "run" button circled. Next to it are a square "interrupt the kernal" button and other options](jupyter_run_code.png)
+# 
+# When the code runs, the little number to the left of the code block should change. There might also be some output from your action displyed below the code block.
+# 
+# So now you can go through the rest of this page and try out the practice exercises for yourself!
+# 
 
 # ## Variables
 # You will first practice saving values into variables. Remember, the way we save a value into a variable is like this:
@@ -21,381 +28,185 @@ get_ipython().system('pip install lckr-jupyterlab-variableinspector')
 # variable_name = value
 # ```
 # 
-# First, save the value 5 into a variable named `number_of_pies`
+# First, save the piece of text "I am writing a computer program!" into a variable called `my_progress`
 
-# In[ ]:
+# In[1]:
 
 
+# TODO: enter your code here
 
+
+# ### Viewing variables in the debugger
+# Before we continue, we are going to show you how to open the debugger so you can see what is being saved in your variables.
+# 
+# On the tp right of this tab, press the small bug icon to "enable debugging":
+# 
+# ![screenshot of this tab in jupyterhub, with the "enable debugging" icon circled at the top right (after the "git" option and before the "Python 3 (ipykernel)" option)](debugging_icon.png)
+# 
+# Then, if you did the step above correctly, you should see the variable `my_progress` with the value "I am writing a computer program!" next to it:
+# 
+# ![screenshot of this tab in jupyterhub, with the debugger tab opened on the right. The top section of that tab is variables, which has "special variables" then "function variables" then "my_progress:I am writing a computer program"](debugger_vars.png)
+
+# ### Practice number variables
+# First, write and run a line of code to save the value 5 into a variable named `number_of_pies`
+
+# In[2]:
+
+
+# TODO: enter your code here
 
 
 # Now, save the value 12.5 into a variable named `cost_per_pie`
 
-# In[ ]:
+# In[3]:
 
 
-
+# TODO: enter your code here
 
 
 # Now make a new variable called `total_pie_cost` and save into the value of the number_of_pies multiplied by the cost_per_pie.
 # 
 # Note: In python (and many programming languages), the symbol for multiply is `*`
 
-# In[ ]:
+# In[4]:
 
 
+# TODO: enter your code here
 
 
-
+# ### More variable practice
+# 
 # Now, make a new variable called `name` and assign your first name to it
 
-# In[ ]:
+# In[5]:
 
 
-
+# TODO: enter your code here
 
 
 # Now, add your last name and save it back into the name variable
 
-# In[ ]:
+# In[6]:
 
 
-
+# TODO: enter your code here
 
 
 # Create a variable called `age` and assign your age to it.
 
-# In[ ]:
+# In[7]:
 
 
-
+# TODO: enter your code here
 
 
 # ~ A year goes by ~
 # 
 # Increase the `age` variable by 1. 
 
-# In[ ]:
+# In[8]:
 
 
+# TODO: enter your code here
 
 
+# ## Sleep
+# In order to use sleep, we must first import it from the time library
 
-# Using both variables, create a new variable and assign the sentence "NAME is AGE years old!" to it. Think of your own variable name.
-# 
-# *hint: make sure to cast numbers as strings with the str() function when combining them with other strings.
+# In[9]:
 
-# In[ ]:
 
+from time import sleep
 
 
+# Now try displaying 5 messages of your choosing, with some pauses between each one:
 
+# In[10]:
 
-# ## Indexing
 
-# When we think of strings, we commonly think of them as a sequence of characters, where each character has an index in the string. Each character has its own spot in the sequence, and the spots are ordered starting at index 0 going up to the end of the string.
-# 
-# Python lets you access a character at a specific index using the [] notation
-# 
-# Note: You can use either "double quotes" or 'single quotes' to indicate a string
-
-# In[ ]:
-
-
-# try running the following examples:
-
-wa = 'Washington'
-
-
-# In[ ]:
-
-
-wa[0]
-
-
-# In[ ]:
-
-
-wa[1]
-
-
-# In[ ]:
-
-
-wa[5:]
-
-
-# In[ ]:
-
-
-wa[:5]
-
-
-# In[ ]:
-
-
-wa[2:4]
-
-
-# Return the first letter of your name
-
-# In[ ]:
-
-
-
-
-
-# Return all the letters of your name EXCEPT for the first.
-
-# In[ ]:
-
-
-
-
-
-# ## Calling Functions
-
-# You can suspend execution of your code for the given number of seconds using the python function `time.sleep()`
-
-# In[ ]:
-
-
-# try running this example: 
-
-import time  # you must load the time library in order to use 'sleep'
-
-display('Monday was a sunny day.')
-time.sleep(3)                              # waits 3 seconds
-display('So I decided to go for a walk.')
-time.sleep(4)                              # waits 4 seconds
-display('The end!')
-
-
-# You can also find out the length of a string using the python function `len()`. 
-
-# In[ ]:
-
-
-# try running this example:
-
-weather = 'Today was a rainy day'
-len(weather)
-
-
-# Return the length of your name using the `len()` function and the `name` variable.
-
-# In[ ]:
-
-
-
-
-
-# Create a story using the `sleep()` function (at least 2 times).
-
-# In[ ]:
-
-
-
-
-
-# ## Loops
-
-# For loops let you iterate over a sequence of values.
-
-# In[ ]:
-
-
-# try out this example:
-
-for num in range(10):
-    print(num)
-
-
-# Create a loop of range 5, mutiplying each number by 2
-
-# In[ ]:
-
-
-
-
-
-# Create a loop of range 5, squaring each number
-
-# In[ ]:
-
-
-
-
-
-# ## Lists
-
-# Variables can also store different data structures such as lists. Create a list of at least 3 food items and assign it to a variable called `favorite_foods`. 
-# 
-# Remember, lists have this structure:
-# 
-# ```
-# [item1, item2, item3]
-# ```
-# 
-
-# In[ ]:
-
-
-
-
-
-# Just like strings, lists also have indexes.
-
-# In[ ]:
-
-
-# try out this example:
-
-states = ['California', 'Washington', 'New York']
-states[0]
-
-
-# Return the second index in your list.
-
-# In[ ]:
-
-
-
-
-
-# Use the `len()` function to return the length of your list
-
-# In[ ]:
-
-
-
-
-
-# Loop through the list. For each iteration, print out the sentence: "NAME's favorite food is FOOD", replacing NAME with your `name` variable and food with each food in your `favorite_foods` list. 
-# 
-# Hint: You should print out the same number of lines as your answer for the previous question.
-
-# In[ ]:
-
-
-
+# TODO: enter your code here
 
 
 # ## Twitter Bot Practice
+# Now lets try a twitter bot with variables and sleep!
+# 
+# ### Load Tweepy Library
+# First, we need to load the tweepy library
 
-# ## Install and import the "tweepy" library of code that gives us twitter functions
-
-# In[ ]:
+# In[11]:
 
 
-get_ipython().system('pip install tweepy')
+# Load some code called "tweepy" that will help us work with twitter
 import tweepy
 
 
-# ## Log in
+# ### (Optional) Make a fake twitter connection with the fake_tweepy library
+# For testing purposes, we've added this line of code, which loads a fake version of tweepy, so it wont actually connect to twitter. __If you want to try to actually connect to twitter, don't run this line of code.__%run ../../fake_tweepy/fake_tweepy.ipynb
 
-# In[ ]:
+# In[12]:
 
 
-# copy in the code from test_twitter_bot_keys.ipynb
+get_ipython().run_line_magic('run', '../../fake_tweepy/fake_tweepy.ipynb')
 
 
-# ## Tweepy Review (refer to lab 1.5, but do NOT use the same answers)
+# ### Load your developer access passwords
+# To use this on your real twitter account, copy your [developer access passwords](../../prefaces/making_twitter_account.md) into the code below, replacing our fake passwords.
 
-# 1) Search for a tweet that includes the phrase "happy wednesday"
+# In[13]:
 
-# In[ ]:
 
+# Load all your developer access passwords into Python
+# TODO: Put your twitter account's special developer access passwords below:
+bearer_token = "n4tossfgsafs_fake_bearer_token_isa53#$%$"
+consumer_key = "sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG"
+consumer_secret = "45adf$T$A_fake_consumer_secret_JESdsg"
+access_token = "56sd5Ss4tsea_fake_access_token_%YE%hDsdr"
+access_token_secret = "j^$dr_fake_consumer_key_^A5s#DR5s"
 
 
+# ### Give tweepy (or fake_tweepy) your developer access passwords
 
+# In[14]:
 
-# 2. Create a variable called `username` and assign it to a username of an account of your choice.
 
-# In[ ]:
+# Give the tweepy code your developer access passwords so
+# it can perform twitter actions
+client = tweepy.Client(
+   bearer_token=bearer_token,
+   consumer_key=consumer_key, consumer_secret=consumer_secret,
+   access_token=access_token, access_token_secret=access_token_secret
+)
 
 
+# ### Post a tweet
+# Post something you learned in the class so far:
+# 
+# Remember, the code to post a tweet looks like this: `client.create_tweet(text="This is the tweet text")`
 
+# In[15]:
 
 
-# 3. Get the user ID of the same account as above using the `username` variable. Store the user ID in the variable `user_id`. Show the output of the variable using the `display()` function.
+# TODO: enter your code here
 
-# In[ ]:
 
+# ### Post from a variable
+# Now try saving a piece of text in a variable, and then tweeting the whatever you saved in the variable. 
+# 
+# To do this, where the code has `client.create_tweet(text="This is the tweet text")`, you'll replace the quoted text with the variable name, so it will look like `client.create_tweet(text=variable_name)` (with whatever your variable name was instead of "variable_name")
 
+# In[16]:
 
 
+# TODO: enter your code here
 
-# 4. Get the user mentions using the `user_id` variable.
 
-# In[ ]:
+# ### Post multiple tweets
+# Next try posting 5 tweets, but use `sleep` to add pauses between each one (if you make the pauses over 60 seconds, then the official "time" of the tweet should look different on the twitter interface).
+# 
+# 
 
+# In[17]:
 
 
-
-
-# 5. Get who the user follow using the `user_id` variable.
-
-# In[ ]:
-
-
-
-
-
-# ## Tweeting
-
-# ### Writing and posting a tweet
-
-# In[ ]:
-
-
-# before tweeting, we recommend you display the output first:
-
-display("This tweet was posted by a computer program!")
-
-
-# this is the basic structure to post a tweet. if you want, try running this code block and
-# check your twitter account to see if it worked!
-
-client.create_tweet(text="This tweet was posted by a computer program!")
-
-
-# 6. Display something you learned in the class so far.
-
-# In[ ]:
-
-
-
-
-
-# 7. Now, tweet the sentence you displayed in question #6.
-
-# In[ ]:
-
-
-
-
-
-# 8. Display 5 tweets of your choice at least 20 seconds apart.
-
-# In[ ]:
-
-
-
-
-
-# 9. Now, post the tweets in question #8.
-
-# In[ ]:
-
-
-
-
-
-# 10. Look up tweets that include the phrase "hello world" and store it in a variable called `test_list`. 
-
-# In[ ]:
-
-
-
+# TODO: enter your code here
 

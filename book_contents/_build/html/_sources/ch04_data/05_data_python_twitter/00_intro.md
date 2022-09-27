@@ -40,3 +40,23 @@ last_name = "Thayer"
 combined_name = first_name + " " + last_name
 
 kyle_age = first_name + " is " + str(38) + " years old"
+
+
+
+
+Using both variables, create a new variable and assign the sentence "NAME is AGE years old!" to it. Think of your own variable name.
+
+*hint: make sure to cast numbers as strings with the str() function when combining them with other strings.
+
+1
+# TODO: enter your code here
+
+
+Return all the letters of your name EXCEPT for the first.
+
+# try running this example:
+
+weather = 'Today was a rainy day'
+len(weather)
+
+Return the length of your name using the len() function and the name variable.
