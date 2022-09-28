@@ -58,7 +58,12 @@ greetings_message = "Hello and welcome to programming with variables!"
 # Since this was just saving something into the computer, there is nothing displayed after we run that line of code.
 # 
 # Note: The `=` symbol in Python does not mean the same thing it does in a math formula. In a math formula, "=" means that both sides of the equation are the same (like "1 + 1 = 2"). In Python, `=` means that the value on the right gets stored into the variable on the left (this is called "assignment", that is, assigning a value into a variable).
+
+# ### Variable names
+# When we choose a variable name for storing information, we try to choose a name that will help us remember what was save there and what we will use that information for. So `greeting_message` helps us remember that what we saved in there was a greeting.
 # 
+# One thing you might notice is that the variable name `greeting_message` has an underscore (`_`) instead of a space between the words. That's because one of Python's rules is that variable names can't have spaces in them, so we just use `_` instead. You can read some more variable naming rules [here](https://www.w3schools.com/python/gloss_python_variable_names.asp).
+
 # ### Displaying a value
 # If we want to see what we saved in the variable we can display it using the display function.
 
