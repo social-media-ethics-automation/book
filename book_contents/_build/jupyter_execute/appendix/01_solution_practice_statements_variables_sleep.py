@@ -33,7 +33,7 @@
 # In[1]:
 
 
-# TODO: enter your code here
+my_progress = "I am writing a computer program!"
 
 
 # ### Viewing variables in the debugger
@@ -53,7 +53,7 @@
 # In[2]:
 
 
-# TODO: enter your code here
+number_of_pies = 5
 
 
 # Now, save the value 12.5 into a variable named `cost_per_pie`
@@ -61,7 +61,7 @@
 # In[3]:
 
 
-# TODO: enter your code here
+cost_per_pie = 12.5
 
 
 # Now make a new variable called `total_pie_cost` and save into the value of the number_of_pies multiplied by the cost_per_pie.
@@ -71,7 +71,7 @@
 # In[4]:
 
 
-# TODO: enter your code here
+total_pie_cost = number_of_pies * cost_per_pie
 
 
 # Now use the `display` function to display what is saved in total_pie_cost
@@ -79,7 +79,7 @@
 # In[5]:
 
 
-# TODO: enter your code here
+display(total_pie_cost)
 
 
 # ### More variable practice
@@ -89,7 +89,7 @@
 # In[6]:
 
 
-# TODO: enter your code here
+first_name = "Kyle"
 
 
 # Now, make a variable calles `last_name` and save your last name to it
@@ -97,7 +97,7 @@
 # In[7]:
 
 
-# TODO: enter your code here
+last_name = "Thayer"
 
 
 # Create a variable called `age` and assign your age to it.
@@ -105,7 +105,7 @@
 # In[8]:
 
 
-# TODO: enter your code here
+age = 38
 
 
 # ~ A year goes by ~
@@ -115,7 +115,7 @@
 # In[9]:
 
 
-# TODO: enter your code here
+age = age + 1
 
 
 # Now write three lines of code, with each line using `display` to show what is saved in `first_name`, `last_name`, and `age 
@@ -123,7 +123,9 @@
 # In[10]:
 
 
-# TODO: enter your code here
+display(first_name)
+display(last_name)
+display(age)
 
 
 # ## Sleep
@@ -140,7 +142,15 @@ from time import sleep
 # In[12]:
 
 
-# TODO: enter your code here
+display("message 1")
+sleep(1)
+display("message 2")
+sleep(2)
+display("message 3")
+sleep(1)
+display("message 4")
+sleep(0.5)
+display("message 5")
 
 
 # ## Twitter Bot Practice
@@ -162,7 +172,8 @@ import tweepy
 # In[14]:
 
 
-get_ipython().run_line_magic('run', '../../fake_tweepy/fake_tweepy.ipynb')
+# Note: This is changed since this solution file is in a different location
+get_ipython().run_line_magic('run', '../fake_tweepy/fake_tweepy.ipynb')
 
 
 # ### Load your developer access passwords
@@ -202,7 +213,7 @@ client = tweepy.Client(
 # In[17]:
 
 
-# TODO: enter your code here
+client.create_tweet(text="I learned to look at the answer key!")
 
 
 # ### Post from a variable
@@ -213,7 +224,8 @@ client = tweepy.Client(
 # In[18]:
 
 
-# TODO: enter your code here
+message_to_tweet = "something in a variable"
+client.create_tweet(text=message_to_tweet)
 
 
 # ### Post multiple tweets
@@ -224,5 +236,13 @@ client = tweepy.Client(
 # In[19]:
 
 
-# TODO: enter your code here
+client.create_tweet(text="message 1")
+sleep(1) #note: I am using short times since these pauses slow down compiling the book
+client.create_tweet(text="message 2")
+sleep(2)
+client.create_tweet(text="message 3")
+sleep(1)
+client.create_tweet(text="message 4")
+sleep(0.5)
+client.create_tweet(text="message 5")
 
