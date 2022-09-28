@@ -93,4 +93,6 @@ We have to be aware that we are always making these simplifications, try to be c
 
 
 
-Note: This section was inspired by Kareem Carr https://twitter.com/kareem_carr/status/1551950155330600960, https://www.popularmechanics.com/science/math/a33547137/why-some-people-think-2-plus-2-equals-5/
+Note: This section was inspired by Kareem Carr
+- [https://twitter.com/kareem_carr/status/1551950155330600960](https://twitter.com/kareem_carr/status/1551950155330600960)
+- [Why Some People Think 2+2=5 ...and why they're right.](https://www.popularmechanics.com/science/math/a33547137/why-some-people-think-2-plus-2-equals-5/)

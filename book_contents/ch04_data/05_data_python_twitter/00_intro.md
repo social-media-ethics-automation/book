@@ -23,7 +23,7 @@ Functions can also make outputs.
 import string
 import math
 
-# TODO: Demo functions with returns (upper, isupper, sqrt, range, type)
+## TODO: Demo functions with returns (upper, isupper, sqrt, range, type)
 message2 = message.upper()
 message3 = message.lower()
 
@@ -33,7 +33,7 @@ example_range = range(10)
 
 print( type(message2) )
 
-# TODO: Demo a useful trick with functions (str)
+## TODO: Demo a useful trick with functions (str)
 first_name = "Kyle"
 last_name = "Thayer"
 
@@ -49,12 +49,12 @@ Using both variables, create a new variable and assign the sentence "NAME is AGE
 *hint: make sure to cast numbers as strings with the str() function when combining them with other strings.
 
 1
-# TODO: enter your code here
+## TODO: enter your code here
 
 
 Return all the letters of your name EXCEPT for the first.
 
-# try running this example:
+## try running this example:
 
 weather = 'Today was a rainy day'
 len(weather)
