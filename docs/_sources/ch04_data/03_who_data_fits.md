@@ -14,9 +14,9 @@ Someone in another country would have to try to find a way to indicate that they
 
 If we wanted people to be able to enter other countries we could make a country drop down tool to select a country, but then would we auto-fill it with a country? If there is a list of countries to scroll through, what order do we put them in? If it's alphbetical, that will make it easier for people in countries whose name starts with "A."
 
-Let's look at some examples where forms show problems with data entry and representation:
 
 ## Form fails
+Let's look at some examples where forms show problems with data entry and representation:
 
 ### Name Length
 Here are some screenshots from a [help forum discussion](https://ttlc.intuit.com/community/taxes/discussion/my-last-name-is-to-long-what-do-i-do/00/655670) on the United States tax software TurboTax:
