@@ -47,12 +47,13 @@ So, there was a simplification here. In this example, I decided that each of the
 
 ## What we lose in simplifying
 
-As you can see in the apple example, any time we turn something into data, we are making a simplification.* If we are counting the number of something, like apples, we are deciding that each one is equivalent. If we are writing down what someone said, we are losing their tone of voice, accent, etc. If we are taking a photograph, it is only from one perspective, etc.
-- Different simplifications are useful for different tasks, and unhelpful for others.
-  - See: [All models are wrong, but some are useful](https://en.wikipedia.org/wiki/All_models_are_wrong)
-- *Note: You can have data that isn't a simplification, if the data source is symbolic and you are applying unambiguous rules. For example, data that can be made without simplification include:
-  - A list of the first 10 prime numbers.
-  - The number of times the letter 'a' (capital or lower case) appears in this sentence.
+As you can see in the apple example, any time we turn something into data, we are making a simplification.[^symbolic_data_not_simplified] If we are counting the number of something, like apples, we are deciding that each one is equivalent. If we are writing down what someone said, we are losing their tone of voice, accent, etc. If we are taking a photograph, it is only from one perspective, etc.
+- Different simplifications are useful for different tasks. Any given simplification will be helpful for some task and be unhelpful for others.
+  - See also, this saying in statistics: [All models are wrong, but some are useful](https://en.wikipedia.org/wiki/All_models_are_wrong)
+
+
+[^symbolic_data_not_simplified]:There is a situation where you can have data that isn't a simplification, and that is if the data source is symbolic and you are applying unambiguous rules. For example, data that can be made without simplification include: A list of the first 10 prime numbers; The number of times the letter 'a' (capital or lower case) appears in this sentence.
+
 
 ## More examples of simplifications
 So all data that you might find is a simplification. There are many seemingly simple questions that in some situations or for some people, have no simple answers, questions like:
