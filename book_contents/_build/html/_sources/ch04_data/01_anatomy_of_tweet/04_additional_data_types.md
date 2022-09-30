@@ -13,7 +13,7 @@ alt: "Screenshot of the tweet from before, but with the images highlighted: The 
 The profile picture and the puppy photos in the tweet are images.
 ```
 
-While you won't need to know the details of how images, sound, and video are stored for this class, we wanted to at least briefly discuss it here just to give you a rough idea of how computers store these kinds of data.
+While you won't need to know the details of how images, sound, and video are stored for this book, we wanted to at least briefly discuss it here just to give you a rough idea of how computers store these kinds of data.
 
 __Images__ are created by defining a grid of dots, called pixels. Each pixel has three numbers that define the color (red, green, and blue), and the grid is created as a list (rows) of lists (columns).
 
@@ -41,7 +41,7 @@ __Videos__ are represented as a squence of images (a list of images) called fram
 
 In most cases, after the initial data representation is created, the computer runs a compression algorithm, which takes the image, sound, or video, and finds a way of storing it in much less computer memory, often losing some of the quality when doing so.
 
-![The author of Kyle Thayer, but highly compressed, making it look somewhat blocky and colors are a little off, and it is noisy.](kylethayer_compressed.jpg)
+![Two idenitcal side-by-side photos of the author of Kyle Thayer, but the one on the right is highly compressed, making it look somewhat blocky and colors are a little off, and it is noisy.](kylethayer_compress_compare.png)
 
 ### Metadata
 In addition to the main components of the images, sound, and video data, this information is often stored with metadata, such as:
