@@ -143,13 +143,13 @@ from time import sleep
 
 
 display("message 1")
-sleep(1)
+sleep(.01) #I am making these pauses small to make the book build faster
 display("message 2")
-sleep(2)
+sleep(.02)
 display("message 3")
-sleep(1)
+sleep(.01)
 display("message 4")
-sleep(0.5)
+sleep(0.05)
 display("message 5")
 
 
@@ -237,12 +237,12 @@ client.create_tweet(text=message_to_tweet)
 
 
 client.create_tweet(text="message 1")
-sleep(1) #note: I am using short times since these pauses slow down compiling the book
+sleep(.01) #note: I am using short times since these pauses slow down compiling the book
 client.create_tweet(text="message 2")
-sleep(2)
+sleep(.02)
 client.create_tweet(text="message 3")
-sleep(1)
+sleep(.01)
 client.create_tweet(text="message 4")
-sleep(0.5)
+sleep(0.05)
 client.create_tweet(text="message 5")
 
