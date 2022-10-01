@@ -70,7 +70,7 @@ second_letter = key_word[1]
 ```
 ````
 
-There are many types of list data structures in different programming languages with subtle differences we wont worry about in this class. Python has [lists](https://www.w3schools.com/python/python_lists.asp), [tuples](https://www.w3schools.com/python/python_tuples.asp), and [sets](https://www.w3schools.com/python/python_sets.asp). Other languages have a list type called [arrays](https://en.wikipedia.org/wiki/Array_data_type). We will just use lists and not worry about the other similar data types.
+There are many types of list data structures in different programming languages with subtle differences (we wont worry about those in this book). Python has [lists](https://www.w3schools.com/python/python_lists.asp), [tuples](https://www.w3schools.com/python/python_tuples.asp), and [sets](https://www.w3schools.com/python/python_sets.asp). Other languages have a list type called [arrays](https://en.wikipedia.org/wiki/Array_data_type). We will just focus on lists and not worry about the other similar data types.
 
 We'll demonstrate lists later in Chapter 5: History of Social Media.
 
@@ -79,10 +79,10 @@ The other method of grouping data that we will discuss here is called a "diction
 
 You can think of this as like a language dictionary where there is a word and a definition for each word. Then you can look up any name or word and find the value or definition.
 
-Example: English Language Dictionary:
-- Social Media: An internet based platform used for people to form connections to each other and share things.
-- Ethics: Thinking systematically about what makes something morally right or wrong, or using ethical systems to analyze moral concerns in different situations
-- Automation: Making a process or activity that can run on its own without needing a human to guide it.
+Example: An English Language Dictionary with definitions of three terms:
+- __Social Media__: An internet based platform used for people to form connections to each other and share things.
+- __Ethics__: Thinking systematically about what makes something morally right or wrong, or using ethical systems to analyze moral concerns in different situations
+- __Automation__: Making a process or activity that can run on its own without needing a human to guide it.
 
 The Dictionary data type allows programmers to combine several pieces of data by naming each piece. When we do this, the dictionary will have a number of names, and for each of those names a piece of information (called a "value" in this context).
 

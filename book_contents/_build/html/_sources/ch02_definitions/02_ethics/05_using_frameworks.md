@@ -1,33 +1,29 @@
-# Using Frameworks
-
-You can make arguments from any framework (including ones we didn't mention) for analyzing behaviors/systems
-
-Different frameworks may be useful in different situations
-
-Comparing how different frameworks would deal with a situation can help us understand the situation better
-
-We will focus some on the ethics of individuals’ behaviors on these platforms, but I want to focus more on the ethics of how these platforms are designed and managed
+# Practice Using Frameworks
 
 To practice using the ethical frameworks as tools, here is an exercise.
 
-Suppose you are in the position of needing to decide what to do to care for a parent. Although they are used to an active and independent life, it is clear that they have been showing signs of worsening, early stages Alzheimer's, and they are no longer able to safely live on their own.
+## Scenario: A Parent With Alzheimer's
+Suppose you are in the position of needing to decide what to do to care for a parent. Although they are used to an active and independent life, it is clear that they have been showing signs of worsening, early stages [Alzheimer's](https://www.nia.nih.gov/health/alzheimers-disease-fact-sheet). You believe they are no longer able to safely live on their own, but they get upset at the suggestion that they might need help.
 
-You have two options. Either you can intervene, by securing a professional carer or care home to support your parent whether they like it or not, or you can choose not to intervene, hoping that they will come to the point of realising they need care on their own. You have consulted with any siblings, and they left the final decision to you. The cost of professional care will come out of your parent's financial reserves: they can afford it, but you will need to spend their money for them against their wishes.
+You have two options. Either you can intervene, by ignoring your parent's wishes and securing a professional carer or care home to support them, or you can choose not to intervene, hoping that they will finally realise they need care. You have consulted with your siblings, and they left the final decision to you. The cost of professional care will come out of your parent's financial reserves (they can afford it), but you will need to spend their money for them against their will.
 
-You don't know what to do, so you sit down and work through your options with a list of ethical frameworks. Your job in this exercise is to articulate a reason for intervening AND a reason against intervening, for each framework listed.
+You don't know what to do, so you sit down and work through your options with a list of ethical frameworks.
+
+## Trying Out Different Frameworks
+
+Your job in this exercise is to articulate a reason for intervening (forcing your parent to get care) AND a reason against intervening (hoping your parent come to their own realization they need care), for each framework listed.
 
 The goal of this exercise is to practice using the ethical frameworks as tools for looking at the insides of a complex ethical dilemma, and to see how each tool gives you slightly different information about what is at stake.
 
-This scenario will be hypothetical for some of you, but for others, like for one of the authors, this will be a decision you have wrestled with in real life. Every real life instance of this is a little bit different, so make sure to respect whatever decisions your groupmates may have made.
+This scenario will be hypothetical for some of you, but for others, like for one of the authors, this will be a decision you have been very close to in real life.
 
-One suggestion is to ask if anyone has seen a situation like this unfold in their family, and to invite them to share first about the reasons that were most salient to the decision that was made. Once anyone who wishes to offer experience has volunteered, then you can begin working through the theories in the list.
+If you are able to, work with others in filling out this chart or compare with others to compare what you came up with. Every real life instance of this is a little bit different, so make sure to respect whatever decisions your groupmates may have made. One suggestion is to ask if anyone has seen a situation like this unfold in their family, and to invite them to share first about the reasons that were most salient to the decision that was made. Once anyone who wishes to offer experience has volunteered, then you can begin working through the theories in the list.
 
-Don't worry if you can't get through them all, as you will have an opportunity later to combine insights with other groups until we have a completed table.
 
 | Framework    | Intervene    | Do Not Intervene    |
 | :--- | ---: | ---: |
 | Confucianism: become an exemplary person, i.e. generous, through rituals, i.e. sacrifice to ancestors    | Be generous to your parent and siblings by taking the hard decision and absorbing whatever upset follows. It might be a substantial sacrifice to let your parent be angry with you, but an exemplary person would respectfully accept the difficulty in order to secure proper care for their parent.    | Be generous with your own time and resources to care for your parent; it might be a substantial sacrifice, but an exemplary person would give whatever is needed to handle their parent’s care.    |
-| Taoism: Act in harmony with universe; trying to force things will backfire    |Act in harmony with the natural process of what’s going on with your parent and what needs to be done for their care; trying to force the situation to wait will backfire.     |Act in harmony with the natural process of your parent’s journey coming to terms with their illness; trying to force them to accept care before they are ready will backfire.     |
+| Taoism: Act in harmony with universe; trying to force things will backfire    |Act in harmony with the natural process of what’s going on with your parent's health and what needs to be done for their care; trying to ignore the natural process of Alzheimer's and not intervening now will caues more problems later   |Act in harmony with the natural process of your parent’s journey coming to terms with their illness; trying to force them to accept care before they are ready will backfire.     |
 | Virtue Ethics (Aristotle): Act in a way consistent with the virtues to promote your flourishing. Practicing virtuous actions makes us more virtuous in the future.    |     |     |
 | Virtue Ethics (Aztec): Virtue is a group effort; we all need support to help us live lives of balance and moderation.    |     |     |
 | Natural Rights    |     |     |

@@ -46,7 +46,15 @@ Twitter bots are generally organized in this same way, so one bot might be organ
 
 ````{admonition} Click to see actual code
 :class: dropdown
+You are not expected to understand all this code. It is here to give you an examples of what code looks like.
+
+Also, you'll notice that the actual code has a lot more steps then our psuedocode above has.
+
+Note: This code is untested and we may have made programming errors
 ```python
+
+########  Log Into Twitter  #######
+
 import tweepy
 
 # Load all your developer access passwords into Python
@@ -65,11 +73,51 @@ client = tweepy.Client(
    access_token=access_token, access_token_secret=access_token_secret
 )
 
-TODO: Write the rest of this code (https://pypi.org/project/profanity-check/)
+
+########  Find any new tweets that mention me that also have curse words  #######
+
+# get my twitter id
+my_info = client.get_user(id = "me", user_auth = True)
+my_id = my_info.data.id
+
+# get all tweets that mention me
+mentions = client.get_users_mentions(id = my_id)
+
+# import profanity checking library
+from profanity_check import predict
+
+# start a list of mentions that have curse words
+cursing_mentions = []
+
+# Go through the tweets to see which ones have curse words
+for mention in mentions.data:
+    # check if the tweet has a curse word
+    if(predict(mention.text))[0] == 1):
+       # if it did have a curse word, put it in the cursing mentions list
+       cursing_mentions.append(mention)
+
+
+########  Look up the users who posted those tweets  ########
+
+# start a list of users to block (starts out empty)
+users_to_block = []
+
+# Go through each cursing mention tweet
+for cursing_mention in cursing_mentions:
+    # look up the user id for each cursing tweet, and add it to the list of users to block
+    users_to_block.append(tweet.author_id)
+
+
+########  Block those users  ########
+
+# Go through each of the users to block
+for user_to_block in users_to_block:
+    # block the user
+    client.block(target_user_id)
 ```
 ````
 
-We will show how to use statements in Python in the next section.
+We will show how to use statements in Python in the next section of this chapter: ([](02_demo_basic_flow.ipynb)).
 
 ## Variables: Save information for later
 Variables are a way of saving information on the computer, so we can use it later in the computer program.
@@ -107,8 +155,11 @@ For example I might save my first and last name separately in the computer, then
 ```
 ````{admonition} Click to see actual code
 :class: dropdown
+You are not expected to understand all this code. It is here to give you an examples of what code looks like.
+
+Note: This code is untested and we may have made programming errors
 ```python
-# TODO: Import tweepy and copy in login steps here
+# TODO: Copy tweepy and login steps here
 
 first_name = "Kyle"
 last_name = "Thayer"
@@ -122,10 +173,30 @@ client.create_tweet(text="Hello my name is " + full_name)
 Or, when I am looking something up, like my latest tweets, I can save that in a variable so I can look up replies to those tweets the next step:
 ```text
 - Find my latest tweet, and save it as a variable named "my_latest_tweet"
-- Search for all tweets that are a reply to the tweet saved in the variable "my_latest_tweet"
+- Search for all tweets that are in the same conversation as my latest tweet, and save them in the variable "my_latest_tweet_replies"
 ```
 
-We will show how to use variables in Python in the next section.
+````{admonition} Click to see actual code
+:class: dropdown
+You are not expected to understand all this code. It is here to give you an examples of what code looks like.
+
+Note: This code is untested and we may have made programming errors
+```python
+# TODO: Copy tweepy and login steps here
+
+# get my twitter id
+my_info = client.get_user(id = "me", user_auth = True)
+my_id = my_info.data.id
+
+# Get my latest tweet (and get the conversation id for that tweet)
+my_latest_tweet = client.get_users_tweets(my_id,  tweet_fields=['conversation_id'])[0]
+
+# Search for tweets that are in the same conversation as my latest tweet
+my_latest_tweet_conversation = client.Client.search_recent_tweets("conversation_id:" + str(my_latest_tweet.data.conversation_id))
+```
+````
+
+We will show how to use variables in Python in the next section ([](02_demo_basic_flow.ipynb)).
 
 
 ## Events: When you do something depends
@@ -141,6 +212,15 @@ Within programming, it might look like:
 - Whenever someone tags me in a post
   - like their post which has me tagged
 ```
+
+
+````{admonition} Click to see a note on Python
+:class: dropdown
+Note: Python isn't by default set up with event style programming. We won't be directly doing event programming in this book.
+
+We will be doing the Pausing/Scheduling below, which you can use to do some of the same things (e.g., check in every five minutes to see if there are new tweets that tag me).
+````
+
 
 ### Pausing/Scheduling
 One of the most common events to program for is around time: We can also tell programs to wait for a period of time, or start at a given time.
@@ -161,13 +241,79 @@ In programming, it might look like:
 - Post this set of tweets, pausing 30 seconds between each tweet
 ```
 
+````{admonition} Click to see actual code
+:class: dropdown
+You are not expected to understand all this code. It is here to give you an examples of what code looks like.
+
+Note: This code is untested and we may have made programming errors
+```python
+# TODO: Copy tweepy and login steps here
+
+# load a library that gives us a pause action (called sleep)
+import time
+
+# post a tweet
+client.create_tweet(text="I am a bot pretending to slowly type in a series of tweets.")
+
+# pause for 30 seconds
+time.sleep(30)
+
+# post a tweet
+client.create_tweet(text="This is my second tweet.")
+
+# pause for 30 seconds
+time.sleep(30)
+
+# post a tweet
+client.create_tweet(text="It takes a little while for me to pretend to type up each of these tweets")
+
+# pause for 30 seconds
+time.sleep(30)
+
+client.create_tweet(text="here is my final tweet")
+
+```
+````
+
 Or
 
 ```text
-- every day at noon, post a report on the weather
+- every day at noon, post a tweet saying "It's lunchtime!"
 ```
 
-We will show how to use pausing in the next section.
+````{admonition} Click to see actual code
+:class: dropdown
+You are not expected to understand all this code. It is here to give you an examples of what code looks like.
+
+Note: This code is untested and we may have made programming errors
+```python
+# TODO: Copy tweepy and login steps here
+
+# load a library that gives us a scheduling actions
+import schedule
+
+# Define a function that when run will say that it is lunchtime
+def say_it_is_lunchtime():
+    # when the function is run, post a tweet
+    client.create_tweet(text="It's lunchtime!")
+
+
+# schedule the "say_it_is_lunchtime" function to run every day at noon
+schedule.every().day.at("12:00").do(say_it_is_lunchtime)
+
+
+# Loop forever, once a second running every task that needs to be run
+while True:
+    # if any tasks are ready to run, run them
+    schedule.run_pending()
+    # pause for 1 second before checking again
+    time.sleep(1)
+
+```
+````
+
+
+We will show how to use pausing in the next section ([](02_demo_basic_flow.ipynb)).
 
 We will show how to use other Events and Scheduling in Python in Chapter 18: Public Shaming.
 
@@ -179,16 +325,41 @@ In cooking, we might taste for seasoning and change our course of action dependi
 ```text
 - Taste the filling.
   - If it is good, proceed to the next section.
-  - If it is not quite right, decide if it needs more salt or more acid.
-  - Add some of what is needed, and repeat this step until you are happy.
+  - Otherwise (if it is not quite right)
+    - If it needs more salt, add more salt
+    - If it needs some brightness, add a small amount for lemon juice or white rice vinegar
 ```
 
 In programming, we might do this:
 ```text
 - look up the latest tweet mentioning me
-  - if that tweet says "delete your account", then delete my account
-  - otherwise, don't delete my account
+  - if that tweet says "It's time to go", then post "Let's go!"
+  - otherwise, post "I am still waiting"
 ```
+
+
+````{admonition} Click to see actual code
+:class: dropdown
+You are not expected to understand all this code. It is here to give you an examples of what code looks like.
+
+Note: This code is untested and we may have made programming errors
+```python
+# TODO: Copy tweepy and login steps here
+
+# get my twitter id
+my_info = client.get_user(id = "me", user_auth = True)
+my_id = my_info.data.id
+
+# get the latest tweet that mentions me
+latest_mention = client.get_users_mentions(id = my_id).data[0]
+
+if "It's time to go" in latest_mention.text:
+   client.create_tweet(text="Let's go!")
+else:
+   client.create_tweet(text="I am still waiting")
+
+```
+````
 
 We will show how to use conditionals in Chapter 7: Trolling.
 
@@ -218,16 +389,65 @@ In computer programming you can repeat an action a set number of times
 - Tweet this 100 times: "Warner Brothers should <a href="https://www.rollingstone.com/tv-movies/tv-movie-features/justice-league-the-snyder-cut-bots-fans-1384231/">#ReleaseTheSnyderCut</a> of the Justice League movie."
 </pre>
 
+````{admonition} Click to see actual code
+:class: dropdown
+You are not expected to understand all this code. It is here to give you an examples of what code looks like.
+
+If you try this yourself, it wont post 100 times, since the twitter blocks you from repeating the same exact tweet repeatedly.
+
+Note: This code is untested and we may have made programming errors
+```python
+# TODO: Copy tweepy and login steps here
+
+# repeat this action 100 times
+for i in range(100):
+    # post a tweet
+    client.create_tweet(text="Warner Brothers should #ReleaseTheSnyderCut of the Justice League movie.")
+
+```
+````
+
 Or a computer program can repeat an action to a set of items
 
 ```text
-- Like each of the tweets that were replies to my latest tweet
+- Like each of the tweets that were in the same conversation as my latest tweet
 ```
+
+````{admonition} Click to see actual code
+:class: dropdown
+You are not expected to understand all this code. It is here to give you an examples of what code looks like.
+
+Note: This code is untested and we may have made programming errors
+```python
+# TODO: Copy tweepy and login steps here
+
+# Get my latest tweet (and get the conversation id for that tweet)
+my_latest_tweet = client.get_users_tweets(my_id,  tweet_fields=['conversation_id'])[0]
+
+# Search for tweets that are in the same conversation as my latest tweet
+my_latest_tweet_conversation = client.Client.search_recent_tweets("conversation_id:" + str(my_latest_tweet.data.conversation_id))
+
+# repeat this action for all the tweets in the conversation
+for tweet in my_latest_tweet_conversation.data:
+    # like the tweet
+    client.like(tweet.id)
+
+```
+````
+
+
 
 Or a computer program can repeat an action until a condition is met:
 ```text
-- Keep sending private messages to this person until they block me
+- Keep sending private messages to this person until they say "Stop it!"
 ```
+
+````{admonition} Click to see a note
+:class: dropdown
+Note: I am not going to directly give you code for harassing someone.
+
+As for repeating an action until a condition is met, those are done with [while loops](https://www.w3schools.com/python/python_while_loops.asp). Feel free to use while loops when you have a legitimate, non-harassment use.
+````
 
 We will show how to use loops in Chapter 5: History of Social Media.
 
@@ -292,7 +512,7 @@ In this book, we will be using the [tweepy](https://www.tweepy.org/) code librar
 
 You may be able to figure out what the purpose of each of those tweepy functions are based on the name, though we'll look at the specifics of how to use them throughout the book.
 
-If you look back over the various psuedocode examples above, most of them would involve calling various functions, such as those tweepy functions.
+If you look back over the various psuedocode and code examples above, most of them involve calling various functions, such as those tweepy functions. Additionally the scheduling example code includes defining a new function and using it.
 
 We will show examples of calling functions starting in the next section.
 

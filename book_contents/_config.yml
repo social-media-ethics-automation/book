@@ -29,13 +29,15 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/kylethayer/social_media_ethics_programming_v0  # Online location of your book
+  url: https://github.com/kylethayer/social_media_ethics_automation_v0  # Online location of your book
   path_to_book: book_contents  # Optional path to your book, relative to the repository root
   branch: main  # Which branch of the repository should be used when creating links (optional)
 
 launch_buttons:
   notebook_interface: "jupyterlab"  # or "classic"
-  colab_url: "https://colab.research.google.com"
+  # colab_url: "https://colab.research.google.com"
+  binderhub_url: "https://mybinder.org"  # The URL for your BinderHub (e.g., https://mybinder.org)
+  # thebe: true
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
