@@ -101,7 +101,7 @@ display(example_num)
 type(example_num)
 
 
-# ????
+# ???? Other functions for numbers (min max
 # 
 
 # In[8]:
