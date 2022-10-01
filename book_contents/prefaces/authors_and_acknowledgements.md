@@ -10,7 +10,7 @@ Kyle is an educator teaching classes that try to integrate social and ethical co
 ```
 
 ### Dr. Susan Notess
-Susan is a philosopher working in ethics (among other things). They did their PhD at Durham University in England, and they are originally from Colorado. Susan tweets at @susannotess. Susan is currently a freelance researcher, but from (October maybe?!) they will be undertaking a British Academy Postdoctoral (research) Fellowship at University College London. TODO: change if this isn't going to work out.
+Susan is a philosopher working in ethics (among other things). They did their PhD at Durham University in England, and they are originally from Colorado. Susan tweets at @susannotess. Susan is currently a freelance researcher working on a variety of collaborative projects, primarily in the UK.
 
 ```{image} SusanFace.jpg
 :alt: Photo of Susan Notess (a white person with glasses and rather better eye makeup than Kyle's)
