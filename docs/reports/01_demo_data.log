@@ -23,7 +23,7 @@ example_text = "how old are you? I am " + 3
 
 [1;31m---------------------------------------------------------------------------[0m
 [1;31mTypeError[0m                                 Traceback (most recent call last)
-Input [1;32mIn [2][0m, in [0;36m<cell line: 2>[1;34m()[0m
+Input [1;32mIn [11][0m, in [0;36m<cell line: 2>[1;34m()[0m
 [0;32m      1[0m [38;5;66;03m# error when I put a number in a string[39;00m
 [1;32m----> 2[0m example_text [38;5;241m=[39m [38;5;124;43m"[39;49m[38;5;124;43mhow old are you? I am [39;49m[38;5;124;43m"[39;49m[43m [49m[38;5;241;43m+[39;49m[43m [49m[38;5;241;43m3[39;49m
 

@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="4.5.2. Practice: Python Basic Data Types" href="02_practice_data.html" />
-    <link rel="prev" title="4.5. Data in a Python and Twitter" href="00_intro.html" />
+    <link rel="prev" title="4.5. Data in Python and Twitter" href="00_intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -284,7 +284,7 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../ch02_definitions/03_automation/09_reflecting_on_programming.html">
-       2.3.9. Reflections questions
+       2.3.9. Reflection questions
       </a>
      </li>
     </ul>
@@ -423,13 +423,13 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../04_form_fails.html">
-     4.4. Example Form Fails
+    <a class="reference internal" href="../04_reflection_who_data_fits.html">
+     4.4. Reflection: Responsibility in data design
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="00_intro.html">
-     4.5. Data in a Python and Twitter
+     4.5. Data in Python and Twitter
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
     <label for="toctree-checkbox-10">
@@ -466,7 +466,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../06_learn_more.html">
-     4.10. Learn more
+     4.6. Learn more
     </a>
    </li>
   </ul>
@@ -1506,6 +1506,33 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calling-functions">
+   Calling Functions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#input-arguments">
+     Input Arguments
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#function-results">
+     Function results
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#boolean-true-false">
+   Boolean (True / False)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numbers">
+   Numbers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-types">
    Data types
   </a>
@@ -1540,6 +1567,33 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calling-functions">
+   Calling Functions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#input-arguments">
+     Input Arguments
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#function-results">
+     Function results
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#boolean-true-false">
+   Boolean (True / False)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numbers">
+   Numbers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-types">
    Data types
   </a>
@@ -1566,6 +1620,169 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="demo-python-basic-data-types">
 <h1><span class="section-number">4.5.1. </span>Demo: Python Basic Data Types<a class="headerlink" href="#demo-python-basic-data-types" title="Permalink to this headline">#</a></h1>
+<p>Let’s now look specifically at how Python stores and lets you work with basic data types:</p>
+<ul class="simple">
+<li><p>Booleans (True / False)</p></li>
+<li><p>Numbers</p></li>
+<li><p>Strings (Text)</p></li>
+</ul>
+<p>But first we need to look a little more about how to use functions, since we’ll be using them with the data types.</p>
+<section id="calling-functions">
+<h2>Calling Functions<a class="headerlink" href="#calling-functions" title="Permalink to this headline">#</a></h2>
+<p>A function is a named section of pre-written code, which we can “call,” making that section of code run.</p>
+<p>We have already been calling two different functions in particular: <code class="docutils literal notranslate"><span class="pre">display</span></code> and <code class="docutils literal notranslate"><span class="pre">create_tweet</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">display(&quot;Ethics</span> <span class="pre">might</span> <span class="pre">be</span> <span class="pre">relevant!&quot;)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client.create_tweet(text=&quot;This</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">tweet</span> <span class="pre">text&quot;)</span></code></p></li>
+</ul>
+<p>The structure of a standard function call has the following pieces:
+<code class="docutils literal notranslate"><span class="pre">function_name(input_parameters)</span></code></p>
+<p>So we first write the name of the function (e.g., <code class="docutils literal notranslate"><span class="pre">display</span></code> or <code class="docutils literal notranslate"><span class="pre">client.create_tweet</span></code>), then we put matching parentheses after that, and inside the parentheses we put the input arguments, which are data or options for how the function should run.</p>
+<section id="input-arguments">
+<h3>Input Arguments<a class="headerlink" href="#input-arguments" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>These inputs are called “parameters” or “arguments”</p></li>
+<li><p>Inputs go in parentheses after the function name</p></li>
+<li><p>If there are multiple inputs, they are separated by commas</p></li>
+<li><p>You can also specify which input you are giving within the parenthesis by putting parameter_name=value</p></li>
+</ul>
+<p>Additionally, some functions produce a result, which can be saved in a variable, or used in a calculation or some other fashion. When we save the result of running a function into a variable, it looks like this:</p>
+<p><code class="docutils literal notranslate"><span class="pre">save_result_var</span> <span class="pre">=</span> <span class="pre">function_name(input_parameters)</span></code></p>
+</section>
+<section id="function-results">
+<h3>Function results<a class="headerlink" href="#function-results" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Functions can have outputs that are called “returns” or “results”</p></li>
+<li><p>When the code intepreter sees the function call, it runs the code in the function with the inputs, and then puts the output in the place where that function call was</p></li>
+<li><p>The results of the function can be stored in a variable, used in a formula, or used as an argument for another function</p></li>
+</ul>
+<p>That was all a bit theoretical, so set’s look at some data types now, and some specific functions that we can use with them.</p>
+</section>
+</section>
+<section id="boolean-true-false">
+<h2>Boolean (True / False)<a class="headerlink" href="#boolean-true-false" title="Permalink to this headline">#</a></h2>
+<p>In Python there are two options for boolean: <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+<p>Note that the first letter is capitalized and the rest is lower case. Python only lets you write these True and False values in that way.</p>
+<p>Let’s save a boolean value in a variable, and then display it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">does_user_have_blue_checkmark</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">does_user_have_blue_checkmark</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Display lets us see what was in the variable, but we can also use a new function <code class="docutils literal notranslate"><span class="pre">type</span></code> to see what type of value is in the variable (it should be ‘bool’ which is short for boolean):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">does_user_have_blue_checkmark</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bool
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="numbers">
+<h2>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline">#</a></h2>
+<p>Python allows you to use two main types of numbers:</p>
+<ul class="simple">
+<li><p>Integers (whole numbers), called “int”</p></li>
+<li><p>A “floating point” number with a decimal point, called a “float”</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mf">5.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+</pre></div>
+</div>
+</div>
+</div>
+<p>Even though there are two types of numbers, most of the time they work together pretty seemlessly, switching to whichever type makes the most sense. For example, let’s look at what happens when we add and int and a float:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">example_num</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="mf">5.5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">example_num</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10.5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">example_num</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+</pre></div>
+</div>
+</div>
+</div>
+<p>????</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="n">sqrt_years</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Python also lets us create boolean values by doing comparisons of numbers. Let’s save in some variables how much money I have and how much an item costs, and then do a comparison to see if I have enough money (saving the result as a boolean in a variable)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">money_in_wallet</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">cost_of_item</span> <span class="o">=</span> <span class="mi">7</span>
+
+<span class="n">has_enough_money</span> <span class="o">=</span> <span class="n">money_in_wallet</span> <span class="o">&gt;</span> <span class="n">cost_of_item</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">has_enough_money</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 <section id="data-types">
 <h2>Data types<a class="headerlink" href="#data-types" title="Permalink to this headline">#</a></h2>
 <p>Python automatically handles many different types of data, including:</p>
@@ -1573,7 +1790,7 @@ title="Print to PDF"
 <ul class="simple">
 <li><p>str - a String of characters</p></li>
 </ul>
-<p>For numbers:</p>
+<p>For numbers:import math</p>
 <ul class="simple">
 <li><p>int - an integer (whole number)</p></li>
 <li><p>float - a floating point number (one with decimals)</p></li>
@@ -1620,7 +1837,7 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [2],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="nn">Input In [11],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># error when I put a number in a string</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">example_text</span> <span class="o">=</span> <span class="s2">&quot;how old are you? I am &quot;</span> <span class="o">+</span> <span class="mi">3</span>
 
@@ -1663,7 +1880,7 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">4.5. </span>Data in a Python and Twitter</p>
+            <p class="prev-next-title"><span class="section-number">4.5. </span>Data in Python and Twitter</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="02_practice_data.html" title="next page">
