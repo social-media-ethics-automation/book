@@ -1760,14 +1760,14 @@ title="Print to PDF"
 </section>
 <section id="find-a-tweet">
 <h2>Find a tweet<a class="headerlink" href="#find-a-tweet" title="Permalink to this headline">#</a></h2>
-<p>Below I have the code to find a recent tweet that has the words “cute” and “cat”.</p>
+<p>Below I have the code to find a recent tweet that has the phrase “cute cat”.</p>
 <p>Don’t worry if you don’t understand this part yet, We are
 just doing this, so we can get to the point of seeing what tweet data looks like.</p>
 <p><em>Note: If you run this on real twitter, we can’t gurantee anything about how offensive what you might find is. We don’t know of any word search We could guarantee would be safe.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Choose a search to run</span>
-<span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;cute cat&#39;</span>
+<span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;&quot;cute cat&quot;&#39;</span>
 
 <span class="c1">#Run the search and request some additional info</span>
 <span class="n">tweets</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">tweet_fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;author_id&quot;</span><span class="p">,</span> <span class="s2">&quot;conversation_id&quot;</span><span class="p">,</span> <span class="s2">&quot;created_at&quot;</span><span class="p">,</span> <span class="s2">&quot;geo&quot;</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;in_reply_to_user_id&quot;</span><span class="p">,</span> <span class="s2">&quot;lang&quot;</span><span class="p">,</span> <span class="s2">&quot;public_metrics&quot;</span><span class="p">,</span> <span class="s2">&quot;source&quot;</span><span class="p">,</span> <span class="s2">&quot;text&quot;</span><span class="p">])</span>
@@ -1781,7 +1781,7 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
 <span class="nn">Input In [5],</span> in <span class="ni">&lt;cell line: 5&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;cute cat&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;&quot;cute cat&quot;&#39;</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1">#Run the search and request some additional info</span>
 <span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">tweets</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">tweet_fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;author_id&quot;</span><span class="p">,</span> <span class="s2">&quot;conversation_id&quot;</span><span class="p">,</span> <span class="s2">&quot;created_at&quot;</span><span class="p">,</span> <span class="s2">&quot;geo&quot;</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;in_reply_to_user_id&quot;</span><span class="p">,</span> <span class="s2">&quot;lang&quot;</span><span class="p">,</span> <span class="s2">&quot;public_metrics&quot;</span><span class="p">,</span> <span class="s2">&quot;source&quot;</span><span class="p">,</span> <span class="s2">&quot;text&quot;</span><span class="p">])</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># Find the first tweet returned</span>
@@ -1810,7 +1810,7 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the tweet text is: str&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The tweet text is: RT @0215jaeyun: 🦊: you are all so cute too, sunoo! thank you! i like US but the food is a little salty but apart from that its all good!\n🐧:…&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The tweet text is: RT @TweetsOfCats: Drop this account a follow for wholesome cute cat memes. ❤️ https://t.co/YVciPPq01s&#39;
 </pre></div>
 </div>
 </div>
@@ -1829,7 +1829,7 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the tweet id is: int&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The tweet tweet id is: 1576450280572719105&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The tweet tweet id is: 1576453518411849729&#39;
 </pre></div>
 </div>
 </div>
@@ -1848,7 +1848,7 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the author id is: int&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The tweet author id is: 1366277963205931013&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The tweet author id is: 1385004837218172939&#39;
 </pre></div>
 </div>
 </div>
@@ -1867,7 +1867,7 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the tweet created at is: datetime&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The tweet tweet created at is: 2022-10-02 05:53:30+00:00&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The tweet tweet created at is: 2022-10-02 06:06:22+00:00&#39;
 </pre></div>
 </div>
 </div>
@@ -1909,7 +1909,7 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the tweet source is: str&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The tweet tweet source is: Twitter Web App&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The tweet tweet source is: Twitter for Android&#39;
 </pre></div>
 </div>
 </div>
