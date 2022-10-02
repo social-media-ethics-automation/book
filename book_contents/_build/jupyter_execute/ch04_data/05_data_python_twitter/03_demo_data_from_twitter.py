@@ -60,7 +60,7 @@ client = tweepy.Client(
 
 
 # ## Find a tweet
-# Below I have the code to find a recent tweet that has the words "cute" and "cat". 
+# Below I have the code to find a recent tweet that has the phrase "cute cat". 
 # 
 # Don't worry if you don't understand this part yet, We are
 # just doing this, so we can get to the point of seeing what tweet data looks like.
@@ -71,7 +71,7 @@ client = tweepy.Client(
 
 
 # Choose a search to run
-query = 'cute cat'
+query = '"cute cat"'
 
 #Run the search and request some additional info
 tweets = client.search_recent_tweets(query=query, tweet_fields=["author_id", "conversation_id", "created_at", "geo", "id", "in_reply_to_user_id", "lang", "public_metrics", "source", "text"])
@@ -88,7 +88,7 @@ recent_tweet = tweets.data[0]
 # 
 # ### tweet text:
 
-# In[22]:
+# In[31]:
 
 
 display("The data type of the tweet text is: " + type(recent_tweet.text).__name__)
@@ -97,7 +97,7 @@ display("The tweet text is: " + recent_tweet.text)
 
 # ### tweet id
 
-# In[26]:
+# In[32]:
 
 
 display("The data type of the tweet id is: " + type(recent_tweet.id).__name__)
@@ -106,7 +106,7 @@ display("The tweet tweet id is: " + str(recent_tweet.id))
 
 # ### tweet author id
 
-# In[25]:
+# In[33]:
 
 
 display("The data type of the author id is: " + type(recent_tweet.author_id).__name__)
@@ -115,7 +115,7 @@ display("The tweet author id is: " + str(recent_tweet.author_id))
 
 # ### tweet created at
 
-# In[27]:
+# In[34]:
 
 
 display("The data type of the tweet created at is: " + type(recent_tweet.created_at).__name__)
@@ -124,20 +124,20 @@ display("The tweet tweet created at is: " + str(recent_tweet.created_at))
 
 # ### tweet lang (language)
 
-# In[28]:
+# In[35]:
 
 
 display("The data type of the tweet lang is: " + type(recent_tweet.lang).__name__)
 display("The tweet tweet lang is: " + str(recent_tweet.lang))
 
 
-# In[ ]:
+# In[36]:
 
 
 ### tweet source (device that made the tweet)
 
 
-# In[29]:
+# In[37]:
 
 
 display("The data type of the tweet source is: " + type(recent_tweet.source).__name__)
@@ -146,3 +146,8 @@ display("The tweet tweet source is: " + str(recent_tweet.source))
 
 # ### TODO: public metrics
 "author_id", "conversation_id", "created_at", "geo", "id", "in_reply_to_user_id", "lang", "public_metrics", "source", "text"
+# In[ ]:
+
+
+
+
