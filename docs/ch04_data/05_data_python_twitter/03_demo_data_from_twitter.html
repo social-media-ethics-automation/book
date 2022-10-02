@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>4.5.4. Design Activity: Data and Social media &#8212; Social Media, Ethics, and Automation</title>
+    <title>4.5.3. Practice: Get Data from twitter &#8212; Social Media, Ethics, and Automation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="4.6. Reflection: Ethics of Choosing Data Representation" href="../06_reflection_in_data_design.html" />
-    <link rel="prev" title="4.5.3. Practice: Get Data from twitter" href="03_demo_data_from_twitter.html" />
+    <link rel="next" title="4.5.4. Design Activity: Data and Social media" href="04_activity.html" />
+    <link rel="prev" title="4.5.2. Practice: Python Basic Data Types" href="02_practice_data.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -447,13 +447,13 @@ const thebe_selector_output = ".output, .cell_output"
        4.5.2. Practice: Python Basic Data Types
       </a>
      </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="03_demo_data_from_twitter.html">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
        4.5.3. Practice: Get Data from twitter
       </a>
      </li>
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
+     <li class="toctree-l3">
+      <a class="reference internal" href="04_activity.html">
        4.5.4. Design Activity: Data and Social media
       </a>
      </li>
@@ -1350,6 +1350,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/kylethayer/social_media_ethics_automation_v0/main?urlpath=lab/tree/book_contents/ch04_data/05_data_python_twitter/03_demo_data_from_twitter.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -1389,7 +1418,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/kylethayer/social_media_ethics_automation_v0/issues/new?title=Issue%20on%20page%20%2Fch04_data/05_data_python_twitter/04_activity.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/kylethayer/social_media_ethics_automation_v0/issues/new?title=Issue%20on%20page%20%2Fch04_data/05_data_python_twitter/03_demo_data_from_twitter.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1417,7 +1446,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/ch04_data/05_data_python_twitter/04_activity.md"
+        <a href="../../_sources/ch04_data/05_data_python_twitter/03_demo_data_from_twitter.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1428,7 +1457,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -1454,23 +1483,190 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-and-import-the-tweepy-library-of-code-that-gives-us-twitter-functions">
+   Install and import the “tweepy” library of code that gives us twitter functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#log-into-the-instructors-twitter-with-read-only-access">
+   Log into the Instructors’ twitter with read only access
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#you-can-t-post-tweets-since-you-have-read-only-access">
+   You can’t post tweets (since you have read only access)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#you-can-search-for-tweets">
+   You can search for tweets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#you-can-get-user-ids-from-usernames">
+   You can get user IDs from usernames
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#you-can-get-user-mentions-from-id">
+   You can get user mentions from ID
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#you-can-get-who-the-user-follows-from-the-id">
+   You can get who the user follows from the ID
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#you-can-manipulate-the-output">
+   You can manipulate the output
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#you-try">
+   YOU TRY:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modify-the-query-variable-to-search-for-someone-else-s-tweets">
+   1) Modify the “query” variable to search for someone else’s tweets.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modify-the-username-to-get-the-id-from-a-twitter-user-of-your-choice">
+   2) Modify the username to get the ID from a twitter user of your choice
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-user-mentions-from-the-id">
+   3) Get user mentions from the ID
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-who-the-user-follows-from-the-id">
+   4) Get who the user follows from the ID
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optional-bonus-challenge-not-for-credit">
+   Optional bonus challenge (not for credit):
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Design Activity: Data and Social media</h1>
+                <h1>Practice: Get Data from twitter</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-and-import-the-tweepy-library-of-code-that-gives-us-twitter-functions">
+   Install and import the “tweepy” library of code that gives us twitter functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#log-into-the-instructors-twitter-with-read-only-access">
+   Log into the Instructors’ twitter with read only access
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#you-can-t-post-tweets-since-you-have-read-only-access">
+   You can’t post tweets (since you have read only access)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#you-can-search-for-tweets">
+   You can search for tweets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#you-can-get-user-ids-from-usernames">
+   You can get user IDs from usernames
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#you-can-get-user-mentions-from-id">
+   You can get user mentions from ID
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#you-can-get-who-the-user-follows-from-the-id">
+   You can get who the user follows from the ID
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#you-can-manipulate-the-output">
+   You can manipulate the output
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#you-try">
+   YOU TRY:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modify-the-query-variable-to-search-for-someone-else-s-tweets">
+   1) Modify the “query” variable to search for someone else’s tweets.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modify-the-username-to-get-the-id-from-a-twitter-user-of-your-choice">
+   2) Modify the username to get the ID from a twitter user of your choice
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-user-mentions-from-the-id">
+   3) Get user mentions from the ID
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-who-the-user-follows-from-the-id">
+   4) Get who the user follows from the ID
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optional-bonus-challenge-not-for-credit">
+   Optional bonus challenge (not for credit):
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -1478,20 +1674,199 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="design-activity-data-and-social-media">
-<h1><span class="section-number">4.5.4. </span>Design Activity: Data and Social media<a class="headerlink" href="#design-activity-data-and-social-media" title="Permalink to this headline">#</a></h1>
-<p>Open a social media interface and navigate around:
-Identify different pieces of data on the site and answer these questions:</p>
-<ul class="simple">
-<li><p>What is the piece of data you see?</p></li>
-<li><p>What data types might be used to represent that data on a computer?</p></li>
-<li><p>How is this data a simplification of reality? That is, what does it not capture? Who does it work best for, and who does it not work well for?</p></li>
-<li><p>Did the user(s) directly provide that data, or was it collected automatically by the social media site?</p></li>
-</ul>
-<p>Also ask:</p>
-<ul class="simple">
-<li><p>What other data do you think the social media site is collecting that is not being shown?</p></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="practice-get-data-from-twitter">
+<h1><span class="section-number">4.5.3. </span>Practice: Get Data from twitter<a class="headerlink" href="#practice-get-data-from-twitter" title="Permalink to this headline">#</a></h1>
+<p>The purpose of this lab is to try running a program yourself and get an idea of things you can do with twitter, we aren’t going to explain each detail of the code today, that will be covered in the future</p>
+<section id="install-and-import-the-tweepy-library-of-code-that-gives-us-twitter-functions">
+<h2>Install and import the “tweepy” library of code that gives us twitter functions<a class="headerlink" href="#install-and-import-the-tweepy-library-of-code-that-gives-us-twitter-functions" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install tweepy 
+<span class="kn">import</span> <span class="nn">tweepy</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: tweepy in c:\python310\lib\site-packages (4.10.0)
+Requirement already satisfied: requests&lt;3,&gt;=2.27.0 in c:\python310\lib\site-packages (from tweepy) (2.27.1)
+Requirement already satisfied: oauthlib&lt;4,&gt;=3.2.0 in c:\python310\lib\site-packages (from tweepy) (3.2.0)
+Requirement already satisfied: requests-oauthlib&lt;2,&gt;=1.2.0 in c:\python310\lib\site-packages (from tweepy) (1.3.1)
+Requirement already satisfied: charset-normalizer~=2.0.0 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (2.0.12)
+Requirement already satisfied: certifi&gt;=2017.4.17 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (2022.5.18.1)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (3.3)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (1.26.9)
+
+[notice] A new release of pip available: 22.1.2 -&gt; 22.2.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
+WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
+WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
+WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
+WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
+WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="log-into-the-instructors-twitter-with-read-only-access">
+<h2>Log into the Instructors’ twitter with read only access<a class="headerlink" href="#log-into-the-instructors-twitter-with-read-only-access" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">teacher_bot_read_keys</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">teacher_bot_read_keys</span><span class="o">.</span><span class="n">bearer_token</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [2],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">teacher_bot_read_keys</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">client</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">teacher_bot_read_keys</span><span class="o">.</span><span class="n">bearer_token</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;teacher_bot_read_keys&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="you-can-t-post-tweets-since-you-have-read-only-access">
+<h2>You can’t post tweets (since you have read only access)<a class="headerlink" href="#you-can-t-post-tweets-since-you-have-read-only-access" title="Permalink to this headline">#</a></h2>
+<p>If you try to run the command to post a tweet, it will have a long error message in a red box, ending with:</p>
+<blockquote>
+<div><p>TypeError: Consumer key must be string or bytes, not NoneType</p>
+</div></blockquote>
+<p>This means that in order to post a tweet, it needs the twitter accounts’ “Consumer Key.” But since we didn’t provide it with the login info above, it showed up as “NoneType” which means the code to post a tweet couldn’t continue.</p>
+<p><em>Note: You can get rid of the long error message by right-clicking on the red error message box and selecting “Clear Outputs”</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Trying to post this tweet won&#39;t work&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="you-can-search-for-tweets">
+<h2>You can search for tweets<a class="headerlink" href="#you-can-search-for-tweets" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;from:KSeattleWeather&#39;</span>
+
+<span class="n">tweets</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">tweets</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="you-can-get-user-ids-from-usernames">
+<h2>You can get user IDs from usernames<a class="headerlink" href="#you-can-get-user-ids-from-usernames" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">username</span> <span class="o">=</span> <span class="s2">&quot;BillNye&quot;</span>
+<span class="n">user_id</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">)</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">id</span>
+<span class="n">user_id</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="you-can-get-user-mentions-from-id">
+<h2>You can get user mentions from ID<a class="headerlink" href="#you-can-get-user-mentions-from-id" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">client</span><span class="o">.</span><span class="n">get_users_mentions</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">user_id</span><span class="p">)</span><span class="o">.</span><span class="n">data</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="you-can-get-who-the-user-follows-from-the-id">
+<h2>You can get who the user follows from the ID<a class="headerlink" href="#you-can-get-who-the-user-follows-from-the-id" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">following</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_users_following</span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span><span class="o">.</span><span class="n">data</span>
+<span class="n">following</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="you-can-manipulate-the-output">
+<h2>You can manipulate the output<a class="headerlink" href="#you-can-manipulate-the-output" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">following</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bill Nye the Science Guy follows &#39;</span> <span class="o">+</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="you-try">
+<h2>YOU TRY:<a class="headerlink" href="#you-try" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="modify-the-query-variable-to-search-for-someone-else-s-tweets">
+<h2>1) Modify the “query” variable to search for someone else’s tweets.<a class="headerlink" href="#modify-the-query-variable-to-search-for-someone-else-s-tweets" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;from:???&#39;</span>    <span class="c1"># replace the &quot;???&quot; with the username of the account you want</span>
+
+<span class="n">tweets</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">tweets</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="modify-the-username-to-get-the-id-from-a-twitter-user-of-your-choice">
+<h2>2) Modify the username to get the ID from a twitter user of your choice<a class="headerlink" href="#modify-the-username-to-get-the-id-from-a-twitter-user-of-your-choice" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">username</span> <span class="o">=</span> <span class="s2">&quot;???&quot;</span>
+<span class="n">user_id</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">)</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">id</span>
+<span class="n">user_id</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="get-user-mentions-from-the-id">
+<h2>3) Get user mentions from the ID<a class="headerlink" href="#get-user-mentions-from-the-id" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Try it yourself by copying code from above and pasting it here:</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="get-who-the-user-follows-from-the-id">
+<h2>4) Get who the user follows from the ID<a class="headerlink" href="#get-who-the-user-follows-from-the-id" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Try it yourself by copying code from above and pasting it here:</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="optional-bonus-challenge-not-for-credit">
+<h2>Optional bonus challenge (not for credit):<a class="headerlink" href="#optional-bonus-challenge-not-for-credit" title="Permalink to this headline">#</a></h2>
+<p>Try using a method we haven’t tried in the demos! Refer to: https://docs.tweepy.org/en/stable/client.html#</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write your answer here:</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1521,17 +1896,17 @@ Identify different pieces of data on the site and answer these questions:</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="03_demo_data_from_twitter.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="02_practice_data.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">4.5.3. </span>Practice: Get Data from twitter</p>
+            <p class="prev-next-title"><span class="section-number">4.5.2. </span>Practice: Python Basic Data Types</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../06_reflection_in_data_design.html" title="next page">
+    <a class='right-next' id="next-link" href="04_activity.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.6. </span>Reflection: Ethics of Choosing Data Representation</p>
+        <p class="prev-next-title"><span class="section-number">4.5.4. </span>Design Activity: Data and Social media</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

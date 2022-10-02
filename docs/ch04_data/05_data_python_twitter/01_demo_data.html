@@ -448,18 +448,13 @@ const thebe_selector_output = ".output, .cell_output"
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="03_activity.html">
-       4.5.3. Design Activity: Data and Social media
+      <a class="reference internal" href="03_demo_data_from_twitter.html">
+       4.5.3. Practice: Get Data from twitter
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="04_demo_data_from_twitter.html">
-       4.5.4. Demo: Getting data from twitter
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="05_practice_get_twitter_info.html">
-       4.5.5. Practice: Get Data from twitter
+      <a class="reference internal" href="04_activity.html">
+       4.5.4. Design Activity: Data and Social media
       </a>
      </li>
     </ul>
@@ -1517,12 +1512,12 @@ title="Print to PDF"
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#input-arguments">
-     Input Arguments
+     input arguments
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#function-results">
-     Function results
+     function results
     </a>
    </li>
   </ul>
@@ -1536,21 +1531,40 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#numbers">
    Numbers
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integers-and-floats">
+     integers and floats
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#functions-for-numbers">
+     functions for numbers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#number-comparisons">
+     number comparisons
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-types">
-   Data types
+  <a class="reference internal nav-link" href="#strings-text">
+   Strings (text)
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dictionary-mapping">
-   Dictionary (mapping)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#error-demos">
-   Error demos
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-strings-together">
+     adding strings together
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#actions-with-strings">
+     actions with strings
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -1578,12 +1592,12 @@ title="Print to PDF"
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#input-arguments">
-     Input Arguments
+     input arguments
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#function-results">
-     Function results
+     function results
     </a>
    </li>
   </ul>
@@ -1597,21 +1611,40 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#numbers">
    Numbers
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integers-and-floats">
+     integers and floats
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#functions-for-numbers">
+     functions for numbers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#number-comparisons">
+     number comparisons
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-types">
-   Data types
+  <a class="reference internal nav-link" href="#strings-text">
+   Strings (text)
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dictionary-mapping">
-   Dictionary (mapping)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#error-demos">
-   Error demos
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-strings-together">
+     adding strings together
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#actions-with-strings">
+     actions with strings
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -1644,7 +1677,7 @@ title="Print to PDF"
 <code class="docutils literal notranslate"><span class="pre">function_name(input_parameters)</span></code></p>
 <p>So we first write the name of the function (e.g., <code class="docutils literal notranslate"><span class="pre">display</span></code> or <code class="docutils literal notranslate"><span class="pre">client.create_tweet</span></code>), then we put matching parentheses after that, and inside the parentheses we put the input arguments, which are data or options for how the function should run.</p>
 <section id="input-arguments">
-<h3>Input Arguments<a class="headerlink" href="#input-arguments" title="Permalink to this headline">#</a></h3>
+<h3>input arguments<a class="headerlink" href="#input-arguments" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>These inputs are called “parameters” or “arguments”</p></li>
 <li><p>Inputs go in parentheses after the function name</p></li>
@@ -1655,7 +1688,7 @@ title="Print to PDF"
 <p><code class="docutils literal notranslate"><span class="pre">save_result_var</span> <span class="pre">=</span> <span class="pre">function_name(input_parameters)</span></code></p>
 </section>
 <section id="function-results">
-<h3>Function results<a class="headerlink" href="#function-results" title="Permalink to this headline">#</a></h3>
+<h3>function results<a class="headerlink" href="#function-results" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Functions can have outputs that are called “returns” or “results”</p></li>
 <li><p>When the code intepreter sees the function call, it runs the code in the function with the inputs, and then puts the output in the place where that function call was</p></li>
@@ -1699,6 +1732,8 @@ title="Print to PDF"
 </section>
 <section id="numbers">
 <h2>Numbers<a class="headerlink" href="#numbers" title="Permalink to this headline">#</a></h2>
+<section id="integers-and-floats">
+<h3>integers and floats<a class="headerlink" href="#integers-and-floats" title="Permalink to this headline">#</a></h3>
 <p>Python allows you to use two main types of numbers:</p>
 <ul class="simple">
 <li><p>Integers (whole numbers), called “int”</p></li>
@@ -1728,6 +1763,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<p>We can now do normal math operations on the numbers, like addition <code class="docutils literal notranslate"><span class="pre">+</span></code>, subtraction <code class="docutils literal notranslate"><span class="pre">-</span></code>, multiplication <code class="docutils literal notranslate"><span class="pre">*</span></code>, and division <code class="docutils literal notranslate"><span class="pre">/</span></code>.</p>
 <p>Even though there are two types of numbers, most of the time they work together pretty seemlessly, switching to whichever type makes the most sense. For example, let’s look at what happens when we add and int and a float:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1760,16 +1796,76 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>???? Other functions for numbers (min max</p>
+</section>
+<section id="functions-for-numbers">
+<h3>functions for numbers<a class="headerlink" href="#functions-for-numbers" title="Permalink to this headline">#</a></h3>
+<p>Python provides functions that we can use with numbers, like:</p>
+<ul class="simple">
+<li><p>find the maximum number in a set of numbers with <code class="docutils literal notranslate"><span class="pre">max()</span></code></p></li>
+<li><p>find the minimum number in a set of numbers with <code class="docutils literal notranslate"><span class="pre">min()</span></code></p></li>
+<li><p>round a floating point number into an integer with <code class="docutils literal notranslate"><span class="pre">round()</span></code></p></li>
+</ul>
+<p>Each of these functions produces a result at the end, which we can save into a variable</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
-<span class="n">sqrt_years</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Demo of using the max() function</span>
+<span class="n">my_score</span> <span class="o">=</span> <span class="mi">74</span>
+<span class="n">your_score</span> <span class="o">=</span> <span class="mi">92</span>
+<span class="n">someone_elses_score</span> <span class="o">=</span> <span class="mi">83</span>
+
+<span class="n">highest_score</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">my_score</span><span class="p">,</span> <span class="n">your_score</span><span class="p">,</span> <span class="n">someone_elses_score</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">highest_score</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>92
 </pre></div>
 </div>
 </div>
 </div>
-<p>Python also lets us create boolean values by doing comparisons of numbers. Let’s save in some variables how much money I have and how much an item costs, and then do a comparison to see if I have enough money (saving the result as a boolean in a variable)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Demo of using the min() function</span>
+<span class="n">bread_1_price</span> <span class="o">=</span> <span class="mf">2.30</span>
+<span class="n">bread_2_price</span> <span class="o">=</span> <span class="mf">2.15</span>
+<span class="n">bread_3_price</span> <span class="o">=</span> <span class="mf">1.79</span>
+
+<span class="n">cheapest_bread_price</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">bread_1_price</span><span class="p">,</span> <span class="n">bread_2_price</span><span class="p">,</span> <span class="n">bread_3_price</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">cheapest_bread_price</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.79
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Demo using the round function</span>
+<span class="n">float_number</span> <span class="o">=</span> <span class="mf">14.6224</span>
+
+<span class="n">rounded_number</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">float_number</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">rounded_number</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="number-comparisons">
+<h3>number comparisons<a class="headerlink" href="#number-comparisons" title="Permalink to this headline">#</a></h3>
+<p>Python also lets us <a class="reference external" href="https://www.w3schools.com/python/gloss_python_comparison_operators.asp">compare numbers in various ways</a>, producing a boolean True or False value depending on if the comparison was true or false.</p>
+<p>For example, we can see if one number is bigger than another by using the greater than comparison: <code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">money_in_wallet</span> <span class="o">=</span> <span class="mi">10</span>
@@ -1787,70 +1883,226 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</section>
-<section id="data-types">
-<h2>Data types<a class="headerlink" href="#data-types" title="Permalink to this headline">#</a></h2>
-<p>Python automatically handles many different types of data, including:</p>
-<p>For text:</p>
+<p>We can check if two numbers are equal by using two equals signs: <code class="docutils literal notranslate"><span class="pre">==</span></code></p>
+<p>Note: this is an unfortunately confusing system that <a class="reference external" href="https://www.quora.com/Why-do-most-programming-languages-have-the-equal-sign-as-an-assignment-operator-This-option-seems-to-be-nonintuitive-Isn%E2%80%99t-it-better-to-use-the-equal-sign-in-conditional-statements">most programming languages are now stuck with</a> since it became the standard:</p>
 <ul class="simple">
-<li><p>str - a String of characters</p></li>
+<li><p>One equals sign (<code class="docutils literal notranslate"><span class="pre">=</span></code>) means save the value into a variable</p></li>
+<li><p>Two equals signs (<code class="docutils literal notranslate"><span class="pre">==</span></code>) mean check if two numbers are the same</p></li>
 </ul>
-<p>For numbers:import math</p>
-<ul class="simple">
-<li><p>int - an integer (whole number)</p></li>
-<li><p>float - a floating point number (one with decimals)</p></li>
-</ul>
-<p>True/False:</p>
-<ul class="simple">
-<li><p>bool - a true/false value</p></li>
-</ul>
-<p>See more here: https://www.w3schools.com/python/python_datatypes.asp</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Demo data types</span>
-<span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Hello World!&quot;</span>
-<span class="n">my_name</span> <span class="o">=</span> <span class="s2">&quot;Kyle&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_follower_count</span> <span class="o">=</span> <span class="mi">23</span>
+<span class="n">your_follower_count</span> <span class="o">=</span> <span class="mi">23</span>
 
-<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.141592653</span>
+<span class="n">same_number_of_followers</span> <span class="o">=</span> <span class="n">my_follower_count</span> <span class="o">==</span> <span class="n">your_follower_count</span>
 
-<span class="n">is_kyle_at_home</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">is_kyle_at_uw_now</span> <span class="o">=</span> <span class="kc">False</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="dictionary-mapping">
-<h2>Dictionary (mapping)<a class="headerlink" href="#dictionary-mapping" title="Permalink to this headline">#</a></h2>
-<p>Python also lets you have a variable that has multiple named pieces (it’s like your variable has its own variables). The type of this is “dict”</p>
-<p>We won’t go into details here, but if you have a variable that is type “dict”, you can access the different components by using a dot.</p>
-<p>For example, if I have a variable <code class="docutils literal notranslate"><span class="pre">book</span></code> which is a type “dict” and it has components <code class="docutils literal notranslate"><span class="pre">pages</span></code> and <code class="docutils literal notranslate"><span class="pre">author</span></code>, I can get the value of the pages and author like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">book</span><span class="o">.</span><span class="n">pages</span>
-<span class="n">book</span><span class="o">.</span><span class="n">author</span>
-</pre></div>
-</div>
-</section>
-<section id="error-demos">
-<h2>Error demos<a class="headerlink" href="#error-demos" title="Permalink to this headline">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># error when I put a number in a string</span>
-<span class="n">example_text</span> <span class="o">=</span> <span class="s2">&quot;how old are you? I am &quot;</span> <span class="o">+</span> <span class="mi">3</span>
+<span class="n">display</span><span class="p">(</span><span class="n">same_number_of_followers</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [11],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># error when I put a number in a string</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">example_text</span> <span class="o">=</span> <span class="s2">&quot;how old are you? I am &quot;</span> <span class="o">+</span> <span class="mi">3</span>
-
-<span class="ne">TypeError</span>: can only concatenate str (not &quot;int&quot;) to str
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+</section>
+<section id="strings-text">
+<h2>Strings (text)<a class="headerlink" href="#strings-text" title="Permalink to this headline">#</a></h2>
+<p>In order to make a string (piece of text) in Python, you can write your text with either double quotes <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> or single quotes <code class="docutils literal notranslate"><span class="pre">'</span></code> at the beggining and end.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tweet_text_1</span> <span class="o">=</span> <span class="s2">&quot;what nice weather today&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">tweet_text_1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;what nice weather today&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tweet_text_2</span> <span class="o">=</span> <span class="s1">&#39;what horrible weather today&#39;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">tweet_text_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;what horrible weather today&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note: If you are copying from a word processor like word, you might get angled quotes like <code class="docutils literal notranslate"><span class="pre">’</span></code> or <code class="docutils literal notranslate"><span class="pre">”</span></code>, which Python doesn’t like. So, if you try to run code like this:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">tweet_text_3</span> <span class="pre">=</span> <span class="pre">“What</span> <span class="pre">normal</span> <span class="pre">weather</span> <span class="pre">today”</span></code></p></li>
+</ul>
+<p>you will get an error message like this:</p>
+<ul class="simple">
+<li><p><img alt="Red error message box. The top says: &quot;Input in [14] tweet_text_3 = “What normal weather today”&quot;. The bottom says: &quot;SyntaxError: invalid character '“' (U+201C)" src="../../_images/bad_quote_error.png" /></p></li>
+</ul>
+<section id="adding-strings-together">
+<h3>adding strings together<a class="headerlink" href="#adding-strings-together" title="Permalink to this headline">#</a></h3>
+<p>If we want to add strings together to make a larger string, we can do that with the <code class="docutils literal notranslate"><span class="pre">+</span></code> operation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_name</span> <span class="o">=</span> <span class="s2">&quot;Kyle&quot;</span>
+<span class="n">last_name</span> <span class="o">=</span> <span class="s2">&quot;Thayer&quot;</span>
+
+<span class="n">full_name</span> <span class="o">=</span> <span class="n">first_name</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">last_name</span> 
+<span class="c1"># Note: I had to add a space between the first and last name, or it would come out as KyleThayer</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">full_name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Kyle Thayer&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we want to add something like a number, like my age, into the string though, it won’t let us do it directly.</p>
+<p>If we try running:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">example_text</span> <span class="pre">=</span> <span class="pre">&quot;how</span> <span class="pre">old</span> <span class="pre">are</span> <span class="pre">you?</span> <span class="pre">I</span> <span class="pre">am</span> <span class="pre">&quot;</span> <span class="pre">+</span> <span class="pre">3</span></code></p></li>
+</ul>
+<p>Then we will get an error that 3 was an int and not a string, so it can’t be added:</p>
+<ul class="simple">
+<li><p><img alt="Error message: Says it is a type error and points to the line: 'example_text = &quot;how old are you? I am &quot; + 3'. At the bottom it says: &quot;TypeError: can only concatenate str (not &quot;int&quot;) to str&quot;" src="../../_images/add_int_to_str_error.png" /></p></li>
+</ul>
+<p>To fix this, we have to turn the number into a string before we add it. We do this by using the <code class="docutils literal notranslate"><span class="pre">str()</span></code> function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">example_text</span> <span class="o">=</span> <span class="s2">&quot;how old are you? I am &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">example_text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;how old are you? I am 3&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Adding strings and numbers together is particularly useful for displaying information in a more readable fashion:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_likes</span> <span class="o">=</span> <span class="mi">78</span>
+<span class="n">num_retweets</span> <span class="o">=</span> <span class="mi">32</span>
+<span class="n">num_quote_tweets</span> <span class="o">=</span> <span class="mi">17</span>
+
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The number of likes was: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_likes</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The number of retweets was: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_retweets</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The number of quote tweets was: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_quote_tweets</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The number of likes was: 78&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The number of retweets was: 32&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The number of quote tweets was: 17&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="actions-with-strings">
+<h3>actions with strings<a class="headerlink" href="#actions-with-strings" title="Permalink to this headline">#</a></h3>
+<p>There are various actions Python let’s us do with strings. For example, let’s look for a smaller string (“cat”) and see if it is in the bigger one (producing a True or False boolean value) using <code class="docutils literal notranslate"><span class="pre">in</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">animal_tweet_1</span> <span class="o">=</span> <span class="s2">&quot;I like cats!&quot;</span>
+
+<span class="n">tweet_1_has_cat</span> <span class="o">=</span> <span class="s2">&quot;cat&quot;</span> <span class="ow">in</span> <span class="n">animal_tweet_1</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">tweet_1_has_cat</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">animal_tweet_2</span> <span class="o">=</span> <span class="s2">&quot;I like dogs!&quot;</span>
+
+<span class="n">tweet_2_has_cat</span> <span class="o">=</span> <span class="s2">&quot;cat&quot;</span> <span class="ow">in</span> <span class="n">animal_tweet_2</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">tweet_2_has_cat</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">animal_tweet_3</span> <span class="o">=</span> <span class="s2">&quot;I like caterpillars!&quot;</span>
+
+<span class="n">tweet_3_has_cat</span> <span class="o">=</span> <span class="s2">&quot;cat&quot;</span> <span class="ow">in</span> <span class="n">animal_tweet_3</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">tweet_3_has_cat</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also do actions like make a string all uppercase or all lowercase using the <code class="docutils literal notranslate"><span class="pre">upper()</span></code> and <code class="docutils literal notranslate"><span class="pre">lower()</span></code> functions.</p>
+<p>Unlike previous uses of functions, for these we write the name of the variable we are using, then a <code class="docutils literal notranslate"><span class="pre">.</span></code> and then name of the function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">normal_message</span> <span class="o">=</span> <span class="s2">&quot;I hope you are doing OK&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">loud_message</span> <span class="o">=</span> <span class="n">normal_message</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="n">display</span><span class="p">(</span><span class="n">loud_message</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;I HOPE YOU ARE DOING OK&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quiet_message</span> <span class="o">=</span> <span class="n">normal_message</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="n">display</span><span class="p">(</span><span class="n">quiet_message</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;i hope you are doing ok&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p><em>You can read more about Python data types at <a class="reference external" href="https://www.w3schools.com/python/python_datatypes.asp">w3schools explanation of Python data types</a></em></p>
+</section>
 </section>
 </section>
 
