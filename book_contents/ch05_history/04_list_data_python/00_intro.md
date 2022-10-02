@@ -106,3 +106,15 @@ Get the user ID of the same account as above using the username variable. Store 
 Get the user mentions using the user_id variable.
 
 Get who the user follow using the user_id variable.
+
+
+## Dictionary (mapping)
+Python also lets you have a variable that has multiple named pieces (it's like your variable has its own variables). The type of this is "dict"
+
+We won't go into details here, but if you have a variable that is type "dict", you can access the different components by using a dot.
+
+For example, if I have a variable `book` which is a type "dict" and it has components `pages` and `author`, I can get the value of the pages and author like this:
+```
+book.pages
+book.author
+```

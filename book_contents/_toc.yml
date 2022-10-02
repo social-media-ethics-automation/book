@@ -70,9 +70,8 @@ parts:
         sections:
           - file: ch04_data/05_data_python_twitter/01_demo_data
           - file: ch04_data/05_data_python_twitter/02_practice_data
-          - file: ch04_data/05_data_python_twitter/03_activity
-          - file: ch04_data/05_data_python_twitter/04_demo_data_from_twitter
-          - file: ch04_data/05_data_python_twitter/05_practice_get_twitter_info
+          - file: ch04_data/05_data_python_twitter/03_demo_data_from_twitter
+          - file: ch04_data/05_data_python_twitter/04_activity
       - file: ch04_data/06_reflection_in_data_design
       - file: ch04_data/07_learn_more
     - file: ch05_history/00_history

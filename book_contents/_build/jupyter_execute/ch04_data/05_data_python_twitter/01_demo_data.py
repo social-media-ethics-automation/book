@@ -21,7 +21,7 @@
 # 
 # So we first write the name of the function (e.g., `display` or `client.create_tweet`), then we put matching parentheses after that, and inside the parentheses we put the input arguments, which are data or options for how the function should run.
 # 
-# ### Input Arguments
+# ### input arguments
 # - These inputs are called "parameters" or "arguments"
 # - Inputs go in parentheses after the function name
 # - If there are multiple inputs, they are separated by commas
@@ -32,7 +32,7 @@
 # 
 # `save_result_var = function_name(input_parameters)`
 # 
-# ### Function results
+# ### function results
 # * Functions can have outputs that are called "returns" or "results"
 # * When the code intepreter sees the function call, it runs the code in the function with the inputs, and then puts the output in the place where that function call was
 # * The results of the function can be stored in a variable, used in a formula, or used as an argument for another function
@@ -65,6 +65,7 @@ type(does_user_have_blue_checkmark)
 
 # ## Numbers
 
+# ### integers and floats
 # Python allows you to use two main types of numbers:
 # - Integers (whole numbers), called "int"
 # - A "floating point" number with a decimal point, called a "float"
@@ -81,6 +82,9 @@ type(5)
 type(5.5)
 
 
+# We can now do normal math operations on the numbers, like addition `+`, subtraction `-`, multiplication `*`, and division `/`.
+# 
+# 
 # Even though there are two types of numbers, most of the time they work together pretty seemlessly, switching to whichever type makes the most sense. For example, let's look at what happens when we add and int and a float:
 
 # In[5]:
@@ -101,19 +105,57 @@ display(example_num)
 type(example_num)
 
 
-# ???? Other functions for numbers (min max
-# 
+# ### functions for numbers
+# Python provides functions that we can use with numbers, like:
+# - find the maximum number in a set of numbers with `max()`
+# - find the minimum number in a set of numbers with `min()`
+# - round a floating point number into an integer with `round()`
+#     
+# Each of these functions produces a result at the end, which we can save into a variable
 
 # In[8]:
 
 
-import math
-sqrt_years = math.sqrt(10)
+# Demo of using the max() function
+my_score = 74
+your_score = 92
+someone_elses_score = 83
 
+highest_score = max(my_score, your_score, someone_elses_score)
 
-# Python also lets us create boolean values by doing comparisons of numbers. Let's save in some variables how much money I have and how much an item costs, and then do a comparison to see if I have enough money (saving the result as a boolean in a variable)
+display(highest_score)
+
 
 # In[9]:
+
+
+# Demo of using the min() function
+bread_1_price = 2.30
+bread_2_price = 2.15
+bread_3_price = 1.79
+
+cheapest_bread_price = min(bread_1_price, bread_2_price, bread_3_price)
+
+display(cheapest_bread_price)
+
+
+# In[10]:
+
+
+# Demo using the round function
+float_number = 14.6224
+
+rounded_number = round(float_number)
+
+display(rounded_number)
+
+
+# ### number comparisons
+# Python also lets us [compare numbers in various ways](https://www.w3schools.com/python/gloss_python_comparison_operators.asp), producing a boolean True or False value depending on if the comparison was true or false.
+# 
+# For example, we can see if one number is bigger than another by using the greater than comparison: `>`
+
+# In[11]:
 
 
 money_in_wallet = 10
@@ -124,58 +166,147 @@ has_enough_money = money_in_wallet > cost_of_item
 display(has_enough_money)
 
 
-# ## Data types
-# Python automatically handles many different types of data, including:
+# We can check if two numbers are equal by using two equals signs: `==`
 # 
-# For text:
-# * str - a String of characters
+# Note: this is an unfortunately confusing system that [most programming languages are now stuck with](https://www.quora.com/Why-do-most-programming-languages-have-the-equal-sign-as-an-assignment-operator-This-option-seems-to-be-nonintuitive-Isn%E2%80%99t-it-better-to-use-the-equal-sign-in-conditional-statements) since it became the standard: 
+# - One equals sign (`=`) means save the value into a variable
+# - Two equals signs (`==`) mean check if two numbers are the same
+
+# In[12]:
+
+
+my_follower_count = 23
+your_follower_count = 23
+
+same_number_of_followers = my_follower_count == your_follower_count
+
+display(same_number_of_followers)
+
+
+# ## Strings (text)
+# In order to make a string (piece of text) in Python, you can write your text with either double quotes `"` or single quotes `'` at the beggining and end.
+
+# In[13]:
+
+
+tweet_text_1 = "what nice weather today"
+display(tweet_text_1)
+
+
+# In[14]:
+
+
+tweet_text_2 = 'what horrible weather today'
+display(tweet_text_2)
+
+
+# Note: If you are copying from a word processor like word, you might get angled quotes like `’` or `”`, which Python doesn't like. So, if you try to run code like this:
+# - `tweet_text_3 = “What normal weather today”`
 # 
-# For numbers:import math
+# you will get an error message like this:
+# - ![Red error message box. The top says: "Input in [14] tweet_text_3 = “What normal weather today”". The bottom says: "SyntaxError: invalid character '“' (U+201C)](bad_quote_error.png)
+
+# ### adding strings together
+# If we want to add strings together to make a larger string, we can do that with the `+` operation.
+
+# In[15]:
+
+
+first_name = "Kyle"
+last_name = "Thayer"
+
+full_name = first_name + " " + last_name 
+# Note: I had to add a space between the first and last name, or it would come out as KyleThayer
+
+display(full_name)
+
+
+# If we want to add something like a number, like my age, into the string though, it won't let us do it directly.
 # 
-# * int - an integer (whole number)
-# * float - a floating point number (one with decimals)
+# If we try running:
+# - `example_text = "how old are you? I am " + 3`
 # 
-# True/False:
-# * bool - a true/false value
+# Then we will get an error that 3 was an int and not a string, so it can't be added:
+# - ![Error message: Says it is a type error and points to the line: 'example_text = "how old are you? I am " + 3'. At the bottom it says: "TypeError: can only concatenate str (not "int") to str"](add_int_to_str_error.png)
 # 
+# To fix this, we have to turn the number into a string before we add it. We do this by using the `str()` function:
+
+# In[16]:
+
+
+example_text = "how old are you? I am " + str(3)
+display(example_text)
+
+
+# Adding strings and numbers together is particularly useful for displaying information in a more readable fashion:
+
+# In[17]:
+
+
+num_likes = 78
+num_retweets = 32
+num_quote_tweets = 17
+
+display("The number of likes was: " + str(num_likes))
+display("The number of retweets was: " + str(num_retweets))
+display("The number of quote tweets was: " + str(num_quote_tweets))
+
+
+# ### actions with strings
+# There are various actions Python let's us do with strings. For example, let's look for a smaller string ("cat") and see if it is in the bigger one (producing a True or False boolean value) using `in`
+
+# In[18]:
+
+
+animal_tweet_1 = "I like cats!"
+
+tweet_1_has_cat = "cat" in animal_tweet_1
+
+display(tweet_1_has_cat)
+
+
+# In[19]:
+
+
+animal_tweet_2 = "I like dogs!"
+
+tweet_2_has_cat = "cat" in animal_tweet_2
+
+display(tweet_2_has_cat)
+
+
+# In[20]:
+
+
+animal_tweet_3 = "I like caterpillars!"
+
+tweet_3_has_cat = "cat" in animal_tweet_3
+
+display(tweet_3_has_cat)
+
+
+# We can also do actions like make a string all uppercase or all lowercase using the `upper()` and `lower()` functions.
 # 
-# See more here: https://www.w3schools.com/python/python_datatypes.asp
+# Unlike previous uses of functions, for these we write the name of the variable we are using, then a `.` and then name of the function.
 
-# In[ ]:
-
-
+# In[21]:
 
 
-
-# In[10]:
-
-
-# TODO: Demo data types
-message = "Hello World!"
-my_name = "Kyle"
-
-pi = 3.141592653
-
-is_kyle_at_home = True
-is_kyle_at_uw_now = False
+normal_message = "I hope you are doing OK"
 
 
-# ## Dictionary (mapping)
-# Python also lets you have a variable that has multiple named pieces (it's like your variable has its own variables). The type of this is "dict"
-# 
-# We won't go into details here, but if you have a variable that is type "dict", you can access the different components by using a dot. 
-# 
-# For example, if I have a variable `book` which is a type "dict" and it has components `pages` and `author`, I can get the value of the pages and author like this:
-# ```
-# book.pages
-# book.author
-# ```
-
-# ## Error demos
-
-# In[11]:
+# In[22]:
 
 
-# error when I put a number in a string
-example_text = "how old are you? I am " + 3
+loud_message = normal_message.upper()
+display(loud_message)
 
+
+# In[23]:
+
+
+quiet_message = normal_message.lower()
+display(quiet_message)
+
+
+# _You can read more about Python data types at [w3schools explanation of Python data types](https://www.w3schools.com/python/python_datatypes.asp)_
