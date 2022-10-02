@@ -1299,6 +1299,28 @@ const thebe_selector_output = ".output, .cell_output"
    Teaching With This Book
   </a>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../appendix/solutions/00_solutions.html">
+   Practice Solutions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/>
+  <label for="toctree-checkbox-29">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/solutions/01_solution_practice_statements_variables_sleep.html">
+     Ch 3 Practice: Statements and Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/solutions/02_solution_practice_data.html">
+     Ch 4 Practice: Python Basic Data Types
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </div>
@@ -1685,7 +1707,7 @@ title="Print to PDF"
 <li><p>You can also specify which input you are giving within the parenthesis by putting parameter_name=value</p></li>
 </ul>
 <p>Additionally, some functions produce a result, which can be saved in a variable, or used in a calculation or some other fashion. When we save the result of running a function into a variable, it looks like this:</p>
-<p><code class="docutils literal notranslate"><span class="pre">save_result_var</span> <span class="pre">=</span> <span class="pre">function_name(input_parameters)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">save_result_variable</span> <span class="pre">=</span> <span class="pre">function_name(input_parameters)</span></code></p>
 </section>
 <section id="function-results">
 <h3>function results<a class="headerlink" href="#function-results" title="Permalink to this headline">#</a></h3>
@@ -2067,7 +2089,7 @@ title="Print to PDF"
 </div>
 </div>
 <p>We can also do actions like make a string all uppercase or all lowercase using the <code class="docutils literal notranslate"><span class="pre">upper()</span></code> and <code class="docutils literal notranslate"><span class="pre">lower()</span></code> functions.</p>
-<p>Unlike previous uses of functions, for these we write the name of the variable we are using, then a <code class="docutils literal notranslate"><span class="pre">.</span></code> and then name of the function.</p>
+<p>Unlike previous uses of functions, for these we write the name of the variable we are using, then a <code class="docutils literal notranslate"><span class="pre">.</span></code> and then name of the function: <code class="docutils literal notranslate"><span class="pre">save_result_variable</span> <span class="pre">=</span> <span class="pre">variable_name.function_name()</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">normal_message</span> <span class="o">=</span> <span class="s2">&quot;I hope you are doing OK&quot;</span>
@@ -2097,6 +2119,20 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;i hope you are doing ok&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also see how many characters long a string is by using the function <code class="docutils literal notranslate"><span class="pre">len()</span></code> like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">message_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">normal_message</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">message_length</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>23
 </pre></div>
 </div>
 </div>

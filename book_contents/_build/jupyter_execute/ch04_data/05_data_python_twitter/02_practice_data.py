@@ -3,253 +3,136 @@
 
 # # Practice: Python Basic Data Types
 
-# In[ ]:
-
-
-
-
-
-# ### String Manipulation
-
-# *Some notes: A string is a list of characters in order. An empty string is a string that has 0 characters. Python recognize as strings everything inside quotation marks
-# (” ” or ‘ ‘).
-
-# ### String Review!
-
-# 12. Create a variable that stores the string "Hello World". Return only the second word using indexing.
-
-# In[ ]:
-
-
-
-
-
-# 13. Using the variable you made in question #12, store the first letters of both words in a new variable called `first_characters`.
-
-# In[ ]:
-
-
-
-
-
-# 14. Return the length of the variable you made in question #12.
-
-# In[ ]:
-
-
-
-
-
-# ### count()
-
-# The `count()` function returns the number of times a specified character is in a string.
+# ## Greeting
+# Make a new variable called `greeting_part_1` and assign it the string: `"Welcome, "`
+# 
+# Note: There is an extra space after the word
 
 # In[1]:
 
 
-# try out the following example:
-
-weather = "Seattle has a slight drizzle"
-weather.count('t')
+# TODO: enter your code here
 
 
-# 15. Return the number of times the character 'l' is in "Hello World" using `count()`
-
-# In[ ]:
-
-
-
-
-
-# ### index()
-
-# The `index()` function finds the first occurrence of the specified value. It raises an exception if the value is not found.
+# Make a new variable called `greeting_part_2` and assign it the string: `"! It is nice to meet you!"`
+# 
+# Note: this string starts with an exlamation mark.
 
 # In[2]:
 
 
-# try out the following example:
+# TODO: enter your code here
 
-weather.index('t')
 
+# Make a variable called name_1 and assign it with a string of someone's name.
 
 # In[3]:
 
 
-# try out the following example:
+# TODO: enter your code here
 
-weather.index('drizzle')
 
+# Now, combine them all together into a new variable called `full_greeting`. Combine the parts together by taking `greeting_part_1` then adding `name` then adding `greeting_part_2`.
+# 
+# Then display the variable `full_greeting`.
 
 # In[4]:
 
 
-# try out the following example:
-
-weather.index('p')      # it should return an error!
+# TODO: enter your code here
 
 
-# 16. Return the index of the word, "World" in "Hello World".
-
-# In[ ]:
-
-
-
-
-
-# ### upper() & lower()
-
-# These functions change upper and lower case strings
-
-# In[ ]:
-
-
-# Try out the following example:
-
-weather = weather.upper()
-weather
-
-
-# In[ ]:
-
-
-# Try out the following example:
-
-weather = weather.lower()
-weather
-
-
-# 17. Change your "Hello World" string to all upper case letters.
-
-# In[ ]:
-
-
-
-
-
-# ### quotes
-
-# What if you want to include the quote character " inside of a string? You can put a backslash character followed by a quote (\" or \'). This is called an escape sequence. Python will remove the backslash, and put just the quote in the string.
+# Now make a variable called `name_2` with another name in it and make a variable `called_full_greeting_2` the same way you did `full_greeting`, but with `name_2` instead.
 # 
-# It looks like this:
+# Then display the variable `full_greeting_2`
+
+# In[5]:
+
+
+# TODO: enter your code here
+
+
+# ## Engagement report
+
+# Make up numbers for tweet metrics and save them into variables: `number_likes`, `number_retweets`, `number_quote_tweets`
+
+# In[6]:
+
+
+# TODO: enter your code here
+
+
+# Write three different `display()` function calls, one to report on each of those variables.
 # 
-# ```
-# print('Bob\'s favorite language is Python')
-# ```
+# Inside the parentheses first put a string like, `"The number of likes is: "` and then add the relevant variable to it, but remember, since the variable has a number in it, you have to put a `str()` function call around that variable name
 
-# In[ ]:
+# In[7]:
 
 
-# try it out:
-
-print('Bob\'s favorite language is Python')
+# TODO: enter your code here
 
 
-# In[ ]:
-
-
-# again with double quotes:
-
-print("Bob once said, \"Coding is so fun!\"")
-
-
-# 18. Print your own sentence with quotes!
-
-# In[ ]:
-
-
-
-
-
-# ### the 'in' operator
-
-# The 'in' operator is the best way to check if a python string contains a substring.
+# Make a new variable called `total_engagement` and save the total number of all the likes, retweets and quote tweets. 
 # 
-# Here's what it looks like:
+# Then display that information the way you did the other variables.
+
+# In[8]:
+
+
+# TODO: enter your code here
+
+
+# ## Is your tweet too long
+
+# Make a variable called `tweet_1` with a string of your choosing that is fairly short
+
+# In[9]:
+
+
+# TODO: enter your code here
+
+
+# Make a variable called `tweet_1_length`, and save the length of the string `tweet_1` into it (using the `len()` function)
+
+# In[10]:
+
+
+# TODO: enter your code here
+
+
+# Check if the `tweet_1_length` is less than or equal to 280 characters (the max length of a tweet) using the less than or equal operator: `<=`, and save the result into a variable called `is_tweet_1_short_enough`
+
+# In[11]:
+
+
+# TODO: enter your code here
+
+
+# Use the `display()` function to display a string (`"Is tweet 1 short enough? "`), adding the variable `is_tweet_1_short_enough` to that string.
 # 
-# ```
-# 
-# if "Seattle" in "Seattle has a slight drizzle":
-#     print("Exists")
-# ```
+# Remember, since the variable has a boolean and not a string in it, you have to put a str() function call around that variable name
 
-# In[ ]:
+# In[12]:
 
 
-# try it out:
-
-if "Seattle" in "Seattle has a slight drizzle":
-    print("Exists")
+# TODO: enter your code here
 
 
-# In[ ]:
+# Make a variable called `tweet_2` with a string of your choosing that is very long (over 280 characters)
+
+# In[13]:
 
 
-# similar example:
-
-if "Seattle" in "San Francisco has a slight drizzle":
-    print("Exists")
-else:
-    print("Does not exist")
+# TODO: enter your code here
 
 
-# In[ ]:
+# Repeat the rest of the steps from before, but with tweet_2
+# - find tweet_2_length
+# - make a variable is_tweet_2_short_enough
+# - display the result
+
+# In[14]:
 
 
-# you can also use variables:
-
-if "seattle" in weather:
-    print("Exists")
-
-
-# 19. Find out if "hey" is in "Hello World" using the 'in' operator.
-
-# In[ ]:
-
-
-
-
-
-# ### split() function
-
-# The `split()` function splits a string into a list.
-
-# In[ ]:
-
-
-# try out the following example:
-
-hello_example = "Hello world! Who's ready to code?"
-
-hello_example = hello_example.split()
-
-print(hello_example)
-
-
-# In[ ]:
-
-
-# try out this example:
-
-weather_example = "it was a gloomy, rainy, brisk Wednesday morning."
-
-weather_example = weather_example.split(", ")
-
-print(weather_example)
-
-
-# 20. Split a sentence of your choice based on spaces:
-
-# In[ ]:
-
-
-
-
-
-# 21. Split your UW email based on the "@" symbol:
-
-# In[ ]:
-
-
-
+# TODO: enter your code here
 

@@ -30,7 +30,7 @@
 # 
 # Additionally, some functions produce a result, which can be saved in a variable, or used in a calculation or some other fashion. When we save the result of running a function into a variable, it looks like this:
 # 
-# `save_result_var = function_name(input_parameters)`
+# `save_result_variable = function_name(input_parameters)`
 # 
 # ### function results
 # * Functions can have outputs that are called "returns" or "results"
@@ -287,7 +287,7 @@ display(tweet_3_has_cat)
 
 # We can also do actions like make a string all uppercase or all lowercase using the `upper()` and `lower()` functions.
 # 
-# Unlike previous uses of functions, for these we write the name of the variable we are using, then a `.` and then name of the function.
+# Unlike previous uses of functions, for these we write the name of the variable we are using, then a `.` and then name of the function: `save_result_variable = variable_name.function_name()`
 
 # In[21]:
 
@@ -307,6 +307,15 @@ display(loud_message)
 
 quiet_message = normal_message.lower()
 display(quiet_message)
+
+
+# We can also see how many characters long a string is by using the function `len()` like this:
+
+# In[24]:
+
+
+message_length = len(normal_message)
+display(message_length)
 
 
 # _You can read more about Python data types at [w3schools explanation of Python data types](https://www.w3schools.com/python/python_datatypes.asp)_
