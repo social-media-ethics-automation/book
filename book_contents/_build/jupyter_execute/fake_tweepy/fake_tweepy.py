@@ -12,6 +12,8 @@ from types import SimpleNamespace
 from IPython.display import HTML, Image, display
 import html
 
+import datetime
+
 
 
 # In[2]:
@@ -35,11 +37,35 @@ print_info("Fake tweepy is replacing the tweepy library. Fake Tweepy doesn't nee
 def print_tweet(text=""):
     print_info("Fake Tweepy is pretending to post this tweet (note: real tweepy shows no output here when a tweet is posted): ")
     print(text)
+    
+def search_recent_tweets(query="", tweet_fields=[]):
+    print_info("Fake Tweepy is pretending to search and is returning some fake tweets.")
+    return SimpleNamespace(
+      data = [
+          SimpleNamespace(
+              text = "While trying to tweet right now, I am being attacked by my cute cat! It's so hard to tpye wihsaoae as fesadf asd fssasaf sa",
+              id = 129308937494,
+              author_id = 239048094385,
+              created_at = datetime.datetime(2022, 2, 22, 22, 22, 22, 0, datetime.timezone.utc),
+              lang = 'en',
+              source = 'Twitter for Android',
+              public_metrics = {
+                  'retweet_count': 7,
+                  'reply_count': 3,
+                  'like_count': 6,
+                  'quote_count': 2                  
+              }
+          )
+          
+      ]
+    )
+
 
 def client_creator(bearer_token="", consumer_key="", consumer_secret="", access_token="", access_token_secret="" ):
     print_info("Fake Tweepy is pretending to log in to twitter")
     return SimpleNamespace(
-      create_tweet = print_tweet
+      create_tweet = print_tweet,
+      search_recent_tweets = search_recent_tweets
     )
 
 

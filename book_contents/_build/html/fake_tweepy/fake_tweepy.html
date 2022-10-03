@@ -360,7 +360,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../ch04_data/00_data.html">
-   4. (Incomplete) Data
+   4. Data
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
   <label for="toctree-checkbox-8">
@@ -446,18 +446,13 @@ const thebe_selector_output = ".output, .cell_output"
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../ch04_data/05_data_python_twitter/03_activity.html">
-       4.5.3. Design Activity: Data and Social media
+      <a class="reference internal" href="../ch04_data/05_data_python_twitter/03_demo_data_from_twitter.html">
+       4.5.3. Demo: Data from a Tweet
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../ch04_data/05_data_python_twitter/04_demo_data_from_twitter.html">
-       4.5.4. Demo: Getting data from twitter
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../ch04_data/05_data_python_twitter/05_practice_get_twitter_info.html">
-       4.5.5. Practice: Get Data from twitter
+      <a class="reference internal" href="../ch04_data/05_data_python_twitter/04_activity.html">
+       4.5.4. Design Activity: Data and Social media
       </a>
      </li>
     </ul>
@@ -1302,6 +1297,28 @@ const thebe_selector_output = ".output, .cell_output"
    Teaching With This Book
   </a>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../appendix/solutions/00_solutions.html">
+   Practice Solutions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/>
+  <label for="toctree-checkbox-29">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/solutions/01_solution_practice_statements_variables_sleep.html">
+     Ch 3 Practice: Statements and Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/solutions/02_solution_practice_data.html">
+     Ch 4 Practice: Python Basic Data Types
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </div>
@@ -1519,6 +1536,8 @@ title="Print to PDF"
 
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span>
 <span class="kn">import</span> <span class="nn">html</span>
+
+<span class="kn">import</span> <span class="nn">datetime</span>
 </pre></div>
 </div>
 </div>
@@ -1544,11 +1563,35 @@ title="Print to PDF"
 <span class="k">def</span> <span class="nf">print_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
     <span class="n">print_info</span><span class="p">(</span><span class="s2">&quot;Fake Tweepy is pretending to post this tweet (note: real tweepy shows no output here when a tweet is posted): &quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    
+<span class="k">def</span> <span class="nf">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">tweet_fields</span><span class="o">=</span><span class="p">[]):</span>
+    <span class="n">print_info</span><span class="p">(</span><span class="s2">&quot;Fake Tweepy is pretending to search and is returning some fake tweets.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+      <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+          <span class="n">SimpleNamespace</span><span class="p">(</span>
+              <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;While trying to tweet right now, I am being attacked by my cute cat! It&#39;s so hard to tpye wihsaoae as fesadf asd fssasaf sa&quot;</span><span class="p">,</span>
+              <span class="nb">id</span> <span class="o">=</span> <span class="mi">129308937494</span><span class="p">,</span>
+              <span class="n">author_id</span> <span class="o">=</span> <span class="mi">239048094385</span><span class="p">,</span>
+              <span class="n">created_at</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">),</span>
+              <span class="n">lang</span> <span class="o">=</span> <span class="s1">&#39;en&#39;</span><span class="p">,</span>
+              <span class="n">source</span> <span class="o">=</span> <span class="s1">&#39;Twitter for Android&#39;</span><span class="p">,</span>
+              <span class="n">public_metrics</span> <span class="o">=</span> <span class="p">{</span>
+                  <span class="s1">&#39;retweet_count&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+                  <span class="s1">&#39;reply_count&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                  <span class="s1">&#39;like_count&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+                  <span class="s1">&#39;quote_count&#39;</span><span class="p">:</span> <span class="mi">2</span>                  
+              <span class="p">}</span>
+          <span class="p">)</span>
+          
+      <span class="p">]</span>
+    <span class="p">)</span>
+
 
 <span class="k">def</span> <span class="nf">client_creator</span><span class="p">(</span><span class="n">bearer_token</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">consumer_key</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">access_token</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="s2">&quot;&quot;</span> <span class="p">):</span>
     <span class="n">print_info</span><span class="p">(</span><span class="s2">&quot;Fake Tweepy is pretending to log in to twitter&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
-      <span class="n">create_tweet</span> <span class="o">=</span> <span class="n">print_tweet</span>
+      <span class="n">create_tweet</span> <span class="o">=</span> <span class="n">print_tweet</span><span class="p">,</span>
+      <span class="n">search_recent_tweets</span> <span class="o">=</span> <span class="n">search_recent_tweets</span>
     <span class="p">)</span>
 
 

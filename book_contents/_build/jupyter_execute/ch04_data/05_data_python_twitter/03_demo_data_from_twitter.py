@@ -39,12 +39,6 @@ access_token = "56sd5Ss4tsea_fake_access_token_%YE%hDsdr"
 access_token_secret = "j^$dr_fake_consumer_key_^A5s#DR5s"
 
 
-# In[8]:
-
-
-
-
-
 # ### give tweepy (or fake_tweepy) your developer access passwords
 
 # In[4]:
@@ -74,7 +68,7 @@ client = tweepy.Client(
 query = '"cute cat"'
 
 #Run the search and request some additional info
-tweets = client.search_recent_tweets(query=query, tweet_fields=["author_id", "conversation_id", "created_at", "geo", "id", "in_reply_to_user_id", "lang", "public_metrics", "source", "text"])
+tweets = client.search_recent_tweets(query=query, tweet_fields=["author_id", "created_at", "id", "lang", "public_metrics", "source", "text"])
 
 # Find the first tweet returned
 recent_tweet = tweets.data[0]
@@ -88,66 +82,103 @@ recent_tweet = tweets.data[0]
 # 
 # ### tweet text:
 
-# In[31]:
+# In[6]:
 
 
 display("The data type of the tweet text is: " + type(recent_tweet.text).__name__)
 display("The tweet text is: " + recent_tweet.text)
 
 
+# As you can see above, the tweet text is a string (`str`) data type. And while we can't see any indication here, we know from elsewhere that tweet text is limited to 280 characters in length.
+
 # ### tweet id
 
-# In[32]:
+# In[7]:
 
 
 display("The data type of the tweet id is: " + type(recent_tweet.id).__name__)
 display("The tweet tweet id is: " + str(recent_tweet.id))
 
 
+# The tweet id is an integer number (`int`). This is how the tweet is referred to inside Twitter's computers. So if someone is replying to a tweet, Twitter just puts which tweet ID they were replying to, and then can look up that tweet if needed.
+
 # ### tweet author id
 
-# In[33]:
+# In[8]:
 
 
 display("The data type of the author id is: " + type(recent_tweet.author_id).__name__)
 display("The tweet author id is: " + str(recent_tweet.author_id))
 
 
+# The author id is an integer number (int). This is how the user who posted the tweet is referred to inside Twitter's computers. So when twitter wants to display the tweet with the user info, it uses this number to look up the information on that user.
+
 # ### tweet created at
 
-# In[34]:
+# In[9]:
 
 
 display("The data type of the tweet created at is: " + type(recent_tweet.created_at).__name__)
 display("The tweet tweet created at is: " + str(recent_tweet.created_at))
 
 
+# The created at time for the tweet is a special python datetime data type (`datetime`). As you can see, it has the year, month, and day, and then the time in hours, minutes and seconds. It then shows the timezone it is in, in this case: 00:00, which is in [Coordinated Universal Time](https://en.wikipedia.org/wiki/Coordinated_Universal_Time).
+
 # ### tweet lang (language)
 
-# In[35]:
+# In[10]:
 
 
 display("The data type of the tweet lang is: " + type(recent_tweet.lang).__name__)
 display("The tweet tweet lang is: " + str(recent_tweet.lang))
 
 
-# In[36]:
+# The language the tweet is made in is a string (`str`). It comes from a set of [standard language abbreviations](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) and in this case it is "en" which is short for "English".
 
+# ### tweet source (device that made the tweet)
 
-### tweet source (device that made the tweet)
-
-
-# In[37]:
+# In[11]:
 
 
 display("The data type of the tweet source is: " + type(recent_tweet.source).__name__)
 display("The tweet tweet source is: " + str(recent_tweet.source))
 
 
-# ### TODO: public metrics
-"author_id", "conversation_id", "created_at", "geo", "id", "in_reply_to_user_id", "lang", "public_metrics", "source", "text"
-# In[ ]:
+# The tweet source is a string (`str`). In this case it is "Twitter for Android" meaning someone posted this tweet from the Twitter App on their Android phone.
+
+# ### public metrics
+
+# In[12]:
 
 
+display("The data type of the tweet source is: " + type(recent_tweet.public_metrics).__name__)
+display("The tweet tweet source is: " + str(recent_tweet.public_metrics))
 
 
+# The public metrics of a tweet are saved in a dictionary (`dict`), which holds a group of values. So let's look at each of those:
+
+# In[13]:
+
+
+display("The data type of the retweet count is: " + type(recent_tweet.public_metrics['retweet_count']).__name__)
+display("The retweet count is: " + str(recent_tweet.public_metrics['retweet_count']))
+
+display("The data type of the reply count is: " + type(recent_tweet.public_metrics['reply_count']).__name__)
+display("The reply count is: " + str(recent_tweet.public_metrics['reply_count']))
+
+display("The data type of the like count is: " + type(recent_tweet.public_metrics['like_count']).__name__)
+display("The like count is: " + str(recent_tweet.public_metrics['like_count']))
+
+display("The data type of the quote count is: " + type(recent_tweet.public_metrics['quote_count']).__name__)
+display("The quote count is: " + str(recent_tweet.public_metrics['quote_count']))
+
+
+# The counts for retweets, replies, likes, and quotes are each integer numbers (`int`), indicating how many times the tweet has been retweeted, replied to, liked, or quoted.
+
+# ## Still more!
+# In addition to the data we looked at above, there are even more options for tweets such as:
+# - conversation_id: For tracking which tweets are in the same conversation, like replies and threads)
+# - geo: For the location where a tweet was posted (I think default privacy settings now leave this blank)
+# - organic_metrics: For the account that made the tweet, they can see how many people looked at it, or clicked on the user profile
+# 
+# You can read more about all this data and more in the [official twitter API documentation](https://developer.twitter.com/en/docs/twitter-api/data-dictionary/object-model/tweet) (which is admittedly, a little hard to read and make sense of).
