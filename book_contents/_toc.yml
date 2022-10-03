@@ -233,7 +233,7 @@ parts:
   - caption: Appendix
     chapters:
       - file: appendix/teaching_with_this_book
-      - file: appendix/practice_solutions/00_solutions
+      - file: appendix/solutions/00_solutions
         sections:
-          - file: appendix/practice_solutions/01_solution_practice_statements_variables_sleep
-          - file: appendix/practice_solutions/02_solution_practice_data
+          - file: appendix/solutions/01_solution_practice_statements_variables_sleep
+          - file: appendix/solutions/02_solution_practice_data
