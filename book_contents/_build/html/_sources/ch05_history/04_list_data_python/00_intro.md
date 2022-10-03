@@ -23,7 +23,7 @@ As the loop goes, it saves the current thing it is looking at in the temporary v
 The commands you want to repeat need to be tabbed in one more level than the for statement to indicate they go inside the for loop.
 
 
-# TODO: Demo some for loops, including the one below
+## TODO: Demo some for loops, including the one below
 
 for x in range(10):
     print("<<<<< " + str(x*4 + 1) + "/40")
@@ -41,7 +41,7 @@ Python lets you access a character at a specific index using the [] notation
 ​
 Note: You can use either "double quotes" or 'single quotes' to indicate a string
 
-# try running the following examples:
+## try running the following examples:
 
 wa = 'Washington'
 wa[0]
@@ -57,7 +57,7 @@ Return all the letters of your name EXCEPT for the first.
 
 Loops
 For loops let you iterate over a sequence of values.
-# try out this example:
+## try out this example:
 
 for num in range(10):
     print(num)
@@ -81,7 +81,7 @@ Remember, lists have this structure:
 
 [item1, item2, item3]
 
-# try out this example:
+## try out this example:
 
 states = ['California', 'Washington', 'New York']
 states[0]

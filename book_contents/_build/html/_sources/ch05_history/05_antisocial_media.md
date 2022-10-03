@@ -1,4 +1,4 @@
-# The Rise of Antisocial Media
+# Antisocial Media
  (barely moderated)
   - History of [Something Awful](https://en.wikipedia.org/wiki/Something_Awful) -> [4chan](https://en.wikipedia.org/wiki/4chan) -> [8chan -> 8kun](https://en.wikipedia.org/wiki/8chan)
   - What comes from 4chan?
