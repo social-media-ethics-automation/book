@@ -362,7 +362,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../00_data.html">
-   4. (Incomplete) Data
+   4. Data
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
   <label for="toctree-checkbox-8">
@@ -1589,11 +1589,21 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#todo-public-metrics">
-     TODO: public metrics
+    <a class="reference internal nav-link" href="#tweet-source-device-that-made-the-tweet">
+     tweet source (device that made the tweet)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#public-metrics">
+     public metrics
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#still-more">
+   Still more!
+  </a>
  </li>
 </ul>
 
@@ -1676,11 +1686,21 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#todo-public-metrics">
-     TODO: public metrics
+    <a class="reference internal nav-link" href="#tweet-source-device-that-made-the-tweet">
+     tweet source (device that made the tweet)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#public-metrics">
+     public metrics
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#still-more">
+   Still more!
+  </a>
  </li>
 </ul>
 
@@ -1770,7 +1790,7 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 <span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;&quot;cute cat&quot;&#39;</span>
 
 <span class="c1">#Run the search and request some additional info</span>
-<span class="n">tweets</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">tweet_fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;author_id&quot;</span><span class="p">,</span> <span class="s2">&quot;conversation_id&quot;</span><span class="p">,</span> <span class="s2">&quot;created_at&quot;</span><span class="p">,</span> <span class="s2">&quot;geo&quot;</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;in_reply_to_user_id&quot;</span><span class="p">,</span> <span class="s2">&quot;lang&quot;</span><span class="p">,</span> <span class="s2">&quot;public_metrics&quot;</span><span class="p">,</span> <span class="s2">&quot;source&quot;</span><span class="p">,</span> <span class="s2">&quot;text&quot;</span><span class="p">])</span>
+<span class="n">tweets</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">tweet_fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;author_id&quot;</span><span class="p">,</span> <span class="s2">&quot;created_at&quot;</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;lang&quot;</span><span class="p">,</span> <span class="s2">&quot;public_metrics&quot;</span><span class="p">,</span> <span class="s2">&quot;source&quot;</span><span class="p">,</span> <span class="s2">&quot;text&quot;</span><span class="p">])</span>
 
 <span class="c1"># Find the first tweet returned</span>
 <span class="n">recent_tweet</span> <span class="o">=</span> <span class="n">tweets</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -1778,19 +1798,7 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="nn">Input In [5],</span> in <span class="ni">&lt;cell line: 5&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;&quot;cute cat&quot;&#39;</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1">#Run the search and request some additional info</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">tweets</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">tweet_fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;author_id&quot;</span><span class="p">,</span> <span class="s2">&quot;conversation_id&quot;</span><span class="p">,</span> <span class="s2">&quot;created_at&quot;</span><span class="p">,</span> <span class="s2">&quot;geo&quot;</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;in_reply_to_user_id&quot;</span><span class="p">,</span> <span class="s2">&quot;lang&quot;</span><span class="p">,</span> <span class="s2">&quot;public_metrics&quot;</span><span class="p">,</span> <span class="s2">&quot;source&quot;</span><span class="p">,</span> <span class="s2">&quot;text&quot;</span><span class="p">])</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># Find the first tweet returned</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">recent_tweet</span> <span class="o">=</span> <span class="n">tweets</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-
-<span class="ne">AttributeError</span>: &#39;types.SimpleNamespace&#39; object has no attribute &#39;search_recent_tweets&#39;
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to search and is returning some fake tweets.</strong></div></div>
 </div>
 </section>
 <section id="look-at-data-in-tweet">
@@ -1810,11 +1818,12 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the tweet text is: str&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The tweet text is: RT @TweetsOfCats: Drop this account a follow for wholesome cute cat memes. ❤️ https://t.co/YVciPPq01s&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;The tweet text is: While trying to tweet right now, I am being attacked by my cute cat! It&#39;s so hard to tpye wihsaoae as fesadf asd fssasaf sa&quot;
 </pre></div>
 </div>
 </div>
 </div>
+<p>As you can see above, the tweet text is a string (<code class="docutils literal notranslate"><span class="pre">str</span></code>) data type. And while we can’t see any indication here, we know from elsewhere that tweet text is limited to 280 characters in length.</p>
 </section>
 <section id="tweet-id">
 <h3>tweet id<a class="headerlink" href="#tweet-id" title="Permalink to this headline">#</a></h3>
@@ -1829,11 +1838,12 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the tweet id is: int&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The tweet tweet id is: 1576453518411849729&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The tweet tweet id is: 129308937494&#39;
 </pre></div>
 </div>
 </div>
 </div>
+<p>The tweet id is an integer number (<code class="docutils literal notranslate"><span class="pre">int</span></code>). This is how the tweet is referred to inside Twitter’s computers. So if someone is replying to a tweet, Twitter just puts which tweet ID they were replying to, and then can look up that tweet if needed.</p>
 </section>
 <section id="tweet-author-id">
 <h3>tweet author id<a class="headerlink" href="#tweet-author-id" title="Permalink to this headline">#</a></h3>
@@ -1848,11 +1858,12 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the author id is: int&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The tweet author id is: 1385004837218172939&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The tweet author id is: 239048094385&#39;
 </pre></div>
 </div>
 </div>
 </div>
+<p>The author id is an integer number (int). This is how the user who posted the tweet is referred to inside Twitter’s computers. So when twitter wants to display the tweet with the user info, it uses this number to look up the information on that user.</p>
 </section>
 <section id="tweet-created-at">
 <h3>tweet created at<a class="headerlink" href="#tweet-created-at" title="Permalink to this headline">#</a></h3>
@@ -1867,11 +1878,12 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the tweet created at is: datetime&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The tweet tweet created at is: 2022-10-02 06:06:22+00:00&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The tweet tweet created at is: 2022-02-22 22:22:22+00:00&#39;
 </pre></div>
 </div>
 </div>
 </div>
+<p>The created at time for the tweet is a special python datetime data type (<code class="docutils literal notranslate"><span class="pre">datetime</span></code>). As you can see, it has the year, month, and day, and then the time in hours, minutes and seconds. It then shows the timezone it is in, in this case: 00:00, which is in <a class="reference external" href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time">Coordinated Universal Time</a>.</p>
 </section>
 <section id="tweet-lang-language">
 <h3>tweet lang (language)<a class="headerlink" href="#tweet-lang-language" title="Permalink to this headline">#</a></h3>
@@ -1891,13 +1903,10 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### tweet source (device that made the tweet)</span>
-</pre></div>
-</div>
-</div>
-</div>
+<p>The language the tweet is made in is a string (<code class="docutils literal notranslate"><span class="pre">str</span></code>). It comes from a set of <a class="reference external" href="https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags">standard language abbreviations</a> and in this case it is “en” which is short for “English”.</p>
+</section>
+<section id="tweet-source-device-that-made-the-tweet">
+<h3>tweet source (device that made the tweet)<a class="headerlink" href="#tweet-source-device-that-made-the-tweet" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the tweet source is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">source</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
@@ -1914,10 +1923,82 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 </div>
 </div>
 </div>
+<p>The tweet source is a string (<code class="docutils literal notranslate"><span class="pre">str</span></code>). In this case it is “Twitter for Android” meaning someone posted this tweet from the Twitter App on their Android phone.</p>
 </section>
-<section id="todo-public-metrics">
-<h3>TODO: public metrics<a class="headerlink" href="#todo-public-metrics" title="Permalink to this headline">#</a></h3>
+<section id="public-metrics">
+<h3>public metrics<a class="headerlink" href="#public-metrics" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the tweet source is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">public_metrics</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The tweet tweet source is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">public_metrics</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the tweet source is: dict&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;The tweet tweet source is: {&#39;retweet_count&#39;: 7, &#39;reply_count&#39;: 3, &#39;like_count&#39;: 6, &#39;quote_count&#39;: 2}&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The public metrics of a tweet are saved in a dictionary (<code class="docutils literal notranslate"><span class="pre">dict</span></code>), which holds a group of values. So let’s look at each of those:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the retweet count is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">public_metrics</span><span class="p">[</span><span class="s1">&#39;retweet_count&#39;</span><span class="p">])</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The retweet count is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">public_metrics</span><span class="p">[</span><span class="s1">&#39;retweet_count&#39;</span><span class="p">]))</span>
+
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the reply count is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">public_metrics</span><span class="p">[</span><span class="s1">&#39;reply_count&#39;</span><span class="p">])</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The reply count is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">public_metrics</span><span class="p">[</span><span class="s1">&#39;reply_count&#39;</span><span class="p">]))</span>
+
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the like count is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">public_metrics</span><span class="p">[</span><span class="s1">&#39;like_count&#39;</span><span class="p">])</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The like count is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">public_metrics</span><span class="p">[</span><span class="s1">&#39;like_count&#39;</span><span class="p">]))</span>
+
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the quote count is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">public_metrics</span><span class="p">[</span><span class="s1">&#39;quote_count&#39;</span><span class="p">])</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The quote count is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">public_metrics</span><span class="p">[</span><span class="s1">&#39;quote_count&#39;</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the retweet count is: int&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The retweet count is: 7&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the reply count is: int&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The reply count is: 3&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the like count is: int&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The like count is: 6&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the quote count is: int&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The quote count is: 2&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The counts for retweets, replies, likes, and quotes are each integer numbers (<code class="docutils literal notranslate"><span class="pre">int</span></code>), indicating how many times the tweet has been retweeted, replied to, liked, or quoted.</p>
 </section>
+</section>
+<section id="still-more">
+<h2>Still more!<a class="headerlink" href="#still-more" title="Permalink to this headline">#</a></h2>
+<p>In addition to the data we looked at above, there are even more options for tweets such as:</p>
+<ul class="simple">
+<li><p>conversation_id: For tracking which tweets are in the same conversation, like replies and threads)</p></li>
+<li><p>geo: For the location where a tweet was posted (I think default privacy settings now leave this blank)</p></li>
+<li><p>organic_metrics: For the account that made the tweet, they can see how many people looked at it, or clicked on the user profile</p></li>
+</ul>
+<p>You can read more about all this data and more in the <a class="reference external" href="https://developer.twitter.com/en/docs/twitter-api/data-dictionary/object-model/tweet">official twitter API documentation</a> (which is admittedly, a little hard to read and make sense of).</p>
 </section>
 </section>
 
