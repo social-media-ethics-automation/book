@@ -1,6 +1,6 @@
 # (Incomplete) History of Social Media
 
-TODO: summary statement here
+Now that we've seen some of how social media sites work, let's look back at the history of social media.
 
 ```{tableofcontents}
 ```
