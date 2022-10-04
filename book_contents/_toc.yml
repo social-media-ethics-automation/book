@@ -84,7 +84,7 @@ parts:
           - file: ch05_history/04_list_data_python/01_demo_lists
           - file: ch05_history/04_list_data_python/02_practice_lists
       - file: ch05_history/05_antisocial_media
-      - file: ch05_history/06_social_media_goals
+      - file: ch05_history/06_social_media_design
       - file: ch05_history/07_reflections
       - file: ch05_history/08_learn_more
     - file: ch06_authenticity/00_authenticity
