@@ -1,5 +1,6 @@
-# Lists in Python
+# Looping, Lists, and Dictionaries in Social Media
 
+We mentioned previously in chapter 4
 
 ```{tableofcontents}
 ```
