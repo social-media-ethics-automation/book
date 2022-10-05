@@ -1,10 +1,8 @@
-# Reflection Activities
+# Reflection Activities: Compare Social Media Designs
 
-- What are the different things that you think attracts users to social media platforms?
 
-- Pick a social media platform (current or defunct) and learn something about it (history, users, famous incidents, etc.). [Here](https://en.wikipedia.org/wiki/List_of_social_networking_services) is a list to start with.
-
-- Where do the goals of social media companies align with the goals of social media users?
-- Where do the goals of social media companies not align with the goals of social media users
-
-- Compare interfaces of two social media sites. (provide some historical examples too) What does each emphasize and make easiest (friction)
+## Compare social media designs
+Choose two social media sites ([here is a big list](https://en.wikipedia.org/wiki/List_of_social_networking_services)) and look at their interfaces:
+- List the information and actions that are immediately available on equivalent views on each site (e.g., their feed, or a view of a post, or a view of a user profile)
+- Why do you think each of these sites choose to emphasize, hide, or even disallow?
+- How do you think these decisions change how people behave on these sites?
