@@ -473,7 +473,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../00_history.html">
-   5. (Incomplete) History of Social Media
+   5. History of Social Media
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
   <label for="toctree-checkbox-11">
@@ -1324,6 +1324,11 @@ const thebe_selector_output = ".output, .cell_output"
      Ch 4 Practice: Python Basic Data Types
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/solutions/03_practice_lists_dictionaries.html">
+     Ch 5 Practice: Looping through lists and dictionaries
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -1481,61 +1486,12 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#for-loops">
-   5.4.4. for loops
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#todo-demo-some-for-loops-including-the-one-below">
-   5.4.5. TODO: Demo some for loops, including the one below
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#try-running-the-following-examples">
-   5.4.6. try running the following examples:
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#try-out-this-example">
-   5.4.7. try out this example:
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   5.4.8. try out this example:
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dictionary-mapping">
-   5.4.9. Dictionary (mapping)
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
@@ -1547,44 +1503,6 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#for-loops">
-   5.4.4. for loops
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#todo-demo-some-for-loops-including-the-one-below">
-   5.4.5. TODO: Demo some for loops, including the one below
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#try-running-the-following-examples">
-   5.4.6. try running the following examples:
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#try-out-this-example">
-   5.4.7. try out this example:
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   5.4.8. try out this example:
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dictionary-mapping">
-   5.4.9. Dictionary (mapping)
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -1637,90 +1555,6 @@ title="Print to PDF"
 <li class="toctree-l1"><a class="reference internal" href="03_practice_lists_dictionaries.html">5.4.3. Practice: Looping through lists and dictionaries</a></li>
 </ul>
 </div>
-<p>TODO: Add these to the demos:</p>
-<section id="for-loops">
-<h2><span class="section-number">5.4.4. </span>for loops<a class="headerlink" href="#for-loops" title="Permalink to this headline">#</a></h2>
-<p>For loops allow you to repeat an action multiple times.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">loop_value</span> <span class="ow">in</span> <span class="n">thing_to_loop_over</span><span class="p">:</span>
-    <span class="c1"># Put actions to repeat here</span>
-</pre></div>
-</div>
-<p>For loops have to have something to loop over, which goes after “in”.</p>
-<ul class="simple">
-<li><p>You can use it with the function range to repeat an action a given number of times.</p></li>
-<li><p>You can use it on a list, though we’ll cover that more later.</p></li>
-</ul>
-<p>As the loop goes, it saves the current thing it is looking at in the temporary variable you list before the in.</p>
-<p>The commands you want to repeat need to be tabbed in one more level than the for statement to indicate they go inside the for loop.</p>
-</section>
-<section id="todo-demo-some-for-loops-including-the-one-below">
-<h2><span class="section-number">5.4.5. </span>TODO: Demo some for loops, including the one below<a class="headerlink" href="#todo-demo-some-for-loops-including-the-one-below" title="Permalink to this headline">#</a></h2>
-<p>for x in range(10):
-print(“&lt;&lt;&lt;&lt;&lt; ” + str(x<em>4 + 1) + “/40”)
-print(“^^^^^ ” + str(x</em>4 + 2) + “/40”)
-print(“&gt;&gt;&gt;&gt;&gt; ” + str(x<em>4 + 3) + “/40”)
-print(“vvvvv ” + str(x</em>4 + 4) + “/40”)</p>
-<p>for loop: are we there yet</p>
-<p>Indexing
-When we think of strings, we commonly think of them as a sequence of characters, where each character has an index in the string. Each character has its own spot in the sequence, and the spots are ordered starting at index 0 going up to the end of the string.
-​
-Python lets you access a character at a specific index using the [] notation
-​
-Note: You can use either “double quotes” or ‘single quotes’ to indicate a string</p>
-</section>
-<section id="try-running-the-following-examples">
-<h2><span class="section-number">5.4.6. </span>try running the following examples:<a class="headerlink" href="#try-running-the-following-examples" title="Permalink to this headline">#</a></h2>
-<p>wa = ‘Washington’
-wa[0]
-wa[1]
-wa[5:]
-wa[:5]
-wa[2:4]</p>
-<p>Return the first letter of your name</p>
-<p>Return all the letters of your name EXCEPT for the first.</p>
-<p>Loops
-For loops let you iterate over a sequence of values.</p>
-</section>
-<section id="try-out-this-example">
-<h2><span class="section-number">5.4.7. </span>try out this example:<a class="headerlink" href="#try-out-this-example" title="Permalink to this headline">#</a></h2>
-<p>for num in range(10):
-print(num)</p>
-<p>Create a loop of range 5, mutiplying each number by 2</p>
-<p>Create a loop of range 5, squaring each number</p>
-<p>Lists
-Variables can also store different data structures such as lists. Create a list of at least 3 food items and assign it to a variable called favorite_foods.</p>
-<p>Remember, lists have this structure:</p>
-<p>[item1, item2, item3]</p>
-<p>Lists
-Variables can also store different data structures such as lists. Create a list of at least 3 food items and assign it to a variable called favorite_foods.</p>
-<p>Remember, lists have this structure:</p>
-<p>[item1, item2, item3]</p>
-</section>
-<section id="id1">
-<h2><span class="section-number">5.4.8. </span>try out this example:<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
-<p>states = [‘California’, ‘Washington’, ‘New York’]
-states[0]</p>
-<p>Return the second index in your list.</p>
-<p>Use the len() function to return the length of your list</p>
-<p>Loop through the list. For each iteration, print out the sentence: “NAME’s favorite food is FOOD”, replacing NAME with your name variable and food with each food in your favorite_foods list.</p>
-<p>Hint: You should print out the same number of lines as your answer for the previous question.</p>
-<p>Tweepy Review (refer to lab 1.5, but do NOT use the same answers)</p>
-<p>Search for a tweet that includes the phrase “happy wednesday”</p>
-<p>Create a variable called username and assign it to a username of an account of your choice.</p>
-<p>Get the user ID of the same account as above using the username variable. Store the user ID in the variable user_id. Show the output of the variable using the display() function.</p>
-<p>Get the user mentions using the user_id variable.</p>
-<p>Get who the user follow using the user_id variable.</p>
-</section>
-<section id="dictionary-mapping">
-<h2><span class="section-number">5.4.9. </span>Dictionary (mapping)<a class="headerlink" href="#dictionary-mapping" title="Permalink to this headline">#</a></h2>
-<p>Python also lets you have a variable that has multiple named pieces (it’s like your variable has its own variables). The type of this is “dict”</p>
-<p>We won’t go into details here, but if you have a variable that is type “dict”, you can access the different components by using a dot.</p>
-<p>For example, if I have a variable <code class="docutils literal notranslate"><span class="pre">book</span></code> which is a type “dict” and it has components <code class="docutils literal notranslate"><span class="pre">pages</span></code> and <code class="docutils literal notranslate"><span class="pre">author</span></code>, I can get the value of the pages and author like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">book</span><span class="o">.</span><span class="n">pages</span>
-<span class="n">book</span><span class="o">.</span><span class="n">author</span>
-</pre></div>
-</div>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
