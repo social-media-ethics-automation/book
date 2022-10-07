@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>5.4.1. Demo: Lists and Loops &#8212; Social Media, Ethics, and Automation</title>
+    <title>5.4.3. Practice: Looping through lists and dictionaries &#8212; Social Media, Ethics, and Automation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="5.5. Antisocial Media" href="../05_antisocial_media.html" />
-    <link rel="prev" title="5.4. Looping with Lists and Dictionaries in Social Media" href="00_intro.html" />
+    <link rel="prev" title="5.4.2. Demo: Dictionaries" href="02_demo_dictionaries.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -506,9 +506,19 @@ const thebe_selector_output = ".output, .cell_output"
      </i>
     </label>
     <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="01_demo_lists.html">
+       5.4.1. Demo: Lists and Loops
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="02_demo_dictionaries.html">
+       5.4.2. Demo: Dictionaries
+      </a>
+     </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       5.4.1. Demo: Lists and Loops
+       5.4.3. Practice: Looping through lists and dictionaries
       </a>
      </li>
     </ul>
@@ -1375,7 +1385,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/kylethayer/social_media_ethics_automation_v0/main?urlpath=lab/tree/book_contents/ch05_history/04_list_data_python/01_demo_lists.ipynb"
+        <a href="https://mybinder.org/v2/gh/kylethayer/social_media_ethics_automation_v0/main?urlpath=lab/tree/book_contents/ch05_history/04_list_data_python/03_practice_lists_dictionaries.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1435,7 +1445,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/kylethayer/social_media_ethics_automation_v0/issues/new?title=Issue%20on%20page%20%2Fch05_history/04_list_data_python/01_demo_lists.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/kylethayer/social_media_ethics_automation_v0/issues/new?title=Issue%20on%20page%20%2Fch05_history/04_list_data_python/03_practice_lists_dictionaries.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1463,7 +1473,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/ch05_history/04_list_data_python/01_demo_lists.ipynb"
+        <a href="../../_sources/ch05_history/04_list_data_python/03_practice_lists_dictionaries.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1523,26 +1533,9 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lists">
-   Lists
+  <a class="reference internal nav-link" href="#looping-through-lists">
+   Looping through lists
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#for-loops">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     for
-    </span>
-   </code>
-   Loops
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#loop-a-set-number-of-times">
-     Loop a set number of times
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -1553,7 +1546,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Demo: Lists and Loops</h1>
+                <h1>Practice: Looping through lists and dictionaries</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1564,26 +1557,9 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lists">
-   Lists
+  <a class="reference internal nav-link" href="#looping-through-lists">
+   Looping through lists
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#for-loops">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     for
-    </span>
-   </code>
-   Loops
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#loop-a-set-number-of-times">
-     Loop a set number of times
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -1595,257 +1571,30 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="demo-lists-and-loops">
-<h1><span class="section-number">5.4.1. </span>Demo: Lists and Loops<a class="headerlink" href="#demo-lists-and-loops" title="Permalink to this headline">#</a></h1>
-<section id="lists">
-<h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">#</a></h2>
-<p>Many types of data on social media platforms are organized as lists, such as</p>
-<ul class="simple">
-<li><p>lists of friends or followers</p></li>
-<li><p>lists of posts</p></li>
-<li><p>lists of photos in a post</p></li>
-<li><p>lists of people who liked a post</p></li>
-<li><p>etc.</p></li>
-</ul>
-<p>The way to create a list in Python is to make a list of values, separated by commas, inside of square brackets, like this:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="practice-looping-through-lists-and-dictionaries">
+<h1><span class="section-number">5.4.3. </span>Practice: Looping through lists and dictionaries<a class="headerlink" href="#practice-looping-through-lists-and-dictionaries" title="Permalink to this headline">#</a></h1>
+<section id="looping-through-lists">
+<h2>Looping through lists<a class="headerlink" href="#looping-through-lists" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Create a loop. Loop through the list <code class="docutils literal notranslate"><span class="pre">test_list</span></code>. Display the first 5 tweets in the list.</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">book_authors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Kyle Thayer&quot;</span><span class="p">,</span> <span class="s2">&quot;Susan Notess&quot;</span><span class="p">]</span>
-
-<span class="n">display</span><span class="p">(</span><span class="n">book_authors</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Kyle&quot;</span><span class="p">,</span> <span class="s2">&quot;Emily&quot;</span><span class="p">,</span> <span class="s2">&quot;Another Person&quot;</span><span class="p">]:</span>
+    <span class="n">sentence</span> <span class="o">=</span> <span class="n">text</span> <span class="o">+</span> <span class="s2">&quot; is awesome!&quot;</span>
+    <span class="n">upper_sentence</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">upper_sentence</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Kyle Thayer&#39;, &#39;Susan Notess&#39;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KYLE IS AWESOME!
+EMILY IS AWESOME!
+ANOTHER PERSON IS AWESOME!
 </pre></div>
 </div>
 </div>
 </div>
-<p>If we are making a list and it gets too long, Python will let us use several lines to do this:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">some_book_chapters</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Intro&quot;</span><span class="p">,</span>
-                     <span class="s2">&quot;Definitions&quot;</span><span class="p">,</span>
-                     <span class="s2">&quot;Bots&quot;</span><span class="p">,</span>
-                     <span class="s2">&quot;Data&quot;</span><span class="p">,</span>
-                     <span class="s2">&quot;History of Social Media&quot;</span><span class="p">,</span>
-                     <span class="s2">&quot;Authenticity&quot;</span><span class="p">]</span>
-
-<span class="n">display</span><span class="p">(</span><span class="n">some_book_chapters</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Intro&#39;,
- &#39;Definitions&#39;,
- &#39;Bots&#39;,
- &#39;Data&#39;,
- &#39;History of Social Media&#39;,
- &#39;Authenticity&#39;]
-</pre></div>
-</div>
-</div>
-</div>
-<p>Lists are in order, so Python let’s us use the “index” to ask for a specific entry, like the 1st, 2nd, 3rd, etc.</p>
-<p>As we stated in the Data chapter, many programming languages, for historical reasons, make a list’s first entry have index 0, it’s 2nd entry have index 1, it’s 3rd entry have index 2, etc.</p>
-<p>So if we want to see the first chapter in my <code class="docutils literal notranslate"><span class="pre">some_book_chapters</span></code> list, I select it by putting the index number inside square brackets (<code class="docutils literal notranslate"><span class="pre">[</span></code>, <code class="docutils literal notranslate"><span class="pre">]</span></code>) after the variable name:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_chapter</span> <span class="o">=</span> <span class="n">some_book_chapters</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">display</span><span class="p">(</span><span class="n">first_chapter</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Intro&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>And if I want the 4th chapter, I’d select it like this</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fourth_chapter</span> <span class="o">=</span> <span class="n">some_book_chapters</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
-<span class="n">display</span><span class="p">(</span><span class="n">fourth_chapter</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Data&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now, let’s say we have a list of Twitter users who liked our latest tweet:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">users_who_liked_our_tweet</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;@pretend_user_1&quot;</span><span class="p">,</span> <span class="s2">&quot;@pretend_user_2&quot;</span><span class="p">,</span> <span class="s2">&quot;@pretend_user_3&quot;</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>What if we wanted to follow all of them?</p>
-<p>If our list was long, it would take a lot of code to pull out each one and try to follow them. But Python gives us an easy way to perform actions on all the items in a list, by using <code class="docutils literal notranslate"><span class="pre">for</span></code> loops.</p>
-</section>
-<section id="for-loops">
-<h2><code class="docutils literal notranslate"><span class="pre">for</span></code> Loops<a class="headerlink" href="#for-loops" title="Permalink to this headline">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">for</span></code> loops let us perform an action or a set of actions for all of the items in a list.</p>
-<p>So, if we wanted to go through all the the users that liked our tweet and display a message for each one, we could do this:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users_who_liked_our_tweet</span><span class="p">:</span>
-    <span class="n">display</span><span class="p">(</span><span class="s2">&quot;Yay! &quot;</span> <span class="o">+</span> <span class="n">user</span> <span class="o">+</span> <span class="s2">&quot; liked our tweet!&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Yay! @pretend_user_1 liked our tweet!&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Yay! @pretend_user_2 liked our tweet!&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Yay! @pretend_user_3 liked our tweet!&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now, there are several things that went into making that for loop code above:</p>
-<ul class="simple">
-<li><p>Start the line with a <code class="docutils literal notranslate"><span class="pre">for</span></code></p></li>
-<li><p>Make up a new variable name that will be a temporary variable to hold whichever item from the list we are doing our actions on. In this case each item in the list will be a user, so we call our variable <code class="docutils literal notranslate"><span class="pre">user</span></code></p></li>
-<li><p>Then we write the word <code class="docutils literal notranslate"><span class="pre">in</span></code></p></li>
-<li><p>Then we put the list that we want to go through, in this case `users_who_liked_our_tweet’</p></li>
-<li><p>Then put a colon (<code class="docutils literal notranslate"><span class="pre">:</span></code>). In Python, a colon like this means that what comes next is a block of statements that goes together. This block of statements is indented over to indicate that it is part of the block.</p></li>
-<li><p>Then, on the next line and indented over, we have our display function that uses the <code class="docutils literal notranslate"><span class="pre">user</span></code> variable. This is the line of code that is repeated for each item in the list.</p></li>
-</ul>
-<p>If we want to do several actions in our loop, all we need to do is add more lines of code spaced over the same amount, like this (note: We’ll use <code class="docutils literal notranslate"><span class="pre">print</span></code> instead of <code class="docutils literal notranslate"><span class="pre">display</span></code>, which mostly work the same, but we think <code class="docutils literal notranslate"><span class="pre">print</span></code> happens to look a little better in this situation):</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users_who_liked_our_tweet</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Yay! &quot;</span> <span class="o">+</span> <span class="n">user</span> <span class="o">+</span> <span class="s2">&quot; liked our tweet!&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Perhaps we should follow &quot;</span> <span class="o">+</span> <span class="n">user</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;We could put tweepy code here to do that!&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Yay! @pretend_user_1 liked our tweet!
-Perhaps we should follow @pretend_user_1
-We could put tweepy code here to do that!
-
-Yay! @pretend_user_2 liked our tweet!
-Perhaps we should follow @pretend_user_2
-We could put tweepy code here to do that!
-
-Yay! @pretend_user_3 liked our tweet!
-Perhaps we should follow @pretend_user_3
-We could put tweepy code here to do that!
-</pre></div>
-</div>
-</div>
-</div>
-<p>In the above code our for loop runs a block of code that has four statements, each doing a <code class="docutils literal notranslate"><span class="pre">print</span></code>. You’ll notice we added an extra blank <code class="docutils literal notranslate"><span class="pre">print</span></code> which makes a blank line and helps us see in the output what each loop did.</p>
-<section id="loop-a-set-number-of-times">
-<h3>Loop a set number of times<a class="headerlink" href="#loop-a-set-number-of-times" title="Permalink to this headline">#</a></h3>
-<p>In order to loop a set number of times, we can use the <code class="docutils literal notranslate"><span class="pre">range</span></code> function to effectively make a list of numbers to go over, so we can loop that many times.</p>
-<p>For example, if we wanted to ask “Are we there yet?” repeatedly, 10 times, we can do this:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Are we there yet?&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Are we there yet?
-Are we there yet?
-Are we there yet?
-Are we there yet?
-Are we there yet?
-Are we there yet?
-Are we there yet?
-Are we there yet?
-Are we there yet?
-Are we there yet?
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now, if we look at what the numbers were in <code class="docutils literal notranslate"><span class="pre">range(10)</span></code>, we can output the <code class="docutils literal notranslate"><span class="pre">i</span></code> we saved the numbers in.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is loop number &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is loop number 0
-This is loop number 1
-This is loop number 2
-This is loop number 3
-This is loop number 4
-This is loop number 5
-This is loop number 6
-This is loop number 7
-This is loop number 8
-This is loop number 9
-</pre></div>
-</div>
-</div>
-</div>
-<p>You’ll notice that, while there are 10 numbers, it starts with 0, just like how list indices start with 0.</p>
-<p>If we want to do a list from 1 to 10 instead, we can do that by either making a new variable and saving i + 1 to it, like this:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="n">new_i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is loop number &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">new_i</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is loop number 1
-This is loop number 2
-This is loop number 3
-This is loop number 4
-This is loop number 5
-This is loop number 6
-This is loop number 7
-This is loop number 8
-This is loop number 9
-This is loop number 10
-</pre></div>
-</div>
-</div>
-</div>
-<p>Or, the <code class="docutils literal notranslate"><span class="pre">range</span></code> function let’s you set a start and stop, with the first number being the number it starts with, and the last number being the one it stops before:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is loop number &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is loop number 1
-This is loop number 2
-This is loop number 3
-This is loop number 4
-This is loop number 5
-This is loop number 6
-This is loop number 7
-This is loop number 8
-This is loop number 9
-This is loop number 10
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 </section>
 </section>
 
@@ -1876,11 +1625,11 @@ This is loop number 10
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="00_intro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="02_demo_dictionaries.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">5.4. </span>Looping with Lists and Dictionaries in Social Media</p>
+            <p class="prev-next-title"><span class="section-number">5.4.2. </span>Demo: Dictionaries</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../05_antisocial_media.html" title="next page">
