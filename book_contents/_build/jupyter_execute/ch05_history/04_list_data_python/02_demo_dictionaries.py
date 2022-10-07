@@ -141,7 +141,7 @@ tweets_list = tweets_info.data
 
 
 # ## Loop through the list of tweets
-# The variable `tweets_llist` now has a list of tweet. So we can use a for loop to go through each tweet, and then use `.` and `[" "]` to access info from each tweet.
+# The variable `tweets_llist` now has a list of tweet. So we can use a for loop to go through each tweet, and then use `.` to access info from each tweet (other pieces of information would need `[" "]` to access).
 # 
 # For each of the tweets, we will use `print` to display information about the tweet
 

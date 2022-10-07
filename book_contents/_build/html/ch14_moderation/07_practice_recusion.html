@@ -473,7 +473,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../ch05_history/00_history.html">
-   5. (Incomplete) History of Social Media
+   5. History of Social Media
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
   <label for="toctree-checkbox-11">
@@ -498,7 +498,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../ch05_history/04_list_data_python/00_intro.html">
-     5.4. Lists in Python
+     5.4. Looping with Lists and Dictionaries in Social Media
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
     <label for="toctree-checkbox-12">
@@ -508,34 +508,39 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../ch05_history/04_list_data_python/01_demo_lists.html">
-       5.4.1. Demo: Looping through posts and freinds
+       5.4.1. Demo: Lists and Loops
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../ch05_history/04_list_data_python/02_practice_lists.html">
-       5.4.2. Practice: Looping through posts and freinds
+      <a class="reference internal" href="../ch05_history/04_list_data_python/02_demo_dictionaries.html">
+       5.4.2. Demo: Dictionaries
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ch05_history/04_list_data_python/03_practice_lists_dictionaries.html">
+       5.4.3. Practice: Looping through lists and dictionaries
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ch05_history/05_antisocial_media.html">
-     5.9. The Rise of Antisocial Media
+     5.5. Antisocial Media
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ch05_history/06_social_media_goals.html">
-     5.10. Social Media Goals
+    <a class="reference internal" href="../ch05_history/06_social_media_design.html">
+     5.6. Social Media Design
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ch05_history/07_reflections.html">
-     5.11. Reflection Activities
+     5.7. Reflection Activities: Compare Social Media Designs
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ch05_history/08_learn_more.html">
-     5.12. Learn More
+     5.8. Learn More
     </a>
    </li>
   </ul>
@@ -1319,6 +1324,11 @@ const thebe_selector_output = ".output, .cell_output"
      Ch 4 Practice: Python Basic Data Types
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/solutions/03_practice_lists_dictionaries.html">
+     Ch 5 Practice: Looping through lists and dictionaries
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -1784,8 +1794,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
-Collecting lckr-jupyterlab-variableinspector
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^CCollecting lckr-jupyterlab-variableinspector
   Using cached lckr_jupyterlab_variableinspector-3.0.9.tar.gz (60 kB)
   Installing build dependencies: started
 </pre></div>
@@ -1806,13 +1815,29 @@ WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
 Requirement already satisfied: oauthlib&lt;4,&gt;=3.2.0 in c:\python310\lib\site-packages (from tweepy) (3.2.0)
 Requirement already satisfied: requests&lt;3,&gt;=2.27.0 in c:\python310\lib\site-packages (from tweepy) (2.27.1)
 Requirement already satisfied: requests-oauthlib&lt;2,&gt;=1.2.0 in c:\python310\lib\site-packages (from tweepy) (1.3.1)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (3.3)
 Requirement already satisfied: charset-normalizer~=2.0.0 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (2.0.12)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (1.26.9)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (3.3)
 Requirement already satisfied: certifi&gt;=2017.4.17 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (2022.5.18.1)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (1.26.9)
 
 [notice] A new release of pip available: 22.1.2 -&gt; 22.2.2
 [notice] To update, run: python.exe -m pip install --upgrade pip
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 9&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">tweepy</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># load my twitter keys</span>
+<span class="ne">----&gt; </span><span class="mi">9</span> <span class="kn">import</span> <span class="nn">my_bot_keys</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="c1"># log into tweepy</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="n">client</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="n">bearer_token</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">bearer_token</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">consumer_key</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">consumer_secret</span><span class="p">,</span>                   
+<span class="g g-Whitespace">     </span><span class="mi">15</span>     <span class="n">access_token</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">access_token_secret</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;my_bot_keys&#39;
 </pre></div>
 </div>
 </div>
