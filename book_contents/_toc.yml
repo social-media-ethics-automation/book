@@ -82,7 +82,8 @@ parts:
       - file: ch05_history/04_list_data_python/00_intro.md
         sections:
           - file: ch05_history/04_list_data_python/01_demo_lists
-          - file: ch05_history/04_list_data_python/02_practice_lists
+          - file: ch05_history/04_list_data_python/02_demo_dictionaries
+          - file: ch05_history/04_list_data_python/03_practice_lists_dictionaries
       - file: ch05_history/05_antisocial_media
       - file: ch05_history/06_social_media_design
       - file: ch05_history/07_reflections

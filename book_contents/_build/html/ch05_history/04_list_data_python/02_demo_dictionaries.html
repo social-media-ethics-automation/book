@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>5.4.1. Demo: Lists and Loops &#8212; Social Media, Ethics, and Automation</title>
+    <title>5.4.2. Demo: Dictionaries &#8212; Social Media, Ethics, and Automation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="5.5. Antisocial Media" href="../05_antisocial_media.html" />
-    <link rel="prev" title="5.4. Looping with Lists and Dictionaries in Social Media" href="00_intro.html" />
+    <link rel="next" title="5.4.3. Practice: Looping through lists and dictionaries" href="03_practice_lists_dictionaries.html" />
+    <link rel="prev" title="5.4.1. Demo: Lists and Loops" href="01_demo_lists.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -506,9 +506,19 @@ const thebe_selector_output = ".output, .cell_output"
      </i>
     </label>
     <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="01_demo_lists.html">
+       5.4.1. Demo: Lists and Loops
+      </a>
+     </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       5.4.1. Demo: Lists and Loops
+       5.4.2. Demo: Dictionaries
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="03_practice_lists_dictionaries.html">
+       5.4.3. Practice: Looping through lists and dictionaries
       </a>
      </li>
     </ul>
@@ -1375,7 +1385,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/kylethayer/social_media_ethics_automation_v0/main?urlpath=lab/tree/book_contents/ch05_history/04_list_data_python/01_demo_lists.ipynb"
+        <a href="https://mybinder.org/v2/gh/kylethayer/social_media_ethics_automation_v0/main?urlpath=lab/tree/book_contents/ch05_history/04_list_data_python/02_demo_dictionaries.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1435,7 +1445,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/kylethayer/social_media_ethics_automation_v0/issues/new?title=Issue%20on%20page%20%2Fch05_history/04_list_data_python/01_demo_lists.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/kylethayer/social_media_ethics_automation_v0/issues/new?title=Issue%20on%20page%20%2Fch05_history/04_list_data_python/02_demo_dictionaries.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1463,7 +1473,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/ch05_history/04_list_data_python/01_demo_lists.ipynb"
+        <a href="../../_sources/ch05_history/04_list_data_python/02_demo_dictionaries.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1523,26 +1533,57 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lists">
-   Lists
+  <a class="reference internal nav-link" href="#dictionaries-dict">
+   Dictionaries (
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     dict
+    </span>
+   </code>
+   )
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#for-loops">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     for
-    </span>
-   </code>
-   Loops
+  <a class="reference internal nav-link" href="#objects">
+   Objects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#looping-through-lists-of-dictionaries">
+   Looping through lists of dictionaries
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#loop-a-set-number-of-times">
-     Loop a set number of times
+    <a class="reference internal nav-link" href="#load-tweepy-library">
+     load tweepy library
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#optional-make-a-fake-twitter-connection-with-the-fake-tweepy-library">
+     (optional) make a fake twitter connection with the fake_tweepy library
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-your-developer-access-passwords">
+     load your developer access passwords
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#give-tweepy-or-fake-tweepy-your-developer-access-passwords">
+     give tweepy (or fake_tweepy) your developer access passwords
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#find-a-list-of-tweets">
+     find a list of tweets
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#loop-through-the-list-of-tweets">
+   Loop through the list of tweets
+  </a>
  </li>
 </ul>
 
@@ -1553,7 +1594,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Demo: Lists and Loops</h1>
+                <h1>Demo: Dictionaries</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1564,26 +1605,57 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lists">
-   Lists
+  <a class="reference internal nav-link" href="#dictionaries-dict">
+   Dictionaries (
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     dict
+    </span>
+   </code>
+   )
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#for-loops">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     for
-    </span>
-   </code>
-   Loops
+  <a class="reference internal nav-link" href="#objects">
+   Objects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#looping-through-lists-of-dictionaries">
+   Looping through lists of dictionaries
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#loop-a-set-number-of-times">
-     Loop a set number of times
+    <a class="reference internal nav-link" href="#load-tweepy-library">
+     load tweepy library
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#optional-make-a-fake-twitter-connection-with-the-fake-tweepy-library">
+     (optional) make a fake twitter connection with the fake_tweepy library
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-your-developer-access-passwords">
+     load your developer access passwords
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#give-tweepy-or-fake-tweepy-your-developer-access-passwords">
+     give tweepy (or fake_tweepy) your developer access passwords
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#find-a-list-of-tweets">
+     find a list of tweets
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#loop-through-the-list-of-tweets">
+   Loop through the list of tweets
+  </a>
  </li>
 </ul>
 
@@ -1595,257 +1667,220 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="demo-lists-and-loops">
-<h1><span class="section-number">5.4.1. </span>Demo: Lists and Loops<a class="headerlink" href="#demo-lists-and-loops" title="Permalink to this headline">#</a></h1>
-<section id="lists">
-<h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">#</a></h2>
-<p>Many types of data on social media platforms are organized as lists, such as</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="demo-dictionaries">
+<h1><span class="section-number">5.4.2. </span>Demo: Dictionaries<a class="headerlink" href="#demo-dictionaries" title="Permalink to this headline">#</a></h1>
+<p>We’ve talked about lists, but the other data organization we need to work with social media data is <code class="docutils literal notranslate"><span class="pre">dictionaries</span></code>.</p>
+<p>As we mentioned in chapter 4, dictionaries allow us to combine pieces of information by naming them (sort of like variables).</p>
+<p>So for example, the information about a user might have the following pieces of data:</p>
 <ul class="simple">
-<li><p>lists of friends or followers</p></li>
-<li><p>lists of posts</p></li>
-<li><p>lists of photos in a post</p></li>
-<li><p>lists of people who liked a post</p></li>
-<li><p>etc.</p></li>
+<li><p>Username</p></li>
+<li><p>Twitter handle</p></li>
+<li><p>Profile Picture:</p></li>
+<li><p>Follows</p></li>
 </ul>
-<p>The way to create a list in Python is to make a list of values, separated by commas, inside of square brackets, like this:</p>
+<p>Python has two ways of doing these types of dictionaries: <code class="docutils literal notranslate"><span class="pre">dict</span></code> and objects</p>
+<section id="dictionaries-dict">
+<h2>Dictionaries (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)<a class="headerlink" href="#dictionaries-dict" title="Permalink to this headline">#</a></h2>
+<p>We can create dictionaries in Python by storing values into <code class="docutils literal notranslate"><span class="pre">key</span></code>s inside of curly braces <code class="docutils literal notranslate"><span class="pre">{</span></code> <code class="docutils literal notranslate"><span class="pre">}</span></code>, like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">book_authors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Kyle Thayer&quot;</span><span class="p">,</span> <span class="s2">&quot;Susan Notess&quot;</span><span class="p">]</span>
-
-<span class="n">display</span><span class="p">(</span><span class="n">book_authors</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_1</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;kylethayer&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;twitter_handle&quot;</span><span class="p">:</span> <span class="s2">&quot;@kylemthayer&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;profile_picture&quot;</span><span class="p">:</span> <span class="s2">&quot;kylethayer.jpg&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;follows&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;@SusanNotess&quot;</span><span class="p">,</span> <span class="s2">&quot;@UW&quot;</span><span class="p">,</span> <span class="s2">&quot;@UW_iSchool&quot;</span><span class="p">,</span> <span class="s2">&quot;@ajlunited&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the code above, inside of the curly braces are a set of lines. Each line has a string (the <code class="docutils literal notranslate"><span class="pre">key</span></code>, or name of the value), followed by a colon (<code class="docutils literal notranslate"><span class="pre">:</span></code>), followed by a value that is to be saved for the key. At the end of all but the last line is a comma (<code class="docutils literal notranslate"><span class="pre">,</span></code>) which indicates that another <code class="docutils literal notranslate"><span class="pre">key</span></code> and value will come next.</p>
+<p>Now that we’ve saved some values for some keys in the dictionary now saved in user_1, we can look up the values by using square brackets (<code class="docutils literal notranslate"><span class="pre">[</span></code>, <code class="docutils literal notranslate"><span class="pre">]</span></code>) with the key name inside, like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_1_username</span> <span class="o">=</span> <span class="n">user_1</span><span class="p">[</span><span class="s2">&quot;username&quot;</span><span class="p">]</span>
+<span class="n">display</span><span class="p">(</span><span class="n">user_1_username</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Kyle Thayer&#39;, &#39;Susan Notess&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;kylethayer&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<p>If we are making a list and it gets too long, Python will let us use several lines to do this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">some_book_chapters</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Intro&quot;</span><span class="p">,</span>
-                     <span class="s2">&quot;Definitions&quot;</span><span class="p">,</span>
-                     <span class="s2">&quot;Bots&quot;</span><span class="p">,</span>
-                     <span class="s2">&quot;Data&quot;</span><span class="p">,</span>
-                     <span class="s2">&quot;History of Social Media&quot;</span><span class="p">,</span>
-                     <span class="s2">&quot;Authenticity&quot;</span><span class="p">]</span>
-
-<span class="n">display</span><span class="p">(</span><span class="n">some_book_chapters</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_1_handle</span> <span class="o">=</span> <span class="n">user_1</span><span class="p">[</span><span class="s2">&quot;twitter_handle&quot;</span><span class="p">]</span>
+<span class="n">display</span><span class="p">(</span><span class="n">user_1_handle</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Intro&#39;,
- &#39;Definitions&#39;,
- &#39;Bots&#39;,
- &#39;Data&#39;,
- &#39;History of Social Media&#39;,
- &#39;Authenticity&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;@kylemthayer&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<p>Lists are in order, so Python let’s us use the “index” to ask for a specific entry, like the 1st, 2nd, 3rd, etc.</p>
-<p>As we stated in the Data chapter, many programming languages, for historical reasons, make a list’s first entry have index 0, it’s 2nd entry have index 1, it’s 3rd entry have index 2, etc.</p>
-<p>So if we want to see the first chapter in my <code class="docutils literal notranslate"><span class="pre">some_book_chapters</span></code> list, I select it by putting the index number inside square brackets (<code class="docutils literal notranslate"><span class="pre">[</span></code>, <code class="docutils literal notranslate"><span class="pre">]</span></code>) after the variable name:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_chapter</span> <span class="o">=</span> <span class="n">some_book_chapters</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">display</span><span class="p">(</span><span class="n">first_chapter</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_1_picture</span> <span class="o">=</span> <span class="n">user_1</span><span class="p">[</span><span class="s2">&quot;profile_picture&quot;</span><span class="p">]</span>
+<span class="n">display</span><span class="p">(</span><span class="n">user_1_picture</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Intro&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;kylethayer.jpg&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<p>And if I want the 4th chapter, I’d select it like this</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fourth_chapter</span> <span class="o">=</span> <span class="n">some_book_chapters</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
-<span class="n">display</span><span class="p">(</span><span class="n">fourth_chapter</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_1_follows</span> <span class="o">=</span> <span class="n">user_1</span><span class="p">[</span><span class="s2">&quot;follows&quot;</span><span class="p">]</span>
+<span class="n">display</span><span class="p">(</span><span class="n">user_1_follows</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Data&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;@SusanNotess&#39;, &#39;@UW&#39;, &#39;@UW_iSchool&#39;, &#39;@ajlunited&#39;]
 </pre></div>
 </div>
 </div>
 </div>
-<p>Now, let’s say we have a list of Twitter users who liked our latest tweet:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">users_who_liked_our_tweet</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;@pretend_user_1&quot;</span><span class="p">,</span> <span class="s2">&quot;@pretend_user_2&quot;</span><span class="p">,</span> <span class="s2">&quot;@pretend_user_3&quot;</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>What if we wanted to follow all of them?</p>
-<p>If our list was long, it would take a lot of code to pull out each one and try to follow them. But Python gives us an easy way to perform actions on all the items in a list, by using <code class="docutils literal notranslate"><span class="pre">for</span></code> loops.</p>
 </section>
-<section id="for-loops">
-<h2><code class="docutils literal notranslate"><span class="pre">for</span></code> Loops<a class="headerlink" href="#for-loops" title="Permalink to this headline">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">for</span></code> loops let us perform an action or a set of actions for all of the items in a list.</p>
-<p>So, if we wanted to go through all the the users that liked our tweet and display a message for each one, we could do this:</p>
+<section id="objects">
+<h2>Objects<a class="headerlink" href="#objects" title="Permalink to this headline">#</a></h2>
+<p>The other way of saving information that works similarly in Python is through an object. We won’t be creating any in this book, but we will have to get data from some.</p>
+<p>The main difference from what we will need is that while in dictionaries we use square brackets and put the key name in quotes as a string (e.g., <code class="docutils literal notranslate"><span class="pre">user_1[&quot;profile_picture&quot;]</span></code>), in an object you use a period (<code class="docutils literal notranslate"><span class="pre">.</span></code>) and don’t put they key name (called a <code class="docutils literal notranslate"><span class="pre">field</span></code>) in quotes (e.g., <code class="docutils literal notranslate"><span class="pre">user_1.profile_picture</span></code>)</p>
+<p>We have already seen code that used this period to get something from an object a few times, specifically getting functions from them, like:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">client.create_tweet(...</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">normal_message.upper()</span></code></p></li>
+</ul>
+<p>When we go through data from twitter, sometimes we will need to use <code class="docutils literal notranslate"><span class="pre">.</span></code> to get parts of the information out of objects, and sometimes we will need to use <code class="docutils literal notranslate"><span class="pre">[&quot;</span> <span class="pre">&quot;]</span></code> to get information out of dictionaries.</p>
+</section>
+<section id="looping-through-lists-of-dictionaries">
+<h2>Looping through lists of dictionaries<a class="headerlink" href="#looping-through-lists-of-dictionaries" title="Permalink to this headline">#</a></h2>
+<p>Now that we’ve seen loops, lists, and dictionaries, we can go back to Twitter, run a search and look through multiple tweets:</p>
+<section id="load-tweepy-library">
+<h3>load tweepy library<a class="headerlink" href="#load-tweepy-library" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users_who_liked_our_tweet</span><span class="p">:</span>
-    <span class="n">display</span><span class="p">(</span><span class="s2">&quot;Yay! &quot;</span> <span class="o">+</span> <span class="n">user</span> <span class="o">+</span> <span class="s2">&quot; liked our tweet!&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;tweepy&quot; that will help us work with twitter</span>
+<span class="kn">import</span> <span class="nn">tweepy</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="optional-make-a-fake-twitter-connection-with-the-fake-tweepy-library">
+<h3>(optional) make a fake twitter connection with the fake_tweepy library<a class="headerlink" href="#optional-make-a-fake-twitter-connection-with-the-fake-tweepy-library" title="Permalink to this headline">#</a></h3>
+<p>For testing purposes, we’ve added this line of code, which loads a fake version of tweepy, so it wont actually connect to twitter. <strong>If you want to try to actually connect to twitter, don’t run this line of code.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_tweepy/fake_tweepy.ipynb
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Yay! @pretend_user_1 liked our tweet!&#39;
-</pre></div>
+<div class="output text_html"><strong style='color:darkred'>Fake tweepy is replacing the tweepy library. Fake Tweepy doesn&#x27;t need real passwords, and prevents you from accessing real twitter</strong></div></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Yay! @pretend_user_2 liked our tweet!&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Yay! @pretend_user_3 liked our tweet!&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now, there are several things that went into making that for loop code above:</p>
-<ul class="simple">
-<li><p>Start the line with a <code class="docutils literal notranslate"><span class="pre">for</span></code></p></li>
-<li><p>Make up a new variable name that will be a temporary variable to hold whichever item from the list we are doing our actions on. In this case each item in the list will be a user, so we call our variable <code class="docutils literal notranslate"><span class="pre">user</span></code></p></li>
-<li><p>Then we write the word <code class="docutils literal notranslate"><span class="pre">in</span></code></p></li>
-<li><p>Then we put the list that we want to go through, in this case `users_who_liked_our_tweet’</p></li>
-<li><p>Then put a colon (<code class="docutils literal notranslate"><span class="pre">:</span></code>). In Python, a colon like this means that what comes next is a block of statements that goes together. This block of statements is indented over to indicate that it is part of the block.</p></li>
-<li><p>Then, on the next line and indented over, we have our display function that uses the <code class="docutils literal notranslate"><span class="pre">user</span></code> variable. This is the line of code that is repeated for each item in the list.</p></li>
-</ul>
-<p>If we want to do several actions in our loop, all we need to do is add more lines of code spaced over the same amount, like this (note: We’ll use <code class="docutils literal notranslate"><span class="pre">print</span></code> instead of <code class="docutils literal notranslate"><span class="pre">display</span></code>, which mostly work the same, but we think <code class="docutils literal notranslate"><span class="pre">print</span></code> happens to look a little better in this situation):</p>
+</section>
+<section id="load-your-developer-access-passwords">
+<h3>load your developer access passwords<a class="headerlink" href="#load-your-developer-access-passwords" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users_who_liked_our_tweet</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Yay! &quot;</span> <span class="o">+</span> <span class="n">user</span> <span class="o">+</span> <span class="s2">&quot; liked our tweet!&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Perhaps we should follow &quot;</span> <span class="o">+</span> <span class="n">user</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;We could put tweepy code here to do that!&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load all your developer access passwords into Python</span>
+<span class="c1"># TODO: Put your twitter account&#39;s special developer access passwords below:</span>
+<span class="n">bearer_token</span> <span class="o">=</span> <span class="s2">&quot;n4tossfgsafs_fake_bearer_token_isa53#$%$&quot;</span>
+<span class="n">consumer_key</span> <span class="o">=</span> <span class="s2">&quot;sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG&quot;</span>
+<span class="n">consumer_secret</span> <span class="o">=</span> <span class="s2">&quot;45adf$T$A_fake_consumer_secret_JESdsg&quot;</span>
+<span class="n">access_token</span> <span class="o">=</span> <span class="s2">&quot;56sd5Ss4tsea_fake_access_token_%YE%hDsdr&quot;</span>
+<span class="n">access_token_secret</span> <span class="o">=</span> <span class="s2">&quot;j^$dr_fake_consumer_key_^A5s#DR5s&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="give-tweepy-or-fake-tweepy-your-developer-access-passwords">
+<h3>give tweepy (or fake_tweepy) your developer access passwords<a class="headerlink" href="#give-tweepy-or-fake-tweepy-your-developer-access-passwords" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Give the tweepy code your developer access passwords so</span>
+<span class="c1"># it can perform twitter actions</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span>
+   <span class="n">bearer_token</span><span class="o">=</span><span class="n">bearer_token</span><span class="p">,</span>
+   <span class="n">consumer_key</span><span class="o">=</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">consumer_secret</span><span class="p">,</span>
+   <span class="n">access_token</span><span class="o">=</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">access_token_secret</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to log in to twitter</strong></div></div>
+</div>
+</section>
+<section id="find-a-list-of-tweets">
+<h3>find a list of tweets<a class="headerlink" href="#find-a-list-of-tweets" title="Permalink to this headline">#</a></h3>
+<p>We can now do a search and find a list of tweets.</p>
+<p><em>Note: If you run this on real twitter, we can’t gurantee anything about how offensive what you might find is. We don’t know of any word search we could guarantee would be safe.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Choose a search to run</span>
+<span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;&quot;cute cat&quot;&#39;</span>
+
+<span class="c1">#Run the search and request some additional info</span>
+<span class="n">tweets_info</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">tweet_fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;author_id&quot;</span><span class="p">,</span> <span class="s2">&quot;created_at&quot;</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;lang&quot;</span><span class="p">,</span> <span class="s2">&quot;public_metrics&quot;</span><span class="p">,</span> <span class="s2">&quot;source&quot;</span><span class="p">,</span> <span class="s2">&quot;text&quot;</span><span class="p">])</span>
+
+<span class="c1"># Get the actual list of tweets out of the data field (tweets_info also has metadata about our search)</span>
+<span class="n">tweets_list</span> <span class="o">=</span> <span class="n">tweets_info</span><span class="o">.</span><span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to search and is returning some fake tweets.</strong></div></div>
+</div>
+</section>
+</section>
+<section id="loop-through-the-list-of-tweets">
+<h2>Loop through the list of tweets<a class="headerlink" href="#loop-through-the-list-of-tweets" title="Permalink to this headline">#</a></h2>
+<p>The variable <code class="docutils literal notranslate"><span class="pre">tweets_llist</span></code> now has a list of tweet. So we can use a for loop to go through each tweet, and then use <code class="docutils literal notranslate"><span class="pre">.</span></code> and <code class="docutils literal notranslate"><span class="pre">[&quot;</span> <span class="pre">&quot;]</span></code> to access info from each tweet.</p>
+<p>For each of the tweets, we will use <code class="docutils literal notranslate"><span class="pre">print</span></code> to display information about the tweet</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Info for tweet with id: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  author_id: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">author_id</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  created_at: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">created_at</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  source: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">source</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  text: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
     <span class="nb">print</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Yay! @pretend_user_1 liked our tweet!
-Perhaps we should follow @pretend_user_1
-We could put tweepy code here to do that!
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Info for tweet with id: 129308937494
+  author_id: 239048094385
+  created_at: 2022-02-22 22:22:22+00:00
+  source: Twitter for Android
+  text: While trying to tweet right now, I am being attacked by my cute cat! It&#39;s so hard to tpye wihsaoae as fesadf asd fssasaf sa
 
-Yay! @pretend_user_2 liked our tweet!
-Perhaps we should follow @pretend_user_2
-We could put tweepy code here to do that!
+Info for tweet with id: 93298432
+  author_id: 23409023
+  created_at: 2022-02-22 02:02:02+00:00
+  source: Twitter for iPhone
+  text: I wish I could be sleeping now like my cute cat is!
 
-Yay! @pretend_user_3 liked our tweet!
-Perhaps we should follow @pretend_user_3
-We could put tweepy code here to do that!
+Info for tweet with id: 321923
+  author_id: 32892394
+  created_at: 2022-02-22 03:03:03+00:00
+  source: Twitter for iPhone
+  text: Why won&#39;t my cute cat stop scratching my face in the morning!
 </pre></div>
 </div>
 </div>
 </div>
-<p>In the above code our for loop runs a block of code that has four statements, each doing a <code class="docutils literal notranslate"><span class="pre">print</span></code>. You’ll notice we added an extra blank <code class="docutils literal notranslate"><span class="pre">print</span></code> which makes a blank line and helps us see in the output what each loop did.</p>
-<section id="loop-a-set-number-of-times">
-<h3>Loop a set number of times<a class="headerlink" href="#loop-a-set-number-of-times" title="Permalink to this headline">#</a></h3>
-<p>In order to loop a set number of times, we can use the <code class="docutils literal notranslate"><span class="pre">range</span></code> function to effectively make a list of numbers to go over, so we can loop that many times.</p>
-<p>For example, if we wanted to ask “Are we there yet?” repeatedly, 10 times, we can do this:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Are we there yet?&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Are we there yet?
-Are we there yet?
-Are we there yet?
-Are we there yet?
-Are we there yet?
-Are we there yet?
-Are we there yet?
-Are we there yet?
-Are we there yet?
-Are we there yet?
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now, if we look at what the numbers were in <code class="docutils literal notranslate"><span class="pre">range(10)</span></code>, we can output the <code class="docutils literal notranslate"><span class="pre">i</span></code> we saved the numbers in.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is loop number &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is loop number 0
-This is loop number 1
-This is loop number 2
-This is loop number 3
-This is loop number 4
-This is loop number 5
-This is loop number 6
-This is loop number 7
-This is loop number 8
-This is loop number 9
-</pre></div>
-</div>
-</div>
-</div>
-<p>You’ll notice that, while there are 10 numbers, it starts with 0, just like how list indices start with 0.</p>
-<p>If we want to do a list from 1 to 10 instead, we can do that by either making a new variable and saving i + 1 to it, like this:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="n">new_i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is loop number &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">new_i</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is loop number 1
-This is loop number 2
-This is loop number 3
-This is loop number 4
-This is loop number 5
-This is loop number 6
-This is loop number 7
-This is loop number 8
-This is loop number 9
-This is loop number 10
-</pre></div>
-</div>
-</div>
-</div>
-<p>Or, the <code class="docutils literal notranslate"><span class="pre">range</span></code> function let’s you set a start and stop, with the first number being the number it starts with, and the last number being the one it stops before:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is loop number &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is loop number 1
-This is loop number 2
-This is loop number 3
-This is loop number 4
-This is loop number 5
-This is loop number 6
-This is loop number 7
-This is loop number 8
-This is loop number 9
-This is loop number 10
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 </section>
 </section>
 
@@ -1876,17 +1911,17 @@ This is loop number 10
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="00_intro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="01_demo_lists.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">5.4. </span>Looping with Lists and Dictionaries in Social Media</p>
+            <p class="prev-next-title"><span class="section-number">5.4.1. </span>Demo: Lists and Loops</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../05_antisocial_media.html" title="next page">
+    <a class='right-next' id="next-link" href="03_practice_lists_dictionaries.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.5. </span>Antisocial Media</p>
+        <p class="prev-next-title"><span class="section-number">5.4.3. </span>Practice: Looping through lists and dictionaries</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

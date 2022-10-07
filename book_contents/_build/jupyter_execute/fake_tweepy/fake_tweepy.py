@@ -55,8 +55,35 @@ def search_recent_tweets(query="", tweet_fields=[]):
                   'like_count': 6,
                   'quote_count': 2                  
               }
+          ),
+          SimpleNamespace(
+              text = "I wish I could be sleeping now like my cute cat is!",
+              id = 93298432,
+              author_id = 23409023,
+              created_at = datetime.datetime(2022, 2, 22, 2, 2, 2, 0, datetime.timezone.utc),
+              lang = 'en',
+              source = 'Twitter for iPhone',
+              public_metrics = {
+                  'retweet_count': 2,
+                  'reply_count': 1,
+                  'like_count': 5,
+                  'quote_count': 3                  
+              }
+          ),
+          SimpleNamespace(
+              text = "Why won't my cute cat stop scratching my face in the morning!",
+              id = 321923,
+              author_id = 32892394,
+              created_at = datetime.datetime(2022, 2, 22, 3, 3, 3, 0, datetime.timezone.utc),
+              lang = 'en',
+              source = 'Twitter for iPhone',
+              public_metrics = {
+                  'retweet_count': 3,
+                  'reply_count': 4,
+                  'like_count': 2,
+                  'quote_count': 3                  
+              }
           )
-          
       ]
     )
 
