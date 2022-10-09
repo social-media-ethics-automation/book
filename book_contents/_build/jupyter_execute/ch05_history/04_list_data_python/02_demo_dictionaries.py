@@ -145,7 +145,7 @@ tweets_list = tweets_info.data
 # 
 # For each of the tweets, we will use `print` to display information about the tweet
 
-# In[11]:
+# In[ ]:
 
 
 for tweet in tweets_list:
