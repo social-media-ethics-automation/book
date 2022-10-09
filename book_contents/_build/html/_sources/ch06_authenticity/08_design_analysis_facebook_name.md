@@ -35,6 +35,8 @@ The Facebook name policy as of 8/24/2022. You can see the current version [here]
 
 This activity follows [the five step CIDER method](https://medium.com/@OAlannah/beyond-average-users-building-inclusive-design-skills-with-the-cider-technique-413969544e6d?source=friends_link&sk=6c9184c8a88feae058cfb073a44985f7) (Critique, Imagine, Design, Expand, Repeat), created by [Alannah Oleson, et. al.](https://alannaholeson.com/). This activity works best if you can do it with others (like in a classroom), so you can learn from their observations as well.
 
+![Diagram of the CIDER method. 5 steps in order from left to right: Critique (Identify embedded assumptions about users); Imagine (Pick one assumption and envision how it excludes users); Design (Brainstorm changes to improve inclusion); Expand (Learn about new types of bias from peers' assumptions); Repeat (Redo I and D using new-to-you assumptions from EXPAND list).](cider-method.jpeg)
+
 So read through the Facebook name policy above (for this activity ignore clarifications or exceptions Facebook may have made elsewhere, since those weren't deemed important enough to put on this main policy page). Then do the following (preferrably on paper or in a blank computer document):
 
 ## Critique (3-5 minutes, by yourself):

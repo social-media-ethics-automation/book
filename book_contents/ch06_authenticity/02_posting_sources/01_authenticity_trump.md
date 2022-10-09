@@ -1,10 +1,10 @@
 # Example: Trump Tweet Sources
 
-Concept: Accessing specific data from tweets
+In 2016, when Donald Trump was running a campaign to be the US President, [one twitter user pointed out](https://twitter.com/tvaziri/status/762005541388378112) that you could see which of the Tweets on Donald Trump's Twitter account were posted from an Android phone and which from an iPhone, and that the tone was very different. A data scientist decided to [look into it more and found](http://varianceexplained.org/r/trump-tweets/):
+- “My analysis ... concludes that the Android and iPhone tweets are clearly from different people, “posting during different times of day and using hashtags, links, and retweets in distinct ways,
+- “What’s more, we can see that the Android tweets are angrier and more negative, while the iPhone tweets tend to be benign announcements and pictures. .... this lets us tell the difference between the campaign’s tweets (iPhone) and Trump’s own (Android).”
 
-- Getting info about tweets
-  - Trump Tweets different between iPhone and Android
-    - “My analysis ... concludes that the Android and iPhone tweets are clearly from different people, “posting during different times of day and using hashtags, links, and retweets in distinct ways,
-    - “What’s more, we can see that the Android tweets are angrier and more negative, while the iPhone tweets tend to be benign announcements and pictures. .... this lets us tell the difference between the campaign’s tweets (iPhone) and Trump’s own (Android).”
-    - https://www.theguardian.com/media/2016/aug/10/donald-trump-twitter-republican-candidate-android-iphone
-- Demo: show tweet sources for celebrities
+(Read more in [this article from The Guardian](https://www.theguardian.com/media/2016/aug/10/donald-trump-twitter-republican-candidate-android-iphone))
+
+## Reflection Questions
+We can ask ourselves some
