@@ -7,4 +7,7 @@ In 2016, when Donald Trump was running a campaign to be the US President, [one t
 (Read more in [this article from The Guardian](https://www.theguardian.com/media/2016/aug/10/donald-trump-twitter-republican-candidate-android-iphone))
 
 ## Reflection Questions
-We can ask ourselves some
+We can ask ourselves some questions about authenticity in this story:
+- How do you think about the authenticity of the Tweets that come from Trump himself?
+  - Do you think it matters which human typed the Tweet? Does the emotional expression (e.g., anger) of the Tweet change your view of authenticity?
+- How do you think about the authenticity of the Tweets that come from others in Trump's campaign?

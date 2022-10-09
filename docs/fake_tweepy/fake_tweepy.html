@@ -1606,54 +1606,75 @@ title="Print to PDF"
     <span class="n">print_info</span><span class="p">(</span><span class="s2">&quot;Fake Tweepy is pretending to post this tweet (note: real tweepy shows no output here when a tweet is posted): &quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
     
-<span class="k">def</span> <span class="nf">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">tweet_fields</span><span class="o">=</span><span class="p">[]):</span>
-    <span class="n">print_info</span><span class="p">(</span><span class="s2">&quot;Fake Tweepy is pretending to search and is returning some fake tweets.&quot;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
-      <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
-          <span class="n">SimpleNamespace</span><span class="p">(</span>
-              <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;While trying to tweet right now, I am being attacked by my cute cat! It&#39;s so hard to tpye wihsaoae as fesadf asd fssasaf sa&quot;</span><span class="p">,</span>
-              <span class="nb">id</span> <span class="o">=</span> <span class="mi">129308937494</span><span class="p">,</span>
-              <span class="n">author_id</span> <span class="o">=</span> <span class="mi">239048094385</span><span class="p">,</span>
-              <span class="n">created_at</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">),</span>
-              <span class="n">lang</span> <span class="o">=</span> <span class="s1">&#39;en&#39;</span><span class="p">,</span>
-              <span class="n">source</span> <span class="o">=</span> <span class="s1">&#39;Twitter for Android&#39;</span><span class="p">,</span>
-              <span class="n">public_metrics</span> <span class="o">=</span> <span class="p">{</span>
-                  <span class="s1">&#39;retweet_count&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
-                  <span class="s1">&#39;reply_count&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-                  <span class="s1">&#39;like_count&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
-                  <span class="s1">&#39;quote_count&#39;</span><span class="p">:</span> <span class="mi">2</span>                  
-              <span class="p">}</span>
-          <span class="p">),</span>
-          <span class="n">SimpleNamespace</span><span class="p">(</span>
-              <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;I wish I could be sleeping now like my cute cat is!&quot;</span><span class="p">,</span>
-              <span class="nb">id</span> <span class="o">=</span> <span class="mi">93298432</span><span class="p">,</span>
-              <span class="n">author_id</span> <span class="o">=</span> <span class="mi">23409023</span><span class="p">,</span>
-              <span class="n">created_at</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">),</span>
-              <span class="n">lang</span> <span class="o">=</span> <span class="s1">&#39;en&#39;</span><span class="p">,</span>
-              <span class="n">source</span> <span class="o">=</span> <span class="s1">&#39;Twitter for iPhone&#39;</span><span class="p">,</span>
-              <span class="n">public_metrics</span> <span class="o">=</span> <span class="p">{</span>
-                  <span class="s1">&#39;retweet_count&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-                  <span class="s1">&#39;reply_count&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-                  <span class="s1">&#39;like_count&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
-                  <span class="s1">&#39;quote_count&#39;</span><span class="p">:</span> <span class="mi">3</span>                  
-              <span class="p">}</span>
-          <span class="p">),</span>
-          <span class="n">SimpleNamespace</span><span class="p">(</span>
-              <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Why won&#39;t my cute cat stop scratching my face in the morning!&quot;</span><span class="p">,</span>
-              <span class="nb">id</span> <span class="o">=</span> <span class="mi">321923</span><span class="p">,</span>
-              <span class="n">author_id</span> <span class="o">=</span> <span class="mi">32892394</span><span class="p">,</span>
-              <span class="n">created_at</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">),</span>
-              <span class="n">lang</span> <span class="o">=</span> <span class="s1">&#39;en&#39;</span><span class="p">,</span>
-              <span class="n">source</span> <span class="o">=</span> <span class="s1">&#39;Twitter for iPhone&#39;</span><span class="p">,</span>
-              <span class="n">public_metrics</span> <span class="o">=</span> <span class="p">{</span>
-                  <span class="s1">&#39;retweet_count&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-                  <span class="s1">&#39;reply_count&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
-                  <span class="s1">&#39;like_count&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-                  <span class="s1">&#39;quote_count&#39;</span><span class="p">:</span> <span class="mi">3</span>                  
-              <span class="p">}</span>
-          <span class="p">)</span>
-      <span class="p">]</span>
-    <span class="p">)</span>
+<span class="k">def</span> <span class="nf">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">tweet_fields</span><span class="o">=</span><span class="p">[],</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">print_info</span><span class="p">(</span><span class="s2">&quot;Fake Tweepy is pretending to search for &#39;&quot;</span><span class="o">+</span><span class="n">query</span><span class="o">+</span><span class="s2">&quot;&#39; and is returning some fake tweets.&quot;</span><span class="p">)</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">query</span> <span class="o">==</span> <span class="s2">&quot;cute cat&quot;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+          <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+              <span class="n">SimpleNamespace</span><span class="p">(</span>
+                  <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;While trying to tweet right now, I am being attacked by my cute cat! It&#39;s so hard to tpye wihsaoae as fesadf asd fssasaf sa&quot;</span><span class="p">,</span>
+                  <span class="nb">id</span> <span class="o">=</span> <span class="mi">129308937494</span><span class="p">,</span>
+                  <span class="n">author_id</span> <span class="o">=</span> <span class="mi">239048094385</span><span class="p">,</span>
+                  <span class="n">created_at</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">),</span>
+                  <span class="n">lang</span> <span class="o">=</span> <span class="s1">&#39;en&#39;</span><span class="p">,</span>
+                  <span class="n">source</span> <span class="o">=</span> <span class="s1">&#39;Twitter for Android&#39;</span><span class="p">,</span>
+                  <span class="n">public_metrics</span> <span class="o">=</span> <span class="p">{</span>
+                      <span class="s1">&#39;retweet_count&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+                      <span class="s1">&#39;reply_count&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                      <span class="s1">&#39;like_count&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+                      <span class="s1">&#39;quote_count&#39;</span><span class="p">:</span> <span class="mi">2</span>                  
+                  <span class="p">}</span>
+              <span class="p">),</span>
+              <span class="n">SimpleNamespace</span><span class="p">(</span>
+                  <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;I wish I could be sleeping now like my cute cat is!&quot;</span><span class="p">,</span>
+                  <span class="nb">id</span> <span class="o">=</span> <span class="mi">93298432</span><span class="p">,</span>
+                  <span class="n">author_id</span> <span class="o">=</span> <span class="mi">23409023</span><span class="p">,</span>
+                  <span class="n">created_at</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">),</span>
+                  <span class="n">lang</span> <span class="o">=</span> <span class="s1">&#39;en&#39;</span><span class="p">,</span>
+                  <span class="n">source</span> <span class="o">=</span> <span class="s1">&#39;Twitter for iPhone&#39;</span><span class="p">,</span>
+                  <span class="n">public_metrics</span> <span class="o">=</span> <span class="p">{</span>
+                      <span class="s1">&#39;retweet_count&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                      <span class="s1">&#39;reply_count&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                      <span class="s1">&#39;like_count&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+                      <span class="s1">&#39;quote_count&#39;</span><span class="p">:</span> <span class="mi">3</span>                  
+                  <span class="p">}</span>
+              <span class="p">),</span>
+              <span class="n">SimpleNamespace</span><span class="p">(</span>
+                  <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Why won&#39;t my cute cat stop scratching my face in the morning!&quot;</span><span class="p">,</span>
+                  <span class="nb">id</span> <span class="o">=</span> <span class="mi">321923</span><span class="p">,</span>
+                  <span class="n">author_id</span> <span class="o">=</span> <span class="mi">32892394</span><span class="p">,</span>
+                  <span class="n">created_at</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">),</span>
+                  <span class="n">lang</span> <span class="o">=</span> <span class="s1">&#39;en&#39;</span><span class="p">,</span>
+                  <span class="n">source</span> <span class="o">=</span> <span class="s1">&#39;Twitter for iPhone&#39;</span><span class="p">,</span>
+                  <span class="n">public_metrics</span> <span class="o">=</span> <span class="p">{</span>
+                      <span class="s1">&#39;retweet_count&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                      <span class="s1">&#39;reply_count&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                      <span class="s1">&#39;like_count&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                      <span class="s1">&#39;quote_count&#39;</span><span class="p">:</span> <span class="mi">3</span>                  
+                  <span class="p">}</span>
+              <span class="p">)</span>
+          <span class="p">]</span>
+        <span class="p">)</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">query</span> <span class="o">==</span> <span class="s2">&quot;from:fake_celebrity&quot;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+          <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+              <span class="n">SimpleNamespace</span><span class="p">(</span>
+                  <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Why is the line at the grocery store taking so long???&quot;</span><span class="p">,</span>
+                  <span class="nb">id</span> <span class="o">=</span> <span class="mi">129308937494</span><span class="p">,</span>
+                  <span class="n">source</span> <span class="o">=</span> <span class="s1">&#39;Twitter for iPhone&#39;</span>
+              <span class="p">),</span>
+              <span class="n">SimpleNamespace</span><span class="p">(</span>
+                  <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Remember, my show tonight starts at 7:00pm!&quot;</span><span class="p">,</span>
+                  <span class="nb">id</span> <span class="o">=</span> <span class="mi">93298432</span><span class="p">,</span>
+                  <span class="n">source</span> <span class="o">=</span> <span class="s1">&#39;Fake Social Media Manager&#39;</span><span class="p">,</span>
+              <span class="p">),</span>
+              <span class="n">SimpleNamespace</span><span class="p">(</span>
+                  <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Hope all my followers are having a lovely day!&quot;</span><span class="p">,</span>
+                  <span class="nb">id</span> <span class="o">=</span> <span class="mi">321923</span><span class="p">,</span>
+                  <span class="n">source</span> <span class="o">=</span> <span class="s1">&#39;Fake Social Media Manager&#39;</span><span class="p">,</span>
+              <span class="p">)</span>
+          <span class="p">]</span>
+        <span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">client_creator</span><span class="p">(</span><span class="n">bearer_token</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">consumer_key</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">access_token</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="s2">&quot;&quot;</span> <span class="p">):</span>
