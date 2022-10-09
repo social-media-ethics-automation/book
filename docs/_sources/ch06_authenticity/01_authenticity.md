@@ -1,7 +1,8 @@
 # Authenticity
 
-[TODO: framing example like: When the youtube vlogger lonelygirl whatever was exposed as being fictional, people were upset because it wasn't authentic, not what it claimed to be]
-Authenticity is about something matching what it claims to be.
+Early in the days of YouTube, one YouTube channel ([lonelygirl15](https://en.wikipedia.org/wiki/Lonelygirl15)) started to release vlogs (video web logs) consisting of a girl in her room giving updates on the mundane dramas of her life. But as the channel continued posting videos and gaining popularity, viewers started to question if the events being told in the vlogs were true stories, or if they were fictional. Eventually users discovered that it was a fictional show, and the girl giving the updates was an actress.
+
+Many users were upset that what they had been watching wasn't __authentic__. That is, users believed the channel was presenting itself as true events about a real girl, and it wasn't that at all.
 
 ## Why We Care About Authenticity
 
@@ -33,18 +34,3 @@ Authenticity
 We value authenticity because it has a deep connection to the way humans use social connections to manage our vulnerability and to protect ourselves from things that threaten us. When we form connections, it is like all our respective vulnerabilities get entangled and tied together. We depend on each other, so if you betray me I face a loss in wellbeing. But also, since you did that, now you face a loss in wellbeing, as I no longer have your back. That means that both of us have an incentive not to betray or take advantage of each other, for our mutual protection.
 
 When someone presents themselves as open and as sharing their vulnerabilities with us, it makes the connection feel authentic. We feel like they have entangled their wellbeing with ours by sharing their vulnerabilities with us. Think about how this works with celebrity personalities. Jennifer Lawrence [became a favorite of many when she tripped at the Oscars](https://youtu.be/Q7aq1bHXuY8?t=641), and turned the moment into her persona as someone with a cool-girl, unpolished, unfiltered way about her. She came across as relatable and as sharing her vulnerabilities with us, which let many people feel that they had a closer, more authentic connection with her. Over time, that persona has come to be read differently, with some suggesting that this open-styled persona is in itself also a performance. Does this mean that her performance of vulnerability was inauthentic?
-
-Can you think of some examples of inauthentic behaviors that are familiar from social media spaces?
-
-## Inauthentic behavior
-In contrast to authentiticty is inauthenticity, which might look like:
-  - Catfishing
-  - Schrodinger’s asshole
-  - Sockpuppet (related to a burner account)
-  - Astroturfing
-  - Intentionally cringy TikToks
-  - Clickbait
-  - Concern trolling
-  - Parody accounts
-
-In this chapter we will explore how data and automation play a role in structuring the way we perceive and play out connections in social media spaces. Throughout the following sections, think about which examples seem authentic or inauthentic to you, and why. We will not talk about the above, more well-defined inauthentic behaviors until the next chapter, which is about trolling.
