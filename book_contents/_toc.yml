@@ -91,11 +91,17 @@ parts:
     - file: ch06_authenticity/00_authenticity
       sections:
       - file: ch06_authenticity/01_authenticity
-      - file: ch06_authenticity/02_authenticity_trump
-      - file: ch06_authenticity/03_demo_practice_tweet_source
-      - file: ch06_authenticity/04_authenticity_nuance
-      - file: ch06_authenticity/05_design_analysis_facebook_name
-      - file: ch06_authenticity/06_learn_more
+      - file: ch06_authenticity/02_posting_sources/00_posting_sources
+        sections:
+          - file: ch06_authenticity/02_posting_sources/01_authenticity_trump
+          - file: ch06_authenticity/02_posting_sources/02_demo_practice_tweet_source
+      - file: ch06_authenticity/03_inauthenticity
+      - file: ch06_authenticity/04_personas
+      - file: ch06_authenticity/05_parasocial_relationships
+      - file: ch06_authenticity/06_authenticity_and_anonymity
+      - file: ch06_authenticity/07_examples_of_complicated_authenticity
+      - file: ch06_authenticity/08_design_analysis_facebook_name
+      - file: ch06_authenticity/09_learn_more
     - file: ch07_trolling/00_trolling
       sections:
       - file: ch07_trolling/01_what_is_trolling

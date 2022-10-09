@@ -1,0 +1,12 @@
+# Authenticity and Anonymity
+- Does anonymity encourage / discourage authenticity?
+  - Anonymity can encourage inauthentic behavior
+    - You can pretend to be someone you are not
+    - Your actions can’t be traced back to you (maybe)
+  - Anonymity can encourage authentic behavior
+    - You can express things about yourself you are not allowed to express in normal life
+    - You can avoid negative reactions to your authentic self-expression
+- Is authenticity good?
+  - What authentic thing about yourself are you expressing?
+    - Cruelty? Hate?
+    - [Marginalized identities](https://www.vox.com/culture/21432987/trans-twitter-reddit-online-anonymity)?

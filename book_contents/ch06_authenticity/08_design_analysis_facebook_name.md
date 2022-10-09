@@ -33,7 +33,7 @@ Things to keep in mind
 The Facebook name policy as of 8/24/2022. You can see the current version [here](https://www.facebook.com/help/112146705538576/)
 ```
 
-This activity follows the five step CIDER method (Critique, Imagine, Design, Expand, Repeat), created by [Alannah Oleson, et. al.](https://alannaholeson.com/). This activity works best if you can do it with others (like in a classroom), so you can learn from their observations as well.
+This activity follows [the five step CIDER method](https://medium.com/@OAlannah/beyond-average-users-building-inclusive-design-skills-with-the-cider-technique-413969544e6d?source=friends_link&sk=6c9184c8a88feae058cfb073a44985f7) (Critique, Imagine, Design, Expand, Repeat), created by [Alannah Oleson, et. al.](https://alannaholeson.com/). This activity works best if you can do it with others (like in a classroom), so you can learn from their observations as well.
 
 So read through the Facebook name policy above (for this activity ignore clarifications or exceptions Facebook may have made elsewhere, since those weren't deemed important enough to put on this main policy page). Then do the following (preferrably on paper or in a blank computer document):
 
@@ -51,7 +51,7 @@ Facebook assumes a real name is safe to use (not necessarily true for some LGBTQ
 ## Imagine (2-3 minutes, by yourself):
 Select one of the above assumptions that you think is important to address. Then write a 1-2 sentence scenario where a user could not use Facebook as expected because of the assumption you selected. This represents one way the design could exclude certain users.
 
-##  Design (3-5 minutes, by yourself):
+## Design (3-5 minutes, by yourself):
 Brainstorm ways to change the Facebook's name policy to avoid the scenario you wrote above. List as many different kinds of potential solutions you can think of – aim for ten or more (bullet points encouraged).
 
 ## Expand (5-10 minutes, with others):
@@ -59,5 +59,5 @@ Combine your list of critiques with someone else's (or if possible, have a whole
 
 You can also consider looking at the [Wikipedia page on the Facebook real-name policy controversy](https://en.wikipedia.org/wiki/Facebook_real-name_policy_controversy)
 
-## Repeat Imagine and Design Tasks:
+## Repeat the Imagine and Design Tasks:
 Select another assumption from the list above that you think is important to address. Make sure to choose a different assumption than you used before. Choose one that you didn’t come up with yourself, if possible. Repeat the Imagine and Design steps.

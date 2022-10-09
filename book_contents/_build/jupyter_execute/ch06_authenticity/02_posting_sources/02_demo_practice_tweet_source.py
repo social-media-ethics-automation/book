@@ -11,17 +11,16 @@
 # In[1]:
 
 
-get_ipython().system('pip install lckr-jupyterlab-variableinspector')
-
-
-# In[ ]:
-
-
-get_ipython().system('pip install tweepy')
 import tweepy
 
 
-# In[ ]:
+# In[2]:
+
+
+get_ipython().run_line_magic('run', '../../fake_tweepy/fake_tweepy.ipynb')
+
+
+# In[3]:
 
 
 import my_bot_keys
