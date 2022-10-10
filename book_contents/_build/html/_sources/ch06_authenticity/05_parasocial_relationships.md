@@ -63,10 +63,10 @@ Now, of the two of us at this time, I had some skepticism, but my younger sister
 - She believed Mr. Rogers knew her (or was at least close enough that he would come over to visit).
   - This belief was almost certainly false. He may have known who she was for a brief moment when responding to this letter (or signing one his secretary wrote or something).
 - She believed that if she saw Mr. Rogers (like, if he came over to our house), that he would like her.
-  - Based on what is known publicly about Fred Rogers, this was probably true.
+  - Based on [what is known publicly about Fred Rogers](https://www.esquire.com/entertainment/tv/a27134/can-you-say-hero-esq1198/), this was probably true.
 
 
-In the above example, you can see some complications and nuances in how parasocial relationships can exist, and you can question what was or wasn't authentic about how Fred Rogers related to children through his television show.
+In the above example, you can see how Fred Rogers was trying to define and clarify the parasocial nature of the relationship (e.g., "television friends", "television visits"). We can then ask what was authentic or inauthentic about this relationship, and we can analyze the ethics of what Fred Rogers was doing.
 
 ## Reflection questions
 - Where do you see parasocial relationships on social media?
