@@ -18,7 +18,7 @@ As an example of the ethically complicated nature of parasocial relationships, l
 In his television program, Mr. Rogers wanted all children to feel cared for and loved. To do this, he intentionally fostered a parasocial relationship with the children in his audience (he called them his "television friends"):
 > I give an expression of care every day to each child, to help him realize that he is unique. I end the program by saying, "You've made this day a special day, by just your being you. There's no person in the whole world like you, and I like you, just the way you are."
 >
-> [Fred Rogers requesting funds for PBS at the US Senate in 1969] (https://misterrogers.org/videos/pastore/)
+> [Fred Rogers requesting funds for PBS at the US Senate in 1969](https://misterrogers.org/videos/pastore/)
 
 ![gif of Mr. Rogers looking straight into the camera and saying: "I like you just the way you are"](mr_rogers.gif)
 
