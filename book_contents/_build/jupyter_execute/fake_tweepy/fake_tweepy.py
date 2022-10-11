@@ -40,7 +40,7 @@ def print_tweet(text=""):
     
 def search_recent_tweets(query="", tweet_fields=[], max_results=10):
     print_info("Fake Tweepy is pretending to search for '"+query+"' and is returning some fake tweets.")
-    if(query == "cute cat"):
+    if(query == '"cute cat"'):
         return SimpleNamespace(
           data = [
               SimpleNamespace(

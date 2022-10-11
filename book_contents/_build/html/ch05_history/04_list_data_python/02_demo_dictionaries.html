@@ -1876,17 +1876,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to search for &#x27;&quot;cute cat&quot;&#x27; and is returning some fake tweets.</strong></div><div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="nn">Input In [10],</span> in <span class="ni">&lt;cell line: 8&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">tweets_info</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">tweet_fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;author_id&quot;</span><span class="p">,</span> <span class="s2">&quot;created_at&quot;</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;lang&quot;</span><span class="p">,</span> <span class="s2">&quot;public_metrics&quot;</span><span class="p">,</span> <span class="s2">&quot;source&quot;</span><span class="p">,</span> <span class="s2">&quot;text&quot;</span><span class="p">])</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># Get the actual list of tweets out of the data field (tweets_info also has metadata about our search)</span>
-<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">tweets_list</span> <span class="o">=</span> <span class="n">tweets_info</span><span class="o">.</span><span class="n">data</span>
-
-<span class="ne">AttributeError</span>: &#39;NoneType&#39; object has no attribute &#39;data&#39;
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to search for &#x27;&quot;cute cat&quot;&#x27; and is returning some fake tweets.</strong></div></div>
 </div>
 </section>
 </section>
@@ -1903,6 +1893,27 @@ title="Print to PDF"
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  source: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">source</span><span class="p">))</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  text: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
     <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Info for tweet with id: 129308937494
+  author_id: 239048094385
+  created_at: 2022-02-22 22:22:22+00:00
+  source: Twitter for Android
+  text: While trying to tweet right now, I am being attacked by my cute cat! It&#39;s so hard to tpye wihsaoae as fesadf asd fssasaf sa
+
+Info for tweet with id: 93298432
+  author_id: 23409023
+  created_at: 2022-02-22 02:02:02+00:00
+  source: Twitter for iPhone
+  text: I wish I could be sleeping now like my cute cat is!
+
+Info for tweet with id: 321923
+  author_id: 32892394
+  created_at: 2022-02-22 03:03:03+00:00
+  source: Twitter for iPhone
+  text: Why won&#39;t my cute cat stop scratching my face in the morning!
 </pre></div>
 </div>
 </div>
