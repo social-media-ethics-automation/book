@@ -1,5 +1,7 @@
 # What is trolling
 
+- fake fbi post: https://isitfunnyoroffensive.com/comedian-impersonates-fbi-on-twitter-makes-mlk-assassination-joke/
+
 ## Goals of Trolling
 - Immediate goals
   - Provoke a reaction (generally negative)
