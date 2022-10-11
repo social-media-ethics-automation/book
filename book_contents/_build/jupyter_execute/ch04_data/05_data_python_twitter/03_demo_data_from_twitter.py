@@ -82,7 +82,7 @@ recent_tweet = tweets.data[0]
 # 
 # ### tweet text:
 
-# In[6]:
+# In[17]:
 
 
 display("The data type of the tweet text is: " + type(recent_tweet.text).__name__)
@@ -93,7 +93,7 @@ display("The tweet text is: " + recent_tweet.text)
 
 # ### tweet id
 
-# In[7]:
+# In[18]:
 
 
 display("The data type of the tweet id is: " + type(recent_tweet.id).__name__)
@@ -104,7 +104,7 @@ display("The tweet tweet id is: " + str(recent_tweet.id))
 
 # ### tweet author id
 
-# In[8]:
+# In[19]:
 
 
 display("The data type of the author id is: " + type(recent_tweet.author_id).__name__)
@@ -115,7 +115,7 @@ display("The tweet author id is: " + str(recent_tweet.author_id))
 
 # ### tweet created at
 
-# In[9]:
+# In[20]:
 
 
 display("The data type of the tweet created at is: " + type(recent_tweet.created_at).__name__)
@@ -126,7 +126,7 @@ display("The tweet tweet created at is: " + str(recent_tweet.created_at))
 
 # ### tweet lang (language)
 
-# In[10]:
+# In[21]:
 
 
 display("The data type of the tweet lang is: " + type(recent_tweet.lang).__name__)
@@ -137,7 +137,7 @@ display("The tweet tweet lang is: " + str(recent_tweet.lang))
 
 # ### tweet source (device that made the tweet)
 
-# In[11]:
+# In[22]:
 
 
 display("The data type of the tweet source is: " + type(recent_tweet.source).__name__)
@@ -148,7 +148,7 @@ display("The tweet tweet source is: " + str(recent_tweet.source))
 
 # ### public metrics
 
-# In[12]:
+# In[23]:
 
 
 display("The data type of the tweet source is: " + type(recent_tweet.public_metrics).__name__)
@@ -157,7 +157,7 @@ display("The tweet tweet source is: " + str(recent_tweet.public_metrics))
 
 # The public metrics of a tweet are saved in a dictionary (`dict`), which holds a group of values. So let's look at each of those:
 
-# In[13]:
+# In[24]:
 
 
 display("The data type of the retweet count is: " + type(recent_tweet.public_metrics['retweet_count']).__name__)

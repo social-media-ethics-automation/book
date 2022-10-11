@@ -17,14 +17,23 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import my_bot_keys
+# Choose a search to run
+query = '"cute cat"'
+
+#Run the search and request some additional info
+tweets = client.search_recent_tweets(query=query, tweet_fields=["author_id", "created_at", "id", "lang", "public_metrics", "source", "text"])
+
+# Find the first tweet returned
+recent_tweet = tweets.data[0]
 ------------------
 
 [1;31m---------------------------------------------------------------------------[0m
-[1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Input [1;32mIn [3][0m, in [0;36m<cell line: 1>[1;34m()[0m
-[1;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mmy_bot_keys[39;00m
+[1;31mAttributeError[0m                            Traceback (most recent call last)
+Input [1;32mIn [5][0m, in [0;36m<cell line: 8>[1;34m()[0m
+[0;32m      5[0m tweets [38;5;241m=[39m client[38;5;241m.[39msearch_recent_tweets(query[38;5;241m=[39mquery, tweet_fields[38;5;241m=[39m[[38;5;124m"[39m[38;5;124mauthor_id[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mcreated_at[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mid[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mlang[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mpublic_metrics[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124msource[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mtext[39m[38;5;124m"[39m])
+[0;32m      7[0m [38;5;66;03m# Find the first tweet returned[39;00m
+[1;32m----> 8[0m recent_tweet [38;5;241m=[39m [43mtweets[49m[38;5;241;43m.[39;49m[43mdata[49m[[38;5;241m0[39m]
 
-[1;31mModuleNotFoundError[0m: No module named 'my_bot_keys'
-ModuleNotFoundError: No module named 'my_bot_keys'
+[1;31mAttributeError[0m: 'NoneType' object has no attribute 'data'
+AttributeError: 'NoneType' object has no attribute 'data'
 
