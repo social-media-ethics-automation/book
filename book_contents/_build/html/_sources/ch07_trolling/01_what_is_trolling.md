@@ -1,35 +1,19 @@
 # What is trolling
 
-- fake fbi post: https://isitfunnyoroffensive.com/comedian-impersonates-fbi-on-twitter-makes-mlk-assassination-joke/
+## Disruption and provoking reaction
+Trolling is when an Internet user posts inauthentically (often false, upsetting, or strange) with the goal of causing disruption or provoking an emotional reaction. When the goal is provoking an emotional reaction, it is often for a negative emotion, such as anger or emotional pain. When the goal is disruption, it might be attempting to derail a conversation (e.g., [concern trolling](https://en.wiktionary.org/wiki/concern_troll)), or make a space no longer useful for it's original purpose (e.g., joke product reviews), or try to get people to [take absurd fake stories seriously](https://www.scientificamerican.com/article/internet-troll-sub-culture-s-savage-spoofing-of-mainstream-media-excerpt/).
 
-## Goals of Trolling
-- Immediate goals
-  - Provoke a reaction (generally negative)
-  - Disruption. For example:
-    - Derail a conversation (concern trolling)
-    - Derail a product review page
-    - Get [silly/gross stories repeated by supposedly reputable news outlets](https://www.scientificamerican.com/article/internet-troll-sub-culture-s-savage-spoofing-of-mainstream-media-excerpt/)
-- Additional goals of trolling
-  - Amusement
-  - Define ingroup vs. outgroup (gate-keeping)
-    - E.g., trolling the newbies, normies
-  - Feel empowered (by ability to cause pain, or succeeding in causing disruption)
-  - Feel smarter than the people who didn’t realize it was a “joke”
-  - Advance and argument / make a point
-  - “Punish” people, groups, and organizations who “deserve” it
-- Read more: https://en.wikipedia.org/wiki/Internet_troll
+## Why troll?
+If the immediate goal of trolling is to cause disruption or provoke emotional reactions, why do people want to do this?
 
+Some reasons people engage in trolling behavior are:
+- __Amusement__: Trolls often find the posts amusing, whether due to the disruption or emotional reaction. If the motivation is amusement at causing others' pain, that is called doing it for the [lulz](https://www.wired.com/2011/11/anonymous-101/).
+- __Gatekeeping__: Some trolling is done in a community to separate out an ingroup from outgroup (sometimes called newbies or normies). The ingroup knows that a post is just trolling, but the outgroup is not aware and will engage earnestly. This is sometimes known as trolling the newbies.
+- __Feeling Smart__: Going with the gatekeeping role above, trolling can make a troll or observer feel smarter than others, since they are able to see that it is trolling while others don't realize it.
+- __Feeling Powerful__: Trolling sometimes gives trolls a feeling of empowerment when they successfully cause disruption or cause pain.**
+- **Advance and argument / make a point**: Trolling is sometimes done in order to advance an argument or make a point. For example, proving that supposedly reliable news sources are gullible by [getting them to repeat an absurd gross story]((https://www.scientificamerican.com/article/internet-troll-sub-culture-s-savage-spoofing-of-mainstream-media-excerpt/)).
+- **Punish or stop**: Some trolling is in service of some view of justice, where a person, group or organization is viewed as doing something "bad" or "deserving" of punishment, and trolling is a way of fighting back.
 
+See also: [Wikipedia's summary](https://en.wikipedia.org/wiki/Internet_troll)
 
-
-## Programming
-
-Concepts:
-- if/else
-- String operations
-
-
-Hello bot
-- Get a list of tweets that @ our bot and read the latest tweet
-- If the latest tweet is in the format “Hi @botname, my name is \<name\>”
-- We reply tweet back “Hi \<name\>! Nice to meet you!”
+% - fake fbi post: https://isitfunnyoroffensive.com/comedian-impersonates-fbi-on-twitter-makes-mlk-assassination-joke/

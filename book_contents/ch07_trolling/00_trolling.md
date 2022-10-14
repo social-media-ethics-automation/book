@@ -1,6 +1,6 @@
 # (Incomplete) Trolling
 
-TODO: summary statement here
+Now that we've looked at authenticity and inauthenticity, let's look at one particular form of inauthenticity: Trolling.
 
 ```{tableofcontents}
 ```
