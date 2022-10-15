@@ -1,9 +1,13 @@
+# Responding to trolls?
+One of the traditional pieces of advice to dealing with trolls is "Don't feed the trolls," which means that if you don't respond to trolls, they will get bored and stop trolling. We can see this advice as well in the trolling community's own "[Rules of the Internet](https://knowyourmeme.com/memes/rules-of-the-internet)":
+> 14. Do not argue with trolls - it means that they win
 
-## Responding to trolls?
-- “Don’t feed the trolls”
-- A counter opinion:
-  - https://www.theverge.com/2018/7/12/17561768/dont-feed-the-trolls-online-harassment-abuse
-  - [Don’t feed the trolls] became the mantra of how to ignore online abuse completely.
-  - [Not feeding the trolls doesn’t work] Ask anyone who has dealt with persistent harassment online, especially women: this is not usually what happens. Instead, the harasser keeps pushing and pushing to get the reaction they want with even more tenacity and intensity. It’s the same pattern on display in the litany of abusers and stalkers, both online and off, who escalate to more dangerous and threatening behavior when they feel like they are being ignored.
-  - “Don’t feed the trolls” also ignores an obvious method for addressing online abuse: skilled moderation and the willingness to kick people off platforms for violating rules about abuse.
-  - The biggest mistake we ever made with trolls was making the question of abuse about how to placate and fix [the trolls] instead of how to empower the people they hurt or manage their own well-being in the face of the trolling.
+But the essayist Film Crit Hulk argues against this in [Don’t feed the trolls, and other hideous lies](https://www.theverge.com/2018/7/12/17561768/dont-feed-the-trolls-online-harassment-abuse). That piece argues that the "don't feed the trolls" strategy doesn't work:
+> Ask anyone who has dealt with persistent harassment online, especially women: this is not usually what happens. Instead, the harasser keeps pushing and pushing to get the reaction they want with even more tenacity and intensity. It’s the same pattern on display in the litany of abusers and stalkers, both online and off, who escalate to more dangerous and threatening behavior when they feel like they are being ignored.
+
+Film Crit Hulk goes on to say that the "don't feed the trolls" advice puts the burden on victims of abuse to stop being abused, giving all the power to trolls. Instead Film Crit Hulk suggests giving power to the victims and using "skilled moderation and the willingness to kick people off platforms for violating rules about abuse"
+
+## Reflection questions
+Have you witnessed different responses to trolling? What happened in those cases?
+
+What do you think is the best way to deal with trolling?
