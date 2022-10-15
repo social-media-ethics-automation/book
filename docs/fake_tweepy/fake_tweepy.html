@@ -619,7 +619,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../ch07_trolling/00_trolling.html">
-   7. (Incomplete) Trolling
+   7. Trolling
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
   <label for="toctree-checkbox-15">
@@ -639,7 +639,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ch07_trolling/03_trolling_examples.html">
-     7.3. Trolling examples
+     7.3. Activity: Evaluating Trolling Examples
     </a>
    </li>
    <li class="toctree-l2">
@@ -659,17 +659,17 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../ch07_trolling/05_trolling_reply_bot/01_demo_strings_conditionals.html">
-       7.5.2. Practice: Conditionals
+       7.5.1. Demo: Conditionals and String Manipulation
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../ch07_trolling/05_trolling_reply_bot/02_practice_strings_conditionals.html">
-       7.5.3. Practice: Conditionals
+       7.5.2. Practice: Conditionals and String Manipulation
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../ch07_trolling/05_trolling_reply_bot/03_demo_reply_bot.html">
-       7.5.4. Demo: Trolling a Reply Bot
+       7.5.3. Demo: Trolling a Reply Bot
       </a>
      </li>
     </ul>
@@ -1376,6 +1376,11 @@ const thebe_selector_output = ".output, .cell_output"
      Ch 5 Practice: Looping through lists and dictionaries
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/solutions/07_practice_strings_conditionals.html">
+     Ch 7 Practice: Conditionals and String Manipulation
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -1618,12 +1623,26 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_info</span><span class="p">(</span><span class="s2">&quot;Fake tweepy is replacing the tweepy library. Fake Tweepy doesn&#39;t need real passwords, and prevents you from accessing real twitter&quot;</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">print_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake tweepy is replacing the tweepy library. Fake Tweepy doesn&#x27;t need real passwords, and prevents you from accessing real twitter</strong></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">in_reply_to_tweet_id</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
     <span class="n">print_info</span><span class="p">(</span><span class="s2">&quot;Fake Tweepy is pretending to post this tweet (note: real tweepy shows no output here when a tweet is posted): &quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-    
-<span class="k">def</span> <span class="nf">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">tweet_fields</span><span class="o">=</span><span class="p">[],</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">in_reply_to_tweet_id</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tweet in reply to: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">in_reply_to_tweet_id</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">tweet_fields</span><span class="o">=</span><span class="p">[],</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
     <span class="n">print_info</span><span class="p">(</span><span class="s2">&quot;Fake Tweepy is pretending to search for &#39;&quot;</span><span class="o">+</span><span class="n">query</span><span class="o">+</span><span class="s2">&quot;&#39; and is returning some fake tweets.&quot;</span><span class="p">)</span>
     <span class="k">if</span><span class="p">(</span><span class="n">query</span> <span class="o">==</span> <span class="s1">&#39;&quot;cute cat&quot;&#39;</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
@@ -1692,24 +1711,103 @@ title="Print to PDF"
               <span class="p">)</span>
           <span class="p">]</span>
         <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_user</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">user_auth</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">id</span> <span class="o">==</span> <span class="s2">&quot;me&quot;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+                <span class="nb">id</span> <span class="o">=</span> <span class="mi">123456789</span><span class="p">,</span>
+                <span class="n">username</span> <span class="o">=</span> <span class="s2">&quot;fake_user&quot;</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mentions_counter</span> <span class="o">=</span> <span class="mi">0</span>
 
-
-<span class="k">def</span> <span class="nf">client_creator</span><span class="p">(</span><span class="n">bearer_token</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">consumer_key</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">access_token</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="s2">&quot;&quot;</span> <span class="p">):</span>
+<span class="k">def</span> <span class="nf">get_users_mentions</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">mentions_counter</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">id</span> <span class="o">==</span> <span class="mi">123456789</span><span class="p">):</span>
+        <span class="n">mentions_counter</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">mentions_counter</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+              <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+                  <span class="n">SimpleNamespace</span><span class="p">(</span>
+                      <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Hi @fake_user, please jump&quot;</span><span class="p">,</span>
+                      <span class="nb">id</span> <span class="o">=</span> <span class="mi">232434</span><span class="p">,</span>
+                  <span class="p">)</span>
+              <span class="p">]</span>
+            <span class="p">)</span>
+        <span class="k">elif</span><span class="p">(</span><span class="n">mentions_counter</span> <span class="o">==</span> <span class="mi">2</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+              <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+                  <span class="n">SimpleNamespace</span><span class="p">(</span>
+                      <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Hi @fake_user, please do something horrible!&quot;</span><span class="p">,</span>
+                      <span class="nb">id</span> <span class="o">=</span> <span class="mi">234356</span><span class="p">,</span>
+                  <span class="p">)</span>
+              <span class="p">]</span>
+            <span class="p">)</span>
+        <span class="k">elif</span><span class="p">(</span><span class="n">mentions_counter</span> <span class="o">==</span> <span class="mi">3</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+              <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+                  <span class="n">SimpleNamespace</span><span class="p">(</span>
+                      <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Hi @fake_user, please fly&quot;</span><span class="p">,</span>
+                      <span class="nb">id</span> <span class="o">=</span> <span class="mi">245454</span><span class="p">,</span>
+                  <span class="p">)</span>
+              <span class="p">]</span>
+            <span class="p">)</span>
+        <span class="k">elif</span><span class="p">(</span><span class="n">mentions_counter</span> <span class="o">==</span> <span class="mi">4</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+              <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+                  <span class="n">SimpleNamespace</span><span class="p">(</span>
+                      <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Hi @fake_user, please do something horrible!&quot;</span><span class="p">,</span>
+                      <span class="nb">id</span> <span class="o">=</span> <span class="mi">245454</span><span class="p">,</span>
+                  <span class="p">)</span>
+              <span class="p">]</span>
+            <span class="p">)</span>
+        <span class="k">elif</span><span class="p">(</span><span class="n">mentions_counter</span> <span class="o">==</span> <span class="mi">5</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+              <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+                  <span class="n">SimpleNamespace</span><span class="p">(</span>
+                      <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Hi @fake_user, please stop talking. But that doesn&#39;t mean I won&#39;t say horrible things like: I hate everybody!&quot;</span><span class="p">,</span>
+                      <span class="nb">id</span> <span class="o">=</span> <span class="mi">245454</span><span class="p">,</span>
+                  <span class="p">)</span>
+              <span class="p">]</span>
+            <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">client_creator</span><span class="p">(</span><span class="n">bearer_token</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">consumer_key</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">access_token</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="s2">&quot;&quot;</span> <span class="p">):</span>
     <span class="n">print_info</span><span class="p">(</span><span class="s2">&quot;Fake Tweepy is pretending to log in to twitter&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
       <span class="n">create_tweet</span> <span class="o">=</span> <span class="n">print_tweet</span><span class="p">,</span>
-      <span class="n">search_recent_tweets</span> <span class="o">=</span> <span class="n">search_recent_tweets</span>
+      <span class="n">search_recent_tweets</span> <span class="o">=</span> <span class="n">search_recent_tweets</span><span class="p">,</span>
+      <span class="n">get_user</span> <span class="o">=</span> <span class="n">get_user</span><span class="p">,</span>
+      <span class="n">get_users_mentions</span> <span class="o">=</span> <span class="n">get_users_mentions</span>
     <span class="p">)</span>
-
-
-<span class="n">tweepy</span> <span class="o">=</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tweepy</span> <span class="o">=</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
     <span class="n">Client</span> <span class="o">=</span> <span class="n">client_creator</span>
 <span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake tweepy is replacing the tweepy library. Fake Tweepy doesn&#x27;t need real passwords, and prevents you from accessing real twitter</strong></div></div>
 </div>
 </section>
 

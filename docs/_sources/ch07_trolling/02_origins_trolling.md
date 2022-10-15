@@ -5,8 +5,8 @@ While the term "trolling" in the sense we are talking about in this chapter come
 ## Pre-internet trolling
 Before the internet, there were many activities that we would probably now call "trolling", such as:
 - Practical jokes / pranks
-- Hazing:
-- Satire: (e.g., [A Modest Proposal](https://en.wikipedia.org/wiki/A_Modest_Proposal))
+- Hazing: Causing difficulty or suffering for people who are new to a group
+- Satire: (e.g., [A Modest Proposal](https://en.wikipedia.org/wiki/A_Modest_Proposal)) which takes a known form, but does something unexpected or disruptive with it.
 
 Additionally the enjoyment at causing others pain or distress ("lulz") has also been part of the human experience for millennia:
 > “Boys throw stones at frogs in fun, but the frogs do not die in fun, but in earnest.”
