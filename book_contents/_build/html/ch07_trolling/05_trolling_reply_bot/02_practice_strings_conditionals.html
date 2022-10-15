@@ -1378,6 +1378,11 @@ const thebe_selector_output = ".output, .cell_output"
      Ch 5 Practice: Looping through lists and dictionaries
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/solutions/07_practice_strings_conditionals.html">
+     Ch7 Practice: Conditionals and String Manipulation
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -1587,46 +1592,19 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#while-loops">
-   While Loops
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#if-else-statements">
    IF ELSE Statements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#expressions">
-   Expressions
+  <a class="reference internal nav-link" href="#string-manipulation">
+   String Manipulation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variables-loops">
-   Variables + Loops
+  <a class="reference internal nav-link" href="#ifs-with-strings">
+   Ifs with Strings
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#nested-loops">
-   Nested Loops
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#twitter-practice">
-   Twitter Practice
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#install-and-import-the-tweepy-library-of-code-that-gives-us-twitter-functions">
-     Install and import the “tweepy” library of code that gives us twitter functions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#login">
-     Login
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -1648,46 +1626,19 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#while-loops">
-   While Loops
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#if-else-statements">
    IF ELSE Statements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#expressions">
-   Expressions
+  <a class="reference internal nav-link" href="#string-manipulation">
+   String Manipulation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variables-loops">
-   Variables + Loops
+  <a class="reference internal nav-link" href="#ifs-with-strings">
+   Ifs with Strings
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#nested-loops">
-   Nested Loops
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#twitter-practice">
-   Twitter Practice
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#install-and-import-the-tweepy-library-of-code-that-gives-us-twitter-functions">
-     Install and import the “tweepy” library of code that gives us twitter functions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#login">
-     Login
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -1701,329 +1652,88 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="practice-conditionals-and-string-manipulation">
 <h1><span class="section-number">7.5.2. </span>Practice: Conditionals and String Manipulation<a class="headerlink" href="#practice-conditionals-and-string-manipulation" title="Permalink to this headline">#</a></h1>
-<section id="while-loops">
-<h2>While Loops<a class="headerlink" href="#while-loops" title="Permalink to this headline">#</a></h2>
-<p>Just like the For loop, the while loop performs repetitions, each iteration executes the body only if the condition is True, otherwise the loop ends.</p>
-<p>The structure of the loop looks like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">CONDITION</span><span class="p">:</span>
-    <span class="n">STATEMENT</span>
-    <span class="n">STATEMENT</span>
-    <span class="n">STATEMENT</span>
-</pre></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Try out this example:</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="k">while</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
-4
-3
-2
-1
-</pre></div>
-</div>
-</div>
-</div>
-<ol class="simple">
-<li><p>Create a 30 second coutdown using a while loop, the <code class="docutils literal notranslate"><span class="pre">sleep()</span></code> function, and the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function.</p></li>
-</ol>
-</section>
 <section id="if-else-statements">
 <h2>IF ELSE Statements<a class="headerlink" href="#if-else-statements" title="Permalink to this headline">#</a></h2>
-<p>Conditional statements let you execute code based on some condition.</p>
-<p>A conditional block is an <code class="docutils literal notranslate"><span class="pre">if</span></code> block, optionally followed by any number of <code class="docutils literal notranslate"><span class="pre">elif</span></code> blocks (“elif” is short for “else if”, optionally followed by at most one <code class="docutils literal notranslate"><span class="pre">else</span></code> block. The conditional block will only ever let one condition run.</p>
+<p>Look at the following code example and try running it</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># try out the following example:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
 
-<span class="k">if</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Yes!&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No!&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Yes!
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># try out the following example:</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="mi">15</span>
 <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">13</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">25</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Never&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>B
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A
 </pre></div>
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p>Refer to the example. Let’s say x was changed to 30. What would the output be?</p></li>
-</ol>
-<p>*Do Not Code. Please answer this question as a markdown block. Modify the code above to check your answer afterwords.</p>
-<ol class="simple">
-<li><p>What value would the <code class="docutils literal notranslate"><span class="pre">x</span></code> variable have to be in order to get the output ‘C’?</p></li>
-</ol>
-<p>*Again, Do Not Code. Please answer this question as a markdown block Modify the code above to check your answer afterwords.</p>
+<p>Now what would happen if x was changed to 30? What would the output be?</p>
+<p><em>Do Not Code. Please answer this question as a markdown block. Modify the code above to check your answer afterwords.</em></p>
+<p>TODO: Put your answer here</p>
+<p>What value would the <code class="docutils literal notranslate"><span class="pre">x</span></code> variable have to be in order to get the output ‘C’?</p>
+<p><em>Again, Do Not Code. Please answer this question as a markdown block Modify the code above to check your answer afterwords</em></p>
+<p>TODO: Put your answer here</p>
 </section>
-<section id="expressions">
-<h2>Expressions<a class="headerlink" href="#expressions" title="Permalink to this headline">#</a></h2>
-<p>You guys already have a lot of experience working with expressions. Let’s review.</p>
-<p>Here are the operations defined for <code class="docutils literal notranslate"><span class="pre">int</span></code> types and <code class="docutils literal notranslate"><span class="pre">float</span></code> types:</p>
+<section id="string-manipulation">
+<h2>String Manipulation<a class="headerlink" href="#string-manipulation" title="Permalink to this headline">#</a></h2>
+<p>Now, make a variable with your name in it, called <code class="docutils literal notranslate"><span class="pre">my_name</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: enter your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Write code to display the first letter of your name</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: enter your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Write code to display the last letter of your name</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: enter your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="ifs-with-strings">
+<h2>Ifs with Strings<a class="headerlink" href="#ifs-with-strings" title="Permalink to this headline">#</a></h2>
+<p>Save a string in a variable called <code class="docutils literal notranslate"><span class="pre">message</span></code> and have it end with either a question mark <code class="docutils literal notranslate"><span class="pre">?</span></code>, an exclamation mark <code class="docutils literal notranslate"><span class="pre">!</span></code>, or a period <code class="docutils literal notranslate"><span class="pre">.</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: enter your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, make a set of if/elif/else statements which will display either:</p>
 <ul class="simple">
-<li><p><b>Addition: </b> <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span></code></p></li>
-<li><p><b>Subtraction: </b> <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">-</span> <span class="pre">b</span></code></p></li>
-<li><p><b>Multiplication: </b> <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">*</span> <span class="pre">b</span></code></p></li>
-<li><p><b>Division: </b> <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">/</span> <span class="pre">b</span></code> (e.g., 7 / 3 == 2.333333333)</p></li>
-<li><p><b>Integer division: </b> <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">//</span> <span class="pre">b</span></code> (e.g., 7 // 3 == 2)</p></li>
-<li><p><b>Mod: </b> <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">%</span> <span class="pre">b</span></code> (i.e., remainder from integer division as in 7 % 3 == 1)</p></li>
-<li><p><b>Exponentiation: </b> <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">**</span> <span class="pre">b</span></code>  (i.e., raise to a power a^b)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">message</span> <span class="pre">was</span> <span class="pre">a</span> <span class="pre">question</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">message</span> <span class="pre">was</span> <span class="pre">an</span> <span class="pre">exclamation</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">message</span> <span class="pre">was</span> <span class="pre">a</span> <span class="pre">statement</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">message</span> <span class="pre">ended</span> <span class="pre">unexpectedly</span></code></p></li>
 </ul>
+<p>depending on what character the message ended in a <code class="docutils literal notranslate"><span class="pre">?</span></code>, <code class="docutils literal notranslate"><span class="pre">!</span></code>, <code class="docutils literal notranslate"><span class="pre">.</span></code>, or something else. Hint: use the <code class="docutils literal notranslate"><span class="pre">endswith</span></code> function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># you can also nest expressions, try out the following example:</span>
-<span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span> <span class="o">**</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: enter your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p>What would be the output? (Try to figure it out by hand, then check it with code)</p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="n">y</span><span class="p">)</span>
-</pre></div>
-</div>
-<ol class="simple">
-<li><p>What would be the output? (Try to figure it out by hand, then check it with code)</p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">//</span> <span class="n">y</span><span class="p">)</span>
-</pre></div>
-</div>
-<ol class="simple">
-<li><p>What would be the ouput? (Try to figure it out by hand, then check it with code)</p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">50</span>
-<span class="k">if</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">&gt;</span> <span class="mi">100</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-    
-</pre></div>
-</div>
-<ol class="simple">
-<li><p>Create a list called <code class="docutils literal notranslate"><span class="pre">random_numbers</span></code>. Choose five random numbers at random in your head to put in the list.</p></li>
-</ol>
-<ol class="simple">
-<li><p>Create a loop that goes through the <code class="docutils literal notranslate"><span class="pre">random_numbers</span></code> list. Within the loop, include an if else statement checking:</p>
-<ul class="simple">
-<li><p>If the number is even, print “A” (hint: even numbers have a remainder of 0)</p></li>
-<li><p>Else if the number is divisible by 3, print “B”</p></li>
-<li><p>Else print “C”</p></li>
-</ul>
-</li>
-</ol>
-</section>
-<section id="variables-loops">
-<h2>Variables + Loops<a class="headerlink" href="#variables-loops" title="Permalink to this headline">#</a></h2>
-<p>We often use variables to keep track of information within loops. A common combination of utilizing variables within loops is for counting purposes.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># check out the following example:</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
-
-<span class="c1"># before the loop</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>               <span class="c1"># same as x = x + 1</span>
-
-<span class="c1"># after the loop    </span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
-10
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># check out the following example:</span>
-
-<span class="c1"># initializing counter variable</span>
-<span class="n">s_count</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="n">state</span> <span class="o">=</span> <span class="s1">&#39;Mississippi&#39;</span>
-
-<span class="c1"># loop</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">state</span><span class="p">)):</span>
-    <span class="k">if</span> <span class="n">state</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;s&#39;</span><span class="p">:</span>
-        <span class="n">s_count</span> <span class="o">+=</span> <span class="mi">1</span>
-
-        
-<span class="nb">print</span><span class="p">(</span><span class="n">s_count</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># check out the following example:</span>
-
-<span class="n">week_temp</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;45 °F&#39;</span><span class="p">,</span> <span class="s1">&#39;43 °F&#39;</span><span class="p">,</span> <span class="s1">&#39;45 °F&#39;</span><span class="p">,</span> <span class="s1">&#39;45 °F&#39;</span><span class="p">,</span> <span class="s1">&#39;49 °F&#39;</span><span class="p">,</span> <span class="s1">&#39;45 °F&#39;</span><span class="p">,</span> <span class="s1">&#39;46 °F&#39;</span><span class="p">]</span>
-
-<span class="n">temp45_count</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="k">for</span> <span class="n">temp</span> <span class="ow">in</span> <span class="n">week_temp</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">temp</span> <span class="o">==</span> <span class="s1">&#39;45 °F&#39;</span><span class="p">:</span>
-        <span class="n">temp45_count</span> <span class="o">+=</span> <span class="mi">1</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">temp45_count</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
-</pre></div>
-</div>
-</div>
-</div>
-<ol class="simple">
-<li><p>Using your previously made <code class="docutils literal notranslate"><span class="pre">random_numbers</span></code> variable, loop through the the list and check how many numbers are greater than ten. At the end, print that count.</p></li>
-</ol>
-</section>
-<section id="nested-loops">
-<h2>Nested Loops<a class="headerlink" href="#nested-loops" title="Permalink to this headline">#</a></h2>
-<p>Lets say we have a list of sentences and we are searching for a specific word. We must use nested loops. Check out the example bellow:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lyrics</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;You used to call me on my cell phone&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;Late night when you need my love&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;Call me on my cell phone&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;Late night when you need my love&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;And I know when that hotline bling&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;That can only mean one thing&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;I know when that hotline bling&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;That can only mean one thing&#39;</span><span class="p">]</span>
-
-<span class="n">phone_count</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lyrics</span><span class="p">:</span>
-    <span class="n">split_line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="c1"># splitting up sentence into list of words</span>
-    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">split_line</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">word</span> <span class="o">==</span> <span class="s1">&#39;phone&#39;</span><span class="p">:</span>
-            <span class="n">phone_count</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">phone_count</span><span class="p">)</span>
-            
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You used to call me on my cell phone
-1
-Call me on my cell phone
-2
-</pre></div>
-</div>
-</div>
-</div>
-<ol class="simple">
-<li><p>Recreate the previous example with your favorite song.</p></li>
-</ol>
-</section>
-<section id="twitter-practice">
-<h2>Twitter Practice<a class="headerlink" href="#twitter-practice" title="Permalink to this headline">#</a></h2>
-<section id="install-and-import-the-tweepy-library-of-code-that-gives-us-twitter-functions">
-<h3>Install and import the “tweepy” library of code that gives us twitter functions<a class="headerlink" href="#install-and-import-the-tweepy-library-of-code-that-gives-us-twitter-functions" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tweepy</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="login">
-<h3>Login<a class="headerlink" href="#login" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># copy in the code from test_twitter_bot_keys.ipynb</span>
-</pre></div>
-</div>
-</div>
-</div>
-<ol class="simple">
-<li><p>Search for recent tweets that include the word ‘Weather’. Assign this list to a variable called <code class="docutils literal notranslate"><span class="pre">weather</span></code>.</p></li>
-</ol>
-<ol class="simple">
-<li><p>Loop through the <code class="docutils literal notranslate"><span class="pre">weather</span></code> list and count how many times you come across the words “cold”, “freezing”, or “chilly”</p></li>
-</ol>
-<ol class="simple">
-<li><p>Create a variable called <code class="docutils literal notranslate"><span class="pre">long_words</span></code> and assign an emepty list to it –&gt; [].</p></li>
-</ol>
-<ol class="simple">
-<li><p>Loop through the <code class="docutils literal notranslate"><span class="pre">weather</span></code> list. If a word has a length of 5 OR GREATER, add it to the <code class="docutils literal notranslate"><span class="pre">long_words</span></code> list. Make sure to return the <code class="docutils literal notranslate"><span class="pre">long_words</span></code> list at the end of your code block.</p></li>
-</ol>
-<p>*Hint: you can add to a list using the <code class="docutils literal notranslate"><span class="pre">append()</span></code> function</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">append</span><span class="p">()</span> <span class="n">example</span><span class="p">:</span>
-
-<span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="nb">list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-
-<span class="nb">list</span>  <span class="o">--&gt;</span>  <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-</pre></div>
-</div>
-<ol class="simple">
-<li><p>Get the length of your <code class="docutils literal notranslate"><span class="pre">long_words</span></code> list and store it in a variable called <code class="docutils literal notranslate"><span class="pre">long_words_length</span></code>.</p></li>
-</ol>
-<ol class="simple">
-<li><p>Create a while loop, printing out the sentence: <b>”The word, WORD, is extremely long.”</b> for each word in the <code class="docutils literal notranslate"><span class="pre">long_words</span></code> list.</p></li>
-</ol>
-<p>*Hint: use the <code class="docutils literal notranslate"><span class="pre">long_words_length</span></code> variable to check if you’ve gone through the entire list. With each iteration, subtract 1 from the variable.</p>
-<p>CHALLENGE: Copy and paste the code from the previous question. Alter the code to create the sentence:</p>
-<p><b>”The word, WORD, is LENGTH letters long.”</b></p>
-</section>
+<p>Now, go back and modify the message string to see if the different if/elif/else options all work</p>
 </section>
 </section>
 

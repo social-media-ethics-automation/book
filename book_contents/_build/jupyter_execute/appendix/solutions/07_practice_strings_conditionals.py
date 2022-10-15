@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Practice: Conditionals and String Manipulation
+# # Ch 7 Practice: Conditionals and String Manipulation
 
 # ## IF ELSE Statements
 # Look at the following code example and try running it
@@ -23,13 +23,13 @@ else:
 # 
 # _Do Not Code. Please answer this question as a markdown block. Modify the code above to check your answer afterwords._
 
-# TODO: Put your answer here
+# It would print 'B'
 
 # What value would the `x` variable have to be in order to get the output 'C'?
 # 
 # _Again, Do Not Code. Please answer this question as a markdown block Modify the code above to check your answer afterwords_
 
-# TODO: Put your answer here
+# If x were 12, it would print C
 
 # ## String Manipulation
 # 
@@ -38,7 +38,7 @@ else:
 # In[2]:
 
 
-# TODO: enter your code here
+my_name = "Kyle"
 
 
 # Write code to display the first letter of your name
@@ -46,7 +46,7 @@ else:
 # In[3]:
 
 
-# TODO: enter your code here
+display(my_name[0])
 
 
 # Write code to display the last letter of your name
@@ -54,7 +54,7 @@ else:
 # In[4]:
 
 
-# TODO: enter your code here
+display(my_name[-1 : ])
 
 
 # ## Ifs with Strings
@@ -63,7 +63,7 @@ else:
 # In[5]:
 
 
-# TODO: enter your code here
+message = "This is an example message!"
 
 
 # Now, make a set of if/elif/else statements which will display either:
@@ -77,7 +77,14 @@ else:
 # In[6]:
 
 
-# TODO: enter your code here
+if message.endswith("?"):
+    display("The message was a question")
+elif message.endswith("!"):
+    display("The message was an exclamation")
+elif message.endswith("."):
+    display("The message was a statement")
+else:
+    display("The message ended unexpectedly")
 
 
 # Now, go back and modify the message string to see if the different if/elif/else options all work

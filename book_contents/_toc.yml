@@ -248,3 +248,4 @@ parts:
           - file: appendix/solutions/01_solution_practice_statements_variables_sleep
           - file: appendix/solutions/02_solution_practice_data
           - file: appendix/solutions/03_practice_lists_dictionaries
+          - file: appendix/solutions/07_practice_strings_conditionals

@@ -34,10 +34,20 @@ def print_info(text):
 
 print_info("Fake tweepy is replacing the tweepy library. Fake Tweepy doesn't need real passwords, and prevents you from accessing real twitter")
 
-def print_tweet(text=""):
+
+# In[4]:
+
+
+def print_tweet(text="", in_reply_to_tweet_id=0):
     print_info("Fake Tweepy is pretending to post this tweet (note: real tweepy shows no output here when a tweet is posted): ")
     print(text)
-    
+    if(in_reply_to_tweet_id > 0):
+        print("Tweet in reply to: " + str(in_reply_to_tweet_id))
+
+
+# In[5]:
+
+
 def search_recent_tweets(query="", tweet_fields=[], max_results=10):
     print_info("Fake Tweepy is pretending to search for '"+query+"' and is returning some fake tweets.")
     if(query == '"cute cat"'):
@@ -109,12 +119,89 @@ def search_recent_tweets(query="", tweet_fields=[], max_results=10):
         )
 
 
+# In[6]:
+
+
+def get_user(id="", user_auth=False):
+    if(id == "me"):
+        return SimpleNamespace(
+            data = SimpleNamespace(
+                id = 123456789,
+                username = "fake_user"
+            )
+        )
+
+
+# In[7]:
+
+
+mentions_counter = 0
+
+def get_users_mentions(id=0):
+    global mentions_counter
+    if(id == 123456789):
+        mentions_counter += 1
+        if(mentions_counter == 1):
+            return SimpleNamespace(
+              data = [
+                  SimpleNamespace(
+                      text = "Hi @fake_user, please jump",
+                      id = 232434,
+                  )
+              ]
+            )
+        elif(mentions_counter == 2):
+            return SimpleNamespace(
+              data = [
+                  SimpleNamespace(
+                      text = "Hi @fake_user, please do something horrible!",
+                      id = 234356,
+                  )
+              ]
+            )
+        elif(mentions_counter == 3):
+            return SimpleNamespace(
+              data = [
+                  SimpleNamespace(
+                      text = "Hi @fake_user, please fly",
+                      id = 245454,
+                  )
+              ]
+            )
+        elif(mentions_counter == 4):
+            return SimpleNamespace(
+              data = [
+                  SimpleNamespace(
+                      text = "Hi @fake_user, please do something horrible!",
+                      id = 245454,
+                  )
+              ]
+            )
+        elif(mentions_counter == 5):
+            return SimpleNamespace(
+              data = [
+                  SimpleNamespace(
+                      text = "Hi @fake_user, please stop talking. But that doesn't mean I won't say horrible things like: I hate everybody!",
+                      id = 245454,
+                  )
+              ]
+            )
+
+
+# In[8]:
+
+
 def client_creator(bearer_token="", consumer_key="", consumer_secret="", access_token="", access_token_secret="" ):
     print_info("Fake Tweepy is pretending to log in to twitter")
     return SimpleNamespace(
       create_tweet = print_tweet,
-      search_recent_tweets = search_recent_tweets
+      search_recent_tweets = search_recent_tweets,
+      get_user = get_user,
+      get_users_mentions = get_users_mentions
     )
+
+
+# In[9]:
 
 
 tweepy = SimpleNamespace(
