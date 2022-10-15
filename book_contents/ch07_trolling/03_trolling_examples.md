@@ -45,7 +45,7 @@ Below is a fake pronunciation guide on youtube for "Hors d'oeuvres":
 
 Note: you can find the [real pronunciation guide here](https://dictionary.cambridge.org/us/pronunciation/english/hors-d-oeuvre), and for those who can't listen to the video, there is an explanation in this footnote[^fake_pronounce]
 
-[^fake_pronounce]: In American English, "Hors d'oeuvres" is pronounced like "or-derv". In the fake pronunciation video they pronounce it: "haars-doovs-dees" and then give an example sentence: "MMmm, what a die-loose-us [instead of delicious (dee-lish-us)]" haars-doovs-dees"
+[^fake_pronounce]: In American English, "Hors d'oeuvres" is pronounced like "or-dervs". In the fake pronunciation video they pronounce it: "haars-doovs-dees" and then give an example sentence: "MMmm, what a die-loose-us [instead of delicious (dee-lish-us)] haars-doovs-dees"
 
 In the youtube comments some people played along and others celebrated or worried about who would get tricked.
 
