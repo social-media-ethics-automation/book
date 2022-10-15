@@ -1,12 +1,14 @@
 # What is trolling
 
+% - fake fbi post: https://isitfunnyoroffensive.com/comedian-impersonates-fbi-on-twitter-makes-mlk-assassination-joke/
+
 ## Disruption and provoking reaction
 Trolling is when an Internet user posts inauthentically (often false, upsetting, or strange) with the goal of causing disruption or provoking an emotional reaction. When the goal is provoking an emotional reaction, it is often for a negative emotion, such as anger or emotional pain. When the goal is disruption, it might be attempting to derail a conversation (e.g., [concern trolling](https://en.wiktionary.org/wiki/concern_troll)), or make a space no longer useful for it's original purpose (e.g., joke product reviews), or try to get people to [take absurd fake stories seriously](https://www.scientificamerican.com/article/internet-troll-sub-culture-s-savage-spoofing-of-mainstream-media-excerpt/).
 
 ## Why troll?
-If the immediate goal of trolling is to cause disruption or provoke emotional reactions, why do people want to do this?
+If the immediate goal of the action of trolling is to cause disruption or provoke emotional reactions, what is it that makes people want to do this disruption or provoking of emotional reactions?
 
-Some reasons people engage in trolling behavior are:
+Some reasons people engage in trolling behavior include:
 - __Amusement__: Trolls often find the posts amusing, whether due to the disruption or emotional reaction. If the motivation is amusement at causing others' pain, that is called doing it for the [lulz](https://www.wired.com/2011/11/anonymous-101/).
 - __Gatekeeping__: Some trolling is done in a community to separate out an ingroup from outgroup (sometimes called newbies or normies). The ingroup knows that a post is just trolling, but the outgroup is not aware and will engage earnestly. This is sometimes known as trolling the newbies.
 - __Feeling Smart__: Going with the gatekeeping role above, trolling can make a troll or observer feel smarter than others, since they are able to see that it is trolling while others don't realize it.
@@ -15,5 +17,3 @@ Some reasons people engage in trolling behavior are:
 - **Punish or stop**: Some trolling is in service of some view of justice, where a person, group or organization is viewed as doing something "bad" or "deserving" of punishment, and trolling is a way of fighting back.
 
 See also: [Wikipedia's summary](https://en.wikipedia.org/wiki/Internet_troll)
-
-% - fake fbi post: https://isitfunnyoroffensive.com/comedian-impersonates-fbi-on-twitter-makes-mlk-assassination-joke/
