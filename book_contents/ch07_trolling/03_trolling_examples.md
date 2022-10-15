@@ -1,4 +1,4 @@
-## Activity: Evaluating Trolling Examples
+# Activity: Evaluating Trolling Examples
 
 This page has several examples of trolling. For each one consider the following:
 - What are potential benefits of this example (e.g., it’s funny, in-group identifying)? And who would get the benefits?
@@ -6,7 +6,7 @@ This page has several examples of trolling. For each one consider the following:
 
 These examples will range mild to much more extreme.
 
-### Banana Slicer Reviews
+## Banana Slicer Reviews
 In 2011, Amazon users started leaving parody reviews of a [banana slicer on Amazon](https://www.amazon.com/Hutzler-3571-571-Banana-Slicer/dp/B0047E0EII)
 
 ```{figure} banana_1.png
@@ -37,7 +37,7 @@ A review about the slicer and bananas being curved the wrong way (you could just
 
 Read more at [knowyourmeme](https://knowyourmeme.com/memes/banana-slicer-reviews) and see also the related [Three Wolf Moon T-Shirt](https://www.youtube.com/watch?v=TbNQ746eLiU)
 
-### Fake Pronunciation Guide
+## Fake Pronunciation Guide
 
 Below is a fake pronunciation guide on youtube for "Hors d'oeuvres":
 
@@ -60,7 +60,7 @@ Various comments on the fake pronunciation video
 
 
 
-### Forever Alone Involuntary Flashmob
+## Forever Alone Involuntary Flashmob
 In 2011, a group on 4chan started spreading a plan for making a "Forever Along Involuntary Flashmob." You can see their instructions below:
 
 ```{figure} forever_alone.png
@@ -84,7 +84,7 @@ As we look at more cruel trolling examples, be aware of this online troll's expl
 
 
 
-### RIP trolling
+## RIP trolling
 
 RIP trolling is where trolls find a memorial page and then all work together to mock the dead person and the people mourning them. Here's one example from 2013:
 
@@ -96,7 +96,7 @@ RIP trolling is where trolls find a memorial page and then all work together to 
 
 
 
-### Flooding Police app with K-pop videos
+## Flooding Police app with K-pop videos
 
 To go in a different direction for our last example, let's look at an example of trolling as a form of protest.
 
