@@ -25,10 +25,13 @@ Similar to sampling that started in in hip-hop in the 1980s
 ![](steal_meme_3.jpg)
 
 ![](steal_meme_4.jpg)
- - Sources: SACRED HEART OF JESUS by Dona Gelsinger https://www.glowdecor.com/products/sacred-heart-of-jesus-canvas-wall-art
+
+
+ - Sources: SACRED HEART OF JESUS by Dona Gelsinger https://www.glowdecor.com/products/sacred-heart-of-jesus-canvas-wall-art, copying the form of many previous paintings of the [sacred heart](https://en.wikipedia.org/wiki/Sacred_Heart)
  - background switched out to make a yellow disk behind the head
  - Keanu Reeves, perhaps from the [spongebob movie]](https://youtu.be/CJJYewh4Nco?t=57)
  - a laughing [emoticon](https://en.wikipedia.org/wiki/List_of_emoticons#Western)
  - watermark from allMemes
 
- - digital blackface
+
+digital blackface
