@@ -77,7 +77,7 @@ Read more about what happened in [this Vice article](https://www.vice.com/en/art
 
 ```{note}
 As we look at more cruel trolling examples, be aware of this online troll's explained the justification for trolling (though we, the authors, do not think this justifies the cruelty):
-> The purpose of the community … I guess is to exchange ideas and techniques, and to plan co-ordinated trolling. The underlying philosophical purpose or shared goal, anyway, would be to disrupt people’s rosy vision of the internet as their own personal emotional safe place that serves as a proxy for real-life interactions they are lacking (i.e. going online to demonstrate one’s grief over a public disaster like Japan with total strangers who have no real connection to the event).
+> The purpose of the community … I guess is to exchange ideas and techniques, and to plan co-ordinated trolling. The underlying philosophical purpose or shared goal, anyway, would be to disrupt people’s rosy vision of the internet as their own personal emotional safe place that serves as a proxy for real-life interactions they are lacking (i.e. going online to demonstrate one’s grief over a public disaster like Japan [2011 Tsunami] with total strangers who have no real connection to the event).
 >
 > - From [Interview with a troll](http://www.indexoncensorship.org/2011/09/interview-with-a-troll/)
 ```

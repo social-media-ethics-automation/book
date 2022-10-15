@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="7.6. Ethics and Trolling" href="../06_ethics_and_trolling.html" />
-    <link rel="prev" title="7.5.2. Practice: Conditionals" href="02_practice_strings_conditionals.html" />
+    <link rel="prev" title="7.5.2. Practice: Conditionals and String Manipulation" href="02_practice_strings_conditionals.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -641,7 +641,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../03_trolling_examples.html">
-     7.3. Trolling examples
+     7.3. Activity: Evaluating Trolling Examples
     </a>
    </li>
    <li class="toctree-l2">
@@ -661,12 +661,12 @@ const thebe_selector_output = ".output, .cell_output"
     <ul class="current">
      <li class="toctree-l3">
       <a class="reference internal" href="01_demo_strings_conditionals.html">
-       7.5.1. Practice: Conditionals
+       7.5.1. Demo: Conditionals and String Manipulation
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="02_practice_strings_conditionals.html">
-       7.5.2. Practice: Conditionals
+       7.5.2. Practice: Conditionals and String Manipulation
       </a>
      </li>
      <li class="toctree-l3 current active">
@@ -1592,6 +1592,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#todo-new-version">
+   TODO: New version:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-twitter-bot-that-says-hi-back">
    A twitter bot that says hi back
   </a>
@@ -1643,6 +1648,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#todo-new-version">
+   TODO: New version:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-twitter-bot-that-says-hi-back">
    A twitter bot that says hi back
   </a>
@@ -1684,36 +1694,13 @@ title="Print to PDF"
 <section id="set-up-steps">
 <h2>Set-up steps<a class="headerlink" href="#set-up-steps" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Install the variable inspector!pip install lckr-jupyterlab-variableinspector</p></li>
 <li><p>Install and import tweepy</p></li>
 <li><p>Load login keys</p></li>
 <li><p>Log in</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install lckr-jupyterlab-variableinspector
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
-WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting lckr-jupyterlab-variableinspector
-  Using cached lckr_jupyterlab_variableinspector-3.0.9.tar.gz (60 kB)
-  Installing build dependencies: started
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install tweepy 
-<span class="kn">import</span> <span class="nn">tweepy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tweepy</span>
 </pre></div>
 </div>
 </div>
@@ -1721,6 +1708,16 @@ WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">my_bot_keys</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [2],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">my_bot_keys</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;my_bot_keys&#39;
 </pre></div>
 </div>
 </div>
@@ -1736,6 +1733,27 @@ WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
 </div>
 </div>
 </div>
+</section>
+<section id="todo-new-version">
+<h2>TODO: New version:<a class="headerlink" href="#todo-new-version" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>A bot that if you ask it to do something in the form of:</p>
+<ul>
+<li><p>“Hi &#64;mybotname, please ___” where the ___ is filled in with whatever action</p></li>
+<li><p>the bot will say, “I will now ____” with the action</p></li>
+</ul>
+</li>
+</ul>
+<p>This is obviously easy to troll by saying “Hi &#64;mybotname, please do something hateful”</p>
+<ul class="simple">
+<li><p>Ok, let’s say we have an allow-list of actions the bot will do (jump, yell, fly)</p></li>
+<li><p>and if it isn’t on the allow list the bot will say,</p>
+<ul>
+<li><p>sorry, I don’t recognize the command: ____</p></li>
+</ul>
+</li>
+</ul>
+<p>We can still troll this by saying “Hi &#64;mybotname, please spin. So I will do something hateful instead!”</p>
 </section>
 <section id="a-twitter-bot-that-says-hi-back">
 <h2>A twitter bot that says hi back<a class="headerlink" href="#a-twitter-bot-that-says-hi-back" title="Permalink to this headline">#</a></h2>
@@ -1753,6 +1771,7 @@ WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
 
 <span class="n">my_id</span> <span class="o">=</span> <span class="n">my_user_info</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">id</span>
 <span class="n">my_username</span> <span class="o">=</span> <span class="n">my_user_info</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">username</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;my username is: &quot;</span> <span class="o">+</span> <span class="n">my_username</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1835,7 +1854,7 @@ WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">7.5.2. </span>Practice: Conditionals</p>
+            <p class="prev-next-title"><span class="section-number">7.5.2. </span>Practice: Conditionals and String Manipulation</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../06_ethics_and_trolling.html" title="next page">
