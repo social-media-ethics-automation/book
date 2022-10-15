@@ -3,7 +3,6 @@
 
 # # Demo: Trolling a Reply Bot
 # ### Set-up steps
-# * Install the variable inspector!pip install lckr-jupyterlab-variableinspector
 # * Install and import tweepy
 # * Load login keys
 # * Log in
@@ -11,17 +10,10 @@
 # In[1]:
 
 
-get_ipython().system('pip install lckr-jupyterlab-variableinspector')
-
-
-# In[ ]:
-
-
-get_ipython().system('pip install tweepy')
 import tweepy
 
 
-# In[ ]:
+# In[2]:
 
 
 import my_bot_keys
@@ -36,6 +28,19 @@ client = tweepy.Client(
     access_token=my_bot_keys.access_token, access_token_secret=my_bot_keys.access_token_secret
 )
 
+
+# ## TODO: New version: 
+# - A bot that if you ask it to do something in the form of:
+#   - "Hi @mybotname, please ___" where the ___ is filled in with whatever action
+#   - the bot will say, "I will now ____" with the action
+#   
+# This is obviously easy to troll by saying "Hi @mybotname, please do something hateful" 
+# 
+# - Ok, let's say we have an allow-list of actions the bot will do (jump, yell, fly)
+# - and if it isn't on the allow list the bot will say,
+#   - sorry, I don't recognize the command: ____
+#   
+# We can still troll this by saying "Hi @mybotname, please spin. So I will do something hateful instead!"
 
 # ## A twitter bot that says hi back
 # * The bot will first find my account and my twitter name.
@@ -52,6 +57,7 @@ my_user_info = client.get_user(id="me", user_auth=True)
 
 my_id = my_user_info.data.id
 my_username = my_user_info.data.username
+display("my username is: " + my_username)
 
 
 # ### Find the latest tweet that mentions me

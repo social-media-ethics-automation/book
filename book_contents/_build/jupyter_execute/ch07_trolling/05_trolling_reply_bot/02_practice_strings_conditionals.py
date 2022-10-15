@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Practice: Conditionals
+# # Practice: Conditionals and String Manipulation
 
 # ## While Loops
 
@@ -276,7 +276,6 @@ for line in lyrics:
 # In[9]:
 
 
-get_ipython().system('pip install tweepy')
 import tweepy
 
 
