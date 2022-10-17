@@ -1,4 +1,4 @@
-# Data Mining (Inferred Data)
+# Mining Social Media Data (Inferred Data)
 - Info about individuals
   - E.g., Sexual orientation, race, political leanings, interests, etc.
   - Also various phrenology attempts

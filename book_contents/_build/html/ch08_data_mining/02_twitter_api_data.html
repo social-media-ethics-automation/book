@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>8.2. Twitter API data &#8212; Social Media, Ethics, and Automation</title>
+    <title>8.2. Data From the Twitter API &#8212; Social Media, Ethics, and Automation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="8.3. Data Mining (Inferred Data)" href="03_data_mining.html" />
-    <link rel="prev" title="8.1. Initial Data Sources" href="01_data_sources.html" />
+    <link rel="next" title="8.3. Mining Social Media Data (Inferred Data)" href="03_data_mining.html" />
+    <link rel="prev" title="8.1. Sources of Social Media Data" href="01_data_sources.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -695,17 +695,17 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="01_data_sources.html">
-     8.1. Initial Data Sources
+     8.1. Sources of Social Media Data
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     8.2. Twitter API data
+     8.2. Data From the Twitter API
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="03_data_mining.html">
-     8.3. Data Mining (Inferred Data)
+     8.3. Mining Social Media Data (Inferred Data)
     </a>
    </li>
    <li class="toctree-l2">
@@ -1540,60 +1540,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dictionaries">
-   8.2.1. Dictionaries
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Twitter API data</h1>
+                <h1>Data From the Twitter API</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dictionaries">
-   8.2.1. Dictionaries
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -1601,43 +1564,13 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="twitter-api-data">
-<h1><span class="section-number">8.2. </span>Twitter API data<a class="headerlink" href="#twitter-api-data" title="Permalink to this headline">#</a></h1>
-<ul class="simple">
-<li><p>Look at full structure of twitter data (including dictionaries)</p></li>
-<li><p>How to read / navigate tweepy docs:
-Official docs: https://docs.tweepy.org/en/stable/client.html</p></li>
-</ul>
-<section id="dictionaries">
-<h2><span class="section-number">8.2.1. </span>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>A data structure with a set of “keys” that refer to a set of “values.” Sort of like saving a bunch of variables in another variable.</p></li>
-<li><p>Create an empty dictionary:</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">example_dictionary</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">Create</span> <span class="n">a</span> <span class="n">dictionary</span> <span class="k">with</span> <span class="n">some</span> <span class="n">keys</span> <span class="ow">and</span> <span class="n">values</span><span class="p">:</span>
-<span class="n">example_dictionary</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;first_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Kyle&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;last_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Thayer&quot;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Get a value from a dictionary:</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">person</span> <span class="o">=</span> <span class="n">example_dictionary</span><span class="p">[</span><span class="s2">&quot;first_name&quot;</span><span class="p">]</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Set a value from a dictionary:</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">Example_dictionary</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">38</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Read more: https://www.w3schools.com/python/python_dictionaries.asp</p></li>
-</ul>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="data-from-the-twitter-api">
+<h1><span class="section-number">8.2. </span>Data From the Twitter API<a class="headerlink" href="#data-from-the-twitter-api" title="Permalink to this headline">#</a></h1>
+<p>When we’ve been accessing Twitter through Python and the “tweepy” code library. The tweepy code library works by sending requests across the internet to twitter, using what is called an “<a class="reference external" href="https://en.wikipedia.org/wiki/API">application programming interface</a>” or API for short. APIs have a set of rules for what requests you can make, what happens when you make the request, and what information you can get back.</p>
+<p>If you are interested in learning more about what you can do with tweepy and what information you can get back, you can look at the official documentation for those. But be warned they are not organized in a friendly way for newcomers and take some getting used to to figure out what these documentation pages are talking about.</p>
+<p>So, if you are interested, you can look at <a class="reference external" href="https://docs.tweepy.org/en/stable/client.html">the tweepy library documentation</a> to see what tweepy functions you can run and what requests they make of the twitter API.</p>
+<p>You can also look at information on the data that you can get from the Twitter API by looking at the Twitter API Documentation. For example, you can look at <a class="reference external" href="https://developer.twitter.com/en/docs/twitter-api/tweets/lookup/api-reference/get-tweets-id">the documentation for getting a Tweet</a>, and see that you can get public metrics of a Tweet (likes, replies, etc.), and if you are the owner of the tweet you can get private “organic” metrics (how many people saw the tweet, how many clicked the to see the profile of the person who made the tweet, etc.).</p>
+<p>The Twitter API lets you access just some of the data that Twitter tacks, but Twitter and other social media platforms track much more than they let you have access to.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1671,13 +1604,13 @@ Official docs: https://docs.tweepy.org/en/stable/client.html</p></li>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">8.1. </span>Initial Data Sources</p>
+            <p class="prev-next-title"><span class="section-number">8.1. </span>Sources of Social Media Data</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="03_data_mining.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">8.3. </span>Data Mining (Inferred Data)</p>
+        <p class="prev-next-title"><span class="section-number">8.3. </span>Mining Social Media Data (Inferred Data)</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
