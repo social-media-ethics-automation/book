@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>8.6.2. Practice: Sentiment Analysis and Loop Counts &#8212; Social Media, Ethics, and Automation</title>
+    <title>8.6.2. Practice: Sentiment Analysis and Loop Variables &#8212; Social Media, Ethics, and Automation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="8.6.3. Demo: Sentiment Analysis on Twitter" href="03_demo_sentiment_twitter.html" />
-    <link rel="prev" title="8.6.1. Demo: Sentiment Analysis and Loop Counts" href="01_demo_sentiment_and_loop_counts.html" />
+    <link rel="prev" title="8.6.1. Demo: Sentiment Analysis and Loop Variables" href="01_demo_sentiment_and_loop_counts.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -730,12 +730,12 @@ const thebe_selector_output = ".output, .cell_output"
     <ul class="current">
      <li class="toctree-l3">
       <a class="reference internal" href="01_demo_sentiment_and_loop_counts.html">
-       8.6.1. Demo: Sentiment Analysis and Loop Counts
+       8.6.1. Demo: Sentiment Analysis and Loop Variables
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       8.6.2. Practice: Sentiment Analysis and Loop Counts
+       8.6.2. Practice: Sentiment Analysis and Loop Variables
       </a>
      </li>
      <li class="toctree-l3">
@@ -1596,23 +1596,70 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sentiment-analyasis">
+   Sentiment Analyasis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#loop-variables">
+   Loop variables
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Practice: Sentiment Analysis and Loop Counts</h1>
+                <h1>Practice: Sentiment Analysis and Loop Variables</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sentiment-analyasis">
+   Sentiment Analyasis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#loop-variables">
+   Loop variables
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -1620,8 +1667,105 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="practice-sentiment-analysis-and-loop-counts">
-<h1><span class="section-number">8.6.2. </span>Practice: Sentiment Analysis and Loop Counts<a class="headerlink" href="#practice-sentiment-analysis-and-loop-counts" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="practice-sentiment-analysis-and-loop-variables">
+<h1><span class="section-number">8.6.2. </span>Practice: Sentiment Analysis and Loop Variables<a class="headerlink" href="#practice-sentiment-analysis-and-loop-variables" title="Permalink to this headline">#</a></h1>
+<p>Now it’s your turn to practice sentiment analysis and loop variables</p>
+<section id="sentiment-analyasis">
+<h2>Sentiment Analyasis<a class="headerlink" href="#sentiment-analyasis" title="Permalink to this headline">#</a></h2>
+<p>First run the code to load up the Sentiment Intensity Analyzer</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">([</span><span class="s2">&quot;vader_lexicon&quot;</span><span class="p">])</span>
+<span class="kn">from</span> <span class="nn">nltk.sentiment</span> <span class="kn">import</span> <span class="n">SentimentIntensityAnalyzer</span>
+<span class="n">sia</span> <span class="o">=</span> <span class="n">SentimentIntensityAnalyzer</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package vader_lexicon to
+[nltk_data]     C:\Users\kmthayer\AppData\Roaming\nltk_data...
+[nltk_data]   Package vader_lexicon is already up-to-date!
+</pre></div>
+</div>
+</div>
+</div>
+<p>Also, look at this example from the demo of running sentiment analysis:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;I love love love pizza!!!!!!!!&quot;</span>
+<span class="n">sia</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">sentence</span><span class="p">)[</span><span class="s2">&quot;compound&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.941
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, copy that two lines of code above, and try out your own sentences, and run the sentiment analysis on them</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: enter your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Try several sentences and see how the Sentiment Intensity Analyzer handles them</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: enter your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="loop-variables">
+<h2>Loop variables<a class="headerlink" href="#loop-variables" title="Permalink to this headline">#</a></h2>
+<p>Now let’s practice with loop variables.</p>
+<p>Below is a for loop which goes through each letter in the word “Mississipi”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s2">&quot;Mississipi&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>M
+i
+s
+s
+i
+s
+s
+i
+p
+i
+</pre></div>
+</div>
+</div>
+</div>
+<p>Make another copy of that loop, but add a variable before the loop called <code class="docutils literal notranslate"><span class="pre">num_letters</span></code> and use it count how many letters were in the word “Mississipi”. At the end display the number of letters.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: enter your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Make another copy of what you just did, but this time also count the number of “i”s. Make a variable called <code class="docutils literal notranslate"><span class="pre">num_i</span></code> to count how many “i”s.</p>
+<p><em>Hint: To see if a letter is an “i”, check if <code class="docutils literal notranslate"><span class="pre">letter</span> <span class="pre">==</span> <span class="pre">&quot;i&quot;</span></code></em></p>
+<p>At the end print out how many of the letters were “i”s and what percentage of the word was “i”s.# TODO: enter your code here</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: enter your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1655,7 +1799,7 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">8.6.1. </span>Demo: Sentiment Analysis and Loop Counts</p>
+            <p class="prev-next-title"><span class="section-number">8.6.1. </span>Demo: Sentiment Analysis and Loop Variables</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="03_demo_sentiment_twitter.html" title="next page">

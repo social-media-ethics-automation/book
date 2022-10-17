@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Practice Solutions &#8212; Social Media, Ethics, and Automation</title>
+    <title>Ch 8 Practice: Sentiment Analysis and Loop Variables &#8212; Social Media, Ethics, and Automation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Ch 3 Practice: Statements and Variables" href="01_solution_practice_statements_variables_sleep.html" />
-    <link rel="prev" title="Teaching With This Book" href="../teaching_with_this_book.html" />
+    <link rel="prev" title="Ch 7 Practice: Conditionals and String Manipulation" href="07_practice_strings_conditionals.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -1381,7 +1380,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="00_solutions.html">
    Practice Solutions
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/>
@@ -1389,7 +1388,7 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="01_solution_practice_statements_variables_sleep.html">
      Ch 3 Practice: Statements and Variables
@@ -1410,8 +1409,8 @@ const thebe_selector_output = ".output, .cell_output"
      Ch 7 Practice: Conditionals and String Manipulation
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="08_solution_sentiment_and_loop_vars.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Ch 8 Practice: Sentiment Analysis and Loop Variables
     </a>
    </li>
@@ -1468,6 +1467,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/kylethayer/social_media_ethics_automation_v0/main?urlpath=lab/tree/book_contents/appendix/solutions/08_solution_sentiment_and_loop_vars.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -1507,7 +1535,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/kylethayer/social_media_ethics_automation_v0/issues/new?title=Issue%20on%20page%20%2Fappendix/solutions/00_solutions.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/kylethayer/social_media_ethics_automation_v0/issues/new?title=Issue%20on%20page%20%2Fappendix/solutions/08_solution_sentiment_and_loop_vars.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1535,7 +1563,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/appendix/solutions/00_solutions.md"
+        <a href="../../_sources/appendix/solutions/08_solution_sentiment_and_loop_vars.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1546,7 +1574,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -1572,23 +1600,70 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sentiment-analyasis">
+   Sentiment Analyasis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#loop-variables">
+   Loop variables
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Practice Solutions</h1>
+                <h1>Ch 8 Practice: Sentiment Analysis and Loop Variables</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sentiment-analyasis">
+   Sentiment Analyasis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#loop-variables">
+   Loop variables
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -1596,18 +1671,168 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="practice-solutions">
-<h1>Practice Solutions<a class="headerlink" href="#practice-solutions" title="Permalink to this headline">#</a></h1>
-<p>These are solutions to the practice problems in the different chapters.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="01_solution_practice_statements_variables_sleep.html">Ch 3 Practice: Statements and Variables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_solution_practice_data.html">Ch 4 Practice: Python Basic Data Types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_practice_lists_dictionaries.html">Ch 5 Practice: Looping through lists and dictionaries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="07_practice_strings_conditionals.html">Ch 7 Practice: Conditionals and String Manipulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="08_solution_sentiment_and_loop_vars.html">Ch 8 Practice: Sentiment Analysis and Loop Variables</a></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="ch-8-practice-sentiment-analysis-and-loop-variables">
+<h1>Ch 8 Practice: Sentiment Analysis and Loop Variables<a class="headerlink" href="#ch-8-practice-sentiment-analysis-and-loop-variables" title="Permalink to this headline">#</a></h1>
+<p>Now it’s your turn to practice sentiment analysis and loop variables</p>
+<section id="sentiment-analyasis">
+<h2>Sentiment Analyasis<a class="headerlink" href="#sentiment-analyasis" title="Permalink to this headline">#</a></h2>
+<p>First run the code to load up the Sentiment Intensity Analyzer</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">([</span><span class="s2">&quot;vader_lexicon&quot;</span><span class="p">])</span>
+<span class="kn">from</span> <span class="nn">nltk.sentiment</span> <span class="kn">import</span> <span class="n">SentimentIntensityAnalyzer</span>
+<span class="n">sia</span> <span class="o">=</span> <span class="n">SentimentIntensityAnalyzer</span><span class="p">()</span>
+</pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package vader_lexicon to
+[nltk_data]     C:\Users\kmthayer\AppData\Roaming\nltk_data...
+[nltk_data]   Package vader_lexicon is already up-to-date!
+</pre></div>
+</div>
+</div>
+</div>
+<p>Also, look at this example from the demo of running sentiment analysis:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;I love love love pizza!!!!!!!!&quot;</span>
+<span class="n">sia</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">sentence</span><span class="p">)[</span><span class="s2">&quot;compound&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.941
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, copy that two lines of code above, and try out your own sentences, and run the sentiment analysis on them</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;This is an ok example&quot;</span>
+<span class="n">sia</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">sentence</span><span class="p">)[</span><span class="s2">&quot;compound&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.296
+</pre></div>
+</div>
+</div>
+</div>
+<p>Try several sentences and see how the Sentiment Intensity Analyzer handles them</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;This is a horrible example&quot;</span>
+<span class="n">sia</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">sentence</span><span class="p">)[</span><span class="s2">&quot;compound&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.5423
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="loop-variables">
+<h2>Loop variables<a class="headerlink" href="#loop-variables" title="Permalink to this headline">#</a></h2>
+<p>Now let’s practice with loop variables.</p>
+<p>Below is a for loop which goes through each letter in the word “Mississipi”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s2">&quot;Mississipi&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>M
+i
+s
+s
+i
+s
+s
+i
+p
+i
+</pre></div>
+</div>
+</div>
+</div>
+<p>Make another copy of that loop, but add a variable before the loop called <code class="docutils literal notranslate"><span class="pre">num_letters</span></code> and use it count how many letters were in the word “Mississipi”. At the end display the number of letters.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_letters</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s2">&quot;Mississipi&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+    <span class="n">num_letters</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There were &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_letters</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; letters&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>M
+i
+s
+s
+i
+s
+s
+i
+p
+i
+There were 10 letters
+</pre></div>
+</div>
+</div>
+</div>
+<p>Make another copy of what you just did, but this time also count the number of “i”s. Make a variable called <code class="docutils literal notranslate"><span class="pre">num_i</span></code> to count how many “i”s.</p>
+<p><em>Hint: To see if a letter is an “i”, check if <code class="docutils literal notranslate"><span class="pre">letter</span> <span class="pre">==</span> <span class="pre">&quot;i&quot;</span></code></em></p>
+<p>At the end print out how many of the letters were “i”s and what percentage of the word was “i”s.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_letters</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">num_i</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s2">&quot;Mississipi&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+    <span class="n">num_letters</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+    <span class="k">if</span><span class="p">(</span><span class="n">letter</span> <span class="o">==</span> <span class="s2">&quot;i&quot;</span><span class="p">):</span>
+        <span class="n">num_i</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There were &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_letters</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; letters&quot;</span><span class="p">)</span>
+
+<span class="n">percent_i</span> <span class="o">=</span> <span class="n">num_i</span> <span class="o">/</span> <span class="n">num_letters</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;i&#39;s made up &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">percent_i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; percent of the word&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>M
+i
+s
+s
+i
+s
+s
+i
+p
+i
+There were 10 letters
+i&#39;s made up 40.0 percent of the word
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1637,19 +1862,12 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../teaching_with_this_book.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="07_practice_strings_conditionals.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Teaching With This Book</p>
+            <p class="prev-next-title">Ch 7 Practice: Conditionals and String Manipulation</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="01_solution_practice_statements_variables_sleep.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Ch 3 Practice: Statements and Variables</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
