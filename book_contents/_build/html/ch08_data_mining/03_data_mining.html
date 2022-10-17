@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>8.3. Mining Social Media Data (Inferred Data) &#8212; Social Media, Ethics, and Automation</title>
+    <title>8.3. Mining Social Media Data &#8212; Social Media, Ethics, and Automation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -705,7 +705,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     8.3. Mining Social Media Data (Inferred Data)
+     8.3. Mining Social Media Data
     </a>
    </li>
    <li class="toctree-l2">
@@ -1540,23 +1540,60 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spurious-correlations">
+   8.3.1. Spurious Correlations
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Mining Social Media Data (Inferred Data)</h1>
+                <h1>Mining Social Media Data</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spurious-correlations">
+   8.3.1. Spurious Correlations
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -1564,30 +1601,39 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="mining-social-media-data-inferred-data">
-<h1><span class="section-number">8.3. </span>Mining Social Media Data (Inferred Data)<a class="headerlink" href="#mining-social-media-data-inferred-data" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="mining-social-media-data">
+<h1><span class="section-number">8.3. </span>Mining Social Media Data<a class="headerlink" href="#mining-social-media-data" title="Permalink to this headline">#</a></h1>
+<p>Data mining is the process of taking a set of data and trying to learn new things from it.</p>
+<p>For example, social media data about who you are friends with might be <a class="reference external" href="https://www.vice.com/en/article/gvydky/your-friends-online-connections-can-reveal-your-sexual-orientation">used to infer your sexual orientation</a>. Social media data might also be used to infer people’s:</p>
 <ul class="simple">
-<li><p>Info about individuals</p>
-<ul>
-<li><p>E.g., Sexual orientation, race, political leanings, interests, etc.</p></li>
-<li><p>Also various phrenology attempts</p></li>
+<li><p>Race</p></li>
+<li><p>Political leanings</p></li>
+<li><p>Interests</p></li>
+<li><p>Susceptibility to financial scams</p></li>
+<li><p>Being prone to addiction (e.g., gambling)</p></li>
 </ul>
-</li>
-<li><p>Other information</p>
-<ul>
-<li><p>Trends about users or topics</p>
-<ul>
-<li><p>E.g., tracking disinformation</p></li>
-<li><p>E.g., Covid trends based on Candle reviews</p>
-<ul>
-<li><p><a class="reference external" href="https://twitter.com/zornsllama/status/1473575508784955394"><img alt="" src="../_images/covid_candles.png" /></a> NOTE: This might be correlational due to other factors, like seasonal trends</p></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<p>Additionally groups keep trying to re-invent old debunked psuedo-scientific (and racist) methods of judging people based on facial features (size of nose, chin, forehead, etc.), but <a class="reference external" href="https://www.americanscientist.org/article/the-dark-past-of-algorithms-that-associate-appearance-and-criminality">now using artificial intelligence</a>.</p>
+<p>Social media data can also be used to infer information about larger social trends like <a class="reference external" href="https://www.science.org/content/article/researchers-are-tracking-another-epidemic-too-misinformation">the spread of misinformation</a>.</p>
+<p>One particularly striking example of an attempt to infer information from seemingly unconnected data was someone noticing that the number of people sick with COVID-19 correlated with how many people were leaving bad reviews of Yankee Candles saying “they don’t have any scent” (note: COVID-19 can cause a loss of the ability to smell):</p>
+<figure class="align-default" id="covid-candles-fig">
+<a class="reference internal image-reference" href="../_images/covid_candles.png"><img alt="Tweet by eleanor (&#64;zomsllama). Tweet says, &quot;blue line: daily COVID cases in the USA. red line: bad reviews of Yankee Candles on Amazon saying 'they don't have any scent'. sources: google and [sic].&quot; The tweet has a graph from 8 Apr to 13 Nov, showing a blue line that goes up and down noisily but with two big peaks. A much smoother red line has two big peaks lining up the blue big peaks." src="../_images/covid_candles.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8.1 </span><span class="caption-text">Twitter user &#64;zomsllama <a class="reference external" href="https://twitter.com/zornsllama/status/147357550878495539">pointing out the correlation of COVID cases and candle reviews complaining of no scent</a>.</span><a class="headerlink" href="#covid-candles-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="spurious-correlations">
+<h2><span class="section-number">8.3.1. </span>Spurious Correlations<a class="headerlink" href="#spurious-correlations" title="Permalink to this headline">#</a></h2>
+<p>One thing to note in the above case of candle reviews and COVID is that just because something appears to be correlated, doesn’t mean that it is connected in the way it looks like. In the above, the correlation might be due mostly to people buying and reviewing candles in the fall, and diseases, like COVID, spreading most during the fall.</p>
+<p>It turns out if you look at a lot of data, it is easy to discover <a class="reference external" href="https://en.wikipedia.org/wiki/Spurious_relationship">spurious correlations</a> where two things look like they are related, but actually aren’t. Instead the appearance of being related may be due to chance or some other cause. For example:</p>
+<figure class="align-default" id="spurious-divorce-margarine-fig">
+<img alt="Chart of Divorce Rate in Maine compared with Per capita consumption of margarine, which correlates 99.26%. The graph shows lines for divorce and margarine from 2000 to 2009. Both lines generally decline, but the places where they decline steeper or shallow out line up." src="../_images/spurious_divorce_margarine.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.2 </span><span class="caption-text">An example spurious correlation from <a class="reference external" href="https://www.tylervigen.com/spurious-correlations">Tyler Vigen’s collection of Spurious Correlations</a></span><a class="headerlink" href="#spurious-divorce-margarine-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>By looking at enough data in enough different ways, you can find evidence for pretty much any conclusion you want to. This is because sometimes different pieces of data line up coincidentally (coincidences happen), and if you try enough combinations, you can find the coincidence that lines up with your conclusion.</p>
+<p>If you want to explore the difficulty of inferring trends from data, the website <a class="reference external" href="https://fivethirtyeight.com/">fivethirtyeight.com</a> has an interactive feature called “<a class="reference external" href="https://projects.fivethirtyeight.com/p-hacking/">Hack Your Way To Scientific Glory</a>” where by changing how you measure the US economy and how you measure what political party is in power in the US, you can “prove” that either Democrats or Republicans are better for the economy. Fivethirtyeight has a longer article on this called “<a class="reference external" href="https://fivethirtyeight.com/features/science-isnt-broken/">Science Isn’t Broken: It’s just a hell of a lot harder than we give it credit for.</a>”</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
