@@ -67,7 +67,7 @@ for letter in "Mississipi":
 # 
 # _Hint: To see if a letter is an "i", check if `letter == "i"`_
 # 
-# At the end print out how many of the letters were "i"s and what percentage of the word was "i"s.# TODO: enter your code here
+# At the end print out how many of the letters were "i"s and what percentage of the word was "i"s.
 
 # In[7]:
 

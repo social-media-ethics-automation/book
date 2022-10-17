@@ -2,8 +2,12 @@
 # coding: utf-8
 
 # # Demo: Sentiment Analysis on Twitter
-
-# ### Standard loading
+# 
+# Now let's try using sentiment analysis (and loop variables) on Twitter:
+# 
+# We'll start by doing our normal steps to load tweepy (or fake tweepy)
+# 
+# ## Tweepy Setup
 
 # In[1]:
 
@@ -11,143 +15,83 @@
 import tweepy
 
 
+# (optional) make a fake twitter connection with the fake_tweepy library
+# 
+# For testing purposes, we’ve added this line of code, which loads a fake version of tweepy, so it wont actually connect to twitter. If you want to try to actually connect to twitter, don’t run this line of code.
+
 # In[2]:
 
 
-# load my twitter keys
-import my_bot_keys
+get_ipython().run_line_magic('run', '../../fake_tweepy/fake_tweepy.ipynb')
 
 
-# In[9]:
+# In[3]:
 
 
-# log into tweepy
+# Load all your developer access passwords into Python
+# TODO: Put your twitter account's special developer access passwords below:
+bearer_token = "n4tossfgsafs_fake_bearer_token_isa53#$%$"
+consumer_key = "sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG"
+consumer_secret = "45adf$T$A_fake_consumer_secret_JESdsg"
+access_token = "56sd5Ss4tsea_fake_access_token_%YE%hDsdr"
+access_token_secret = "j^$dr_fake_consumer_key_^A5s#DR5s"
+
+
+# In[4]:
+
+
+# Give the tweepy code your developer access passwords so
+# it can perform twitter actions
 client = tweepy.Client(
-    bearer_token=my_bot_keys.bearer_token,
-    consumer_key=my_bot_keys.consumer_key, consumer_secret=my_bot_keys.consumer_secret,                   
-    access_token=my_bot_keys.access_token, access_token_secret=my_bot_keys.access_token_secret
+   bearer_token=bearer_token,
+   consumer_key=consumer_key, consumer_secret=consumer_secret,
+   access_token=access_token, access_token_secret=access_token_secret
 )
 
 
-# ### Load Sentiment Analysis Library
+# ## Sentiment Analysis
+# ### load sentiment analysis library and make analyzer
 
 # In[5]:
 
 
 import nltk
 nltk.download(["vader_lexicon"])
-
-
-# In[ ]:
-
-
 from nltk.sentiment import SentimentIntensityAnalyzer
 sia = SentimentIntensityAnalyzer()
 
 
-# ## Test Sentiment Analysis
+# ### loop through tweets, finding average sentiment
+# We can now combine our previous examples of looping through tweets with what we just learned of sentiment analysis and looping variables to find the average sentiment of a set of tweets.
 
-# In[11]:
-
-
-sia.polarity_scores("I really, really hate pizza!!!!!!!!")
+# In[6]:
 
 
-# In[38]:
+query = '"cute cat"'
+tweets = client.search_recent_tweets(query=query, max_results=10)
 
+num_tweets = 0
+total_sentiment = 0
 
-def get_sentiment_of_text(text):
-    tweet_sentiment = sia.polarity_scores(text)
-    tweet_compound_sentiment = tweet_sentiment['compound']
-    return tweet_compound_sentiment
-
-def get_sentiment(query, show_progress=False, max_results=10):
-    tweets = client.search_recent_tweets(query=query, max_results=max_results)
-
-    num_tweets = 0
-    total_sentiment = 0
-
-    # go through each tweet
-    for tweet in tweets.data:
-        if show_progress: 
-            print(tweet.text)
-
-        #calculate sentiment
-        tweet_compound_sentiment = get_sentiment_of_text(tweet.text)
-
-        if show_progress:
-            print(tweet_compound_sentiment)
-
-        num_tweets += 1
-        total_sentiment += tweet_compound_sentiment
-
-        if show_progress:
-            print()
-
-    if show_progress:
-        print("num tweets: " + str(num_tweets))
-        print("total_sentiment: " + str(total_sentiment))
-        print("avg_sentiment: " + str(total_sentiment / num_tweets))
+# go through each tweet
+for tweet in tweets.data:
     
-    return total_sentiment / num_tweets
+    #calculate sentiment
+    tweet_sentiment = sia.polarity_scores(tweet.text)["compound"]
+    num_tweets += 1
+    total_sentiment += tweet_sentiment
+
+    print("Sentiment: " + str(tweet_sentiment))
+    print("   Tweet: " + tweet.text)
+    print()
 
 
-# In[39]:
+average_sentiment = total_sentiment / num_tweets
+print("Average sentiment was " + str(average_sentiment))
 
 
-get_sentiment("football", max_results=10, show_progress=True)
-
-
-# In[28]:
-
-
-get_sentiment("Biden", max_results=100)
-
-
-# In[29]:
-
-
-get_sentiment("Trump", max_results=100)
-
-
-# In[30]:
-
-
-get_sentiment("Mitch McConnell", max_results=100)
-
-
-# In[31]:
-
-
-get_sentiment("AOC", max_results=100)
-
-
-# In[33]:
-
-
-get_sentiment("Harvard", max_results=100)
-
-
-# In[ ]:
-
-
-get_sentiment("UW", max_results=100, show_progress=True)
-
-
-# In[35]:
-
-
-get_sentiment("University of Washington", max_results=100)
-
-
-# In[40]:
-
-
-get_sentiment("@UW", max_results=100)
-
-
-# In[ ]:
-
-
-
-
+# We can now see the average sentiment of a set of tweets based on our search of twitter! 
+# 
+# If you use your twitter bot keys, you can change the `query` to be whatever twitter search you want and see whether people are tweeting positively or negatively about it. 
+# 
+# _note: You can change `max_results=10` to go up to 100 to get more tweets at a time to find the average of_

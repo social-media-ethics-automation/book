@@ -123,8 +123,8 @@ parts:
       - file: ch08_data_mining/05_what_platforms_think_of_you
       - file: ch08_data_mining/06_sentiment_analysis/00_intro
         sections:
-          - file: ch08_data_mining/06_sentiment_analysis/01_demo_sentiment_and_loop_counts
-          - file: ch08_data_mining/06_sentiment_analysis/02_practice_sentiment_and_loop_counts
+          - file: ch08_data_mining/06_sentiment_analysis/01_demo_sentiment_and_loop_vars
+          - file: ch08_data_mining/06_sentiment_analysis/02_practice_sentiment_and_loop_vars
           - file: ch08_data_mining/06_sentiment_analysis/03_demo_sentiment_twitter
       - file: ch08_data_mining/07_reflection_questions
       - file: ch08_data_mining/08_learn_more
@@ -254,3 +254,4 @@ parts:
           - file: appendix/solutions/02_solution_practice_data
           - file: appendix/solutions/03_practice_lists_dictionaries
           - file: appendix/solutions/07_practice_strings_conditionals
+          - file: appendix/solutions/08_solution_sentiment_and_loop_vars

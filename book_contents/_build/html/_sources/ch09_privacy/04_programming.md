@@ -4,6 +4,13 @@ Some sort of deduce info (deanonymization)
 write function (possibly earlier)??
 
 
+Perhaps: Publicly tweet all my DMs!
+  - Make function: get my latest DM
+
+Then code is like:
+dm = getMyLatestDM()  
+client.createTweet(text="User ??? dm'd me: " + dm.text)
+
 
 ## Functions
 

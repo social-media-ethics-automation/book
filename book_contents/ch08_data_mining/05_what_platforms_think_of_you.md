@@ -28,7 +28,7 @@ The start of Kyle's Google ad profile
 
 Try this yourself and see what Google thinks of you!
 
-You can try social media sites as well, though Facebook no longer lets you see your ad profile like they used to.
+You can try social media sites as well. [Twitter's ad profile is located here](https://twitter.com/settings/your_twitter_data/twitter_interests) and [Facebook's Ad information is here](https://www.facebook.com/adpreferences/ad_settings).
 
 ## Reflection
 After looking at your ad profile, ask yourself the following:

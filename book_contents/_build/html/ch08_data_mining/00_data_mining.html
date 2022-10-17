@@ -729,13 +729,13 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="06_sentiment_analysis/01_demo_sentiment_and_loop_counts.html">
-       8.6.1. Demo: Sentiment Analysis and Loop Counts
+      <a class="reference internal" href="06_sentiment_analysis/01_demo_sentiment_and_loop_vars.html">
+       8.6.1. Demo: Sentiment Analysis and Loop Variables
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="06_sentiment_analysis/02_practice_sentiment_and_loop_counts.html">
-       8.6.2. Practice: Sentiment Analysis and Loop Counts
+      <a class="reference internal" href="06_sentiment_analysis/02_practice_sentiment_and_loop_vars.html">
+       8.6.2. Practice: Sentiment Analysis and Loop Variables
       </a>
      </li>
      <li class="toctree-l3">
@@ -1410,6 +1410,11 @@ const thebe_selector_output = ".output, .cell_output"
      Ch 7 Practice: Conditionals and String Manipulation
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/solutions/08_solution_sentiment_and_loop_vars.html">
+     Ch 8 Practice: Sentiment Analysis and Loop Variables
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -1602,8 +1607,8 @@ title="Print to PDF"
 <li class="toctree-l1"><a class="reference internal" href="04_data_uses.html">8.4. How is this data used</a></li>
 <li class="toctree-l1"><a class="reference internal" href="05_what_platforms_think_of_you.html">8.5. Activity: What platforms think of you</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06_sentiment_analysis/00_intro.html">8.6. Sentiment Analysis on Twitter</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="06_sentiment_analysis/01_demo_sentiment_and_loop_counts.html">8.6.1. Demo: Sentiment Analysis and Loop Counts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="06_sentiment_analysis/02_practice_sentiment_and_loop_counts.html">8.6.2. Practice: Sentiment Analysis and Loop Counts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06_sentiment_analysis/01_demo_sentiment_and_loop_vars.html">8.6.1. Demo: Sentiment Analysis and Loop Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06_sentiment_analysis/02_practice_sentiment_and_loop_vars.html">8.6.2. Practice: Sentiment Analysis and Loop Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="06_sentiment_analysis/03_demo_sentiment_twitter.html">8.6.3. Demo: Sentiment Analysis on Twitter</a></li>
 </ul>
 </li>
@@ -1611,80 +1616,6 @@ title="Print to PDF"
 <li class="toctree-l1"><a class="reference internal" href="08_learn_more.html">8.8. Learn More</a></li>
 </ul>
 </div>
-<p>TODO: Include in programming section</p>
-<p>variables + Loops
-We often use variables to keep track of information within loops. A common combination of utilizing variables within loops is for counting purposes.</p>
-<p>_ check out the following example:</p>
-<p>x = 5</p>
-<p>_ before the loop
-print(x)</p>
-<p>for i in range(5):
-x += 1               # same as x = x + 1</p>
-<p>_ after the loop<br />
-print(x)
-5
-10
-_ check out the following example:</p>
-<p>_ initializing counter variable
-s_count = 0</p>
-<p>state = ‘Mississippi’</p>
-<p>_ loop
-for i in range(len(state)):
-if state[i] == ‘s’:
-s_count += 1</p>
-<p>print(s_count)
-4
-_ check out the following example:</p>
-<p>week_temp = [‘45 °F’, ‘43 °F’, ‘45 °F’, ‘45 °F’, ‘49 °F’, ‘45 °F’, ‘46 °F’]</p>
-<p>temp45_count = 0</p>
-<p>for temp in week_temp:
-if temp == ‘45 °F’:
-temp45_count += 1</p>
-<p>print(temp45_count)
-4
-Using your previously made random_numbers variable, loop through the the list and check how many numbers are greater than ten. At the end, print that count.</p>
-<p>Nested Loops
-Lets say we have a list of sentences and we are searching for a specific word. We must use nested loops. Check out the example bellow:</p>
-<p>lyrics = [‘You used to call me on my cell phone’,
-‘Late night when you need my love’,
-‘Call me on my cell phone’,
-‘Late night when you need my love’,
-‘And I know when that hotline bling’,
-‘That can only mean one thing’,
-‘I know when that hotline bling’,
-‘That can only mean one thing’]</p>
-<p>phone_count = 0</p>
-<p>for line in lyrics:
-split_line = line.split() # splitting up sentence into list of words
-for word in split_line:
-if word == ‘phone’:
-phone_count += 1
-print(line)
-print(phone_count)</p>
-<p>You used to call me on my cell phone
-1
-Call me on my cell phone
-2
-Recreate the previous example with your favorite song.</p>
-<p>Twitter Practice
-Install and import the “tweepy” library of code that gives us twitter functions
-import tweepy
-Login
-_ copy in the code from test_twitter_bot_keys.ipynb
-Search for recent tweets that include the word ‘Weather’. Assign this list to a variable called weather.</p>
-<p>Loop through the weather list and count how many times you come across the words “cold”, “freezing”, or “chilly”</p>
-<p>Create a variable called long_words and assign an emepty list to it –&gt; [].</p>
-<p>Loop through the weather list. If a word has a length of 5 OR GREATER, add it to the long_words list. Make sure to return the long_words list at the end of your code block.</p>
-<p>*Hint: you can add to a list using the append() function</p>
-<p>append() example:</p>
-<p>list = [1, 2, 3]
-list.append(4)</p>
-<p>list  –&gt;  [1, 2, 3, 4]
-Get the length of your long_words list and store it in a variable called long_words_length.</p>
-<p>Create a while loop, printing out the sentence: ”The word, WORD, is extremely long.” for each word in the long_words list.</p>
-<p>*Hint: use the long_words_length variable to check if you’ve gone through the entire list. With each iteration, subtract 1 from the variable.</p>
-<p>CHALLENGE: Copy and paste the code from the previous question. Alter the code to create the sentence:</p>
-<p>”The word, WORD, is LENGTH letters long.”</p>
 </section>
 
     <script type="text/x-thebe-config">

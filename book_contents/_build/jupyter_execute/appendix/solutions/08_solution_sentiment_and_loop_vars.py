@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Practice: Sentiment Analysis and Loop Variables
+# # Ch 8 Practice: Sentiment Analysis and Loop Variables
 
 # Now it's your turn to practice sentiment analysis and loop variables
 # 
@@ -31,7 +31,8 @@ sia.polarity_scores(sentence)["compound"]
 # In[3]:
 
 
-# TODO: enter your code here
+sentence = "This is an ok example"
+sia.polarity_scores(sentence)["compound"]
 
 
 # Try several sentences and see how the Sentiment Intensity Analyzer handles them
@@ -39,7 +40,8 @@ sia.polarity_scores(sentence)["compound"]
 # In[4]:
 
 
-# TODO: enter your code here
+sentence = "This is a horrible example"
+sia.polarity_scores(sentence)["compound"]
 
 
 # ## Loop variables
@@ -60,17 +62,43 @@ for letter in "Mississipi":
 # In[6]:
 
 
-# TODO: enter your code here
+num_letters = 0
+
+for letter in "Mississipi":
+    print(letter)
+    num_letters += 1
+    
+print("There were " + str(num_letters) + " letters")
 
 
 # Make another copy of what you just did, but this time also count the number of "i"s. Make a variable called `num_i` to count how many "i"s. 
 # 
 # _Hint: To see if a letter is an "i", check if `letter == "i"`_
 # 
-# At the end print out how many of the letters were "i"s and what percentage of the word was "i"s.# TODO: enter your code here
+# At the end print out how many of the letters were "i"s and what percentage of the word was "i"s.
 
 # In[7]:
 
 
-# TODO: enter your code here
+num_letters = 0
+num_i = 0
+
+for letter in "Mississipi":
+    print(letter)
+    num_letters += 1
+    
+    if(letter == "i"):
+        num_i += 1
+    
+print("There were " + str(num_letters) + " letters")
+
+percent_i = num_i / num_letters * 100
+
+print("i's made up " + str(percent_i) + " percent of the word")
+
+
+# In[ ]:
+
+
+
 

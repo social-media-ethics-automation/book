@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="8.7. Reflections on Data Mining" href="../07_reflection_questions.html" />
-    <link rel="prev" title="8.6.2. Practice: Sentiment Analysis and Loop Counts" href="02_practice_sentiment_and_loop_counts.html" />
+    <link rel="prev" title="8.6.2. Practice: Sentiment Analysis and Loop Variables" href="02_practice_sentiment_and_loop_vars.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -729,13 +729,13 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul class="current">
      <li class="toctree-l3">
-      <a class="reference internal" href="01_demo_sentiment_and_loop_counts.html">
-       8.6.1. Demo: Sentiment Analysis and Loop Counts
+      <a class="reference internal" href="01_demo_sentiment_and_loop_vars.html">
+       8.6.1. Demo: Sentiment Analysis and Loop Variables
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="02_practice_sentiment_and_loop_counts.html">
-       8.6.2. Practice: Sentiment Analysis and Loop Counts
+      <a class="reference internal" href="02_practice_sentiment_and_loop_vars.html">
+       8.6.2. Practice: Sentiment Analysis and Loop Variables
       </a>
      </li>
      <li class="toctree-l3 current active">
@@ -1410,6 +1410,11 @@ const thebe_selector_output = ".output, .cell_output"
      Ch 7 Practice: Conditionals and String Manipulation
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/solutions/08_solution_sentiment_and_loop_vars.html">
+     Practice: Sentiment Analysis and Loop Variables
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -1619,19 +1624,26 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#standard-loading">
-   Standard loading
+  <a class="reference internal nav-link" href="#tweepy-setup">
+   Tweepy Setup
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#load-sentiment-analysis-library">
-   Load Sentiment Analysis Library
+  <a class="reference internal nav-link" href="#sentiment-analysis">
+   Sentiment Analysis
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#test-sentiment-analysis">
-   Test Sentiment Analysis
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-sentiment-analysis-library-and-make-analyzer">
+     load sentiment analysis library and make analyzer
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#loop-through-tweets-finding-average-sentiment">
+     loop through tweets, finding average sentiment
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -1653,19 +1665,26 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#standard-loading">
-   Standard loading
+  <a class="reference internal nav-link" href="#tweepy-setup">
+   Tweepy Setup
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#load-sentiment-analysis-library">
-   Load Sentiment Analysis Library
+  <a class="reference internal nav-link" href="#sentiment-analysis">
+   Sentiment Analysis
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#test-sentiment-analysis">
-   Test Sentiment Analysis
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-sentiment-analysis-library-and-make-analyzer">
+     load sentiment analysis library and make analyzer
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#loop-through-tweets-finding-average-sentiment">
+     loop through tweets, finding average sentiment
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -1679,8 +1698,10 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="demo-sentiment-analysis-on-twitter">
 <h1><span class="section-number">8.6.3. </span>Demo: Sentiment Analysis on Twitter<a class="headerlink" href="#demo-sentiment-analysis-on-twitter" title="Permalink to this headline">#</a></h1>
-<section id="standard-loading">
-<h2>Standard loading<a class="headerlink" href="#standard-loading" title="Permalink to this headline">#</a></h2>
+<p>Now let’s try using sentiment analysis (and loop variables) on Twitter:</p>
+<p>We’ll start by doing our normal steps to load tweepy (or fake tweepy)</p>
+<section id="tweepy-setup">
+<h2>Tweepy Setup<a class="headerlink" href="#tweepy-setup" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tweepy</span>
@@ -1688,276 +1709,116 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<p>(optional) make a fake twitter connection with the fake_tweepy library</p>
+<p>For testing purposes, we’ve added this line of code, which loads a fake version of tweepy, so it wont actually connect to twitter. If you want to try to actually connect to twitter, don’t run this line of code.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load my twitter keys</span>
-<span class="kn">import</span> <span class="nn">my_bot_keys</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_tweepy/fake_tweepy.ipynb
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="nn">Input In [2],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># load my twitter keys</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">my_bot_keys</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;my_bot_keys&#39;
+<div class="output text_html"><strong style='color:darkred'>Fake tweepy is replacing the tweepy library. Fake Tweepy doesn&#x27;t need real passwords, and prevents you from accessing real twitter</strong></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load all your developer access passwords into Python</span>
+<span class="c1"># TODO: Put your twitter account&#39;s special developer access passwords below:</span>
+<span class="n">bearer_token</span> <span class="o">=</span> <span class="s2">&quot;n4tossfgsafs_fake_bearer_token_isa53#$%$&quot;</span>
+<span class="n">consumer_key</span> <span class="o">=</span> <span class="s2">&quot;sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG&quot;</span>
+<span class="n">consumer_secret</span> <span class="o">=</span> <span class="s2">&quot;45adf$T$A_fake_consumer_secret_JESdsg&quot;</span>
+<span class="n">access_token</span> <span class="o">=</span> <span class="s2">&quot;56sd5Ss4tsea_fake_access_token_%YE%hDsdr&quot;</span>
+<span class="n">access_token_secret</span> <span class="o">=</span> <span class="s2">&quot;j^$dr_fake_consumer_key_^A5s#DR5s&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># log into tweepy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Give the tweepy code your developer access passwords so</span>
+<span class="c1"># it can perform twitter actions</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span>
-    <span class="n">bearer_token</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">bearer_token</span><span class="p">,</span>
-    <span class="n">consumer_key</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">consumer_secret</span><span class="p">,</span>                   
-    <span class="n">access_token</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">access_token_secret</span>
+   <span class="n">bearer_token</span><span class="o">=</span><span class="n">bearer_token</span><span class="p">,</span>
+   <span class="n">consumer_key</span><span class="o">=</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">consumer_secret</span><span class="p">,</span>
+   <span class="n">access_token</span><span class="o">=</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">access_token_secret</span>
 <span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to log in to twitter</strong></div></div>
 </div>
 </section>
-<section id="load-sentiment-analysis-library">
-<h2>Load Sentiment Analysis Library<a class="headerlink" href="#load-sentiment-analysis-library" title="Permalink to this headline">#</a></h2>
+<section id="sentiment-analysis">
+<h2>Sentiment Analysis<a class="headerlink" href="#sentiment-analysis" title="Permalink to this headline">#</a></h2>
+<section id="load-sentiment-analysis-library-and-make-analyzer">
+<h3>load sentiment analysis library and make analyzer<a class="headerlink" href="#load-sentiment-analysis-library-and-make-analyzer" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
 <span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">([</span><span class="s2">&quot;vader_lexicon&quot;</span><span class="p">])</span>
+<span class="kn">from</span> <span class="nn">nltk.sentiment</span> <span class="kn">import</span> <span class="n">SentimentIntensityAnalyzer</span>
+<span class="n">sia</span> <span class="o">=</span> <span class="n">SentimentIntensityAnalyzer</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package vader_lexicon to
-[nltk_data]     /home/jovyan/nltk_data...
+[nltk_data]     C:\Users\kmthayer\AppData\Roaming\nltk_data...
 [nltk_data]   Package vader_lexicon is already up-to-date!
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.sentiment</span> <span class="kn">import</span> <span class="n">SentimentIntensityAnalyzer</span>
-<span class="n">sia</span> <span class="o">=</span> <span class="n">SentimentIntensityAnalyzer</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="test-sentiment-analysis">
-<h2>Test Sentiment Analysis<a class="headerlink" href="#test-sentiment-analysis" title="Permalink to this headline">#</a></h2>
+<section id="loop-through-tweets-finding-average-sentiment">
+<h3>loop through tweets, finding average sentiment<a class="headerlink" href="#loop-through-tweets-finding-average-sentiment" title="Permalink to this headline">#</a></h3>
+<p>We can now combine our previous examples of looping through tweets with what we just learned of sentiment analysis and looping variables to find the average sentiment of a set of tweets.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sia</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="s2">&quot;I really, really hate pizza!!!!!!!!&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;neg&#39;: 0.645, &#39;neu&#39;: 0.355, &#39;pos&#39;: 0.0, &#39;compound&#39;: -0.7535}
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_sentiment_of_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
-    <span class="n">tweet_sentiment</span> <span class="o">=</span> <span class="n">sia</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-    <span class="n">tweet_compound_sentiment</span> <span class="o">=</span> <span class="n">tweet_sentiment</span><span class="p">[</span><span class="s1">&#39;compound&#39;</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">tweet_compound_sentiment</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;&quot;cute cat&quot;&#39;</span>
+<span class="n">tweets</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">get_sentiment</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">show_progress</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
-    <span class="n">tweets</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="n">max_results</span><span class="p">)</span>
+<span class="n">num_tweets</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">total_sentiment</span> <span class="o">=</span> <span class="mi">0</span>
 
-    <span class="n">num_tweets</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">total_sentiment</span> <span class="o">=</span> <span class="mi">0</span>
-
-    <span class="c1"># go through each tweet</span>
-    <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">show_progress</span><span class="p">:</span> 
-            <span class="nb">print</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-
-        <span class="c1">#calculate sentiment</span>
-        <span class="n">tweet_compound_sentiment</span> <span class="o">=</span> <span class="n">get_sentiment_of_text</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-
-        <span class="k">if</span> <span class="n">show_progress</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">tweet_compound_sentiment</span><span class="p">)</span>
-
-        <span class="n">num_tweets</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="n">total_sentiment</span> <span class="o">+=</span> <span class="n">tweet_compound_sentiment</span>
-
-        <span class="k">if</span> <span class="n">show_progress</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">()</span>
-
-    <span class="k">if</span> <span class="n">show_progress</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;num tweets: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_tweets</span><span class="p">))</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;total_sentiment: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">total_sentiment</span><span class="p">))</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;avg_sentiment: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">total_sentiment</span> <span class="o">/</span> <span class="n">num_tweets</span><span class="p">))</span>
+<span class="c1"># go through each tweet</span>
+<span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
     
-    <span class="k">return</span> <span class="n">total_sentiment</span> <span class="o">/</span> <span class="n">num_tweets</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_sentiment</span><span class="p">(</span><span class="s2">&quot;football&quot;</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">show_progress</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="c1">#calculate sentiment</span>
+    <span class="n">tweet_sentiment</span> <span class="o">=</span> <span class="n">sia</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">text</span><span class="p">)[</span><span class="s2">&quot;compound&quot;</span><span class="p">]</span>
+    <span class="n">num_tweets</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">total_sentiment</span> <span class="o">+=</span> <span class="n">tweet_sentiment</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sentiment: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tweet_sentiment</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   Tweet: &quot;</span> <span class="o">+</span> <span class="n">tweet</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+
+
+<span class="n">average_sentiment</span> <span class="o">=</span> <span class="n">total_sentiment</span> <span class="o">/</span> <span class="n">num_tweets</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average sentiment was &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">average_sentiment</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>@Barsalev @ItsManuedu_44 Yea dembele getting the ball to haaland at 20th try after over hitting the pass or making the wrong decision half the time...dembele can&#39;t play at a club where u have to actually play football not just run
--0.7329
+<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to search for &#x27;&quot;cute cat&quot;&#x27; and is returning some fake tweets.</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sentiment: -0.2865
+   Tweet: While trying to tweet right now, I am being attacked by my cute cat! It&#39;s so hard to tpye wihsaoae as fesadf asd fssasaf sa
 
-@C99Cody1 Never seen that in all my time watching &amp;amp; playing football 🤷‍♂️🤷‍♂️
-0.2023
+Sentiment: 0.8172
+   Tweet: I wish I could be sleeping now like my cute cat is!
 
-RT @Bolick4Arizona: Hey @ASU @michaelcrow why are you mandating N95 masks for ASU college students interested in playing on the intramural…
-0.5423
+Sentiment: -0.6088
+   Tweet: Why won&#39;t my cute cat stop scratching my face in the morning!
 
-日本代表MF南野拓実、リバプールでの目標を語る「ここで何かを成し遂げたい」
-
-日本代表MF南野拓実（27）が、所属するリバプールでの目標を語っている。イギリス『リバプール・エコー』が伝えた。2020年冬にレッドブル・ザルツブ... #リバプール
-https://t.co/VmRXd8qknU https://t.co/X8uQ6fjYci
-0.0
-
-RT @CherifSadio: Au Sénégal se trouve l’une des plus belles infrastructures sportives en Afrique, le tout nouveau stade construit à Diamnia…
--0.128
-
-https://t.co/G27lDuojxm
-0.0
-
-RT @FMBrownsSons: Are You Ready for Some ....Soup? We had a Soup-er Bowl Party yesterday to pre-game for the big game. What your favorite b…
-0.802
-
-“i don’t know the football team — not like you do. and i have been to cheer practice so i’m probably kicked off … again.” she chuckled, leaning against the lockers. https://t.co/A0d2l2e28j
-0.5252
-
-RT @Brett_McMurphy: 2022 power ratings from @_Collin1 
-
-1-OhioSt
-2-Bama
-3-Clemson
-4-NCSt
-5-Georgia
-6-Miami
-7-Utah
-8-Pitt
-9-BYU
-10-A&amp;amp;M
-11-Io…
-0.0
-
-RT @Sports_Spectrum: Without my Lord and Savior Jesus Christ, I am nothing honestly.&quot;
-
-@RamsNFL DB Jalen Ramsey shares how his worth is fou…
-0.4767
-
-num tweets: 10
-total_sentiment: 1.6876000000000002
-avg_sentiment: 0.16876000000000002
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.16876000000000002
+Average sentiment was -0.026033333333333315
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_sentiment</span><span class="p">(</span><span class="s2">&quot;Biden&quot;</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.04159500000000001
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_sentiment</span><span class="p">(</span><span class="s2">&quot;Trump&quot;</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.04078700000000001
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_sentiment</span><span class="p">(</span><span class="s2">&quot;Mitch McConnell&quot;</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.03261199999999999
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_sentiment</span><span class="p">(</span><span class="s2">&quot;AOC&quot;</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.012030000000000008
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_sentiment</span><span class="p">(</span><span class="s2">&quot;Harvard&quot;</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.012407999999999997
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_sentiment</span><span class="p">(</span><span class="s2">&quot;UW&quot;</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">show_progress</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_sentiment</span><span class="p">(</span><span class="s2">&quot;University of Washington&quot;</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.17231499999999994
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_sentiment</span><span class="p">(</span><span class="s2">&quot;@UW&quot;</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.29996999999999996
-</pre></div>
-</div>
-</div>
-</div>
+<p>We can now see the average sentiment of a set of tweets based on our search of twitter!</p>
+<p>If you use your twitter bot keys, you can change the <code class="docutils literal notranslate"><span class="pre">query</span></code> to be whatever twitter search you want and see whether people are tweeting positively or negatively about it.</p>
+<p><em>note: You can change <code class="docutils literal notranslate"><span class="pre">max_results=10</span></code> to go up to 100 to get more tweets at a time to find the average of</em></p>
+</section>
 </section>
 </section>
 
@@ -1988,11 +1849,11 @@ avg_sentiment: 0.16876000000000002
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="02_practice_sentiment_and_loop_counts.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="02_practice_sentiment_and_loop_vars.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">8.6.2. </span>Practice: Sentiment Analysis and Loop Counts</p>
+            <p class="prev-next-title"><span class="section-number">8.6.2. </span>Practice: Sentiment Analysis and Loop Variables</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../07_reflection_questions.html" title="next page">
