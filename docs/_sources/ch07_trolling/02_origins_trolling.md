@@ -37,5 +37,7 @@ and their misogyny:
 >
 > Rule 31. [if you claim to be a girl, post a photo of your] TITS or GTFO [Get the Fuck Out] - the choice is yours
 
+% TODO: "extreme misogyny"
+
 
 You can read more at: [knowyourmeme](https://knowyourmeme.com/memes/cultures/trolling) and [wikipedia](https://en.wikipedia.org/wiki/Internet_troll#Origin_and_etymology)
