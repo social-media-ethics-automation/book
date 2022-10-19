@@ -5,3 +5,5 @@
 - Parasocial relationships: (StrucciMovies: [Fake Friends Series](https://www.youtube.com/watch?v=x3vD_CAYt4g&list=PL7-HzFax9fcxbuDiKPZGdIV69N5-MszEa)) (Sarah Z: [How Fans Treat Creators](https://www.youtube.com/watch?v=f0l_biTU3Vg) 33 min)
 - [Trans Twitter and the beauty of online anonymit](https://www.vox.com/culture/21432987/trans-twitter-reddit-online-anonymity)
 -  [Brand Twitter Is Absurd, and It Will Only Get Worse](https://www.vice.com/en/article/pangw8/brand-twitter-is-absurd-and-it-will-only-get-worse)
+
+% TODO: Sarah Z on the person who wrote fan fiction and made accounts to attack themselves about it etc.
