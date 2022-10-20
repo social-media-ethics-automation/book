@@ -21,3 +21,14 @@
   - [Facebook fuels broad privacy debate by tracking non-users](https://www.reuters.com/article/us-facebook-privacy-tracking/facebook-fuels-broad-privacy-debate-by-tracking-non-users-idUSKBN1HM0DR)
 - Info that is public in one forum but not meant to be revealed on another (a context collapse)
   - E.g., coming out of the closet on twitter (which your family isn’t on), but then someone cross-posts it to facebook
+
+https://www.bbc.com/worklife/article/20210813-are-your-work-messages-as-private-as-you-think
+
+https://www.themarysue.com/facebook-employees-abused-access-target-women/
+
+- Embarrassment (e.g., private messages)
+- Financial (e.g., identity theft)
+- Physical Danger (doxing)
+- Right to forget
+  - [General Data Protection Regulation](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation)
+- Surveillance
