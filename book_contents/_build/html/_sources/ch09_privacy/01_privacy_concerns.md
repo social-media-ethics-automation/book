@@ -13,3 +13,7 @@ When we use social media platforms though, we at least partially give up some of
 For example, a social media application might offer us a way of "[Private Messaging](https://en.wikipedia.org/wiki/Private_message)" (also called Direct Messaging) with another user. But in most cases those "private" messages are stored in the computers at those companies, and the company might have computer programs that automatically search through the messages, and people with the right permissions might be able to view them directly.
 
 In some cases we might want a social media company to be able to see our "private" messages, such as if someone was sending us death threats.  We might want to report that user to the social media company for a ban, or to law enforcement (though many people have found law enforcement to be not helpful), and we want to open access to those "private" messages to prove that they were sent.
+
+## [Privacy Rights](https://en.wikipedia.org/wiki/Right_to_privacy)
+
+Some governments and laws protect the privacy of individuals (using a Natural Rights ethical framing). These include the European Union's [General Data Protection Regulation](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation), which includes a "right to be forgotten", and the United State's Supreme Court has at times [inferred a constitutional right to privacy](https://en.wikipedia.org/wiki/Right_to_privacy#United_States).
