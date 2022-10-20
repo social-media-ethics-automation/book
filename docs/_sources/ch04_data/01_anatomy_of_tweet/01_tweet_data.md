@@ -41,6 +41,7 @@ For example:
 - If we think of a tweet's contents (text and photos) as the main data of a tweet, then additional information such as the user, time, and responses would be considered metadata.
 - If we download information about a set of tweets (text, user, time, etc.) to analyze later, we might consider that set of information as the main data, and our metadata might be information about our download process, such as when we collected the tweet information, which search term we used to find it, etc.
 
+% TODO: Another metadata example: tweet search, the results are data, the search string and time are metadata
 
 
 Now that we've looked some at the data in a tweet, let's look next at how different pieces of this information are saved.
