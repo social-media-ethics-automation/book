@@ -45,4 +45,4 @@ html:
   use_issues_button: true
   use_repository_button: true
   extra_footer:
-    <script src="https://hypothes.is/embed.js" async></script>
+    "<script src=\"https://hypothes.is/embed.js\" async>  {\"showHighlights\": \"whenSidebarOpen\"}</script>"

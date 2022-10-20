@@ -1,5 +1,4 @@
-
-# Types of Privacy / Security Violations
+# Privacy Violations
 - Hacks - of the company
   - Internal security
   - What information can be stolen?

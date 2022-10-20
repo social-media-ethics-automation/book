@@ -1,6 +1,6 @@
-# (Incomplete) Privacy
+# (Incomplete) Privacy and Security
 
-TODO: summary statement here
+With all the data social media sites collect on you and mine about you, what does that mean for privacy?
 
 ```{tableofcontents}
 ```

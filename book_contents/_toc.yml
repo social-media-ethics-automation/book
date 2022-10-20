@@ -131,11 +131,16 @@ parts:
     - file: ch09_privacy/00_privacy
       sections:
       - file: ch09_privacy/01_privacy_concerns
-      - file: ch09_privacy/02_privacy_violations
-      - file: ch09_privacy/03_reflections
-      - file: ch09_privacy/04_programming
-      - file: ch09_privacy/05_practice_pandas
-      - file: ch09_privacy/06_learn_more
+      - file: ch09_privacy/02_security
+      - file: ch09_privacy/03_privacy_violations
+      - file: ch09_privacy/04_context_collapse
+      - file: ch09_privacy/05_tracking_use/00_intro
+        sections:
+          - file: ch09_privacy/05_tracking_use/01_demo_functions
+          - file: ch09_privacy/05_tracking_use/02_practice_functions
+          - file: ch09_privacy/05_tracking_use/03_demo_tweepy_track_use
+      - file: ch09_privacy/06_reflections
+      - file: ch09_privacy/07_learn_more
     - file: ch10_accessibility/00_accessibility
       sections:
       - file: ch10_accessibility/01_disability
@@ -152,7 +157,6 @@ parts:
       - file: ch11_virality/05_viewing_virality
       - file: ch11_virality/06_practice_nested_loops
       - file: ch11_virality/07_uneven_contribution
-      - file: ch11_virality/08_context_collapse
       - file: ch11_virality/09_going_viral
       - file: ch11_virality/10_reflections
       - file: ch11_virality/11_learn_more
