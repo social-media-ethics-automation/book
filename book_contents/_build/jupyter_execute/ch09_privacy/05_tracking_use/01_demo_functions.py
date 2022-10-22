@@ -1,29 +1,43 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Demo: Functions
+# # Demo: Writing Functions
+# 
+# Before we can do our demo of tracking tweepy use, we need to learn how to create functions in Python.
+# 
+# Functions allow us to run another computer program. In our recipe analogy earlier, we said it was like:
+# 
+# `- Make the dumpling dough (see recipe on page 42).`
+# 
+# Or
+# 
+# `- to make dumplings vegan, make the dumpling dough (see recipe on page 42), but instead of using the egg, subsititute 2 teaspoons olive oil and 2 tablespoons hot water.`
+# 
+# ## Benefits of Functions
+# There are several advantages to creating and using functions in computer programs, such as:
+# 
+# __Reusing code instead of repeating code__: When we find ourselves repeating a set of actions in our program, we end up writing (or copying) the same code multiple times. If we put that repeated code in a function, then we only have to write it once and then use that function in all the places we were repeating the code. 
+# 
+# __Single, standardized definitions__: Let's say we made code that takes a name and tries to split it into a first name and last name, and we have that code copied in several places in our program. Then we realize that our code isn't handling some last names correctly, like "O'Reilly" and "Del Toro." If we fix this bug in one of the places the code is copied in our program it still will be broken elsewhere, so we have to find all the places and fix it there. If, on the other hand we had the code to split names in a function, and used that function everywhere else, then we only have to fix the bug inside that one function and our code everywhere is fixed.
+# 
+# __Code organization__: Making functions also can help us organize our code. It lets us give a name to a block of code, and when we use it, those function names can help make the code more understandable. Making code as functions also helps in letting us put those pieces of code in other files or in code libraries, so the file we are working on is smaller and easier to manage.
+# 
+# 
+# ## Using Functions
+# 
+# We have been using many functions so far in this book, such as:
+# - `display(2 + 2)`
+# - `sleep(3)`
+# - `client.create_tweet(text="This is a tweet")`
+# - `sentence.upper()`
+# 
+# Now we will be defining our own functions, which we can then use later in our code.
 
-# ## User-Defined Functions VS Built-In Functions
+# ## Defining Functions 
 # 
-# In all programming and scripting language, a function is a block of code which can be used repetitively in a program.
+# In Python a function is defined using the 'def' keyword.
 # 
-# #### Built-In Functions:
-# 
-# ```
-# len()
-# append()
-# range()
-# print()
-# ```
-# 
-# 
-# 
-# 
-# #### User-Defined Functions (UDFs):
-# 
-# A user-defined function is a function you create that can be used repetitively. In Python a function is defined using the 'def' keyword.
-# 
-# Creating a User-Defined Function:
+# Creating a Function:
 # 
 # ```
 # def function_name(argument1, argument2):
@@ -32,395 +46,280 @@
 #     STATEMENT
 # ```
 # 
-# Using a Used-Defined Function that you previously made:
+# Using a Function that you previously made:
 # 
 # ```
 # function_name(argument1, argument2)
 # ```
+# 
+# 
+# Let's start with an example function that doesn't use any arguments:
 
 # In[1]:
 
 
-# Try out the following example:
+def say_hi():
+    print("Hi!")
 
-import time
 
-def counter():
-    for i in range(10):
-        print(i)
-        time.sleep(1)
-
+# In the code above, `def` tells Python we want to define a funciton, `say_hi` is the name we chose for our function, and the empty parentheses `()` mean that it doesn't take any parameters. There is then a colon (`:`) to say what follows is a code block that will be what happens when the function is called.
+# 
+# When we run the code above that defines our function, we don't see any output, but now the function `say_hi` exists and is ready for us to try using it:
 
 # In[2]:
 
 
-# Using the previously made UDF. Try out the following example:
-
-counter()
+say_hi()
 
 
-# ## Parameters
-
-# #### A parameter is the variable listed inside the parentheses of the function definition.
+# We can now call this function many times, for example in a `for` loop
 
 # In[3]:
 
 
-# You can also include parameters. Try out the following example:
+for i in range(5):
+    say_hi()
 
-def counter_advanced(x):            # includes parameter 'x'
-    for i in range(x):
-        print(i)
-        time.sleep(1)
 
+# We can also re-define our functions by doing a new `def` statement. It will just replace the old functions definition with the new one:
 
 # In[4]:
 
 
-# Calling the function & specifying a value in place of the paramter.
-# Try out the following example:
-
-counter_advanced(5)
+def say_hi():
+    print("Hi there!")
 
 
 # In[5]:
 
 
-# Try out the following example:
+for i in range(5):
+    say_hi()
 
-def addition_machine(x, y):
-    print(x + y)
 
+# ## Parameters
+# Parameters (also called "arguments") are like variables for a function.
+# 
+# In the definition of the function, you can list inside the parentheses the parameters you want to be given for you to use in your function code.
+# 
+# Let's redefine our `say_hi` function so it takes a paratemeter for the name of a person to say hi to:
 
 # In[6]:
 
 
-# Try calling the function:
-
-addition_machine(52846, 300)
-
-
-# #### 1. Create a function that does NOT include a parameter (the function name should be followed by an exmpty parenthesis).
-
-# In[ ]:
+def say_hi(name):
+    print("Hi " + name + "!")
 
 
-
-
-
-# #### 2. Call that funtion.
-
-# In[ ]:
-
-
-
-
-
-# #### 3. Create a function called `multiplier` that takes in two parameters and prints out the product of the two.
-
-# In[ ]:
-
-
-
-
-
-# #### 4. Call the `multiplier` function.
-
-# In[ ]:
-
-
-
-
-
-# ## Pandas
-
-# Pandas is an extremely useful library used for large data analysis. Pandas makes it very easy to perform certain tasks quickly.
-
-# #### "pandas" is the name of the library. When we include "as pd", we're nicknaming the library in order to shorten the name when we reference it. This is standard practice in data science. 
-# 
-# #### Run the following code block to load in the pandas library: 
+# Now when we call the function `say_hi` we need to give it a value in the parentheses (or it gives us an error: `missing required positional argument`)
 
 # In[7]:
 
 
-import pandas as pd
+say_hi("Kyle")
 
 
-# #### Load in data using function `read_csv`
+# We can again use a loop to call our function multiple times, but this time we will loop over a list of names and send a different name each time the function runs:
 
-# In[ ]:
-
-
-df = pd.read_csv('../INFO-198-content/faculty.csv')
-df
+# In[8]:
 
 
-# What is df? It's a pandas object called a DataFrame which stores a table of values, similar to an Excel table.
+names = ["Kyle", "Susan", "Another Person"]
+for name in names:
+    say_hi(name)
+
+
+# We can make a function that takes multiple parameters. Let's redefined our function again to take first and last names:
+
+# In[9]:
+
+
+def say_hi(first_name, last_name):
+    print("Hi " + first_name + " " + last_name + "!")
+
+
+# In[10]:
+
+
+say_hi("Kyle", "Thayer")
+
+
+# ## Returns
 # 
-# Notice on the top row, it shows the name of the columns (Name and Salary) and on the left-most side, it shows an index for each row (0, 1, and 2).
+# In the above examples, our `say_hi` performs an action of displaying text (we used the `print` function).
 # 
-# DataFrames are powerful because they provide lots of ways to access and perform computations on your data without you having to write much code!
+# But if we try to save what comes back from running the function:
 
-# ## Accessing a Column
-
-# In[ ]:
+# In[11]:
 
 
-# Try running the following example:
-
-df['name']
+say_hi_result = say_hi("Kyle", "Thayer")
 
 
-# #### 5. TRY IT YOURSELF: Access the 'salary' column.
-
-# In[ ]:
+# In[12]:
 
 
+display(say_hi_result)
 
 
-
-# ### Series
-# A series is essentially one column of a DataFrame. The previous two code blocks are examples of Series.
-
-# #### pandas is useful because it not only lets you access this data conveniently, but also perform computations on them.
+# It says that nothing (`None`) came back out of the function.
 # 
-# A Series object has many methods you can call on them to perform computation. Here is a list of some of the most useful ones:
+# There are other functions that we've run that have had things come back that we can save in a variable, like counting the number of characters in a string with `len`.
+
+# In[13]:
+
+
+num_letters = len("Ethics")
+
+
+# In[14]:
+
+
+display(num_letters)
+
+
+# In Python, when we want to send something back that can be saved in a variable, we use a `return` in our function definition, like this function which creates the hi message and doesn't display it:
+
+# In[15]:
+
+
+def create_hi_message(first_name, last_name):
+    hi_message = "Hi " + first_name + " " + last_name + "!"
+    return hi_message
+
+
+# The return says what value to send back to wherever the function was called. In this case we are sending back what got saved in the `hi_message` variable. 
 # 
-# ```
-# mean: Calculates the average value of the Series
-# min: Calculates the minimum value of the Series
-# max: Calculates the maximum value of the Series
-# count: Calculates the number values in the Series
-# unique: Returns a new Series with all the unique values from the Series.
-# And many more!
-# ```
+# When we use this function, we can save the result in a variable:
 
-# In[ ]:
+# In[16]:
 
 
-# Try running the following example to compute the average Salary of the names:
-
-average_salary = df['salary'].mean()
-average_salary
+tweet_to_make = create_hi_message("Kyle", "Thayer")
 
 
-# In[ ]:
+# This time the variable had the message saved, but nothing was displayed. We can now display the variable to see what was saved:
+
+# In[17]:
 
 
-# Load in the "Emissions" CSV file by runnng this code block
-
-df2 = pd.read_csv('../INFO-198-content/emissions.csv')
-df2.head()
+display(tweet_to_make)
 
 
-# #### One useful feature of pandas is it lets you combine values from different Series. For example, if we wanted to, we could add the values of the salary column and the bonus column.
+# If we want, we can simplify the code by telling return to just send back whatever `"Hi " + first_name + " " + last_name + "!"` is instead of saving it in an `hi_message` variable first.
 
-# In[ ]:
-
-
-# Try out the following example:
-
-df2['Emissions'] + df2['Population']
+# In[18]:
 
 
-# This returns a new Series that represents the sum of those two columns. The first value in the Series is the sum of the first values in the two that were added, the second is the sum of the second two, etc. 
+def create_hi_message(first_name, last_name):
+    return "Hi " + first_name + " " + last_name + "!"
+
+
+# In[19]:
+
+
+tweet_to_make = create_hi_message("Susan", "Notess")
+
+
+# In[20]:
+
+
+display(tweet_to_make)
+
+
+# ## Wrapping Functions
+# One final trick we can do is wrap a function in another function. 
 # 
-# *Note: this does NOT change the dataframe.
-
-# #### 6. TRY IT YOURSELF: In the cell below, find the maximum "emissions per capita" (emissions divided by population). Start by computing this value for each city and then find the maximum value of that Series (using one of the Series methods shown above). 
+# This is a bit of an unusual trick, so you generally don't have to worry 5oo much about it, but we are going to use it in the "Track Tweepy Use" demo shortly, so we want to explain it.
 # 
-# #### Save the result in a variable called `max_emissions`.
+# Let's start with a function that adds two numbers together (and yes, this is an unneccesarily complicated replacement for just using `+`)
+
+# In[21]:
+
+
+def add_numbers(num_1, num_2):
+    return num_1 + num_2
+
+
+# We can use this function to calculate the current state of our money:
+
+# In[22]:
+
+
+my_money = 4
+money_you_gave_me = 3
+
+my_current_money = add_numbers(my_money, money_you_gave_me)
+
+
+# In[23]:
+
+
+display(my_current_money)
+
+
+# Now, we can take this function that already exists `add_numbers` and make a `new_add_numbers` function that works the same (it takes the same parameters and then calls the old `add_numbers` function with them), but it also displays what numbers it was called with.
+
+# In[24]:
+
+
+def new_add_numbers(num_1, num_2):
+    display("--add_numbers was called with " + str(num_1) + " and " + str(num_2))
+    return add_numbers(num_1, num_2)
+
+
+# We've now "wrapped" a new function (`new_add_numbers`) around the old `add_numbers` function. 
 # 
-# #### Hint: You can save a Series in a variable! It's just like any other Python value!
+# When we use this new_add_numbers function, we see the output display when the function is called, but we still get the same result back.
 
-# In[ ]:
+# In[25]:
 
 
+my_money = 4
+money_you_gave_me = 3
 
+my_current_money = new_add_numbers(my_money, money_you_gave_me)
 
 
-# #### These computations also work if one of the values is a single value rather than a Series. For example, the following cell adds 10 to each of the populations.
+# In[26]:
 
-# In[ ]:
 
+display(my_current_money)
 
-# Try out this example:
 
-df2['Population'] + 10
+# Now, we can take this one step further and _replace_ the original add_numbers function with the wrapped version. To do this, we need to save the old `add_number`s function in a variable which we will call `old_add_numbers` (and yes, we can save functions themselves into variables just like they were any other value)
 
+# In[27]:
 
-# #### 7. TRY IT YOURSELF: Divide each emission by 3
 
-# In[ ]:
+# save the original add_numbers function
+old_add_numbers = add_numbers
 
+# wrap a new add numbers function around the original one
+# and have it display the arguments it was called with
+def new_add_numbers(num_1, num_2):
+    display("--add_numbers was called with " + str(num_1) + " and " + str(num_2))
+    return old_add_numbers(num_1, num_2)
 
+# replace the original add_numbers function with the new wrapped one
+add_numbers = new_add_numbers
 
 
+# Now, we can go back to our code that used the original `add_numbers` function, but now it will get the wrapped version.
 
-# #### Another useful case for something like this is to compare the values of a column to a value. For example, the following cell computes which cities have an emissions value of 200 or more. Notice that the datatype of the output is boolean since the condition is checking whether or not each row in the column meets the condition or not.
+# In[28]:
 
-# In[ ]:
 
+my_money = 4
+money_you_gave_me = 3
 
-# Try out this example:
-df2['Emissions'] >= 200
+my_current_money = add_numbers(my_money, money_you_gave_me)
 
 
-# #### 8. TRY IT YOURSELF: Check whether each population is less than or equal to 50000.
+# In[29]:
 
-# In[ ]:
 
+display(my_current_money)
 
 
-
-
-# ## Filtering Data
-
-# #### You might have wondered why would it be useful to compare a Series to some random value? The power comes from using this bool Series to <b>filter</b> the DataFrame to the rows you want.
-# 
-# #### For example, what if I wanted to print the names of the cities that have an emissions of 200 or more? I can use this bool Series to filter which rows I want!
-
-# In[ ]:
-
-
-# Here's what the syntax looks like to filter rows with 'Emissions' of 200 or greater.:
-
-df3 = df2[df2['Emissions'] >= 200]
-df3
-
-
-# In[ ]:
-
-
-# Now let's return only the city names:
-
-df3['City']
-
-
-# #### We recommend splitting up the code into many variables. This makes the code more readable and often easieir to work with:
-
-# In[ ]:
-
-
-# Here's the previous code blocks rewritten (the output should be the same):
-
-emissions = df2['Emissions'] >= 200
-df3 = df2[emissions]
-cities = df3['City']
-cities
-
-
-# Notice how we can get this result without having to write any loops!
-
-# #### 9. TRY IT YOURSELF: Return the Countries that have populations of less than or equal to 50000.
-
-# In[ ]:
-
-
-
-
-
-# ## Filtering on Multiple Conditions
-
-# #### Last week we went over 'or' and 'and' operators. padas has a different syntax for these operators:
-# 
-# ```
-# | = or
-# & = and
-# ```
-
-# #### If you want to find all cities that have high emissions OR are in the US, you would write this:
-
-# In[ ]:
-
-
-# Try out the following example:
-df2[(df2['Emissions'] >= 200) | (df2['Country'] == 'U.S.A.')]
-
-
-# #### What about cities that have high emissions AND are in the US?
-
-# In[ ]:
-
-
-# Try out the following example:
-df2[(df2['Emissions'] >= 200) & (df2['Country'] == 'U.S.A.')]
-
-
-# In[ ]:
-
-
-# A much more readable version of the previous code:
-emissions = df2['Emissions'] >= 200
-country = df2['Country'] == 'U.S.A.'
-high_usa = df2[emissions & country]
-high_usa
-
-
-# #### 10. TRY IT YOURSELF: write code to select all rows from the dataset that are in France OR have a population greater than 50000. 
-# 
-# #### Save the result in a variable called `pop_or_france`.
-
-# In[ ]:
-
-
-
-
-
-# #### 11. TRY IT YOURSELF: write code to select all rows from the dataset that are in France OR have a population greater than 50000. 
-# 
-# #### Save the result in a variable called `pop_and_france`.
-
-# In[ ]:
-
-
-
-
-
-# #### 12. Create a function called `max_machine` that takes in one parameter (the name of a column `col_name`) and prints the `max()` value from the column from the dataframe, `df2`.
-
-# In[ ]:
-
-
-
-
-
-# #### 13. Call the `max_machine` function you just made with the parameter 'Population'
-
-# In[ ]:
-
-
-
-
-
-# #### 14. Create a function called `average_machine` that takes in two parameters: a dataframe, `df`, and a column, `col`. The function should print the average of the specified column of the specified dataframe.
-
-# In[ ]:
-
-
-
-
-
-# #### 15. Call the `average_machine` function you just made with parameters, "df" and "'salary'".
-
-# In[ ]:
-
-
-
-
-
-# #### 16. Call the `average_machine` function you just made with parameters, "df2" and "'Emissions'".
-
-# In[ ]:
-
-
-
-
-
-# #### CHALLENGE: Create a function called `emissions_per_capita` that PRINTS out the sentence: "CITY has NUM emissions per capita." for each city in the dataframe.
-
-# In[ ]:
-
-
-
-
+# If wrapping functions was a confusing process, don't worry. We are only using it in the "Track Tweepy Use" demo in this chapter, and won't be using it again.
