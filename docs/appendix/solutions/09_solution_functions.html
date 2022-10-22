@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Ch 4 Practice: Python Basic Data Types &#8212; Social Media, Ethics, and Automation</title>
+    <title>Ch 9 Practice: Functions &#8212; Social Media, Ethics, and Automation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Ch 5 Practice: Looping through lists and dictionaries" href="03_practice_lists_dictionaries.html" />
-    <link rel="prev" title="Ch 3 Practice: Statements and Variables" href="01_solution_practice_statements_variables_sleep.html" />
+    <link rel="prev" title="Ch 8 Practice: Sentiment Analysis and Loop Variables" href="08_solution_sentiment_and_loop_vars.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -1417,8 +1416,8 @@ const thebe_selector_output = ".output, .cell_output"
      Ch 3 Practice: Statements and Variables
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_solution_practice_data.html">
      Ch 4 Practice: Python Basic Data Types
     </a>
    </li>
@@ -1437,8 +1436,8 @@ const thebe_selector_output = ".output, .cell_output"
      Ch 8 Practice: Sentiment Analysis and Loop Variables
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="09_solution_functions.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Ch 9 Practice: Functions
     </a>
    </li>
@@ -1503,7 +1502,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/kylethayer/social_media_ethics_automation_v0/main?urlpath=lab/tree/book_contents/appendix/solutions/02_solution_practice_data.ipynb"
+        <a href="https://mybinder.org/v2/gh/kylethayer/social_media_ethics_automation_v0/main?urlpath=lab/tree/book_contents/appendix/solutions/09_solution_functions.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1563,7 +1562,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/kylethayer/social_media_ethics_automation_v0/issues/new?title=Issue%20on%20page%20%2Fappendix/solutions/02_solution_practice_data.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/kylethayer/social_media_ethics_automation_v0/issues/new?title=Issue%20on%20page%20%2Fappendix/solutions/09_solution_functions.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1591,7 +1590,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/appendix/solutions/02_solution_practice_data.ipynb"
+        <a href="../../_sources/appendix/solutions/09_solution_functions.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1628,80 +1627,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#greeting">
-   Greeting
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#engagement-report">
-   Engagement report
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#is-your-tweet-too-long">
-   Is your tweet too long
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Ch 4 Practice: Python Basic Data Types</h1>
+                <h1>Ch 9 Practice: Functions</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#greeting">
-   Greeting
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#engagement-report">
-   Engagement report
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#is-your-tweet-too-long">
-   Is your tweet too long
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -1709,188 +1651,192 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="ch-4-practice-python-basic-data-types">
-<h1>Ch 4 Practice: Python Basic Data Types<a class="headerlink" href="#ch-4-practice-python-basic-data-types" title="Permalink to this headline">#</a></h1>
-<section id="greeting">
-<h2>Greeting<a class="headerlink" href="#greeting" title="Permalink to this headline">#</a></h2>
-<p>Make a new variable called <code class="docutils literal notranslate"><span class="pre">greeting_part_1</span></code> and assign it the string: <code class="docutils literal notranslate"><span class="pre">&quot;Welcome,</span> <span class="pre">&quot;</span></code></p>
-<p>Note: There is an extra space after the word</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="ch-9-practice-functions">
+<h1>Ch 9 Practice: Functions<a class="headerlink" href="#ch-9-practice-functions" title="Permalink to this headline">#</a></h1>
+<p>Create a function called <code class="docutils literal notranslate"><span class="pre">say_goodbye</span></code> which displays the text “Goodbye!”</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greeting_part_1</span> <span class="o">=</span> <span class="s2">&quot;Welcome, &quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">say_goodbye</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Goodbye!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Make a new variable called <code class="docutils literal notranslate"><span class="pre">greeting_part_2</span></code> and assign it the string: <code class="docutils literal notranslate"><span class="pre">&quot;!</span> <span class="pre">It</span> <span class="pre">is</span> <span class="pre">nice</span> <span class="pre">to</span> <span class="pre">meet</span> <span class="pre">you!&quot;</span></code></p>
-<p>Note: this string starts with an exlamation mark.</p>
+<p>Write code that calls the function <code class="docutils literal notranslate"><span class="pre">say_goodbye</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greeting_part_2</span> <span class="o">=</span> <span class="s2">&quot;! It is nice to meet you!&quot;</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Make a variable called name_1 and assign it with a string of someone’s name.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Kyle&quot;</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now, combine them all together into a new variable called <code class="docutils literal notranslate"><span class="pre">full_greeting</span></code>. Combine the parts together by taking <code class="docutils literal notranslate"><span class="pre">greeting_part_1</span></code> then adding <code class="docutils literal notranslate"><span class="pre">name</span></code> then adding <code class="docutils literal notranslate"><span class="pre">greeting_part_2</span></code>.</p>
-<p>Then display the variable <code class="docutils literal notranslate"><span class="pre">full_greeting</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">full_greeting</span> <span class="o">=</span> <span class="n">greeting_part_1</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="n">greeting_part_2</span>
-<span class="n">display</span><span class="p">(</span><span class="n">full_greeting</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">say_goodbye</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Welcome, Kyle! It is nice to meet you!&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Goodbye!
 </pre></div>
 </div>
 </div>
 </div>
-<p>Now make a variable called <code class="docutils literal notranslate"><span class="pre">name_2</span></code> with another name in it and make a variable <code class="docutils literal notranslate"><span class="pre">called_full_greeting_2</span></code> the same way you did <code class="docutils literal notranslate"><span class="pre">full_greeting</span></code>, but with <code class="docutils literal notranslate"><span class="pre">name_2</span></code> instead.</p>
-<p>Then display the variable <code class="docutils literal notranslate"><span class="pre">full_greeting_2</span></code></p>
+<p>Redefine the function <code class="docutils literal notranslate"><span class="pre">say_goodbye</span></code> to take a parameter called <code class="docutils literal notranslate"><span class="pre">name</span></code>, and have it display “Goodbye name!” where “name” is replaced by whatever was in the <code class="docutils literal notranslate"><span class="pre">name</span></code> variable</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_2</span> <span class="o">=</span> <span class="s2">&quot;Susan&quot;</span>
-<span class="n">full_greeting</span> <span class="o">=</span> <span class="n">greeting_part_1</span> <span class="o">+</span> <span class="n">name_2</span> <span class="o">+</span> <span class="n">greeting_part_2</span>
-<span class="n">display</span><span class="p">(</span><span class="n">full_greeting</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">say_goodbye</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Goodbye &quot;</span><span class="o">+</span><span class="n">name</span><span class="o">+</span><span class="s2">&quot;!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Write code that calls the function say_goodbye but with your name as a parameter</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">say_goodbye</span><span class="p">(</span><span class="s2">&quot;Kyle&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Welcome, Susan! It is nice to meet you!&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Goodbye Kyle!
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="engagement-report">
-<h2>Engagement report<a class="headerlink" href="#engagement-report" title="Permalink to this headline">#</a></h2>
-<p>Make up numbers for tweet metrics and save them into variables: <code class="docutils literal notranslate"><span class="pre">number_likes</span></code>, <code class="docutils literal notranslate"><span class="pre">number_retweets</span></code>, <code class="docutils literal notranslate"><span class="pre">number_quote_tweets</span></code></p>
+<p>Try out the code below which counts from 0 to 4 slowly:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number_likes</span> <span class="o">=</span> <span class="mi">8</span>
-<span class="n">number_retweets</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">number_quote_tweets</span> <span class="o">=</span> <span class="mi">7</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span> <span class="c1"># We need the time library for the following examples</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Write three different <code class="docutils literal notranslate"><span class="pre">display()</span></code> function calls, one to report on each of those variables.</p>
-<p>Inside the parentheses first put a string like, <code class="docutils literal notranslate"><span class="pre">&quot;The</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">likes</span> <span class="pre">is:</span> <span class="pre">&quot;</span></code> and then add the relevant variable to it, but remember, since the variable has a number in it, you have to put a <code class="docutils literal notranslate"><span class="pre">str()</span></code> function call around that variable name</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The number of likes is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">number_likes</span><span class="p">))</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The number of retweets is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">number_retweets</span><span class="p">))</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The number of quote tweets is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">number_quote_tweets</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The number of likes is: 8&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The number of retweets is: 3&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The number of quote tweets is: 7&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
 </pre></div>
 </div>
 </div>
 </div>
-<p>Make a new variable called <code class="docutils literal notranslate"><span class="pre">total_engagement</span></code> and save the total number of all the likes, retweets and quote tweets.</p>
-<p>Then display that information the way you did the other variables.</p>
+<p>We can put that for loop in a function like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">total_engagement</span> <span class="o">=</span> <span class="n">number_likes</span> <span class="o">+</span> <span class="n">number_retweets</span> <span class="o">+</span> <span class="n">number_quote_tweets</span>
-
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The total engagement is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">total_engagement</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">counter</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>And then we can call it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">counter</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The total engagement is: 18&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="is-your-tweet-too-long">
-<h2>Is your tweet too long<a class="headerlink" href="#is-your-tweet-too-long" title="Permalink to this headline">#</a></h2>
-<p>Make a variable called <code class="docutils literal notranslate"><span class="pre">tweet_1</span></code> with a string of your choosing that is fairly short</p>
+<p>Now redifine <code class="docutils literal notranslate"><span class="pre">counter</span></code> by</p>
+<ol class="simple">
+<li><p>copying the code above which defines <code class="docutils literal notranslate"><span class="pre">counter</span></code></p></li>
+<li><p>make the counter take a parameter called <code class="docutils literal notranslate"><span class="pre">max</span></code></p></li>
+<li><p>Have the <code class="docutils literal notranslate"><span class="pre">range</span></code> call use the parameter <code class="docutils literal notranslate"><span class="pre">max</span></code></p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tweet_1</span> <span class="o">=</span> <span class="s2">&quot;This is a short tweet&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">counter</span><span class="p">(</span><span class="nb">max</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">max</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Make a variable called <code class="docutils literal notranslate"><span class="pre">tweet_1_length</span></code>, and save the length of the string <code class="docutils literal notranslate"><span class="pre">tweet_1</span></code> into it (using the <code class="docutils literal notranslate"><span class="pre">len()</span></code> function)</p>
+<p>Now try calling the new version of <code class="docutils literal notranslate"><span class="pre">counter</span></code> but passing it the argument 7</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tweet_1_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tweet_1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Check if the <code class="docutils literal notranslate"><span class="pre">tweet_1_length</span></code> is less than or equal to 280 characters (the max length of a tweet) using the less than or equal operator: <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, and save the result into a variable called <code class="docutils literal notranslate"><span class="pre">is_tweet_1_short_enough</span></code></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">is_tweet_1_short_enough</span> <span class="o">=</span> <span class="n">tweet_1_length</span> <span class="o">&lt;=</span> <span class="mi">280</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Use the <code class="docutils literal notranslate"><span class="pre">display()</span></code> function to display a string (<code class="docutils literal notranslate"><span class="pre">&quot;Is</span> <span class="pre">tweet</span> <span class="pre">1</span> <span class="pre">short</span> <span class="pre">enough?</span> <span class="pre">&quot;</span></code>), adding the variable <code class="docutils literal notranslate"><span class="pre">is_tweet_1_short_enough</span></code> to that string.</p>
-<p>Remember, since the variable has a boolean and not a string in it, you have to put a str() function call around that variable name</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;Is tweet 1 short enough? &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">is_tweet_1_short_enough</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">counter</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Is tweet 1 short enough? True&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
 </pre></div>
 </div>
 </div>
 </div>
-<p>Make a variable called <code class="docutils literal notranslate"><span class="pre">tweet_2</span></code> with a string of your choosing that is very long (over 280 characters)</p>
+<p>Create a function called <code class="docutils literal notranslate"><span class="pre">multiply</span></code> which takes two arguments, multiplies them together (<code class="docutils literal notranslate"><span class="pre">*</span></code>), and then returns the multiplied value</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tweet_2</span> <span class="o">=</span> <span class="s2">&quot;This is a long tweet: sadasdsaddsadsadsadsadsadsadsadsadsadsadsaasdfdsafsadfsaddsadsaasddsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsdsadsadsadsadsadsadsadsadsadsaddsafdsadsasadadssadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsasda&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">num_1</span><span class="p">,</span> <span class="n">num_2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">num_1</span> <span class="o">*</span> <span class="n">num_2</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Repeat the rest of the steps from before, but with tweet_2</p>
-<ul class="simple">
-<li><p>find tweet_2_length</p></li>
-<li><p>make a variable is_tweet_2_short_enough</p></li>
-<li><p>display the result</p></li>
-</ul>
+<p>Call the <code class="docutils literal notranslate"><span class="pre">mutliply</span></code> function with two numbers and save the result in a variable. Then print out the variable to see that the multiplied number was saved.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tweet_2_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tweet_2</span><span class="p">)</span>
-<span class="n">is_tweet_2_short_enough</span> <span class="o">=</span> <span class="n">tweet_2_length</span> <span class="o">&lt;=</span> <span class="mi">280</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;Is tweet 2 short enough? &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">is_tweet_2_short_enough</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_num</span> <span class="o">=</span> <span class="n">multiply</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">new_num</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Is tweet 2 short enough? False&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
 </pre></div>
 </div>
 </div>
 </div>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1920,19 +1866,12 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="01_solution_practice_statements_variables_sleep.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="08_solution_sentiment_and_loop_vars.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Ch 3 Practice: Statements and Variables</p>
+            <p class="prev-next-title">Ch 8 Practice: Sentiment Analysis and Loop Variables</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="03_practice_lists_dictionaries.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Ch 5 Practice: Looping through lists and dictionaries</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>

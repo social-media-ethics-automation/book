@@ -4,6 +4,9 @@
     - “Content going viral is overwhelming, intimidating, exciting, and downright scary” - Roxane Gay
   - [Accidentally famous: The psychology of going viral](https://www.cnn.com/2018/03/16/health/social-media-fame/index.html)
 
+- On TikTok, instant fame often comes with a price: Sleepless nights, shadowbans and viral cruelty
+By Drew Harwell and Taylor Lorenz https://www.washingtonpost.com/technology/interactive/2022/tiktok-viral-fame-harassment/
+
 ## Aside on “Cancel Culture”
 - It seems to me that the term “cancel culture” is used to mean a number of different things.
   - For offenses ranging from a minor statement that offends some group, to sexual assault of minors (e.g., R. Kelly, Woody Allen, Kevin Spacey)

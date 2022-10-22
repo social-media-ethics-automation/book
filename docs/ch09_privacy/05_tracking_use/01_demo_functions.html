@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>9.5.1. Demo: Functions &#8212; Social Media, Ethics, and Automation</title>
+    <title>9.5.1. Demo: Writing Functions &#8212; Social Media, Ethics, and Automation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -759,7 +759,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../00_privacy.html">
-   9. (Incomplete) Privacy and Security
+   9. Privacy and Security
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
   <label for="toctree-checkbox-19">
@@ -779,7 +779,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../03_privacy_violations.html">
-     9.3. Privacy Violations
+     9.3. Additional Privacy Violations
     </a>
    </li>
    <li class="toctree-l2">
@@ -799,7 +799,7 @@ const thebe_selector_output = ".output, .cell_output"
     <ul class="current">
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       9.5.1. Demo: Functions
+       9.5.1. Demo: Writing Functions
       </a>
      </li>
      <li class="toctree-l3">
@@ -1437,6 +1437,11 @@ const thebe_selector_output = ".output, .cell_output"
      Ch 8 Practice: Sentiment Analysis and Loop Variables
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/solutions/09_solution_functions.html">
+     Ch 9 Practice: Functions
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -1646,343 +1651,34 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#user-defined-functions-vs-built-in-functions">
-   User-Defined Functions VS Built-In Functions
+  <a class="reference internal nav-link" href="#benefits-of-functions">
+   Benefits of Functions
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#built-in-functions">
-     Built-In Functions:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#user-defined-functions-udfs">
-     User-Defined Functions (UDFs):
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-functions">
+   Using Functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defining-functions">
+   Defining Functions
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#parameters">
    Parameters
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-parameter-is-the-variable-listed-inside-the-parentheses-of-the-function-definition">
-     A parameter is the variable listed inside the parentheses of the function definition.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-a-function-that-does-not-include-a-parameter-the-function-name-should-be-followed-by-an-exmpty-parenthesis">
-     1. Create a function that does NOT include a parameter (the function name should be followed by an exmpty parenthesis).
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#call-that-funtion">
-     2. Call that funtion.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-a-function-called-multiplier-that-takes-in-two-parameters-and-prints-out-the-product-of-the-two">
-     3. Create a function called
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       multiplier
-      </span>
-     </code>
-     that takes in two parameters and prints out the product of the two.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#call-the-multiplier-function">
-     4. Call the
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       multiplier
-      </span>
-     </code>
-     function.
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pandas">
-   Pandas
+  <a class="reference internal nav-link" href="#returns">
+   Returns
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pandas-is-the-name-of-the-library-when-we-include-as-pd-we-re-nicknaming-the-library-in-order-to-shorten-the-name-when-we-reference-it-this-is-standard-practice-in-data-science">
-     “pandas” is the name of the library. When we include “as pd”, we’re nicknaming the library in order to shorten the name when we reference it. This is standard practice in data science.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#run-the-following-code-block-to-load-in-the-pandas-library">
-     Run the following code block to load in the pandas library:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#load-in-data-using-function-read-csv">
-     Load in data using function
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       read_csv
-      </span>
-     </code>
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#accessing-a-column">
-   Accessing a Column
+  <a class="reference internal nav-link" href="#wrapping-functions">
+   Wrapping Functions
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#try-it-yourself-access-the-salary-column">
-     5. TRY IT YOURSELF: Access the ‘salary’ column.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#series">
-     Series
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#pandas-is-useful-because-it-not-only-lets-you-access-this-data-conveniently-but-also-perform-computations-on-them">
-       pandas is useful because it not only lets you access this data conveniently, but also perform computations on them.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#one-useful-feature-of-pandas-is-it-lets-you-combine-values-from-different-series-for-example-if-we-wanted-to-we-could-add-the-values-of-the-salary-column-and-the-bonus-column">
-       One useful feature of pandas is it lets you combine values from different Series. For example, if we wanted to, we could add the values of the salary column and the bonus column.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#try-it-yourself-in-the-cell-below-find-the-maximum-emissions-per-capita-emissions-divided-by-population-start-by-computing-this-value-for-each-city-and-then-find-the-maximum-value-of-that-series-using-one-of-the-series-methods-shown-above">
-       6. TRY IT YOURSELF: In the cell below, find the maximum “emissions per capita” (emissions divided by population). Start by computing this value for each city and then find the maximum value of that Series (using one of the Series methods shown above).
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#save-the-result-in-a-variable-called-max-emissions">
-       Save the result in a variable called
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         max_emissions
-        </span>
-       </code>
-       .
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#hint-you-can-save-a-series-in-a-variable-it-s-just-like-any-other-python-value">
-       Hint: You can save a Series in a variable! It’s just like any other Python value!
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#these-computations-also-work-if-one-of-the-values-is-a-single-value-rather-than-a-series-for-example-the-following-cell-adds-10-to-each-of-the-populations">
-       These computations also work if one of the values is a single value rather than a Series. For example, the following cell adds 10 to each of the populations.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#try-it-yourself-divide-each-emission-by-3">
-       7. TRY IT YOURSELF: Divide each emission by 3
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#another-useful-case-for-something-like-this-is-to-compare-the-values-of-a-column-to-a-value-for-example-the-following-cell-computes-which-cities-have-an-emissions-value-of-200-or-more-notice-that-the-datatype-of-the-output-is-boolean-since-the-condition-is-checking-whether-or-not-each-row-in-the-column-meets-the-condition-or-not">
-       Another useful case for something like this is to compare the values of a column to a value. For example, the following cell computes which cities have an emissions value of 200 or more. Notice that the datatype of the output is boolean since the condition is checking whether or not each row in the column meets the condition or not.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#try-it-yourself-check-whether-each-population-is-less-than-or-equal-to-50000">
-       8. TRY IT YOURSELF: Check whether each population is less than or equal to 50000.
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#filtering-data">
-   Filtering Data
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#you-might-have-wondered-why-would-it-be-useful-to-compare-a-series-to-some-random-value-the-power-comes-from-using-this-bool-series-to-b-filter-b-the-dataframe-to-the-rows-you-want">
-     You might have wondered why would it be useful to compare a Series to some random value? The power comes from using this bool Series to
-     <b>
-      filter
-     </b>
-     the DataFrame to the rows you want.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#for-example-what-if-i-wanted-to-print-the-names-of-the-cities-that-have-an-emissions-of-200-or-more-i-can-use-this-bool-series-to-filter-which-rows-i-want">
-     For example, what if I wanted to print the names of the cities that have an emissions of 200 or more? I can use this bool Series to filter which rows I want!
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#we-recommend-splitting-up-the-code-into-many-variables-this-makes-the-code-more-readable-and-often-easieir-to-work-with">
-     We recommend splitting up the code into many variables. This makes the code more readable and often easieir to work with:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#try-it-yourself-return-the-countries-that-have-populations-of-less-than-or-equal-to-50000">
-     9. TRY IT YOURSELF: Return the Countries that have populations of less than or equal to 50000.
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#filtering-on-multiple-conditions">
-   Filtering on Multiple Conditions
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#last-week-we-went-over-or-and-and-operators-padas-has-a-different-syntax-for-these-operators">
-     Last week we went over ‘or’ and ‘and’ operators. padas has a different syntax for these operators:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#if-you-want-to-find-all-cities-that-have-high-emissions-or-are-in-the-us-you-would-write-this">
-     If you want to find all cities that have high emissions OR are in the US, you would write this:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-about-cities-that-have-high-emissions-and-are-in-the-us">
-     What about cities that have high emissions AND are in the US?
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#try-it-yourself-write-code-to-select-all-rows-from-the-dataset-that-are-in-france-or-have-a-population-greater-than-50000">
-     10. TRY IT YOURSELF: write code to select all rows from the dataset that are in France OR have a population greater than 50000.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#save-the-result-in-a-variable-called-pop-or-france">
-     Save the result in a variable called
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pop_or_france
-      </span>
-     </code>
-     .
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     11. TRY IT YOURSELF: write code to select all rows from the dataset that are in France OR have a population greater than 50000.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#save-the-result-in-a-variable-called-pop-and-france">
-     Save the result in a variable called
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pop_and_france
-      </span>
-     </code>
-     .
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-a-function-called-max-machine-that-takes-in-one-parameter-the-name-of-a-column-col-name-and-prints-the-max-value-from-the-column-from-the-dataframe-df2">
-     12. Create a function called
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       max_machine
-      </span>
-     </code>
-     that takes in one parameter (the name of a column
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       col_name
-      </span>
-     </code>
-     ) and prints the
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       max()
-      </span>
-     </code>
-     value from the column from the dataframe,
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       df2
-      </span>
-     </code>
-     .
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#call-the-max-machine-function-you-just-made-with-the-parameter-population">
-     13. Call the
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       max_machine
-      </span>
-     </code>
-     function you just made with the parameter ‘Population’
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-a-function-called-average-machine-that-takes-in-two-parameters-a-dataframe-df-and-a-column-col-the-function-should-print-the-average-of-the-specified-column-of-the-specified-dataframe">
-     14. Create a function called
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       average_machine
-      </span>
-     </code>
-     that takes in two parameters: a dataframe,
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       df
-      </span>
-     </code>
-     , and a column,
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       col
-      </span>
-     </code>
-     . The function should print the average of the specified column of the specified dataframe.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#call-the-average-machine-function-you-just-made-with-parameters-df-and-salary">
-     15. Call the
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       average_machine
-      </span>
-     </code>
-     function you just made with parameters, “df” and “‘salary’”.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#call-the-average-machine-function-you-just-made-with-parameters-df2-and-emissions">
-     16. Call the
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       average_machine
-      </span>
-     </code>
-     function you just made with parameters, “df2” and “‘Emissions’”.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#challenge-create-a-function-called-emissions-per-capita-that-prints-out-the-sentence-city-has-num-emissions-per-capita-for-each-city-in-the-dataframe">
-     CHALLENGE: Create a function called
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       emissions_per_capita
-      </span>
-     </code>
-     that PRINTS out the sentence: “CITY has NUM emissions per capita.” for each city in the dataframe.
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -1993,7 +1689,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Demo: Functions</h1>
+                <h1>Demo: Writing Functions</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -2004,343 +1700,34 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#user-defined-functions-vs-built-in-functions">
-   User-Defined Functions VS Built-In Functions
+  <a class="reference internal nav-link" href="#benefits-of-functions">
+   Benefits of Functions
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#built-in-functions">
-     Built-In Functions:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#user-defined-functions-udfs">
-     User-Defined Functions (UDFs):
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-functions">
+   Using Functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defining-functions">
+   Defining Functions
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#parameters">
    Parameters
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-parameter-is-the-variable-listed-inside-the-parentheses-of-the-function-definition">
-     A parameter is the variable listed inside the parentheses of the function definition.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-a-function-that-does-not-include-a-parameter-the-function-name-should-be-followed-by-an-exmpty-parenthesis">
-     1. Create a function that does NOT include a parameter (the function name should be followed by an exmpty parenthesis).
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#call-that-funtion">
-     2. Call that funtion.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-a-function-called-multiplier-that-takes-in-two-parameters-and-prints-out-the-product-of-the-two">
-     3. Create a function called
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       multiplier
-      </span>
-     </code>
-     that takes in two parameters and prints out the product of the two.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#call-the-multiplier-function">
-     4. Call the
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       multiplier
-      </span>
-     </code>
-     function.
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pandas">
-   Pandas
+  <a class="reference internal nav-link" href="#returns">
+   Returns
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pandas-is-the-name-of-the-library-when-we-include-as-pd-we-re-nicknaming-the-library-in-order-to-shorten-the-name-when-we-reference-it-this-is-standard-practice-in-data-science">
-     “pandas” is the name of the library. When we include “as pd”, we’re nicknaming the library in order to shorten the name when we reference it. This is standard practice in data science.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#run-the-following-code-block-to-load-in-the-pandas-library">
-     Run the following code block to load in the pandas library:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#load-in-data-using-function-read-csv">
-     Load in data using function
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       read_csv
-      </span>
-     </code>
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#accessing-a-column">
-   Accessing a Column
+  <a class="reference internal nav-link" href="#wrapping-functions">
+   Wrapping Functions
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#try-it-yourself-access-the-salary-column">
-     5. TRY IT YOURSELF: Access the ‘salary’ column.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#series">
-     Series
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#pandas-is-useful-because-it-not-only-lets-you-access-this-data-conveniently-but-also-perform-computations-on-them">
-       pandas is useful because it not only lets you access this data conveniently, but also perform computations on them.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#one-useful-feature-of-pandas-is-it-lets-you-combine-values-from-different-series-for-example-if-we-wanted-to-we-could-add-the-values-of-the-salary-column-and-the-bonus-column">
-       One useful feature of pandas is it lets you combine values from different Series. For example, if we wanted to, we could add the values of the salary column and the bonus column.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#try-it-yourself-in-the-cell-below-find-the-maximum-emissions-per-capita-emissions-divided-by-population-start-by-computing-this-value-for-each-city-and-then-find-the-maximum-value-of-that-series-using-one-of-the-series-methods-shown-above">
-       6. TRY IT YOURSELF: In the cell below, find the maximum “emissions per capita” (emissions divided by population). Start by computing this value for each city and then find the maximum value of that Series (using one of the Series methods shown above).
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#save-the-result-in-a-variable-called-max-emissions">
-       Save the result in a variable called
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         max_emissions
-        </span>
-       </code>
-       .
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#hint-you-can-save-a-series-in-a-variable-it-s-just-like-any-other-python-value">
-       Hint: You can save a Series in a variable! It’s just like any other Python value!
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#these-computations-also-work-if-one-of-the-values-is-a-single-value-rather-than-a-series-for-example-the-following-cell-adds-10-to-each-of-the-populations">
-       These computations also work if one of the values is a single value rather than a Series. For example, the following cell adds 10 to each of the populations.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#try-it-yourself-divide-each-emission-by-3">
-       7. TRY IT YOURSELF: Divide each emission by 3
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#another-useful-case-for-something-like-this-is-to-compare-the-values-of-a-column-to-a-value-for-example-the-following-cell-computes-which-cities-have-an-emissions-value-of-200-or-more-notice-that-the-datatype-of-the-output-is-boolean-since-the-condition-is-checking-whether-or-not-each-row-in-the-column-meets-the-condition-or-not">
-       Another useful case for something like this is to compare the values of a column to a value. For example, the following cell computes which cities have an emissions value of 200 or more. Notice that the datatype of the output is boolean since the condition is checking whether or not each row in the column meets the condition or not.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#try-it-yourself-check-whether-each-population-is-less-than-or-equal-to-50000">
-       8. TRY IT YOURSELF: Check whether each population is less than or equal to 50000.
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#filtering-data">
-   Filtering Data
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#you-might-have-wondered-why-would-it-be-useful-to-compare-a-series-to-some-random-value-the-power-comes-from-using-this-bool-series-to-b-filter-b-the-dataframe-to-the-rows-you-want">
-     You might have wondered why would it be useful to compare a Series to some random value? The power comes from using this bool Series to
-     <b>
-      filter
-     </b>
-     the DataFrame to the rows you want.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#for-example-what-if-i-wanted-to-print-the-names-of-the-cities-that-have-an-emissions-of-200-or-more-i-can-use-this-bool-series-to-filter-which-rows-i-want">
-     For example, what if I wanted to print the names of the cities that have an emissions of 200 or more? I can use this bool Series to filter which rows I want!
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#we-recommend-splitting-up-the-code-into-many-variables-this-makes-the-code-more-readable-and-often-easieir-to-work-with">
-     We recommend splitting up the code into many variables. This makes the code more readable and often easieir to work with:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#try-it-yourself-return-the-countries-that-have-populations-of-less-than-or-equal-to-50000">
-     9. TRY IT YOURSELF: Return the Countries that have populations of less than or equal to 50000.
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#filtering-on-multiple-conditions">
-   Filtering on Multiple Conditions
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#last-week-we-went-over-or-and-and-operators-padas-has-a-different-syntax-for-these-operators">
-     Last week we went over ‘or’ and ‘and’ operators. padas has a different syntax for these operators:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#if-you-want-to-find-all-cities-that-have-high-emissions-or-are-in-the-us-you-would-write-this">
-     If you want to find all cities that have high emissions OR are in the US, you would write this:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-about-cities-that-have-high-emissions-and-are-in-the-us">
-     What about cities that have high emissions AND are in the US?
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#try-it-yourself-write-code-to-select-all-rows-from-the-dataset-that-are-in-france-or-have-a-population-greater-than-50000">
-     10. TRY IT YOURSELF: write code to select all rows from the dataset that are in France OR have a population greater than 50000.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#save-the-result-in-a-variable-called-pop-or-france">
-     Save the result in a variable called
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pop_or_france
-      </span>
-     </code>
-     .
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     11. TRY IT YOURSELF: write code to select all rows from the dataset that are in France OR have a population greater than 50000.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#save-the-result-in-a-variable-called-pop-and-france">
-     Save the result in a variable called
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pop_and_france
-      </span>
-     </code>
-     .
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-a-function-called-max-machine-that-takes-in-one-parameter-the-name-of-a-column-col-name-and-prints-the-max-value-from-the-column-from-the-dataframe-df2">
-     12. Create a function called
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       max_machine
-      </span>
-     </code>
-     that takes in one parameter (the name of a column
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       col_name
-      </span>
-     </code>
-     ) and prints the
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       max()
-      </span>
-     </code>
-     value from the column from the dataframe,
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       df2
-      </span>
-     </code>
-     .
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#call-the-max-machine-function-you-just-made-with-the-parameter-population">
-     13. Call the
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       max_machine
-      </span>
-     </code>
-     function you just made with the parameter ‘Population’
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-a-function-called-average-machine-that-takes-in-two-parameters-a-dataframe-df-and-a-column-col-the-function-should-print-the-average-of-the-specified-column-of-the-specified-dataframe">
-     14. Create a function called
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       average_machine
-      </span>
-     </code>
-     that takes in two parameters: a dataframe,
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       df
-      </span>
-     </code>
-     , and a column,
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       col
-      </span>
-     </code>
-     . The function should print the average of the specified column of the specified dataframe.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#call-the-average-machine-function-you-just-made-with-parameters-df-and-salary">
-     15. Call the
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       average_machine
-      </span>
-     </code>
-     function you just made with parameters, “df” and “‘salary’”.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#call-the-average-machine-function-you-just-made-with-parameters-df2-and-emissions">
-     16. Call the
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       average_machine
-      </span>
-     </code>
-     function you just made with parameters, “df2” and “‘Emissions’”.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#challenge-create-a-function-called-emissions-per-capita-that-prints-out-the-sentence-city-has-num-emissions-per-capita-for-each-city-in-the-dataframe">
-     CHALLENGE: Create a function called
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       emissions_per_capita
-      </span>
-     </code>
-     that PRINTS out the sentence: “CITY has NUM emissions per capita.” for each city in the dataframe.
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -2352,435 +1739,410 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="demo-functions">
-<h1><span class="section-number">9.5.1. </span>Demo: Functions<a class="headerlink" href="#demo-functions" title="Permalink to this headline">#</a></h1>
-<section id="user-defined-functions-vs-built-in-functions">
-<h2>User-Defined Functions VS Built-In Functions<a class="headerlink" href="#user-defined-functions-vs-built-in-functions" title="Permalink to this headline">#</a></h2>
-<p>In all programming and scripting language, a function is a block of code which can be used repetitively in a program.</p>
-<section id="built-in-functions">
-<h3>Built-In Functions:<a class="headerlink" href="#built-in-functions" title="Permalink to this headline">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">()</span>
-<span class="n">append</span><span class="p">()</span>
-<span class="nb">range</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">()</span>
-</pre></div>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="demo-writing-functions">
+<h1><span class="section-number">9.5.1. </span>Demo: Writing Functions<a class="headerlink" href="#demo-writing-functions" title="Permalink to this headline">#</a></h1>
+<p>Before we can do our demo of tracking tweepy use, we need to learn how to create functions in Python.</p>
+<p>Functions allow us to run another computer program. In our recipe analogy earlier, we said it was like:</p>
+<p><code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">Make</span> <span class="pre">the</span> <span class="pre">dumpling</span> <span class="pre">dough</span> <span class="pre">(see</span> <span class="pre">recipe</span> <span class="pre">on</span> <span class="pre">page</span> <span class="pre">42).</span></code></p>
+<p>Or</p>
+<p><code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">to</span> <span class="pre">make</span> <span class="pre">dumplings</span> <span class="pre">vegan,</span> <span class="pre">make</span> <span class="pre">the</span> <span class="pre">dumpling</span> <span class="pre">dough</span> <span class="pre">(see</span> <span class="pre">recipe</span> <span class="pre">on</span> <span class="pre">page</span> <span class="pre">42),</span> <span class="pre">but</span> <span class="pre">instead</span> <span class="pre">of</span> <span class="pre">using</span> <span class="pre">the</span> <span class="pre">egg,</span> <span class="pre">subsititute</span> <span class="pre">2</span> <span class="pre">teaspoons</span> <span class="pre">olive</span> <span class="pre">oil</span> <span class="pre">and</span> <span class="pre">2</span> <span class="pre">tablespoons</span> <span class="pre">hot</span> <span class="pre">water.</span></code></p>
+<section id="benefits-of-functions">
+<h2>Benefits of Functions<a class="headerlink" href="#benefits-of-functions" title="Permalink to this headline">#</a></h2>
+<p>There are several advantages to creating and using functions in computer programs, such as:</p>
+<p><strong>Reusing code instead of repeating code</strong>: When we find ourselves repeating a set of actions in our program, we end up writing (or copying) the same code multiple times. If we put that repeated code in a function, then we only have to write it once and then use that function in all the places we were repeating the code.</p>
+<p><strong>Single, standardized definitions</strong>: Let’s say we made code that takes a name and tries to split it into a first name and last name, and we have that code copied in several places in our program. Then we realize that our code isn’t handling some last names correctly, like “O’Reilly” and “Del Toro.” If we fix this bug in one of the places the code is copied in our program it still will be broken elsewhere, so we have to find all the places and fix it there. If, on the other hand we had the code to split names in a function, and used that function everywhere else, then we only have to fix the bug inside that one function and our code everywhere is fixed.</p>
+<p><strong>Code organization</strong>: Making functions also can help us organize our code. It lets us give a name to a block of code, and when we use it, those function names can help make the code more understandable. Making code as functions also helps in letting us put those pieces of code in other files or in code libraries, so the file we are working on is smaller and easier to manage.</p>
 </section>
-<section id="user-defined-functions-udfs">
-<h3>User-Defined Functions (UDFs):<a class="headerlink" href="#user-defined-functions-udfs" title="Permalink to this headline">#</a></h3>
-<p>A user-defined function is a function you create that can be used repetitively. In Python a function is defined using the ‘def’ keyword.</p>
-<p>Creating a User-Defined Function:</p>
+<section id="using-functions">
+<h2>Using Functions<a class="headerlink" href="#using-functions" title="Permalink to this headline">#</a></h2>
+<p>We have been using many functions so far in this book, such as:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">display(2</span> <span class="pre">+</span> <span class="pre">2)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sleep(3)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client.create_tweet(text=&quot;This</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">tweet&quot;)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sentence.upper()</span></code></p></li>
+</ul>
+<p>Now we will be defining our own functions, which we can then use later in our code.</p>
+</section>
+<section id="defining-functions">
+<h2>Defining Functions<a class="headerlink" href="#defining-functions" title="Permalink to this headline">#</a></h2>
+<p>In Python a function is defined using the ‘def’ keyword.</p>
+<p>Creating a Function:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="n">argument1</span><span class="p">,</span> <span class="n">argument2</span><span class="p">):</span>
     <span class="n">STATEMENT</span>
     <span class="n">STATEMENT</span>
     <span class="n">STATEMENT</span>
 </pre></div>
 </div>
-<p>Using a Used-Defined Function that you previously made:</p>
+<p>Using a Function that you previously made:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">function_name</span><span class="p">(</span><span class="n">argument1</span><span class="p">,</span> <span class="n">argument2</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Let’s start with an example function that doesn’t use any arguments:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Try out the following example:</span>
-
-<span class="kn">import</span> <span class="nn">time</span>
-
-<span class="k">def</span> <span class="nf">counter</span><span class="p">():</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">say_hi</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hi!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>In the code above, <code class="docutils literal notranslate"><span class="pre">def</span></code> tells Python we want to define a funciton, <code class="docutils literal notranslate"><span class="pre">say_hi</span></code> is the name we chose for our function, and the empty parentheses <code class="docutils literal notranslate"><span class="pre">()</span></code> mean that it doesn’t take any parameters. There is then a colon (<code class="docutils literal notranslate"><span class="pre">:</span></code>) to say what follows is a code block that will be what happens when the function is called.</p>
+<p>When we run the code above that defines our function, we don’t see any output, but now the function <code class="docutils literal notranslate"><span class="pre">say_hi</span></code> exists and is ready for us to try using it:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using the previously made UDF. Try out the following example:</span>
-
-<span class="n">counter</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">say_hi</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hi!
 </pre></div>
 </div>
 </div>
 </div>
-</section>
+<p>We can now call this function many times, for example in a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">say_hi</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hi!
+Hi!
+Hi!
+Hi!
+Hi!
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also re-define our functions by doing a new <code class="docutils literal notranslate"><span class="pre">def</span></code> statement. It will just replace the old functions definition with the new one:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">say_hi</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hi there!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">say_hi</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hi there!
+Hi there!
+Hi there!
+Hi there!
+Hi there!
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="parameters">
 <h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">#</a></h2>
-<section id="a-parameter-is-the-variable-listed-inside-the-parentheses-of-the-function-definition">
-<h3>A parameter is the variable listed inside the parentheses of the function definition.<a class="headerlink" href="#a-parameter-is-the-variable-listed-inside-the-parentheses-of-the-function-definition" title="Permalink to this headline">#</a></h3>
+<p>Parameters (also called “arguments”) are like variables for a function.</p>
+<p>In the definition of the function, you can list inside the parentheses the parameters you want to be given for you to use in your function code.</p>
+<p>Let’s redefine our <code class="docutils literal notranslate"><span class="pre">say_hi</span></code> function so it takes a paratemeter for the name of a person to say hi to:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># You can also include parameters. Try out the following example:</span>
-
-<span class="k">def</span> <span class="nf">counter_advanced</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>            <span class="c1"># includes parameter &#39;x&#39;</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">say_hi</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hi &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Now when we call the function <code class="docutils literal notranslate"><span class="pre">say_hi</span></code> we need to give it a value in the parentheses (or it gives us an error: <code class="docutils literal notranslate"><span class="pre">missing</span> <span class="pre">required</span> <span class="pre">positional</span> <span class="pre">argument</span></code>)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calling the function &amp; specifying a value in place of the paramter.</span>
-<span class="c1"># Try out the following example:</span>
-
-<span class="n">counter_advanced</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">say_hi</span><span class="p">(</span><span class="s2">&quot;Kyle&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hi Kyle!
 </pre></div>
 </div>
 </div>
 </div>
+<p>We can again use a loop to call our function multiple times, but this time we will loop over a list of names and send a different name each time the function runs:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Try out the following example:</span>
-
-<span class="k">def</span> <span class="nf">addition_machine</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Try calling the function:</span>
-
-<span class="n">addition_machine</span><span class="p">(</span><span class="mi">52846</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Kyle&quot;</span><span class="p">,</span> <span class="s2">&quot;Susan&quot;</span><span class="p">,</span> <span class="s2">&quot;Another Person&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+    <span class="n">say_hi</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>53146
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hi Kyle!
+Hi Susan!
+Hi Another Person!
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="create-a-function-that-does-not-include-a-parameter-the-function-name-should-be-followed-by-an-exmpty-parenthesis">
-<h3>1. Create a function that does NOT include a parameter (the function name should be followed by an exmpty parenthesis).<a class="headerlink" href="#create-a-function-that-does-not-include-a-parameter-the-function-name-should-be-followed-by-an-exmpty-parenthesis" title="Permalink to this headline">#</a></h3>
-</section>
-<section id="call-that-funtion">
-<h3>2. Call that funtion.<a class="headerlink" href="#call-that-funtion" title="Permalink to this headline">#</a></h3>
-</section>
-<section id="create-a-function-called-multiplier-that-takes-in-two-parameters-and-prints-out-the-product-of-the-two">
-<h3>3. Create a function called <code class="docutils literal notranslate"><span class="pre">multiplier</span></code> that takes in two parameters and prints out the product of the two.<a class="headerlink" href="#create-a-function-called-multiplier-that-takes-in-two-parameters-and-prints-out-the-product-of-the-two" title="Permalink to this headline">#</a></h3>
-</section>
-<section id="call-the-multiplier-function">
-<h3>4. Call the <code class="docutils literal notranslate"><span class="pre">multiplier</span></code> function.<a class="headerlink" href="#call-the-multiplier-function" title="Permalink to this headline">#</a></h3>
-</section>
-</section>
-<section id="pandas">
-<h2>Pandas<a class="headerlink" href="#pandas" title="Permalink to this headline">#</a></h2>
-<p>Pandas is an extremely useful library used for large data analysis. Pandas makes it very easy to perform certain tasks quickly.</p>
-<section id="pandas-is-the-name-of-the-library-when-we-include-as-pd-we-re-nicknaming-the-library-in-order-to-shorten-the-name-when-we-reference-it-this-is-standard-practice-in-data-science">
-<h3>“pandas” is the name of the library. When we include “as pd”, we’re nicknaming the library in order to shorten the name when we reference it. This is standard practice in data science.<a class="headerlink" href="#pandas-is-the-name-of-the-library-when-we-include-as-pd-we-re-nicknaming-the-library-in-order-to-shorten-the-name-when-we-reference-it-this-is-standard-practice-in-data-science" title="Permalink to this headline">#</a></h3>
-</section>
-<section id="run-the-following-code-block-to-load-in-the-pandas-library">
-<h3>Run the following code block to load in the pandas library:<a class="headerlink" href="#run-the-following-code-block-to-load-in-the-pandas-library" title="Permalink to this headline">#</a></h3>
+<p>We can make a function that takes multiple parameters. Let’s redefined our function again to take first and last names:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">say_hi</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hi &quot;</span> <span class="o">+</span> <span class="n">first_name</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">last_name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">say_hi</span><span class="p">(</span><span class="s2">&quot;Kyle&quot;</span><span class="p">,</span> <span class="s2">&quot;Thayer&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="nn">Input In [7],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hi Kyle Thayer!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="returns">
+<h2>Returns<a class="headerlink" href="#returns" title="Permalink to this headline">#</a></h2>
+<p>In the above examples, our <code class="docutils literal notranslate"><span class="pre">say_hi</span></code> performs an action of displaying text (we used the <code class="docutils literal notranslate"><span class="pre">print</span></code> function).</p>
+<p>But if we try to save what comes back from running the function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">say_hi_result</span> <span class="o">=</span> <span class="n">say_hi</span><span class="p">(</span><span class="s2">&quot;Kyle&quot;</span><span class="p">,</span> <span class="s2">&quot;Thayer&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hi Kyle Thayer!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">say_hi_result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>None
+</pre></div>
+</div>
+</div>
+</div>
+<p>It says that nothing (<code class="docutils literal notranslate"><span class="pre">None</span></code>) came back out of the function.</p>
+<p>There are other functions that we’ve run that have had things come back that we can save in a variable, like counting the number of characters in a string with <code class="docutils literal notranslate"><span class="pre">len</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_letters</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="s2">&quot;Ethics&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">num_letters</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+<p>In Python, when we want to send something back that can be saved in a variable, we use a <code class="docutils literal notranslate"><span class="pre">return</span></code> in our function definition, like this function which creates the hi message and doesn’t display it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_hi_message</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">):</span>
+    <span class="n">hi_message</span> <span class="o">=</span> <span class="s2">&quot;Hi &quot;</span> <span class="o">+</span> <span class="n">first_name</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">last_name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span>
+    <span class="k">return</span> <span class="n">hi_message</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The return says what value to send back to wherever the function was called. In this case we are sending back what got saved in the <code class="docutils literal notranslate"><span class="pre">hi_message</span></code> variable.</p>
+<p>When we use this function, we can save the result in a variable:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tweet_to_make</span> <span class="o">=</span> <span class="n">create_hi_message</span><span class="p">(</span><span class="s2">&quot;Kyle&quot;</span><span class="p">,</span> <span class="s2">&quot;Thayer&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This time the variable had the message saved, but nothing was displayed. We can now display the variable to see what was saved:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">tweet_to_make</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hi Kyle Thayer!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we want, we can simplify the code by telling return to just send back whatever <code class="docutils literal notranslate"><span class="pre">&quot;Hi</span> <span class="pre">&quot;</span> <span class="pre">+</span> <span class="pre">first_name</span> <span class="pre">+</span> <span class="pre">&quot;</span> <span class="pre">&quot;</span> <span class="pre">+</span> <span class="pre">last_name</span> <span class="pre">+</span> <span class="pre">&quot;!&quot;</span></code> is instead of saving it in an <code class="docutils literal notranslate"><span class="pre">hi_message</span></code> variable first.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_hi_message</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s2">&quot;Hi &quot;</span> <span class="o">+</span> <span class="n">first_name</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">last_name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tweet_to_make</span> <span class="o">=</span> <span class="n">create_hi_message</span><span class="p">(</span><span class="s2">&quot;Susan&quot;</span><span class="p">,</span> <span class="s2">&quot;Notess&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">tweet_to_make</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hi Susan Notess!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="wrapping-functions">
+<h2>Wrapping Functions<a class="headerlink" href="#wrapping-functions" title="Permalink to this headline">#</a></h2>
+<p>One final trick we can do is wrap a function in another function.</p>
+<p>This is a bit of an unusual trick, so you generally don’t have to worry 5oo much about it, but we are going to use it in the “Track Tweepy Use” demo shortly, so we want to explain it.</p>
+<p>Let’s start with a function that adds two numbers together (and yes, this is an unneccesarily complicated replacement for just using <code class="docutils literal notranslate"><span class="pre">+</span></code>)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="n">num_1</span><span class="p">,</span> <span class="n">num_2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">num_1</span> <span class="o">+</span> <span class="n">num_2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can use this function to calculate the current state of our money:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_money</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">money_you_gave_me</span> <span class="o">=</span> <span class="mi">3</span>
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+<span class="n">my_current_money</span> <span class="o">=</span> <span class="n">add_numbers</span><span class="p">(</span><span class="n">my_money</span><span class="p">,</span> <span class="n">money_you_gave_me</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="load-in-data-using-function-read-csv">
-<h3>Load in data using function <code class="docutils literal notranslate"><span class="pre">read_csv</span></code><a class="headerlink" href="#load-in-data-using-function-read-csv" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../INFO-198-content/faculty.csv&#39;</span><span class="p">)</span>
-<span class="n">df</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">my_current_money</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
 </pre></div>
 </div>
 </div>
 </div>
-<p>What is df? It’s a pandas object called a DataFrame which stores a table of values, similar to an Excel table.</p>
-<p>Notice on the top row, it shows the name of the columns (Name and Salary) and on the left-most side, it shows an index for each row (0, 1, and 2).</p>
-<p>DataFrames are powerful because they provide lots of ways to access and perform computations on your data without you having to write much code!</p>
-</section>
-</section>
-<section id="accessing-a-column">
-<h2>Accessing a Column<a class="headerlink" href="#accessing-a-column" title="Permalink to this headline">#</a></h2>
+<p>Now, we can take this function that already exists <code class="docutils literal notranslate"><span class="pre">add_numbers</span></code> and make a <code class="docutils literal notranslate"><span class="pre">new_add_numbers</span></code> function that works the same (it takes the same parameters and then calls the old <code class="docutils literal notranslate"><span class="pre">add_numbers</span></code> function with them), but it also displays what numbers it was called with.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Try running the following example:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">new_add_numbers</span><span class="p">(</span><span class="n">num_1</span><span class="p">,</span> <span class="n">num_2</span><span class="p">):</span>
+    <span class="n">display</span><span class="p">(</span><span class="s2">&quot;--add_numbers was called with &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; and &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_2</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">add_numbers</span><span class="p">(</span><span class="n">num_1</span><span class="p">,</span> <span class="n">num_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’ve now “wrapped” a new function (<code class="docutils literal notranslate"><span class="pre">new_add_numbers</span></code>) around the old <code class="docutils literal notranslate"><span class="pre">add_numbers</span></code> function.</p>
+<p>When we use this new_add_numbers function, we see the output display when the function is called, but we still get the same result back.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_money</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">money_you_gave_me</span> <span class="o">=</span> <span class="mi">3</span>
 
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
+<span class="n">my_current_money</span> <span class="o">=</span> <span class="n">new_add_numbers</span><span class="p">(</span><span class="n">my_money</span><span class="p">,</span> <span class="n">money_you_gave_me</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-</div>
-<section id="try-it-yourself-access-the-salary-column">
-<h3>5. TRY IT YOURSELF: Access the ‘salary’ column.<a class="headerlink" href="#try-it-yourself-access-the-salary-column" title="Permalink to this headline">#</a></h3>
-</section>
-<section id="series">
-<h3>Series<a class="headerlink" href="#series" title="Permalink to this headline">#</a></h3>
-<p>A series is essentially one column of a DataFrame. The previous two code blocks are examples of Series.</p>
-<section id="pandas-is-useful-because-it-not-only-lets-you-access-this-data-conveniently-but-also-perform-computations-on-them">
-<h4>pandas is useful because it not only lets you access this data conveniently, but also perform computations on them.<a class="headerlink" href="#pandas-is-useful-because-it-not-only-lets-you-access-this-data-conveniently-but-also-perform-computations-on-them" title="Permalink to this headline">#</a></h4>
-<p>A Series object has many methods you can call on them to perform computation. Here is a list of some of the most useful ones:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mean: Calculates the average value of the Series
-min: Calculates the minimum value of the Series
-max: Calculates the maximum value of the Series
-count: Calculates the number values in the Series
-unique: Returns a new Series with all the unique values from the Series.
-And many more!
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;--add_numbers was called with 4 and 3&#39;
 </pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Try running the following example to compute the average Salary of the names:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">my_current_money</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, we can take this one step further and <em>replace</em> the original add_numbers function with the wrapped version. To do this, we need to save the old <code class="docutils literal notranslate"><span class="pre">add_number</span></code>s function in a variable which we will call <code class="docutils literal notranslate"><span class="pre">old_add_numbers</span></code> (and yes, we can save functions themselves into variables just like they were any other value)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># save the original add_numbers function</span>
+<span class="n">old_add_numbers</span> <span class="o">=</span> <span class="n">add_numbers</span>
 
-<span class="n">average_salary</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;salary&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="n">average_salary</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load in the &quot;Emissions&quot; CSV file by runnng this code block</span>
+<span class="c1"># wrap a new add numbers function around the original one</span>
+<span class="c1"># and have it display the arguments it was called with</span>
+<span class="k">def</span> <span class="nf">new_add_numbers</span><span class="p">(</span><span class="n">num_1</span><span class="p">,</span> <span class="n">num_2</span><span class="p">):</span>
+    <span class="n">display</span><span class="p">(</span><span class="s2">&quot;--add_numbers was called with &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; and &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_2</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">old_add_numbers</span><span class="p">(</span><span class="n">num_1</span><span class="p">,</span> <span class="n">num_2</span><span class="p">)</span>
 
-<span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../INFO-198-content/emissions.csv&#39;</span><span class="p">)</span>
-<span class="n">df2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="c1"># replace the original add_numbers function with the new wrapped one</span>
+<span class="n">add_numbers</span> <span class="o">=</span> <span class="n">new_add_numbers</span>
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="one-useful-feature-of-pandas-is-it-lets-you-combine-values-from-different-series-for-example-if-we-wanted-to-we-could-add-the-values-of-the-salary-column-and-the-bonus-column">
-<h4>One useful feature of pandas is it lets you combine values from different Series. For example, if we wanted to, we could add the values of the salary column and the bonus column.<a class="headerlink" href="#one-useful-feature-of-pandas-is-it-lets-you-combine-values-from-different-series-for-example-if-we-wanted-to-we-could-add-the-values-of-the-salary-column-and-the-bonus-column" title="Permalink to this headline">#</a></h4>
+<p>Now, we can go back to our code that used the original <code class="docutils literal notranslate"><span class="pre">add_numbers</span></code> function, but now it will get the wrapped version.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Try out the following example:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_money</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">money_you_gave_me</span> <span class="o">=</span> <span class="mi">3</span>
 
-<span class="n">df2</span><span class="p">[</span><span class="s1">&#39;Emissions&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">df2</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">]</span>
+<span class="n">my_current_money</span> <span class="o">=</span> <span class="n">add_numbers</span><span class="p">(</span><span class="n">my_money</span><span class="p">,</span> <span class="n">money_you_gave_me</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-</div>
-<p>This returns a new Series that represents the sum of those two columns. The first value in the Series is the sum of the first values in the two that were added, the second is the sum of the second two, etc.</p>
-<p>*Note: this does NOT change the dataframe.</p>
-</section>
-<section id="try-it-yourself-in-the-cell-below-find-the-maximum-emissions-per-capita-emissions-divided-by-population-start-by-computing-this-value-for-each-city-and-then-find-the-maximum-value-of-that-series-using-one-of-the-series-methods-shown-above">
-<h4>6. TRY IT YOURSELF: In the cell below, find the maximum “emissions per capita” (emissions divided by population). Start by computing this value for each city and then find the maximum value of that Series (using one of the Series methods shown above).<a class="headerlink" href="#try-it-yourself-in-the-cell-below-find-the-maximum-emissions-per-capita-emissions-divided-by-population-start-by-computing-this-value-for-each-city-and-then-find-the-maximum-value-of-that-series-using-one-of-the-series-methods-shown-above" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="save-the-result-in-a-variable-called-max-emissions">
-<h4>Save the result in a variable called <code class="docutils literal notranslate"><span class="pre">max_emissions</span></code>.<a class="headerlink" href="#save-the-result-in-a-variable-called-max-emissions" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="hint-you-can-save-a-series-in-a-variable-it-s-just-like-any-other-python-value">
-<h4>Hint: You can save a Series in a variable! It’s just like any other Python value!<a class="headerlink" href="#hint-you-can-save-a-series-in-a-variable-it-s-just-like-any-other-python-value" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="these-computations-also-work-if-one-of-the-values-is-a-single-value-rather-than-a-series-for-example-the-following-cell-adds-10-to-each-of-the-populations">
-<h4>These computations also work if one of the values is a single value rather than a Series. For example, the following cell adds 10 to each of the populations.<a class="headerlink" href="#these-computations-also-work-if-one-of-the-values-is-a-single-value-rather-than-a-series-for-example-the-following-cell-adds-10-to-each-of-the-populations" title="Permalink to this headline">#</a></h4>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Try out this example:</span>
-
-<span class="n">df2</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">10</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="try-it-yourself-divide-each-emission-by-3">
-<h4>7. TRY IT YOURSELF: Divide each emission by 3<a class="headerlink" href="#try-it-yourself-divide-each-emission-by-3" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="another-useful-case-for-something-like-this-is-to-compare-the-values-of-a-column-to-a-value-for-example-the-following-cell-computes-which-cities-have-an-emissions-value-of-200-or-more-notice-that-the-datatype-of-the-output-is-boolean-since-the-condition-is-checking-whether-or-not-each-row-in-the-column-meets-the-condition-or-not">
-<h4>Another useful case for something like this is to compare the values of a column to a value. For example, the following cell computes which cities have an emissions value of 200 or more. Notice that the datatype of the output is boolean since the condition is checking whether or not each row in the column meets the condition or not.<a class="headerlink" href="#another-useful-case-for-something-like-this-is-to-compare-the-values-of-a-column-to-a-value-for-example-the-following-cell-computes-which-cities-have-an-emissions-value-of-200-or-more-notice-that-the-datatype-of-the-output-is-boolean-since-the-condition-is-checking-whether-or-not-each-row-in-the-column-meets-the-condition-or-not" title="Permalink to this headline">#</a></h4>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Try out this example:</span>
-<span class="n">df2</span><span class="p">[</span><span class="s1">&#39;Emissions&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">200</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="try-it-yourself-check-whether-each-population-is-less-than-or-equal-to-50000">
-<h4>8. TRY IT YOURSELF: Check whether each population is less than or equal to 50000.<a class="headerlink" href="#try-it-yourself-check-whether-each-population-is-less-than-or-equal-to-50000" title="Permalink to this headline">#</a></h4>
-</section>
-</section>
-</section>
-<section id="filtering-data">
-<h2>Filtering Data<a class="headerlink" href="#filtering-data" title="Permalink to this headline">#</a></h2>
-<section id="you-might-have-wondered-why-would-it-be-useful-to-compare-a-series-to-some-random-value-the-power-comes-from-using-this-bool-series-to-b-filter-b-the-dataframe-to-the-rows-you-want">
-<h3>You might have wondered why would it be useful to compare a Series to some random value? The power comes from using this bool Series to <b>filter</b> the DataFrame to the rows you want.<a class="headerlink" href="#you-might-have-wondered-why-would-it-be-useful-to-compare-a-series-to-some-random-value-the-power-comes-from-using-this-bool-series-to-b-filter-b-the-dataframe-to-the-rows-you-want" title="Permalink to this headline">#</a></h3>
-</section>
-<section id="for-example-what-if-i-wanted-to-print-the-names-of-the-cities-that-have-an-emissions-of-200-or-more-i-can-use-this-bool-series-to-filter-which-rows-i-want">
-<h3>For example, what if I wanted to print the names of the cities that have an emissions of 200 or more? I can use this bool Series to filter which rows I want!<a class="headerlink" href="#for-example-what-if-i-wanted-to-print-the-names-of-the-cities-that-have-an-emissions-of-200-or-more-i-can-use-this-bool-series-to-filter-which-rows-i-want" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Here&#39;s what the syntax looks like to filter rows with &#39;Emissions&#39; of 200 or greater.:</span>
-
-<span class="n">df3</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;Emissions&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">200</span><span class="p">]</span>
-<span class="n">df3</span>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;--add_numbers was called with 4 and 3&#39;
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now let&#39;s return only the city names:</span>
-
-<span class="n">df3</span><span class="p">[</span><span class="s1">&#39;City&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">my_current_money</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="we-recommend-splitting-up-the-code-into-many-variables-this-makes-the-code-more-readable-and-often-easieir-to-work-with">
-<h3>We recommend splitting up the code into many variables. This makes the code more readable and often easieir to work with:<a class="headerlink" href="#we-recommend-splitting-up-the-code-into-many-variables-this-makes-the-code-more-readable-and-often-easieir-to-work-with" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Here&#39;s the previous code blocks rewritten (the output should be the same):</span>
-
-<span class="n">emissions</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[</span><span class="s1">&#39;Emissions&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">200</span>
-<span class="n">df3</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[</span><span class="n">emissions</span><span class="p">]</span>
-<span class="n">cities</span> <span class="o">=</span> <span class="n">df3</span><span class="p">[</span><span class="s1">&#39;City&#39;</span><span class="p">]</span>
-<span class="n">cities</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Notice how we can get this result without having to write any loops!</p>
-</section>
-<section id="try-it-yourself-return-the-countries-that-have-populations-of-less-than-or-equal-to-50000">
-<h3>9. TRY IT YOURSELF: Return the Countries that have populations of less than or equal to 50000.<a class="headerlink" href="#try-it-yourself-return-the-countries-that-have-populations-of-less-than-or-equal-to-50000" title="Permalink to this headline">#</a></h3>
-</section>
-</section>
-<section id="filtering-on-multiple-conditions">
-<h2>Filtering on Multiple Conditions<a class="headerlink" href="#filtering-on-multiple-conditions" title="Permalink to this headline">#</a></h2>
-<section id="last-week-we-went-over-or-and-and-operators-padas-has-a-different-syntax-for-these-operators">
-<h3>Last week we went over ‘or’ and ‘and’ operators. padas has a different syntax for these operators:<a class="headerlink" href="#last-week-we-went-over-or-and-and-operators-padas-has-a-different-syntax-for-these-operators" title="Permalink to this headline">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">|</span> <span class="o">=</span> <span class="ow">or</span>
-<span class="o">&amp;</span> <span class="o">=</span> <span class="ow">and</span>
-</pre></div>
-</div>
-</section>
-<section id="if-you-want-to-find-all-cities-that-have-high-emissions-or-are-in-the-us-you-would-write-this">
-<h3>If you want to find all cities that have high emissions OR are in the US, you would write this:<a class="headerlink" href="#if-you-want-to-find-all-cities-that-have-high-emissions-or-are-in-the-us-you-would-write-this" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Try out the following example:</span>
-<span class="n">df2</span><span class="p">[(</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;Emissions&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">200</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;U.S.A.&#39;</span><span class="p">)]</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="what-about-cities-that-have-high-emissions-and-are-in-the-us">
-<h3>What about cities that have high emissions AND are in the US?<a class="headerlink" href="#what-about-cities-that-have-high-emissions-and-are-in-the-us" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Try out the following example:</span>
-<span class="n">df2</span><span class="p">[(</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;Emissions&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">200</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df2</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;U.S.A.&#39;</span><span class="p">)]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A much more readable version of the previous code:</span>
-<span class="n">emissions</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[</span><span class="s1">&#39;Emissions&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">200</span>
-<span class="n">country</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;U.S.A.&#39;</span>
-<span class="n">high_usa</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[</span><span class="n">emissions</span> <span class="o">&amp;</span> <span class="n">country</span><span class="p">]</span>
-<span class="n">high_usa</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="try-it-yourself-write-code-to-select-all-rows-from-the-dataset-that-are-in-france-or-have-a-population-greater-than-50000">
-<h3>10. TRY IT YOURSELF: write code to select all rows from the dataset that are in France OR have a population greater than 50000.<a class="headerlink" href="#try-it-yourself-write-code-to-select-all-rows-from-the-dataset-that-are-in-france-or-have-a-population-greater-than-50000" title="Permalink to this headline">#</a></h3>
-</section>
-<section id="save-the-result-in-a-variable-called-pop-or-france">
-<h3>Save the result in a variable called <code class="docutils literal notranslate"><span class="pre">pop_or_france</span></code>.<a class="headerlink" href="#save-the-result-in-a-variable-called-pop-or-france" title="Permalink to this headline">#</a></h3>
-</section>
-<section id="id1">
-<h3>11. TRY IT YOURSELF: write code to select all rows from the dataset that are in France OR have a population greater than 50000.<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
-</section>
-<section id="save-the-result-in-a-variable-called-pop-and-france">
-<h3>Save the result in a variable called <code class="docutils literal notranslate"><span class="pre">pop_and_france</span></code>.<a class="headerlink" href="#save-the-result-in-a-variable-called-pop-and-france" title="Permalink to this headline">#</a></h3>
-</section>
-<section id="create-a-function-called-max-machine-that-takes-in-one-parameter-the-name-of-a-column-col-name-and-prints-the-max-value-from-the-column-from-the-dataframe-df2">
-<h3>12. Create a function called <code class="docutils literal notranslate"><span class="pre">max_machine</span></code> that takes in one parameter (the name of a column <code class="docutils literal notranslate"><span class="pre">col_name</span></code>) and prints the <code class="docutils literal notranslate"><span class="pre">max()</span></code> value from the column from the dataframe, <code class="docutils literal notranslate"><span class="pre">df2</span></code>.<a class="headerlink" href="#create-a-function-called-max-machine-that-takes-in-one-parameter-the-name-of-a-column-col-name-and-prints-the-max-value-from-the-column-from-the-dataframe-df2" title="Permalink to this headline">#</a></h3>
-</section>
-<section id="call-the-max-machine-function-you-just-made-with-the-parameter-population">
-<h3>13. Call the <code class="docutils literal notranslate"><span class="pre">max_machine</span></code> function you just made with the parameter ‘Population’<a class="headerlink" href="#call-the-max-machine-function-you-just-made-with-the-parameter-population" title="Permalink to this headline">#</a></h3>
-</section>
-<section id="create-a-function-called-average-machine-that-takes-in-two-parameters-a-dataframe-df-and-a-column-col-the-function-should-print-the-average-of-the-specified-column-of-the-specified-dataframe">
-<h3>14. Create a function called <code class="docutils literal notranslate"><span class="pre">average_machine</span></code> that takes in two parameters: a dataframe, <code class="docutils literal notranslate"><span class="pre">df</span></code>, and a column, <code class="docutils literal notranslate"><span class="pre">col</span></code>. The function should print the average of the specified column of the specified dataframe.<a class="headerlink" href="#create-a-function-called-average-machine-that-takes-in-two-parameters-a-dataframe-df-and-a-column-col-the-function-should-print-the-average-of-the-specified-column-of-the-specified-dataframe" title="Permalink to this headline">#</a></h3>
-</section>
-<section id="call-the-average-machine-function-you-just-made-with-parameters-df-and-salary">
-<h3>15. Call the <code class="docutils literal notranslate"><span class="pre">average_machine</span></code> function you just made with parameters, “df” and “‘salary’”.<a class="headerlink" href="#call-the-average-machine-function-you-just-made-with-parameters-df-and-salary" title="Permalink to this headline">#</a></h3>
-</section>
-<section id="call-the-average-machine-function-you-just-made-with-parameters-df2-and-emissions">
-<h3>16. Call the <code class="docutils literal notranslate"><span class="pre">average_machine</span></code> function you just made with parameters, “df2” and “‘Emissions’”.<a class="headerlink" href="#call-the-average-machine-function-you-just-made-with-parameters-df2-and-emissions" title="Permalink to this headline">#</a></h3>
-</section>
-<section id="challenge-create-a-function-called-emissions-per-capita-that-prints-out-the-sentence-city-has-num-emissions-per-capita-for-each-city-in-the-dataframe">
-<h3>CHALLENGE: Create a function called <code class="docutils literal notranslate"><span class="pre">emissions_per_capita</span></code> that PRINTS out the sentence: “CITY has NUM emissions per capita.” for each city in the dataframe.<a class="headerlink" href="#challenge-create-a-function-called-emissions-per-capita-that-prints-out-the-sentence-city-has-num-emissions-per-capita-for-each-city-in-the-dataframe" title="Permalink to this headline">#</a></h3>
-</section>
+<p>If wrapping functions was a confusing process, don’t worry. We are only using it in the “Track Tweepy Use” demo in this chapter, and won’t be using it again.</p>
 </section>
 </section>
 
