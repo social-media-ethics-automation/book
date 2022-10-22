@@ -10,11 +10,14 @@ But while that is the proper security for storing passwords. So for example, [Fa
 
 From a security perspectives there are many risks that a company faces, such as:
 - Employees at the company misusing their access, like [Facebook employees using their database permissions to stalk women](https://www.themarysue.com/facebook-employees-abused-access-target-women/)
-- Hackers finding a vulnerability and inserting, modifying, or downloading information, like [hackers stealing the names, Social Security numbers, birthdates, etc. for 143 million Americans from Equifax](https://en.wikipedia.org/wiki/2017_Equifax_data_breach)
+- Hackers finding a vulnerability and inserting, modifying, or downloading information. For example:
+  - hackers stealing the [names, Social Security numbers, and birthdates of 143 million Americans from Equifax](https://en.wikipedia.org/wiki/2017_Equifax_data_breach)
+  - hackers posting publicly the [phone numbers, names, locations, and some email addresses of 530 million Facebook users](https://www.npr.org/2021/04/09/986005820/after-data-breach-exposes-530-million-facebook-says-it-will-not-notify-users), or about 7% of all people on Earth
 
 Hacking attempts can be made on individuals, whether because the individual is the goal target, or because the individual works at a company which is the target. Hackers can target individuals with attacks like:
 - Password reuse attacks, where if they find out your password from one site, they try that password on many other sites
-- Hackers tricking a computer into thinking they are another site, like how the [US NSA impersonated Google](https://slate.com/technology/2013/10/nsa-smiley-face-muscular-spying-on-google-yahoo-speaks-volumes-about-agency-s-attitude.html)
+- Hackers tricking a computer into thinking they are another site, for example:
+  - the [US NSA impersonated Google](https://slate.com/technology/2013/10/nsa-smiley-face-muscular-spying-on-google-yahoo-speaks-volumes-about-agency-s-attitude.html)
 - [Social engineering](https://en.wikipedia.org/wiki/Social_engineering_(security)), where they try to gain access to information or locations by tricking people. For example:
   - Phishing attacks, where they make a fake version of a website or app and try to get you to enter your information or password into it. Some people have made [malicious QR codes to take you to a phishing site](https://www.pcmag.com/news/fbi-hackers-are-compromising-legit-qr-codes-to-send-you-to-phishing-sites).
   - Many of the actions done by the con-man [Frank Abagnale](https://en.wikipedia.org/wiki/Frank_Abagnale), which were portrayed in the movie [Catch Me If You Can](https://www.imdb.com/title/tt0264464/)
