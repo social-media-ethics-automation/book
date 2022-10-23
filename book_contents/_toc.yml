@@ -145,7 +145,8 @@ parts:
       sections:
       - file: ch10_accessibility/01_disability
       - file: ch10_accessibility/02_accessible_design
-      - file: ch10_accessibility/03_accessibility_on_social_media
+      - file: ch10_accessibility/03_who_designs
+      - file: ch10_accessibility/04_accessibility_on_social_media
       - file: ch10_accessibility/04_demo_get_image_data
       - file: ch10_accessibility/05_demo_get_image_data2
     - file: ch11_virality/00_virality

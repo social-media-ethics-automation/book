@@ -86,7 +86,7 @@ client.create_tweet(text="I might not realize these tweets are being tracked")
 display(tweets_created)
 
 
-# Now, if we were being malicious, we would hide this code in a code library we would try to convince you to use, that way you wouldn't notice the code. And instead of just saving those tweets to a variable, we would send it to ourselves, perhaps by putting code into our new_create_tweet to log into a different twitter account and private messaged that info to ourselves.
+# Now, if we were being malicious, we would hide this code in some other code library we would try to convince you to use, that way you wouldn't notice the code. And instead of just saving those tweets to a variable, we would send it to ourselves, perhaps by putting code into our new_create_tweet to log into a different twitter account and private messaged that info to ourselves.
 
 # ## How can we trust code libraries?
 # If people can make code libraries track us and violate our privacy, how can we trust them? We could try looking at the [source code for tweepy](https://github.com/tweepy/tweepy/blob/ad5e31be58965d67e353128f711857a47f8d45d0/tweepy/client.py#L714) to try and make sure the library we are using isn't doing anything bad, but no programmer can be expected to read through all the libraries they use. There is unfortunately no simple answer to this.
