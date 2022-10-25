@@ -1673,13 +1673,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#set-up">
-   Set up
+  <a class="reference internal nav-link" href="#normal-tweepy-set-up">
+   Normal Tweepy Set-Up
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#find-tweets-with-images">
-   Find tweets with images
+  <a class="reference internal nav-link" href="#get-media-including-image-data">
+   Get media (including image) data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-user-information">
+   Get user information
   </a>
  </li>
 </ul>
@@ -1702,13 +1707,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#set-up">
-   Set up
+  <a class="reference internal nav-link" href="#normal-tweepy-set-up">
+   Normal Tweepy Set-Up
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#find-tweets-with-images">
-   Find tweets with images
+  <a class="reference internal nav-link" href="#get-media-including-image-data">
+   Get media (including image) data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-user-information">
+   Get user information
   </a>
  </li>
 </ul>
@@ -1723,328 +1733,303 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="demo-extra-data-from-twitter">
 <h1><span class="section-number">10.5.2. </span>Demo: Extra Data From Twitter<a class="headerlink" href="#demo-extra-data-from-twitter" title="Permalink to this headline">#</a></h1>
-<section id="set-up">
-<h2>Set up<a class="headerlink" href="#set-up" title="Permalink to this headline">#</a></h2>
+<p>In order to get alt-text data from images in Tweets, we’re going to have to look at how to get extra data from Twitter.</p>
+<p><em>Note: You don’t really need to undestand this whole process, you can just take the final code pieces and copy/paste them to use them yourself. We are including this explanation in case you want to know how it is working.</em></p>
+<p>The examples here are based on examples from <a class="reference external" href="https://dev.to/twitterdev/a-comprehensive-guide-for-using-the-twitter-api-v2-using-tweepy-in-python-15d9">this website</a></p>
+<p>But first let’s do our normal tweepy set-up</p>
+<section id="normal-tweepy-set-up">
+<h2>Normal Tweepy Set-Up<a class="headerlink" href="#normal-tweepy-set-up" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make sure tweepy library is installed</span>
-<span class="kn">import</span> <span class="nn">tweepy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tweepy</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>(optional) use the fake version of tweepy, so you don’t have to use real twitter developer access passwords</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load all your developer access passwords into Python</span>
+<span class="c1"># TODO: Put your twitter account&#39;s special developer access passwords below:</span>
+<span class="n">bearer_token</span> <span class="o">=</span> <span class="s2">&quot;n4tossfgsafs_fake_bearer_token_isa53#$%$&quot;</span>
+<span class="n">consumer_key</span> <span class="o">=</span> <span class="s2">&quot;sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG&quot;</span>
+<span class="n">consumer_secret</span> <span class="o">=</span> <span class="s2">&quot;45adf$T$A_fake_consumer_secret_JESdsg&quot;</span>
+<span class="n">access_token</span> <span class="o">=</span> <span class="s2">&quot;56sd5Ss4tsea_fake_access_token_%YE%hDsdr&quot;</span>
+<span class="n">access_token_secret</span> <span class="o">=</span> <span class="s2">&quot;j^$dr_fake_consumer_key_^A5s#DR5s&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load my twitter keys</span>
-<span class="kn">import</span> <span class="nn">my_bot_keys</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="nn">Input In [2],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># load my twitter keys</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">my_bot_keys</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;my_bot_keys&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># log into tweepy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Give the tweepy code your developer access passwords so</span>
+<span class="c1"># it can perform twitter actions</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span>
-    <span class="n">bearer_token</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">bearer_token</span><span class="p">,</span>
-    <span class="n">consumer_key</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">consumer_secret</span><span class="p">,</span>                   
-    <span class="n">access_token</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">access_token_secret</span>
+   <span class="n">bearer_token</span><span class="o">=</span><span class="n">bearer_token</span><span class="p">,</span>
+   <span class="n">consumer_key</span><span class="o">=</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">consumer_secret</span><span class="p">,</span>
+   <span class="n">access_token</span><span class="o">=</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">access_token_secret</span>
 <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="find-tweets-with-images">
-<h2>Find tweets with images<a class="headerlink" href="#find-tweets-with-images" title="Permalink to this headline">#</a></h2>
-<p>Resources:</p>
+<section id="get-media-including-image-data">
+<h2>Get media (including image) data<a class="headerlink" href="#get-media-including-image-data" title="Permalink to this headline">#</a></h2>
+<p>If we want to get media (including image) data from tweets, when we are using search_recent_tweets, then we have to include:</p>
 <ul class="simple">
-<li><p>Tweepy documentation (for Twitter API v2): https://docs.tweepy.org/en/stable/client.html</p></li>
-<li><p>Some examples of how to use Tweepy: https://dev.to/twitterdev/a-comprehensive-guide-for-using-the-twitter-api-v2-using-tweepy-in-python-15d9</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expansions='attachments.media_keys'</span></code> which tells Tweepy to get the media information for the tweet</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">media_fields=['preview_image_url',</span> <span class="pre">'height',</span> <span class="pre">'width']</span></code> which tells Tweepy which information to get for each piece of media.</p></li>
 </ul>
+<p>Let’s do a search for tweets that include the word dog, and have an image, and are not retweets (so we don’t just get the same tweet for all the times it was retweeted):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#query = &quot;from:KSeattleWeather -is:retweet has:images&quot;</span>
-<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;dog -is:retweet has:images&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;dog -is:retweet has:images&quot;</span>
 
-<span class="n">tweets</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span>
+<span class="n">tweet_search_results</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span>
+                                    <span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span>
                                     <span class="n">expansions</span><span class="o">=</span><span class="s1">&#39;attachments.media_keys&#39;</span><span class="p">,</span> <span class="c1">#tell twitter to download the media related to this tweet</span>
                                     <span class="n">media_fields</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;preview_image_url&#39;</span><span class="p">,</span> <span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="s1">&#39;width&#39;</span><span class="p">]</span>  <span class="c1"># when getting the media, make sure to include this info</span>
                                     <span class="p">)</span>
-
-<span class="c1"># print the infromation from the &quot;media&quot; includes </span>
-<span class="c1"># Note: the media information is stored separately in the results</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">tweets</span><span class="o">.</span><span class="n">includes</span><span class="p">[</span><span class="s1">&#39;media&#39;</span><span class="p">])</span>
-<span class="k">for</span> <span class="n">media</span> <span class="ow">in</span> <span class="n">tweets</span><span class="o">.</span><span class="n">includes</span><span class="p">[</span><span class="s1">&#39;media&#39;</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">media</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">media</span><span class="o">.</span><span class="n">preview_image_url</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">media</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">media</span><span class="o">.</span><span class="n">width</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">()</span>
-    
-
-<span class="c1"># clever trick to make lookup table for media_keys saved in the variable &quot;media&quot;</span>
-<span class="n">media</span> <span class="o">=</span> <span class="p">{</span><span class="n">m</span><span class="p">[</span><span class="s2">&quot;media_key&quot;</span><span class="p">]:</span> <span class="n">m</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">tweets</span><span class="o">.</span><span class="n">includes</span><span class="p">[</span><span class="s1">&#39;media&#39;</span><span class="p">]}</span>
-
-<span class="c1"># go through each tweet</span>
-<span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
-    <span class="c1"># use the tweet id to make a link to this specific tweet</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;https://twitter.com/twitter/statuses/&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
-    
-    <span class="c1"># print the contents of the tweet</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
-    
-    <span class="c1">#get the media keys for this tweet</span>
-    <span class="n">attachments</span> <span class="o">=</span> <span class="n">tweet</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;attachments&#39;</span><span class="p">]</span>
-    <span class="n">media_keys</span> <span class="o">=</span> <span class="n">attachments</span><span class="p">[</span><span class="s1">&#39;media_keys&#39;</span><span class="p">]</span>
-    
-    <span class="c1"># go through each of the photos (or other media)</span>
-    <span class="k">for</span> <span class="n">media_key</span> <span class="ow">in</span> <span class="n">media_keys</span><span class="p">:</span>
-        <span class="c1"># find that media object using the media lookup table</span>
-        <span class="n">media_info</span> <span class="o">=</span> <span class="n">media</span><span class="p">[</span><span class="n">media_key</span><span class="p">]</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">media_info</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  media_key: &quot;</span> <span class="o">+</span> <span class="n">media_info</span><span class="o">.</span><span class="n">media_key</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  height: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">media_info</span><span class="o">.</span><span class="n">height</span><span class="p">))</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  width: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">media_info</span><span class="o">.</span><span class="n">width</span><span class="p">))</span>
-        
-    <span class="nb">print</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;Media media_key=3_1486838563941806081 type=photo&gt;, &lt;Media media_key=16_1486838567636770819 type=animated_gif&gt;, &lt;Media media_key=3_1486838416440446978 type=photo&gt;, &lt;Media media_key=3_1486838375923564545 type=photo&gt;, &lt;Media media_key=3_1486838366100361217 type=photo&gt;, &lt;Media media_key=3_1486838344176836619 type=photo&gt;, &lt;Media media_key=3_1486838312824414211 type=photo&gt;, &lt;Media media_key=3_1486838292288991237 type=photo&gt;, &lt;Media media_key=3_1486838268897361923 type=photo&gt;, &lt;Media media_key=16_1486838246340505610 type=animated_gif&gt;]
-&lt;Media media_key=3_1486838563941806081 type=photo&gt;
-None
-549
-730
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TwitterServerError</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
+<span class="nn">Input In [4],</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;dog -is:retweet has:images&quot;</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">tweet_search_results</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>                                     <span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>                                     <span class="n">expansions</span><span class="o">=</span><span class="s1">&#39;attachments.media_keys&#39;</span><span class="p">,</span> <span class="c1">#tell twitter to download the media related to this tweet</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>                                     <span class="n">media_fields</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;preview_image_url&#39;</span><span class="p">,</span> <span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="s1">&#39;width&#39;</span><span class="p">]</span>  <span class="c1"># when getting the media, make sure to include this info</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>                                     <span class="p">)</span>
 
-&lt;Media media_key=16_1486838567636770819 type=animated_gif&gt;
-https://pbs.twimg.com/tweet_video_thumb/FKJPzLZXIAMmKgF.jpg
-220
-244
+<span class="nn">File C:\Python310\lib\site-packages\tweepy\client.py:1248,</span> in <span class="ni">Client.search_recent_tweets</span><span class="nt">(self, query, user_auth, **params)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1156</span> <span class="sd">&quot;&quot;&quot;search_recent_tweets( \</span>
+<span class="g g-Whitespace">   </span><span class="mi">1157</span><span class="sd">     query, *, end_time=None, expansions=None, max_results=None, \</span>
+<span class="g g-Whitespace">   </span><span class="mi">1158</span><span class="sd">     media_fields=None, next_token=None, place_fields=None, \</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1245</span><span class="sd"> .. _Academic Research Project: https://developer.twitter.com/en/docs/projects</span>
+<span class="g g-Whitespace">   </span><span class="mi">1246</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1247</span> <span class="n">params</span><span class="p">[</span><span class="s2">&quot;query&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">query</span>
+<span class="ne">-&gt; </span><span class="mi">1248</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1249</span>     <span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;/2/tweets/search/recent&quot;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1250</span>     <span class="n">endpoint_parameters</span><span class="o">=</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1251</span>         <span class="s2">&quot;end_time&quot;</span><span class="p">,</span> <span class="s2">&quot;expansions&quot;</span><span class="p">,</span> <span class="s2">&quot;max_results&quot;</span><span class="p">,</span> <span class="s2">&quot;media.fields&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1252</span>         <span class="s2">&quot;next_token&quot;</span><span class="p">,</span> <span class="s2">&quot;place.fields&quot;</span><span class="p">,</span> <span class="s2">&quot;poll.fields&quot;</span><span class="p">,</span> <span class="s2">&quot;query&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1253</span>         <span class="s2">&quot;since_id&quot;</span><span class="p">,</span> <span class="s2">&quot;sort_order&quot;</span><span class="p">,</span> <span class="s2">&quot;start_time&quot;</span><span class="p">,</span> <span class="s2">&quot;tweet.fields&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1254</span>         <span class="s2">&quot;until_id&quot;</span><span class="p">,</span> <span class="s2">&quot;user.fields&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1255</span>     <span class="p">),</span> <span class="n">data_type</span><span class="o">=</span><span class="n">Tweet</span><span class="p">,</span> <span class="n">user_auth</span><span class="o">=</span><span class="n">user_auth</span>
+<span class="g g-Whitespace">   </span><span class="mi">1256</span> <span class="p">)</span>
 
-&lt;Media media_key=3_1486838416440446978 type=photo&gt;
-None
-2048
-946
+<span class="nn">File C:\Python310\lib\site-packages\tweepy\client.py:126,</span> in <span class="ni">BaseClient._make_request</span><span class="nt">(self, method, route, params, endpoint_parameters, json, data_type, user_auth)</span>
+<span class="g g-Whitespace">    </span><span class="mi">122</span> <span class="k">def</span> <span class="nf">_make_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">route</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{},</span> <span class="n">endpoint_parameters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">123</span>                   <span class="n">json</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">data_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">user_auth</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">124</span>     <span class="n">request_params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_process_params</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">endpoint_parameters</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">126</span>     <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">route</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">request_params</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">127</span>                             <span class="n">json</span><span class="o">=</span><span class="n">json</span><span class="p">,</span> <span class="n">user_auth</span><span class="o">=</span><span class="n">user_auth</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">129</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">return_type</span> <span class="ow">is</span> <span class="n">requests</span><span class="o">.</span><span class="n">Response</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">130</span>         <span class="k">return</span> <span class="n">response</span>
 
-&lt;Media media_key=3_1486838375923564545 type=photo&gt;
-None
-2048
-1536
+<span class="nn">File C:\Python310\lib\site-packages\tweepy\client.py:116,</span> in <span class="ni">BaseClient.request</span><span class="nt">(self, method, route, params, json, user_auth)</span>
+<span class="g g-Whitespace">    </span><span class="mi">114</span>         <span class="k">raise</span> <span class="n">TooManyRequests</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">115</span> <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">&gt;=</span> <span class="mi">500</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">116</span>     <span class="k">raise</span> <span class="n">TwitterServerError</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">117</span> <span class="k">if</span> <span class="ow">not</span> <span class="mi">200</span> <span class="o">&lt;=</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">&lt;</span> <span class="mi">300</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">118</span>     <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 
-&lt;Media media_key=3_1486838366100361217 type=photo&gt;
-None
-721
-960
-
-&lt;Media media_key=3_1486838344176836619 type=photo&gt;
-None
-1706
-1080
-
-&lt;Media media_key=3_1486838312824414211 type=photo&gt;
-None
-1600
-1096
-
-&lt;Media media_key=3_1486838292288991237 type=photo&gt;
-None
-2048
-1536
-
-&lt;Media media_key=3_1486838268897361923 type=photo&gt;
-None
-415
-739
-
-&lt;Media media_key=16_1486838246340505610 type=animated_gif&gt;
-https://pbs.twimg.com/tweet_video_thumb/FKJPgeeXMAorbMb.jpg
-282
-374
-
-https://twitter.com/twitter/statuses/1486838578889957377
-COPPER – LOST DOG IN MOUNT OLIVE, IL, 62069
-
-More Details:
-https://t.co/dTILWQPFSb
-#LostPetFlyer
-#LostDog #LostPet #MissingDog
-#LostCat #LostPetFlyer #FoundPet https://t.co/8dyOPyJpjj
-photo
-  media_key: 3_1486838563941806081
-  height: 549
-  width: 730
-
-https://twitter.com/twitter/statuses/1486838575211720714
-@circles_and I&#39;m so sorry. Its the hardest part of being a pet parent.
-
-My dog, Prancer died last Friday.
-May your memories sustain you. https://t.co/NjOaOyiAN6
-animated_gif
-  media_key: 16_1486838567636770819
-  height: 220
-  width: 244
-
-https://twitter.com/twitter/statuses/1486838422903865347
-@Jsorrentino123 Shiloh.  I rescued him.  Literally just on the table to be killed. 💔. People are so mean. He was abused. He ate a couch and other things. It took a few years and lots of Patients. He is a great dog I’ve had him for five years now and I just adore him https://t.co/efSmbiTxBv
-photo
-  media_key: 3_1486838416440446978
-  height: 2048
-  width: 946
-
-https://twitter.com/twitter/statuses/1486838382030381059
-Yay I’m…mini(ish) #BillHader arrived today…ummm I hope my dog doesn’t pee on him; that would be bad… https://t.co/H7HpvArkeN
-photo
-  media_key: 3_1486838375923564545
-  height: 2048
-  width: 1536
-
-https://twitter.com/twitter/statuses/1486838375382282243
-Life imitates art.
-#dogs #doggo #dog #animals #dogsoftwitter #DogsofTwittter https://t.co/FczLiz3t8L
-photo
-  media_key: 3_1486838366100361217
-  height: 721
-  width: 960
-
-https://twitter.com/twitter/statuses/1486838350006956032
-This is Natalie Dive Tom Chaplins wife who dressed him like poodle lap dog https://t.co/1jFzmTzP8M
-photo
-  media_key: 3_1486838344176836619
-  height: 1706
-  width: 1080
-
-https://twitter.com/twitter/statuses/1486838339974139910
-what da dog doin https://t.co/zmmPldhtkk
-photo
-  media_key: 3_1486838312824414211
-  height: 1600
-  width: 1096
-
-https://twitter.com/twitter/statuses/1486838301914910720
-@Krypass what mix is your dog https://t.co/FLP3JHUoRG
-photo
-  media_key: 3_1486838292288991237
-  height: 2048
-  width: 1536
-
-https://twitter.com/twitter/statuses/1486838274119274496
-@airindiain He was aviator. #Chandra #MarathonRunner After #ratantata all failed projects. #Nano . They bring expat to run their business. Kicked out #Mistry who was the former Chairman. Don’t be a dog which believes in being loyal. https://t.co/5QHXLv5pYg
-photo
-  media_key: 3_1486838268897361923
-  height: 415
-  width: 739
-
-https://twitter.com/twitter/statuses/1486838252283781121
-And no, I couldn’t bring back the dog. https://t.co/ICm4LRvSK9
-animated_gif
-  media_key: 16_1486838246340505610
-  height: 282
-  width: 374
+<span class="ne">TwitterServerError</span>: 500 Internal Server Error
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, when our search comes back, it has both the Tweet information and the information about media (including images) in those Tweets.</p>
+<p>Unfortunately the Tweet info and the media info come back in two separate parts of the tweet_search_results:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">tweet_search_results.data</span></code> has the list of tweets</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tweet_search_results.includes['media']</span></code> has a list of the pieces of media in the tweets</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">tweet_search_results</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;Tweet id=1584802143131029504 text=&quot;Favorite macOS Ventura update so far: this new printer preview dog(?) in Xcode.\n\nI accidentally open this instead of &#39;Open Quickly...&#39; on a daily basis. Nice to have a new friend greeting me. 🐶 https://t.co/kK0sJMlQYV&quot;&gt;,
+ &lt;Tweet id=1584802141184876544 text=&#39;Not much light on the dog walk this morning, looking forward to the clocks changing. 🐕🌒 https://t.co/iedHiOFw7X&#39;&gt;,
+ &lt;Tweet id=1584802130141106177 text=&quot;#NowPlaying on #personalfavorites internet radio: Hair of the Dog by Nazareth #ListenLive &#39;Alexa, Play Personal Favorites Now&#39; -or- https://t.co/cGpACL8uW1. #AutumnVibes #October #Halloween\n Buy this Personal Favorite! https://t.co/8UvoY14DK7 https://t.co/VzRPgF3HOC&quot;&gt;,
+ &lt;Tweet id=1584802129381888002 text=&#39;Want to learn more about $TAG? Wait no longer, the tea is about to be spilled!\n\nDog Tag ($TAG) is an ERC-20 governance token for the CollarQuest metaverse. TAG holders will be able to claim rewards if they stake their tokens, play the game, and participate in governance votes. https://t.co/O8eQOdzXbH&#39;&gt;,
+ &lt;Tweet id=1584802098323111942 text=&#39;Dog Mat Cooling Summer Pad Mat For Dogs Cat Blanket Sofa Breathable Pet Dog Bed Summer Washable For Small Medium Large Dogs Car\n\n#hashtag2 \n\nhttps://t.co/anj48xeRmV https://t.co/0ux2oNgcKm&#39;&gt;,
+ &lt;Tweet id=1584802063367966720 text=&#39;【★400円オフクーポン！25日0:00～】ペットシーツ 薄型 ワイド 400枚 レギュラー 800枚 ペットシート 猫 大容量 まとめ買い 業務用 ケース ペット用 犬 トイレシート 超薄型 1回使い捨て オリジナルシーツ ペット用シーツ いぬ 猫 システムトイレ【あす楽】 [楽天] https://t.co/yaIVDfmItN #rakuafl https://t.co/3kpSuY8pha&#39;&gt;,
+ &lt;Tweet id=1584802057894395905 text=&#39;@YONWORLD7 No one can stop this Epic \nBuff Dog going jump higher\nHULK INU going to the Moon 🌕\n\n#HULK\n$HULK #HULKINU\n#STRONGESTINU #HULKARMY\n#ETH #NFT #NFTutilities\n\n@JakeGagain @Yourpop8\n@hulkinuofficial @AdamShelton\n@BSCGemAlert @1goonrich https://t.co/PBLjo9eMPm&#39;&gt;,
+ &lt;Tweet id=1584802056333709312 text=&#39;The real problem with global hearing is that all the virtue signalling in the world has little impact. \n\nCycle? Good. Have a dog? Might as well have had a car. You need to get rid of the dog. https://t.co/EGyFBot17D&#39;&gt;,
+ &lt;Tweet id=1584802052441792512 text=&quot;#Truth \nIn modern times the tail has been wagging the dog &amp;amp; the right to freedom of speech has been suppressed. It&#39;s about time the adults spoke up once &amp;amp; for all before it&#39;s too late. Don&#39;t take your freedom for granted anymore! #StandUp https://t.co/3Gh6FKP9UU&quot;&gt;,
+ &lt;Tweet id=1584802005218111488 text=&#39;Raider Dog Bowl. Custom. R400. Whatsapp/call us at 0829742809 https://t.co/JOBwAE87fp&#39;&gt;]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#query = &quot;from:KSeattleWeather -is:retweet has:images&quot;</span>
-<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;dog -is:retweet has:images&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">tweet_search_results</span><span class="o">.</span><span class="n">includes</span><span class="p">[</span><span class="s1">&#39;media&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;Media media_key=3_1584799486039277569 type=photo&gt;,
+ &lt;Media media_key=3_1584802135358717953 type=photo&gt;,
+ &lt;Media media_key=3_1584802128966688769 type=photo&gt;,
+ &lt;Media media_key=3_1584802127238631424 type=photo&gt;,
+ &lt;Media media_key=3_1584802096259518464 type=photo&gt;,
+ &lt;Media media_key=3_1584802061530824705 type=photo&gt;,
+ &lt;Media media_key=3_1584802054589263872 type=photo&gt;,
+ &lt;Media media_key=3_1584801972791779330 type=photo&gt;,
+ &lt;Media media_key=3_1584801194295189504 type=photo&gt;,
+ &lt;Media media_key=3_1584802023605563393 type=photo&gt;,
+ &lt;Media media_key=3_1584801968148594688 type=photo&gt;,
+ &lt;Media media_key=3_1584801977392893953 type=photo&gt;,
+ &lt;Media media_key=3_1584801988855975936 type=photo&gt;,
+ &lt;Media media_key=3_1584802001287843840 type=photo&gt;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>The way this comes back doesn’t directly tell us which piece of media is part of which tweet. Instead, for each piece of media, there is a special id number called the <code class="docutils literal notranslate"><span class="pre">media_key</span></code>, and for each tweet there is a list of <code class="docutils literal notranslate"><span class="pre">media_key</span></code>s that are part of the tweet.</p>
+<ul class="simple">
+<li><p>for a <code class="docutils literal notranslate"><span class="pre">tweet</span></code> in <code class="docutils literal notranslate"><span class="pre">tweets.data</span></code>, the media_keys are in <code class="docutils literal notranslate"><span class="pre">tweet.data['attachments']['media_keys']</span></code></p></li>
+<li><p>for a piece of <code class="docutils literal notranslate"><span class="pre">media</span></code> in the <code class="docutils literal notranslate"><span class="pre">tweets.includes['media']</span></code>, the media_id is in <code class="docutils literal notranslate"><span class="pre">media['media_key']</span></code></p></li>
+</ul>
+<p>So, if we are looking at a tweet, and look at the media keys, we will want to look up the media information that goes with that key. Looking up something based on a key is easiest to do with a dictionary in Python. So, what we will do is make a dictionary where the keys are media_keys, and the values are the media information. It will look something like this:</p>
+<p>Below is the code to do this (using several Python short hand tricks at once):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">media_lookup</span> <span class="o">=</span> <span class="p">{</span><span class="n">m</span><span class="p">[</span><span class="s2">&quot;media_key&quot;</span><span class="p">]:</span> <span class="n">m</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">tweet_search_results</span><span class="o">.</span><span class="n">includes</span><span class="p">[</span><span class="s1">&#39;media&#39;</span><span class="p">]}</span>
 
-<span class="n">tweets</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span>
-                                    <span class="n">expansions</span><span class="o">=</span><span class="s1">&#39;author_id&#39;</span><span class="p">,</span> <span class="c1">#tell twitter to download the author related to this tweet</span>
-                                    <span class="n">user_fields</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;profile_image_url&#39;</span><span class="p">]</span>  <span class="c1"># when getting the author, make sure to include this info</span>
-                                    <span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">media_lookup</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;3_1584799486039277569&#39;: &lt;Media media_key=3_1584799486039277569 type=photo&gt;,
+ &#39;3_1584802135358717953&#39;: &lt;Media media_key=3_1584802135358717953 type=photo&gt;,
+ &#39;3_1584802128966688769&#39;: &lt;Media media_key=3_1584802128966688769 type=photo&gt;,
+ &#39;3_1584802127238631424&#39;: &lt;Media media_key=3_1584802127238631424 type=photo&gt;,
+ &#39;3_1584802096259518464&#39;: &lt;Media media_key=3_1584802096259518464 type=photo&gt;,
+ &#39;3_1584802061530824705&#39;: &lt;Media media_key=3_1584802061530824705 type=photo&gt;,
+ &#39;3_1584802054589263872&#39;: &lt;Media media_key=3_1584802054589263872 type=photo&gt;,
+ &#39;3_1584801972791779330&#39;: &lt;Media media_key=3_1584801972791779330 type=photo&gt;,
+ &#39;3_1584801194295189504&#39;: &lt;Media media_key=3_1584801194295189504 type=photo&gt;,
+ &#39;3_1584802023605563393&#39;: &lt;Media media_key=3_1584802023605563393 type=photo&gt;,
+ &#39;3_1584801968148594688&#39;: &lt;Media media_key=3_1584801968148594688 type=photo&gt;,
+ &#39;3_1584801977392893953&#39;: &lt;Media media_key=3_1584801977392893953 type=photo&gt;,
+ &#39;3_1584801988855975936&#39;: &lt;Media media_key=3_1584801988855975936 type=photo&gt;,
+ &#39;3_1584802001287843840&#39;: &lt;Media media_key=3_1584802001287843840 type=photo&gt;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we can choose a tweet, find the media_keys for that tweet, and then look up the media information on each of those tweets</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get the first tweet</span>
+<span class="n">first_tweet</span> <span class="o">=</span> <span class="n">tweet_search_results</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
-   
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;displaying info for tweet: &quot;</span> <span class="o">+</span> <span class="n">first_tweet</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 
-<span class="c1"># clever trick to make lookup table for user ids saved in the variable &quot;users&quot;</span>
-<span class="n">users</span> <span class="o">=</span> <span class="p">{</span><span class="n">u</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]:</span> <span class="n">u</span> <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">tweets</span><span class="o">.</span><span class="n">includes</span><span class="p">[</span><span class="s1">&#39;users&#39;</span><span class="p">]}</span>
+<span class="c1"># get the media keys for the first tweet</span>
+<span class="n">first_tweet_media_keys</span> <span class="o">=</span> <span class="n">first_tweet</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;attachments&#39;</span><span class="p">][</span><span class="s1">&#39;media_keys&#39;</span><span class="p">]</span>
 
-<span class="c1"># go through each tweet</span>
-<span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
-    <span class="c1"># use the tweet id to make a link to this specific tweet</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;https://twitter.com/twitter/statuses/&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
+<span class="c1"># loop through the media keys</span>
+<span class="k">for</span> <span class="n">media_key</span> <span class="ow">in</span> <span class="n">first_tweet_media_keys</span><span class="p">:</span>
+    <span class="c1"># lookup the info about this particular media_key</span>
+    <span class="n">media_info</span> <span class="o">=</span> <span class="n">media_lookup</span><span class="p">[</span><span class="n">media_key</span><span class="p">]</span>
     
-    <span class="c1"># print the contents of the tweet</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
-    
-    <span class="c1">#get the authorid for this tweet</span>
-    <span class="n">author_id</span> <span class="o">=</span> <span class="n">tweet</span><span class="o">.</span><span class="n">author_id</span>
-    
-    <span class="c1"># get the author info</span>
-    <span class="n">author</span> <span class="o">=</span> <span class="n">users</span><span class="p">[</span><span class="n">tweet</span><span class="o">.</span><span class="n">author_id</span><span class="p">]</span>
-    
-    <span class="nb">print</span><span class="p">(</span><span class="n">author</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;author profile image: &quot;</span> <span class="o">+</span> <span class="n">author</span><span class="o">.</span><span class="n">profile_image_url</span><span class="p">)</span>
-        
+    <span class="c1"># print out some info about this piece of media</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  type: &quot;</span> <span class="o">+</span> <span class="n">media_info</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  height: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">media_info</span><span class="o">.</span><span class="n">height</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  width: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">media_info</span><span class="o">.</span><span class="n">width</span><span class="p">))</span>
     <span class="nb">print</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>https://twitter.com/twitter/statuses/1486839967175385097
-what da dog doin https://t.co/YxChXXsa9v
-NSFlushes
-author profile image: https://pbs.twimg.com/profile_images/918964218027581442/5jbPBTFR_normal.jpg
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>displaying info for tweet: Favorite macOS Ventura update so far: this new printer preview dog(?) in Xcode.
 
-https://twitter.com/twitter/statuses/1486839953652862977
-liams dog waiting to steal liams phone to tweet https://t.co/ezLKo29L3v
-singularzcarus
-author profile image: https://pbs.twimg.com/profile_images/1485365829034250257/8Ri6VyYL_normal.jpg
+I accidentally open this instead of &#39;Open Quickly...&#39; on a daily basis. Nice to have a new friend greeting me. 🐶 https://t.co/kK0sJMlQYV
+  type: photo
+  height: 628
+  width: 1480
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="get-user-information">
+<h2>Get user information<a class="headerlink" href="#get-user-information" title="Permalink to this headline">#</a></h2>
+<p>User information works the same way that media information did, though there will only be one author per tweet. We have to set an expansion and tell what user fields to download:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;dog -is:retweet has:images&quot;</span>
 
-https://twitter.com/twitter/statuses/1486839934493229057
-It&#39;s been 8 years today that I lost my Brother Jeff, my BEST Friend we were SO tight. He died at 46 from Alcohol abuse after we lost our Mom, he couldn&#39;t cope, I took his Dog and lost her in Nov. It was only us 3, now it&#39;s just me, life has never been the same. https://t.co/qoZDHdS2Vc
-HowellMI69
-author profile image: https://pbs.twimg.com/profile_images/691684415295131650/u1lqwf2p_normal.jpg
+<span class="n">tweet_search_results</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span>
+                                    <span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span>
+                                    <span class="n">expansions</span><span class="o">=</span><span class="s1">&#39;author_id&#39;</span><span class="p">,</span> <span class="c1">#tell twitter to download the author related to this tweet</span>
+                                    <span class="n">user_fields</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;profile_image_url&#39;</span><span class="p">]</span>  <span class="c1"># when getting the author, make sure to include this info</span>
+                                    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then we make a lookup dictionary for the user information</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_lookup</span> <span class="o">=</span> <span class="p">{</span><span class="n">u</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]:</span> <span class="n">u</span> <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">tweet_search_results</span><span class="o">.</span><span class="n">includes</span><span class="p">[</span><span class="s1">&#39;users&#39;</span><span class="p">]}</span>
 
-https://twitter.com/twitter/statuses/1486839921038004224
-@aceCourtBot @_Lord_Bidoof_ @dog_raper28 @VerdantLights @WonderYurr @NoHonig @XxCrash97xX @CodeSpiritAxis @purplednft @_Radonio @NeverNoodle @matt_dm29 @i305louise @ScoobyStu82_ @ShellC_blts @ggssgtheorig @Tearii__ @GoffytoSSGSS @wicecwispiez @BlutheRange @x0v0x__ @Kittlegairy_ @rrs_02 @Slayer9915 @Werme__ @amluyy @blacKxngg @aqurids @PieNinja_ @TheGimmickAcc it’s me! https://t.co/czUsY22HK2
-Moon_lol1
-author profile image: https://pbs.twimg.com/profile_images/1476069012673019906/5x63pQre_normal.jpg
+<span class="n">display</span><span class="p">(</span><span class="n">user_lookup</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1727995530: &lt;User id=1727995530 name=Syed Haris Ahmed 🇵🇰 username=syedharisahmed4&gt;,
+ 1072162801: &lt;User id=1072162801 name=Stephanie Cowburn username=StephCowburn&gt;,
+ 19609660: &lt;User id=19609660 name=Tom Gillispie -- NATURE NEEDS OUR HELP 🦮🌎🌊🏈 username=EDITORatWORK&gt;,
+ 1564817655802089472: &lt;User id=1564817655802089472 name=jenn 🍂 username=jennitaliass&gt;,
+ 1542487286058819586: &lt;User id=1542487286058819586 name=实体_店_会_所_ 西湖 滨江 拱墅 绍兴 西安 北郊 未央 雁塔 曲江 陕西 咸阳 武汉 武昌 username=LeanaNeyland&gt;,
+ 769963290680233984: &lt;User id=769963290680233984 name=ハルにゃん@取引用アカウント username=harunyancyuuu&gt;,
+ 7681732: &lt;User id=7681732 name=Eileen username=NZNeep&gt;,
+ 1563865803946336256: &lt;User id=1563865803946336256 name=Mark Zz 🧪 🧪 🧪 🧪 username=MarkZz86437584&gt;,
+ 1097114082849771522: &lt;User id=1097114082849771522 name=The Garden House username=TheGardenHouse5&gt;,
+ 1344888147549814785: &lt;User id=1344888147549814785 name=Paul Storm username=PaulSto91558029&gt;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then we can find the <code class="docutils literal notranslate"><span class="pre">author_id</span></code> of a tweet in tweet.author_id, and look it up in the <code class="docutils literal notranslate"><span class="pre">user_lookup</span></code> dictionary</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_tweet</span> <span class="o">=</span> <span class="n">tweet_search_results</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
-https://twitter.com/twitter/statuses/1486839895335350279
-NIGGA FLEXIN ON YOU IS MY DUTY I&#39;M THE BIG DOG MY NICKNAME IS SCOOBY https://t.co/Hl249ZHYjM
-lsol8tion
-author profile image: https://pbs.twimg.com/profile_images/1477061180200034309/7-8cR45U_normal.jpg
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;displaying info for tweet: &quot;</span> <span class="o">+</span> <span class="n">first_tweet</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 
-https://twitter.com/twitter/statuses/1486839887756210183
-Singlehandedly bringing the dog filter back from the dead https://t.co/ZifdAFDSXD
-strwbeerry
-author profile image: https://pbs.twimg.com/profile_images/1485448292406341639/p18gmAc9_normal.jpg
+<span class="c1"># get the author id for the first tweet</span>
+<span class="n">first_tweet_author_id</span> <span class="o">=</span> <span class="n">first_tweet</span><span class="o">.</span><span class="n">author_id</span>
 
-https://twitter.com/twitter/statuses/1486839864955846661
-いいねの数×24時間 無料で公開されるアプリ🖥️
+<span class="n">author</span> <span class="o">=</span> <span class="n">user_lookup</span><span class="p">[</span><span class="n">first_tweet_author_id</span><span class="p">]</span>
 
-https://t.co/2Tc0GJIxjw https://t.co/sAeOgnOpVu
-AstieDog
-author profile image: https://pbs.twimg.com/profile_images/1474874275761115136/v2A7TFig_normal.jpg
-
-https://twitter.com/twitter/statuses/1486839836904464387
-@notonemorevet @dog_rates @parkertheboatdog says ahoy there https://t.co/mZ4CUfZJGL
-Bulldogvoce
-author profile image: https://pbs.twimg.com/profile_images/634956380722581504/9_RhAQyW_normal.jpg
-
-https://twitter.com/twitter/statuses/1486839804012769284
-@RealMichaelKay @DonLagreca @Rosenbergradio
-Watching you guys on yes w my dog and my 6 day old rt now! https://t.co/9rrZIdp1wR
-MikeDepinto3rd
-author profile image: https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png
-
-https://twitter.com/twitter/statuses/1486839743128248321
-@plumberdave There are no good words to console you when you lose the unconditional love of a good dog. I am very sorry. https://t.co/oIBzQMZif0
-CoachMarcWilson
-author profile image: https://pbs.twimg.com/profile_images/753187898199986181/wxH14AQ9_normal.jpg
+<span class="c1"># look up info about the author:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  author name: &quot;</span> <span class="o">+</span> <span class="n">author</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  author username: &quot;</span> <span class="o">+</span> <span class="n">author</span><span class="o">.</span><span class="n">username</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  author profile image: &quot;</span> <span class="o">+</span> <span class="n">author</span><span class="o">.</span><span class="n">profile_image_url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>displaying info for tweet: Sometimes I feel sorry for the mainstream media in this country. It seems that not only Ducky, but all of you have been bitten by the dog. What is the level of our media? https://t.co/FfMaygdlHk
+  author name: Syed Haris Ahmed 🇵🇰
+  author username: syedharisahmed4
+  author profile image: https://pbs.twimg.com/profile_images/1564543192103587842/lcoBoC_c_normal.jpg
 </pre></div>
 </div>
 </div>

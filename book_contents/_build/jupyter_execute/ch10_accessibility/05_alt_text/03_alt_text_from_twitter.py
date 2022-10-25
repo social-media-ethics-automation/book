@@ -2,73 +2,69 @@
 # coding: utf-8
 
 # # Demo: Alt-text From Twitter
+# Now that we've seen how to select additional information about Tweet images and data, let's search for images and look up some alt-text:
 
-# ## Set up
+# ## Normal Tweepy Set-Up
 
 # In[1]:
 
 
-# Install variable inspector (then reload browser tab)
-get_ipython().system('pip install lckr-jupyterlab-variableinspector')
+import tweepy
 
+
+# (optional) use the fake version of tweepy, so you don’t have to use real twitter developer access passwords
 
 # In[ ]:
 
 
-# make sure tweepy library is installed
-get_ipython().system('pip install tweepy')
-import tweepy
+
 
 
 # In[2]:
 
 
-# load my twitter keys
-import my_bot_keys
+# Load all your developer access passwords into Python
+# TODO: Put your twitter account's special developer access passwords below:
+bearer_token = "n4tossfgsafs_fake_bearer_token_isa53#$%$"
+consumer_key = "sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG"
+consumer_secret = "45adf$T$A_fake_consumer_secret_JESdsg"
+access_token = "56sd5Ss4tsea_fake_access_token_%YE%hDsdr"
+access_token_secret = "j^$dr_fake_consumer_key_^A5s#DR5s"
 
 
 # In[3]:
 
 
-# log into tweepy
+# Give the tweepy code your developer access passwords so
+# it can perform twitter actions
 client = tweepy.Client(
-    bearer_token=my_bot_keys.bearer_token,
-    consumer_key=my_bot_keys.consumer_key, consumer_secret=my_bot_keys.consumer_secret,                   
-    access_token=my_bot_keys.access_token, access_token_secret=my_bot_keys.access_token_secret
+   bearer_token=bearer_token,
+   consumer_key=consumer_key, consumer_secret=consumer_secret,
+   access_token=access_token, access_token_secret=access_token_secret
 )
 
 
-# ## Find tweets with images
-# Resources: 
-# * Tweepy documentation (for Twitter API v2): https://docs.tweepy.org/en/stable/client.html
-# * Some examples of how to use Tweepy: https://dev.to/twitterdev/a-comprehensive-guide-for-using-the-twitter-api-v2-using-tweepy-in-python-15d9 
+# ## Do a search for tweets, loop through the tweets and display the alt-text information
 
-# In[15]:
+# In[4]:
 
 
-query = "from:KSeattleWeather -is:retweet has:images"
+query = "dog -is:retweet has:images"
 
-tweets = client.search_recent_tweets(query=query,
+tweet_search_results = client.search_recent_tweets(
+                                    query=query,
                                     expansions='attachments.media_keys', #tell twitter to download the media related to this tweet
-                                    media_fields=['preview_image_url', 'height', 'width']  # when getting the media, make sure to include this info
+                                    media_fields=['alt_text', 'url'],  # when getting the media, make sure to include this info
+                                    max_results=100
                                     )
 
-# print the infromation from the "media" includes 
-# Note: the media information is stored separately in the results
-print(tweets.includes['media'])
-for media in tweets.includes['media']:
-    print(media)
-    print(media.preview_image_url)
-    print(media.height)
-    print(media.width)
-    print()
-    
 
-# clever trick to make lookup table for media_keys saved in the variable "media"
-media = {m["media_key"]: m for m in tweets.includes['media']}
+# make media_lookup dictionary
+media_lookup = {m["media_key"]: m for m in tweet_search_results.includes['media']}
 
 # go through each tweet
-for tweet in tweets.data:
+for tweet in tweet_search_results.data:
+    
     # use the tweet id to make a link to this specific tweet
     print('https://twitter.com/twitter/statuses/' + str(tweet.id))
     
@@ -77,17 +73,28 @@ for tweet in tweets.data:
     
     # print the info on "attachments" for this tweet
     #  in this case, it will be the media_keys
-    print(tweet.data.get('attachments'))
     
     #get the media keys for this tweet
-    attachments = tweet.data['attachments']
-    media_keys = attachments['media_keys']
+    media_keys = tweet.data['attachments']['media_keys']
     
-    #look up first piece of media
-    first_photo = media[media_keys[0]]
-    
-    #print the height and width of that first photo
-    print(first_photo.height)
-    print(first_photo.width)
+    for media_key in media_keys:
+        # lookup the info about this particular media_key
+        media_info = media_lookup[media_key]
+
+        # print out some info about this piece of media
+        print("  type: " + media_info.type)
+        print("  alt_text: " + str(media_info.alt_text))
+        print("  url: " + str(media_info.url))
+        print()
+       
+    # display a clear divider so we can more easily see each tweet
     print()
+    print("------------------------")
+    print()
+
+
+# In[ ]:
+
+
+
 
