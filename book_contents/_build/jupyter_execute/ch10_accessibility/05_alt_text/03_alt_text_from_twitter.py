@@ -14,13 +14,13 @@ import tweepy
 
 # (optional) use the fake version of tweepy, so you don’t have to use real twitter developer access passwords
 
-# In[ ]:
-
-
-
-
-
 # In[2]:
+
+
+get_ipython().run_line_magic('run', '../../fake_tweepy/fake_tweepy.ipynb')
+
+
+# In[3]:
 
 
 # Load all your developer access passwords into Python
@@ -32,7 +32,7 @@ access_token = "56sd5Ss4tsea_fake_access_token_%YE%hDsdr"
 access_token_secret = "j^$dr_fake_consumer_key_^A5s#DR5s"
 
 
-# In[3]:
+# In[4]:
 
 
 # Give the tweepy code your developer access passwords so
@@ -46,7 +46,7 @@ client = tweepy.Client(
 
 # ## Do a search for tweets, loop through the tweets and display the alt-text information
 
-# In[4]:
+# In[5]:
 
 
 query = "dog -is:retweet has:images"
@@ -60,7 +60,7 @@ tweet_search_results = client.search_recent_tweets(
 
 
 # make media_lookup dictionary
-media_lookup = {m["media_key"]: m for m in tweet_search_results.includes['media']}
+media_lookup = {m.media_key: m for m in tweet_search_results.includes['media']}
 
 # go through each tweet
 for tweet in tweet_search_results.data:
@@ -68,8 +68,8 @@ for tweet in tweet_search_results.data:
     # use the tweet id to make a link to this specific tweet
     print('https://twitter.com/twitter/statuses/' + str(tweet.id))
     
-    # print the contents of the tweet
-    print(tweet)
+    # print the text content of the tweet
+    print(tweet.text)
     
     # print the info on "attachments" for this tweet
     #  in this case, it will be the media_keys
@@ -88,13 +88,11 @@ for tweet in tweet_search_results.data:
         print()
        
     # display a clear divider so we can more easily see each tweet
-    print()
     print("------------------------")
     print()
 
 
-# In[ ]:
-
-
-
-
+# ## What alt-texts do you find helpful?
+# In the above output, you are in a position where you can read the alt-text of the image, but you can't see the image (unless you open up the actual tweets, which if you are looking at the fake_tweepy output, there are no actual tweets).
+# 
+# Without seeing the images you can hopefully see what makes alt-text useful or not. Posts without alt-text will be hard to make sense of, and some alt text on photos might tell you information about the photo, but not the information you need.

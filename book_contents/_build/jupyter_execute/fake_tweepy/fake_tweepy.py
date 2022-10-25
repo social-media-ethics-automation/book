@@ -48,7 +48,7 @@ def print_tweet(text="", in_reply_to_tweet_id=0):
 # In[5]:
 
 
-def search_recent_tweets(query="", tweet_fields=[], max_results=10):
+def search_recent_tweets(query="", tweet_fields=[], expansions=[], media_fields=[], user_fields=[], max_results=10):
     print_info("Fake Tweepy is pretending to search for '"+query+"' and is returning some fake tweets.")
     if(query == '"cute cat"'):
         return SimpleNamespace(
@@ -114,6 +114,85 @@ def search_recent_tweets(query="", tweet_fields=[], max_results=10):
                   text = "Hope all my followers are having a lovely day!",
                   id = 321923,
                   source = 'Fake Social Media Manager',
+              )
+          ]
+        )
+    if(query == "dog -is:retweet has:images"):
+        return SimpleNamespace(
+          includes = {
+              "media": [
+                   SimpleNamespace(
+                      media_key = "7_4353463",
+                      type = "photo",
+                      height = 600,
+                      width = 800,
+                      alt_text = "Photo of a small dog lying flat on floor, looking exhausted",
+                      url = "fake_website_photo1.jpg"
+                  ),
+                  SimpleNamespace(
+                      media_key = "4_354354",
+                      type = "photo",
+                      height = 300,
+                      width = 400,
+                      alt_text = None,
+                      url = "fake_website_photo2.jpg"
+                  ),
+                  SimpleNamespace(
+                      media_key = "4_324654",
+                      type = "photo",
+                      height = 300,
+                      width = 400,
+                      alt_text = None,
+                      url = "fake_website_photo3.jpg"
+                  ),
+                  SimpleNamespace(
+                      media_key = "5_45353",
+                      type = "photo",
+                      height = 1200,
+                      width = 1024,
+                      alt_text = "photo taken by fake user 2",
+                      url = "fake_website_photo4.jpg"
+                  )
+              ],
+              "users": [
+                  SimpleNamespace(
+                      id = 213412413,
+                      name = "Fake User 1",
+                      username = "fakeuser1",
+                      profile_image_url = "fake_profile_image1.jpg"
+                  ),
+                  SimpleNamespace(
+                      id = 309453565,
+                      name = "Fake User 2",
+                      username = "fakeuser2",
+                      profile_image_url = "fake_profile_image2.jpg"
+                  )
+              ]
+          },
+          data = [
+              SimpleNamespace(
+                  text = "Look at my cute dog!",
+                  id = 2342352355,
+                  author_id = 213412413,
+                  data = { "attachments": {
+                      "media_keys": ["7_4353463"]
+                  } }
+              ),
+              SimpleNamespace(
+                  text = "check out these dog photos",
+                  id = 93298432,
+                  author_id = 309453565,
+                  data = { "attachments": {
+                      "media_keys": ["4_354354", "4_324654"]
+                  } }
+              ),
+              SimpleNamespace(
+                  text = "lol silly dog!",
+                  id = 43954354,
+                  author_id = 309453565,
+                  data = { "attachments": {
+                      "media_keys": ["5_45353"]
+                  } }
               )
           ]
         )

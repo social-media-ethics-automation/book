@@ -21,13 +21,13 @@ import tweepy
 
 # (optional) use the fake version of tweepy, so you don’t have to use real twitter developer access passwords
 
-# In[ ]:
-
-
-
-
-
 # In[2]:
+
+
+get_ipython().run_line_magic('run', '../../fake_tweepy/fake_tweepy.ipynb')
+
+
+# In[3]:
 
 
 # Load all your developer access passwords into Python
@@ -39,7 +39,7 @@ access_token = "56sd5Ss4tsea_fake_access_token_%YE%hDsdr"
 access_token_secret = "j^$dr_fake_consumer_key_^A5s#DR5s"
 
 
-# In[3]:
+# In[4]:
 
 
 # Give the tweepy code your developer access passwords so
@@ -59,7 +59,7 @@ client = tweepy.Client(
 # 
 # Let's do a search for tweets that include the word dog, and have an image, and are not retweets (so we don't just get the same tweet for all the times it was retweeted):
 
-# In[4]:
+# In[5]:
 
 
 query = "dog -is:retweet has:images"
@@ -79,13 +79,13 @@ tweet_search_results = client.search_recent_tweets(
 # 
 # 
 
-# In[7]:
+# In[6]:
 
 
 display(tweet_search_results.data)
 
 
-# In[12]:
+# In[7]:
 
 
 display(tweet_search_results.includes['media'])
@@ -99,17 +99,17 @@ display(tweet_search_results.includes['media'])
 # 
 # Below is the code to do this (using several Python short hand tricks at once):
 
-# In[14]:
+# In[8]:
 
 
-media_lookup = {m["media_key"]: m for m in tweet_search_results.includes['media']}
+media_lookup = {m.media_key: m for m in tweet_search_results.includes['media']}
 
 display(media_lookup)
 
 
 # Now we can choose a tweet, find the media_keys for that tweet, and then look up the media information on each of those tweets
 
-# In[17]:
+# In[9]:
 
 
 # get the first tweet
@@ -135,7 +135,7 @@ for media_key in first_tweet_media_keys:
 # ## Get user information
 # User information works the same way that media information did, though there will only be one author per tweet. We have to set an expansion and tell what user fields to download:
 
-# In[19]:
+# In[10]:
 
 
 query = "dog -is:retweet has:images"
@@ -149,17 +149,17 @@ tweet_search_results = client.search_recent_tweets(
 
 # Then we make a lookup dictionary for the user information
 
-# In[20]:
+# In[11]:
 
 
-user_lookup = {u["id"]: u for u in tweet_search_results.includes['users']}
+user_lookup = {u.id: u for u in tweet_search_results.includes['users']}
 
 display(user_lookup)
 
 
 # Then we can find the `author_id` of a tweet in tweet.author_id, and look it up in the `user_lookup` dictionary
 
-# In[23]:
+# In[12]:
 
 
 first_tweet = tweet_search_results.data[0]
