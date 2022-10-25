@@ -828,7 +828,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../00_accessibility.html">
-   10. (Incomplete) Accessibility
+   10. Accessibility
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
   <label for="toctree-checkbox-21">
@@ -1682,6 +1682,11 @@ title="Print to PDF"
    Do a search for tweets, loop through the tweets and display the alt-text information
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-alt-texts-do-you-find-helpful">
+   What alt-texts do you find helpful?
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -1711,6 +1716,11 @@ title="Print to PDF"
    Do a search for tweets, loop through the tweets and display the alt-text information
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-alt-texts-do-you-find-helpful">
+   What alt-texts do you find helpful?
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -1736,6 +1746,15 @@ title="Print to PDF"
 <p>(optional) use the fake version of tweepy, so you don’t have to use real twitter developer access passwords</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_tweepy/fake_tweepy.ipynb
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake tweepy is replacing the tweepy library. Fake Tweepy doesn&#x27;t need real passwords, and prevents you from accessing real twitter</strong></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load all your developer access passwords into Python</span>
 <span class="c1"># TODO: Put your twitter account&#39;s special developer access passwords below:</span>
 <span class="n">bearer_token</span> <span class="o">=</span> <span class="s2">&quot;n4tossfgsafs_fake_bearer_token_isa53#$%$&quot;</span>
@@ -1759,6 +1778,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to log in to twitter</strong></div></div>
 </div>
 </section>
 <section id="do-a-search-for-tweets-loop-through-the-tweets-and-display-the-alt-text-information">
@@ -1776,7 +1797,7 @@ title="Print to PDF"
 
 
 <span class="c1"># make media_lookup dictionary</span>
-<span class="n">media_lookup</span> <span class="o">=</span> <span class="p">{</span><span class="n">m</span><span class="p">[</span><span class="s2">&quot;media_key&quot;</span><span class="p">]:</span> <span class="n">m</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">tweet_search_results</span><span class="o">.</span><span class="n">includes</span><span class="p">[</span><span class="s1">&#39;media&#39;</span><span class="p">]}</span>
+<span class="n">media_lookup</span> <span class="o">=</span> <span class="p">{</span><span class="n">m</span><span class="o">.</span><span class="n">media_key</span><span class="p">:</span> <span class="n">m</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">tweet_search_results</span><span class="o">.</span><span class="n">includes</span><span class="p">[</span><span class="s1">&#39;media&#39;</span><span class="p">]}</span>
 
 <span class="c1"># go through each tweet</span>
 <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweet_search_results</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
@@ -1784,8 +1805,8 @@ title="Print to PDF"
     <span class="c1"># use the tweet id to make a link to this specific tweet</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;https://twitter.com/twitter/statuses/&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
     
-    <span class="c1"># print the contents of the tweet</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
+    <span class="c1"># print the text content of the tweet</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
     
     <span class="c1"># print the info on &quot;attachments&quot; for this tweet</span>
     <span class="c1">#  in this case, it will be the media_keys</span>
@@ -1804,65 +1825,48 @@ title="Print to PDF"
         <span class="nb">print</span><span class="p">()</span>
        
     <span class="c1"># display a clear divider so we can more easily see each tweet</span>
-    <span class="nb">print</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------------------&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TwitterServerError</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
-<span class="nn">Input In [4],</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;dog -is:retweet has:images&quot;</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">tweet_search_results</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>                                     <span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>                                     <span class="n">expansions</span><span class="o">=</span><span class="s1">&#39;attachments.media_keys&#39;</span><span class="p">,</span> <span class="c1">#tell twitter to download the media related to this tweet</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>                                     <span class="n">media_fields</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;alt_text&#39;</span><span class="p">,</span> <span class="s1">&#39;url&#39;</span><span class="p">],</span>  <span class="c1"># when getting the media, make sure to include this info</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>                                     <span class="n">max_results</span><span class="o">=</span><span class="mi">100</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>                                     <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="c1"># make media_lookup dictionary</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="n">media_lookup</span> <span class="o">=</span> <span class="p">{</span><span class="n">m</span><span class="p">[</span><span class="s2">&quot;media_key&quot;</span><span class="p">]:</span> <span class="n">m</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">tweet_search_results</span><span class="o">.</span><span class="n">includes</span><span class="p">[</span><span class="s1">&#39;media&#39;</span><span class="p">]}</span>
+<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to search for &#x27;dog -is:retweet has:images&#x27; and is returning some fake tweets.</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>https://twitter.com/twitter/statuses/2342352355
+Look at my cute dog!
+  type: photo
+  alt_text: Photo of a small dog lying flat on floor, looking exhausted
+  url: fake_website_photo1.jpg
 
-<span class="nn">File C:\Python310\lib\site-packages\tweepy\client.py:1248,</span> in <span class="ni">Client.search_recent_tweets</span><span class="nt">(self, query, user_auth, **params)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1156</span> <span class="sd">&quot;&quot;&quot;search_recent_tweets( \</span>
-<span class="g g-Whitespace">   </span><span class="mi">1157</span><span class="sd">     query, *, end_time=None, expansions=None, max_results=None, \</span>
-<span class="g g-Whitespace">   </span><span class="mi">1158</span><span class="sd">     media_fields=None, next_token=None, place_fields=None, \</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1245</span><span class="sd"> .. _Academic Research Project: https://developer.twitter.com/en/docs/projects</span>
-<span class="g g-Whitespace">   </span><span class="mi">1246</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1247</span> <span class="n">params</span><span class="p">[</span><span class="s2">&quot;query&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">query</span>
-<span class="ne">-&gt; </span><span class="mi">1248</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_request</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1249</span>     <span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;/2/tweets/search/recent&quot;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1250</span>     <span class="n">endpoint_parameters</span><span class="o">=</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1251</span>         <span class="s2">&quot;end_time&quot;</span><span class="p">,</span> <span class="s2">&quot;expansions&quot;</span><span class="p">,</span> <span class="s2">&quot;max_results&quot;</span><span class="p">,</span> <span class="s2">&quot;media.fields&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1252</span>         <span class="s2">&quot;next_token&quot;</span><span class="p">,</span> <span class="s2">&quot;place.fields&quot;</span><span class="p">,</span> <span class="s2">&quot;poll.fields&quot;</span><span class="p">,</span> <span class="s2">&quot;query&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1253</span>         <span class="s2">&quot;since_id&quot;</span><span class="p">,</span> <span class="s2">&quot;sort_order&quot;</span><span class="p">,</span> <span class="s2">&quot;start_time&quot;</span><span class="p">,</span> <span class="s2">&quot;tweet.fields&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1254</span>         <span class="s2">&quot;until_id&quot;</span><span class="p">,</span> <span class="s2">&quot;user.fields&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1255</span>     <span class="p">),</span> <span class="n">data_type</span><span class="o">=</span><span class="n">Tweet</span><span class="p">,</span> <span class="n">user_auth</span><span class="o">=</span><span class="n">user_auth</span>
-<span class="g g-Whitespace">   </span><span class="mi">1256</span> <span class="p">)</span>
+------------------------
 
-<span class="nn">File C:\Python310\lib\site-packages\tweepy\client.py:126,</span> in <span class="ni">BaseClient._make_request</span><span class="nt">(self, method, route, params, endpoint_parameters, json, data_type, user_auth)</span>
-<span class="g g-Whitespace">    </span><span class="mi">122</span> <span class="k">def</span> <span class="nf">_make_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">route</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{},</span> <span class="n">endpoint_parameters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">123</span>                   <span class="n">json</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">data_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">user_auth</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">124</span>     <span class="n">request_params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_process_params</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">endpoint_parameters</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">126</span>     <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">route</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">request_params</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">127</span>                             <span class="n">json</span><span class="o">=</span><span class="n">json</span><span class="p">,</span> <span class="n">user_auth</span><span class="o">=</span><span class="n">user_auth</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">129</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">return_type</span> <span class="ow">is</span> <span class="n">requests</span><span class="o">.</span><span class="n">Response</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">130</span>         <span class="k">return</span> <span class="n">response</span>
+https://twitter.com/twitter/statuses/93298432
+check out these dog photos
+  type: photo
+  alt_text: None
+  url: fake_website_photo2.jpg
 
-<span class="nn">File C:\Python310\lib\site-packages\tweepy\client.py:116,</span> in <span class="ni">BaseClient.request</span><span class="nt">(self, method, route, params, json, user_auth)</span>
-<span class="g g-Whitespace">    </span><span class="mi">114</span>         <span class="k">raise</span> <span class="n">TooManyRequests</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">115</span> <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">&gt;=</span> <span class="mi">500</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">116</span>     <span class="k">raise</span> <span class="n">TwitterServerError</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">117</span> <span class="k">if</span> <span class="ow">not</span> <span class="mi">200</span> <span class="o">&lt;=</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">&lt;</span> <span class="mi">300</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">118</span>     <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+  type: photo
+  alt_text: None
+  url: fake_website_photo3.jpg
 
-<span class="ne">TwitterServerError</span>: 500 Internal Server Error
+------------------------
+
+https://twitter.com/twitter/statuses/43954354
+lol silly dog!
+  type: photo
+  alt_text: photo taken by fake user 2
+  url: fake_website_photo4.jpg
+
+------------------------
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+<section id="what-alt-texts-do-you-find-helpful">
+<h2>What alt-texts do you find helpful?<a class="headerlink" href="#what-alt-texts-do-you-find-helpful" title="Permalink to this headline">#</a></h2>
+<p>In the above output, you are in a position where you can read the alt-text of the image, but you can’t see the image (unless you open up the actual tweets, which if you are looking at the fake_tweepy output, there are no actual tweets).</p>
+<p>Without seeing the images you can hopefully see what makes alt-text useful or not. Posts without alt-text will be hard to make sense of, and some alt text on photos might tell you information about the photo, but not the information you need.</p>
 </section>
 </section>
 
