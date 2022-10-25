@@ -1,15 +1,4 @@
 Traceback (most recent call last):
-  File "C:\Python310\lib\site-packages\nbclient\client.py", line 730, in _async_poll_for_reply
-    msg = await ensure_async(self.kc.shell_channel.get_msg(timeout=new_timeout))
-  File "C:\Python310\lib\site-packages\nbclient\util.py", line 96, in ensure_async
-    result = await obj
-  File "C:\Python310\lib\site-packages\jupyter_client\channels.py", line 231, in get_msg
-    raise Empty
-_queue.Empty
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
   File "C:\Python310\lib\site-packages\jupyter_cache\executors\utils.py", line 51, in single_nb_execution
     executenb(
   File "C:\Python310\lib\site-packages\nbclient\client.py", line 1204, in execute
@@ -22,17 +11,104 @@ Traceback (most recent call last):
     return future.result()
   File "C:\Python310\lib\site-packages\nbclient\client.py", line 663, in async_execute
     await self.async_execute_cell(
-  File "C:\Python310\lib\site-packages\nbclient\client.py", line 949, in async_execute_cell
-    exec_reply = await self.task_poll_for_reply
-  File "C:\Python310\lib\site-packages\nbclient\client.py", line 754, in _async_poll_for_reply
-    await self._async_handle_timeout(timeout, cell)
-  File "C:\Python310\lib\site-packages\nbclient\client.py", line 801, in _async_handle_timeout
-    raise CellTimeoutError.error_from_timeout_and_cell(
-nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 30 seconds.
-The message was: Cell execution timed out.
-Here is a preview of the cell contents:
--------------------
-# Install variable inspector (then reload browser tab)
-!pip install lckr-jupyterlab-variableinspector
--------------------
+  File "C:\Python310\lib\site-packages\nbclient\client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Python310\lib\site-packages\nbclient\client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+query = "dog -is:retweet has:images"
+
+tweet_search_results = client.search_recent_tweets(
+                                    query=query,
+                                    expansions='attachments.media_keys', #tell twitter to download the media related to this tweet
+                                    media_fields=['alt_text', 'url'],  # when getting the media, make sure to include this info
+                                    max_results=100
+                                    )
+
+
+# make media_lookup dictionary
+media_lookup = {m["media_key"]: m for m in tweet_search_results.includes['media']}
+
+# go through each tweet
+for tweet in tweet_search_results.data:
+    
+    # use the tweet id to make a link to this specific tweet
+    print('https://twitter.com/twitter/statuses/' + str(tweet.id))
+    
+    # print the contents of the tweet
+    print(tweet)
+    
+    # print the info on "attachments" for this tweet
+    #  in this case, it will be the media_keys
+    
+    #get the media keys for this tweet
+    media_keys = tweet.data['attachments']['media_keys']
+    
+    for media_key in media_keys:
+        # lookup the info about this particular media_key
+        media_info = media_lookup[media_key]
+
+        # print out some info about this piece of media
+        print("  type: " + media_info.type)
+        print("  alt_text: " + str(media_info.alt_text))
+        print("  url: " + str(media_info.url))
+        print()
+       
+    # display a clear divider so we can more easily see each tweet
+    print()
+    print("------------------------")
+    print()
+
+------------------
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mTwitterServerError[0m                        Traceback (most recent call last)
+Input [1;32mIn [4][0m, in [0;36m<cell line: 3>[1;34m()[0m
+[0;32m      1[0m query [38;5;241m=[39m [38;5;124m"[39m[38;5;124mdog -is:retweet has:images[39m[38;5;124m"[39m
+[1;32m----> 3[0m tweet_search_results [38;5;241m=[39m [43mclient[49m[38;5;241;43m.[39;49m[43msearch_recent_tweets[49m[43m([49m
+[0;32m      4[0m [43m                                    [49m[43mquery[49m[38;5;241;43m=[39;49m[43mquery[49m[43m,[49m
+[0;32m      5[0m [43m                                    [49m[43mexpansions[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43mattachments.media_keys[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[38;5;66;43;03m#tell twitter to download the media related to this tweet[39;49;00m
+[0;32m      6[0m [43m                                    [49m[43mmedia_fields[49m[38;5;241;43m=[39;49m[43m[[49m[38;5;124;43m'[39;49m[38;5;124;43malt_text[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[38;5;124;43m'[39;49m[38;5;124;43murl[39;49m[38;5;124;43m'[39;49m[43m][49m[43m,[49m[43m  [49m[38;5;66;43;03m# when getting the media, make sure to include this info[39;49;00m
+[0;32m      7[0m [43m                                    [49m[43mmax_results[49m[38;5;241;43m=[39;49m[38;5;241;43m100[39;49m
+[0;32m      8[0m [43m                                    [49m[43m)[49m
+[0;32m     11[0m [38;5;66;03m# make media_lookup dictionary[39;00m
+[0;32m     12[0m media_lookup [38;5;241m=[39m {m[[38;5;124m"[39m[38;5;124mmedia_key[39m[38;5;124m"[39m]: m [38;5;28;01mfor[39;00m m [38;5;129;01min[39;00m tweet_search_results[38;5;241m.[39mincludes[[38;5;124m'[39m[38;5;124mmedia[39m[38;5;124m'[39m]}
+
+File [1;32mC:\Python310\lib\site-packages\tweepy\client.py:1248[0m, in [0;36mClient.search_recent_tweets[1;34m(self, query, user_auth, **params)[0m
+[0;32m   1156[0m [38;5;124;03m"""search_recent_tweets( \[39;00m
+[0;32m   1157[0m [38;5;124;03m    query, *, end_time=None, expansions=None, max_results=None, \[39;00m
+[0;32m   1158[0m [38;5;124;03m    media_fields=None, next_token=None, place_fields=None, \[39;00m
+[1;32m   (...)[0m
+[0;32m   1245[0m [38;5;124;03m.. _Academic Research Project: https://developer.twitter.com/en/docs/projects[39;00m
+[0;32m   1246[0m [38;5;124;03m"""[39;00m
+[0;32m   1247[0m params[[38;5;124m"[39m[38;5;124mquery[39m[38;5;124m"[39m] [38;5;241m=[39m query
+[1;32m-> 1248[0m [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_make_request[49m[43m([49m
+[0;32m   1249[0m [43m    [49m[38;5;124;43m"[39;49m[38;5;124;43mGET[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43m/2/tweets/search/recent[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[43mparams[49m[38;5;241;43m=[39;49m[43mparams[49m[43m,[49m
+[0;32m   1250[0m [43m    [49m[43mendpoint_parameters[49m[38;5;241;43m=[39;49m[43m([49m
+[0;32m   1251[0m [43m        [49m[38;5;124;43m"[39;49m[38;5;124;43mend_time[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43mexpansions[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43mmax_results[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43mmedia.fields[39;49m[38;5;124;43m"[39;49m[43m,[49m
+[0;32m   1252[0m [43m        [49m[38;5;124;43m"[39;49m[38;5;124;43mnext_token[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43mplace.fields[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43mpoll.fields[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43mquery[39;49m[38;5;124;43m"[39;49m[43m,[49m
+[0;32m   1253[0m [43m        [49m[38;5;124;43m"[39;49m[38;5;124;43msince_id[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43msort_order[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43mstart_time[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43mtweet.fields[39;49m[38;5;124;43m"[39;49m[43m,[49m
+[0;32m   1254[0m [43m        [49m[38;5;124;43m"[39;49m[38;5;124;43muntil_id[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43muser.fields[39;49m[38;5;124;43m"[39;49m
+[0;32m   1255[0m [43m    [49m[43m)[49m[43m,[49m[43m [49m[43mdata_type[49m[38;5;241;43m=[39;49m[43mTweet[49m[43m,[49m[43m [49m[43muser_auth[49m[38;5;241;43m=[39;49m[43muser_auth[49m
+[0;32m   1256[0m [43m[49m[43m)[49m
+
+File [1;32mC:\Python310\lib\site-packages\tweepy\client.py:126[0m, in [0;36mBaseClient._make_request[1;34m(self, method, route, params, endpoint_parameters, json, data_type, user_auth)[0m
+[0;32m    122[0m [38;5;28;01mdef[39;00m [38;5;21m_make_request[39m([38;5;28mself[39m, method, route, params[38;5;241m=[39m{}, endpoint_parameters[38;5;241m=[39m[38;5;28;01mNone[39;00m,
+[0;32m    123[0m                   json[38;5;241m=[39m[38;5;28;01mNone[39;00m, data_type[38;5;241m=[39m[38;5;28;01mNone[39;00m, user_auth[38;5;241m=[39m[38;5;28;01mFalse[39;00m):
+[0;32m    124[0m     request_params [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39m_process_params(params, endpoint_parameters)
+[1;32m--> 126[0m     response [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mrequest[49m[43m([49m[43mmethod[49m[43m,[49m[43m [49m[43mroute[49m[43m,[49m[43m [49m[43mparams[49m[38;5;241;43m=[39;49m[43mrequest_params[49m[43m,[49m
+[0;32m    127[0m [43m                            [49m[43mjson[49m[38;5;241;43m=[39;49m[43mjson[49m[43m,[49m[43m [49m[43muser_auth[49m[38;5;241;43m=[39;49m[43muser_auth[49m[43m)[49m
+[0;32m    129[0m     [38;5;28;01mif[39;00m [38;5;28mself[39m[38;5;241m.[39mreturn_type [38;5;129;01mis[39;00m requests[38;5;241m.[39mResponse:
+[0;32m    130[0m         [38;5;28;01mreturn[39;00m response
+
+File [1;32mC:\Python310\lib\site-packages\tweepy\client.py:116[0m, in [0;36mBaseClient.request[1;34m(self, method, route, params, json, user_auth)[0m
+[0;32m    114[0m         [38;5;28;01mraise[39;00m TooManyRequests(response)
+[0;32m    115[0m [38;5;28;01mif[39;00m response[38;5;241m.[39mstatus_code [38;5;241m>[39m[38;5;241m=[39m [38;5;241m500[39m:
+[1;32m--> 116[0m     [38;5;28;01mraise[39;00m TwitterServerError(response)
+[0;32m    117[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;241m200[39m [38;5;241m<[39m[38;5;241m=[39m response[38;5;241m.[39mstatus_code [38;5;241m<[39m [38;5;241m300[39m:
+[0;32m    118[0m     [38;5;28;01mraise[39;00m HTTPException(response)
+
+[1;31mTwitterServerError[0m: 500 Internal Server Error
+TwitterServerError: 500 Internal Server Error
 
