@@ -158,6 +158,7 @@ parts:
       - file: ch11_virality/02_pre_internet
       - file: ch11_virality/03_social_media_natural_selection
       - file: ch11_virality/04_viral_examples
+      - file: ch11_virality/05_ethics_of_copying
       - file: ch11_virality/05_viewing_virality
       - file: ch11_virality/06_practice_nested_loops
       - file: ch11_virality/07_uneven_contribution

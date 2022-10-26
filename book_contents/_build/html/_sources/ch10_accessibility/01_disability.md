@@ -1,5 +1,7 @@
 # Disability
 
+% TODO: Clarify that we are looking at disability through a design framing, not a legal one (what disabilities need legal protections)
+
 A __disability__ is an ability which a person doesn't have, but they were expected to have. For example:
 - If a building only has stair cases to get up to the second floor (it was built assuming everyone could walk up stairs), then someone who cannot walk up stairs has a disability.
 - If a physical picture book was made with the assumption that people would be able to see the pictures, then someone who cannot see has a disability.
