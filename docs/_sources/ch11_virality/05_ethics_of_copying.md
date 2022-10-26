@@ -31,6 +31,8 @@ Similar to sampling that started in in hip-hop in the 1980s
 - watermark from allMemes
 
 
+## Citation / giving credit
+
 ## cultural appropriation
 - terms like "woke"
 - digital blackface
