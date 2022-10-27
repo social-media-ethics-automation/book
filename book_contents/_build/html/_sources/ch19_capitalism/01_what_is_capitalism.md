@@ -33,3 +33,6 @@ For example, there is one seattle city sewer system run by the government. Havin
   - “a situation where a specific person or enterprise is the only supplier of a particular thing”
   - Monopolies are considered anti-competitive. Businesses can lower quality and raise prices, since there are no alternatives.
   - [Cornering a market](https://www.investopedia.com/terms/c/corneramarket.asp) is being close enough to a monopoly to mostly set the rules (e.g., Amazon)
+
+
+- fiduciary duty

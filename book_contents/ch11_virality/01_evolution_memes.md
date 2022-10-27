@@ -1,26 +1,52 @@
 # Evolution and Memes
-## Evolution
-First, an overview of evolution
-- Evolution occurs when these three conditions are present
-  - Replication (with Inheritance)
-    - An organism can make a new copy of itself, which inherits its characteristics
-  - Variations / Mutations
-    - The characteristics of an organism are sometimes changed, in a way that can be inherited by future copies
-  - Natural Selection
-    - Some characteristics make it more or less likely for an organism to compete for resources, survive, and make copies of itself
-- When those three conditions are present, the over time organisms
-  - Adapt to their environment
-  - Diversify
-  - Develop strategies for competing with or cooperating with other organisms.
 
-![](whale_evolution.png)
+````{margin} Whale Evolution:
+
+```{figure} whale_evolution.png
+---
+name: whale_evolution_fig
+alt: "A sequence of 10 drawings of extinct animals: Indohys which looks sort of deer or dog like, Pakicetus which looks more like a dog, Ambulocetus which still looks sort of dog like but with a longer nose and slightly webbed feet, Kutchicetus which is swimming (as all the rest will be) looks more like an otter with a long tail and long snout, Remingtonocetus which now has shorter legs, Rodhocetus which has stubbier webbed legs and a shorter snout and tail, Protocetus, which looks like a dolphin with fins on the tail, but instead of front fins are small legs, Dorudon which has a longer body and stubby more fin-like legs, Squalodon which looks much like a thin dolphin, Kentriodon which just looks like a dolphin."
+---
+A sequence of extinct animals in the chain of evolution from mammals related to hippos and deer into whales and dolphins. [From wikipedia](https://en.wikipedia.org/wiki/Evolution_of_cetaceans).
+```
+````
+
+In order to understand what we are talking about when we say something goes "viral", we need to understand evolution and memes.
+
+
+## Evolution
+
+
+Biological evolution is how living things change, generation after generation, and how all the different forms of life, from humans to bacteria, came to be.
+
+Evolution occurs when three conditions are present:
+- __Replication (with Inheritance)__
+  - An organism can make a new copy of itself, which inherits its characteristics
+- __Variations / Mutations__
+  - The characteristics of an organism are sometimes changed, in a way that can be inherited by future copies
+- __Natural Selection__
+  - Some characteristics make it more or less likely for an organism to compete for resources, survive, and make copies of itself
+
+When those three conditions are present, then over time successive generations of organisms will:
+- be more adapted to their environment
+- divide into different groups and diversify
+- stumble upon strategies for competing with or cooperating with other organisms.
+
 
 ## Memes
-- [The Selfish Gene](https://en.wikipedia.org/wiki/The_Selfish_Gene) by Richard Dawkins (1976)
- - Genes: a section or sections of DNA that perform a function and are inherited
- - Considered evolution in terms of natural selection of genes, instead of natural selection of organism
-   - If a bees genes cause it to sting and die to protect its nest (that shares those genes), then those genes reproduce.
- - Also coined word “meme” to refer to a piece of culture that might reproduce in an evolutionary fashion. For example, a hummable tune
-- Memes
-  - Any piece of human culture can be considered as a meme that is spreading (or not) according to evolutionary forces, such as:
-    - Technology (languages, weapons, medicine, writing, math, computers, etc.), religions, philosophies, political ideas (democracy, authoritarianism, etc.), music, art, organizations, etc.
+In the 1976 book [The Selfish Gene](https://en.wikipedia.org/wiki/The_Selfish_Gene), evolutionary biologist Richard Dawkins[^dawkins_note] said rather than looking at evolution of organism, it made even more sense to look at the evolution of the genes of those organism (sections of DNA that perform some functions and are inherited). For example, if a bee protects it's nest by stinging an attacking animal and dying, then it can't reproduce and it might look like a failure of evolution. But if the gene that told the bee to die protecting the nest was shared by the other bees in the nest, then that one bee dying allows the gene to keep being replicated, so the gene is successful evolutionarily.
+
+Since genes contained information for how organisms would grow and live, then biological evolution could be considered to be evolving information. Dawkins then took this idea of evolution of information and applied it to culture, coining the term "meme."
+
+A __meme__ is a piece of culture that might reproduce in an evolutionary fashion, like a hummable tune that someone hears and starts humming to themselves, perhaps changing it, and then others overhearing next. In this view, any piece of human culture can be considered a meme that is spreading (or failing to spread) according to evolutionary forces. So we can use an evolutionary perspective to consider the spread of:
+- Technology (languages, weapons, medicine, writing, math, computers, etc.),
+- religions
+- philosophies
+- political ideas (democracy, authoritarianism, etc.)
+- art
+- organizations
+- etc.
+
+We can even consider the evolutionary forces that play in the spread of true and false information (like an old saying: "A lie is halfway around the world before the truth has got its boots on.")
+
+[^dawkins_note]: While we value Dawkin's contribution to evolutionary theory, we don't want to make this an endorsement of any of his later statements or views.

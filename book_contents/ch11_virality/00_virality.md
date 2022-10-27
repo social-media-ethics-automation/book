@@ -1,6 +1,6 @@
 # (Incomplete) Virality
 
-TODO: summary statement here
+Our next topic is virality, that is how content goes viral the consequences of virality. To understand virality, we need to start with understanding evolution.
 
 ```{tableofcontents}
 ```
