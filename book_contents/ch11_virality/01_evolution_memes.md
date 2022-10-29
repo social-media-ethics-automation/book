@@ -47,6 +47,6 @@ A __meme__ is a piece of culture that might reproduce in an evolutionary fashion
 - organizations
 - etc.
 
-We can even consider the evolutionary forces that play in the spread of true and false information (like an old saying: "A lie is halfway around the world before the truth has got its boots on.")
+We can even consider the evolutionary forces that play in the spread of true and false information (like an old saying: "[A lie is halfway around the world before the truth has got its boots on.](https://interestingliterature.com/2021/06/lie-halfway-round-world-before-truth-boots-on-quote-origin-meaning/)")
 
 [^dawkins_note]: While we value Dawkin's contribution to evolutionary theory, we don't want to make this an endorsement of any of his later statements or views.
