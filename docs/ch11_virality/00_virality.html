@@ -921,23 +921,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="07_uneven_contribution.html">
-     11.6. Uneven contributions of users
+    <a class="reference internal" href="06_going_viral.html">
+     11.6. The Experience of Going Viral
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="09_going_viral.html">
-     11.7. The Experience of Going Viral
+    <a class="reference internal" href="07_reflections.html">
+     11.7. Reflections
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="10_reflections.html">
-     11.8. Reflections
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="11_learn_more.html">
-     11.9. Learn More
+    <a class="reference internal" href="08_learn_more.html">
+     11.8. Learn More
     </a>
    </li>
   </ul>
@@ -1161,18 +1156,23 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../ch16_crowd_work/04_uneven_contribution.html">
+     16.5. Uneven contributions of users
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../ch16_crowd_work/05_visualizing_networks.html">
-     16.5. Visualizing Networks
+     16.6. Visualizing Networks
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ch16_crowd_work/06_reflections.html">
-     16.6. Reflection Questions
+     16.7. Reflection Questions
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ch16_crowd_work/07_learn_more.html">
-     16.7. Learn More
+     16.8. Learn More
     </a>
    </li>
   </ul>
@@ -1642,7 +1642,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="incomplete-virality">
 <h1><span class="section-number">11. </span>(Incomplete) Virality<a class="headerlink" href="#incomplete-virality" title="Permalink to this headline">#</a></h1>
-<p>Our next topic is virality, that is how content goes viral the consequences of virality. To understand virality, we need to start with understanding evolution.</p>
+<p>Our next topic is virality, that is how content goes viral the consequences of virality.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="01_evolution_memes.html">11.1. Evolution and Memes</a></li>
@@ -1650,55 +1650,11 @@ title="Print to PDF"
 <li class="toctree-l1"><a class="reference internal" href="03_social_media_natural_selection.html">11.3. Evolution in social media</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04_viral_examples.html">11.4. Virality and Intention</a></li>
 <li class="toctree-l1"><a class="reference internal" href="05_ethics_of_copying.html">11.5. Ethics of copying</a></li>
-<li class="toctree-l1"><a class="reference internal" href="07_uneven_contribution.html">11.6. Uneven contributions of users</a></li>
-<li class="toctree-l1"><a class="reference internal" href="09_going_viral.html">11.7. The Experience of Going Viral</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10_reflections.html">11.8. Reflections</a></li>
-<li class="toctree-l1"><a class="reference internal" href="11_learn_more.html">11.9. Learn More</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_going_viral.html">11.6. The Experience of Going Viral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_reflections.html">11.7. Reflections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_learn_more.html">11.8. Learn More</a></li>
 </ul>
 </div>
-<p>TODO: Include in Programming</p>
-<p>Nested Loops
-Lets say we have a list of sentences and we are searching for a specific word. We must use nested loops. Check out the example bellow:</p>
-<p>lyrics = [‘You used to call me on my cell phone’,
-‘Late night when you need my love’,
-‘Call me on my cell phone’,
-‘Late night when you need my love’,
-‘And I know when that hotline bling’,
-‘That can only mean one thing’,
-‘I know when that hotline bling’,
-‘That can only mean one thing’]</p>
-<p>phone_count = 0</p>
-<p>for line in lyrics:
-split_line = line.split() # splitting up sentence into list of words
-for word in split_line:
-if word == ‘phone’:
-phone_count += 1
-print(line)
-print(phone_count)</p>
-<p>You used to call me on my cell phone
-1
-Call me on my cell phone
-2
-Recreate the previous example with your favorite song.</p>
-<p>Twitter Practice
-Install and import the “tweepy” library of code that gives us twitter functions
-import tweepy
-Login
-_ copy in the code from test_twitter_bot_keys.ipynb
-Search for recent tweets that include the word ‘Weather’. Assign this list to a variable called weather.</p>
-<p>Loop through the weather list and count how many times you come across the words “cold”, “freezing”, or “chilly”</p>
-<p>Create a variable called long_words and assign an emepty list to it –&gt; [].</p>
-<p>Loop through the weather list. If a word has a length of 5 OR GREATER, add it to the long_words list. Make sure to return the long_words list at the end of your code block.</p>
-<p>*Hint: you can add to a list using the append() function</p>
-<p>append() example:</p>
-<p>list = [1, 2, 3]
-list.append(4)</p>
-<p>list  –&gt;  [1, 2, 3, 4]
-Get the length of your long_words list and store it in a variable called long_words_length.</p>
-<p>Create a while loop, printing out the sentence: ”The word, WORD, is extremely long.” for each word in the long_words list.</p>
-<p>*Hint: use the long_words_length variable to check if you’ve gone through the entire list. With each iteration, subtract 1 from the variable.</p>
-<p>CHALLENGE: Copy and paste the code from the previous question. Alter the code to create the sentence:</p>
-<p>”The word, WORD, is LENGTH letters long.”</p>
 </section>
 
     <script type="text/x-thebe-config">
