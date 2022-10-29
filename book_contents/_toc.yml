@@ -159,12 +159,9 @@ parts:
       - file: ch11_virality/03_social_media_natural_selection
       - file: ch11_virality/04_viral_examples
       - file: ch11_virality/05_ethics_of_copying
-      - file: ch11_virality/05_viewing_virality
-      - file: ch11_virality/06_practice_nested_loops
-      - file: ch11_virality/07_uneven_contribution
-      - file: ch11_virality/09_going_viral
-      - file: ch11_virality/10_reflections
-      - file: ch11_virality/11_learn_more
+      - file: ch11_virality/06_going_viral
+      - file: ch11_virality/07_reflections
+      - file: ch11_virality/08_learn_more
     - file: ch12_recommendations/00_recommendations
       sections:
       - file: ch12_recommendations/01_recommendations
@@ -207,6 +204,7 @@ parts:
       - file: ch16_crowd_work/02_planned_crowd_work
       - file: ch16_crowd_work/03_ad_hoc
       - file: ch16_crowd_work/04_networks
+      - file: ch16_crowd_work/04_uneven_contribution
       - file: ch16_crowd_work/05_visualizing_networks
       - file: ch16_crowd_work/06_reflections
       - file: ch16_crowd_work/07_learn_more

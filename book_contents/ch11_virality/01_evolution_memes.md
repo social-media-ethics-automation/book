@@ -11,7 +11,7 @@ A sequence of extinct animals in the chain of evolution from mammals related to 
 ```
 ````
 
-In order to understand what we are talking about when we say something goes "viral", we need to understand evolution and memes.
+In order to understand what we are talking about when we say something goes "viral", we need to first understand evolution and memes.
 
 
 ## Evolution
