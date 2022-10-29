@@ -31,6 +31,3 @@ Viral for being “bad” or embarrassing
   - Overlaps with trolling
   - The cooking videos
   - Politicians and political commentators (see also part of [this video](https://www.youtube.com/watch?v=Gq0ZHgKT2tc&t=345s))
-
-Appropriation of AAVE
-- so many examples, like "Woke", "on fleek", ""

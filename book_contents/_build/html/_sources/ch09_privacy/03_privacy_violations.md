@@ -7,3 +7,5 @@ Besides hacking, there are other forms of privacy violations, such as:
 - __Inferred Data__: Sometimes information that doesn't directly exist can be inferred through data mining (as we saw last chapter), and the creation of that new information could be a privacy violation.
   - This includes creation of __[Shadow Profiles](https://en.wikipedia.org/wiki/Shadow_profile)__, which are information about the user that the user didn't provide or consent to
 - __Non-User Information__: Social Media sites might collect information about people who don't have accounts, like how [Facebook does](https://www.reuters.com/article/us-facebook-privacy-tracking/facebook-fuels-broad-privacy-debate-by-tracking-non-users-idUSKBN1HM0DR)
+
+% TODO: add about, what if someone purchases a social media platform, then can they view everyone's private messages?  https://www.vox.com/recode/2022/10/27/23427106/elon-musk-twitter-data-direct-messages
