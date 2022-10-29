@@ -27,9 +27,9 @@ width: 400px
 name: lewinsky_tweet_fig
 alt: "Monica Lewinsky quote tweeting a tweet from UberFacts. The Uberfacts tweet says \"What's the most high-risk, low-reward thing you've ever done?\", and Monica Lewinsky's quote tweet just adds the side-eyes emoji."
 ---
-[Monica Lewinsky](https://en.wikipedia.org/wiki/Monica_Lewinsky) posts [this quote tweet](https://twitter.com/MonicaLewinsky/status/1395734868407984136) that answers a question with a side-eye emoji, which audiences will likely read as referring to her [affair](https://en.wikipedia.org/wiki/Clinton%E2%80%93Lewinsky_scandal) with then-US-president Bill Clinton.
+[Monica Lewinsky](https://en.wikipedia.org/wiki/Monica_Lewinsky) posted [this quote tweet](https://twitter.com/MonicaLewinsky/status/1395734868407984136) that answers a question with a side-eye emoji, which her audiences will understand as referring to her [affair](https://en.wikipedia.org/wiki/Clinton%E2%80%93Lewinsky_scandal) with then-US-president Bill Clinton.
 
-By responding to the tweet, the modified version (the original tweet with Lewinsky's emoji response) spread as people liked, retweeted, and replied, and put it in [Buzzfeed lists](https://www.buzzfeed.com/mjs538/monica-lewinsky-twitter-comebacks)
+Through quote tweeting, a modified version of the original tweet (now with Lewinsky's emoji response) spread as people liked, retweeted, replied, and put it in [Buzzfeed lists](https://www.buzzfeed.com/mjs538/monica-lewinsky-twitter-comebacks)
 ```
 
 Additionally, content can be copied by being screenshotted, or photoshopped. Text and images can be copied and reposted with modifications (like [a poem about plums](https://www.vox.com/2017/12/1/16723210/this-is-just-to-say-plums-twitter-baby-shoes)). And content in one form can be used to make new content in completely new forms, like this "Internet Drama" song whose lyrics are from messages sent back and forth between two people in a Facebook Marketplace:
@@ -47,7 +47,7 @@ Groups and organizations make their own decisions on what social media content t
 
 The above ways of social media content selection for replication can be considered __natural selection__ in that they are being replicated according to human interest in the content itself.
 
-There are also other ways that social media content get replicated that would be __unnatural selection__, where something else is driving the replication of social media content. This includes things like:
+There are also other ways that social media content get replicated that could be called __unnatural selection__, where something else is driving the replication of social media content. This includes things like:
 - Paid promotion and ads, where someone pays money to have their content replicated
 - Astroturfing: where crowds, often of bots, are paid to replicated social media content (e.g., like, retweet)
 
