@@ -1,6 +1,6 @@
 # What Recommendation Algorithms Do
 
-When social media platforms show users a series of posts, updates, friend suggestions, ads, or anything really, they have to use some method of determining which things to show users. The method of determining what is shown to users is called a __recommendation algorithm__, that is an algorithm (a series of steps or rules, such as in a computer program) that recommends posts for users to see, people for users to follow, ads for users to view, or reminders to users to keep track of.
+When social media platforms show users a series of posts, updates, friend suggestions, ads, or anything really, they have to use some method of determining which things to show users. The method of determining what is shown to users is called a __recommendation algorithm__, that is an algorithm (a series of steps or rules, such as in a computer program) that recommends posts for users to see, people for users to follow, ads for users to view, or reminders for users.
 
 Some recommendation algorithms can be simple such as reverse chronological order, meaning show users the latest posts (like how blogs work, or Twitter's "See latest tweets" option). They can also be very complicated taking into account many factors, such as:
 - Time since posting (e.g., show newer posts, or remind me of posts that were made 5 years ago today)
