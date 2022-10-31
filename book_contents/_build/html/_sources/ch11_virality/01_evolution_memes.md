@@ -38,6 +38,8 @@ In the 1976 book [The Selfish Gene](https://en.wikipedia.org/wiki/The_Selfish_Ge
 
 Since genes contained information for how organisms would grow and live, then biological evolution could be considered to be evolving information. Dawkins then took this idea of evolution of information and applied it to culture, coining the term "meme."
 
+% meant to sound like "gene"
+
 A __meme__ is a piece of culture that might reproduce in an evolutionary fashion, like a hummable tune that someone hears and starts humming to themselves, perhaps changing it, and then others overhearing next. In this view, any piece of human culture can be considered a meme that is spreading (or failing to spread) according to evolutionary forces. So we can use an evolutionary perspective to consider the spread of:
 - Technology (languages, weapons, medicine, writing, math, computers, etc.),
 - religions

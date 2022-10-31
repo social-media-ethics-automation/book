@@ -1,4 +1,5 @@
 # Societal Concerns with Recommendation Algorithms
+Let's now look at some larger societal concerns with the effects of recommendation algorithms
 
 ## [Epistemic Bubbles / Echo Chambers](https://en.wikipedia.org/wiki/Echo_chamber_(media)#Echo_chambers_vs_epistemic_bubbles)
 - Connections and conversations can exclude some perspectives (whether intentional or not)
@@ -9,6 +10,7 @@
   - Marginalized communities (e.g., [safe spaces](https://en.wikipedia.org/wiki/Safe_space))
 - Increases polarization
   - In some ways, this is the opposite of context collapse, where the insider/outsider context never collapses
+- Alternate theory: https://www.pnas.org/doi/10.1073/pnas.2207159119
 
 ## Amplifying Polarization and Negativity
 - If social media sites simply amplify content that gets strong reactions, they will often amplify the most negative and polarizing content.
