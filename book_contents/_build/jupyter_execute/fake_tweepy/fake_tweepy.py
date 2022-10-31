@@ -201,8 +201,8 @@ def search_recent_tweets(query="", tweet_fields=[], expansions=[], media_fields=
 # In[6]:
 
 
-def get_user(id="", user_auth=False):
-    if(id == "me"):
+def get_user(id="", username="", user_auth=False):
+    if(id == "me" or username=="fake_user"):
         return SimpleNamespace(
             data = SimpleNamespace(
                 id = 123456789,
@@ -270,17 +270,51 @@ def get_users_mentions(id=0):
 # In[8]:
 
 
+def get_users_following(id="", max_results=5):
+    if(id==123456789): # fake user
+        return SimpleNamespace(
+            data = [SimpleNamespace(id = 1093458, username = "unreal_user"),
+                    SimpleNamespace(id = 943534, username = "imaginary_user"),
+                    SimpleNamespace(id = 945356, username = "false_user")
+                   ]
+        )
+    if(id==1093458): # unreal_user
+        return SimpleNamespace(
+            data = [SimpleNamespace(id = 435364, username = "great_user"),
+                    SimpleNamespace(id = 785645, username = "awesome_user"),
+                   ]
+        )
+    if(id==943534): # imaginary_user
+        return SimpleNamespace(
+            data = [SimpleNamespace(id = 563463, username = "ok_user"),
+                    SimpleNamespace(id = 943534, username = "awesome_user"),
+                   ]
+        )
+    if(id==945356): # false_user
+        return SimpleNamespace(
+            data = [SimpleNamespace(id = 435364, username = "great_user"),
+                    SimpleNamespace(id = 943534, username = "awesome_user"),
+                    SimpleNamespace(id = 435345, username = "mediocre_user"),
+                    SimpleNamespace(id = 436775, username = "another_user"),
+                   ]
+        )
+
+
+# In[9]:
+
+
 def client_creator(bearer_token="", consumer_key="", consumer_secret="", access_token="", access_token_secret="" ):
     print_info("Fake Tweepy is pretending to log in to twitter")
     return SimpleNamespace(
       create_tweet = print_tweet,
       search_recent_tweets = search_recent_tweets,
       get_user = get_user,
-      get_users_mentions = get_users_mentions
+      get_users_mentions = get_users_mentions,
+      get_users_following = get_users_following
     )
 
 
-# In[9]:
+# In[10]:
 
 
 tweepy = SimpleNamespace(
