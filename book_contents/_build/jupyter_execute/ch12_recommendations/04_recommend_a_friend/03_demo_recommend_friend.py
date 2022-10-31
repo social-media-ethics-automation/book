@@ -3,109 +3,16 @@
 
 # # Demo: Recommend a Friend
 
+# ## Update recommendation algorithm from last time
+
 # In[1]:
 
 
-# Demo: refactor recommendation through writing Functions
-## Install variable inspector (then reload browser tab)
-get_ipython().system('pip install lckr-jupyterlab-variableinspector')
-
-
-# ## Default and named parameters
-
-# In[2]:
-
-
-def say_hello(name = ""):
-    print("Hello " + name)
-
-
-# In[3]:
-
-
-say_hello()
-
-
-# In[4]:
-
-
-say_hello(name = "Kyle")
-
-
-# In[5]:
-
-
-import time
-
-def pause_before_saying_hello(name = "", pause_time = 1):
-    time.sleep(pause_time)
-    print("Hello " + name)
-
-
-# In[6]:
-
-
-pause_before_saying_hello()
-
-
-# In[7]:
-
-
-pause_before_saying_hello(name = "Kyle")
-
-
-# In[8]:
-
-
-pause_before_saying_hello(pause_time = 3)
-
-
-# In[9]:
-
-
-pause_before_saying_hello(name = "Kyle", pause_time = 3)
-
-
-# ## Returns
-
-# In[10]:
-
-
-def mult(num1, num2):
-    return num1 * num2
-
-
-# In[11]:
-
-
-num_val = mult(3, 4)
-
-
-# In[12]:
-
-
-def make_hello_message(name):
-    message = "Hello " + name + "! How are you today?"
-    return message
-
-
-# In[13]:
-
-
-hi_kyle_message = make_hello_message("Kyle")
-
-
-# ## Update recommendation algorithm from last time
-
-# In[ ]:
-
-
 # make sure tweepy library is installed
-get_ipython().system('pip install tweepy')
 import tweepy
 
 
-# In[15]:
+# In[2]:
 
 
 # load my twitter keys

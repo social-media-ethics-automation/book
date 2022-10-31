@@ -266,3 +266,4 @@ parts:
           - file: appendix/solutions/07_practice_strings_conditionals
           - file: appendix/solutions/08_solution_sentiment_and_loop_vars
           - file: appendix/solutions/09_solution_functions
+          - file: appendix/solutions/ch12_solution_dictionary_counters
