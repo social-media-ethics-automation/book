@@ -8,7 +8,7 @@ One concern with how recommendation algorithms is that they can create echo cham
 These echo chambers can include:
 - Hate groups, where people's hate and fear of others gets reinforced and never challenged
 - Fan communities, where people's appreciation of an artist, work of art, or something is assumed, and then reinforced and never challenged
-- Marginalized communities can find safe spaces where they aren't constantly challenged or harassed (e.g., a [safe spaces](https://en.wikipedia.org/wiki/Safe_space))
+- Marginalized communities can find safe spaces where they aren't constantly challenged or harassed (e.g., a [safe space](https://en.wikipedia.org/wiki/Safe_space))
 
 
 
@@ -16,9 +16,9 @@ These echo chambers can include:
 
 There are concerns that echo chambers increase polarization, where groups lose common ground and ability to communicate with each other. In some ways echo chambers are the opposite of context collapse, where contexts are created and prevented from collapsing. Though [others have argued](https://www.pnas.org/doi/10.1073/pnas.2207159119) that people do interact across these echo chambers, but the contentious nature of their interactions increases polarization.
 
-Along those lines, ff social media sites simply amplify content that gets strong reactions, they will often amplify the most negative and polarizing content. Recommendation algorithms can make this even works. For example: [At one point, Facebook counted the default "like" reaction less than the "anger" reaction, which amplified negative content](https://www.washingtonpost.com/technology/2021/10/26/facebook-angry-emoji-algorithm/))
+Along those lines, ff social media sites simply amplify content that gets strong reactions, they will often amplify the most negative and polarizing content. Recommendation algorithms can make this even works. For example: [At one point, Facebook counted the default "like" reaction less than the "anger" reaction, which amplified negative content](https://www.washingtonpost.com/technology/2021/10/26/facebook-angry-emoji-algorithm/).
 
-On Twitter, [one study found](https://www.economist.com/graphic-detail/2021/11/13/according-to-twitter-twitters-algorithm-favours-conservatives) ([copy on archive.org](https://web.archive.org/web/20220106162108/https://www.economist.com/graphic-detail/2021/11/13/according-to-twitter-twitters-algorithm-favours-conservatives)):
+On Twitter, [one study found](https://www.economist.com/graphic-detail/2021/11/13/according-to-twitter-twitters-algorithm-favours-conservatives) ([full article on archive.org](https://web.archive.org/web/20220106162108/https://www.economist.com/graphic-detail/2021/11/13/according-to-twitter-twitters-algorithm-favours-conservatives)):
 >  “Whereas Google gave higher rankings to more reliable sites, we found that Twitter boosted the least reliable sources, regardless of their politics.”
 
 According to [another study](https://www.msnbc.com/opinion/twitter-s-algorithm-might-amplify-ratioed-conservatives-time-rethink-dunking-n1283364) on Twitter:
