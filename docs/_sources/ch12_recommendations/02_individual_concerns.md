@@ -1,6 +1,6 @@
 # Individual Concerns with Recommendation Algorithms
 
-Let's look at some individual concerns with how recommendation algorithms work.
+Let's look at some of the concerns that an individual user might have with recommendation algorithms.
 
 ## How recommendations can go well or poorly
 
