@@ -167,10 +167,13 @@ parts:
       - file: ch12_recommendations/01_recommendations
       - file: ch12_recommendations/02_individual_concerns
       - file: ch12_recommendations/03_societal_concerns
-      - file: ch12_recommendations/04_demo_recommend_friend
-      - file: ch12_recommendations/05_demo_recommend2
-      - file: ch12_recommendations/06_design_recommend
-      - file: ch12_recommendations/07_learn_more
+      - file: ch12_recommendations/04_recommend_a_friend/00_intro
+        sections:
+          - file: ch12_recommendations/04_recommend_a_friend/01_demo_dictionary_counters
+          - file: ch12_recommendations/04_recommend_a_friend/02_practice_dictionary_counters
+          - file: ch12_recommendations/04_recommend_a_friend/03_demo_recommend_friend
+      - file: ch12_recommendations/05_design_recommend
+      - file: ch12_recommendations/06_learn_more
     - file: ch13_mental_health/00_mental_health
       sections:
       - file: ch13_mental_health/01_affect_of_social_media
