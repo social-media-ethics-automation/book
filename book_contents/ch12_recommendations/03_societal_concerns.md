@@ -3,6 +3,8 @@ Now let's look at some larger societal concerns with the effects of recommendati
 
 ## [Epistemic Bubbles / Echo Chambers](https://en.wikipedia.org/wiki/Echo_chamber_(media)#Echo_chambers_vs_epistemic_bubbles)
 
+% TODO: Make this something about filter bubbles, and then negative echo chambers are part
+
 One concern with how recommendation algorithms is that they can create echo chambers (or "epistemic bubbles"), where people get filtered into groups and the recommendation algorithm only gives people content that reinforces and doesn't challenge their beliefs. These echo chambers allow people in the groups to freely have conversations among themselves without external challenge.
 
 These echo chambers can include:
@@ -27,6 +29,9 @@ According to [another study](https://www.msnbc.com/opinion/twitter-s-algorithm-m
 > That possibility raises serious questions of what constitutes responsible civic behavior on Twitter and whether the platform is in yet another way incentivizing combative behavior.”
 
 Though this is a big concern about Internet-based social media, traditional media sources also play into this: For example, this study: [Cable news has a much bigger effect on America’s polarization than social media, study finds](https://www.niemanlab.org/2022/08/cable-news-has-a-much-bigger-effect-on-americas-polarization-than-social-media-study-finds/)
+
+
+% TODO: include that polarization isn't necessarily bad, e.g., https://www.nbcnews.com/think/opinion/trump-american-civil-war-lesson-democrats-value-partisanship-ncna1234374
 
 ## Radicalization
 Building off of the amplification polarization and negativity, there are concerns (and real examples) of social media (and their recommendation algorithms) radicalizing people into conspiracy theories and into violence.

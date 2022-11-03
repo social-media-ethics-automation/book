@@ -176,10 +176,10 @@ parts:
       - file: ch12_recommendations/06_learn_more
     - file: ch13_mental_health/00_mental_health
       sections:
-      - file: ch13_mental_health/01_affect_of_social_media
+      - file: ch13_mental_health/01_effects_of_social_media
       - file: ch13_mental_health/02_unhealthy_activities
-      - file: ch13_mental_health/03_mental_health_detection
-      - file: ch13_mental_health/04_community
+      - file: ch13_mental_health/03_healthy_activities
+      - file: ch13_mental_health/04_mental_health_detection
       - file: ch13_mental_health/05_reflections
       - file: ch13_mental_health/06_programming
       - file: ch13_mental_health/07_learn_more
