@@ -37,6 +37,8 @@ Sometimes the original source of the content doesn't have intentions about it's 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_C1FZ4HtzGY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+% TODO: children, e.g., https://www.nbcnews.com/pop-culture/influencers-parents-posting-kids-online-privacy-security-concerns-rcna55318
+
 
 ## Antagonistic to original intention
 Sometimes content goes viral in a way that is against the intended purpose of the original content. For example, in this video started as of a TikToker introducing his girlfriend. Other TikTokers then used the duet feature to add an out of frame gun pointed at the girlfriend's head, and her out of frame hands tied together, being held hostage. TikTokers continued to build on this with hostage negotiators, press conferences and news sources. All of this is almost certainly not the impression the original TikToker was trying to convey.
