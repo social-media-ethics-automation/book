@@ -1,8 +1,10 @@
 # (Incomplete) Mental Health
 
-Note: The placement of the chapter may change
+Now let's look at issues around mental health and social media.
 
-TODO: summary statement here
+```{note}
+This chapter is about mental health, so discusses many mental health problems.
+```
 
 ```{tableofcontents}
 ```

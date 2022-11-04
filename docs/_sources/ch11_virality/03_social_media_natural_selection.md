@@ -54,4 +54,4 @@ There are also other ways that social media content get replicated that could be
 
 Finally, the social media platforms use algorithms and design layouts which determine what posts people see. There are various rules and designs social media sites can use, and they can amplify the natural selection and unnatural selection in various ways. Our next chapter, [](../ch12_recommendations/00_recommendations.md), will go into this more.
 
-% TODO: Bring back in evolution consequences, adaptation, diversification, cooperation/competition
+% TODO: Bring back in evolution consequences, adaptation, diversification, cooperation/competition. In particular, adaptation to environment (a social media platform's interface, focus, recommendation algorithm)
