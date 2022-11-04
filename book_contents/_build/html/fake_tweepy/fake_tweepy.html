@@ -1010,7 +1010,7 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ch13_mental_health/01_affect_of_social_media.html">
+    <a class="reference internal" href="../ch13_mental_health/01_effects_of_social_media.html">
      13.1. Social Media Influence on Mental Health
     </a>
    </li>
@@ -1020,23 +1020,23 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ch13_mental_health/03_mental_health_detection.html">
-     13.3. Mental Health Detection
+    <a class="reference internal" href="../ch13_mental_health/03_healthy_activities.html">
+     13.3. Healthy Activities on Social Media
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ch13_mental_health/04_community.html">
-     13.4. Mental Health: Finding Online Communities
+    <a class="reference internal" href="../ch13_mental_health/04_mental_health_detection.html">
+     13.4. Mental Health Detection
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ch13_mental_health/05_reflections.html">
-     13.5. Reflection questions
+    <a class="reference internal" href="../ch13_mental_health/05_demo_only_positive_news.html">
+     13.5. Demo: Only positive news
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ch13_mental_health/06_programming.html">
-     13.6. Programming - only show positive tweets (from search)
+    <a class="reference internal" href="../ch13_mental_health/06_reflections.html">
+     13.6. Reflection questions on mental health
     </a>
    </li>
    <li class="toctree-l2">
@@ -1885,6 +1885,27 @@ title="Print to PDF"
                   <span class="n">data</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;attachments&quot;</span><span class="p">:</span> <span class="p">{</span>
                       <span class="s2">&quot;media_keys&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;5_45353&quot;</span><span class="p">]</span>
                   <span class="p">}</span> <span class="p">}</span>
+              <span class="p">)</span>
+          <span class="p">]</span>
+        <span class="p">)</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">query</span> <span class="o">==</span> <span class="s2">&quot;from:fake_news_site&quot;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+          <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+              <span class="n">SimpleNamespace</span><span class="p">(</span>
+                  <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Breaking news: A lovely cat took a nice long nap today!&quot;</span><span class="p">,</span>
+                  <span class="nb">id</span> <span class="o">=</span> <span class="mi">129308937494</span>
+              <span class="p">),</span>
+              <span class="n">SimpleNamespace</span><span class="p">(</span>
+                  <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Breaking news: Someone said a really mean thing on the internet today!&quot;</span><span class="p">,</span>
+                  <span class="nb">id</span> <span class="o">=</span> <span class="mi">93298432</span>
+              <span class="p">),</span>
+            <span class="n">SimpleNamespace</span><span class="p">(</span>
+                  <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Breaking news: Some grandparents made some yummy cookies for all the kids to share!&quot;</span><span class="p">,</span>
+                  <span class="nb">id</span> <span class="o">=</span> <span class="mi">93298432</span>
+              <span class="p">),</span>
+              <span class="n">SimpleNamespace</span><span class="p">(</span>
+                  <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Breaking news: All the horrors of the universe revealed at last!&quot;</span><span class="p">,</span>
+                  <span class="nb">id</span> <span class="o">=</span> <span class="mi">321923</span>
               <span class="p">)</span>
           <span class="p">]</span>
         <span class="p">)</span>

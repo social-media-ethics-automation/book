@@ -196,6 +196,27 @@ def search_recent_tweets(query="", tweet_fields=[], expansions=[], media_fields=
               )
           ]
         )
+    if(query == "from:fake_news_site"):
+        return SimpleNamespace(
+          data = [
+              SimpleNamespace(
+                  text = "Breaking news: A lovely cat took a nice long nap today!",
+                  id = 129308937494
+              ),
+              SimpleNamespace(
+                  text = "Breaking news: Someone said a really mean thing on the internet today!",
+                  id = 93298432
+              ),
+            SimpleNamespace(
+                  text = "Breaking news: Some grandparents made some yummy cookies for all the kids to share!",
+                  id = 93298432
+              ),
+              SimpleNamespace(
+                  text = "Breaking news: All the horrors of the universe revealed at last!",
+                  id = 321923
+              )
+          ]
+        )
 
 
 # In[6]:

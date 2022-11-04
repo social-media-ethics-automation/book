@@ -1534,6 +1534,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/kylethayer/social_media_ethics_automation_v0/main?urlpath=lab/tree/book_contents/ch13_mental_health/05_demo_only_positive_news.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -1601,7 +1630,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/ch13_mental_health/05_demo_only_positive_news.md"
+        <a href="../_sources/ch13_mental_health/05_demo_only_positive_news.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1612,7 +1641,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -1638,12 +1667,56 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#normal-tweepy-set-up">
+   13.5.1. Normal Tweepy Set-Up
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-sentiment-analyis-code">
+   13.5.2. Load sentiment analyis code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code-to-search-and-display-news-tweets">
+   13.5.3. Code to search and display news tweets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#search-through-tweets-and-only-display-good-news">
+   13.5.4. Search through tweets and only display good news
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#try-it-out-on-real-twitter">
+   13.5.5. Try it out on real twitter
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -1655,6 +1728,39 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#normal-tweepy-set-up">
+   13.5.1. Normal Tweepy Set-Up
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-sentiment-analyis-code">
+   13.5.2. Load sentiment analyis code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code-to-search-and-display-news-tweets">
+   13.5.3. Code to search and display news tweets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#search-through-tweets-and-only-display-good-news">
+   13.5.4. Search through tweets and only display good news
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#try-it-out-on-real-twitter">
+   13.5.5. Try it out on real twitter
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -1664,40 +1770,141 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="demo-only-positive-news">
 <h1><span class="section-number">13.5. </span>Demo: Only positive news<a class="headerlink" href="#demo-only-positive-news" title="Permalink to this headline">#</a></h1>
-<p>What goes here? Unrelated concept? I can move this lecture around as needed</p>
-<p>Functions with named params and default values</p>
-<p>https://www.w3schools.com/python/python_functions.asp</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="n">arg_1</span> <span class="o">=</span> <span class="s2">&quot;default&quot;</span><span class="p">):</span>
-  <span class="c1"># do various actions, like this:</span>
-  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;arg 1 will be default if not sent:&quot;</span> <span class="o">+</span> <span class="n">arg_1</span><span class="p">)</span>
+<p>Let’s look at something we could try to do to improve the mental health for our users: Only show positive news!</p>
+<p>We’ll use sentiment analysis again, but this time we’ll do a search for news from a news account, but only display the tweets with a positive sentiment.</p>
+<p>Would this actually improve someone’s mental health? It’s hard to say! But we can see something that we might try out if we wanted to improve mental health of our users.</p>
+<section id="normal-tweepy-set-up">
+<h2><span class="section-number">13.5.1. </span>Normal Tweepy Set-Up<a class="headerlink" href="#normal-tweepy-set-up" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make sure tweepy library is installed</span>
+<span class="kn">import</span> <span class="nn">tweepy</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>(optional) use the fake version of tweepy, so you don’t have to use real twitter developer access passwords</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../fake_tweepy/fake_tweepy.ipynb
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake tweepy is replacing the tweepy library. Fake Tweepy doesn&#x27;t need real passwords, and prevents you from accessing real twitter</strong></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load all your developer access passwords into Python</span>
+<span class="c1"># TODO: Put your twitter account&#39;s special developer access passwords below:</span>
+<span class="n">bearer_token</span> <span class="o">=</span> <span class="s2">&quot;n4tossfgsafs_fake_bearer_token_isa53#$%$&quot;</span>
+<span class="n">consumer_key</span> <span class="o">=</span> <span class="s2">&quot;sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG&quot;</span>
+<span class="n">consumer_secret</span> <span class="o">=</span> <span class="s2">&quot;45adf$T$A_fake_consumer_secret_JESdsg&quot;</span>
+<span class="n">access_token</span> <span class="o">=</span> <span class="s2">&quot;56sd5Ss4tsea_fake_access_token_%YE%hDsdr&quot;</span>
+<span class="n">access_token_secret</span> <span class="o">=</span> <span class="s2">&quot;j^$dr_fake_consumer_key_^A5s#DR5s&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Give the tweepy code your developer access passwords so</span>
+<span class="c1"># it can perform twitter actions</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span>
+   <span class="n">bearer_token</span><span class="o">=</span><span class="n">bearer_token</span><span class="p">,</span>
+   <span class="n">consumer_key</span><span class="o">=</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">consumer_secret</span><span class="p">,</span>
+   <span class="n">access_token</span><span class="o">=</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">access_token_secret</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to log in to twitter</strong></div></div>
+</div>
+</section>
+<section id="load-sentiment-analyis-code">
+<h2><span class="section-number">13.5.2. </span>Load sentiment analyis code<a class="headerlink" href="#load-sentiment-analyis-code" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">([</span><span class="s2">&quot;vader_lexicon&quot;</span><span class="p">])</span>
+<span class="kn">from</span> <span class="nn">nltk.sentiment</span> <span class="kn">import</span> <span class="n">SentimentIntensityAnalyzer</span>
+<span class="n">sia</span> <span class="o">=</span> <span class="n">SentimentIntensityAnalyzer</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package vader_lexicon to
+[nltk_data]     C:\Users\kmthayer\AppData\Roaming\nltk_data...
+[nltk_data]   Package vader_lexicon is already up-to-date!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="code-to-search-and-display-news-tweets">
+<h2><span class="section-number">13.5.3. </span>Code to search and display news tweets<a class="headerlink" href="#code-to-search-and-display-news-tweets" title="Permalink to this headline">#</a></h2>
+<p>Now let’s make code that will do a search for news tweets (tweets from a fake_news_site), and display all of them. We will then make a modified version below to compare the results.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;from:fake_news_site&#39;</span>
+<span class="n">tweets</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 
-<span class="c1"># call function</span>
-    <span class="n">function_name</span><span class="p">()</span>
-    <span class="n">function_name</span><span class="p">(</span><span class="n">arg_1</span> <span class="o">=</span> <span class="s2">&quot;a different value&quot;</span><span class="p">)</span>
+<span class="c1"># go through each tweet</span>
+<span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Function returns</p>
-<ul class="simple">
-<li><p>Functions can “return” a value, that is, a value comes back when the function is done, that can be used (e.g., stored in a variable). E.g.</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;this is a test message&quot;</span>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to search for &#x27;from:fake_news_site&#x27; and is returning some fake tweets.</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Breaking news: A lovely cat took a nice long nap today!
 
-<span class="n">how_long_message</span> <span class="o">=</span>      <span class="nb">len</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>         &lt;- Output (return)    &lt;- Inputs (arguments, parameters)
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>When writing a function, to return a value, use the word “return” followed by a value</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mult</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
-  <span class="k">return</span> <span class="n">num1</span> <span class="o">*</span> <span class="n">num2</span>
+Breaking news: Someone said a really mean thing on the internet today!
 
-<span class="c1"># call function</span>
-    <span class="n">number_var</span> <span class="o">=</span> <span class="n">mult</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+Breaking news: Some grandparents made some yummy cookies for all the kids to share!
+
+Breaking news: All the horrors of the universe revealed at last!
 </pre></div>
 </div>
+</div>
+</div>
+</section>
+<section id="search-through-tweets-and-only-display-good-news">
+<h2><span class="section-number">13.5.4. </span>Search through tweets and only display good news<a class="headerlink" href="#search-through-tweets-and-only-display-good-news" title="Permalink to this headline">#</a></h2>
+<p>Now we will make a different version of the code that computes the sentiment of each tweet and only displays the ones with positive sentiment.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;from:fake_news_site&#39;</span>
+<span class="n">tweets</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="c1"># go through each tweet</span>
+<span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+    
+    <span class="c1">#calculate sentiment</span>
+    <span class="n">tweet_sentiment</span> <span class="o">=</span> <span class="n">sia</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">text</span><span class="p">)[</span><span class="s2">&quot;compound&quot;</span><span class="p">]</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">tweet_sentiment</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to search for &#x27;from:fake_news_site&#x27; and is returning some fake tweets.</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Breaking news: A lovely cat took a nice long nap today!
+
+Breaking news: Some grandparents made some yummy cookies for all the kids to share!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="try-it-out-on-real-twitter">
+<h2><span class="section-number">13.5.5. </span>Try it out on real twitter<a class="headerlink" href="#try-it-out-on-real-twitter" title="Permalink to this headline">#</a></h2>
+<p>If you want, you can skip the fake_tweepy step and try it out on real twitter with a query like “from:npr”, “from:msnbc”, “from:cnn”, etc.</p>
+<p>Did it work like you expected?</p>
+<p>You can also only show negative sentiment tweets (sentiment &lt; 0) if you want to see only bad news.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">

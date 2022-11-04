@@ -1,6 +1,6 @@
 # Social Media Influence on Mental Health
 
-In ??? the company Facebook (now called Meta) ran an internal study that found that [Instagram was bad for the mental health of teenage girls](https://www.wsj.com/articles/facebook-knows-instagram-is-toxic-for-teen-girls-company-documents-show-11631620739), and yet they still allowed teenage girls to use Instagram.
+In 2019 the company Facebook (now called Meta) presented an internal study that found that [Instagram was bad for the mental health of teenage girls](https://www.wsj.com/articles/facebook-knows-instagram-is-toxic-for-teen-girls-company-documents-show-11631620739), and yet they still allowed teenage girls to use Instagram.
 
 So, what does social media do to the mental health of teenage girls, and to all it's other users?
 
