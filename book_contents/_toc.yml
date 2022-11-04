@@ -180,8 +180,8 @@ parts:
       - file: ch13_mental_health/02_unhealthy_activities
       - file: ch13_mental_health/03_healthy_activities
       - file: ch13_mental_health/04_mental_health_detection
-      - file: ch13_mental_health/05_reflections
-      - file: ch13_mental_health/06_programming
+      - file: ch13_mental_health/05_demo_only_positive_news
+      - file: ch13_mental_health/06_reflections
       - file: ch13_mental_health/07_learn_more
     - file: ch14_moderation/00_moderation
       sections:

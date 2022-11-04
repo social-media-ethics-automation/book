@@ -1,4 +1,4 @@
-# Programming - only show positive tweets (from search)
+# Demo: Only positive news
 
 What goes here? Unrelated concept? I can move this lecture around as needed
 
