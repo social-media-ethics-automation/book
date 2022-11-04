@@ -16,7 +16,7 @@ name: doom_quality_fig
 width: 500px
 alt: 'Tweet by Ethan Jacobs (@ethanjacobslaw): OK doomscrolling is bad but have you SEEN the quality of the doom this week?'
 ---
-Tweet on doomscrolling the day after insurrectionists stormed the US Capital (while still in the middle of the COVID pandemic).
+[Tweet on doomscrolling](https://twitter.com/ethanjacobslaw/status/1347434641540538368) the day after insurrectionists stormed the US Capital (while still in the middle of the COVID pandemic).
 ```
 
 
