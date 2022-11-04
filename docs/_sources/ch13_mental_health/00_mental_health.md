@@ -1,4 +1,4 @@
-# (Incomplete) Mental Health
+# Mental Health
 
 Now let's look at issues around mental health and social media.
 
