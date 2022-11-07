@@ -1,5 +1,6 @@
 # Comparing Different Platforms
 - 4chan/8chan - minimal moderation
+  - Though the do moderate for spam!
 - Reddit - different moderators in each subreddit, some very toxic, others not
   - [Study finds Reddit’s controversial ban of its most toxic subreddits actually worked](https://techcrunch.com/2017/09/11/study-finds-reddits-controversial-ban-of-its-most-toxic-subreddits-actually-worked/)
     - “Reddit finally banned a handful of its most hateful and deplorable subreddits, including r/coontown and r/fatpeoplehate.”
