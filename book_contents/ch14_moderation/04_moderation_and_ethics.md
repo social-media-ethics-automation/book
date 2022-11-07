@@ -40,6 +40,8 @@ Because social media spaces involve a complicated interplay of privacy and publi
 ## Charles W. Mills and The Racialized Contract
 Some philosophers, like Charles W. Mills, have pointed out that social contracts tend to be shaped by those in power, and agreed to by those in power, but they only work when a less powerful group is taken advantage of to support the power base of the contract deciders. This is a rough way of describing the idea behind Mills's famous book, _The Racial Contract_. Mills said that the "we" of American society was actually a subgroup, a "we" within the broader community, and that the "we" of American society which agrees to the implicit social contract is a racialized "we". That is, the contract is devised by and for, and agreed to by, white people, and it is rational--that is, it makes sense and it works--only because it assumes the subjugation and the exploitation of people of color. Mills argued that a truly just society would need to include ALL subgroups in devising and agreeing to the imagined social contract, instead of some subgroups using their rights and freedoms as a way to impose extra moderation on the rights and freedoms of other groups.
 
+% TODO [Facebook’s race-blind practices around hate speech came at the expense of Black users, new documents show](https://www.washingtonpost.com/technology/2021/11/21/facebook-algorithm-biased-race/)
+
 Reflection questions:
 - What people are in charge of different social media sites and the content moderation rules? How does this affect the rules that are made?
 - How might content moderation rules be different if all racial groups had power to set the rules?

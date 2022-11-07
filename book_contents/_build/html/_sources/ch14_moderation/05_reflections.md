@@ -8,7 +8,7 @@ YouTube comments can be a place to find these, particularly replies to comments.
 
 * What did you think of the options you were given for reporting spam?
 
-## Reflection Questions?
+## Reflection Questions
 
 - Have you ever reported a post/comment for violating social media platform rules?
 - Have you ever faced consequences for breaking social media rules (or for being accused of it)?

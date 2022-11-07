@@ -187,8 +187,8 @@ parts:
       sections:
       - file: ch14_moderation/01_content
       - file: ch14_moderation/02_moderation_tools
-      - file: ch14_moderation/03_moderation_and_ethics
-      - file: ch14_moderation/04_different_platforms
+      - file: ch14_moderation/03_different_platforms
+      - file: ch14_moderation/04_moderation_and_ethics
       - file: ch14_moderation/05_reflections
       - file: ch14_moderation/06_demo_recursion
       - file: ch14_moderation/07_practice_recusion
