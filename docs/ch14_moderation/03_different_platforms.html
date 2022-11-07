@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>14.7. Lab: Recursion &#8212; Social Media, Ethics, and Automation</title>
+    <title>14.3. Comparing Different Platforms &#8212; Social Media, Ethics, and Automation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="14.8. Demo: recursion with real tweets" href="08_demo_recursion_on_twitter.html" />
-    <link rel="prev" title="14.6. Demo: recursion (simplified tweet data)" href="06_demo_recursion.html" />
+    <link rel="next" title="14.4. Moderation and Ethics" href="04_moderation_and_ethics.html" />
+    <link rel="prev" title="14.2. Moderation Tools" href="02_moderation_tools.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -1068,14 +1068,14 @@ const thebe_selector_output = ".output, .cell_output"
      14.2. Moderation Tools
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="03_moderation_and_ethics.html">
-     14.3. Moderation and Ethics
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     14.3. Comparing Different Platforms
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="04_different_platforms.html">
-     14.4. Comparing Different Platforms
+    <a class="reference internal" href="04_moderation_and_ethics.html">
+     14.4. Moderation and Ethics
     </a>
    </li>
    <li class="toctree-l2">
@@ -1088,8 +1088,8 @@ const thebe_selector_output = ".output, .cell_output"
      14.6. Demo: recursion (simplified tweet data)
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="07_practice_recusion.html">
      14.7. Lab: Recursion
     </a>
    </li>
@@ -1534,35 +1534,6 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/kylethayer/social_media_ethics_automation_v0/main?urlpath=lab/tree/book_contents/ch14_moderation/07_practice_recusion.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -1602,7 +1573,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/kylethayer/social_media_ethics_automation_v0/issues/new?title=Issue%20on%20page%20%2Fch14_moderation/07_practice_recusion.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/kylethayer/social_media_ethics_automation_v0/issues/new?title=Issue%20on%20page%20%2Fch14_moderation/03_different_platforms.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1630,7 +1601,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/ch14_moderation/07_practice_recusion.ipynb"
+        <a href="../_sources/ch14_moderation/03_different_platforms.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1641,7 +1612,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="headerbtn__text-container">.md</span>
 </a>
 
       </li>
@@ -1690,104 +1661,29 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#twitter-practice">
-   14.7.1. Twitter Practice
+  <a class="reference internal nav-link" href="#chan-8chan-minimal-moderation">
+   14.3.1. 4chan/8chan (minimal moderation)
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#normal-set-up-run-the-following-code-block">
-     Normal set up: run the following code block
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#getting-tweet-metrics">
-     Getting Tweet Metrics
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#to-find-the-id-of-a-tweet">
-       To find the ID of a tweet:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#you-can-get-tweet-metrics-by-specifying-public-metrics-in-the-tweet-fields-parameter">
-       You can get tweet metrics by specifying “public_metrics” in the tweet_fields parameter:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#you-try-go-on-twitter-and-find-your-favorite-tweet-print-the-tweet-metrics-of-that-tweet-using-the-structure-from-the-example-above">
-       1. YOU TRY: Go on twitter and find your favorite tweet. Print the tweet metrics of that tweet using the structure from the example above.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#note-for-this-question-you-can-hard-code-the-tweet-id">
-       *NOTE: for this question, you can hard code the tweet ID
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#write-a-function-that-takes-in-a-tweet-id-as-a-paramter-and-returns-the-tweet-metrics">
-       2. Write a function that takes in a tweet ID as a paramter and returns the tweet metrics.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#call-that-function-with-a-tweet-id-of-your-choosing">
-       3. Call that function with a tweet ID of your choosing.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#search-for-recent-tweets-with-the-query-pike-place-and-save-the-list-in-the-variable-pike-tweets-loop-through-the-pike-tweets-print-the-text-and-the-metrics-of-each-tweet">
-       4. Search for recent tweets with the query “pike place” and save the list in the variable
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         pike_tweets
-        </span>
-       </code>
-       . Loop through the
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         pike_tweets
-        </span>
-       </code>
-       &amp; print the text and the metrics of each tweet.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#write-a-function-that-takes-in-a-tweet-id-and-returns-trending-if-it-has-more-than-10-replies-else-it-returns-stagnant">
-       5. Write a function that takes in a tweet ID and returns “trending” if it has more than 10 replies, ELSE it returns “stagnant”.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#call-the-function-with-a-tweet-id-of-your-chioce">
-       6. Call the function with a tweet ID of your chioce.
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#practice-with-recursion">
-   14.7.2. Practice with recursion
+  <a class="reference internal nav-link" href="#reddit-subreddits-with-volunteer-moderators">
+   14.3.2. Reddit (subreddits with volunteer moderators)
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#this-is-the-code-form-lecture-14-to-print-tweets-and-replies">
-     This is the code form lecture 14 to print tweets and replies
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#your-turn-make-a-copy-of-the-code-above-and-modify-it-so-it-also-prints-out-the-username-of-who-made-the-tweet-your-output-should-have-this-exact-structure">
-       7. Your turn: Make a copy of the code above and modify it so it also prints out the username of who made the tweet. Your output should have this exact structure:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#now-make-a-copy-of-your-code-from-the-previous-question-and-modify-it-to-only-print-out-the-tweet-username-only-if-the-length-of-the-tweet-is-greater-than-25">
-       8. Now, make a copy of your code from the previous question and modify it to only print out the tweet / username only if the length of the tweet is greater than 25.
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#facebook-hired-moderators">
+   14.3.3. Facebook (hired moderators)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#removing-the-option-of-feedback">
+   14.3.4. Removing the option of feedback
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#public-figure-exception">
+   14.3.5. Public Figure Exception
+  </a>
  </li>
 </ul>
 
@@ -1798,7 +1694,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Lab: Recursion</h1>
+                <h1>Comparing Different Platforms</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1809,104 +1705,29 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#twitter-practice">
-   14.7.1. Twitter Practice
+  <a class="reference internal nav-link" href="#chan-8chan-minimal-moderation">
+   14.3.1. 4chan/8chan (minimal moderation)
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#normal-set-up-run-the-following-code-block">
-     Normal set up: run the following code block
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#getting-tweet-metrics">
-     Getting Tweet Metrics
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#to-find-the-id-of-a-tweet">
-       To find the ID of a tweet:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#you-can-get-tweet-metrics-by-specifying-public-metrics-in-the-tweet-fields-parameter">
-       You can get tweet metrics by specifying “public_metrics” in the tweet_fields parameter:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#you-try-go-on-twitter-and-find-your-favorite-tweet-print-the-tweet-metrics-of-that-tweet-using-the-structure-from-the-example-above">
-       1. YOU TRY: Go on twitter and find your favorite tweet. Print the tweet metrics of that tweet using the structure from the example above.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#note-for-this-question-you-can-hard-code-the-tweet-id">
-       *NOTE: for this question, you can hard code the tweet ID
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#write-a-function-that-takes-in-a-tweet-id-as-a-paramter-and-returns-the-tweet-metrics">
-       2. Write a function that takes in a tweet ID as a paramter and returns the tweet metrics.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#call-that-function-with-a-tweet-id-of-your-choosing">
-       3. Call that function with a tweet ID of your choosing.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#search-for-recent-tweets-with-the-query-pike-place-and-save-the-list-in-the-variable-pike-tweets-loop-through-the-pike-tweets-print-the-text-and-the-metrics-of-each-tweet">
-       4. Search for recent tweets with the query “pike place” and save the list in the variable
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         pike_tweets
-        </span>
-       </code>
-       . Loop through the
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         pike_tweets
-        </span>
-       </code>
-       &amp; print the text and the metrics of each tweet.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#write-a-function-that-takes-in-a-tweet-id-and-returns-trending-if-it-has-more-than-10-replies-else-it-returns-stagnant">
-       5. Write a function that takes in a tweet ID and returns “trending” if it has more than 10 replies, ELSE it returns “stagnant”.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#call-the-function-with-a-tweet-id-of-your-chioce">
-       6. Call the function with a tweet ID of your chioce.
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#practice-with-recursion">
-   14.7.2. Practice with recursion
+  <a class="reference internal nav-link" href="#reddit-subreddits-with-volunteer-moderators">
+   14.3.2. Reddit (subreddits with volunteer moderators)
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#this-is-the-code-form-lecture-14-to-print-tweets-and-replies">
-     This is the code form lecture 14 to print tweets and replies
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#your-turn-make-a-copy-of-the-code-above-and-modify-it-so-it-also-prints-out-the-username-of-who-made-the-tweet-your-output-should-have-this-exact-structure">
-       7. Your turn: Make a copy of the code above and modify it so it also prints out the username of who made the tweet. Your output should have this exact structure:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#now-make-a-copy-of-your-code-from-the-previous-question-and-modify-it-to-only-print-out-the-tweet-username-only-if-the-length-of-the-tweet-is-greater-than-25">
-       8. Now, make a copy of your code from the previous question and modify it to only print out the tweet / username only if the length of the tweet is greater than 25.
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#facebook-hired-moderators">
+   14.3.3. Facebook (hired moderators)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#removing-the-option-of-feedback">
+   14.3.4. Removing the option of feedback
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#public-figure-exception">
+   14.3.5. Public Figure Exception
+  </a>
  </li>
 </ul>
 
@@ -1918,190 +1739,40 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="lab-recursion">
-<h1><span class="section-number">14.7. </span>Lab: Recursion<a class="headerlink" href="#lab-recursion" title="Permalink to this headline">#</a></h1>
-<section id="twitter-practice">
-<h2><span class="section-number">14.7.1. </span>Twitter Practice<a class="headerlink" href="#twitter-practice" title="Permalink to this headline">#</a></h2>
-<section id="normal-set-up-run-the-following-code-block">
-<h3>Normal set up: run the following code block<a class="headerlink" href="#normal-set-up-run-the-following-code-block" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Install variable inspector (then reload browser tab)</span>
-<span class="o">!</span>pip install lckr-jupyterlab-variableinspector
-
-<span class="c1"># make sure tweepy library is installed</span>
-<span class="o">!</span>pip install tweepy 
-<span class="kn">import</span> <span class="nn">tweepy</span>
-
-<span class="c1"># load my twitter keys</span>
-<span class="kn">import</span> <span class="nn">my_bot_keys</span>
-
-<span class="c1"># log into tweepy</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span>
-    <span class="n">bearer_token</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">bearer_token</span><span class="p">,</span>
-    <span class="n">consumer_key</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">consumer_secret</span><span class="p">,</span>                   
-    <span class="n">access_token</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">my_bot_keys</span><span class="o">.</span><span class="n">access_token_secret</span>
-<span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting lckr-jupyterlab-variableinspector
-  Using cached lckr_jupyterlab_variableinspector-3.0.9.tar.gz (60 kB)
-  Installing build dependencies: started
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
-WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
-</pre></div>
-</div>
-</div>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="comparing-different-platforms">
+<h1><span class="section-number">14.3. </span>Comparing Different Platforms<a class="headerlink" href="#comparing-different-platforms" title="Permalink to this headline">#</a></h1>
+<p>Let’s now look at how some different platforms have handled content moderation:</p>
+<section id="chan-8chan-minimal-moderation">
+<h2><span class="section-number">14.3.1. </span>4chan/8chan (minimal moderation)<a class="headerlink" href="#chan-8chan-minimal-moderation" title="Permalink to this headline">#</a></h2>
+<p>Sites like 4chan and 8chan bill themselves as sites that support free-speech, in the sense that they don’t ban trolling and hateful speech, though they may remove some illegal content, like child pornography.</p>
+<p>One thing these sites do ban though, is spam. While spam is certainly legal, and a form of speech, this speech is restricted on these sites. If the chat boards filled up with spam, the users would find it boring and leave, so for practical reasons, these sites still moderate for spam (though they may allow some uses of ironic spam, <a class="reference external" href="https://knowyourmeme.com/memes/copypasta">copypasta</a>).</p>
 </section>
-<section id="getting-tweet-metrics">
-<h3>Getting Tweet Metrics<a class="headerlink" href="#getting-tweet-metrics" title="Permalink to this headline">#</a></h3>
-<p>Tweet metrics represent public information attached to any given tweet. This information incudes retweet count, reply count, like count, and quote count.</p>
-<section id="to-find-the-id-of-a-tweet">
-<h4>To find the ID of a tweet:<a class="headerlink" href="#to-find-the-id-of-a-tweet" title="Permalink to this headline">#</a></h4>
-<p>The last number section of a tweet url is the ID of the tweet.</p>
-<p>If you open a tweet on twitter, you can see the url in the menu bar:</p>
-<p>      <img src="tweet_url.jpg" alt="the url of a tweet highlighted, with the last number part circled" width="300" /></p>
-<p>or you can copy the link to the tweet and you can paste it in your browser to see the url</p>
-<p>      <img src="copy_link_to_tweet.jpg" alt="on a tweet the share button is circled and then the copy link to tweet option is circled" width="300"/></p>
+<section id="reddit-subreddits-with-volunteer-moderators">
+<h2><span class="section-number">14.3.2. </span>Reddit (subreddits with volunteer moderators)<a class="headerlink" href="#reddit-subreddits-with-volunteer-moderators" title="Permalink to this headline">#</a></h2>
+<p>Reddit is composed of many smaller discussion boards, called subreddits. These subreddits range from friendly to very toxic, with different moderators in charge of each subreddit.</p>
+<p>Reddit as a larger platform decided to ban and remove some of it’s most toxic and hateful subreddits, including r/c***town (note: I censored out a racial slur for Black people), and r/fatpeoplehate. In <a class="reference external" href="https://techcrunch.com/2017/09/11/study-finds-reddits-controversial-ban-of-its-most-toxic-subreddits-actually-worked/">a study of what happened after this ban</a>:</p>
+<blockquote>
+<div><p>Post-ban, hate speech by the same users was reduced by as much as 80-90 percent.</p>
+<p>[…]</p>
+<p>“Members of banned communities left Reddit at significantly higher rates than control groups.</p>
+<p>[…]</p>
+<p>Migration was common, both to similar subreddits (i.e. overtly racist ones) and tangentially related ones (r/The_Donald).</p>
+<p>[…]</p>
+<p>However, within those communities, hate speech did not reliably increase, although there were slight bumps as the invaders encountered and tested new rules and moderators.</p>
+</div></blockquote>
 </section>
-<section id="you-can-get-tweet-metrics-by-specifying-public-metrics-in-the-tweet-fields-parameter">
-<h4>You can get tweet metrics by specifying “public_metrics” in the tweet_fields parameter:<a class="headerlink" href="#you-can-get-tweet-metrics-by-specifying-public-metrics-in-the-tweet-fields-parameter" title="Permalink to this headline">#</a></h4>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is the structure. Try running this code block:</span>
-
-<span class="n">tweet_id</span> <span class="o">=</span> <span class="mi">1130510065289404416</span>
-
-<span class="n">tweet_info</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_tweet</span><span class="p">(</span><span class="n">tweet_id</span><span class="p">,</span> <span class="n">tweet_fields</span> <span class="o">=</span> <span class="s2">&quot;public_metrics&quot;</span><span class="p">)</span>
-
-<span class="n">tweet_metrics</span> <span class="o">=</span> <span class="n">tweet_info</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">public_metrics</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">tweet_metrics</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
+<section id="facebook-hired-moderators">
+<h2><span class="section-number">14.3.3. </span>Facebook (hired moderators)<a class="headerlink" href="#facebook-hired-moderators" title="Permalink to this headline">#</a></h2>
+<p>Facebook uses hired moderators to handle content moderation on the platform at large (though Facebook groups are moderated by users). When users (or computer programs) flag content, the hired moderators will look at it and decide what to do.</p>
+<p>Facebook also discovered in internal research that, “<a class="reference external" href="https://www.technologyreview.com/2021/03/11/1020600/facebook-responsible-ai-misinformation/">the more likely a post is to violate Facebook’s community standards, the more user engagement it receives, because the algorithms that maximize engagement reward inflammatory content</a>.”</p>
 </section>
-<section id="you-try-go-on-twitter-and-find-your-favorite-tweet-print-the-tweet-metrics-of-that-tweet-using-the-structure-from-the-example-above">
-<h4>1. YOU TRY: Go on twitter and find your favorite tweet. Print the tweet metrics of that tweet using the structure from the example above.<a class="headerlink" href="#you-try-go-on-twitter-and-find-your-favorite-tweet-print-the-tweet-metrics-of-that-tweet-using-the-structure-from-the-example-above" title="Permalink to this headline">#</a></h4>
+<section id="removing-the-option-of-feedback">
+<h2><span class="section-number">14.3.4. </span>Removing the option of feedback<a class="headerlink" href="#removing-the-option-of-feedback" title="Permalink to this headline">#</a></h2>
+<p>For a period of time, most news organizations allowed comments on their articles, but around 2013 many of these sites <a class="reference external" href="https://www.wired.com/2015/10/brief-history-of-the-demise-of-the-comments-timeline/">simply removed the possibility of leaving comments</a>, as they felt allowing comments did more harm than good.</p>
 </section>
-<section id="note-for-this-question-you-can-hard-code-the-tweet-id">
-<h4>*NOTE: for this question, you can hard code the tweet ID<a class="headerlink" href="#note-for-this-question-you-can-hard-code-the-tweet-id" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="write-a-function-that-takes-in-a-tweet-id-as-a-paramter-and-returns-the-tweet-metrics">
-<h4>2. Write a function that takes in a tweet ID as a paramter and returns the tweet metrics.<a class="headerlink" href="#write-a-function-that-takes-in-a-tweet-id-as-a-paramter-and-returns-the-tweet-metrics" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="call-that-function-with-a-tweet-id-of-your-choosing">
-<h4>3. Call that function with a tweet ID of your choosing.<a class="headerlink" href="#call-that-function-with-a-tweet-id-of-your-choosing" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="search-for-recent-tweets-with-the-query-pike-place-and-save-the-list-in-the-variable-pike-tweets-loop-through-the-pike-tweets-print-the-text-and-the-metrics-of-each-tweet">
-<h4>4. Search for recent tweets with the query “pike place” and save the list in the variable <code class="docutils literal notranslate"><span class="pre">pike_tweets</span></code>. Loop through the <code class="docutils literal notranslate"><span class="pre">pike_tweets</span></code> &amp; print the text and the metrics of each tweet.<a class="headerlink" href="#search-for-recent-tweets-with-the-query-pike-place-and-save-the-list-in-the-variable-pike-tweets-loop-through-the-pike-tweets-print-the-text-and-the-metrics-of-each-tweet" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="write-a-function-that-takes-in-a-tweet-id-and-returns-trending-if-it-has-more-than-10-replies-else-it-returns-stagnant">
-<h4>5. Write a function that takes in a tweet ID and returns “trending” if it has more than 10 replies, ELSE it returns “stagnant”.<a class="headerlink" href="#write-a-function-that-takes-in-a-tweet-id-and-returns-trending-if-it-has-more-than-10-replies-else-it-returns-stagnant" title="Permalink to this headline">#</a></h4>
-</section>
-<section id="call-the-function-with-a-tweet-id-of-your-chioce">
-<h4>6. Call the function with a tweet ID of your chioce.<a class="headerlink" href="#call-the-function-with-a-tweet-id-of-your-chioce" title="Permalink to this headline">#</a></h4>
-</section>
-</section>
-</section>
-<section id="practice-with-recursion">
-<h2><span class="section-number">14.7.2. </span>Practice with recursion<a class="headerlink" href="#practice-with-recursion" title="Permalink to this headline">#</a></h2>
-<p>First we’ll create a simplified tweet and reply structure like was demoed in lecture 14, though this time we’ll include username information for each tweet.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># run this code block</span>
-<span class="n">tweet_about_exam</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;That last exam in sure was hard!&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;Emma&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;replies&#39;</span><span class="p">:[{</span>
-        <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;It sure was hard, what score did you get? &#39;</span><span class="p">,</span>
-        <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;Fatima&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;replies&#39;</span><span class="p">:</span> <span class="p">[{</span>
-            <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;I got a 67% :(&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;Kwesi&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;replies&#39;</span><span class="p">:</span> <span class="p">[]</span>
-        <span class="p">},{</span>
-            <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;I got a 73%&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;Ying&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;replies&#39;</span><span class="p">:</span> <span class="p">[]</span>
-        <span class="p">}]</span>
-    <span class="p">},</span> <span class="p">{</span>
-        <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;I didn</span><span class="se">\&#39;</span><span class="s1">t think it was that bad&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;Maria&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;replies&#39;</span><span class="p">:</span> <span class="p">[{</span>
-            <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;how was that not a super hard exam?&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;Dmitri&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;replies&#39;</span><span class="p">:</span> <span class="p">[]</span>
-        <span class="p">},</span> <span class="p">{</span>
-            <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;of course you didn</span><span class="se">\&#39;</span><span class="s1">t&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;Emma&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;replies&#39;</span><span class="p">:</span> <span class="p">[{</span>
-                <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;what</span><span class="se">\&#39;</span><span class="s1">s that supposed to mean?&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;Maria&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;replies&#39;</span><span class="p">:</span> <span class="p">[{</span>
-                    <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;you</span><span class="se">\&#39;</span><span class="s1">re an overacheiver&#39;</span><span class="p">,</span>
-                    <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;Emma&#39;</span><span class="p">,</span>
-                    <span class="s1">&#39;replies&#39;</span><span class="p">:</span> <span class="p">[{</span>
-                        <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;and that</span><span class="se">\&#39;</span><span class="s1">s bad how?&#39;</span><span class="p">,</span>
-                        <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;Maria&#39;</span><span class="p">,</span>
-                        <span class="s1">&#39;replies&#39;</span><span class="p">:</span> <span class="p">[]</span>
-                    <span class="p">}]</span>
-                <span class="p">}]</span>
-            <span class="p">}]</span>
-        <span class="p">}]</span>
-    <span class="p">}]</span>
-<span class="p">}</span>
-
-<span class="n">display</span><span class="p">(</span><span class="n">tweet_about_exam</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<section id="this-is-the-code-form-lecture-14-to-print-tweets-and-replies">
-<h3>This is the code form lecture 14 to print tweets and replies<a class="headerlink" href="#this-is-the-code-form-lecture-14-to-print-tweets-and-replies" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># try running this code block</span>
-<span class="k">def</span> <span class="nf">print_tweet_and_replies</span><span class="p">(</span><span class="n">tweet</span><span class="p">,</span> <span class="n">num_indents</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-    <span class="c1"># print indent first</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_indents</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;   &#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-        
-    <span class="c1"># print tweet</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span> <span class="o">+</span> <span class="n">tweet</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">])</span>
-    
-    <span class="c1">#print replies (and the replies of those, etc.)</span>
-    <span class="k">for</span> <span class="n">reply</span> <span class="ow">in</span> <span class="n">tweet</span><span class="p">[</span><span class="s1">&#39;replies&#39;</span><span class="p">]:</span>
-        <span class="n">print_tweet_and_replies</span><span class="p">(</span><span class="n">reply</span><span class="p">,</span> <span class="n">num_indents</span> <span class="o">=</span> <span class="n">num_indents</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-
-<span class="n">print_tweet_and_replies</span><span class="p">(</span><span class="n">tweet_about_exam</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<section id="your-turn-make-a-copy-of-the-code-above-and-modify-it-so-it-also-prints-out-the-username-of-who-made-the-tweet-your-output-should-have-this-exact-structure">
-<h4>7. Your turn: Make a copy of the code above and modify it so it also prints out the username of who made the tweet. Your output should have this exact structure:<a class="headerlink" href="#your-turn-make-a-copy-of-the-code-above-and-modify-it-so-it-also-prints-out-the-username-of-who-made-the-tweet-your-output-should-have-this-exact-structure" title="Permalink to this headline">#</a></h4>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;That last exam in sure was hard!&quot;</span>
-        <span class="o">-</span><span class="n">Emma</span>
-   <span class="s2">&quot;It sure was hard, what score did you get?&quot;</span>
-           <span class="o">-</span><span class="n">Fatima</span>
-   <span class="o">...</span>
-</pre></div>
-</div>
-</section>
-<section id="now-make-a-copy-of-your-code-from-the-previous-question-and-modify-it-to-only-print-out-the-tweet-username-only-if-the-length-of-the-tweet-is-greater-than-25">
-<h4>8. Now, make a copy of your code from the previous question and modify it to only print out the tweet / username only if the length of the tweet is greater than 25.<a class="headerlink" href="#now-make-a-copy-of-your-code-from-the-previous-question-and-modify-it-to-only-print-out-the-tweet-username-only-if-the-length-of-the-tweet-is-greater-than-25" title="Permalink to this headline">#</a></h4>
-</section>
-</section>
+<section id="public-figure-exception">
+<h2><span class="section-number">14.3.5. </span>Public Figure Exception<a class="headerlink" href="#public-figure-exception" title="Permalink to this headline">#</a></h2>
+<p>Twitter, Facebook, and other platforms had an <a class="reference external" href="https://help.twitter.com/en/rules-and-policies/public-interest">exception to their normal moderation policies for political leaders</a>, where they wouldn’t ban them even if they violated site policies (most notably applied to Donald Trump). After the January 6th insurrection at the US Capital, Donald Trump was banned first from Twitter, then from Facebook, and <a class="reference external" href="https://www.theverge.com/2021/6/3/22474738/facebook-ending-political-figure-exemption-moderation-policy">Facebook announced an end special treatment for politicians</a>.</p>
 </section>
 </section>
 
@@ -2132,17 +1803,17 @@ WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="06_demo_recursion.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="02_moderation_tools.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">14.6. </span>Demo: recursion (simplified tweet data)</p>
+            <p class="prev-next-title"><span class="section-number">14.2. </span>Moderation Tools</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="08_demo_recursion_on_twitter.html" title="next page">
+    <a class='right-next' id="next-link" href="04_moderation_and_ethics.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">14.8. </span>Demo: recursion with real tweets</p>
+        <p class="prev-next-title"><span class="section-number">14.4. </span>Moderation and Ethics</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

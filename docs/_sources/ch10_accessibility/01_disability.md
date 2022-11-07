@@ -16,7 +16,7 @@ Most humans are trichromats, meaning they can see three base colors (red, green,
 
 Some disabilities are __visible disabilities__ that other people can notice by observing the disabled person (e.g., wearing glasses is an indication of a visual disability). Other disabilities are __invisible disabilities__ that other people cannot notice by observing the disabled person (e.g., chronic pain).
 
-% TODO: Some people (like many with chronic pain) would welcome a cure that got rid of their disability. Others (like many autistic people), are insulted by the suggestion that there is something wrong with them that needs to be "cured," and think the only reason it is considered a disability at all is because society doesn't make reasonable accommodations for them.
+% TODO: Some people (like many with chronic pain) would welcome a cure that got rid of their disability. Others (like many autistic people), are insulted by the suggestion that there is something wrong with them that needs to be "cured," and think the only reason it is considered a disability at all is because society doesn't make reasonable accommodations for them. (NOTE: perhaps use Chronic fatigue syndrome for the invisible disability)
 
 Many of the disabilities we mentioned above were __permanent disabilities__, that is, disabilities that won't go away. But disabilities can also be __temporary disabilities__, like a broken leg in a cast, which will eventually go away. Disabilities can even be __situational disabilities__, like the loss of fine motor skills when wearing thick gloves in the cold, or trying to watch a video on your phone in class with the sound off, or trying to type on a computer while holding a baby.
 
