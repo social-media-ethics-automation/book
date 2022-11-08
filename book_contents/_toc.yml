@@ -190,10 +190,12 @@ parts:
       - file: ch14_moderation/03_different_platforms
       - file: ch14_moderation/04_moderation_and_ethics
       - file: ch14_moderation/05_reflections
-      - file: ch14_moderation/06_demo_recursion
-      - file: ch14_moderation/07_practice_recusion
-      - file: ch14_moderation/08_demo_recursion_on_twitter
-      - file: ch14_moderation/09_learn_more
+      - file: ch14_moderation/06_tweets_and_replies/00_intro
+        sections:
+        - file: ch14_moderation/06_tweets_and_replies/01_trees
+        - file: ch14_moderation/06_tweets_and_replies/02_demo_recursion
+        - file: ch14_moderation/06_tweets_and_replies/03_demo_hide_some_tweets
+      - file: ch14_moderation/07_learn_more
     - file: ch15_moderators/00_moderators
       sections:
       - file: ch15_moderators/01_moderator_types

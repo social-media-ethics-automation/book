@@ -1,0 +1,53 @@
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\jupyter_cache\executors\utils.py", line 51, in single_nb_execution
+    executenb(
+  File "C:\Python310\lib\site-packages\nbclient\client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "C:\Python310\lib\site-packages\nbclient\util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "C:\Python310\lib\site-packages\nbclient\util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "C:\Python310\lib\asyncio\base_events.py", line 646, in run_until_complete
+    return future.result()
+  File "C:\Python310\lib\site-packages\nbclient\client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "C:\Python310\lib\site-packages\nbclient\client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Python310\lib\site-packages\nbclient\client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Install variable inspector (then reload browser tab)
+!pip install lckr-jupyterlab-variableinspector
+
+# make sure tweepy library is installed
+!pip install tweepy 
+import tweepy
+
+# load my twitter keys
+import my_bot_keys
+
+# log into tweepy
+client = tweepy.Client(
+    bearer_token=my_bot_keys.bearer_token,
+    consumer_key=my_bot_keys.consumer_key, consumer_secret=my_bot_keys.consumer_secret,                   
+    access_token=my_bot_keys.access_token, access_token_secret=my_bot_keys.access_token_secret
+)
+------------------
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Input [1;32mIn [1][0m, in [0;36m<cell line: 9>[1;34m()[0m
+[0;32m      6[0m [38;5;28;01mimport[39;00m [38;5;21;01mtweepy[39;00m
+[0;32m      8[0m [38;5;66;03m# load my twitter keys[39;00m
+[1;32m----> 9[0m [38;5;28;01mimport[39;00m [38;5;21;01mmy_bot_keys[39;00m
+[0;32m     11[0m [38;5;66;03m# log into tweepy[39;00m
+[0;32m     12[0m client [38;5;241m=[39m tweepy[38;5;241m.[39mClient(
+[0;32m     13[0m     bearer_token[38;5;241m=[39mmy_bot_keys[38;5;241m.[39mbearer_token,
+[0;32m     14[0m     consumer_key[38;5;241m=[39mmy_bot_keys[38;5;241m.[39mconsumer_key, consumer_secret[38;5;241m=[39mmy_bot_keys[38;5;241m.[39mconsumer_secret,                   
+[0;32m     15[0m     access_token[38;5;241m=[39mmy_bot_keys[38;5;241m.[39maccess_token, access_token_secret[38;5;241m=[39mmy_bot_keys[38;5;241m.[39maccess_token_secret
+[0;32m     16[0m )
+
+[1;31mModuleNotFoundError[0m: No module named 'my_bot_keys'
+ModuleNotFoundError: No module named 'my_bot_keys'
+
