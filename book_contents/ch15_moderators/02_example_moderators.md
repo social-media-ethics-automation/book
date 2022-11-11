@@ -1,5 +1,7 @@
 # Example Moderator Set-ups
 
+Let's look at some specific examples of moderator set-ups.
+
 ## Reddit
 - Upvote/downvote system
 - Moderators with special privileges

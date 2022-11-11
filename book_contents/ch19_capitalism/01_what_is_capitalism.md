@@ -40,3 +40,5 @@ For example, there is one seattle city sewer system run by the government. Havin
 > "When raw market forces come in, [movie] studios start being run by companies that don’t care if they’re dealing in films or toothpaste so long as they get their 10% [return]. When AT&T took over Time Warner, it immediately told HBO to become lighter and more commercial. They were always making money. But not enough for an investor.""
 >
 > [Stellan Skarsgård](https://www.theguardian.com/film/2021/nov/25/stellan-skarsgard-my-tips-for-fatherhood-dont-lie-even-about-santa-claus)
+
+% So, if the richest man on earth decided to overpay to buy a social media site which he is likely to quickly destroy in short order, then the company is legally obligated to accept, otherwise they'd be cheating their stockholders out of money the stockhoders could have had.
