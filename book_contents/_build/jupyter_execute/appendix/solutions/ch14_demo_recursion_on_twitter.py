@@ -1,47 +1,60 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Demo: recursion with real tweets
+# # Ch14 Demo: recursion with real tweets
 
-# ### tweepy set-up
+# ## Normal Tweepy Set-Up
 
 # In[1]:
 
 
 # make sure tweepy library is installed
-get_ipython().system('pip install tweepy')
 import tweepy
 
+
+# (optional) use the fake version of tweepy, so you don’t have to use real twitter developer access passwords
 
 # In[2]:
 
 
-# load my twitter keys
-import my_bot_keys
+get_ipython().run_line_magic('run', '../../fake_tweepy/fake_tweepy.ipynb')
 
 
-# In[7]:
+# In[3]:
 
 
-# log into tweepy
+# Load all your developer access passwords into Python
+# TODO: Put your twitter account's special developer access passwords below:
+bearer_token = "n4tossfgsafs_fake_bearer_token_isa53#$%$"
+consumer_key = "sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG"
+consumer_secret = "45adf$T$A_fake_consumer_secret_JESdsg"
+access_token = "56sd5Ss4tsea_fake_access_token_%YE%hDsdr"
+access_token_secret = "j^$dr_fake_consumer_key_^A5s#DR5s"
+
+
+# In[4]:
+
+
+# Give the tweepy code your developer access passwords so
+# it can perform twitter actions
 client = tweepy.Client(
-    bearer_token=my_bot_keys.bearer_token,
-    consumer_key=my_bot_keys.consumer_key, consumer_secret=my_bot_keys.consumer_secret,                   
-    access_token=my_bot_keys.access_token, access_token_secret=my_bot_keys.access_token_secret
+   bearer_token=bearer_token,
+   consumer_key=consumer_key, consumer_secret=consumer_secret,
+   access_token=access_token, access_token_secret=access_token_secret
 )
 
 
-# ### Helper function to display text in an indented box
+# ## (Just Run): Helper function to display text in an indented box
 
-# In[8]:
+# In[5]:
 
 
 from IPython.display import HTML, Image, display
 import html
-def display_indented(text, left_margin=0):
+def display_indented(text, left_margin=0, color="white"):
     display(
         HTML(
-            "<pre style='border:solid 1px;padding:3px;margin-left:"+ str(left_margin) + "px'>" + 
+            "<pre style='border:solid 1px;padding:3px;margin-left:"+str(left_margin)+"px;background-color:"+color+"'>" + 
             html.escape(text) + 
             "</pre>"
         )
@@ -50,25 +63,26 @@ def display_indented(text, left_margin=0):
 
 # ### Demo of using the display_with_left_margin function
 
-# In[9]:
+# In[6]:
 
 
 display_indented("A no indent text")
 display_indented("A 10px indent text", left_margin=10)
 display_indented("A 20px indent text \n with a newline!", left_margin=20)
+display_indented("You can change the 'color' of the box too, like make it LightCoral", color='LightCoral', left_margin=10)
 
 
-# ### Helper code for getting a twitter conversation (that is a tweet and a bunch of its replies)
+# ## (Just Run): Helper code for getting a twitter conversation (that is a tweet and a bunch of its replies)
 # You don't need to know how this code works, but you can look through it if you want.
 # 
 # Also, if you want to use more includes or something, you can add them to the client.get_tweet() call and the client.search_recent_tweets() call. You might also need to do extra work to include them like I did with the author/users info
 
-# In[11]:
+# In[7]:
 
 
 # Given a tweetId, create a datastructure with the tweet and replies
 # Each "tweet" is dictionary with keys for:
-#    "tweet_info" (from the tweet.data), "author", and "replies"
+#    "tweet_info" (from the tweet.data), "author", "replies", "previous_tweet", and "first_tweet"
 #
 # When searching for tweets in the conversation, it looks for groups of 100
 # tweets at a time. You can set how many groups of 100 tweets it looks for with
@@ -128,34 +142,30 @@ def organize_tweets_by_referenced_tweets(list_of_tweet_results):
 
 # organize the tweets so that author info and replies to tweets are included
 # with it in a convenient data structure
-def organize_tweets_with_replies(tweet, tweets_by_referenced_tweet, users_lookup):
+def organize_tweets_with_replies(tweet, tweets_by_referenced_tweet, users_lookup, previous_tweet=None, first_tweet=None):
     tweet_with_replies = {
         "tweet_info": tweet.data,
         "author": users_lookup[str(tweet.data["author_id"])].data,
-        "replies": []
+        "replies": [],
+        "previous_tweet": previous_tweet
     }
+    if first_tweet == None:
+        first_tweet = tweet_with_replies
+    tweet_with_replies["first_tweet"] = first_tweet
 
     tweet_id = str(tweet.data["id"])
     if tweet_id in tweets_by_referenced_tweet:
         reply_tweets = tweets_by_referenced_tweet[tweet_id]
         for reply_tweet in reply_tweets:
             tweet_with_replies["replies"].append(
-                organize_tweets_with_replies(reply_tweet, tweets_by_referenced_tweet, users_lookup)
+                organize_tweets_with_replies(reply_tweet, tweets_by_referenced_tweet, users_lookup, previous_tweet=tweet_with_replies, first_tweet=first_tweet)
             )
     return tweet_with_replies
 
 
+# ## Recursively printing the tweets and replies
 
-# In[12]:
-
-
-# Demo using get_tweets_with_replies(tweetId, max_conversation_searches=1)
-get_tweets_with_replies(1496559168702099456)
-
-
-# ### Recursively printing the tweets and replies (This is the part you will work on for homework 4)
-
-# In[14]:
+# In[8]:
 
 
 def print_tweet_and_replies(tweet_with_replies, num_indents=0):
@@ -169,21 +179,21 @@ def print_tweet_and_replies(tweet_with_replies, num_indents=0):
         print_tweet_and_replies(reply, num_indents = num_indents + 1)
 
 
-# In[15]:
+# In[9]:
 
 
-weather_tweets_and_replies = get_tweets_with_replies(1496559168702099456)
+loaded_tweets_and_replies = get_tweets_with_replies(98778587)
 
 
-# In[16]:
+# In[10]:
 
 
-print_tweet_and_replies(weather_tweets_and_replies)
+print_tweet_and_replies(loaded_tweets_and_replies)
 
 
-# ### Improve the function to have it print more useful information
+# ## Improved recursive print tweets and replies (more info)
 
-# In[22]:
+# In[11]:
 
 
 def print_tweet_and_replies(tweet_with_replies, num_indents=0):
@@ -205,74 +215,17 @@ def print_tweet_and_replies(tweet_with_replies, num_indents=0):
         print_tweet_and_replies(reply, num_indents = num_indents + 1)
 
 
-# In[23]:
+# In[12]:
 
 
-print_tweet_and_replies(weather_tweets_and_replies)
+print_tweet_and_replies(loaded_tweets_and_replies)
 
 
-# ### Try on a much larger thread
-
-# In[26]:
+# In[13]:
 
 
-misinfo_tweet_with_replies = get_tweets_with_replies(1496714317651083266, max_conversation_searches = 10)
-
-
-# In[27]:
-
-
-print_tweet_and_replies(misinfo_tweet_with_replies)
-
-
-# In[ ]:
-
-
-# sexist offer letter tweet: '1496219652057358336'
-# Ukrain misinfo warning tweet: '1496714317651083266'
-
-
-# ### Rewrite function to only show tweets that got at least 1 like
-
-# In[32]:
-
-
-def print_tweet_and_replies(tweet_with_replies, num_indents=0):
-    tweet_info = tweet_with_replies["tweet_info"]
-    replies = tweet_with_replies["replies"]
-    author_info = tweet_with_replies["author"]
-    public_metrics = tweet_info["public_metrics"]
-
-    display_text = (
-        tweet_info['text'] + "\n" +
-        "-- " + author_info["name"] + " (@" + author_info["username"] + ")" + "\n" +
-        str(public_metrics)
-    )
-    
-    if public_metrics["like_count"] > 1:
-        display_indented(display_text, num_indents*20)
-
-        #print replies (and the replies of those, etc.)
-        for reply in replies:
-            print_tweet_and_replies(reply, num_indents = num_indents + 1)
-
-
-# In[33]:
-
-
-print_tweet_and_replies(misinfo_tweet_with_replies)
-
-
-# In[ ]:
-
-
-# look for users who get a lot of engagement, like the reddit Am I the Asshole:
+# Note: to test for real, look for users who get a lot of engagement, 
+#   like the reddit Am I the Asshole:
 # https://twitter.com/AITA_online
 # '1496516355931217926'
-
-
-# In[ ]:
-
-
-
 

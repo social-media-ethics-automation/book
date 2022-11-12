@@ -1,4 +1,4 @@
-## Inauthenticity
+# Inauthenticity
 
 Before we go into more nuanced aspects of authenticity, let's take a moment and look at the opposite of authenticity, and look at inauthentic behaviors.
 

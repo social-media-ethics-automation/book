@@ -201,8 +201,7 @@ parts:
       - file: ch15_moderators/01_moderator_types
       - file: ch15_moderators/02_example_moderators
       - file: ch15_moderators/03_toll_on_moderators
-      - file: ch15_moderators/04_demo_recursion_on_twitter
-      - file: ch15_moderators/05_learn_more
+      - file: ch15_moderators/04_learn_more
     - file: ch16_crowd_work/00_crowd_work
       sections:
       - file: ch16_crowd_work/01_crowd_work_definition
@@ -269,3 +268,4 @@ parts:
           - file: appendix/solutions/08_solution_sentiment_and_loop_vars
           - file: appendix/solutions/09_solution_functions
           - file: appendix/solutions/ch12_solution_dictionary_counters
+          - file: appendix/solutions/ch14_demo_recursion_on_twitter

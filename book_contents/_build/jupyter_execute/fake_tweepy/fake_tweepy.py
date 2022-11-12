@@ -9,6 +9,11 @@
 
 from types import SimpleNamespace
 
+class SimplishNamespace(SimpleNamespace):
+    pass
+
+setattr(SimplishNamespace, "__getitem__", lambda self, key: self.__dict__[key])
+
 from IPython.display import HTML, Image, display
 import html
 
@@ -48,7 +53,7 @@ def print_tweet(text="", in_reply_to_tweet_id=0):
 # In[5]:
 
 
-def search_recent_tweets(query="", tweet_fields=[], expansions=[], media_fields=[], user_fields=[], max_results=10):
+def search_recent_tweets(query="", tweet_fields=[], expansions=[], media_fields=[], user_fields=[], next_token=None, max_results=10):
     print_info("Fake Tweepy is pretending to search for '"+query+"' and is returning some fake tweets.")
     if(query == '"cute cat"'):
         return SimpleNamespace(
@@ -217,6 +222,50 @@ def search_recent_tweets(query="", tweet_fields=[], expansions=[], media_fields=
               )
           ]
         )
+    if(query == "conversation_id:1234567" and next_token is None):
+        return SimpleNamespace(
+          data = [
+              SimpleNamespace(
+                  id = 24345,
+                  data = {
+                      "id": 24345,
+                      "text": "It sure was hard, what score did you get?",
+                      "author_id": 1093458,
+                      "public_metrics": {'retweet_count': 4, 'reply_count': 2, 'like_count': 3, 'quote_count': 2}
+                  },
+                  referenced_tweets = [SimpleNamespace(
+                      type = "replied_to",
+                      id = 98778587
+                  )]
+              )
+          ],
+          meta = {},
+          includes = {
+            "users": [SimplishNamespace(
+                    id = 123456789,
+                    data = {
+                        "name": "Fake User",
+                        "username": "fake_user" 
+                    }
+                ),SimplishNamespace(
+                    id= 1093458, 
+                    data= {
+                        "name": "Unreal User",
+                        "username": "unreal_user"
+                    }
+                ), SimplishNamespace(
+                    id = 943534, 
+                    name = "Imaginary User",
+                    username = "imaginary_user"
+                ), SimplishNamespace(
+                    id = 945356,
+                    name = "False User",
+                    username = "false_user"
+                )
+            ]
+          }
+        )
+        
 
 
 # In[6]:
@@ -233,6 +282,34 @@ def get_user(id="", username="", user_auth=False):
 
 
 # In[7]:
+
+
+def get_tweet(tweetId, tweet_fields=[], expansions=[]):
+    if(tweetId == 98778587):
+        return SimpleNamespace(
+            data = SimplishNamespace(
+                id = 98778587,
+                author_id = 123456789,
+                text = "That last exam in sure was hard!",
+                conversation_id = 1234567,
+                username = "fake_user",
+                public_metrics= {'retweet_count': 10, 'reply_count': 2, 'like_count': 8, 'quote_count': 4},
+                referenced_tweets = [],
+                __getitem__ = lambda self, key: 123456789 if key == "author_id" else None 
+            ),
+            includes = {
+                "users": [SimplishNamespace(
+                    id = 123456789,
+                    data = {
+                        "name": "Fake User",
+                        "username": "fake_user" 
+                    }
+                )]
+            }
+        )
+
+
+# In[8]:
 
 
 mentions_counter = 0
@@ -288,7 +365,7 @@ def get_users_mentions(id=0):
             )
 
 
-# In[8]:
+# In[9]:
 
 
 def get_users_following(id="", max_results=5):
@@ -321,7 +398,7 @@ def get_users_following(id="", max_results=5):
         )
 
 
-# In[9]:
+# In[10]:
 
 
 def client_creator(bearer_token="", consumer_key="", consumer_secret="", access_token="", access_token_secret="" ):
@@ -331,20 +408,15 @@ def client_creator(bearer_token="", consumer_key="", consumer_secret="", access_
       search_recent_tweets = search_recent_tweets,
       get_user = get_user,
       get_users_mentions = get_users_mentions,
-      get_users_following = get_users_following
+      get_users_following = get_users_following,
+      get_tweet = get_tweet
     )
 
 
-# In[10]:
+# In[11]:
 
 
 tweepy = SimpleNamespace(
     Client = client_creator
 )
-
-
-# In[ ]:
-
-
-
 

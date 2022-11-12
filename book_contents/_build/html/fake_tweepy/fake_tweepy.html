@@ -1117,7 +1117,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../ch15_moderators/00_moderators.html">
-   15. (Incomplete) Content Moderators
+   15. Content Moderators
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/>
   <label for="toctree-checkbox-29">
@@ -1141,13 +1141,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ch15_moderators/04_demo_identify_trolls.html">
-     15.4. Demo: Identify Potential Trolls
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../ch15_moderators/05_learn_more.html">
-     15.5. Learn More
+    <a class="reference internal" href="../ch15_moderators/04_learn_more.html">
+     15.4. Learn More
     </a>
    </li>
   </ul>
@@ -1184,7 +1179,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ch16_crowd_work/04_uneven_contribution.html">
-     16.5. Uneven contributions of users
+     16.5. Power Users and Lurkers
     </a>
    </li>
    <li class="toctree-l2">
@@ -1491,6 +1486,11 @@ const thebe_selector_output = ".output, .cell_output"
      Ch 12 Solution: Dictionary Counters
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/solutions/ch14_demo_recursion_on_twitter.html">
+     Ch14 Demo: recursion with real tweets
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -1708,6 +1708,11 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">types</span> <span class="kn">import</span> <span class="n">SimpleNamespace</span>
 
+<span class="k">class</span> <span class="nc">SimplishNamespace</span><span class="p">(</span><span class="n">SimpleNamespace</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="nb">setattr</span><span class="p">(</span><span class="n">SimplishNamespace</span><span class="p">,</span> <span class="s2">&quot;__getitem__&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span>
 <span class="kn">import</span> <span class="nn">html</span>
 
@@ -1752,7 +1757,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">tweet_fields</span><span class="o">=</span><span class="p">[],</span> <span class="n">expansions</span><span class="o">=</span><span class="p">[],</span> <span class="n">media_fields</span><span class="o">=</span><span class="p">[],</span> <span class="n">user_fields</span><span class="o">=</span><span class="p">[],</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">tweet_fields</span><span class="o">=</span><span class="p">[],</span> <span class="n">expansions</span><span class="o">=</span><span class="p">[],</span> <span class="n">media_fields</span><span class="o">=</span><span class="p">[],</span> <span class="n">user_fields</span><span class="o">=</span><span class="p">[],</span> <span class="n">next_token</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
     <span class="n">print_info</span><span class="p">(</span><span class="s2">&quot;Fake Tweepy is pretending to search for &#39;&quot;</span><span class="o">+</span><span class="n">query</span><span class="o">+</span><span class="s2">&quot;&#39; and is returning some fake tweets.&quot;</span><span class="p">)</span>
     <span class="k">if</span><span class="p">(</span><span class="n">query</span> <span class="o">==</span> <span class="s1">&#39;&quot;cute cat&quot;&#39;</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
@@ -1921,6 +1926,50 @@ title="Print to PDF"
               <span class="p">)</span>
           <span class="p">]</span>
         <span class="p">)</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">query</span> <span class="o">==</span> <span class="s2">&quot;conversation_id:1234567&quot;</span> <span class="ow">and</span> <span class="n">next_token</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+          <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+              <span class="n">SimpleNamespace</span><span class="p">(</span>
+                  <span class="nb">id</span> <span class="o">=</span> <span class="mi">24345</span><span class="p">,</span>
+                  <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+                      <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">24345</span><span class="p">,</span>
+                      <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;It sure was hard, what score did you get?&quot;</span><span class="p">,</span>
+                      <span class="s2">&quot;author_id&quot;</span><span class="p">:</span> <span class="mi">1093458</span><span class="p">,</span>
+                      <span class="s2">&quot;public_metrics&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;retweet_count&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;reply_count&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;like_count&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;quote_count&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+                  <span class="p">},</span>
+                  <span class="n">referenced_tweets</span> <span class="o">=</span> <span class="p">[</span><span class="n">SimpleNamespace</span><span class="p">(</span>
+                      <span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;replied_to&quot;</span><span class="p">,</span>
+                      <span class="nb">id</span> <span class="o">=</span> <span class="mi">98778587</span>
+                  <span class="p">)]</span>
+              <span class="p">)</span>
+          <span class="p">],</span>
+          <span class="n">meta</span> <span class="o">=</span> <span class="p">{},</span>
+          <span class="n">includes</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;users&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">SimplishNamespace</span><span class="p">(</span>
+                    <span class="nb">id</span> <span class="o">=</span> <span class="mi">123456789</span><span class="p">,</span>
+                    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+                        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Fake User&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;fake_user&quot;</span> 
+                    <span class="p">}</span>
+                <span class="p">),</span><span class="n">SimplishNamespace</span><span class="p">(</span>
+                    <span class="nb">id</span><span class="o">=</span> <span class="mi">1093458</span><span class="p">,</span> 
+                    <span class="n">data</span><span class="o">=</span> <span class="p">{</span>
+                        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Unreal User&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;unreal_user&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">),</span> <span class="n">SimplishNamespace</span><span class="p">(</span>
+                    <span class="nb">id</span> <span class="o">=</span> <span class="mi">943534</span><span class="p">,</span> 
+                    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Imaginary User&quot;</span><span class="p">,</span>
+                    <span class="n">username</span> <span class="o">=</span> <span class="s2">&quot;imaginary_user&quot;</span>
+                <span class="p">),</span> <span class="n">SimplishNamespace</span><span class="p">(</span>
+                    <span class="nb">id</span> <span class="o">=</span> <span class="mi">945356</span><span class="p">,</span>
+                    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;False User&quot;</span><span class="p">,</span>
+                    <span class="n">username</span> <span class="o">=</span> <span class="s2">&quot;false_user&quot;</span>
+                <span class="p">)</span>
+            <span class="p">]</span>
+          <span class="p">}</span>
+        <span class="p">)</span>
+        
 </pre></div>
 </div>
 </div>
@@ -1934,6 +1983,35 @@ title="Print to PDF"
                 <span class="nb">id</span> <span class="o">=</span> <span class="mi">123456789</span><span class="p">,</span>
                 <span class="n">username</span> <span class="o">=</span> <span class="s2">&quot;fake_user&quot;</span>
             <span class="p">)</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_tweet</span><span class="p">(</span><span class="n">tweetId</span><span class="p">,</span> <span class="n">tweet_fields</span><span class="o">=</span><span class="p">[],</span> <span class="n">expansions</span><span class="o">=</span><span class="p">[]):</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">tweetId</span> <span class="o">==</span> <span class="mi">98778587</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">SimplishNamespace</span><span class="p">(</span>
+                <span class="nb">id</span> <span class="o">=</span> <span class="mi">98778587</span><span class="p">,</span>
+                <span class="n">author_id</span> <span class="o">=</span> <span class="mi">123456789</span><span class="p">,</span>
+                <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;That last exam in sure was hard!&quot;</span><span class="p">,</span>
+                <span class="n">conversation_id</span> <span class="o">=</span> <span class="mi">1234567</span><span class="p">,</span>
+                <span class="n">username</span> <span class="o">=</span> <span class="s2">&quot;fake_user&quot;</span><span class="p">,</span>
+                <span class="n">public_metrics</span><span class="o">=</span> <span class="p">{</span><span class="s1">&#39;retweet_count&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;reply_count&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;like_count&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;quote_count&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span>
+                <span class="n">referenced_tweets</span> <span class="o">=</span> <span class="p">[],</span>
+                <span class="fm">__getitem__</span> <span class="o">=</span> <span class="k">lambda</span> <span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="mi">123456789</span> <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;author_id&quot;</span> <span class="k">else</span> <span class="kc">None</span> 
+            <span class="p">),</span>
+            <span class="n">includes</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s2">&quot;users&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">SimplishNamespace</span><span class="p">(</span>
+                    <span class="nb">id</span> <span class="o">=</span> <span class="mi">123456789</span><span class="p">,</span>
+                    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+                        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Fake User&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;fake_user&quot;</span> 
+                    <span class="p">}</span>
+                <span class="p">)]</span>
+            <span class="p">}</span>
         <span class="p">)</span>
 </pre></div>
 </div>
@@ -2039,7 +2117,8 @@ title="Print to PDF"
       <span class="n">search_recent_tweets</span> <span class="o">=</span> <span class="n">search_recent_tweets</span><span class="p">,</span>
       <span class="n">get_user</span> <span class="o">=</span> <span class="n">get_user</span><span class="p">,</span>
       <span class="n">get_users_mentions</span> <span class="o">=</span> <span class="n">get_users_mentions</span><span class="p">,</span>
-      <span class="n">get_users_following</span> <span class="o">=</span> <span class="n">get_users_following</span>
+      <span class="n">get_users_following</span> <span class="o">=</span> <span class="n">get_users_following</span><span class="p">,</span>
+      <span class="n">get_tweet</span> <span class="o">=</span> <span class="n">get_tweet</span>
     <span class="p">)</span>
 </pre></div>
 </div>
