@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Demo: recursion with real tweets &#8212; Social Media, Ethics, and Automation</title>
+    <title>15.4. Demo: recursion with real tweets &#8212; Social Media, Ethics, and Automation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="15.5. Learn More" href="05_learn_more.html" />
+    <link rel="prev" title="15.3. The Toll on Moderators" href="03_toll_on_moderators.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -133,7 +135,7 @@ const thebe_selector_output = ".output, .cell_output"
   Book
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../ch01_intro/00_intro.html">
    1. Introduction
@@ -1115,16 +1117,16 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="00_moderators.html">
    15. (Incomplete) Content Moderators
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/>
   <label for="toctree-checkbox-29">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="01_moderator_types.html">
      15.1. Types of Content Moderator Set-Ups
@@ -1140,9 +1142,9 @@ const thebe_selector_output = ".output, .cell_output"
      15.3. The Toll on Moderators
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="04_demo_identify_trolls.html">
-     15.4. Demo: Identify Potential Trolls
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     15.4. Demo: recursion with real tweets
     </a>
    </li>
    <li class="toctree-l2">
@@ -1184,7 +1186,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ch16_crowd_work/04_uneven_contribution.html">
-     16.5. Uneven contributions of users
+     16.5. Power Users and Lurkers
     </a>
    </li>
    <li class="toctree-l2">
@@ -1701,42 +1703,42 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tweepy-set-up">
-   tweepy set-up
+   15.4.1. tweepy set-up
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#helper-function-to-display-text-in-an-indented-box">
-   Helper function to display text in an indented box
+   15.4.2. Helper function to display text in an indented box
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#demo-of-using-the-display-with-left-margin-function">
-   Demo of using the display_with_left_margin function
+   15.4.3. Demo of using the display_with_left_margin function
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#helper-code-for-getting-a-twitter-conversation-that-is-a-tweet-and-a-bunch-of-its-replies">
-   Helper code for getting a twitter conversation (that is a tweet and a bunch of its replies)
+   15.4.4. Helper code for getting a twitter conversation (that is a tweet and a bunch of its replies)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#recursively-printing-the-tweets-and-replies-this-is-the-part-you-will-work-on-for-homework-4">
-   Recursively printing the tweets and replies (This is the part you will work on for homework 4)
+   15.4.5. Recursively printing the tweets and replies (This is the part you will work on for homework 4)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#improve-the-function-to-have-it-print-more-useful-information">
-   Improve the function to have it print more useful information
+   15.4.6. Improve the function to have it print more useful information
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#try-on-a-much-larger-thread">
-   Try on a much larger thread
+   15.4.7. Try on a much larger thread
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rewrite-function-to-only-show-tweets-that-got-at-least-1-like">
-   Rewrite function to only show tweets that got at least 1 like
+   15.4.8. Rewrite function to only show tweets that got at least 1 like
   </a>
  </li>
 </ul>
@@ -1760,42 +1762,42 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tweepy-set-up">
-   tweepy set-up
+   15.4.1. tweepy set-up
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#helper-function-to-display-text-in-an-indented-box">
-   Helper function to display text in an indented box
+   15.4.2. Helper function to display text in an indented box
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#demo-of-using-the-display-with-left-margin-function">
-   Demo of using the display_with_left_margin function
+   15.4.3. Demo of using the display_with_left_margin function
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#helper-code-for-getting-a-twitter-conversation-that-is-a-tweet-and-a-bunch-of-its-replies">
-   Helper code for getting a twitter conversation (that is a tweet and a bunch of its replies)
+   15.4.4. Helper code for getting a twitter conversation (that is a tweet and a bunch of its replies)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#recursively-printing-the-tweets-and-replies-this-is-the-part-you-will-work-on-for-homework-4">
-   Recursively printing the tweets and replies (This is the part you will work on for homework 4)
+   15.4.5. Recursively printing the tweets and replies (This is the part you will work on for homework 4)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#improve-the-function-to-have-it-print-more-useful-information">
-   Improve the function to have it print more useful information
+   15.4.6. Improve the function to have it print more useful information
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#try-on-a-much-larger-thread">
-   Try on a much larger thread
+   15.4.7. Try on a much larger thread
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rewrite-function-to-only-show-tweets-that-got-at-least-1-like">
-   Rewrite function to only show tweets that got at least 1 like
+   15.4.8. Rewrite function to only show tweets that got at least 1 like
   </a>
  </li>
 </ul>
@@ -1809,9 +1811,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="demo-recursion-with-real-tweets">
-<h1>Demo: recursion with real tweets<a class="headerlink" href="#demo-recursion-with-real-tweets" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">15.4. </span>Demo: recursion with real tweets<a class="headerlink" href="#demo-recursion-with-real-tweets" title="Permalink to this headline">#</a></h1>
 <section id="tweepy-set-up">
-<h2>tweepy set-up<a class="headerlink" href="#tweepy-set-up" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">15.4.1. </span>tweepy set-up<a class="headerlink" href="#tweepy-set-up" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make sure tweepy library is installed</span>
@@ -1823,14 +1825,14 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: tweepy in c:\python310\lib\site-packages (4.10.0)
 Requirement already satisfied: requests-oauthlib&lt;2,&gt;=1.2.0 in c:\python310\lib\site-packages (from tweepy) (1.3.1)
-Requirement already satisfied: requests&lt;3,&gt;=2.27.0 in c:\python310\lib\site-packages (from tweepy) (2.27.1)
 Requirement already satisfied: oauthlib&lt;4,&gt;=3.2.0 in c:\python310\lib\site-packages (from tweepy) (3.2.0)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (1.26.9)
-Requirement already satisfied: certifi&gt;=2017.4.17 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (2022.5.18.1)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (3.3)
+Requirement already satisfied: requests&lt;3,&gt;=2.27.0 in c:\python310\lib\site-packages (from tweepy) (2.27.1)
 Requirement already satisfied: charset-normalizer~=2.0.0 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (2.0.12)
+Requirement already satisfied: certifi&gt;=2017.4.17 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (2022.5.18.1)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (1.26.9)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in c:\python310\lib\site-packages (from requests&lt;3,&gt;=2.27.0-&gt;tweepy) (3.3)
 
-[notice] A new release of pip available: 22.1.2 -&gt; 22.3
+[notice] A new release of pip available: 22.1.2 -&gt; 22.3.1
 [notice] To update, run: python.exe -m pip install --upgrade pip
 </pre></div>
 </div>
@@ -1877,7 +1879,7 @@ WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
 </div>
 </section>
 <section id="helper-function-to-display-text-in-an-indented-box">
-<h2>Helper function to display text in an indented box<a class="headerlink" href="#helper-function-to-display-text-in-an-indented-box" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">15.4.2. </span>Helper function to display text in an indented box<a class="headerlink" href="#helper-function-to-display-text-in-an-indented-box" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span>
@@ -1896,7 +1898,7 @@ WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
 </div>
 </section>
 <section id="demo-of-using-the-display-with-left-margin-function">
-<h2>Demo of using the display_with_left_margin function<a class="headerlink" href="#demo-of-using-the-display-with-left-margin-function" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">15.4.3. </span>Demo of using the display_with_left_margin function<a class="headerlink" href="#demo-of-using-the-display-with-left-margin-function" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display_indented</span><span class="p">(</span><span class="s2">&quot;A no indent text&quot;</span><span class="p">)</span>
@@ -1911,7 +1913,7 @@ WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
 </div>
 </section>
 <section id="helper-code-for-getting-a-twitter-conversation-that-is-a-tweet-and-a-bunch-of-its-replies">
-<h2>Helper code for getting a twitter conversation (that is a tweet and a bunch of its replies)<a class="headerlink" href="#helper-code-for-getting-a-twitter-conversation-that-is-a-tweet-and-a-bunch-of-its-replies" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">15.4.4. </span>Helper code for getting a twitter conversation (that is a tweet and a bunch of its replies)<a class="headerlink" href="#helper-code-for-getting-a-twitter-conversation-that-is-a-tweet-and-a-bunch-of-its-replies" title="Permalink to this headline">#</a></h2>
 <p>You don’t need to know how this code works, but you can look through it if you want.</p>
 <p>Also, if you want to use more includes or something, you can add them to the client.get_tweet() call and the client.search_recent_tweets() call. You might also need to do extra work to include them like I did with the author/users info</p>
 <div class="cell docutils container">
@@ -2223,7 +2225,7 @@ WARNING: Ignoring invalid distribution -ip (c:\python310\lib\site-packages)
 </div>
 </section>
 <section id="recursively-printing-the-tweets-and-replies-this-is-the-part-you-will-work-on-for-homework-4">
-<h2>Recursively printing the tweets and replies (This is the part you will work on for homework 4)<a class="headerlink" href="#recursively-printing-the-tweets-and-replies-this-is-the-part-you-will-work-on-for-homework-4" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">15.4.5. </span>Recursively printing the tweets and replies (This is the part you will work on for homework 4)<a class="headerlink" href="#recursively-printing-the-tweets-and-replies-this-is-the-part-you-will-work-on-for-homework-4" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_tweet_and_replies</span><span class="p">(</span><span class="n">tweet_with_replies</span><span class="p">,</span> <span class="n">num_indents</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
@@ -2270,7 +2272,7 @@ Youtube Intro
 </div>
 </section>
 <section id="improve-the-function-to-have-it-print-more-useful-information">
-<h2>Improve the function to have it print more useful information<a class="headerlink" href="#improve-the-function-to-have-it-print-more-useful-information" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">15.4.6. </span>Improve the function to have it print more useful information<a class="headerlink" href="#improve-the-function-to-have-it-print-more-useful-information" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_tweet_and_replies</span><span class="p">(</span><span class="n">tweet_with_replies</span><span class="p">,</span> <span class="n">num_indents</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
@@ -2347,7 +2349,7 @@ Youtube Intro
 </div>
 </section>
 <section id="try-on-a-much-larger-thread">
-<h2>Try on a much larger thread<a class="headerlink" href="#try-on-a-much-larger-thread" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">15.4.7. </span>Try on a much larger thread<a class="headerlink" href="#try-on-a-much-larger-thread" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">misinfo_tweet_with_replies</span> <span class="o">=</span> <span class="n">get_tweets_with_replies</span><span class="p">(</span><span class="mi">1496714317651083266</span><span class="p">,</span> <span class="n">max_conversation_searches</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
@@ -2609,7 +2611,7 @@ This can help filter feeds, too.
 </div>
 </section>
 <section id="rewrite-function-to-only-show-tweets-that-got-at-least-1-like">
-<h2>Rewrite function to only show tweets that got at least 1 like<a class="headerlink" href="#rewrite-function-to-only-show-tweets-that-got-at-least-1-like" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">15.4.8. </span>Rewrite function to only show tweets that got at least 1 like<a class="headerlink" href="#rewrite-function-to-only-show-tweets-that-got-at-least-1-like" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_tweet_and_replies</span><span class="p">(</span><span class="n">tweet_with_replies</span><span class="p">,</span> <span class="n">num_indents</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
@@ -2740,6 +2742,20 @@ This can help filter feeds, too.
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="03_toll_on_moderators.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">15.3. </span>The Toll on Moderators</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="05_learn_more.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">15.5. </span>Learn More</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
