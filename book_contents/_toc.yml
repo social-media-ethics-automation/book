@@ -201,7 +201,7 @@ parts:
       - file: ch15_moderators/01_moderator_types
       - file: ch15_moderators/02_example_moderators
       - file: ch15_moderators/03_toll_on_moderators
-      - file: ch15_moderators/04_demo_identify_trolls
+      - file: ch15_moderators/04_demo_recursion_on_twitter
       - file: ch15_moderators/05_learn_more
     - file: ch16_crowd_work/00_crowd_work
       sections:
