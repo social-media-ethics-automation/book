@@ -21,7 +21,9 @@ Social media crowd work can also be used for harassment, which we'll look at mor
 
 
 ## Spreading rumors and disinformation
-Crowds on social media can also share rumors, particularly during a crises. Disinformation campaigns also make use of crowd work. An academic research paper [Disinformation as Collaborative Work](https://dl.acm.org/doi/abs/10.1145/3359229) ([pdf](https://dl.acm.org/doi/pdf/10.1145/3359229)) lays out a range of disinformation campaigns:
+Crowds on social media can also share rumors, and can be [an essential (if unreliable) way of spreading information during a crises](https://www.sciencedirect.com/science/article/pii/S2405844020316479).
+
+Disinformation campaigns also make use of crowd work. An academic research paper [Disinformation as Collaborative Work](https://dl.acm.org/doi/abs/10.1145/3359229) ([pdf](https://dl.acm.org/doi/pdf/10.1145/3359229)) lays out a range of disinformation campaigns:
 - __Orchestrated__: Entirely fake and astro-turfed, no genuine users contributing.
 - __Cultivated__: Intentionally created misinformation that is planted in a community. It is then spread by real users not aware they are part of a disinformation campaign.
 - __Emergent and self-sustaining__: Communities creating and spreading their own rumors or own conspiracy narratives.
