@@ -207,8 +207,7 @@ parts:
       - file: ch16_crowd_work/01_crowd_work_definition
       - file: ch16_crowd_work/02_planned_crowd_work
       - file: ch16_crowd_work/03_ad_hoc
-      - file: ch16_crowd_work/04_networks
-      - file: ch16_crowd_work/04_uneven_contribution
+      - file: ch16_crowd_work/04_power_users_lurkers
       - file: ch16_crowd_work/05_visualizing_networks
       - file: ch16_crowd_work/06_reflections
       - file: ch16_crowd_work/07_learn_more
