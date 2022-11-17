@@ -54,3 +54,5 @@ Variations:
 Harassment in social media contexts can be difficult to define, especially when the harassment pattern is created by a collective of seemingly unconnected people. Maybe each individual action can be read as unpleasant but technically okay. But taken together, all the instances of the pattern lead up to a level of harm done to the victim which can do real damage.
 
 Because social media spaces are to some extent private spaces, the moderators of those spaces can ask someone to leave if they wish. A Facebook group may have a 'policy' listed in the group info, which spells out the conditions under which a person might be blocked from the group. As a Facebook user, I could decide that I don't like the way someone is posting on my wall; I could block them, with or without warning, much as if I were asking a guest to leave my house.
+
+In the next section, we will look in more detail about when harassment tactics get used; how they get justified, and what all this means in the context of social media.
