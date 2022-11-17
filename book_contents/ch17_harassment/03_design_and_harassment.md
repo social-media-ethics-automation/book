@@ -1,6 +1,6 @@
 # Design and harassment
 
-The way social media sites are designed can encourage and discourage different forms of harassment
+The way social media sites are designed can encourage and discourage different forms of harassment. 
 
 [Quote Tweets Have Turned Us All Into Jerks:
 How social media design choices help us shame each other](https://onezero.medium.com/quote-tweets-have-turned-us-all-into-jerks-d5776c807942)

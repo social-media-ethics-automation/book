@@ -237,6 +237,110 @@ def search_recent_tweets(query="", tweet_fields=[], expansions=[], media_fields=
                       type = "replied_to",
                       id = 98778587
                   )]
+              ),
+              SimpleNamespace(
+                  id = 434543,
+                  data = {
+                      "id": 434543,
+                      "text": "I got a 67% :(",
+                      "author_id": 123456789,
+                      "public_metrics": {'retweet_count': 0, 'reply_count': 0, 'like_count': 2, 'quote_count': 0}
+                  },
+                  referenced_tweets = [SimpleNamespace(
+                      type = "replied_to",
+                      id = 24345
+                  )]
+              ),
+              SimpleNamespace(
+                  id = 3496834,
+                  data = {
+                      "id": 3496834,
+                      "text": "I got a 73%",
+                      "author_id": 943534,
+                      "public_metrics": {'retweet_count': 0, 'reply_count': 0, 'like_count': 3, 'quote_count': 0}
+                  },
+                  referenced_tweets = [SimpleNamespace(
+                      type = "replied_to",
+                      id = 24345
+                  )]
+              ),
+              SimpleNamespace(
+                  id = 267445,
+                  data = {
+                      "id": 267445,
+                      "text": "I didn't think it was that bad",
+                      "author_id": 745769364,
+                      "public_metrics": {'retweet_count': 1, 'reply_count': 2, 'like_count': 1, 'quote_count': 6}
+                  },
+                  referenced_tweets = [SimpleNamespace(
+                      type = "replied_to",
+                      id = 98778587
+                  )]
+              ),
+              SimpleNamespace(
+                  id = 32124,
+                  data = {
+                      "id": 32124,
+                      "text": "how was that not a super hard exam?",
+                      "author_id": 945356,
+                      "public_metrics": {'retweet_count': 2, 'reply_count': 0, 'like_count': 8, 'quote_count': 2}
+                  },
+                  referenced_tweets = [SimpleNamespace(
+                      type = "replied_to",
+                      id = 267445
+                  )]
+              ),
+              SimpleNamespace(
+                  id = 34546,
+                  data = {
+                      "id": 34546,
+                      "text": "of coure you didn't",
+                      "author_id": 123456789,
+                      "public_metrics": {'retweet_count': 1, 'reply_count': 1, 'like_count': 6, 'quote_count': 1}
+                  },
+                  referenced_tweets = [SimpleNamespace(
+                      type = "replied_to",
+                      id = 267445
+                  )]
+              ),
+              SimpleNamespace(
+                  id = 4354,
+                  data = {
+                      "id": 4354,
+                      "text": "what's that supposed to mean?",
+                      "author_id": 745769364,
+                      "public_metrics": {'retweet_count': 0, 'reply_count': 1, 'like_count': 1, 'quote_count': 0}
+                  },
+                  referenced_tweets = [SimpleNamespace(
+                      type = "replied_to",
+                      id = 34546
+                  )]
+              ),
+              SimpleNamespace(
+                  id = 57533,
+                  data = {
+                      "id": 57533,
+                      "text": "you're an overachiever",
+                      "author_id": 123456789,
+                      "public_metrics": {'retweet_count': 0, 'reply_count': 1, 'like_count': 3, 'quote_count': 0}
+                  },
+                  referenced_tweets = [SimpleNamespace(
+                      type = "replied_to",
+                      id = 4354
+                  )]
+              ),
+              SimpleNamespace(
+                  id = 67644,
+                  data = {
+                      "id": 67644,
+                      "text": "and that's bad how?",
+                      "author_id": 745769364,
+                      "public_metrics": {'retweet_count': 0, 'reply_count': 0, 'like_count': 0, 'quote_count': 0}
+                  },
+                  referenced_tweets = [SimpleNamespace(
+                      type = "replied_to",
+                      id = 57533
+                  )]
               )
           ],
           meta = {},
@@ -255,12 +359,22 @@ def search_recent_tweets(query="", tweet_fields=[], expansions=[], media_fields=
                     }
                 ), SimplishNamespace(
                     id = 943534, 
-                    name = "Imaginary User",
-                    username = "imaginary_user"
+                    data= {
+                        "name": "Imaginary User",
+                        "username": "imaginary_user"
+                    }
                 ), SimplishNamespace(
                     id = 945356,
-                    name = "False User",
-                    username = "false_user"
+                    data= {
+                        "name": "False User",
+                        "username": "false_user"
+                    }
+                ), SimplishNamespace(
+                    id = 745769364,
+                    data= {
+                        "name": "Pretend User",
+                        "username": "pretend_user"
+                    }
                 )
             ]
           }
