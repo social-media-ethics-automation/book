@@ -14,6 +14,8 @@ If you are running your own site and suddenly realize you have a moderation prob
 ## Dedicated Moderation Teams
 After a company starts working on moderation, they might decide to invest in teams specifically dedicated to content moderation.
 
+% TODO: Talk about this in terms of human computers
+
 ## Individuals moderating their own spaces
 You can also having people moderate their own spaces. For example:
 - when you text on the phone, you are in charge of blocking numbers if you want to (though the phone company might warn you of potential spam or scams)
