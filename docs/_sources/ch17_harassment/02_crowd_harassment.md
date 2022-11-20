@@ -4,23 +4,23 @@ Harassment can also be done through crowds. Crowd harassment has also always bee
 Social media then allows new ways for crowd harassment to occur.
 
 
-- Social media allows for new ways of organizing and performing crowd harassment
-  - https://www.youtube.com/watch?v=PeB41BBzZSo
+Crowd harassment includes all the forms of individual harassment we already mentioned (like bullying, stalking, etc.), but done by a group of people.
 
-Crowd harassment includes all the forms of individual harasmment (but done by a group of people), plus things like:
-- Dogpilling: TODO: define
+Additionally, we can consider the following forms of crowd harassment:
+- [Dogpiling](https://en.wikipedia.org/wiki/Dogpiling_(Internet)): When a crowd of people target or harass the same person.
 - Public Shaming (this will be our next chapter)
+- Cross-platform raids (e.g., [4chan group planning harassment on another platform](https://theconversation.com/4chan-raids-how-one-dark-corner-of-the-internet-is-spreading-its-shadows-68394))
 - [Stochastic terrorism](https://en.wikipedia.org/wiki/Lone_wolf_attack#Stochastic_terrorism)
   - [The use of mass public communication, usually against a particular individual or group, which incites or inspires acts of terrorism which are statistically probable but happen seemingly at random.](https://en.wiktionary.org/wiki/stochastic_terrorism)
-- Cross-platform raids (e.g., 4chan group planning harassment on another platform)
+  - See also: [An atmosphere of violence: Stochastic terror in American politics](https://www.vox.com/2022/11/5/23441858/violence-stochastic-terror-american-politics-trump-pelosi)
 
 In addition, fake crowds (e.g., bots or people paid to post) can participate in crowd harassment. For example:
 > “The majority of the hate and misinformation about [Meghan Markle and Prince Henry] originated from a small group of accounts whose primary, if not sole, purpose appears to be to tweet negatively about them. [...] 83 accounts are responsible for 70% of the negative hate content targeting the couple on Twitter.”
 >
 > - [Twitter Data Has Revealed A Coordinated Campaign Of Hate Against Meghan Markle](https://www.buzzfeednews.com/article/ellievhall/bot-sentinel-meghan-markle-prince-harry-twitter)
 
-
+% TODO: Add microagressions
 
 ## Reflection Question
 
-Do you believe crowd harassment is ever justified?E
+Do you believe crowd harassment is ever justified?

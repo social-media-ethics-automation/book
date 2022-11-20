@@ -1,6 +1,9 @@
 # Ad-hoc Crowd Work Examples
 Crowd work isn't always pre-planned or designed for. Sometimes a crowd stumbles into crowd work in an unplanned, [ad hoc](https://www.merriam-webster.com/dictionary/ad%20hoc) manner.
 
+% - Social media allows for new ways of organizing and performing crowd harassment
+%  - https://www.youtube.com/watch?v=PeB41BBzZSo
+
 ## "Solving" a "Problem"
 When social media users work together, we can consider what problem they are solving. For example, for some of the Tiktok Duet videos from the virality chapter, the "problem" would be something like "how do we create music out of this source video" and the different musicians contribute their own piece to the solution. For some other examples:
 - In the case of a [missing hiker rescued after Twitter user tracks him down using his last-sent photo](https://www.dpreview.com/news/0703531833/missing-hiker-rescued-after-twitter-user-tracks-him-down-using-a-photo), the "problem" was "where did the hiker disappear?" and the crowd investigated whatever they could to find the solution of the hiker's location.
