@@ -216,12 +216,12 @@ parts:
       - file: ch17_harassment/01_individual_harassment
       - file: ch17_harassment/02_crowd_harassment
       - file: ch17_harassment/03_who_gets_harassed
-      - file: ch17_harassment/04_justifying_harassment
-      - file: ch17_harassment/05_stopping_harassment
-      - file: ch17_harassment/06_demo_group_block
-      - file: ch17_harassment/07_reflections
-      - file: ch17_harassment/08_learn_more
-      - file: ch17_harassment/09_practice_function_return_refactoring
+      - file: ch17_harassment/04_ethics_harassment
+      - file: ch17_harassment/05_justifying_harassment
+      - file: ch17_harassment/06_stopping_harassment
+      - file: ch17_harassment/07_design_and_harassment
+      - file: ch17_harassment/08_reflections
+      - file: ch17_harassment/09_learn_more
     - file: ch18_public_shaming/00_public_shaming
       sections:
       - file: ch18_public_shaming/01_shame_guilt_childhood

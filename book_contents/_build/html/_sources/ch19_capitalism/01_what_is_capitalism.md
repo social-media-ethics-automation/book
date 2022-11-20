@@ -46,7 +46,7 @@ For example, there is one Seattle City Sewer system, which is run by the governm
 In socialism, business decisions are held accountable to government leaders.
 
 
-### Democratic Socialism (i.e., "Socialists")[^national_socialism_footnote]
+### Democratic Socialism (i.e., "Socialists[^national_socialism_footnote]")
 
 
 [^national_socialism_footnote]: Advocates for socialism are often referring to democratic socialism. This is different than "National Socialists" which is shortened to "[Nazi](https://en.wikipedia.org/wiki/Nazism)," and is a form of [Fascism](https://en.wikipedia.org/wiki/fascism). While Nazis do have government leaders deciding on what gets made and who gets it, that is because it is a totalitarian dictatorship run by one person (e.g., Adolf Hitler), who is [accountable to no one](https://en.wikipedia.org/wiki/F%C3%BChrerprinzip). Nazis are primarily concerned with "[cleansing](https://en.wikipedia.org/wiki/Judenfrei)" their nation from people who aren't part of the "[true people](https://en.wikipedia.org/wiki/V%C3%B6lkisch_movement)." So their goal is take all the "undesireable" people (e.g., Jewish people, Roma people, queer people, disabled people, etc.), and take their stuff, and then deport or murder them in a genocide. From an ethics perspective, we'd like to state that Nazis are very bad.
