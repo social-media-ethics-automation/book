@@ -225,12 +225,11 @@ parts:
     - file: ch18_public_shaming/00_public_shaming
       sections:
       - file: ch18_public_shaming/01_shame_guilt_childhood
-      - file: ch18_public_shaming/02_ethics_of_public_shaming
-      - file: ch18_public_shaming/03_demo_scheduling_tasks
-      - file: ch18_public_shaming/04_practice_scheduling
-      - file: ch18_public_shaming/05_repair_and_reintegration
-      - file: ch18_public_shaming/06_design_retract
-      - file: ch18_public_shaming/07_learn_more
+      - file: ch18_public_shaming/02_online_shaming
+      - file: ch18_public_shaming/03_perspectives_on_public_shaming
+      - file: ch18_public_shaming/04_repair_and_reintegration
+      - file: ch18_public_shaming/05_design_retract
+      - file: ch18_public_shaming/06_learn_more
     - file: ch19_capitalism/00_capitalism
       sections:
         - file: ch19_capitalism/01_what_is_capitalism
