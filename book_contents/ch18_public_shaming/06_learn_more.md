@@ -4,3 +4,4 @@
 - [Twitter, the Intimacy Machine](https://ravenmagazine.org/magazine/twitter-the-intimacy-machine/)
   - “Twitter incentivizes its users to take trust falls, and then it rewards other users for blocking the catch. Twitter is a technology finely tuned to call forth, and then crush, intimacy.”
 - [Nation Demands Fresh Celebrity Meat](https://www.theonion.com/nation-demands-fresh-celebrity-meat-1819571041) - The Onion (note: The Onion is a satire/joke newspaper)
+- 

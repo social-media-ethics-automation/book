@@ -2,7 +2,31 @@
 
 The idea of repair (or reconciliation) has shown up a couple times already, both in the role of shame in child development, and in the [Enforcing Social Norms: The Morality of Public Shaming](https://philpapers.org/archive/BILESN.pdf) paper.
 
-Let's look more at what a repair might look like.
+Let's look more at what a repair might or might not look like.
+
+## Nuremberg Trials
+After the defeat of Nazi Germany, prominent Nazi figures were put on trail in the [Nuremberg Trials](https://en.wikipedia.org/wiki/Nuremberg_trials). These trials were a way of gathering and presenting evidence of the great evils done by the Nazis, and as a way of publicly punishing them. We could consider this a sort of large-scale public shaming of these specific Nazis and the larger Nazi movement.
+
+Some argued that there was no type of reconciliation or forgiveness possible given the crimes committed by the Nazis. Hannah Arendt argued that no punishment could ever be sufficient:
+> The Nazi crimes, it seems to me, explode the limits of the law; and that is precisely what constitutes their monstrousness. For these crimes, no punishment is severe enough. It may well be essential to hang Göring, but it is totally inadequate.
+>
+> - [Hannah Arendt/Karl Jaspers correspondence, 1926-1969](https://www.google.com/books/edition/Hannah_Arendt_Karl_Jaspers_Correspondenc/UkgoAQAAMAAJ)
+
+See also:
+- [Eichmann in Jerusalem: A Report on the Banality of Evil](https://en.wikipedia.org/wiki/Eichmann_in_Jerusalem) by Hannah Arendt
+
+## Truth and Reconciliation Commission
+
+In South Africa, when the oppressive racist [apartheid](https://en.wikipedia.org/wiki/Apartheid) system ended, Nelson Mandela and Desmond Tutu set up the [Truth and Reconciliation Commission](https://en.wikipedia.org/wiki/Truth_and_Reconciliation_Commission_(South_Africa)). The commission gathered testimony from both victims and perpretrators of the violence and oppression of apartheid, and we could also consider it a sort of large-scale public shaming of apartheid and those who hurt others through it. Unlike the Nuremberg Trials, the Truth and Reconciliation Commission gave a path for forgiveness and amnesty to the perpretrators of violence who provided their testimony.[^nuremberg_vs_trc]
+
+See also:
+- [What Archbishop Tutu’s ubuntu credo teaches the world about justice and harmony](https://theconversation.com/what-archbishop-tutus-ubuntu-credo-teaches-the-world-about-justice-and-harmony-84730)
+
+
+[^nuremberg_vs_trc]: We are trying to demostrate different ways of handling public shaming, not trying to say that either the Nuremberg Trials or the Truth and Reconcilitiation Commission was necessarily a better or worse response in the given situation.
+
+
+## Steps for Repentance
 
 In the article [Famous abusers seek easy forgiveness. Rosh Hashanah teaches us repentance is hard.](https://www.washingtonpost.com/outlook/famous-abusers-seek-easy-forgiveness-rosh-hashanah-teaches-us-repentance-is-hard/2018/09/06/c2dc2cac-b0ab-11e8-9a6a-565d92a3585d_story.html) by Rabbi Danya Ruttenberg, she outlines a set of steps for "repentance" needed for someone to have their relationship with others repaired:
 
@@ -49,7 +73,8 @@ Part 2 of Jeremy Schneider's apology
 
 
 ## Reflection questions
-- Does Jeremy Schneider's apology cover the five steps of repentance from Rabbi Danya Ruttenberg?
+- Do you think there are situations where reconciliation is not possible?
+- Does Jeremy Schneider's apology cover the five steps of repentance listed by Rabbi Danya Ruttenberg?
 - Pick a situation where someone is being publicly shamed. Who is responsible for accepting or rejecting their apology/repentance?
 - Pick a social media platform and a situation where someone is being publicly shamed. What might that person do to try to repair or reintegrate after the public shaming?
 - Pick a social media platform. In what ways does that platform make it difficult to repair or reintegrate after public shaming?
