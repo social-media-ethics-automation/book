@@ -12,7 +12,7 @@ One way to approach questions of this kind is to start from _limit cases_. That 
 
 
 ### Nuremberg Trials
-After the defeat of Nazi Germany, prominent Nazi figures were put on trail in the [Nuremberg Trials](https://en.wikipedia.org/wiki/Nuremberg_trials). These trials were a way of gathering and presenting evidence of the great evils done by the Nazis, and as a way of publicly punishing them. We could consider this a sort of large-scale public shaming of these specific Nazis and the larger Nazi movement.
+After the defeat of Nazi Germany, prominent Nazi figures were put on trail in the [Nuremberg Trials](https://en.wikipedia.org/wiki/Nuremberg_trials). These trials were a way of gathering and presenting evidence of the great evils done by the Nazis, and as a way of publicly punishing them. We could consider this as, in part, a large-scale public shaming of these specific Nazis and the larger Nazi movement.
 
 Some argued that there was no type of reconciliation or forgiveness possible given the crimes committed by the Nazis. Hannah Arendt argued that not even any punishment that could ever be sufficient:
 > The Nazi crimes, it seems to me, explode the limits of the law; and that is precisely what constitutes their monstrousness. For these crimes, no punishment is severe enough. It may well be essential to hang Göring, but it is totally inadequate.
@@ -24,7 +24,7 @@ See also:
 
 ### Truth and Reconciliation Commission
 
-In South Africa, when the oppressive and violent racist [apartheid](https://en.wikipedia.org/wiki/Apartheid) system ended, Nelson Mandela and Desmond Tutu set up the [Truth and Reconciliation Commission](https://en.wikipedia.org/wiki/Truth_and_Reconciliation_Commission_(South_Africa)). The commission gathered testimony from both victims and perpretrators of the violence and oppression of apartheid. We could also consider this a sort of large-scale public shaming of apartheid and those who hurt others through it. Unlike the Nuremberg Trials, the Truth and Reconciliation Commission gave a path for forgiveness and amnesty to the perpretrators of violence who provided their testimony.
+In South Africa, when the oppressive and violent racist [apartheid](https://en.wikipedia.org/wiki/Apartheid) system ended, Nelson Mandela and Desmond Tutu set up the [Truth and Reconciliation Commission](https://en.wikipedia.org/wiki/Truth_and_Reconciliation_Commission_(South_Africa)). The commission gathered testimony from both victims and perpretrators of the violence and oppression of apartheid. We could also consider this, in part, a large-scale public shaming of apartheid and those who hurt others through it. Unlike the Nuremberg Trials, the Truth and Reconciliation Commission gave a path for forgiveness and amnesty to the perpretrators of violence who provided their testimony.
 
 See also:
 - [What Archbishop Tutu’s ubuntu credo teaches the world about justice and harmony](https://theconversation.com/what-archbishop-tutus-ubuntu-credo-teaches-the-world-about-justice-and-harmony-84730)
