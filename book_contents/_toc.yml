@@ -236,8 +236,8 @@ parts:
         - file: ch19_capitalism/02_metas_strategy
         - file: ch19_capitalism/03_responses_to_meta
         - file: ch19_capitalism/04_meta_vs_users
-        - file: ch19_capitalism/05_programming_gender_status_money
-        - file: ch19_capitalism/06_imagining_alternatives
+        - file: ch19_capitalism/05_imagining_alternatives
+        - file: ch19_capitalism/06_programming_gender_status_money
         - file: ch19_capitalism/07_learn_more
     - file: ch20_colonialism/00_colonialism
       sections:
