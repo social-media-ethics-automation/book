@@ -1,21 +1,36 @@
-# Meta's Strategy
+# Meta's Capitalist Strategy
 
-## Meta’s Business Model (how shareholders get profits)
-- See [Surveillance Capitalism](https://nymag.com/intelligencer/2019/02/shoshana-zuboff-q-and-a-the-age-of-surveillance-capital.html)
-- Internet companies use user behavior data to personally tailor their sites for users
-- These companies then found they could collect even more data, make predictions based on it, and turn it into products to sell
-- Meta doesn’t normally sell the data or predictions directly
-  - Meta sells access to their users based on Meta’s predictions about them (e.g., you can buy ads that target people who are likely to be pregnant)
-- How Meta can maximize its profit:
-  - more users
-  - more user time
-  - more personal data (behavioral surplus)
-  - reduced competition (corner the marked on access to those users)
+Now that we've looked at what capitalism is, let's pick a particular example of a social media company (Meta), and look at it's decisions through a capitalism lense.
 
-## Meta’s Business Plan to Corner the Market of Social Media
-- Background terms
-  - [Network effect](https://en.wikipedia.org/wiki/Network_effect): Something is more useful the more people use it (e.g., telephones, the metric system)
-  - [Network power](https://alliance-primo.hosted.exlibrisgroup.com/permalink/f/kjtuig/CP71119582520001451): When more people start using something, it becomes harder to use to alternatives
+## Surveillance Capitalism
+Meta's way of making profits fits in a category called __[Surveillance Capitalism](https://nymag.com/intelligencer/2019/02/shoshana-zuboff-q-and-a-the-age-of-surveillance-capital.html)__.
+
+Surveillance capitalism began when internet companies started tracking user behavior data to make their sites more personally tailored to users. These companies realized that this data was something that they could profit from, so they began to collect more data than strictly necessary ("behavioral surplus") and see what more they could predict about users. Companies could then sell this data about users directly, or (more commonly), they could keep their data hidden, but use it to sell targeted advertizements. So, for example, Meta might let an adverizer say they want an ad to only go to people likely to be pregnant.
+
+% (or they might [let adverizers make ads go only to "Jew Haters"](https://www.propublica.org/article/facebook-enabled-advertisers-to-reach-jew-haters)
+
+
+## Meta’s Business Model
+So, what Meta does to make money (that is, how shareholders get profits), is that the collect data on their users to make predictions about them (e.g., demographics, interestes, etc.). Then they sell adverisements, giving adverizers a large list of categories that they can target for their ads.
+
+The way that Meta can fulfill their fiduciary duty in maximizing profits is to try to get:
+- __More users__: If Meta has more users, it can offer advertizers more people to advertize to.
+- __More user time__: If Meta's users spend more time on Meta, then it has more opportunities to show ads to each users, so it can sell more ads.
+- __More personal data__: The more personal data Meta collects, the more predictions about users it can make. It can get more data by getting more users, and more user time, as well as finding more things to track about users.
+- __Reduce competition__: If Meta can become the only social media company that people use, then they will have cornered the market on access to those users. This means adverizers wont have any alternative to reach those users, and Meta can increase the prices on their ads.
+
+## How Meta Tires to Corner the Market of Social Media
+To increase profits, Meta wants to corner the market on social media. This means they want to get the most users possible to use Meta (and only Meta) for social media. Before we discuss their strategy, we need a couple background concepts:
+
+- [Network effect](https://en.wikipedia.org/wiki/Network_effect): Something is more useful the more people use it (e.g., telephones, the metric system). For example, when the [Google+ social media network](https://en.wikipedia.org/wiki/Google%2B) started, not many people used it, which meant that if you visited it there wasn't much content, so people stopped using it, which meant there was even less content, and it was eventually shut down.
+- [Network power](https://alliance-primo.hosted.exlibrisgroup.com/permalink/f/kjtuig/CP71119582520001451): When more people start using something, it becomes harder to use to alternatives. For example, Twitter's large userbase makes it difficult for people to move to a new social media network, since the people they want to connect with aren't all on some other platform. This means Twitter can get much worse and people still won't benefit from leaving it.
+
+Let's look at a scene from the move The Social Network (about the origins of Facebook), where Sean Parker talks to Mark Zuckerberg and Eduardo Saverin about their strategy to grow Facebook:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/k5fJmkv02is?start=37" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+In that clip you will notice strategies for trying to use the network effect (though they don't call it that) by targeting specific users to try to make Facebook more desireable than competetors. They also discuss not selling ads (running the company at a loss), to maximize their growth by not selling ads, so that once they have enough network power, users wont quit when they sell ads later.
+
+
 - Goal: Most users possible to use Meta (and only Meta) for social media
   - With aims to corner the market on social media: every human uses Meta for social media
 - Problem: Users [don’t want ads on The Facebook](https://www.youtube.com/watch?v=k5fJmkv02is)
