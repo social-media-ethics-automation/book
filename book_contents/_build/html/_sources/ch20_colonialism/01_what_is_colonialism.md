@@ -11,6 +11,19 @@ Colonialism is when one group or country subjugates another group, often imposin
   - [![Woodcut of John Smith](smith.png)](https://en.wikipedia.org/wiki/John_Smith_(explorer)) [John Smith](https://en.wikipedia.org/wiki/John_Smith_(explorer)), 1600s, England &rarr; North America
   - [![Photo of King Leopold II of Belgium](leopold.png)](https://en.wikipedia.org/wiki/Leopold_II_of_Belgium) [King Leopold II of Belgium](https://en.wikipedia.org/wiki/Leopold_II_of_Belgium), 1800s, Belgium &rarr; Congo
 
+### "[White Saviors](https://en.wikipedia.org/wiki/White_savior)"
+Sometimes colonialism is a little bit more subtle. For example, the term "White Savior" is a sarcastic term for white people being seen as liberating or rescuing “helpless” non-white people. This is common in TV and movies (see the TVTropes entries on [Mighty Whitey](https://tvtropes.org/pmwiki/pmwiki.php/Main/MightyWhitey), and [White Man’s Burden](https://tvtropes.org/pmwiki/pmwiki.php/Main/WhiteMansBurden)). For example, consider movies like James Cameron’s Avatar, Dances with Wolves, The Last Samuri (starring Tom Cruise), The Blind Side, The Help, La La Land, etc.
+
+```{figure} the_last_samurai.jpg
+---
+name: the_last_samurai_fig
+alt: "Movie Poster. Top center is Tom Cruise's face. Below it is text \"Tom Cruise\", then in smaller text \"The Last Samurai\". On the sides of the poster are Japanese characters."
+---
+[Poster](https://en.wikipedia.org/wiki/File:The_Last_Samurai.jpg) for the movie [The Last Samurai](https://en.wikipedia.org/wiki/The_Last_Samurai), starring Tom Cruise.
+```
+
+
+
 ## [Decolonization](https://en.wikipedia.org/wiki/Decolonization) / [Postcolonialism](https://en.wikipedia.org/wiki/Postcolonialism) / [Liberation](https://en.wikipedia.org/wiki/Liberation_movement) / [Landback](https://en.wikipedia.org/wiki/Land_Back)
 
 Counter to colonialism, decolonization, postcolonialism, liberation, and landback are movements where the colonized/oppressed take back power from the colonialists/oppressors, and graple with the consequences of having been colonized. This may be a response to colonization by:

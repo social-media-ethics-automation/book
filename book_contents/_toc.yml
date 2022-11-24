@@ -246,9 +246,8 @@ parts:
         - file: ch20_colonialism/03_colonialism_in_programming
         - file: ch20_colonialism/04_zuckerbergs_goals
         - file: ch20_colonialism/05_colonialism_and_meta
-        - file: ch20_colonialism/06_other_systems
-        - file: ch20_colonialism/07_imagining_alternatives
-        - file: ch20_colonialism/08_learn_more
+        - file: ch20_colonialism/06_imagining_alternatives
+        - file: ch20_colonialism/07_learn_more
     - file: ch21_conclusions/00_conclusions
       sections:
         - file: ch21_conclusions/01_what_we_covered

@@ -10,7 +10,7 @@ Then, much of tech is dependent on exploiting cheap labor, often in dangerous co
 Tech industry leaders in Silicon Valley then take what they made with exploited labor, and sell it around the world, feeling good about themselves, believing they are benefitting the world with their "superior" products.
 
 ## Example: One Laptop Per Child
-As an example of how this can play out, is the failed [One Laptop Per Child](https://en.wikipedia.org/wiki/One_Laptop_per_Child) (OLPC) project.
+An example of how this can play out, is the failed [One Laptop Per Child](https://en.wikipedia.org/wiki/One_Laptop_per_Child) (OLPC) project.
 
 > In late 2005, tech visionary and MIT Media Lab founder Nicholas Negroponte [introduced a] $100 laptop would have all the features of an ordinary computer but require so little electricity that a child could power it with a hand crank
 >
@@ -21,12 +21,6 @@ OLPC wanted to give every child in the world a laptop, so they could learn compu
 - When they did hand out some, it didn't come with good instructions. Kids were just supposed to figure it out on their own. If this failed, it must be the fault of the poor people around the world.
 - It wasn't designed for what kids around the world would actually want. They didn't take input from actual kids around the world. OLPC thought they had superior knowledge and just assumed they knew what people would want.
 
-In the end, this project fell apart, and most of tech moved on to whatever next big project to save the world came from tech.
+In the end, this project fell apart, and most of tech moved on to whatever next big idea to save the world.
 
-
-## "[White Saviors](https://en.wikipedia.org/wiki/White_savior)"
-- A sarcastic term for white people being seen as liberating or rescuing “helpless” non-white people
-- Common in movies and TV.
-- See TVTropes entries on [Mighty Whitey](https://tvtropes.org/pmwiki/pmwiki.php/Main/MightyWhitey), and [White Man’s Burden](https://tvtropes.org/pmwiki/pmwiki.php/Main/WhiteMansBurden), which list movies like: James Cameron’s Avatar, Dances with Wolves, The Last Samuri (starring Tom Cruise), The Blind Side, The Help, La La Land, etc.
-
-% solving the problem of being young and single in
+% solving the problem of being young and single in a big city

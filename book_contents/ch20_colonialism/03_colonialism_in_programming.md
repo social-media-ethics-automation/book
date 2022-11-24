@@ -1,7 +1,9 @@
 # Colonialism in Programming
 
+Colonialism shows up in programming languages as well.
+
 ## Programming in English
-Colonialism shows up in programming languages as well. For example, most programming languages are based in English, and there are very few [non-English programming languages](https://en.wikipedia.org/wiki/Non-English-based_programming_languages), and those that exist are rarely used.
+Most programming languages are based in English, and there are very few [non-English programming languages](https://en.wikipedia.org/wiki/Non-English-based_programming_languages), and those that exist are rarely used.
 
 The reason few non-English programming languages exist is due to the network effect, which we mentioned last chapter. Once English became the standard language for programming, people who learn programming learn English (or enough to program with it). Attempts to create a non-English programming language face an uphill battle, since even those that know that language would still have to re-learn all their programming terms in the non-English language.
 
