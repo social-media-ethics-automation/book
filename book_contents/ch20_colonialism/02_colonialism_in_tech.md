@@ -1,12 +1,32 @@
 # Colonialism in Tech
-- Silicon Valley Centralization
-  - Software companies are based in Silicon valley in California, but their users live around the world
-  - See book: [Coding places : software practice in a South American city](https://alliance-primo.hosted.exlibrisgroup.com/permalink/f/kjtuig/CP71113610430001451)
-- [One Laptop Per Child](https://www.theverge.com/2018/4/16/17233946/olpcs-100-laptop-education-where-is-it-now):
-  - “In late 2005, tech visionary and MIT Media Lab founder Nicholas Negroponte [introduced a] $100 laptop would have all the features of an ordinary computer but require so little electricity that a child could power it with a hand crank”
-  - He wanted to give every child in the world a laptop, so they could learn computers
-  - But…
-    - It didn’t work well (hand-powered generator unreliable, screen to small to read)
-    - It didn’t come with very good instructions
-    - It wasn’t designed for what kids around the world would actually want (no input from actual kids around the world, just what the project leaders guessed would be wanted)
-    - Project failed
+The tech industry is full of colonialist thinking and practices, some more subtle than others.
+
+To begin with, much of the tech industry is centralized geographically, specifically in Silicon Valley, San Francisco, California. The leaders and decisions in how tech operates come out of this one wealthy location in a wealthy nation.
+
+% TODO: Find citation, I thought there was a Yuri Takhteyev citation for this (separate from coding places), but I can't find it now.
+
+Then, much of tech is dependent on exploiting cheap labor, often in dangerous conditions, in other countries (thus extracting the resource of cheap labor, from places with "inferior" governments and economies). This labor might be physical labor, or dealing with dangerous chemicals, or the content moderators who deal with viewing horrific online content.
+
+Tech industry leaders in Silicon Valley then take what they made with exploited labor, and sell it around the world, feeling good about themselves, believing they are benefitting the world with their "superior" products.
+
+## Example: One Laptop Per Child
+As an example of how this can play out, is the failed [One Laptop Per Child](https://en.wikipedia.org/wiki/One_Laptop_per_Child) (OLPC) project.
+
+> In late 2005, tech visionary and MIT Media Lab founder Nicholas Negroponte [introduced a] $100 laptop would have all the features of an ordinary computer but require so little electricity that a child could power it with a hand crank
+>
+> - [OLPC’s $100 laptop was going to change the world — then it all went wrong](https://www.theverge.com/2018/4/16/17233946/olpcs-100-laptop-education-where-is-it-now)
+
+OLPC wanted to give every child in the world a laptop, so they could learn computers, believing he would benefit the world. But this project failed for a number of reasons, such as:
+- The physical device didn't work well. The hand-powered generator was unreliable, the screen to small to read. OLPC was not actually providing a "superior" product to the rest of the world.
+- When they did hand out some, it didn't come with good instructions. Kids were just supposed to figure it out on their own. If this failed, it must be the fault of the poor people around the world.
+- It wasn't designed for what kids around the world would actually want. They didn't take input from actual kids around the world. OLPC thought they had superior knowledge and just assumed they knew what people would want.
+
+In the end, this project fell apart, and most of tech moved on to whatever next big project to save the world came from tech.
+
+
+## "[White Saviors](https://en.wikipedia.org/wiki/White_savior)"
+- A sarcastic term for white people being seen as liberating or rescuing “helpless” non-white people
+- Common in movies and TV.
+- See TVTropes entries on [Mighty Whitey](https://tvtropes.org/pmwiki/pmwiki.php/Main/MightyWhitey), and [White Man’s Burden](https://tvtropes.org/pmwiki/pmwiki.php/Main/WhiteMansBurden), which list movies like: James Cameron’s Avatar, Dances with Wolves, The Last Samuri (starring Tom Cruise), The Blind Side, The Help, La La Land, etc.
+
+% solving the problem of being young and single in

@@ -1,6 +1,6 @@
 # (Incomplete) Colonialism
 
-TODO: summary statement here
+Let's take a final step back now and look at Colonialism.
 
 ```{tableofcontents}
 ```
