@@ -38,3 +38,4 @@ As many are trying to get women into programming, so that they aren't cut out of
 - Twitter threads on women in professions
   - [poultry industry](https://twitter.com/SarahTaber_bww/status/1516595427784769546)
   - [women's sports](https://twitter.com/shereebekker/status/1504899936843935746)
+% alt copy for women's sports: https://www.getrevue.co/profile/shereebekker/issues/holding-space-issue-15-962804?via=twitter-card&client=DesktopWeb&element=issue-card
