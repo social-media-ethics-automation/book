@@ -20,7 +20,7 @@ alt: "Photo of Margaret Hamilton, with long hair, a dress, and glasses, standing
 
 When Margaret Hamilton was in charge of creating the software to run on the Apollo rockets, the men around her considered programming to be easy and less serious than the "engineering" they were doing in building the rocket. So, she began calling the programming she was doing "[software engineering](https://en.wikipedia.org/wiki/Software_engineering)" to convey the complexity and rigor of the work she and her team were doing. She was able to convince her collegues, and the term "software engineering" became common.
 
-Still, up through the 1960s and 1970s, most computer companies made their money by selling the physical hardware. They happened to include some software to go with it, and people who bought the hardware would sometimes hire people to make more software. So software was still considered secondary, and up until the early 1980s, [women were getting around 37% of computer science degrees](npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding).
+Still, up through the 1960s and 1970s, most computer companies made their money by selling the physical hardware. They happened to include some software to go with it, and people who bought the hardware would sometimes hire people to make more software. So software was still considered secondary, and up until the early 1980s, [women were getting around 37% of computer science degrees](https://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding).
 
 ## Programming for Boys and Men
 In the early 1980s, a number of things changed which ended up with programming seen as a male profession, and a highly profitable and respected one.

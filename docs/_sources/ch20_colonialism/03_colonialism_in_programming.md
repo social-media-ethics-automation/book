@@ -9,6 +9,8 @@ The reason few non-English programming languages exist is due to the network eff
 
 Now, since many people do speak other languages, you can often find comments, variable names, and even sometimes coding libraries which use non-English languages, but the core coding terms (e.g., `for`, `if`, etc.), are still almost always in English.
 
+% TODO: Add Philip Guo's paper on non-native English speakers
+
 
 ## Programming Adoption Through Silicon Valley
 The book [Coding Places: Software Practice in a South American City](https://mitpress.mit.edu/books/coding-places) by Dr. Yuri Takhteyev explores how programming in Brazil differs from programming in Silicon Valley. Dr. Takhteyev points out that since tech companies are centralized in Silicon Valley, this then means they Silicon Valley determines which technologies (like programming languages or coding libraries) get adopted. He then compares this to a how the art world works: "[If you want to show [your art] in Chicago, you must move to New York](https://scholar.google.com/scholar?cluster=5649512333681274344). He then rewords this for tech:
