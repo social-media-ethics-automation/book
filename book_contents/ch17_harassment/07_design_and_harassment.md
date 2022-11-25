@@ -27,6 +27,10 @@ And [Dr. Jonathan Flowers argues](https://zirk.us/@shengokai/109347027270208314)
 >
 > On Black Twitter, the quote tweet and hashtag enable what Black cultural scholars call "call and response," something crucial to Black community practices. The hashtags curate the conversation and allow for its visibility.
 
+
+% TODO: perhaps use this source: https://techpolicy.press/the-whiteness-of-mastodon/
+
+
 Writer [Leslie Ye argued](https://twitter.com/lesliezye/status/1593631667037638660) about some of the advantages of what Twitter:
 > many of us have spent our lives observing institutional power from the outside, how power behaves, how power acts, when confronted when communities like ours who are actually able to HOLD power to account, connect the dots across expertises and specialties
 >

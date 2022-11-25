@@ -9,6 +9,7 @@
 - Disinformation / Misinformation
   - [Participatory Disinformation](https://twitter.com/katestarbird/status/1482769917325692928)
   - [The Marketplace of Rationalizations](https://twitter.com/danwilliamsphil/status/1500768915797991426)
+    - https://www.cambridge.org/core/journals/economics-and-philosophy/article/marketplace-of-rationalizations/41FB096344BD344908C7C992D0C0C0DC
 - Social media as new organizations / journalism
   - [Facebook won’t call itself a media company.​ ​Is it time to reimagine journalism for the digital age?](https://www.theverge.com/2016/11/16/13655102/facebook-journalism-ethics-media-company-algorithm-tax)
 - And many more
@@ -42,6 +43,8 @@
   - [Your Computer Is on Fire](https://alliance-primo.hosted.exlibrisgroup.com/permalink/f/kjtuig/CP71351563850001451)
   - [Technically Wrong: Sexist Apps, Biased Algorithms, and Other Threats of Toxic Tech by Sara Wachter-Boettcher](https://alliance-primo.hosted.exlibrisgroup.com/permalink/f/kjtuig/CP71316767650001451)
   - [Media Ethics, Free Speech, and the Requirements of Democracy](https://alliance-primo.hosted.exlibrisgroup.com/permalink/f/lvbsh/TN_cdi_askewsholts_vlebooks_9781351333450)
+
+  TODO: Add viral justice
 
 ## Other Social Media Programming Options
 

@@ -1,4 +1,11 @@
-# What you can do
+# As a Potential Tech Worker
+
+ - as tech worker [if you end up as one]: consider ethics of what you are making. You might not have power, but you also might sometimes
+
+As a potential tech workers that might work for a social media site, we hope you learn how to analyze the ethical tradeoffs made in designing automated systems. We hope you could then bring those concerns into how you design and implement automated systems for social media sites.
+
+
+## An Example of Action
 
 https://twitter.com/stevekrenzel/status/1589700721121058817
 
