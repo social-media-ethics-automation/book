@@ -1,19 +1,11 @@
 # More Resources
 
-## Topics we wanted to go into ore
-- Race
-  - [A People’s History of Black Twitter](https://www.wired.com/story/black-twitter-oral-history-part-i-coming-together/)
-  - [Twitter: Sharing learnings about our image cropping algorithm](https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm)
-- Free speech
-  - [Media Ethics, Free Speech, and the Requirements of Democracy](https://alliance-primo.hosted.exlibrisgroup.com/permalink/f/lvbsh/TN_cdi_askewsholts_vlebooks_9781351333450)
-- Disinformation / Misinformation
-  - [Participatory Disinformation](https://twitter.com/katestarbird/status/1482769917325692928)
-  - [The Marketplace of Rationalizations](https://twitter.com/danwilliamsphil/status/1500768915797991426)
-    - https://www.cambridge.org/core/journals/economics-and-philosophy/article/marketplace-of-rationalizations/41FB096344BD344908C7C992D0C0C0DC
-- Social media as new organizations / journalism
-  - [Facebook won’t call itself a media company.​ ​Is it time to reimagine journalism for the digital age?](https://www.theverge.com/2016/11/16/13655102/facebook-journalism-ethics-media-company-algorithm-tax)
-- And many more
-  - Non-US perspectives, [social media and science](https://www.theverge.com/2021/9/24/22688278/tiktok-science-study-survey-prolific), etc.
+We wanted to conclude by linking you to more resources that you might be interested, some of which we weren't able to delve into in this book.
+
+## Recommended Articles
+- [A People’s History of Black Twitter](https://www.wired.com/story/black-twitter-oral-history-part-i-coming-together/)
+- [Facebook won’t call itself a media company.​ ​Is it time to reimagine journalism for the digital age?](https://www.theverge.com/2016/11/16/13655102/facebook-journalism-ethics-media-company-algorithm-tax)
+- [Social media and science](https://www.theverge.com/2021/9/24/22688278/tiktok-science-study-survey-prolific), etc.
 
 ## Recommended Books
 
@@ -43,17 +35,16 @@
   - [Your Computer Is on Fire](https://alliance-primo.hosted.exlibrisgroup.com/permalink/f/kjtuig/CP71351563850001451)
   - [Technically Wrong: Sexist Apps, Biased Algorithms, and Other Threats of Toxic Tech by Sara Wachter-Boettcher](https://alliance-primo.hosted.exlibrisgroup.com/permalink/f/kjtuig/CP71316767650001451)
   - [Media Ethics, Free Speech, and the Requirements of Democracy](https://alliance-primo.hosted.exlibrisgroup.com/permalink/f/lvbsh/TN_cdi_askewsholts_vlebooks_9781351333450)
-
-  TODO: Add viral justice
+  - [Viral Justice: How We Grow the World We Want by Ruha Benjamin](https://press.princeton.edu/books/hardcover/9780691222882/viral-justice)
 
 ## Other Social Media Programming Options
+Note: We haven't tried these out yet, but we are pointing to what looks like the information you'd need to set yourself up:
 
 - Facebook / Instagram / WhatsApp
-  - Developer access: https://developers.facebook.com/
-  - Python library: https://facebook-sdk.readthedocs.io/en/latest/api.html  
+  - Developer access: [https://developers.facebook.com/](https://developers.facebook.com/)
+  - Python library: [https://facebook-sdk.readthedocs.io/en/latest/api.html](https://facebook-sdk.readthedocs.io/en/latest/api.html)  
 - TikTok
-  - Python library: https://dteather.com/TikTok-Api/docs/TikTokApi.html
-  - TikTok for developers appears to be geared toward making apps people can use on their accounts: https://developers.tiktok.com/
+  - Python library: [https://dteather.com/TikTok-Api/docs/TikTokApi.html](https://dteather.com/TikTok-Api/docs/TikTokApi.html)
+  - TikTok for developers appears to be geared toward making apps people can use on their accounts: [https://developers.tiktok.com/](https://developers.tiktok.com/)
 - QQ Weibo
-  - Developer access (with some python code)
-  - https://developers.weixin.qq.com/doc/offiaccount/en/Getting_Started/Getting_Started_Guide.html
+  - Developer access (with some python code): [https://developers.weixin.qq.com/doc/offiaccount/en/Getting_Started/Getting_Started_Guide.html](https://developers.weixin.qq.com/doc/offiaccount/en/Getting_Started/Getting_Started_Guide.html)

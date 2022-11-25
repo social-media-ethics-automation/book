@@ -1,7 +1,5 @@
 # As a Member of Society
 
-- as citizen [?] Knowledgeable and support good regulations, pressure companies
+As a member of society, we hope you are informed about the role social media plays in shaping society, such as how design decisions and bots can influence social movements (polarizing, spreading, or stifling different them), and the different economic, social, and governmental pressures that social media platforms operate under.
 
-
-
-As a member of a society that is influenced by social media, we hope you learn about the societal impact of automated social media systems, and how those systems are designed under different economic, social, and governmental pressures. We hope you could then be more knowledgeable in what you might advocate for or vote for in how social media sites operate.
+We hope you are then able to advocate for ways of improving how social media operates in society. That might be through voting, or pressuring government officials, or spreading ideas and information, or organizing coordinated actions or protests.

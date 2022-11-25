@@ -26,6 +26,8 @@ We covered a number of topics in relation to social media:
 
 We hope that by the end of this book you know a lot of social media terminology (e.g., context collapse, parasocial relationships, the network effect, etc.), that you have a good overview of how social media works and is used, and what design decisions are made in how social media works, and the consequences of those decisions.
 
+We also hope you are able to recognize how trends on internet-based social media tie to the whole of human history of being social creatures, and can apply lessons from that history to our current situations.
+
 
 ## Ethics
 We covered a number of ethics frameworks and you got practice applying them in diffierent situations:

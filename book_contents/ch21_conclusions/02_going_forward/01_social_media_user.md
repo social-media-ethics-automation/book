@@ -1,5 +1,7 @@
 # As a Social Media User
 
- - as social media user - know what happens to your data, understand the ecosystem you are using, etc.
+As a social media user, we hope you are informed about things like: how social media works, how they influence your emotions and mental state, how your data gets used or abused, strategies in how people use social media, and how harassment and spam bots operate.
 
-As a social media user, we hope you learn how social media sites influence you, from how your data gets used or abused, to how harassment and spam bots operate, to how platforms manipulate your emotions and mental state. We hope you could then be a more knowledgeable consumer and participant on social media sites.
+We hope with this you can be a more informed user of social media, better able to participate, protect yourself, and make it a valuable experience for you and others you interact with.
+
+For example, you can hopefully recognize when someone is intentionally posting something bad or offensive (like the bad cooking videos we mentioned in the Virality chapter) in an attempt to get people to respond and spread their content. Then you can decide how you want to engage (if at all) given how they are trying to spread their content.
