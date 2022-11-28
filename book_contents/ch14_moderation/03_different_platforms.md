@@ -37,3 +37,6 @@ For a period of time, most news organizations allowed comments on their articles
 
 ## Public Figure Exception
 Twitter, Facebook, and other platforms had an [exception to their normal moderation policies for political leaders](https://help.twitter.com/en/rules-and-policies/public-interest), where they wouldn’t ban them even if they violated site policies (most notably applied to Donald Trump). After the January 6th insurrection at the US Capital, Donald Trump was banned first from Twitter, then from Facebook, and [Facebook announced an end special treatment for politicians](https://www.theverge.com/2021/6/3/22474738/facebook-ending-political-figure-exemption-moderation-policy).
+
+% TODO China state content Moderation
+% China censors news about protests on their own platforms on one side, and they are currently taking advantage of Elon Musk having fired almost all Twitter content moderators to hide news of protests on the other side (https://techcrunch.com/2022/11/28/great-wall-of-porn-obscures-china-protest-news-on-twitter/)
