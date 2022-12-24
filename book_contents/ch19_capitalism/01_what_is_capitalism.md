@@ -68,7 +68,7 @@ For example, the actor Stellan Skarsgård complained that in the film industry, 
 > - [Stellan Skarsgård](https://www.theguardian.com/film/2021/nov/25/stellan-skarsgard-my-tips-for-fatherhood-dont-lie-even-about-santa-claus)
 
 
-Or as another example, if the [richest man in the world offers to buy out a social media site for more than it's worth](https://variety.com/2022/digital/news/elon-musk-twitter-obviously-overpaying-deal-1235409500/), then it is the fiduciary duty of the leaders of the social media site to accept that offer. It doesn't matter if it is clear that this rich man doesn't know what he is doing and is likely to destroy the social media site, the fiduciary duty of the company leaders is to get as much money as possible to their shareholders, and they can't beat being overpaid by the richest man in the world.
+Or as another example, if the [richest man in the world offers to buy out a social media site for more than it's worth](https://variety.com/2022/digital/news/elon-musk-twitter-obviously-overpaying-deal-1235409500/), then it is the fiduciary duty of the leaders of the social media site to accept that offer. It doesn't matter if it is clear that this rich man doesn't know what he is doing and is likely to destroy the social media site, the fiduciary duty of the company leaders is to get as much money as possible to their shareholders, and they can't beat being overpaid by the richest man in the world. % TODO: Not accepting this deal would be cheating the stock holders
 
 
 ### Other Accontability Models
@@ -76,7 +76,11 @@ Besides shareholder owned businesses in capitalism, and government services in s
 
 In a __privately owned__ business or organization, the owner has full say on what happens, and is free to make it as unprofitable or profitable as they want. Though, if the private ownership purchase is made with loans, then they have some responsibilities to the lenders.
 
+% TODO: Move privately owned to capitalism
+
 In a __publicly funded__ organization, __non-profit__ organization, or __crowd funded__ project (e.g., [Wikipedia](https://en.wikipedia.org/wiki/Wikimedia_Foundation), [NPR](https://en.wikipedia.org/wiki/NPR), [Kickstarter projects](https://www.kickstarter.com/), [Patreon creators](https://www.patreon.com/)), the investors (or donors) are not investing in profits from the organization, but instead are investing in the product or work the organization produces. Therefore the responsibility to investors is not to make profits, but to do the work investors are paying for. In this model, the more money someone invests or donates, the more say they have over what the organization does (like capitalism, and unlike democratic socialism). For example, when buying groceries, you might let the grocery store take an extra $5 from you to give to a charity that gives food to the needy. Then the grocery store corporation will give $5 to the charity, but the corporation also gets $5 more say in how the charity operates (and they can pressure the charity to not do anything that hurts the corporation's profits).
+
+% TODO: Add co-operatives: both Consumer co-operative https://en.wikipedia.org/wiki/Consumers%27_co-operative and worker co-operative https://en.wikipedia.org/wiki/Worker_cooperative (where workers control the means of production)
 
 
 ## Reflection Questions

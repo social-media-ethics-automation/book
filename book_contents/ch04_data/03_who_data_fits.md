@@ -30,6 +30,7 @@ Here are some screenshots from a [help forum discussion](https://ttlc.intuit.com
 As you can see, TurboTax has a limit on how long last names are allowed to be, and people with too long of names have different strategies with how to deal with not fitting in the system.
 
 ### Gender/Sexuality
+% TODO: https://genders.wtf/
 Data collection and storage can go wrong in other ways as well, with incorrect or erroneous options. Here are some screenshots from a thread of people collecting strange gender selection forms (the images link to the tweets I got them from if you want to see more in the twitter thread):
 
 - [![Tweet from user "Coding Drag Queen Anna Lytical" with handle "@theannalytical". The tweet text is "send me the worst gender selection forms you've seen, I'll start" and the image is of a dropdown with the following options: Female, Male, N/A, Unknown, Tax Entity"](gender_select1.png)](https://twitter.com/theannalytical/status/1349392166716657664?s=20)
