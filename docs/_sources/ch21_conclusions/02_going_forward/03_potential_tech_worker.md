@@ -53,3 +53,6 @@ As an example of what someone in this position might do, let's consider this sto
 >
 > - [Twitter Thread](https://twitter.com/stevekrenzel/status/1589700721121058817)
 > - [Business Insider Article](https://www.businessinsider.com/former-twitter-engineer-worried-how-elon-musk-treat-user-data-2022-11)
+
+
+% TODO: You aren't likely to end up in a situation as dramatic as this. Your stand for ethical tech work would probably look more like arguing about what restrictions to put on a name field (e.g., minimum length), or arguing that a small piece of data about users is not really needed and shouldn't be tracked, or or???
