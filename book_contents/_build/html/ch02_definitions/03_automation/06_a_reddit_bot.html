@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2.3.6. A program that posts one tweet &#8212; Social Media, Ethics, and Automation</title>
+    <title>2.3.6. A program that makes one reddit post &#8212; Social Media, Ethics, and Automation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.3.7. Understanding the Twitter Bot Code" href="07_details_of_bot.html" />
+    <link rel="next" title="2.3.7. Understanding the Reddit Bot Code" href="07_details_of_bot.html" />
     <link rel="prev" title="2.3.5. Compilers and Programimng Languages" href="05_compilers.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -122,11 +122,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../../prefaces/perspectives_and_biases.html">
    Perspectives and Biases
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../prefaces/making_twitter_account.html">
-   Making a Twitter Bot Account
   </a>
  </li>
 </ul>
@@ -269,17 +264,17 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       2.3.6. A program that posts one tweet
+       2.3.6. A program that makes one reddit post
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="07_details_of_bot.html">
-       2.3.7. Understanding the Twitter Bot Code
+       2.3.7. Understanding the Reddit Bot Code
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="08_demo.html">
-       2.3.8. Demo: Try Running the Twitter Bot!
+       2.3.8. Demo: Try Running the Reddit Bot!
       </a>
      </li>
      <li class="toctree-l3">
@@ -1450,17 +1445,34 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../appendix/teaching_with_this_book.html">
-   (Incomplete) Teaching With This Book
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../appendix/bot_set_ups/00_intro.html">
+   Bot Account Set-Ups
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" type="checkbox"/>
+  <label for="toctree-checkbox-37">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/bot_set_ups/making_reddit_account.html">
+     Making a Reddit Bot Account
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/bot_set_ups/making_twitter_account.html">
+     Making a Twitter Bot Account
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../appendix/solutions/00_solutions.html">
    Practice Solutions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" type="checkbox"/>
-  <label for="toctree-checkbox-37">
+  <input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" type="checkbox"/>
+  <label for="toctree-checkbox-38">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -1506,6 +1518,38 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../appendix/alternate_apis/00_intro.html">
+   Alternate Social Media APIs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-39" name="toctree-checkbox-39" type="checkbox"/>
+  <label for="toctree-checkbox-39">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/alternate_apis/ch2_03_06_a_twitter_bot.html">
+     A program that posts one tweet
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/alternate_apis/ch2_03_07_details_of_bot.html">
+     Understanding the Twitter Bot Code
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/alternate_apis/ch2_03_08_demo.html">
+     Demo: Try Running the Twitter Bot!
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../appendix/teaching_with_this_book.html">
+   (Incomplete) Teaching With This Book
+  </a>
  </li>
 </ul>
 
@@ -1597,7 +1641,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/kylethayer/social_media_ethics_automation_v0/issues/new?title=Issue%20on%20page%20%2Fch02_definitions/03_automation/06_a_twitter_bot.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/kylethayer/social_media_ethics_automation_v0/issues/new?title=Issue%20on%20page%20%2Fch02_definitions/03_automation/06_a_reddit_bot.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1625,7 +1669,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/ch02_definitions/03_automation/06_a_twitter_bot.md"
+        <a href="../../_sources/ch02_definitions/03_automation/06_a_reddit_bot.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1674,7 +1718,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>A program that posts one tweet</h1>
+                <h1>A program that makes one reddit post</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1686,33 +1730,37 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="a-program-that-posts-one-tweet">
-<h1><span class="section-number">2.3.6. </span>A program that posts one tweet<a class="headerlink" href="#a-program-that-posts-one-tweet" title="Permalink to this headline">#</a></h1>
-<p>Below is a computer program written in the Python programming language. The program will post a single tweet that says: “This tweet was posted by a computer program!”. Since this is a computer program that posts on twitter, we would call this program a twitter bot.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="a-program-that-makes-one-reddit-post">
+<h1><span class="section-number">2.3.6. </span>A program that makes one reddit post<a class="headerlink" href="#a-program-that-makes-one-reddit-post" title="Permalink to this headline">#</a></h1>
+<p>Below is a computer program written in the Python programming language. The program will make a reddit post in the subreddit “soc_media_ethics_auto”. The post will be titled “A bot post” and say: “This post was made by a computer program!”. Since this is a computer program that posts on reddit, we would call this program a reddit bot.</p>
 <p>Don’t worry if you don’t understand any of this Python code yet; we will build an understanding of code like this throughout the book.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tweepy</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">praw</span>
 
-<span class="n">bearer_token</span> <span class="o">=</span> <span class="s2">&quot;n4tossfgsafs_fake_bearer_token_isa53#$%$&quot;</span>
-<span class="n">consumer_key</span> <span class="o">=</span> <span class="s2">&quot;sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG&quot;</span>
-<span class="n">consumer_secret</span> <span class="o">=</span> <span class="s2">&quot;45adf$T$A_fake_consumer_secret_JESdsg&quot;</span>
-<span class="n">access_token</span> <span class="o">=</span> <span class="s2">&quot;56sd5Ss4tsea_fake_access_token_%YE%hDsdr&quot;</span>
-<span class="n">access_token_secret</span> <span class="o">=</span> <span class="s2">&quot;j^$dr_fake_consumer_key_^A5s#DR5s&quot;</span>
+<span class="n">username</span><span class="o">=</span><span class="s2">&quot;fake_reddit_username&quot;</span>
+<span class="n">password</span><span class="o">=</span><span class="s2">&quot;sa@#4*fdf_fake_password_$%DSG#%DG&quot;</span>
+<span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;45adf$TW_fake_client_id_JESdsg1O&quot;</span>
+<span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;56sd_fake_client_secret_%Yh%&quot;</span>
 
-<span class="n">client</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span>
-   <span class="n">bearer_token</span><span class="o">=</span><span class="n">bearer_token</span><span class="p">,</span>
-   <span class="n">consumer_key</span><span class="o">=</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">consumer_secret</span><span class="p">,</span>
-   <span class="n">access_token</span><span class="o">=</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">access_token_secret</span>
+<span class="n">reddit</span> <span class="o">=</span> <span class="n">praw</span><span class="o">.</span><span class="n">Reddit</span><span class="p">(</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">client_id</span><span class="p">,</span> <span class="n">client_secret</span><span class="o">=</span><span class="n">client_secret</span><span class="p">,</span>
+    <span class="n">user_agent</span><span class="o">=</span><span class="s2">&quot;a custom python script&quot;</span>
 <span class="p">)</span>
 
-<span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;This tweet was posted by a computer program!&quot;</span><span class="p">)</span>
+<span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span>
+   <span class="s2">&quot;soc_media_ethics_auto&quot;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span>
+   <span class="s2">&quot;A bot post&quot;</span><span class="p">,</span> 
+   <span class="n">selftext</span> <span class="o">=</span> <span class="s2">&quot;This post was made by a computer program!&quot;</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 <p>Though you may not understand anything in the above code yet, I want to point out a couple things:</p>
 <ul class="simple">
-<li><p>The code above is full of English words like “import”, “key”, “secret”, which may help you guess the meaning of the code.</p></li>
+<li><p>The code above is full of English words like “import”, “username”, “password”, and “secret,” which may help you guess the meaning of the code.</p></li>
 <li><p>There are also other symbols as well, though being used in a different way than in normal English, symbols like <code class="docutils literal notranslate"><span class="pre">=</span></code>, <code class="docutils literal notranslate"><span class="pre">_</span></code>, <code class="docutils literal notranslate"><span class="pre">.</span></code>, <code class="docutils literal notranslate"><span class="pre">(</span></code>, and <code class="docutils literal notranslate"><span class="pre">)</span></code></p></li>
-<li><p>One particular piece of code gives a good hint as to what it is doing: <code class="docutils literal notranslate"><span class="pre">create_tweet</span></code>. That indeed is the part of the program where the tweet is posted.</p></li>
-<li><p>There are five pieces of text with random numbers and letters that include things like “fake_consumer_key” inside. These pieces of text are meant to be replaced with a set of special passwords to your actual twitter account. You can get these special passwords if you get developer access to twitter (see the page on <a class="reference internal" href="../../prefaces/making_twitter_account.html"><span class="doc std std-doc">Making a Twitter Bot Account</span></a>). Once you put your special passwords in those locations then this code will post a tweet on your account.</p></li>
+<li><p>The final lines of code gives a good hints as to what it is doing: <code class="docutils literal notranslate"><span class="pre">subreddit</span></code> chooses which subreddit the post will be made on, and <code class="docutils literal notranslate"><span class="pre">submit</span></code> has the information to submit as a new post.</p></li>
+<li><p>There are four pieces of text with random numbers and letters that include things like “username” and “client_secret” inside. These pieces of text are meant to be replaced with your reddit username and password and a pair of special passwords for running a reddit bot. You can get these special passwords if you get developer access to reddit (see the page on <a class="reference internal" href="../../appendix/bot_set_ups/making_reddit_account.html"><span class="doc std std-doc">Making a Reddit Bot Account</span></a>). Once you put your special passwords in those locations then this code will post a tweet on your account.</p></li>
 </ul>
 <p>We will go through that example code in more detail next.</p>
 </section>
@@ -1754,7 +1802,7 @@ title="Print to PDF"
     <a class='right-next' id="next-link" href="07_details_of_bot.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.3.7. </span>Understanding the Twitter Bot Code</p>
+        <p class="prev-next-title"><span class="section-number">2.3.7. </span>Understanding the Reddit Bot Code</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

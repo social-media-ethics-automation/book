@@ -1,6 +1,6 @@
-# Understanding the Twitter Bot Code
+# Understanding the Reddit Bot Code
 
-Let's look more at that program that posts one tweet.
+Let's look more at that program that cretaes one Reddit post.
 
 There are a number of ways of looking at the code, but first, let's look at it as a template with a couple pieces we can change.
 
@@ -9,36 +9,40 @@ There are a number of ways of looking at the code, but first, let's look at it a
 Below I've highlighted the text of the sections of the program that you might want to modify.
 
 <pre style="color:gray">
-import tweepy
+import praw
 
-bearer_token = "<strong style="color:black;background-color:lightgreen">n4tossfgsafs_fake_bearer_token_isa53#$%$</strong>"
-consumer_key = "<strong style="color:black;background-color:lightgreen">sa@#4%fdfdsa_fake_consumer_key_$%DSG#%DG</strong>"
-consumer_secret = "<strong style="color:black;background-color:lightgreen">45adf$T$A_fake_consumer_secret_JESdsg</strong>"
-access_token = "<strong style="color:black;background-color:lightgreen">56sd5Ss4tsea_fake_access_token_%YE%hDsdr</strong>"
-access_token_secret = "<strong style="color:black;background-color:lightgreen">j^$dr_fake_consumer_key_^A5s#DR5s</strong>"
+username="<strong style="color:black;background-color:lightgreen">fake_reddit_username</strong>"
+password="<strong style="color:black;background-color:lightgreen">sa@#4*fdf_fake_password_$%DSG#%DG</strong>"
+client_id="<strong style="color:black;background-color:lightgreen">45adf$TW_fake_client_id_JESdsg1O</strong>"
+client_secret="<strong style="color:black;background-color:lightgreen">56sd_fake_client_secret_%Yh%</strong>"
 
-client = tweepy.Client(
-   bearer_token=bearer_token,
-   consumer_key=consumer_key, consumer_secret=consumer_secret,
-   access_token=access_token, access_token_secret=access_token_secret
+reddit = praw.Reddit(
+    username=username, password=password,
+    client_id=client_id, client_secret=client_secret,
+    user_agent="a custom python script"
 )
-client.create_tweet(text="<strong style="color:black;background-color:lightgreen">This tweet was posted by a computer program!</strong>")
+
+reddit.subreddit(
+   "<strong style="color:black;background-color:lightgreen">soc_media_ethics_auto</strong>"
+).submit(
+   "<strong style="color:black;background-color:lightgreen">A bot post</strong>", 
+   selftext = "<strong style="color:black;background-color:lightgreen">This post was made by a computer program!</strong>"
+)
+
+
 </pre>
 
-The first five highlighted pieces of code are for the special passwords you can get when you get [developer access to twitter](../../prefaces/making_twitter_account.md) (I've put fake values in them for now):
-- bearer token
-- consumer key
-- consumer secret
-- access token
-- access token secret
+The first four highlighted pieces of code are for the special passwords that let you run a bot. You can get when you get those passwords by following thse steps to get [developer access to reddit](../../appendix/bot_set_ups/making_reddit_account.md) (I've put fake values in them for now):
+- username
+- password
+- client_id
+- client_secret
 
-These special passwords are needed for different actions on twitter. Rather than worry about which of these passwords are needed for which action, I'll just always include all of them.
+The final three highlighted pieces of code are the information for what to post on reddit. First, in the parentheses after `subreddit` is which subreddit to post on. In the parenthese after teh `submit` is first the title of the post, and next is the text of the post itself. You can change any of these values ot change which subreddit you post to, and what title and text to post.
 
-The final highlighted piece of code (in the parentheses after `create_tweet`) is the text of what will be tweeted when this bot runs. You can change the text there to change what gets tweeted.
+So, by changing those sections of code, you run this program to post whatever reddit you want to post on a subreddit. It is, of course, much easier to just open reddit and post something, but as we get to more complicated programs, we'll start to see more of the power (and pitfalls) of automation on social media.
 
-So, by changing those sections of code, you run this program to post whatever tweet you want to your twitter account. It is, of course, much easier to just open twitter and tweet, but as we get to more complicated programs, we'll start to see more of the power (and pitfalls) of automation on social media.
-
-_Note: all the highlighted sections of code are surrounded by double quotes. In the Python programming language, putting something in quotes indicates that you want the computer to think of the things inside the quotes as pieces of text, in this case passwords and tweet contents._
+_Note: all the highlighted sections of code are surrounded by double quotes. In the Python programming language, putting something in quotes indicates that you want the computer to think of the things inside the quotes as pieces of text, in this case passwords and reddit post information._
 
 ## Adding code comments
 
@@ -51,23 +55,30 @@ In Python, you can add a comment by use the `#` symbol. Python will ignore every
 So, in order to make the program above easier for future humans to understand, let's add two comments telling these future humans where to add their special passwords and where they can change the text of the tweet:
 
 ```python
-import tweepy
+import praw
 
-# TODO: Put your twitter account's special developer access passwords below:
-bearer_token = "n4tossfgsafs_fake_bearer_token_isa53#$%$"
-consumer_key = "sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG"
-consumer_secret = "45adf$T$A_fake_consumer_secret_JESdsg"
-access_token = "56sd5Ss4tsea_fake_access_token_%YE%hDsdr"
-access_token_secret = "j^$dr_fake_consumer_key_^A5s#DR5s"
+# TODO: Put your reddit username, password, and special developer access passwords below:
+username="fake_reddit_username"
+password="sa@#4*fdf_fake_password_$%DSG#%DG"
+client_id="45adf$TW_fake_client_id_JESdsg1O"
+client_secret="56sd_fake_client_secret_%Yh%"
 
-client = tweepy.Client(
-   bearer_token=bearer_token,
-   consumer_key=consumer_key, consumer_secret=consumer_secret,
-   access_token=access_token, access_token_secret=access_token_secret
+reddit = praw.Reddit(
+    username=username, password=password,
+    client_id=client_id, client_secret=client_secret,
+    user_agent="a custom python script"
 )
 
-# TODO: modify the text in the quotes below to change what this bot tweets:
-client.create_tweet(text="This tweet was posted by a computer program!")
+
+
+# TODO: modify the text in the quotes below to change what and where this bot posts to reddit:
+reddit.subreddit(
+   "soc_media_ethics_auto"
+).submit(
+   "A bot post", 
+   selftext = "This post was made by a computer program!"
+)
+
 ```
 
 With those, hopefully a future human reader will have a better chance of understanding how to modify the program to do what they want.
@@ -83,41 +94,47 @@ _Note: It's normal if you don't understand everything here. Over the course of t
 
 The first line of code is:
 ```python
-import tweepy
+import praw
 ```
 
-The purpose of this line of code that loads another set of code. The code it loads is called [tweepy](https://www.tweepy.org/), which is code specially written to help make programs that work with twitter.
+The purpose of this line of code that loads another set of code. The code it loads is called [praw](https://praw.readthedocs.io/en/stable/) (The Python Reddit API Wrapper), which is code specially written to help make programs that work with Reddit.
 
 
-The next section of code is five lines long:
+The next section of code is four lines long:
 ```python
-bearer_token = "n4tossfgsafs_fake_bearer_token_isa53#$%$"
-consumer_key = "sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG"
-consumer_secret = "45adf$T$A_fake_consumer_secret_JESdsg"
-access_token = "56sd5Ss4tsea_fake_access_token_%YE%hDsdr"
-access_token_secret = "j^$dr_fake_consumer_key_^A5s#DR5s"
+username="fake_reddit_username"
+password="sa@#4*fdf_fake_password_$%DSG#%DG"
+client_id="45adf$TW_fake_client_id_JESdsg1O"
+client_secret="56sd_fake_client_secret_%Yh%"
 ```
 
-This is code to store all of our twitter developer access passwords into Python so we can use them later. Again, you'll have to get your actual developer access passwords and replace the fake ones currently in the code.
+This is code to store all of the reddit password information we need to use a bot. You need your reddit username and password, and then a special client_id and client_secret for the bot. Again, you'll have to get your actual developer access passwords and replace the fake ones currently in the code.
 
 The next section of code is five lines long:
 
 ```python
-client = tweepy.Client(
-   bearer_token=bearer_token,
-   consumer_key=consumer_key, consumer_secret=consumer_secret,
-   access_token=access_token, access_token_secret=access_token_secret
+reddit = praw.Reddit(
+    username=username, password=password,
+    client_id=client_id, client_secret=client_secret,
+    user_agent="a custom python script"
 )
 ```
 
-The purpose of this code is to take all the developer access passwords you entered above, and give them to the tweepy code so that the tweepy code can log into your twitter account and provide the needed passwords for whatever twitter action you want to do.
+The purpose of this code is to take all the developer access passwords you entered above, and give them to the praw code so that the praw code can log into your reddit account and provide the needed passwords for running a reddit bot. 
 
-The final line of code is:
+Note that the last line is setting the `user_agent` which is a description of which program is being used to post from. For example, it might be "Reddit web page" or "Reddit iPhone app" or "Sprout social media manager." For our programs, I've just labeled our posts as being from "a custom python script."
+
+The final lines of code are:
 ```python
-client.create_tweet(text="This tweet was posted by a computer program!")
+reddit.subreddit(
+   "soc_media_ethics_auto"
+).submit(
+   "A bot post", 
+   selftext = "This post was made by a computer program!"
+)
 ```
 
-This is the line of code where a tweet is actually posted. The action is called "create_tweet" since the code is creating a tweet. Inside the double quotes is the text that is going to be tweeted.
+This is the lines of code where a reddit post is actually made. First the `subreddit` section selects which subreddit an action will be taken on, and then `submit` creates a new post with the given title and text.
 
 ## Adding more code comments
 Now that we've looked at the purpose of each section of code, we can add additional comments explaining what each section does, so that future humans reading the code are more likely to understand it.
@@ -125,28 +142,32 @@ Now that we've looked at the purpose of each section of code, we can add additio
 Following the common practice of programmers, we will put the comment before the section of code that the comment is explaining. We can also make multiple comment lines as needed if our comments are long.
 
 ```python
-# Load some code called "tweepy" that will help us work with twitter
-import tweepy
+# Load some code called "praw" that will help us work with reddit
+import praw
 
 # Load all your developer access passwords into Python
-# TODO: Put your twitter account's special developer access passwords below:
-bearer_token = "n4tossfgsafs_fake_bearer_token_isa53#$%$"
-consumer_key = "sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG"
-consumer_secret = "45adf$T$A_fake_consumer_secret_JESdsg"
-access_token = "56sd5Ss4tsea_fake_access_token_%YE%hDsdr"
-access_token_secret = "j^$dr_fake_consumer_key_^A5s#DR5s"
+# TODO: Put your reddit username, password, and special developer access passwords below:
+username="fake_reddit_username"
+password="sa@#4*fdf_fake_password_$%DSG#%DG"
+client_id="45adf$TW_fake_client_id_JESdsg1O"
+client_secret="56sd_fake_client_secret_%Yh%"
 
-# Give the tweepy code your developer access passwords so
-# it can perform twitter actions
-client = tweepy.Client(
-   bearer_token=bearer_token,
-   consumer_key=consumer_key, consumer_secret=consumer_secret,
-   access_token=access_token, access_token_secret=access_token_secret
+# Give the praw code your reddit account info so
+# it can perform reddit actions
+reddit = praw.Reddit(
+    username=username, password=password,
+    client_id=client_id, client_secret=client_secret,
+    user_agent="a custom python script"
 )
 
-# Post a tweet
-# TODO: modify the text in the quotes below to change what this bot tweets:
-client.create_tweet(text="This tweet was posted by a computer program!")
+# Post a reddit post
+# TODO: modify the text in the quotes below to change what and where this bot posts to reddit:
+reddit.subreddit(
+   "soc_media_ethics_auto"
+).submit(
+   "A bot post", 
+   selftext = "This post was made by a computer program!"
+)
 ```
 
 Now that we've looked over the code and commented it, let's go to the next page, where you can try running it!

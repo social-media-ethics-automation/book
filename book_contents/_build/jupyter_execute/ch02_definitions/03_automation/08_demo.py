@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Demo: Try Running the Twitter Bot!
+# # Demo: Try Running the Reddit Bot!
 
 # ## Running this Jupyter Notebook
 # This page is called a "Jupyter Notebook" which it is a text page that has runnable Python code in it.
@@ -24,98 +24,80 @@
 # 
 
 # ## Here is the bot code you can run!
-# Our demo Twitter bot code is below, broken up into different sections. 
+# Our demo Reddit bot code is below, broken up into different sections. 
 # 
 # You can select each section of the code below and run it to see what it does.
 # 
-# By default this code uses a fake version of our twitter connection so it doesn't connect to a real twitter account.
+# By default this code uses a fake version of our reddit connection so it doesn't connect to a real reddit account.
 # 
-# If you want to actually connect to your twitter account, you can put your special developer access passwords in the right code section below, and then when you run the code make sure to skip the code section that makes a fake twitter connection with "fake_tweepy".
+# If you want to actually connect to your reddit account, you can put your special developer access passwords in the right code section below, and then when you run the code make sure to skip the code section that makes a fake twitter connection with "fake_praw".
 
-# ### Step 1: Load Tweepy code
+# ### Step 1: Load praw code
 
 # In[1]:
 
 
-# Load some code called "tweepy" that will help us work with twitter
-import tweepy
+# Load some code called "praw" that will help us work with reddit
+import praw
 
 
-# ### (Optional) Step 1b: Make a fake twitter connection with the fake_tweepy library
-# For testing purposes, we've added this line of code, which loads a fake version of tweepy, so it wont actually connect to twitter. __If you want to try to actually connect to twitter, don't run this line of code.__
+# ### (Optional) Step 1b: Make a fake praw connection with the fake_praw library
+# For testing purposes, we've added this line of code, which loads a fake version of praw, so it wont actually connect to reddit. __If you want to try to actually connect to reddit, don't run this line of code.__
 
 # In[2]:
 
 
-get_ipython().run_line_magic('run', '../../fake_tweepy/fake_tweepy.ipynb')
+get_ipython().run_line_magic('run', '../../fake_apis/fake_praw.ipynb')
 
 
 # ### Step 2: Load your developer access passwords
-# To use this on your real twitter account, copy your [developer access passwords](../../prefaces/making_twitter_account.md) into the code below, replacing our fake passwords.
+# To use this on your real twitter account, copy your [developer access passwords](../../appendix/bot_set_ups/making_reddit_account.md) into the code below, replacing our fake passwords.
 
 # In[3]:
 
 
 # Load all your developer access passwords into Python
-# TODO: Put your twitter account's special developer access passwords below:
-bearer_token = "n4tossfgsafs_fake_bearer_token_isa53#$%$"
-consumer_key = "sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG"
-consumer_secret = "45adf$T$A_fake_consumer_secret_JESdsg"
-access_token = "56sd5Ss4tsea_fake_access_token_%YE%hDsdr"
-access_token_secret = "j^$dr_fake_consumer_key_^A5s#DR5s"
+# TODO: Put your reddit username, password, and special developer access passwords below:
+username="fake_reddit_username"
+password="sa@#4*fdf_fake_password_$%DSG#%DG"
+client_id="45adf$TW_fake_client_id_JESdsg1O"
+client_secret="56sd_fake_client_secret_%Yh%"
 
 
-# ### Step 4: Give tweepy (or fake_tweepy) your developer access passwords
+# ### Step 4: Give praw (or fake_praw) your developer access passwords
 
 # In[4]:
 
 
-# Give the tweepy code your developer access passwords so
-# it can perform twitter actions
-client = tweepy.Client(
-   bearer_token=bearer_token,
-   consumer_key=consumer_key, consumer_secret=consumer_secret,
-   access_token=access_token, access_token_secret=access_token_secret
+# Give the praw code your reddit account info so
+# it can perform reddit actions
+reddit = praw.Reddit(
+    username=username, password=password,
+    client_id=client_id, client_secret=client_secret,
+    user_agent="a custom python script"
 )
 
 
-# ### Step 5: Post a tweet
+# ### Step 5: Submit a post to reddit
 
 # In[5]:
 
 
-# Post a tweet
-# TODO: modify the text in the quotes below to change what this bot tweets:
-client.create_tweet(text="This tweet was posted by a computer program!")
+# Post a reddit post
+# TODO: modify the text in the quotes below to change what and where this bot posts to reddit:
+reddit.subreddit(
+   "soc_media_ethics_auto"
+).submit(
+   "A bot post", 
+   selftext = "This post was made by a computer program!"
+)
 
 
-# ### Step 6: Modify the code above to post a different tweet
-# Note: If you try to post the same exact tweet twice in a row on real twitter, you will get an error message (it will be a lot of red text, which can be intimidating, but it just means you aren't allowed to post the same tweet twice in a row).
+# ### Step 6: Modify the code above to create a different reddit post
+# 
 
 # In[ ]:
 
 
 
 
-
-# ## What To Do With Error Messages
-# 
-# If you run this code trying to connect to a real twitter account, there are different error messages you might get. 
-# 
-# When you get an error message, there is often a lot of text and details about when and where exactly the error happened, which can look very intimidating. But we'll highlight the parts you need to pay attention to.
-# 
-# ### Unauthorized Error:
-# ![a screenshot of an unauthorized error message. It is a big red box with a lot of text about different pieces of code, but at the bottom, we highlighted text that says: "Unauthorized: 401 Unauthorized Unauthorized"](error-unauthorized_small.png)
-# 
-# If your special passwords in bot_keys.py aren't working, you might a 401 unauthorized error. To fix this:
-# - make sure you have all the special passwords in the bot_keys.py file (you may need to regenerate them)
-# - make sure the bot_keys file is saved (a dark circle on the tab means it isn't saved)
-# - make sure to restart the kernal on this tab.
-# 
-# Hopefully that fixes it, otherwise talk to your TA or the instructor
-# 
-# 
-# ### Duplicate Error:
-# ![a screenshot of an Forbidden Duplicate error message. It is a big red box with a lot of text about different pieces of code, but at the bottom, we highlighted text that says: "Forbidden: 403 Forbidden You are not allowed to create a tweet with duplicate content."](error-duplicate_small.png)
-# 
-# If you get this message, it just means you are trying to post the same tweet again, which twitter doesn't want you to do. Change the text of the tweet you are trying to make and it should hopefully work.

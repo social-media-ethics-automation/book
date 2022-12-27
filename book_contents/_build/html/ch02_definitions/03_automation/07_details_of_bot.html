@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2.3.7. Understanding the Twitter Bot Code &#8212; Social Media, Ethics, and Automation</title>
+    <title>2.3.7. Understanding the Reddit Bot Code &#8212; Social Media, Ethics, and Automation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.3.8. Demo: Try Running the Twitter Bot!" href="08_demo.html" />
-    <link rel="prev" title="2.3.6. A program that posts one tweet" href="06_a_twitter_bot.html" />
+    <link rel="next" title="2.3.8. Demo: Try Running the Reddit Bot!" href="08_demo.html" />
+    <link rel="prev" title="2.3.6. A program that makes one reddit post" href="06_a_reddit_bot.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -122,11 +122,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../../prefaces/perspectives_and_biases.html">
    Perspectives and Biases
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../prefaces/making_twitter_account.html">
-   Making a Twitter Bot Account
   </a>
  </li>
 </ul>
@@ -268,18 +263,18 @@ const thebe_selector_output = ".output, .cell_output"
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="06_a_twitter_bot.html">
-       2.3.6. A program that posts one tweet
+      <a class="reference internal" href="06_a_reddit_bot.html">
+       2.3.6. A program that makes one reddit post
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       2.3.7. Understanding the Twitter Bot Code
+       2.3.7. Understanding the Reddit Bot Code
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="08_demo.html">
-       2.3.8. Demo: Try Running the Twitter Bot!
+       2.3.8. Demo: Try Running the Reddit Bot!
       </a>
      </li>
      <li class="toctree-l3">
@@ -1450,17 +1445,34 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../appendix/teaching_with_this_book.html">
-   (Incomplete) Teaching With This Book
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../appendix/bot_set_ups/00_intro.html">
+   Bot Account Set-Ups
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" type="checkbox"/>
+  <label for="toctree-checkbox-37">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/bot_set_ups/making_reddit_account.html">
+     Making a Reddit Bot Account
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/bot_set_ups/making_twitter_account.html">
+     Making a Twitter Bot Account
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../appendix/solutions/00_solutions.html">
    Practice Solutions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" type="checkbox"/>
-  <label for="toctree-checkbox-37">
+  <input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" type="checkbox"/>
+  <label for="toctree-checkbox-38">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -1506,6 +1518,38 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../appendix/alternate_apis/00_intro.html">
+   Alternate Social Media APIs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-39" name="toctree-checkbox-39" type="checkbox"/>
+  <label for="toctree-checkbox-39">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/alternate_apis/ch2_03_06_a_twitter_bot.html">
+     A program that posts one tweet
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/alternate_apis/ch2_03_07_details_of_bot.html">
+     Understanding the Twitter Bot Code
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/alternate_apis/ch2_03_08_demo.html">
+     Demo: Try Running the Twitter Bot!
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../appendix/teaching_with_this_book.html">
+   (Incomplete) Teaching With This Book
+  </a>
  </li>
 </ul>
 
@@ -1713,7 +1757,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Understanding the Twitter Bot Code</h1>
+                <h1>Understanding the Reddit Bot Code</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1753,41 +1797,46 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="understanding-the-twitter-bot-code">
-<h1><span class="section-number">2.3.7. </span>Understanding the Twitter Bot Code<a class="headerlink" href="#understanding-the-twitter-bot-code" title="Permalink to this headline">#</a></h1>
-<p>Let’s look more at that program that posts one tweet.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="understanding-the-reddit-bot-code">
+<h1><span class="section-number">2.3.7. </span>Understanding the Reddit Bot Code<a class="headerlink" href="#understanding-the-reddit-bot-code" title="Permalink to this headline">#</a></h1>
+<p>Let’s look more at that program that cretaes one Reddit post.</p>
 <p>There are a number of ways of looking at the code, but first, let’s look at it as a template with a couple pieces we can change.</p>
 <section id="the-program-as-a-template">
 <h2>The program as a template<a class="headerlink" href="#the-program-as-a-template" title="Permalink to this headline">#</a></h2>
 <p>Below I’ve highlighted the text of the sections of the program that you might want to modify.</p>
 <pre style="color:gray">
-import tweepy
+import praw
 
-bearer_token = "<strong style="color:black;background-color:lightgreen">n4tossfgsafs_fake_bearer_token_isa53#$%$</strong>"
-consumer_key = "<strong style="color:black;background-color:lightgreen">sa@#4%fdfdsa_fake_consumer_key_$%DSG#%DG</strong>"
-consumer_secret = "<strong style="color:black;background-color:lightgreen">45adf$T$A_fake_consumer_secret_JESdsg</strong>"
-access_token = "<strong style="color:black;background-color:lightgreen">56sd5Ss4tsea_fake_access_token_%YE%hDsdr</strong>"
-access_token_secret = "<strong style="color:black;background-color:lightgreen">j^$dr_fake_consumer_key_^A5s#DR5s</strong>"
+username="<strong style="color:black;background-color:lightgreen">fake_reddit_username</strong>"
+password="<strong style="color:black;background-color:lightgreen">sa@#4*fdf_fake_password_$%DSG#%DG</strong>"
+client_id="<strong style="color:black;background-color:lightgreen">45adf$TW_fake_client_id_JESdsg1O</strong>"
+client_secret="<strong style="color:black;background-color:lightgreen">56sd_fake_client_secret_%Yh%</strong>"
 
-client = tweepy.Client(
-   bearer_token=bearer_token,
-   consumer_key=consumer_key, consumer_secret=consumer_secret,
-   access_token=access_token, access_token_secret=access_token_secret
+reddit = praw.Reddit(
+    username=username, password=password,
+    client_id=client_id, client_secret=client_secret,
+    user_agent="a custom python script"
 )
-client.create_tweet(text="<strong style="color:black;background-color:lightgreen">This tweet was posted by a computer program!</strong>")
+
+reddit.subreddit(
+   "<strong style="color:black;background-color:lightgreen">soc_media_ethics_auto</strong>"
+).submit(
+   "<strong style="color:black;background-color:lightgreen">A bot post</strong>", 
+   selftext = "<strong style="color:black;background-color:lightgreen">This post was made by a computer program!</strong>"
+)
+
+
 </pre>
-<p>The first five highlighted pieces of code are for the special passwords you can get when you get <a class="reference internal" href="../../prefaces/making_twitter_account.html"><span class="doc std std-doc">developer access to twitter</span></a> (I’ve put fake values in them for now):</p>
+<p>The first four highlighted pieces of code are for the special passwords that let you run a bot. You can get when you get those passwords by following thse steps to get <a class="reference internal" href="../../appendix/bot_set_ups/making_reddit_account.html"><span class="doc std std-doc">developer access to reddit</span></a> (I’ve put fake values in them for now):</p>
 <ul class="simple">
-<li><p>bearer token</p></li>
-<li><p>consumer key</p></li>
-<li><p>consumer secret</p></li>
-<li><p>access token</p></li>
-<li><p>access token secret</p></li>
+<li><p>username</p></li>
+<li><p>password</p></li>
+<li><p>client_id</p></li>
+<li><p>client_secret</p></li>
 </ul>
-<p>These special passwords are needed for different actions on twitter. Rather than worry about which of these passwords are needed for which action, I’ll just always include all of them.</p>
-<p>The final highlighted piece of code (in the parentheses after <code class="docutils literal notranslate"><span class="pre">create_tweet</span></code>) is the text of what will be tweeted when this bot runs. You can change the text there to change what gets tweeted.</p>
-<p>So, by changing those sections of code, you run this program to post whatever tweet you want to your twitter account. It is, of course, much easier to just open twitter and tweet, but as we get to more complicated programs, we’ll start to see more of the power (and pitfalls) of automation on social media.</p>
-<p><em>Note: all the highlighted sections of code are surrounded by double quotes. In the Python programming language, putting something in quotes indicates that you want the computer to think of the things inside the quotes as pieces of text, in this case passwords and tweet contents.</em></p>
+<p>The final three highlighted pieces of code are the information for what to post on reddit. First, in the parentheses after <code class="docutils literal notranslate"><span class="pre">subreddit</span></code> is which subreddit to post on. In the parenthese after teh <code class="docutils literal notranslate"><span class="pre">submit</span></code> is first the title of the post, and next is the text of the post itself. You can change any of these values ot change which subreddit you post to, and what title and text to post.</p>
+<p>So, by changing those sections of code, you run this program to post whatever reddit you want to post on a subreddit. It is, of course, much easier to just open reddit and post something, but as we get to more complicated programs, we’ll start to see more of the power (and pitfalls) of automation on social media.</p>
+<p><em>Note: all the highlighted sections of code are surrounded by double quotes. In the Python programming language, putting something in quotes indicates that you want the computer to think of the things inside the quotes as pieces of text, in this case passwords and reddit post information.</em></p>
 </section>
 <section id="adding-code-comments">
 <h2>Adding code comments<a class="headerlink" href="#adding-code-comments" title="Permalink to this headline">#</a></h2>
@@ -1795,23 +1844,30 @@ client.create_tweet(text="<strong style="color:black;background-color:lightgreen
 <p>Most programming languages also allow “comments,” which are pieces of code that the computer will ignore. These comments allow the person writing the code to leave a note to future people reading the code, knowing that the computer won’t read it (like an <a class="reference external" href="https://en.wikipedia.org/wiki/Aside">aside</a> in a play).</p>
 <p>In Python, you can add a comment by use the <code class="docutils literal notranslate"><span class="pre">#</span></code> symbol. Python will ignore everything on a line that comes after the <code class="docutils literal notranslate"><span class="pre">#</span></code>. But humans programmers will often look for the meaning of the program in these comments.</p>
 <p>So, in order to make the program above easier for future humans to understand, let’s add two comments telling these future humans where to add their special passwords and where they can change the text of the tweet:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tweepy</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">praw</span>
 
-<span class="c1"># TODO: Put your twitter account&#39;s special developer access passwords below:</span>
-<span class="n">bearer_token</span> <span class="o">=</span> <span class="s2">&quot;n4tossfgsafs_fake_bearer_token_isa53#$%$&quot;</span>
-<span class="n">consumer_key</span> <span class="o">=</span> <span class="s2">&quot;sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG&quot;</span>
-<span class="n">consumer_secret</span> <span class="o">=</span> <span class="s2">&quot;45adf$T$A_fake_consumer_secret_JESdsg&quot;</span>
-<span class="n">access_token</span> <span class="o">=</span> <span class="s2">&quot;56sd5Ss4tsea_fake_access_token_%YE%hDsdr&quot;</span>
-<span class="n">access_token_secret</span> <span class="o">=</span> <span class="s2">&quot;j^$dr_fake_consumer_key_^A5s#DR5s&quot;</span>
+<span class="c1"># TODO: Put your reddit username, password, and special developer access passwords below:</span>
+<span class="n">username</span><span class="o">=</span><span class="s2">&quot;fake_reddit_username&quot;</span>
+<span class="n">password</span><span class="o">=</span><span class="s2">&quot;sa@#4*fdf_fake_password_$%DSG#%DG&quot;</span>
+<span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;45adf$TW_fake_client_id_JESdsg1O&quot;</span>
+<span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;56sd_fake_client_secret_%Yh%&quot;</span>
 
-<span class="n">client</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span>
-   <span class="n">bearer_token</span><span class="o">=</span><span class="n">bearer_token</span><span class="p">,</span>
-   <span class="n">consumer_key</span><span class="o">=</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">consumer_secret</span><span class="p">,</span>
-   <span class="n">access_token</span><span class="o">=</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">access_token_secret</span>
+<span class="n">reddit</span> <span class="o">=</span> <span class="n">praw</span><span class="o">.</span><span class="n">Reddit</span><span class="p">(</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">client_id</span><span class="p">,</span> <span class="n">client_secret</span><span class="o">=</span><span class="n">client_secret</span><span class="p">,</span>
+    <span class="n">user_agent</span><span class="o">=</span><span class="s2">&quot;a custom python script&quot;</span>
 <span class="p">)</span>
 
-<span class="c1"># TODO: modify the text in the quotes below to change what this bot tweets:</span>
-<span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;This tweet was posted by a computer program!&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># TODO: modify the text in the quotes below to change what and where this bot posts to reddit:</span>
+<span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span>
+   <span class="s2">&quot;soc_media_ethics_auto&quot;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span>
+   <span class="s2">&quot;A bot post&quot;</span><span class="p">,</span> 
+   <span class="n">selftext</span> <span class="o">=</span> <span class="s2">&quot;This post was made by a computer program!&quot;</span>
+<span class="p">)</span>
+
 </pre></div>
 </div>
 <p>With those, hopefully a future human reader will have a better chance of understanding how to modify the program to do what they want.</p>
@@ -1822,60 +1878,69 @@ client.create_tweet(text="<strong style="color:black;background-color:lightgreen
 <p>Now that we’ve looked at the code as a modifiable template, let’s break the code into sections and look at what the purpose of each part is. The code is run starting at the top and going down from there, so we will go through the code in that order.</p>
 <p><em>Note: It’s normal if you don’t understand everything here. Over the course of this book you will learn to understand more of how programs work, but also, even professional programmers often don’t understand parts of the programs they are working on, they just understand enough to modify the parts they need to.</em></p>
 <p>The first line of code is:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tweepy</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">praw</span>
 </pre></div>
 </div>
-<p>The purpose of this line of code that loads another set of code. The code it loads is called <a class="reference external" href="https://www.tweepy.org/">tweepy</a>, which is code specially written to help make programs that work with twitter.</p>
-<p>The next section of code is five lines long:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bearer_token</span> <span class="o">=</span> <span class="s2">&quot;n4tossfgsafs_fake_bearer_token_isa53#$%$&quot;</span>
-<span class="n">consumer_key</span> <span class="o">=</span> <span class="s2">&quot;sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG&quot;</span>
-<span class="n">consumer_secret</span> <span class="o">=</span> <span class="s2">&quot;45adf$T$A_fake_consumer_secret_JESdsg&quot;</span>
-<span class="n">access_token</span> <span class="o">=</span> <span class="s2">&quot;56sd5Ss4tsea_fake_access_token_%YE%hDsdr&quot;</span>
-<span class="n">access_token_secret</span> <span class="o">=</span> <span class="s2">&quot;j^$dr_fake_consumer_key_^A5s#DR5s&quot;</span>
+<p>The purpose of this line of code that loads another set of code. The code it loads is called <a class="reference external" href="https://praw.readthedocs.io/en/stable/">praw</a> (The Python Reddit API Wrapper), which is code specially written to help make programs that work with Reddit.</p>
+<p>The next section of code is four lines long:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">username</span><span class="o">=</span><span class="s2">&quot;fake_reddit_username&quot;</span>
+<span class="n">password</span><span class="o">=</span><span class="s2">&quot;sa@#4*fdf_fake_password_$%DSG#%DG&quot;</span>
+<span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;45adf$TW_fake_client_id_JESdsg1O&quot;</span>
+<span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;56sd_fake_client_secret_%Yh%&quot;</span>
 </pre></div>
 </div>
-<p>This is code to store all of our twitter developer access passwords into Python so we can use them later. Again, you’ll have to get your actual developer access passwords and replace the fake ones currently in the code.</p>
+<p>This is code to store all of the reddit password information we need to use a bot. You need your reddit username and password, and then a special client_id and client_secret for the bot. Again, you’ll have to get your actual developer access passwords and replace the fake ones currently in the code.</p>
 <p>The next section of code is five lines long:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">client</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span>
-   <span class="n">bearer_token</span><span class="o">=</span><span class="n">bearer_token</span><span class="p">,</span>
-   <span class="n">consumer_key</span><span class="o">=</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">consumer_secret</span><span class="p">,</span>
-   <span class="n">access_token</span><span class="o">=</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">access_token_secret</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">reddit</span> <span class="o">=</span> <span class="n">praw</span><span class="o">.</span><span class="n">Reddit</span><span class="p">(</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">client_id</span><span class="p">,</span> <span class="n">client_secret</span><span class="o">=</span><span class="n">client_secret</span><span class="p">,</span>
+    <span class="n">user_agent</span><span class="o">=</span><span class="s2">&quot;a custom python script&quot;</span>
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>The purpose of this code is to take all the developer access passwords you entered above, and give them to the tweepy code so that the tweepy code can log into your twitter account and provide the needed passwords for whatever twitter action you want to do.</p>
-<p>The final line of code is:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;This tweet was posted by a computer program!&quot;</span><span class="p">)</span>
+<p>The purpose of this code is to take all the developer access passwords you entered above, and give them to the praw code so that the praw code can log into your reddit account and provide the needed passwords for running a reddit bot.</p>
+<p>Note that the last line is setting the <code class="docutils literal notranslate"><span class="pre">user_agent</span></code> which is a description of which program is being used to post from. For example, it might be “Reddit web page” or “Reddit iPhone app” or “Sprout social media manager.” For our programs, I’ve just labeled our posts as being from “a custom python script.”</p>
+<p>The final lines of code are:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span>
+   <span class="s2">&quot;soc_media_ethics_auto&quot;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span>
+   <span class="s2">&quot;A bot post&quot;</span><span class="p">,</span> 
+   <span class="n">selftext</span> <span class="o">=</span> <span class="s2">&quot;This post was made by a computer program!&quot;</span>
+<span class="p">)</span>
 </pre></div>
 </div>
-<p>This is the line of code where a tweet is actually posted. The action is called “create_tweet” since the code is creating a tweet. Inside the double quotes is the text that is going to be tweeted.</p>
+<p>This is the lines of code where a reddit post is actually made. First the <code class="docutils literal notranslate"><span class="pre">subreddit</span></code> section selects which subreddit an action will be taken on, and then <code class="docutils literal notranslate"><span class="pre">submit</span></code> creates a new post with the given title and text.</p>
 </section>
 <section id="adding-more-code-comments">
 <h2>Adding more code comments<a class="headerlink" href="#adding-more-code-comments" title="Permalink to this headline">#</a></h2>
 <p>Now that we’ve looked at the purpose of each section of code, we can add additional comments explaining what each section does, so that future humans reading the code are more likely to understand it.</p>
 <p>Following the common practice of programmers, we will put the comment before the section of code that the comment is explaining. We can also make multiple comment lines as needed if our comments are long.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;tweepy&quot; that will help us work with twitter</span>
-<span class="kn">import</span> <span class="nn">tweepy</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;praw&quot; that will help us work with reddit</span>
+<span class="kn">import</span> <span class="nn">praw</span>
 
 <span class="c1"># Load all your developer access passwords into Python</span>
-<span class="c1"># TODO: Put your twitter account&#39;s special developer access passwords below:</span>
-<span class="n">bearer_token</span> <span class="o">=</span> <span class="s2">&quot;n4tossfgsafs_fake_bearer_token_isa53#$%$&quot;</span>
-<span class="n">consumer_key</span> <span class="o">=</span> <span class="s2">&quot;sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG&quot;</span>
-<span class="n">consumer_secret</span> <span class="o">=</span> <span class="s2">&quot;45adf$T$A_fake_consumer_secret_JESdsg&quot;</span>
-<span class="n">access_token</span> <span class="o">=</span> <span class="s2">&quot;56sd5Ss4tsea_fake_access_token_%YE%hDsdr&quot;</span>
-<span class="n">access_token_secret</span> <span class="o">=</span> <span class="s2">&quot;j^$dr_fake_consumer_key_^A5s#DR5s&quot;</span>
+<span class="c1"># TODO: Put your reddit username, password, and special developer access passwords below:</span>
+<span class="n">username</span><span class="o">=</span><span class="s2">&quot;fake_reddit_username&quot;</span>
+<span class="n">password</span><span class="o">=</span><span class="s2">&quot;sa@#4*fdf_fake_password_$%DSG#%DG&quot;</span>
+<span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;45adf$TW_fake_client_id_JESdsg1O&quot;</span>
+<span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;56sd_fake_client_secret_%Yh%&quot;</span>
 
-<span class="c1"># Give the tweepy code your developer access passwords so</span>
-<span class="c1"># it can perform twitter actions</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span>
-   <span class="n">bearer_token</span><span class="o">=</span><span class="n">bearer_token</span><span class="p">,</span>
-   <span class="n">consumer_key</span><span class="o">=</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">consumer_secret</span><span class="p">,</span>
-   <span class="n">access_token</span><span class="o">=</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">access_token_secret</span>
+<span class="c1"># Give the praw code your reddit account info so</span>
+<span class="c1"># it can perform reddit actions</span>
+<span class="n">reddit</span> <span class="o">=</span> <span class="n">praw</span><span class="o">.</span><span class="n">Reddit</span><span class="p">(</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">client_id</span><span class="p">,</span> <span class="n">client_secret</span><span class="o">=</span><span class="n">client_secret</span><span class="p">,</span>
+    <span class="n">user_agent</span><span class="o">=</span><span class="s2">&quot;a custom python script&quot;</span>
 <span class="p">)</span>
 
-<span class="c1"># Post a tweet</span>
-<span class="c1"># TODO: modify the text in the quotes below to change what this bot tweets:</span>
-<span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;This tweet was posted by a computer program!&quot;</span><span class="p">)</span>
+<span class="c1"># Post a reddit post</span>
+<span class="c1"># TODO: modify the text in the quotes below to change what and where this bot posts to reddit:</span>
+<span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span>
+   <span class="s2">&quot;soc_media_ethics_auto&quot;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span>
+   <span class="s2">&quot;A bot post&quot;</span><span class="p">,</span> 
+   <span class="n">selftext</span> <span class="o">=</span> <span class="s2">&quot;This post was made by a computer program!&quot;</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 <p>Now that we’ve looked over the code and commented it, let’s go to the next page, where you can try running it!</p>
@@ -1909,17 +1974,17 @@ client.create_tweet(text="<strong style="color:black;background-color:lightgreen
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="06_a_twitter_bot.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="06_a_reddit_bot.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2.3.6. </span>A program that posts one tweet</p>
+            <p class="prev-next-title"><span class="section-number">2.3.6. </span>A program that makes one reddit post</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="08_demo.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.3.8. </span>Demo: Try Running the Twitter Bot!</p>
+        <p class="prev-next-title"><span class="section-number">2.3.8. </span>Demo: Try Running the Reddit Bot!</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
