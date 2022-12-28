@@ -31,4 +31,12 @@ Though you may not understand anything in the above code yet, I want to point ou
 - The final lines of code gives a good hints as to what it is doing: `subreddit` chooses which subreddit the post will be made on, and `submit` has the information to submit as a new post.
 - There are four pieces of text with random numbers and letters that include things like "username" and "client_secret" inside. These pieces of text are meant to be replaced with your reddit username and password and a pair of special passwords for running a reddit bot. You can get these special passwords if you get developer access to reddit (see the page on [](../../appendix/bot_set_ups/making_reddit_account.md)). Once you put your special passwords in those locations then this code will post a tweet on your account.
 
+```{figure} bot_post.png
+---
+name: bot_post_fig
+alt: Screenshot of a post on reddit, posted by "kthayer_teacher_bot" titled "a bot post" with the text of "This post was made by a computer program!"
+---
+A [reddit post](https://www.reddit.com/r/soc_media_ethics_auto/comments/zwm4mw/a_bot_post/) made by running the code above with the account information for "kthayer_teacher_bot".
+```
+
 We will go through that example code in more detail next.

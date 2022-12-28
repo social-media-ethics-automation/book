@@ -78,7 +78,7 @@ reddit = praw.Reddit(
 )
 
 
-# ### Step 5: Submit a post to reddit
+# ### Step 5: Submit a post to Reddit
 
 # In[5]:
 

@@ -17,8 +17,8 @@ This book is still being created and therefore has incomplete sections, missing 
   - Design and management decisions
 - Automation
   - Learn basic programming skills in Python
-  - Create twitter bots
-  - Find and process information from twitter
+  - Create Reddit bots
+  - Find and process information from Reddit
 
 
 **What we hope you gain from this book:**
