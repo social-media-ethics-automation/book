@@ -129,23 +129,24 @@ These are a few ethics systems which center on maintaining proper relationships.
   -  [![Photo of Ayn Rand](rand.png)](https://en.wikipedia.org/wiki/Ayn_Rand) [Ayn Rand](https://en.wikipedia.org/wiki/Ayn_Rand), 1900s America
     - Ayn Rand is sometimes popular with tech people and CEOs. Understandably, some CEOs view themselves as brilliant and like being told that ruthlessly pursuing their ambition is morally good. (Though the end-goal can’t be great feats of engineering, that self-interest must come first and great feats of engineering can only be a side-effect).
 
-### [Existentialism](https://plato.stanford.edu/entries/existentialism/)
-- Your actions have consequences, but the consequences are unknowable. Even though you desire to do what’s right, there is no objective morality to follow (part of existential angst). You are forced to invent some sort of meaning-giving basis for life that can tell you what to care about. This might include constructing a kind of "morality" to follow.
-  - This fits in with the larger existentialist philosophy that “existence precedes essence” (Things exist first without meaning or value. They only have value because we choose to create meaning or value for them.)
-- Key figures:
-  - [![Photo of Søren Kierkegaard](kierkegaard.png)](https://en.wikipedia.org/wiki/S%C3%B8ren_Kierkegaard) [Søren Kierkegaard](https://en.wikipedia.org/wiki/S%C3%B8ren_Kierkegaard), 1800s Denmark
-  - [![Photo of Jean-Paul Sartre](sartre.png)](https://en.wikipedia.org/wiki/Jean-Paul_Sartre) [Jean-Paul Sartre](https://en.wikipedia.org/wiki/Jean-Paul_Sartre), 1900s France
-
 ### [Nihilism](https://plato.stanford.edu/entries/skepticism-moral/)
 - There is no right or wrong. Nothing matters.
 - There are many different types of moral nihilism. But they all boil down, one way or another, to the idea that moral reasoning or trying to think about ethics is not real, or is based on a mistake.
 - It can help you in your studies to be aware that, according to professional ethicists, moral relativism is classed as a type of nihilism! Moral relativism says that what is good or bad is just totally subjective, and depends on who you ask. But that is not what an ethics is! An ethics does say something about how we work out what's right and wrong. That's why ethicists class moral relativism as a nihilistic theory.
 - Even if one is inclined towards nihilism or relativism, there is still truth in the anthropological observation that people do deliberate about how to act and how to live, and that these deliberations consistently take the shape of one or more of the ethical frameworks above, considering principles, character, virtues, consequences, responsibilities, and so on. So it is still interesting to look at ethics, even if you like the idea of nihilism or moral relativism.
 
+### [Existentialism](https://plato.stanford.edu/entries/existentialism/)
+- Like nihilism, existentialism starts with a claim that there is no fundamental meaning or morality. But in existentialism, people must create their own meaning and morality. 
+  - In philisopical terms: “existence precedes essence.” That is, things exist first without meaning or value. They only have value because we choose to create meaning or value for them.
+- Existential ethics: your actions have consequences, but the consequences are unknowable. Even though you desire to do what’s right, there is no objective morality to follow (part of existential angst). You are forced to invent some sort of meaning-giving basis for life that can tell you what to care about. This might include constructing a kind of "morality" to follow.
+- Key figures:
+  - [![Photo of Søren Kierkegaard](kierkegaard.png)](https://en.wikipedia.org/wiki/S%C3%B8ren_Kierkegaard) [Søren Kierkegaard](https://en.wikipedia.org/wiki/S%C3%B8ren_Kierkegaard), 1800s Denmark
+  - [![Photo of Jean-Paul Sartre](sartre.png)](https://en.wikipedia.org/wiki/Jean-Paul_Sartre) [Jean-Paul Sartre](https://en.wikipedia.org/wiki/Jean-Paul_Sartre), 1900s France
+
 
 ## More on Ethics
 
-% Add note that there are many more ethics frameworks
+There are many more ethics frameworks that we haven't mentioned here. You can look up some more [here](https://plato.stanford.edu/search/searcher.py?query=ethics). 
 
-For more follow any of the links here, or search [here](https://plato.stanford.edu/search/searcher.py?query=ethics), or read books like [this](https://www.routledge.com/The-Philosophy-of-Well-Being-An-Introduction/Fletcher/p/book/9781138818354), or watch the TV show The Good Place  (currently streaming on [nbc.com](https://www.nbc.com/the-good-place/episodes/season-1) and [Netflix](https://www.netflix.com/title/80113701))
+You can also follow any of the other links in this page or read books like [this](https://www.routledge.com/The-Philosophy-of-Well-Being-An-Introduction/Fletcher/p/book/9781138818354), or watch the TV show The Good Place  (currently streaming on [nbc.com](https://www.nbc.com/the-good-place/episodes/season-1) and [Netflix](https://www.netflix.com/title/80113701))
 - [![Poster for The Good Place](good_place.png)](https://www.nbc.com/the-good-place/episodes/season-1)
