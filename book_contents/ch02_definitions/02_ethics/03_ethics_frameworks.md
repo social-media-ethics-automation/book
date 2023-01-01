@@ -145,5 +145,7 @@ These are a few ethics systems which center on maintaining proper relationships.
 
 ## More on Ethics
 
-For more follow any of the links on the slides, or search [here](https://plato.stanford.edu/search/searcher.py?query=ethics), or read books like [this](https://www.routledge.com/The-Philosophy-of-Well-Being-An-Introduction/Fletcher/p/book/9781138818354), or watch the TV show The Good Place  (currently streaming on [nbc.com](https://www.nbc.com/the-good-place/episodes/season-1) and [Netflix](https://www.netflix.com/title/80113701))
+% Add note that there are many more ethics frameworks
+
+For more follow any of the links here, or search [here](https://plato.stanford.edu/search/searcher.py?query=ethics), or read books like [this](https://www.routledge.com/The-Philosophy-of-Well-Being-An-Introduction/Fletcher/p/book/9781138818354), or watch the TV show The Good Place  (currently streaming on [nbc.com](https://www.nbc.com/the-good-place/episodes/season-1) and [Netflix](https://www.netflix.com/title/80113701))
 - [![Poster for The Good Place](good_place.png)](https://www.nbc.com/the-good-place/episodes/season-1)

@@ -2,6 +2,8 @@
 
 To practice using the ethical frameworks as tools, here is an exercise.
 
+% TODO: Add note about frameworks don't always lead to good outcomes.
+
 ## Scenario: A Parent With Alzheimer's
 Suppose you are in the position of needing to decide what to do to care for a parent. Although they are used to an active and independent life, it is clear that they have been showing signs of worsening, early stages [Alzheimer's](https://www.nia.nih.gov/health/alzheimers-disease-fact-sheet). You believe they are no longer able to safely live on their own, but they get upset at the suggestion that they might need help.
 

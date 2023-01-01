@@ -26,8 +26,7 @@ parts:
         - file: ch02_definitions/02_ethics/01_what_is_ethics
         - file: ch02_definitions/02_ethics/02_golden_rule
         - file: ch02_definitions/02_ethics/03_ethics_frameworks
-        - file: ch02_definitions/02_ethics/04_other_frameworks
-        - file: ch02_definitions/02_ethics/05_using_frameworks
+        - file: ch02_definitions/02_ethics/04_using_frameworks
       - file: ch02_definitions/03_automation/00_automation
         sections:
         - file: ch02_definitions/03_automation/01_language_translation

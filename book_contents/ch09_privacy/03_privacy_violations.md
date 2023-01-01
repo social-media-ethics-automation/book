@@ -8,4 +8,6 @@ Besides hacking, there are other forms of privacy violations, such as:
   - This includes creation of __[Shadow Profiles](https://en.wikipedia.org/wiki/Shadow_profile)__, which are information about the user that the user didn't provide or consent to
 - __Non-User Information__: Social Media sites might collect information about people who don't have accounts, like how [Facebook does](https://www.reuters.com/article/us-facebook-privacy-tracking/facebook-fuels-broad-privacy-debate-by-tracking-non-users-idUSKBN1HM0DR)
 
+% https://www.aljazeera.com/features/2020/10/11/facing-the-music-the-parents-who-share-too-much
+
 % TODO: add about, what if someone purchases a social media platform, then can they view everyone's private messages?  https://www.vox.com/recode/2022/10/27/23427106/elon-musk-twitter-data-direct-messages
