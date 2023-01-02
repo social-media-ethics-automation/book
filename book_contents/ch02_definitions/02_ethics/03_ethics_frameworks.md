@@ -6,8 +6,7 @@ Below are some summaries of a selection ethics frameworks. There are many more e
 Here are few ancient ethics systems. These examples are mostly about qualities of a good person.
 
 ### [Confucianism](https://plato.stanford.edu/entries/confucius/) (another [link](https://www.researchgate.net/publication/290481794_Ethical_Studies_Overview_Eastern))
-- Being and becoming an exemplary person (e.g., respectful, sincere, generous) through ceremonies/rituals.
-  - Ceremonies and rituals include things like tea drinking and sacrifice to ancestors
+- Being and becoming an exemplary person (e.g., sincere; honoring and sacrificing to ancestors; respectful to parents, elders and authorites, taking care of children and the young; generous to family and others). These traits are often performed and achieved through ceremonies and rituals (including sacrificing to ancestors, music, and tea drinking), resulting in a harmonious society.
 - Key figures:
   - [![Drawing of Confucius](confucius.png)](https://en.wikipedia.org/wiki/Confucius) [Confucius](https://plato.stanford.edu/entries/confucius/) ~500, China
   - [![Drawing of Mencius](mencius.png)](https://en.wikipedia.org/wiki/Mencius) [Mencius](https://plato.stanford.edu/entries/mencius/) ~350, China
@@ -119,7 +118,9 @@ These are a few ethics systems which center on maintaining proper relationships.
 - Something is right or wrong because God(s) said so.
 - [Euthyphro Dilemma](https://en.wikipedia.org/wiki/Euthyphro_dilemma): “Is the pious [action] loved by the gods because it is pious, or is it pious because it is loved by the gods?” (Socrates, 400s BCE Greece)
   - If the gods love an action because it is morally good, then it is good because it follows some other ethics framework. If we can figure out which ethics framework the gods are using, then we can just apply that one ourselves without the gods.
-  - If, on the other hand, an action is morally good because it is loved by the gods, then it doesn’t matter whether it makes sense under any ethics framework, and it is pointless to use ethics frameworks.
+  - If, on the other hand, an action is morally good because it is loved by the gods, then it doesn’t matter whether it makes sense under any ethics framework, and it is pointless to use ethics frameworks.[^divine_command_footnote]
+
+[^divine_command_footnote]: As an example of how religion and divine command theory can work with other frameworks, let's consider a few different versions of Christian thinking. In the white Evangelical Christian community the authors grew up in, we often tried to figure out deontology-type rules based on Bible verses (e.g., based on [Exodus 20:16](https://www.biblegateway.com/passage/?search=Exodus+20%3A16&version=NIV), we might conclude that lying is always wrong regardless of the consequences). But this is quite different from the Archbishop [Desmond Tutu](https://en.wikipedia.org/wiki/Desmond_Tutu) who helped popularize Ubuntu philosophy globally and chaired the [Truth and Reconciliation Commission](https://en.wikipedia.org/wiki/Truth_and_Reconciliation_Commission_(South_Africa)), or [George E. Tinker](https://en.wikipedia.org/wiki/George_Tinker) of the [Osage Nation](https://en.wikipedia.org/wiki/Osage_Nation), who wrote [American Indian Liberation: A Theology of Sovereignty](https://www.amazon.com/American-Indian-Liberation-Theology-Sovereignty/dp/1570758050).
 
 
 ### [Egoism](https://plato.stanford.edu/entries/egoism/)
@@ -149,4 +150,9 @@ These are a few ethics systems which center on maintaining proper relationships.
 There are many more ethics frameworks that we haven't mentioned here. You can look up some more [here](https://plato.stanford.edu/search/searcher.py?query=ethics). 
 
 You can also follow any of the other links in this page or read books like [this](https://www.routledge.com/The-Philosophy-of-Well-Being-An-Introduction/Fletcher/p/book/9781138818354), or watch the TV show The Good Place  (currently streaming on [nbc.com](https://www.nbc.com/the-good-place/episodes/season-1) and [Netflix](https://www.netflix.com/title/80113701))
-- [![Poster for The Good Place](good_place.png)](https://www.nbc.com/the-good-place/episodes/season-1)
+
+[![Poster for The Good Place](good_place.png)](https://www.nbc.com/the-good-place/episodes/season-1)
+
+## Ethics Frameworks Don't Guarantee Moral Goodness
+
+One final note we'd like to make here is that, as we said before, we can use ethics frameworks as tools to help us see into situations. But just because we use an ethics framework to look at a situation doesn't mean that we will come out with a morally good conclusion. This is perhaps most obvious with something like nihilism, which rejects the existance of a morally good conclusion. But we can also see this with other frameworks, such as egoism, which we (the authors) believe often gives morally wrong results, or with consequentialist reasoning, which has been challenged at many points in history (e.g., [A Modest Proposal](https://en.wikipedia.org/wiki/A_Modest_Proposal) from 1729, the [character Ivan arguing with his brother](https://en.wikisource.org/wiki/The_Brothers_Karamazov/Book_V/Chapter_4) in [Brothers Karamazov](https://en.wikipedia.org/wiki/The_Brothers_Karamazov) fromn 1880, and the article [Effective Altruism Is Pushing a Dangerous Brand of ‘AI Safety’](https://www.wired.com/story/effective-altruism-artificial-intelligence-sam-bankman-fried/) [[archived here](https://web.archive.org/web/20221229022417/https://www.wired.com/story/effective-altruism-artificial-intelligence-sam-bankman-fried/)] and [Effective altruism’s most controversial idea](https://www.vox.com/future-perfect/23298870/effective-altruism-longtermism-will-macaskill-future) from 2022).
