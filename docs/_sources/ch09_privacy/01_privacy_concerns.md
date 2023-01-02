@@ -8,6 +8,8 @@ There are many reasons, both good and bad, that we might want to keep informatio
 - We might want to avoid physical danger from a stalker, so we might keep our location private
 - We might not want to be surveilled by a company or government that could use our actions or words against us (whether what we did was ethically good or bad)
 
+% Also, like clothes
+
 When we use social media platforms though, we at least partially give up some of our privacy.
 
 For example, a social media application might offer us a way of "[Private Messaging](https://en.wikipedia.org/wiki/Private_message)" (also called Direct Messaging) with another user. But in most cases those "private" messages are stored in the computers at those companies, and the company might have computer programs that automatically search through the messages, and people with the right permissions might be able to view them directly.

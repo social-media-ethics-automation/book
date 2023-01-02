@@ -12,3 +12,13 @@ When Amnesty International looked at online harassment, they found that:
 > - Black women were disproportionately targeted, being 84% more likely than white women to be mentioned in abusive or problematic tweets.
 >
 > [Troll Patrol Findings](https://decoders.amnesty.org/projects/troll-patrol/findings)
+
+
+% TODO: Write up better
+## [Intersectionality](https://en.wikipedia.org/wiki/Intersectionality)
+- People are treated differently based on their identities (e.g., race, gender, class, disability, weight, height, etc.), but combinations of those identities can compound unfair treatment in complicated ways.
+- For example, you can test a resume filter and find that it isn’t biased against black people, and it isn’t biased against women. But it might turn out that it is still biased against black women.
+  - This could happen because the filter “fixed” the gender and race bias by over-selecting white women and black men, while under-selecting black women.
+- Key figures:
+  - [![Photo of Kimberlé Crenshaw](crenshaw.png)](https://en.wikipedia.org/wiki/Kimberl%C3%A9_Crenshaw) [Kimberlé Crenshaw](https://en.wikipedia.org/wiki/Kimberl%C3%A9_Crenshaw), present USA
+  - [![Photo of bell hooks](hooks.png)](https://en.wikipedia.org/wiki/Bell_hooks) [bell hooks](https://en.wikipedia.org/wiki/Bell_hooks), present USA
