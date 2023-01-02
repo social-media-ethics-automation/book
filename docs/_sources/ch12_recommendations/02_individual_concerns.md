@@ -2,6 +2,12 @@
 
 Let's look at some of the concerns that an individual user might have with recommendation algorithms.
 
+% TODO: Write up better
+## [Individual vs. Systemic Analysis](https://en.wikipedia.org/wiki/Systemic_bias)
+- Individual analysis focuses on the behavior or bias an individual has, while systemic analysis focuses on the how organizations and rules may have their own behaviors or biases that aren’t necessarily connected to what any individual inside intends.
+  - For example, there were differences in US criminal sentencing guidelines between crack cocaine vs. powder cocaine in the 90s. When these guidelines were followed, they had have racially biased (that is, racist) outcomes regardless of intent or bias of the individual judges. (See: https://en.wikipedia.org/wiki/Fair_Sentencing_Act)
+
+
 ## How recommendations can go well or poorly
 
 ### Friends or Follows:
