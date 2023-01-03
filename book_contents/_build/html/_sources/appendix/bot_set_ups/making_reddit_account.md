@@ -23,7 +23,7 @@ alt: "Screenshot of the user menu at the top right of the screen, with 'User Set
 ---
 ```
 
-In the user settings, go to the apps tab, and click on the bottom button that says "are you a developer? create an app..."
+In the user settings, go to the Safety & Privacy tab and click the Manage third-party app authorization link at the bottom. This should take you to an apps tab (you can also try going straight there [with this link](https://www.reddit.com/prefs/apps)). Click on the bottom button that says "are you a developer? create an app..."
 
 ```{figure} reddit_create_app_button.png
 ---
