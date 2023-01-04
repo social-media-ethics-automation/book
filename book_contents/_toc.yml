@@ -279,5 +279,6 @@ parts:
           - file: appendix/alternate_apis/ch2_03_06_a_twitter_bot
           - file: appendix/alternate_apis/ch2_03_07_details_of_bot
           - file: appendix/alternate_apis/ch2_03_08_demo
+          - file: appendix/alternate_apis/ch3_03_03_practice_statements_variables_sleep.ipynb
       - file: appendix/teaching_with_this_book
       
