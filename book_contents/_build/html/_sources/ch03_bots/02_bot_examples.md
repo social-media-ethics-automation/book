@@ -35,6 +35,11 @@ In 2016, Microsft launched a twitter bot that was intended to learn to speak fro
 Read more about what went wrong from Vice [How to Make a Bot That Isn't Racist](https://www.vice.com/en_us/article/mg7g3y/how-to-make-a-not-racist-bot)
 
 
+## Registered vs. Unregistered bots
+Most social media platforms provide an official way to connect a bot to their platform (called an [Application Programming Interface](https://en.wikipedia.org/wiki/API), or API). This lets the social media platform track these registered bots and provide certain capabilities and limits to the bots (like a rate limit on how often the bot can post). 
+
+But when some people want to get around these limits, they can make bots that don't use this official API, but instead open the website or app and then have a program perform clicks and scrolls the way a human might. These are much harder for social media platforms to track, and they normally ban accounts doing this if they are able to figure out that is what is happening.
+
 ## Fake Bots
 We also would like to point out that there are fake bots as well, that is real people pretending their work is the result of a Bot. For example, TikTok user Curt Skelton posted a video claiming that he was actually an AI generated / deepfake character:
 

@@ -12,6 +12,8 @@ Here are few ancient ethics systems. These examples are mostly about qualities o
   - [![Drawing of Mencius](mencius.png)](https://en.wikipedia.org/wiki/Mencius) [Mencius](https://plato.stanford.edu/entries/mencius/) ~350, China
   - [![Drawing of Xunzi](xunzi.png)](https://en.wikipedia.org/wiki/Xun_Kuang) [Xunzi](https://plato.stanford.edu/entries/xunzi/) ~300 BCE, China
 
+% TODO: List benevolence first
+
 ### [Taoism](https://plato.stanford.edu/entries/daoism/)
 - Act with unforced actions in harmony with the natural cycles of the universe. Trying to force something to happen will likely backfire.
 - Rejects Confucian focus on ceremonies/rituals. Prefers spontaneity and play.
