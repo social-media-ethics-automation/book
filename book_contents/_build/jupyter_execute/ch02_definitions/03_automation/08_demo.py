@@ -51,7 +51,7 @@ get_ipython().run_line_magic('run', '../../fake_apis/fake_praw.ipynb')
 
 
 # ### Step 2: Load your developer access passwords
-# To use this on your real twitter account, copy your [developer access passwords](../../appendix/bot_set_ups/making_reddit_account.md) into the code below, replacing our fake passwords.
+# To use this on your real Reddot account, copy your [developer access passwords](../../appendix/bot_set_ups/making_reddit_account.md) into the code below, replacing our fake passwords.
 
 # In[3]:
 

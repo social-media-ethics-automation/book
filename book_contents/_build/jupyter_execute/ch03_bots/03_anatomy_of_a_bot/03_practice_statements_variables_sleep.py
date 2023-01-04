@@ -143,61 +143,68 @@ from time import sleep
 # TODO: enter your code here
 
 
-# ## Twitter Bot Practice
-# Now lets try a twitter bot with variables and sleep!
+# ## Reddit Bot Practice
+# Now lets try a Reddit bot with variables and sleep!
 # 
-# ### Load Tweepy Library
-# First, we need to load the tweepy library
+# ### Load Praw Library
+# First, we need to load the praw library
 
 # In[13]:
 
 
-# Load some code called "tweepy" that will help us work with twitter
-import tweepy
+# Load some code called "praw" that will help us work with reddit
+import praw
 
 
-# ### (Optional) Make a fake twitter connection with the fake_tweepy library
-# For testing purposes, we've added this line of code, which loads a fake version of tweepy, so it wont actually connect to twitter. __If you want to try to actually connect to twitter, don't run this line of code.__%run ../../fake_tweepy/fake_tweepy.ipynb
+# ### (Optional) Step 1b: Make a fake praw connection with the fake_praw library
+# For testing purposes, we've added this line of code, which loads a fake version of praw, so it wont actually connect to reddit. __If you want to try to actually connect to reddit, don't run this line of code.__
 
 # In[14]:
 
 
-get_ipython().run_line_magic('run', '../../fake_tweepy/fake_tweepy.ipynb')
+get_ipython().run_line_magic('run', '../../fake_apis/fake_praw.ipynb')
 
 
-# ### Load your developer access passwords
-# To use this on your real twitter account, copy your [developer access passwords](../../prefaces/making_twitter_account.md) into the code below, replacing our fake passwords.
+# ### Step 2: Load your developer access passwords
+# To use this on your real Reddit account, copy your [developer access passwords](../../appendix/bot_set_ups/making_reddit_account.md) into the code below, replacing our fake passwords.
 
 # In[15]:
 
 
 # Load all your developer access passwords into Python
-# TODO: Put your twitter account's special developer access passwords below:
-bearer_token = "n4tossfgsafs_fake_bearer_token_isa53#$%$"
-consumer_key = "sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG"
-consumer_secret = "45adf$T$A_fake_consumer_secret_JESdsg"
-access_token = "56sd5Ss4tsea_fake_access_token_%YE%hDsdr"
-access_token_secret = "j^$dr_fake_consumer_key_^A5s#DR5s"
+# TODO: Put your reddit username, password, and special developer access passwords below:
+username="fake_reddit_username"
+password="sa@#4*fdf_fake_password_$%DSG#%DG"
+client_id="45adf$TW_fake_client_id_JESdsg1O"
+client_secret="56sd_fake_client_secret_%Yh%"
 
 
-# ### Give tweepy (or fake_tweepy) your developer access passwords
+# ### Step 4: Give praw (or fake_praw) your developer access passwords
 
 # In[16]:
 
 
-# Give the tweepy code your developer access passwords so
-# it can perform twitter actions
-client = tweepy.Client(
-   bearer_token=bearer_token,
-   consumer_key=consumer_key, consumer_secret=consumer_secret,
-   access_token=access_token, access_token_secret=access_token_secret
+# Give the praw code your reddit account info so
+# it can perform reddit actions
+reddit = praw.Reddit(
+    username=username, password=password,
+    client_id=client_id, client_secret=client_secret,
+    user_agent="a custom python script"
 )
 
 
-# ### Post a tweet
+# ### Step 5: Submit a post to Reddit
 # Post something you learned in the class so far:
 # 
-# Remember, the code to post a tweet looks like this: `client.create_tweet(text="This is the tweet text")`
+# Remember, the code to post a tweet looks like this: 
+# ```
+# reddit.subreddit(
+#    "soc_media_ethics_auto"
+# ).submit(
+#    "This is the title of the post", 
+#    selftext = "This is the content of the post"
+# )
+# ```
 
 # In[17]:
 
@@ -206,9 +213,18 @@ client = tweepy.Client(
 
 
 # ### Post from a variable
-# Now try saving a piece of text in a variable, and then tweeting the whatever you saved in the variable. 
+# Now try saving a piece of text in a variable for the title, and another for the content of a post, and then submitting a post of whatever you saved in the variables. 
 # 
-# To do this, where the code has `client.create_tweet(text="This is the tweet text")`, you'll replace the quoted text with the variable name, so it will look like `client.create_tweet(text=variable_name)` (with whatever your variable name was instead of "variable_name")
+# To do this, where the code has `submit( ... )`, you'll replace the quoted text with the variable name, so it will look like:
+# ```
+# reddit.subreddit(
+#    "soc_media_ethics_auto"
+# ).submit(
+#    title_variable, 
+#    selftext = content_variable
+# )
+# ``` 
+# (with whatever your variable name was instead of "title_variable" and "content_variable")
 
 # In[18]:
 
@@ -216,8 +232,8 @@ client = tweepy.Client(
 # TODO: enter your code here
 
 
-# ### Post multiple tweets
-# Next try posting 5 tweets, but use `sleep` to add pauses between each one (if you make the pauses over 60 seconds, then the official "time" of the tweet should look different on the twitter interface).
+# ### Submit multiple posts
+# Next try submitting 3 posts, but use `sleep` to add pauses between each one (note that reddit might not want you to make more than 1 post every 15 minutes, so you can sleep for 15*60 seconds or more before posting again).
 # 
 # 
 
