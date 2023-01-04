@@ -50,6 +50,8 @@ A few ethics systems that originated in the 1600s and 1700s in Europe. Note that
   - [![Painting of John Locke](locke.png)](https://en.wikipedia.org/wiki/John_Locke) [John Locke](https://en.wikipedia.org/wiki/John_Locke), 1600s England
   - [![Painting of Thomas Jefferson](jefferson.png)](https://en.wikipedia.org/wiki/Thomas_Jefferson) [Thomas Jefferson](https://en.wikipedia.org/wiki/Thomas_Jefferson) 1700s American Colonies / USA
 
+% TODO: This is where discussions of “human rights” comes from -> Discussions of "human rights" fit in the Natural Rights ethics framework
+
 ### [Consequentialism](https://plato.stanford.edu/entries/consequentialism/):
 - Actions are judged on the sum total of their consequences (utility calculus)
 - The ends justify the means.
@@ -156,3 +158,5 @@ You can also follow any of the other links in this page or read books like [this
 ## Ethics Frameworks Don't Guarantee Moral Goodness
 
 One final note we'd like to make here is that, as we said before, we can use ethics frameworks as tools to help us see into situations. But just because we use an ethics framework to look at a situation doesn't mean that we will come out with a morally good conclusion. This is perhaps most obvious with something like nihilism, which rejects the very existance of a morally good conclusion. But we can also see this with other frameworks, such as egoism, which we (the authors) believe often gives morally wrong results, or with consequentialist reasoning, which has been challenged at many points in history (e.g., [A Modest Proposal](https://en.wikipedia.org/wiki/A_Modest_Proposal) from 1729, the [character Ivan arguing with his brother](https://en.wikisource.org/wiki/The_Brothers_Karamazov/Book_V/Chapter_4) in [Brothers Karamazov](https://en.wikipedia.org/wiki/The_Brothers_Karamazov) fromn 1880, and the two articles [Effective Altruism Is Pushing a Dangerous Brand of ‘AI Safety’](https://www.wired.com/story/effective-altruism-artificial-intelligence-sam-bankman-fried/) [[archived here](https://web.archive.org/web/20221229022417/https://www.wired.com/story/effective-altruism-artificial-intelligence-sam-bankman-fried/)] and [Effective altruism’s most controversial idea](https://www.vox.com/future-perfect/23298870/effective-altruism-longtermism-will-macaskill-future) from 2022). Still, we hope that in using different frameworks (even ones you often disagree with) you are able to understand situations better and with more nuance.
+
+% TODO: consequentialist reasoning -> consequentialist/utilitarianist reasoning
