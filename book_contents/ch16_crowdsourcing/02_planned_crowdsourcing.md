@@ -1,4 +1,4 @@
-# Planned Crowd Work Examples
+# Planned Crowdsourcing Examples
 Let's now consider some examples of planned crowd work, meaning a system or task was intentionally created and given to a crowd to work on.
 
 ## Crowd Work Platforms

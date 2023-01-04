@@ -201,15 +201,15 @@ parts:
       - file: ch15_moderators/02_example_moderators
       - file: ch15_moderators/03_toll_on_moderators
       - file: ch15_moderators/04_learn_more
-    - file: ch16_crowd_work/00_crowd_work
+    - file: ch16_crowdsourcing/00_crowdsourcing
       sections:
-      - file: ch16_crowd_work/01_crowd_work_definition
-      - file: ch16_crowd_work/02_planned_crowd_work
-      - file: ch16_crowd_work/03_ad_hoc
-      - file: ch16_crowd_work/04_power_users_lurkers
-      - file: ch16_crowd_work/05_visualizing_networks
-      - file: ch16_crowd_work/06_reflections
-      - file: ch16_crowd_work/07_learn_more
+      - file: ch16_crowdsourcing/01_crowdsourcing_definition
+      - file: ch16_crowdsourcing/02_planned_crowdsourcing
+      - file: ch16_crowdsourcing/03_ad_hoc
+      - file: ch16_crowdsourcing/04_power_users_lurkers
+      - file: ch16_crowdsourcing/05_visualizing_networks
+      - file: ch16_crowdsourcing/06_reflections
+      - file: ch16_crowdsourcing/07_learn_more
     - file: ch17_harassment/00_harassment
       sections:
       - file: ch17_harassment/01_individual_harassment

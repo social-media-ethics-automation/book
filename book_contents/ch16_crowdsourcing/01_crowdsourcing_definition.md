@@ -1,4 +1,4 @@
-# Crowd Work Definition
+# Crowdsourcing Definition
 
 When tasks are done through large groups of people making relatively small contributions, this is called __crowd work__. The people making the contributions generally come from a crowd of people that aren't necessarily tied to the task (e.g., all internet users can edit Wikipedia), but then people from the crowd either get chosen to participate, or volunteer themselves.
 

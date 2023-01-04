@@ -1,4 +1,4 @@
-# Ad-hoc Crowd Work Examples
+# Ad-hoc Crowdsourcing Examples
 Crowd work isn't always pre-planned or designed for. Sometimes a crowd stumbles into crowd work in an unplanned, [ad hoc](https://www.merriam-webster.com/dictionary/ad%20hoc) manner.
 
 % - Social media allows for new ways of organizing and performing crowd harassment
