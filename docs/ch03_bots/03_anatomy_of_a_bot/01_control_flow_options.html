@@ -1145,8 +1145,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ch16_crowd_work/00_crowd_work.html">
-   16. Crowd Work
+  <a class="reference internal" href="../../ch16_crowdsourcing/00_crowdsourcing.html">
+   16. Crowdsourcing
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/>
   <label for="toctree-checkbox-30">
@@ -1155,37 +1155,37 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../ch16_crowd_work/01_crowd_work_definition.html">
-     16.1. Crowd Work Definition
+    <a class="reference internal" href="../../ch16_crowdsourcing/01_crowdsourcing_definition.html">
+     16.1. Crowdsourcing Definition
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../ch16_crowd_work/02_planned_crowd_work.html">
-     16.2. Planned Crowd Work Examples
+    <a class="reference internal" href="../../ch16_crowdsourcing/02_planned_crowdsourcing.html">
+     16.2. Planned Crowdsourcing Examples
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../ch16_crowd_work/03_ad_hoc.html">
-     16.3. Ad-hoc Crowd Work Examples
+    <a class="reference internal" href="../../ch16_crowdsourcing/03_ad_hoc.html">
+     16.3. Ad-hoc Crowdsourcing Examples
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../ch16_crowd_work/04_power_users_lurkers.html">
+    <a class="reference internal" href="../../ch16_crowdsourcing/04_power_users_lurkers.html">
      16.4. Power Users and Lurkers
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../ch16_crowd_work/05_visualizing_networks.html">
+    <a class="reference internal" href="../../ch16_crowdsourcing/05_visualizing_networks.html">
      16.5. Visualizing Networks
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../ch16_crowd_work/06_reflections.html">
+    <a class="reference internal" href="../../ch16_crowdsourcing/06_reflections.html">
      16.6. Reflection Questions
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../ch16_crowd_work/07_learn_more.html">
+    <a class="reference internal" href="../../ch16_crowdsourcing/07_learn_more.html">
      16.7. Learn More
     </a>
    </li>
@@ -1542,6 +1542,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../../appendix/alternate_apis/ch2_03_08_demo.html">
      Demo: Try Running the Twitter Bot!
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/alternate_apis/ch3_03_03_practice_statements_variables_sleep.html">
+     Practice: Statements and Variables
     </a>
    </li>
   </ul>
@@ -2274,26 +2279,25 @@ A human computer running a cooking program. In other words: “someone following
 </pre></div>
 </div>
 <p>In programming, a function is a small program that you can run from another place in the code (programmer call this “calling” a function). Functions also can accept data and options for how they run. Code libraries are a collection of functions and data that help with certain tasks.</p>
-<p>In this book, we will be using the <a class="reference external" href="https://www.tweepy.org/">tweepy</a> code library, which comes with many pre-written functions that help us do actions on twitter, functions like:</p>
+<p>In this book, we will be using the <a class="reference external" href="https://praw.readthedocs.io/">praw</a> code library, which comes with many pre-written functions that help us do actions on Reddit, functions like:</p>
 <ul class="simple">
-<li><p>create_tweet</p></li>
-<li><p>delete_tweet</p></li>
-<li><p>retweet</p></li>
-<li><p>search_recent_tweets</p></li>
-<li><p>follow_user</p></li>
-<li><p>etc.<a class="footnote-reference brackets" href="#tweepy-functions-footnote" id="id2">2</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subreddit</span></code> (to select a subreddit)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">submit</span></code> (to submit to a subreddit)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">submit_image</span></code> (to submit an image to a subreddit)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">top</span></code> (to get the current top posts off a subreddit)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">upvote</span></code> (to upvote a post or comment)</p></li>
+<li><p>etc.<a class="footnote-reference brackets" href="#praw-functions-footnote" id="id2">2</a></p></li>
 </ul>
-<p>You may be able to figure out what the purpose of each of those tweepy functions are based on the name, though we’ll look at the specifics of how to use them throughout the book.</p>
-<p>If you look back over the various psuedocode and code examples above, most of them involve calling various functions, such as those tweepy functions. Additionally the scheduling example code includes defining a new function and using it.</p>
+<p>If you look back over the various psuedocode and code examples above, most of them involve calling various functions, (though those examples use the tweepy library for Twitter). Additionally the scheduling example code includes defining a new function and using it.</p>
 <p>We will show examples of calling functions starting in the next section.</p>
-<p>We will show how to write functions in Chapter ?? [TODO: figure out].</p>
+<p>We will show how to write functions in Chapter 9 (Privacy and Security).</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="language-types-footnote"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>There are other types of programming organizations as well, such as <a class="reference external" href="https://en.wikipedia.org/wiki/Functional_programming">functional programming</a> (like <a class="reference external" href="https://www.microsoft.com/en-us/research/blog/lambda-the-ultimatae-excel-worksheet-function/">Excel</a> and <a class="reference external" href="https://www.google.com/sheets/about/">Google Sheets</a>),  <a class="reference external" href="https://en.wikipedia.org/wiki/Visual_programming_language">visual programming</a> (like the educational <a class="reference external" href="https://scratch.mit.edu/">Scratch</a>, or the 3D Graphics <a class="reference external" href="https://docs.blender.org/manual/en/2.79/editors/node_editor/introduction.html%5D">Blender node editor</a>), <a class="reference external" href="https://en.wikipedia.org/wiki/Declarative_programming">declarative programming</a> (like HTML and CSS web content) <a class="reference external" href="https://en.wikipedia.org/wiki/Object-oriented_programming">object oriented programming</a> (can be done in Python, JavaScript, and many others), and <a class="reference external" href="https://en.wikipedia.org/wiki/Programming_paradigm">many more</a>.</p>
 </dd>
-<dt class="label" id="tweepy-functions-footnote"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>You can get a full list of tweepy functions on <a class="reference external" href="https://docs.tweepy.org/en/stable/client.html#tweepy.Client">this Tweepy documentation page</a>. There is a table part way down showing “Twitter API v2 Endpoint” and “Client Methods.” The “Client Methods” are the functions you can use, and the rest of that webpage is information on how to use those functions. Unfortunately it is not easy to read this information, but we will cover more on how to read it in chapter ???.</p>
+<dt class="label" id="praw-functions-footnote"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>You can get a full list of praw functions by starting from <a class="reference external" href="https://praw.readthedocs.io/en/latest/code_overview/praw_models.html">this Praw documentation page</a>. That page has links for each type of thing on reddit, such as a comment, redditor, submission, etc. If you follow one of those you will get information on the different things you can do with those on using praw. Unfortunately it is not easy to read this information, but we will cover pieces of it as w ego in this book.</p>
 </dd>
 </dl>
 </section>

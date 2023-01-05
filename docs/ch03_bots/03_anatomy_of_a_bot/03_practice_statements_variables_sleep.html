@@ -1145,8 +1145,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ch16_crowd_work/00_crowd_work.html">
-   16. Crowd Work
+  <a class="reference internal" href="../../ch16_crowdsourcing/00_crowdsourcing.html">
+   16. Crowdsourcing
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/>
   <label for="toctree-checkbox-30">
@@ -1155,37 +1155,37 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../ch16_crowd_work/01_crowd_work_definition.html">
-     16.1. Crowd Work Definition
+    <a class="reference internal" href="../../ch16_crowdsourcing/01_crowdsourcing_definition.html">
+     16.1. Crowdsourcing Definition
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../ch16_crowd_work/02_planned_crowd_work.html">
-     16.2. Planned Crowd Work Examples
+    <a class="reference internal" href="../../ch16_crowdsourcing/02_planned_crowdsourcing.html">
+     16.2. Planned Crowdsourcing Examples
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../ch16_crowd_work/03_ad_hoc.html">
-     16.3. Ad-hoc Crowd Work Examples
+    <a class="reference internal" href="../../ch16_crowdsourcing/03_ad_hoc.html">
+     16.3. Ad-hoc Crowdsourcing Examples
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../ch16_crowd_work/04_power_users_lurkers.html">
+    <a class="reference internal" href="../../ch16_crowdsourcing/04_power_users_lurkers.html">
      16.4. Power Users and Lurkers
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../ch16_crowd_work/05_visualizing_networks.html">
+    <a class="reference internal" href="../../ch16_crowdsourcing/05_visualizing_networks.html">
      16.5. Visualizing Networks
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../ch16_crowd_work/06_reflections.html">
+    <a class="reference internal" href="../../ch16_crowdsourcing/06_reflections.html">
      16.6. Reflection Questions
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../ch16_crowd_work/07_learn_more.html">
+    <a class="reference internal" href="../../ch16_crowdsourcing/07_learn_more.html">
      16.7. Learn More
     </a>
    </li>
@@ -1544,6 +1544,11 @@ const thebe_selector_output = ".output, .cell_output"
      Demo: Try Running the Twitter Bot!
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/alternate_apis/ch3_03_03_practice_statements_variables_sleep.html">
+     Practice: Statements and Variables
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -1785,33 +1790,33 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#twitter-bot-practice">
-   Twitter Bot Practice
+  <a class="reference internal nav-link" href="#reddit-bot-practice">
+   Reddit Bot Practice
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#load-tweepy-library">
-     Load Tweepy Library
+    <a class="reference internal nav-link" href="#load-praw-library">
+     Load Praw Library
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#optional-make-a-fake-twitter-connection-with-the-fake-tweepy-library">
-     (Optional) Make a fake twitter connection with the fake_tweepy library
+    <a class="reference internal nav-link" href="#optional-step-1b-make-a-fake-praw-connection-with-the-fake-praw-library">
+     (Optional) Step 1b: Make a fake praw connection with the fake_praw library
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#load-your-developer-access-passwords">
-     Load your developer access passwords
+    <a class="reference internal nav-link" href="#step-2-load-your-developer-access-passwords">
+     Step 2: Load your developer access passwords
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#give-tweepy-or-fake-tweepy-your-developer-access-passwords">
-     Give tweepy (or fake_tweepy) your developer access passwords
+    <a class="reference internal nav-link" href="#step-4-give-praw-or-fake-praw-your-developer-access-passwords">
+     Step 4: Give praw (or fake_praw) your developer access passwords
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#post-a-tweet">
-     Post a tweet
+    <a class="reference internal nav-link" href="#step-5-submit-a-post-to-reddit">
+     Step 5: Submit a post to Reddit
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -1820,8 +1825,8 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#post-multiple-tweets">
-     Post multiple tweets
+    <a class="reference internal nav-link" href="#submit-multiple-posts">
+     Submit multiple posts
     </a>
    </li>
   </ul>
@@ -1873,33 +1878,33 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#twitter-bot-practice">
-   Twitter Bot Practice
+  <a class="reference internal nav-link" href="#reddit-bot-practice">
+   Reddit Bot Practice
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#load-tweepy-library">
-     Load Tweepy Library
+    <a class="reference internal nav-link" href="#load-praw-library">
+     Load Praw Library
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#optional-make-a-fake-twitter-connection-with-the-fake-tweepy-library">
-     (Optional) Make a fake twitter connection with the fake_tweepy library
+    <a class="reference internal nav-link" href="#optional-step-1b-make-a-fake-praw-connection-with-the-fake-praw-library">
+     (Optional) Step 1b: Make a fake praw connection with the fake_praw library
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#load-your-developer-access-passwords">
-     Load your developer access passwords
+    <a class="reference internal nav-link" href="#step-2-load-your-developer-access-passwords">
+     Step 2: Load your developer access passwords
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#give-tweepy-or-fake-tweepy-your-developer-access-passwords">
-     Give tweepy (or fake_tweepy) your developer access passwords
+    <a class="reference internal nav-link" href="#step-4-give-praw-or-fake-praw-your-developer-access-passwords">
+     Step 4: Give praw (or fake_praw) your developer access passwords
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#post-a-tweet">
-     Post a tweet
+    <a class="reference internal nav-link" href="#step-5-submit-a-post-to-reddit">
+     Step 5: Submit a post to Reddit
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -1908,8 +1913,8 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#post-multiple-tweets">
-     Post multiple tweets
+    <a class="reference internal nav-link" href="#submit-multiple-posts">
+     Submit multiple posts
     </a>
    </li>
   </ul>
@@ -2057,73 +2062,80 @@ title="Print to PDF"
 </div>
 </div>
 </section>
-<section id="twitter-bot-practice">
-<h2>Twitter Bot Practice<a class="headerlink" href="#twitter-bot-practice" title="Permalink to this headline">#</a></h2>
-<p>Now lets try a twitter bot with variables and sleep!</p>
-<section id="load-tweepy-library">
-<h3>Load Tweepy Library<a class="headerlink" href="#load-tweepy-library" title="Permalink to this headline">#</a></h3>
-<p>First, we need to load the tweepy library</p>
+<section id="reddit-bot-practice">
+<h2>Reddit Bot Practice<a class="headerlink" href="#reddit-bot-practice" title="Permalink to this headline">#</a></h2>
+<p>Now lets try a Reddit bot with variables and sleep!</p>
+<section id="load-praw-library">
+<h3>Load Praw Library<a class="headerlink" href="#load-praw-library" title="Permalink to this headline">#</a></h3>
+<p>First, we need to load the praw library</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;tweepy&quot; that will help us work with twitter</span>
-<span class="kn">import</span> <span class="nn">tweepy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;praw&quot; that will help us work with reddit</span>
+<span class="kn">import</span> <span class="nn">praw</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="optional-make-a-fake-twitter-connection-with-the-fake-tweepy-library">
-<h3>(Optional) Make a fake twitter connection with the fake_tweepy library<a class="headerlink" href="#optional-make-a-fake-twitter-connection-with-the-fake-tweepy-library" title="Permalink to this headline">#</a></h3>
-<p>For testing purposes, we’ve added this line of code, which loads a fake version of tweepy, so it wont actually connect to twitter. <strong>If you want to try to actually connect to twitter, don’t run this line of code.</strong>%run ../../fake_tweepy/fake_tweepy.ipynb</p>
+<section id="optional-step-1b-make-a-fake-praw-connection-with-the-fake-praw-library">
+<h3>(Optional) Step 1b: Make a fake praw connection with the fake_praw library<a class="headerlink" href="#optional-step-1b-make-a-fake-praw-connection-with-the-fake-praw-library" title="Permalink to this headline">#</a></h3>
+<p>For testing purposes, we’ve added this line of code, which loads a fake version of praw, so it wont actually connect to reddit. <strong>If you want to try to actually connect to reddit, don’t run this line of code.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_tweepy/fake_tweepy.ipynb
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_apis/fake_praw.ipynb
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake tweepy is replacing the tweepy library. Fake Tweepy doesn&#x27;t need real passwords, and prevents you from accessing real twitter</strong></div></div>
+<div class="output text_html"><strong style='color:darkred'>Fake praw is replacing the praw library. Fake praw doesn&#x27;t need real passwords, and prevents you from accessing real reddit</strong></div></div>
 </div>
 </section>
-<section id="load-your-developer-access-passwords">
-<h3>Load your developer access passwords<a class="headerlink" href="#load-your-developer-access-passwords" title="Permalink to this headline">#</a></h3>
-<p>To use this on your real twitter account, copy your <span class="xref myst">developer access passwords</span> into the code below, replacing our fake passwords.</p>
+<section id="step-2-load-your-developer-access-passwords">
+<h3>Step 2: Load your developer access passwords<a class="headerlink" href="#step-2-load-your-developer-access-passwords" title="Permalink to this headline">#</a></h3>
+<p>To use this on your real Reddit account, copy your <a class="reference internal" href="../../appendix/bot_set_ups/making_reddit_account.html"><span class="doc std std-doc">developer access passwords</span></a> into the code below, replacing our fake passwords.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load all your developer access passwords into Python</span>
-<span class="c1"># TODO: Put your twitter account&#39;s special developer access passwords below:</span>
-<span class="n">bearer_token</span> <span class="o">=</span> <span class="s2">&quot;n4tossfgsafs_fake_bearer_token_isa53#$%$&quot;</span>
-<span class="n">consumer_key</span> <span class="o">=</span> <span class="s2">&quot;sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG&quot;</span>
-<span class="n">consumer_secret</span> <span class="o">=</span> <span class="s2">&quot;45adf$T$A_fake_consumer_secret_JESdsg&quot;</span>
-<span class="n">access_token</span> <span class="o">=</span> <span class="s2">&quot;56sd5Ss4tsea_fake_access_token_%YE%hDsdr&quot;</span>
-<span class="n">access_token_secret</span> <span class="o">=</span> <span class="s2">&quot;j^$dr_fake_consumer_key_^A5s#DR5s&quot;</span>
+<span class="c1"># TODO: Put your reddit username, password, and special developer access passwords below:</span>
+<span class="n">username</span><span class="o">=</span><span class="s2">&quot;fake_reddit_username&quot;</span>
+<span class="n">password</span><span class="o">=</span><span class="s2">&quot;sa@#4*fdf_fake_password_$%DSG#%DG&quot;</span>
+<span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;45adf$TW_fake_client_id_JESdsg1O&quot;</span>
+<span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;56sd_fake_client_secret_%Yh%&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="give-tweepy-or-fake-tweepy-your-developer-access-passwords">
-<h3>Give tweepy (or fake_tweepy) your developer access passwords<a class="headerlink" href="#give-tweepy-or-fake-tweepy-your-developer-access-passwords" title="Permalink to this headline">#</a></h3>
+<section id="step-4-give-praw-or-fake-praw-your-developer-access-passwords">
+<h3>Step 4: Give praw (or fake_praw) your developer access passwords<a class="headerlink" href="#step-4-give-praw-or-fake-praw-your-developer-access-passwords" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Give the tweepy code your developer access passwords so</span>
-<span class="c1"># it can perform twitter actions</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span>
-   <span class="n">bearer_token</span><span class="o">=</span><span class="n">bearer_token</span><span class="p">,</span>
-   <span class="n">consumer_key</span><span class="o">=</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">consumer_secret</span><span class="p">,</span>
-   <span class="n">access_token</span><span class="o">=</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">access_token_secret</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Give the praw code your reddit account info so</span>
+<span class="c1"># it can perform reddit actions</span>
+<span class="n">reddit</span> <span class="o">=</span> <span class="n">praw</span><span class="o">.</span><span class="n">Reddit</span><span class="p">(</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">client_id</span><span class="p">,</span> <span class="n">client_secret</span><span class="o">=</span><span class="n">client_secret</span><span class="p">,</span>
+    <span class="n">user_agent</span><span class="o">=</span><span class="s2">&quot;a custom python script&quot;</span>
 <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to log in to twitter</strong></div></div>
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to collect account info to use on reddit</strong></div></div>
 </div>
 </section>
-<section id="post-a-tweet">
-<h3>Post a tweet<a class="headerlink" href="#post-a-tweet" title="Permalink to this headline">#</a></h3>
+<section id="step-5-submit-a-post-to-reddit">
+<h3>Step 5: Submit a post to Reddit<a class="headerlink" href="#step-5-submit-a-post-to-reddit" title="Permalink to this headline">#</a></h3>
 <p>Post something you learned in the class so far:</p>
-<p>Remember, the code to post a tweet looks like this: <code class="docutils literal notranslate"><span class="pre">client.create_tweet(text=&quot;This</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">tweet</span> <span class="pre">text&quot;)</span></code></p>
+<p>Remember, the code to post a tweet looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span>
+   <span class="s2">&quot;soc_media_ethics_auto&quot;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span>
+   <span class="s2">&quot;This is the title of the post&quot;</span><span class="p">,</span> 
+   <span class="n">selftext</span> <span class="o">=</span> <span class="s2">&quot;This is the content of the post&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: enter your code here</span>
@@ -2134,8 +2146,17 @@ title="Print to PDF"
 </section>
 <section id="post-from-a-variable">
 <h3>Post from a variable<a class="headerlink" href="#post-from-a-variable" title="Permalink to this headline">#</a></h3>
-<p>Now try saving a piece of text in a variable, and then tweeting the whatever you saved in the variable.</p>
-<p>To do this, where the code has <code class="docutils literal notranslate"><span class="pre">client.create_tweet(text=&quot;This</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">tweet</span> <span class="pre">text&quot;)</span></code>, you’ll replace the quoted text with the variable name, so it will look like <code class="docutils literal notranslate"><span class="pre">client.create_tweet(text=variable_name)</span></code> (with whatever your variable name was instead of “variable_name”)</p>
+<p>Now try saving a piece of text in a variable for the title, and another for the content of a post, and then submitting a post of whatever you saved in the variables.</p>
+<p>To do this, where the code has <code class="docutils literal notranslate"><span class="pre">submit(</span> <span class="pre">...</span> <span class="pre">)</span></code>, you’ll replace the quoted text with the variable name, so it will look like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span>
+   <span class="s2">&quot;soc_media_ethics_auto&quot;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span>
+   <span class="n">title_variable</span><span class="p">,</span> 
+   <span class="n">selftext</span> <span class="o">=</span> <span class="n">content_variable</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>(with whatever your variable name was instead of “title_variable” and “content_variable”)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: enter your code here</span>
@@ -2144,9 +2165,9 @@ title="Print to PDF"
 </div>
 </div>
 </section>
-<section id="post-multiple-tweets">
-<h3>Post multiple tweets<a class="headerlink" href="#post-multiple-tweets" title="Permalink to this headline">#</a></h3>
-<p>Next try posting 5 tweets, but use <code class="docutils literal notranslate"><span class="pre">sleep</span></code> to add pauses between each one (if you make the pauses over 60 seconds, then the official “time” of the tweet should look different on the twitter interface).</p>
+<section id="submit-multiple-posts">
+<h3>Submit multiple posts<a class="headerlink" href="#submit-multiple-posts" title="Permalink to this headline">#</a></h3>
+<p>Next try submitting 3 posts, but use <code class="docutils literal notranslate"><span class="pre">sleep</span></code> to add pauses between each one (note that reddit might not want you to make more than 1 post every 15 minutes, so you can sleep for 15*60 seconds or more before posting again).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: enter your code here</span>

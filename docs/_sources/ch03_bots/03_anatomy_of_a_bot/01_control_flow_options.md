@@ -500,20 +500,18 @@ The recipe also could ask you to make a different version of a recipe from anoth
 
 In programming, a function is a small program that you can run from another place in the code (programmer call this "calling" a function). Functions also can accept data and options for how they run. Code libraries are a collection of functions and data that help with certain tasks.
 
-In this book, we will be using the [tweepy](https://www.tweepy.org/) code library, which comes with many pre-written functions that help us do actions on twitter, functions like:
-- create_tweet
-- delete_tweet
-- retweet
-- search_recent_tweets
-- follow_user
-- etc.[^tweepy_functions_footnote]
+In this book, we will be using the [praw](https://praw.readthedocs.io/) code library, which comes with many pre-written functions that help us do actions on Reddit, functions like:
+- `subreddit` (to select a subreddit)
+- `submit` (to submit to a subreddit)
+- `submit_image` (to submit an image to a subreddit)
+- `top` (to get the current top posts off a subreddit)
+- `upvote` (to upvote a post or comment)
+- etc.[^praw_functions_footnote]
 
-[^tweepy_functions_footnote]: You can get a full list of tweepy functions on [this Tweepy documentation page](https://docs.tweepy.org/en/stable/client.html#tweepy.Client). There is a table part way down showing "Twitter API v2 Endpoint" and "Client Methods." The "Client Methods" are the functions you can use, and the rest of that webpage is information on how to use those functions. Unfortunately it is not easy to read this information, but we will cover more on how to read it in chapter ???.
+[^praw_functions_footnote]: You can get a full list of praw functions by starting from [this Praw documentation page](https://praw.readthedocs.io/en/latest/code_overview/praw_models.html). That page has links for each type of thing on reddit, such as a comment, redditor, submission, etc. If you follow one of those you will get information on the different things you can do with those on using praw. Unfortunately it is not easy to read this information, but we will cover pieces of it as w ego in this book.
 
-You may be able to figure out what the purpose of each of those tweepy functions are based on the name, though we'll look at the specifics of how to use them throughout the book.
-
-If you look back over the various psuedocode and code examples above, most of them involve calling various functions, such as those tweepy functions. Additionally the scheduling example code includes defining a new function and using it.
+If you look back over the various psuedocode and code examples above, most of them involve calling various functions, (though those examples use the tweepy library for Twitter). Additionally the scheduling example code includes defining a new function and using it.
 
 We will show examples of calling functions starting in the next section.
 
-We will show how to write functions in Chapter ?? [TODO: figure out].
+We will show how to write functions in Chapter 9 (Privacy and Security).
