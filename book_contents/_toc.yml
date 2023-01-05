@@ -51,7 +51,8 @@ parts:
           - file: ch03_bots/03_anatomy_of_a_bot/02_demo_statements_variables_sleep
           - file: ch03_bots/03_anatomy_of_a_bot/03_practice_statements_variables_sleep
       - file: ch03_bots/04_bots_and_responsibility
-      - file: ch03_bots/05_learn_more
+      - file: ch03_bots/05_bot_activity
+      - file: ch03_bots/06_learn_more
     - file: ch04_data/00_data
       sections:
       - file: ch04_data/01_anatomy_of_tweet/00_intro
