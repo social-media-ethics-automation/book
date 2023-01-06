@@ -1815,10 +1815,25 @@ title="Print to PDF"
 </figure>
 <p>While you won’t need to know the details of how images, sound, and video are stored for this book, we wanted to at least briefly discuss it here just to give you a rough idea of how computers store these kinds of data.</p>
 <p><strong>Images</strong> are created by defining a grid of dots, called pixels. Each pixel has three numbers that define the color (red, green, and blue), and the grid is created as a list (rows) of lists (columns).</p>
-<p><img alt="A very close up photo of a small section of a screen with a white heart icon. You can make out that the screen is a grid and the grid squares where the heart is have red, green, and blue bands, which look white when seen from a distance" src="../../_images/pixel_heart.jpg" /></p>
-<p><strong>Sounds</strong> are represented as the position of the speaker diaphragm over time (a sound wave). The position is saved as a number, and there positions saved at each time point, so the sound wave is saved as a list of numbers.</p>
-<a class="reference internal image-reference" href="../../_images/speaker.png"><img alt="A diagram of a speaker, where the big middle round part (diapgragm) is indicated to move in and out, producing sound waves." class="align-center" src="../../_images/speaker.png" style="width: 150px;" /></a>
-<img alt="An image of a sound wave for the word &quot;this&quot;. There is a horizontal line in the middle, and a bunch of vertical bars that are approxomitely centered. The vertical bars are different lengths makking a pattern of ups and downs that represent the sound wave." class="align-center" src="../../_images/sound_wave_this.png" />
+<figure class="align-default" id="pixels-fire-emoji-fig">
+<img alt="Two images of a fire emoji on a screen. The first is small and a little zoomed in, and you can sort of make out that the image is made of a bunch of squares. The second image is very zoomed in, and the white area behind the emoji is bands of red, green, and blue (which don't look they make white when separated), and the orange part of the fire mostly has just red bands, and the yellow part is red and green bands of color." src="../../_images/pixels_fire_emoji.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.11 </span><span class="caption-text">When viewing the fire emoji (🔥) close-up on a screen, you can see the bands of red, green, and blue that make up each pixel. If you try squinting your eyes or looking at the image from far away, it should blur back into the emoji.</span><a class="headerlink" href="#pixels-fire-emoji-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p><strong>Sounds</strong> are represented as the electricity needed to move a speaker diaphragm back and forth over time to make the specific sound waves. The electric voltage is saved as a number, and those voltage numbers are saved at each time point, so the sound information is saved as a list of numbers.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/sound_wave_this.png"><img alt="An image of a sound wave for the word &quot;this&quot;. There is a horizontal line in the middle, and a bunch of vertical bars that are approxomitely centered. The vertical bars are different lengths makking a pattern of ups and downs that represent the sound wave." src="../../_images/sound_wave_this.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.12 </span><span class="caption-text">A computer representation of the sound of Kyle saying “this.”</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/sound_wave_animation.gif"><img alt="An animation showing a sound wave going up and down (like a sine wave). When the wave is high it pushes the speaker diaphragm away, and when it is low it pulls the speaker diaphragm closer, and as the diaphragm goes back and forth, sound waves come off of it." src="../../_images/sound_wave_animation.gif" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.13 </span><span class="caption-text">How sound information of an electric signal pushes and pulls on a d<a class="reference external" href="https://en.wikipedia.org/wiki/Electrodynamic_speaker_driver#Components">iaphram inside a speaker</a> to create physical sound waves.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p><strong>Videos</strong> are represented as a squence of images (a list of images) called frames, often with a sound wave to be played at the same time.</p>
 <p><img alt="the &quot;mind blown&quot; gif: animated gif of a man making hand explosion out of his forhead while stars and explosions are overlayed on top" src="../../_images/mind_blown.gif" /></p>
 <p>In most cases, after the initial data representation is created, the computer runs a compression algorithm, which takes the image, sound, or video, and finds a way of storing it in much less computer memory, often losing some of the quality when doing so.</p>
@@ -1841,7 +1856,7 @@ title="Print to PDF"
 <figure class="align-default" id="tweet-date-fig">
 <img alt="Screenshot of the tweet from before, but with the date highlighted: Feb 10, 2020" src="../../_images/dog_tweet_with_date.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 4.11 </span><span class="caption-text">The tweet includes the date when it was posted.</span><a class="headerlink" href="#tweet-date-fig" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.14 </span><span class="caption-text">The tweet includes the date when it was posted.</span><a class="headerlink" href="#tweet-date-fig" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>There are several options for how to save dates and times. Some options include a series of numbers (year, month, day, hour, minute, and second), or a string that with all of those pieces of information written out. Sometimes only the date is saved, with no time information, and sometimes the time information will include the timezone.</p>
