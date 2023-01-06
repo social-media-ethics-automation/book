@@ -42,7 +42,7 @@ width: 400px
 alt: An animation showing a sound wave going up and down (like a sine wave). When the wave is high it pushes the speaker diaphragm away, and when it is low it pulls the speaker diaphragm closer, and as the diaphragm goes back and forth, sound waves come off of it.
 align: center
 ---
-How sound information of an electric signal pushes and pulls on a d[iaphram inside a speaker](https://en.wikipedia.org/wiki/Electrodynamic_speaker_driver#Components) to create physical sound waves.
+How sound information turns into an electric signal, which then works with a magnet to push and pull on a [diaphram inside a speaker](https://en.wikipedia.org/wiki/Electrodynamic_speaker_driver#Components) to create physical sound waves.
 ```
 
 
