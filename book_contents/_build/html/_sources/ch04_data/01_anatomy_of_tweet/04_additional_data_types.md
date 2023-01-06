@@ -17,22 +17,35 @@ While you won't need to know the details of how images, sound, and video are sto
 
 __Images__ are created by defining a grid of dots, called pixels. Each pixel has three numbers that define the color (red, green, and blue), and the grid is created as a list (rows) of lists (columns).
 
-![A very close up photo of a small section of a screen with a white heart icon. You can make out that the screen is a grid and the grid squares where the heart is have red, green, and blue bands, which look white when seen from a distance](pixel_heart.jpg)
-
-__Sounds__ are represented as the position of the speaker diaphragm over time (a sound wave). The position is saved as a number, and there positions saved at each time point, so the sound wave is saved as a list of numbers.
-
-
-% image based on: https://pixabay.com/vectors/speaker-volume-medium-loud-sound-98509/
-```{image} speaker.png
-:alt: A diagram of a speaker, where the big middle round part (diapgragm) is indicated to move in and out, producing sound waves.
-:width: 150px
-:align: center
+```{figure} pixels_fire_emoji.png
+---
+name: pixels_fire_emoji_fig
+alt: "Two images of a fire emoji on a screen. The first is small and a little zoomed in, and you can sort of make out that the image is made of a bunch of squares. The second image is very zoomed in, and the white area behind the emoji is bands of red, green, and blue (which don't look they make white when separated), and the orange part of the fire mostly has just red bands, and the yellow part is red and green bands of color."
+---
+When viewing the fire emoji (🔥) close-up on a screen, you can see the bands of red, green, and blue that make up each pixel. If you try squinting your eyes or looking at the image from far away, it should blur back into the emoji.
 ```
 
-```{image} sound_wave_this.png
-:alt: An image of a sound wave for the word "this". There is a horizontal line in the middle, and a bunch of vertical bars that are approxomitely centered. The vertical bars are different lengths makking a pattern of ups and downs that represent the sound wave.
-:align: center
+__Sounds__ are represented as the electricity needed to move a speaker diaphragm back and forth over time to make the specific sound waves. The electric voltage is saved as a number, and those voltage numbers are saved at each time point, so the sound information is saved as a list of numbers.
+
+```{figure} sound_wave_this.png
+---
+width: 300px
+alt: An image of a sound wave for the word "this". There is a horizontal line in the middle, and a bunch of vertical bars that are approxomitely centered. The vertical bars are different lengths makking a pattern of ups and downs that represent the sound wave.
+align: center
+---
+A computer representation of the sound of Kyle saying "this."
 ```
+
+```{figure} sound_wave_animation.gif
+---
+width: 400px
+alt: An animation showing a sound wave going up and down (like a sine wave). When the wave is high it pushes the speaker diaphragm away, and when it is low it pulls the speaker diaphragm closer, and as the diaphragm goes back and forth, sound waves come off of it.
+align: center
+---
+How sound information of an electric signal pushes and pulls on a d[iaphram inside a speaker](https://en.wikipedia.org/wiki/Electrodynamic_speaker_driver#Components) to create physical sound waves.
+```
+
+
 
 
 __Videos__ are represented as a squence of images (a list of images) called frames, often with a sound wave to be played at the same time.
