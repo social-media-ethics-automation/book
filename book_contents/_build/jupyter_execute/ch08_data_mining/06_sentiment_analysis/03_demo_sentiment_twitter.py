@@ -64,7 +64,7 @@ sia = SentimentIntensityAnalyzer()
 # ### loop through tweets, finding average sentiment
 # We can now combine our previous examples of looping through tweets with what we just learned of sentiment analysis and looping variables to find the average sentiment of a set of tweets.
 
-# In[6]:
+# In[11]:
 
 
 query = '"cute cat"'

@@ -25,7 +25,7 @@ alt: "Two images of a fire emoji on a screen. The first is small and a little zo
 When viewing the fire emoji (🔥) close-up on a screen, you can see the bands of red, green, and blue that make up each pixel. If you try squinting your eyes or looking at the image from far away, it should blur back into the emoji.
 ```
 
-__Sounds__ are represented as the electricity needed to move a speaker diaphragm back and forth over time to make the specific sound waves. The electric voltage is saved as a number, and those voltage numbers are saved at each time point, so the sound information is saved as a list of numbers.
+__Sounds__ are represented as the electric current needed to move a speaker diaphragm back and forth over time to make the specific sound waves. The electric current is saved as a number, and those electric current numbers are saved at each time point, so the sound information is saved as a list of numbers.
 
 ```{figure} sound_wave_this.png
 ---
@@ -39,10 +39,10 @@ A computer representation of the sound of Kyle saying "this."
 ```{figure} sound_wave_animation.gif
 ---
 width: 400px
-alt: An animation showing a sound wave going up and down (like a sine wave). When the wave is high it pushes the speaker diaphragm away, and when it is low it pulls the speaker diaphragm closer, and as the diaphragm goes back and forth, sound waves come off of it.
+alt: An animation showing a sound wave data going up and down (like a sine wave). When the wave is high it pushes the speaker diaphragm away, and when it is low it pulls the speaker diaphragm closer, and as the diaphragm goes back and forth, sound waves come off of it.
 align: center
 ---
-How sound information turns into an electric signal, which then works with a magnet to push and pull on a [diaphram inside a speaker](https://en.wikipedia.org/wiki/Electrodynamic_speaker_driver#Components) to create physical sound waves.
+How sound information turns into an electric signal, which then works with a magnet to push and pull on a [diaphram inside a speaker](https://en.wikipedia.org/wiki/Electrodynamic_speaker_driver#Components) to create physical sound waves. Microphones do this process in exactly the reverse, the sound waves in the air make the speaker diaphragm go back and forth, making an electric current in the wire which gets measured and saved by the computer.
 ```
 
 

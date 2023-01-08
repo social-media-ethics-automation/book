@@ -64,7 +64,7 @@ sia = SentimentIntensityAnalyzer()
 # ## Code to search and display news tweets
 # Now let's make code that will do a search for news tweets (tweets from a fake_news_site), and display all of them. We will then make a modified version below to compare the results.
 
-# In[6]:
+# In[37]:
 
 
 query = 'from:fake_news_site'
@@ -79,7 +79,7 @@ for tweet in tweets.data:
 # ## Search through tweets and only display good news
 # Now we will make a different version of the code that computes the sentiment of each tweet and only displays the ones with positive sentiment.
 
-# In[7]:
+# In[38]:
 
 
 query = 'from:fake_news_site'

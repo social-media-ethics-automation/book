@@ -44,7 +44,7 @@ import praw
 # ### (Optional) Step 1b: Make a fake praw connection with the fake_praw library
 # For testing purposes, we've added this line of code, which loads a fake version of praw, so it wont actually connect to reddit. __If you want to try to actually connect to reddit, don't run this line of code.__
 
-# In[2]:
+# In[27]:
 
 
 get_ipython().run_line_magic('run', '../../fake_apis/fake_praw.ipynb')
@@ -53,7 +53,7 @@ get_ipython().run_line_magic('run', '../../fake_apis/fake_praw.ipynb')
 # ### Step 2: Load your developer access passwords
 # To use this on your real Reddot account, copy your [developer access passwords](../../appendix/bot_set_ups/making_reddit_account.md) into the code below, replacing our fake passwords.
 
-# In[3]:
+# In[23]:
 
 
 # Load all your developer access passwords into Python
@@ -66,7 +66,7 @@ client_secret="56sd_fake_client_secret_%Yh%"
 
 # ### Step 4: Give praw (or fake_praw) your developer access passwords
 
-# In[4]:
+# In[28]:
 
 
 # Give the praw code your reddit account info so
@@ -80,7 +80,7 @@ reddit = praw.Reddit(
 
 # ### Step 5: Submit a post to Reddit
 
-# In[5]:
+# In[29]:
 
 
 # Post a reddit post

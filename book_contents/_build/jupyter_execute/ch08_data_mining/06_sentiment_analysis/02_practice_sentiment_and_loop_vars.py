@@ -19,7 +19,7 @@ sia = SentimentIntensityAnalyzer()
 
 # Also, look at this example from the demo of running sentiment analysis:
 
-# In[2]:
+# In[ ]:
 
 
 sentence = "I love love love pizza!!!!!!!!"
@@ -28,7 +28,7 @@ sia.polarity_scores(sentence)["compound"]
 
 # Now, copy that two lines of code above, and try out your own sentences, and run the sentiment analysis on them
 
-# In[3]:
+# In[ ]:
 
 
 # TODO: enter your code here
@@ -36,7 +36,7 @@ sia.polarity_scores(sentence)["compound"]
 
 # Try several sentences and see how the Sentiment Intensity Analyzer handles them
 
-# In[4]:
+# In[ ]:
 
 
 # TODO: enter your code here
@@ -48,7 +48,7 @@ sia.polarity_scores(sentence)["compound"]
 # 
 # Below is a for loop which goes through each letter in the word "Mississipi".
 
-# In[5]:
+# In[ ]:
 
 
 for letter in "Mississipi":
@@ -57,7 +57,7 @@ for letter in "Mississipi":
 
 # Make another copy of that loop, but add a variable before the loop called `num_letters` and use it count how many letters were in the word "Mississipi". At the end display the number of letters.
 
-# In[6]:
+# In[ ]:
 
 
 # TODO: enter your code here
@@ -69,7 +69,7 @@ for letter in "Mississipi":
 # 
 # At the end print out how many of the letters were "i"s and what percentage of the word was "i"s.
 
-# In[7]:
+# In[ ]:
 
 
 # TODO: enter your code here
