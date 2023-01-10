@@ -159,7 +159,7 @@ import praw
 # ### (Optional) Step 1b: Make a fake praw connection with the fake_praw library
 # For testing purposes, we've added this line of code, which loads a fake version of praw, so it wont actually connect to reddit. __If you want to try to actually connect to reddit, don't run this line of code.__
 
-# In[1]:
+# In[14]:
 
 
 get_ipython().run_line_magic('run', '../../fake_apis/fake_praw.ipynb')
@@ -168,7 +168,7 @@ get_ipython().run_line_magic('run', '../../fake_apis/fake_praw.ipynb')
 # ### Step 2: Load your developer access passwords
 # To use this on your real Reddit account, copy your [developer access passwords](../../appendix/bot_set_ups/making_reddit_account.md) into the code below, replacing our fake passwords.
 
-# In[5]:
+# In[15]:
 
 
 # Load all your developer access passwords into Python
@@ -181,7 +181,7 @@ client_secret="56sd_fake_client_secret_%Yh%"
 
 # ### Step 4: Give praw (or fake_praw) your developer access passwords
 
-# In[6]:
+# In[16]:
 
 
 # Give the praw code your reddit account info so
@@ -206,7 +206,7 @@ reddit = praw.Reddit(
 # )
 # ```
 
-# In[ ]:
+# In[17]:
 
 
 # TODO: enter your code here
@@ -226,7 +226,7 @@ reddit = praw.Reddit(
 # ``` 
 # (with whatever your variable name was instead of "title_variable" and "content_variable")
 
-# In[7]:
+# In[18]:
 
 
 # TODO: enter your code here
@@ -237,7 +237,7 @@ reddit = praw.Reddit(
 # 
 # 
 
-# In[ ]:
+# In[19]:
 
 
 # TODO: enter your code here

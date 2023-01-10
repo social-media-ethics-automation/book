@@ -19,7 +19,7 @@ nltk.download(["vader_lexicon"])
 
 # We will now have the libary make a "Sentiment Intensity Analyzer" for us, which we save in a variable called `sia`
 
-# In[3]:
+# In[2]:
 
 
 from nltk.sentiment import SentimentIntensityAnalyzer
@@ -28,7 +28,7 @@ sia = SentimentIntensityAnalyzer()
 
 # Now that we have the "Sentiment Intensity Analyzer" we can try it out on different sentences to have the computer guess how positive or negative they are. Let's start with a really positive sentance:
 
-# In[4]:
+# In[3]:
 
 
 sentence = "I love love love pizza!!!!!!!!"
@@ -39,7 +39,7 @@ sia.polarity_scores(sentence)["compound"]
 # 
 # Now let's try a really  negative one:
 
-# In[5]:
+# In[4]:
 
 
 sentence = "I hate hate hate pizza!!!!!!!!"
@@ -50,7 +50,7 @@ sia.polarity_scores(sentence)["compound"]
 # 
 # Let's try once more with a more neutral sentence
 
-# In[6]:
+# In[5]:
 
 
 sentence = "I guess I'll eat pizza if you really want me to."
@@ -66,7 +66,7 @@ sia.polarity_scores(sentence)["compound"]
 # 
 # So let's make an array of sentences and then do a loop to look at the sentiment of each sentence.
 
-# In[11]:
+# In[6]:
 
 
 # Make an array of movie reviews (each one a string)
@@ -79,7 +79,7 @@ movie_reviews = [
 ]
 
 
-# In[20]:
+# In[7]:
 
 
 # loop through each review
@@ -105,7 +105,7 @@ for review in movie_reviews:
 # 
 # Python provides us an easy way of counting the how many movie reviews there were, by using the `len` function like this:
 
-# In[21]:
+# In[8]:
 
 
 len(movie_reviews)
@@ -121,7 +121,7 @@ len(movie_reviews)
 # 
 # Then as part of our loop, each time we go through a review we will add 1 to our `num_reviews` variable
 
-# In[23]:
+# In[9]:
 
 
 num_reviews = 0 # we haven't seen any reviews yet
@@ -140,7 +140,7 @@ print("After the for, we see there were " + str(num_reviews) + " total reviews")
 # can be rewritten as
 # - `num_reviews += 1`
 
-# In[24]:
+# In[10]:
 
 
 num_reviews = 0 # we haven't seen any reviews yet
@@ -160,7 +160,7 @@ print("After the for, we see there were " + str(num_reviews) + " total reviews")
 # 
 # So what we will do is make another variable at the start of our loop called `total_sentiment` and each time we loop through a new review, we will add that review's sentiment to the `total_sentiment`. Then at the end, the average will be the `total_sentiment` divided by the `num_reviews`.
 
-# In[25]:
+# In[11]:
 
 
 num_reviews = 0 # we haven't seen any reviews yet
@@ -189,7 +189,7 @@ print("The average sentiment of the reviews was: " + str(average_sentiment))
 # 
 # In this case we make a variable before the loop called `num_positive_reviews`, and add 1 to it whenever we find a review that is positive (using an `if` statement), like this:
 
-# In[26]:
+# In[12]:
 
 
 num_reviews = 0 # we haven't seen any reviews yet

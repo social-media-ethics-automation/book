@@ -281,5 +281,15 @@ parts:
           - file: appendix/alternate_apis/ch2_03_07_details_of_bot
           - file: appendix/alternate_apis/ch2_03_08_demo
           - file: appendix/alternate_apis/ch3_03_03_practice_statements_variables_sleep.ipynb
+          - file: appendix/alternate_apis/solutions/00_solutions
+            sections:
+              - file: appendix/alternate_apis/solutions/01_solution_practice_statements_variables_sleep
+              - file: appendix/alternate_apis/solutions/02_solution_practice_data
+              - file: appendix/alternate_apis/solutions/03_practice_lists_dictionaries
+              - file: appendix/alternate_apis/solutions/07_practice_strings_conditionals
+              - file: appendix/alternate_apis/solutions/08_solution_sentiment_and_loop_vars
+              - file: appendix/alternate_apis/solutions/09_solution_functions
+              - file: appendix/alternate_apis/solutions/ch12_solution_dictionary_counters
+              - file: appendix/alternate_apis/solutions/ch14_demo_recursion_on_twitter
       - file: appendix/teaching_with_this_book
       
