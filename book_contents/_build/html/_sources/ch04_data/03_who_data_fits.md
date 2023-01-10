@@ -29,14 +29,11 @@ Here are some screenshots from a [help forum discussion](https://ttlc.intuit.com
 
 As you can see, TurboTax has a limit on how long last names are allowed to be, and people with too long of names have different strategies with how to deal with not fitting in the system.
 
-### Gender/Sexuality
-% TODO: https://genders.wtf/
-Data collection and storage can go wrong in other ways as well, with incorrect or erroneous options. Here are some screenshots from a thread of people collecting strange gender selection forms (the images link to the tweets I got them from if you want to see more in the twitter thread):
+### Gender
+Data collection and storage can go wrong in other ways as well, with incorrect or erroneous options. Here are some screenshots from a thread of people collecting strange gender selection forms:
 
 - [![Tweet from user "Coding Drag Queen Anna Lytical" with handle "@theannalytical". The tweet text is "send me the worst gender selection forms you've seen, I'll start" and the image is of a dropdown with the following options: Female, Male, N/A, Unknown, Tax Entity"](gender_select1.png)](https://twitter.com/theannalytical/status/1349392166716657664?s=20)
 
 - [![image that says "ah yes, the three genders" and below it is a screenshot of a form that says "What is your gender? Please select one." and the options are: "Male", "Female", and "I have no plans to purchase a new vehicle"](gender_select2.png)](https://twitter.com/annabookwriter/status/1349410399574102016?s=20)
 
-- [![A picture of a form (perhaps on paper?) that says "Sexual orientation: Please identify your sexual orientation:" and the options are: "Bisexual", "Gay man", "Gay woman/lesbian", "Chinese", "Heterosexual/straight", and "Other: Please describe:"](gender_select3.png)](https://twitter.com/324_B21/status/1349560223447408641?s=20)
-
-- [![A gender dropdown selection box with the following options: "F", "M", "Male", "Female", "Famale", "Felmale", "High School visit on March 17", "Gender", "International High School Visit at Ho Chi Minh City at March 19"](gender_select4.png)](https://twitter.com/ValkyriePyra/status/1349477953978195970)
+You can see more of these types of forms at [https://genders.wtf/](https://genders.wtf/)
