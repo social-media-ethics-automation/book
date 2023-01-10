@@ -429,7 +429,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="00_intro.html">
-     4.5. Data in Python and Twitter
+     4.5. Data in Python and Reddit
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
     <label for="toctree-checkbox-10">
@@ -1830,49 +1830,55 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
+    <a class="reference internal nav-link" href="#load-praw-library">
+     Load Praw library
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#optional-make-a-fake-twitter-connection-with-the-fake-tweepy-library">
-     (optional) make a fake twitter connection with the fake_tweepy library
+    <a class="reference internal nav-link" href="#optional-step-1b-make-a-fake-praw-connection-with-the-fake-praw-library">
+     (Optional) Step 1b: Make a fake praw connection with the fake_praw library
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#load-your-developer-access-passwords">
-     load your developer access passwords
+    <a class="reference internal nav-link" href="#step-2-load-your-developer-access-passwords">
+     Step 2: Load your developer access passwords
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#give-tweepy-or-fake-tweepy-your-developer-access-passwords">
-     give tweepy (or fake_tweepy) your developer access passwords
+    <a class="reference internal nav-link" href="#step-4-give-praw-or-fake-praw-your-developer-access-passwords">
+     Step 4: Give praw (or fake_praw) your developer access passwords
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#find-a-tweet">
-   Find a tweet
+  <a class="reference internal nav-link" href="#find-a-reddit-submission">
+   Find a Reddit submission
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#look-at-data-in-tweet">
-   Look at data in tweet
+  <a class="reference internal nav-link" href="#look-at-data-in-reddit-submission">
+   Look at data in Reddit submission
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tweet-text">
-     tweet text:
+    <a class="reference internal nav-link" href="#submission-title">
+     submission title:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tweet-id">
-     tweet id
+    <a class="reference internal nav-link" href="#submission-id">
+     submission id
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tweet-author-id">
-     tweet author id
+    <a class="reference internal nav-link" href="#submission-author-name">
+     submission author name
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#submission-edited">
+     submission edited
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -1881,18 +1887,28 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tweet-lang-language">
-     tweet lang (language)
+    <a class="reference internal nav-link" href="#number-of-upvotes-score">
+     number of upvotes (score)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tweet-source-device-that-made-the-tweet">
-     tweet source (device that made the tweet)
+    <a class="reference internal nav-link" href="#upvote-ratio">
+     upvote ratio
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#public-metrics">
-     public metrics
+    <a class="reference internal nav-link" href="#number-of-comments">
+     number of comments
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#submission-text-selftext">
+     submission text (selftext)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#submission-url-link">
+     submission url (link)
     </a>
    </li>
   </ul>
@@ -1927,49 +1943,55 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
+    <a class="reference internal nav-link" href="#load-praw-library">
+     Load Praw library
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#optional-make-a-fake-twitter-connection-with-the-fake-tweepy-library">
-     (optional) make a fake twitter connection with the fake_tweepy library
+    <a class="reference internal nav-link" href="#optional-step-1b-make-a-fake-praw-connection-with-the-fake-praw-library">
+     (Optional) Step 1b: Make a fake praw connection with the fake_praw library
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#load-your-developer-access-passwords">
-     load your developer access passwords
+    <a class="reference internal nav-link" href="#step-2-load-your-developer-access-passwords">
+     Step 2: Load your developer access passwords
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#give-tweepy-or-fake-tweepy-your-developer-access-passwords">
-     give tweepy (or fake_tweepy) your developer access passwords
+    <a class="reference internal nav-link" href="#step-4-give-praw-or-fake-praw-your-developer-access-passwords">
+     Step 4: Give praw (or fake_praw) your developer access passwords
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#find-a-tweet">
-   Find a tweet
+  <a class="reference internal nav-link" href="#find-a-reddit-submission">
+   Find a Reddit submission
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#look-at-data-in-tweet">
-   Look at data in tweet
+  <a class="reference internal nav-link" href="#look-at-data-in-reddit-submission">
+   Look at data in Reddit submission
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tweet-text">
-     tweet text:
+    <a class="reference internal nav-link" href="#submission-title">
+     submission title:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tweet-id">
-     tweet id
+    <a class="reference internal nav-link" href="#submission-id">
+     submission id
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tweet-author-id">
-     tweet author id
+    <a class="reference internal nav-link" href="#submission-author-name">
+     submission author name
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#submission-edited">
+     submission edited
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -1978,18 +2000,28 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tweet-lang-language">
-     tweet lang (language)
+    <a class="reference internal nav-link" href="#number-of-upvotes-score">
+     number of upvotes (score)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tweet-source-device-that-made-the-tweet">
-     tweet source (device that made the tweet)
+    <a class="reference internal nav-link" href="#upvote-ratio">
+     upvote ratio
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#public-metrics">
-     public metrics
+    <a class="reference internal nav-link" href="#number-of-comments">
+     number of comments
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#submission-text-selftext">
+     submission text (selftext)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#submission-url-link">
+     submission url (link)
     </a>
    </li>
   </ul>
@@ -2012,290 +2044,309 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="demo-data-from-a-reddit-post">
 <h1><span class="section-number">4.5.3. </span>Demo: Data from a Reddit Post<a class="headerlink" href="#demo-data-from-a-reddit-post" title="Permalink to this headline">#</a></h1>
 <p>Let’s see what the data actually looks like from a Reddit Post!</p>
-<p>First we need to do our normal Reddit login steps (and optional fake tweepy step)</p>
+<p>First we need to do our normal Reddit login steps (and optional fake praw step)</p>
 <section id="log-into-tweepy-or-fake-tweepy">
 <h2>Log into tweepy (or fake tweepy)<a class="headerlink" href="#log-into-tweepy-or-fake-tweepy" title="Permalink to this headline">#</a></h2>
-<section id="id1">
-<h3><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<section id="load-praw-library">
+<h3>Load Praw library<a class="headerlink" href="#load-praw-library" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;tweepy&quot; that will help us work with twitter</span>
-<span class="kn">import</span> <span class="nn">tweepy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;praw&quot; that will help us work with reddit</span>
+<span class="kn">import</span> <span class="nn">praw</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="optional-make-a-fake-twitter-connection-with-the-fake-tweepy-library">
-<h3>(optional) make a fake twitter connection with the fake_tweepy library<a class="headerlink" href="#optional-make-a-fake-twitter-connection-with-the-fake-tweepy-library" title="Permalink to this headline">#</a></h3>
-<p>For testing purposes, we’ve added this line of code, which loads a fake version of tweepy, so it wont actually connect to twitter. <strong>If you want to try to actually connect to twitter, don’t run this line of code.</strong></p>
+<section id="optional-step-1b-make-a-fake-praw-connection-with-the-fake-praw-library">
+<h3>(Optional) Step 1b: Make a fake praw connection with the fake_praw library<a class="headerlink" href="#optional-step-1b-make-a-fake-praw-connection-with-the-fake-praw-library" title="Permalink to this headline">#</a></h3>
+<p>For testing purposes, we’ve added this line of code, which loads a fake version of praw, so it wont actually connect to reddit. <strong>If you want to try to actually connect to reddit, don’t run this line of code.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_tweepy/fake_tweepy.ipynb
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_apis/fake_praw.ipynb
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake tweepy is replacing the tweepy library. Fake Tweepy doesn&#x27;t need real passwords, and prevents you from accessing real twitter</strong></div></div>
+<div class="output text_html"><strong style='color:darkred'>Fake praw is replacing the praw library. Fake praw doesn&#x27;t need real passwords, and prevents you from accessing real reddit</strong></div></div>
 </div>
 </section>
-<section id="load-your-developer-access-passwords">
-<h3>load your developer access passwords<a class="headerlink" href="#load-your-developer-access-passwords" title="Permalink to this headline">#</a></h3>
-<p>To use this on your real twitter account, copy your <span class="xref myst">developer access passwords</span> into the code below, replacing our fake passwords.</p>
+<section id="step-2-load-your-developer-access-passwords">
+<h3>Step 2: Load your developer access passwords<a class="headerlink" href="#step-2-load-your-developer-access-passwords" title="Permalink to this headline">#</a></h3>
+<p>To use this on your real Reddit account, copy your <a class="reference internal" href="../../appendix/bot_set_ups/making_reddit_account.html"><span class="doc std std-doc">developer access passwords</span></a> into the code below, replacing our fake passwords.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load all your developer access passwords into Python</span>
-<span class="c1"># TODO: Put your twitter account&#39;s special developer access passwords below:</span>
-<span class="n">bearer_token</span> <span class="o">=</span> <span class="s2">&quot;n4tossfgsafs_fake_bearer_token_isa53#$%$&quot;</span>
-<span class="n">consumer_key</span> <span class="o">=</span> <span class="s2">&quot;sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG&quot;</span>
-<span class="n">consumer_secret</span> <span class="o">=</span> <span class="s2">&quot;45adf$T$A_fake_consumer_secret_JESdsg&quot;</span>
-<span class="n">access_token</span> <span class="o">=</span> <span class="s2">&quot;56sd5Ss4tsea_fake_access_token_%YE%hDsdr&quot;</span>
-<span class="n">access_token_secret</span> <span class="o">=</span> <span class="s2">&quot;j^$dr_fake_consumer_key_^A5s#DR5s&quot;</span>
+<span class="c1"># TODO: Put your reddit username, password, and special developer access passwords below:</span>
+<span class="n">username</span><span class="o">=</span><span class="s2">&quot;fake_reddit_username&quot;</span>
+<span class="n">password</span><span class="o">=</span><span class="s2">&quot;sa@#4*fdf_fake_password_$%DSG#%DG&quot;</span>
+<span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;45adf$TW_fake_client_id_JESdsg1O&quot;</span>
+<span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;56sd_fake_client_secret_%Yh%&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="give-tweepy-or-fake-tweepy-your-developer-access-passwords">
-<h3>give tweepy (or fake_tweepy) your developer access passwords<a class="headerlink" href="#give-tweepy-or-fake-tweepy-your-developer-access-passwords" title="Permalink to this headline">#</a></h3>
+<section id="step-4-give-praw-or-fake-praw-your-developer-access-passwords">
+<h3>Step 4: Give praw (or fake_praw) your developer access passwords<a class="headerlink" href="#step-4-give-praw-or-fake-praw-your-developer-access-passwords" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Give the tweepy code your developer access passwords so</span>
-<span class="c1"># it can perform twitter actions</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span>
-   <span class="n">bearer_token</span><span class="o">=</span><span class="n">bearer_token</span><span class="p">,</span>
-   <span class="n">consumer_key</span><span class="o">=</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">consumer_secret</span><span class="p">,</span>
-   <span class="n">access_token</span><span class="o">=</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">access_token_secret</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Give the praw code your reddit account info so</span>
+<span class="c1"># it can perform reddit actions</span>
+<span class="n">reddit</span> <span class="o">=</span> <span class="n">praw</span><span class="o">.</span><span class="n">Reddit</span><span class="p">(</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">client_id</span><span class="p">,</span> <span class="n">client_secret</span><span class="o">=</span><span class="n">client_secret</span><span class="p">,</span>
+    <span class="n">user_agent</span><span class="o">=</span><span class="s2">&quot;a custom python script&quot;</span>
 <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to log in to twitter</strong></div></div>
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to collect account info to use on reddit</strong></div></div>
 </div>
 </section>
 </section>
-<section id="find-a-tweet">
-<h2>Find a tweet<a class="headerlink" href="#find-a-tweet" title="Permalink to this headline">#</a></h2>
-<p>Below I have the code to find a recent tweet that has the phrase “cute cat”.</p>
-<p>Don’t worry if you don’t understand this part yet, We are
+<section id="find-a-reddit-submission">
+<h2>Find a Reddit submission<a class="headerlink" href="#find-a-reddit-submission" title="Permalink to this headline">#</a></h2>
+<p>Below I have the code to find a recent Reddit submission on the subreddit “<a class="reference external" href="https://www.reddit.com/r/cuteanimals">cuteanimals</a>” (we’ll get the top post on the default reddit view, called “hot”)..</p>
+<p>Don’t worry if you don’t understand this part yet. We are
 just doing this, so we can get to the point of seeing what tweet data looks like.</p>
-<p><em>Note: If you run this on real twitter, we can’t gurantee anything about how offensive what you might find is. We don’t know of any word search We could guarantee would be safe.</em></p>
+<p><em>Note: If you run this on real reddit, we can’t gurantee anything about how offensive what you might find is.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Choose a search to run</span>
-<span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;&quot;cute cat&quot;&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Look up the subreddit &quot;cuteanimals&quot;, then find the &quot;hot&quot; list, getting up to 1 submission</span>
+<span class="n">submissions</span> <span class="o">=</span> <span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span><span class="s2">&quot;cuteanimals&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">hot</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="c1">#Run the search and request some additional info</span>
-<span class="n">tweets</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">tweet_fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;author_id&quot;</span><span class="p">,</span> <span class="s2">&quot;created_at&quot;</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;lang&quot;</span><span class="p">,</span> <span class="s2">&quot;public_metrics&quot;</span><span class="p">,</span> <span class="s2">&quot;source&quot;</span><span class="p">,</span> <span class="s2">&quot;text&quot;</span><span class="p">])</span>
-
-<span class="c1"># Find the first tweet returned</span>
-<span class="n">recent_tweet</span> <span class="o">=</span> <span class="n">tweets</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="c1"># get the first submission off the list (should only be one anyway)</span>
+<span class="n">recent_submission</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">submissions</span><span class="p">)</span> 
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to search for &#x27;&quot;cute cat&quot;&#x27; and is returning some fake tweets.</strong></div></div>
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to select the subreddit: cuteanimals</strong></div></div>
 </div>
 </section>
-<section id="look-at-data-in-tweet">
-<h2>Look at data in tweet<a class="headerlink" href="#look-at-data-in-tweet" title="Permalink to this headline">#</a></h2>
+<section id="look-at-data-in-reddit-submission">
+<h2>Look at data in Reddit submission<a class="headerlink" href="#look-at-data-in-reddit-submission" title="Permalink to this headline">#</a></h2>
 <p>Now we will look at some of the data that came back!</p>
 <p>Again, don’t worry too much about the code, we want to look at the data and data types.</p>
-<section id="tweet-text">
-<h3>tweet text:<a class="headerlink" href="#tweet-text" title="Permalink to this headline">#</a></h3>
+<section id="submission-title">
+<h3>submission title:<a class="headerlink" href="#submission-title" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the tweet text is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The tweet text is: &quot;</span> <span class="o">+</span> <span class="n">recent_tweet</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the submission title is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">title</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The submission title is: &quot;</span> <span class="o">+</span> <span class="n">recent_submission</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the tweet text is: str&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the submission title is: str&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;The tweet text is: While trying to tweet right now, I am being attacked by my cute cat! It&#39;s so hard to tpye wihsaoae as fesadf asd fssasaf sa&quot;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The submission title is: Look at my cute dog!&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<p>As you can see above, the tweet text is a string (<code class="docutils literal notranslate"><span class="pre">str</span></code>) data type. And while we can’t see any indication here, we know from elsewhere that tweet text is limited to 280 characters in length.</p>
+<p>As you can see above, the title of a submission is a string (<code class="docutils literal notranslate"><span class="pre">str</span></code>) data type.</p>
 </section>
-<section id="tweet-id">
-<h3>tweet id<a class="headerlink" href="#tweet-id" title="Permalink to this headline">#</a></h3>
+<section id="submission-id">
+<h3>submission id<a class="headerlink" href="#submission-id" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the tweet id is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">id</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The tweet tweet id is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the submission id is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">id</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The submission id is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the tweet id is: int&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the submission id is: str&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The tweet tweet id is: 129308937494&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The submission id is: 904tjwdf093j&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<p>The tweet id is an integer number (<code class="docutils literal notranslate"><span class="pre">int</span></code>). This is how the tweet is referred to inside Twitter’s computers. So if someone is replying to a tweet, Twitter just puts which tweet ID they were replying to, and then can look up that tweet if needed.</p>
+<p>The submission id is a piece of text (<code class="docutils literal notranslate"><span class="pre">str</span></code>) that looks like random letters and numbers. This is how the submission is referred to inside Reddit’s computers. So if someone is commenting on a submission, Reddit just puts uses submission ID they were commenting on to see where to display it.</p>
 </section>
-<section id="tweet-author-id">
-<h3>tweet author id<a class="headerlink" href="#tweet-author-id" title="Permalink to this headline">#</a></h3>
+<section id="submission-author-name">
+<h3>submission author name<a class="headerlink" href="#submission-author-name" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the author id is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">author_id</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The tweet author id is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">author_id</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the author name is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The author name is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the author id is: int&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the author name is: str&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The tweet author id is: 239048094385&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The author name is: fake_user&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<p>The author id is an integer number (int). This is how the user who posted the tweet is referred to inside Twitter’s computers. So when twitter wants to display the tweet with the user info, it uses this number to look up the information on that user.</p>
+<p>The author name is an string (<code class="docutils literal notranslate"><span class="pre">str</span></code>). Note recent_submission.author has other information about the author as well as the name.</p>
+</section>
+<section id="submission-edited">
+<h3>submission edited<a class="headerlink" href="#submission-edited" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of edited is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">edited</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The submission edited is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">edited</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of edited is: bool&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The submission edited is: False&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The “edited” field represents whether a submission has been edited or not. It is a boolean true/false value (<code class="docutils literal notranslate"><span class="pre">bool</span></code>).</p>
 </section>
 <section id="tweet-created-at">
 <h3>tweet created at<a class="headerlink" href="#tweet-created-at" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the tweet created at is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">created_at</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The tweet tweet created at is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">created_at</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the tweet created at is: datetime&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The tweet tweet created at is: 2022-02-22 22:22:22+00:00&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>The created at time for the tweet is a special python datetime data type (<code class="docutils literal notranslate"><span class="pre">datetime</span></code>). As you can see, it has the year, month, and day, and then the time in hours, minutes and seconds. It then shows the timezone it is in, in this case: 00:00, which is in <a class="reference external" href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time">Coordinated Universal Time</a>.</p>
-</section>
-<section id="tweet-lang-language">
-<h3>tweet lang (language)<a class="headerlink" href="#tweet-lang-language" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the tweet lang is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">lang</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The tweet tweet lang is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">lang</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the tweet lang is: str&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The tweet tweet lang is: en&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>The language the tweet is made in is a string (<code class="docutils literal notranslate"><span class="pre">str</span></code>). It comes from a set of <a class="reference external" href="https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags">standard language abbreviations</a> and in this case it is “en” which is short for “English”.</p>
-</section>
-<section id="tweet-source-device-that-made-the-tweet">
-<h3>tweet source (device that made the tweet)<a class="headerlink" href="#tweet-source-device-that-made-the-tweet" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the tweet source is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">source</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The tweet tweet source is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">source</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the tweet source is: str&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The tweet tweet source is: Twitter for Android&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>The tweet source is a string (<code class="docutils literal notranslate"><span class="pre">str</span></code>). In this case it is “Twitter for Android” meaning someone posted this tweet from the Twitter App on their Android phone.</p>
-</section>
-<section id="public-metrics">
-<h3>public metrics<a class="headerlink" href="#public-metrics" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the tweet source is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">public_metrics</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The tweet tweet source is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">public_metrics</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the tweet source is: dict&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;The tweet tweet source is: {&#39;retweet_count&#39;: 7, &#39;reply_count&#39;: 3, &#39;like_count&#39;: 6, &#39;quote_count&#39;: 2}&quot;
-</pre></div>
-</div>
-</div>
-</div>
-<p>The public metrics of a tweet are saved in a dictionary (<code class="docutils literal notranslate"><span class="pre">dict</span></code>), which holds a group of values. So let’s look at each of those:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the retweet count is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">public_metrics</span><span class="p">[</span><span class="s1">&#39;retweet_count&#39;</span><span class="p">])</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The retweet count is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">public_metrics</span><span class="p">[</span><span class="s1">&#39;retweet_count&#39;</span><span class="p">]))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the tweet created_utc at is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">created_utc</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The created_utc at is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">created_utc</span><span class="p">))</span>
 
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the reply count is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">public_metrics</span><span class="p">[</span><span class="s1">&#39;reply_count&#39;</span><span class="p">])</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The reply count is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">public_metrics</span><span class="p">[</span><span class="s1">&#39;reply_count&#39;</span><span class="p">]))</span>
-
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the like count is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">public_metrics</span><span class="p">[</span><span class="s1">&#39;like_count&#39;</span><span class="p">])</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The like count is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">public_metrics</span><span class="p">[</span><span class="s1">&#39;like_count&#39;</span><span class="p">]))</span>
-
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the quote count is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">public_metrics</span><span class="p">[</span><span class="s1">&#39;quote_count&#39;</span><span class="p">])</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The quote count is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_tweet</span><span class="o">.</span><span class="n">public_metrics</span><span class="p">[</span><span class="s1">&#39;quote_count&#39;</span><span class="p">]))</span>
+<span class="c1"># convert the utc to a different datetime</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="n">converted_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">created_utc</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the converted_time at is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">converted_time</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The converted_time at is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">converted_time</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the retweet count is: int&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the tweet created_utc at is: int&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The retweet count is: 7&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The created_utc at is: 1673327625&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the reply count is: int&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the converted_time at is: datetime&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The reply count is: 3&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the like count is: int&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The like count is: 6&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the quote count is: int&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The quote count is: 2&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The converted_time at is: 2023-01-09 21:13:45&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<p>The counts for retweets, replies, likes, and quotes are each integer numbers (<code class="docutils literal notranslate"><span class="pre">int</span></code>), indicating how many times the tweet has been retweeted, replied to, liked, or quoted.</p>
+<p>The created at time for the submission is a floating point number (<code class="docutils literal notranslate"><span class="pre">float</span></code>), which is in <a class="reference external" href="https://en.wikipedia.org/wiki/Unix_time">Unix Time</a>, which is the number of seconds since Jan 1, 1970 in the <a class="reference external" href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time">Coordinated Universal Time</a> zone.</p>
+<p>This is not a very useful number, so we use a python library called <code class="docutils literal notranslate"><span class="pre">datetime</span></code> to convert it into a more readable <code class="docutils literal notranslate"><span class="pre">datetime</span></code> data type, which we then can display and read easier.</p>
+</section>
+<section id="number-of-upvotes-score">
+<h3>number of upvotes (score)<a class="headerlink" href="#number-of-upvotes-score" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the score is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">score</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The submission score is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">score</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the score is: int&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The submission score is: 23&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The number of upvotes is called <code class="docutils literal notranslate"><span class="pre">score</span></code> and it is a whole number (<code class="docutils literal notranslate"><span class="pre">int</span></code>).</p>
+</section>
+<section id="upvote-ratio">
+<h3>upvote ratio<a class="headerlink" href="#upvote-ratio" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the upvote ratio is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">upvote_ratio</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The submission upvote ratio is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">upvote_ratio</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the upvote ratio is: float&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The submission upvote ratio is: 0.93&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The upvote ratio (how many upvotes divided by total number of votes including downvotes) is a floating point number (<code class="docutils literal notranslate"><span class="pre">float</span></code>).</p>
+</section>
+<section id="number-of-comments">
+<h3>number of comments<a class="headerlink" href="#number-of-comments" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of num_comments is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">num_comments</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The submission number of comments is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">num_comments</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of num_comments is: int&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The submission number of comments is: 7&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The number of comments is a whole number (<code class="docutils literal notranslate"><span class="pre">int</span></code>). Note: You can also get a data structure of all the comments, but we will look at that later.</p>
+</section>
+<section id="submission-text-selftext">
+<h3>submission text (selftext)<a class="headerlink" href="#submission-text-selftext" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of selftext is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">selftext</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The submission selftext is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">selftext</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of selftext is: str&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The submission selftext is: &#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The submission selftext (the contents of the post if the post isn’t a link url), is a string (<code class="docutils literal notranslate"><span class="pre">str</span></code>). Note that a submission can either be text saved as <code class="docutils literal notranslate"><span class="pre">selftext</span></code>, or a link (e.g., image or news story) saved as <code class="docutils literal notranslate"><span class="pre">url</span></code>.</p>
+</section>
+<section id="submission-url-link">
+<h3>submission url (link)<a class="headerlink" href="#submission-url-link" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of url is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The submission url is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">url</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of url is: str&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The submission url is: example.com/fake_image.jpg&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The submission url is a string (<code class="docutils literal notranslate"><span class="pre">str</span></code>).</p>
 </section>
 </section>
 <section id="still-more">
 <h2>Still more!<a class="headerlink" href="#still-more" title="Permalink to this headline">#</a></h2>
-<p>In addition to the data we looked at above, there are even more options for tweets such as:</p>
-<ul class="simple">
-<li><p>conversation_id: For tracking which tweets are in the same conversation, like replies and threads)</p></li>
-<li><p>geo: For the location where a tweet was posted (I think default privacy settings now leave this blank)</p></li>
-<li><p>organic_metrics: For the account that made the tweet, they can see how many people looked at it, or clicked on the user profile</p></li>
-</ul>
-<p>You can read more about all this data and more in the <a class="reference external" href="https://developer.twitter.com/en/docs/twitter-api/data-dictionary/object-model/tweet">official twitter API documentation</a> (which is admittedly, a little hard to read and make sense of).</p>
+<p>In addition to the data we looked at above, there are even more options for reddit submissions, which you can see in the table of “attributes” at the top of the <a class="reference external" href="https://praw.readthedocs.io/en/stable/code_overview/models/submission.html">PRAW library page on Submissions</a>. You can also see the “attributes tables in the PRAW library pages for <a class="reference external" href="https://praw.readthedocs.io/en/stable/code_overview/models/redditor.html">Redditors</a> and <a class="reference external" href="https://praw.readthedocs.io/en/stable/code_overview/models/comment.html">Comments</a></p>
 </section>
 </section>
 

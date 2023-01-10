@@ -515,23 +515,47 @@ def get_users_following(id="", max_results=5):
 # In[10]:
 
 
-def submit(title, selftext=""):
-    print_info("Fake praw is pretending to submit a post with the title: \""+title+"\" and the content: "+ selftext)
+def hot(limit=10):
+    submission_list = [
+        SimpleNamespace(
+            id = "904tjwdf093j",
+            title = "Look at my cute dog!", 
+            author = SimpleNamespace(
+                name="fake_user"
+            ),
+            edited = False,
+            created_utc = 1673327625,
+            score = 23,
+            upvote_ratio = .93,
+            num_comments = 7,
+            selftext = "",
+            url = "example.com/fake_image.jpg"
+            )
+    ]
+    return iter(submission_list)
 
 
 # In[11]:
 
 
+def submit(title, selftext=""):
+    print_info("Fake praw is pretending to submit a post with the title: \""+title+"\" and the content: "+ selftext)
+
+
+# In[12]:
+
+
 def subreddit(subreddit_name):
     print_info("Fake praw is pretending to select the subreddit: " + str(subreddit_name))
     return SimpleNamespace(
-      submit = submit
+      submit = submit,
+      hot = hot
     )
 
 
 # 
 
-# In[12]:
+# In[13]:
 
 
 def client_creator(username="", password="", client_id="", client_secret="", user_agent="" ):
@@ -541,7 +565,7 @@ def client_creator(username="", password="", client_id="", client_secret="", use
     )
 
 
-# In[13]:
+# In[14]:
 
 
 praw = SimpleNamespace(
