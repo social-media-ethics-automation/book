@@ -1,6 +1,6 @@
 # Design Activity: Data and Social media
 
-Open a social media interface (not Twitter) and navigate around:
+Open a social media interface (not Reddit) and navigate around:
 Identify different pieces of data on the site and answer these questions:
 - What is the piece of data you see?
 - What data types might be used to represent that data on a computer?

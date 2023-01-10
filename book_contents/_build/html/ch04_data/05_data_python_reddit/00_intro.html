@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>4.5.4. Design Activity: Data and Social media &#8212; Social Media, Ethics, and Automation</title>
+    <title>4.5. Data in Python and Reddit &#8212; Social Media, Ethics, and Automation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="4.6. Reflection: Ethics of Choosing Data Representation" href="../06_reflection_in_data_design.html" />
-    <link rel="prev" title="4.5.3. Demo: Data from a Tweet" href="03_demo_data_from_twitter.html" />
+    <link rel="next" title="4.5.1. Demo: Python Basic Data Types" href="01_demo_data.html" />
+    <link rel="prev" title="4.4. How Data Informs Ethics" href="../04_data_informing_ethics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -428,15 +428,15 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
-    <a class="reference internal" href="00_intro.html">
-     4.5. Data in Python and Twitter
+    <a class="current reference internal" href="#">
+     4.5. Data in Python and Reddit
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
     <label for="toctree-checkbox-10">
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="current">
+    <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="01_demo_data.html">
        4.5.1. Demo: Python Basic Data Types
@@ -448,12 +448,12 @@ const thebe_selector_output = ".output, .cell_output"
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="03_demo_data_from_twitter.html">
-       4.5.3. Demo: Data from a Tweet
+      <a class="reference internal" href="03_demo_data_from_reddit.html">
+       4.5.3. Demo: Data from a Reddit Post
       </a>
      </li>
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
+     <li class="toctree-l3">
+      <a class="reference internal" href="04_activity.html">
        4.5.4. Design Activity: Data and Social media
       </a>
      </li>
@@ -1474,7 +1474,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../appendix/solutions/00_solutions.html">
-   Practice Solutions (Twitter)
+   Practice Solutions
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" type="checkbox"/>
   <label for="toctree-checkbox-38">
@@ -1554,9 +1554,14 @@ const thebe_selector_output = ".output, .cell_output"
      Practice: Statements and Variables
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/alternate_apis/ch4_05_03_demo_data_from_twitter.html">
+     Demo: Data from a Tweet
+    </a>
+   </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../appendix/alternate_apis/solutions/00_solutions.html">
-     Practice Solutions
+     Practice Solutions (Twitter)
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-40" name="toctree-checkbox-40" type="checkbox"/>
     <label for="toctree-checkbox-40">
@@ -1587,6 +1592,11 @@ const thebe_selector_output = ".output, .cell_output"
      <li class="toctree-l3">
       <a class="reference internal" href="../../appendix/alternate_apis/solutions/08_solution_sentiment_and_loop_vars.html">
        Ch 8 Practice: Sentiment Analysis and Loop Variables
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../appendix/alternate_apis/solutions/09_solution_functions.html">
+       Ch 9 Practice: Functions
       </a>
      </li>
      <li class="toctree-l3">
@@ -1698,7 +1708,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/kylethayer/social_media_ethics_automation_v0/issues/new?title=Issue%20on%20page%20%2Fch04_data/05_data_python_twitter/04_activity.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/kylethayer/social_media_ethics_automation_v0/issues/new?title=Issue%20on%20page%20%2Fch04_data/05_data_python_reddit/00_intro.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1726,7 +1736,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/ch04_data/05_data_python_twitter/04_activity.md"
+        <a href="../../_sources/ch04_data/05_data_python_reddit/00_intro.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1775,7 +1785,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Design Activity: Data and Social media</h1>
+                <h1>Data in Python and Reddit</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1787,20 +1797,17 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="design-activity-data-and-social-media">
-<h1><span class="section-number">4.5.4. </span>Design Activity: Data and Social media<a class="headerlink" href="#design-activity-data-and-social-media" title="Permalink to this headline">#</a></h1>
-<p>Open a social media interface (not Twitter) and navigate around:
-Identify different pieces of data on the site and answer these questions:</p>
-<ul class="simple">
-<li><p>What is the piece of data you see?</p></li>
-<li><p>What data types might be used to represent that data on a computer?</p></li>
-<li><p>How is this data a simplification of reality? That is, what does it not capture? Who does it work best for, and who does it not work well for?</p></li>
-<li><p>Did the user(s) directly provide that data, or was it collected automatically by the social media site?</p></li>
+  <section class="tex2jax_ignore mathjax_ignore" id="data-in-python-and-reddit">
+<h1><span class="section-number">4.5. </span>Data in Python and Reddit<a class="headerlink" href="#data-in-python-and-reddit" title="Permalink to this headline">#</a></h1>
+<p>Now we will look at ways data is represented in Python and what data is available from Reddit.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="01_demo_data.html">4.5.1. Demo: Python Basic Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_practice_data.html">4.5.2. Practice: Python Basic Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_demo_data_from_reddit.html">4.5.3. Demo: Data from a Reddit Post</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_activity.html">4.5.4. Design Activity: Data and Social media</a></li>
 </ul>
-<p>Also ask:</p>
-<ul class="simple">
-<li><p>What other data do you think the social media site is collecting that is not being shown?</p></li>
-</ul>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1816,7 +1823,7 @@ Identify different pieces of data on the site and answer these questions:</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./ch04_data\05_data_python_twitter"
+            path: "./ch04_data\05_data_python_reddit"
         },
         predefinedOutput: true
     }
@@ -1830,17 +1837,17 @@ Identify different pieces of data on the site and answer these questions:</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="03_demo_data_from_twitter.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../04_data_informing_ethics.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">4.5.3. </span>Demo: Data from a Tweet</p>
+            <p class="prev-next-title"><span class="section-number">4.4. </span>How Data Informs Ethics</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../06_reflection_in_data_design.html" title="next page">
+    <a class='right-next' id="next-link" href="01_demo_data.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.6. </span>Reflection: Ethics of Choosing Data Representation</p>
+        <p class="prev-next-title"><span class="section-number">4.5.1. </span>Demo: Python Basic Data Types</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

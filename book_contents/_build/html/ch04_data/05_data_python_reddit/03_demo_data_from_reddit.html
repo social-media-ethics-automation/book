@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>4.5.3. Demo: Data from a Tweet &#8212; Social Media, Ethics, and Automation</title>
+    <title>4.5.3. Demo: Data from a Reddit Post &#8212; Social Media, Ethics, and Automation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -449,7 +449,7 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       4.5.3. Demo: Data from a Tweet
+       4.5.3. Demo: Data from a Reddit Post
       </a>
      </li>
      <li class="toctree-l3">
@@ -1474,7 +1474,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../appendix/solutions/00_solutions.html">
-   Practice Solutions (Twitter)
+   Practice Solutions
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" type="checkbox"/>
   <label for="toctree-checkbox-38">
@@ -1554,9 +1554,14 @@ const thebe_selector_output = ".output, .cell_output"
      Practice: Statements and Variables
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/alternate_apis/ch4_05_03_demo_data_from_twitter.html">
+     Demo: Data from a Tweet
+    </a>
+   </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../appendix/alternate_apis/solutions/00_solutions.html">
-     Practice Solutions
+     Practice Solutions (Twitter)
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-40" name="toctree-checkbox-40" type="checkbox"/>
     <label for="toctree-checkbox-40">
@@ -1587,6 +1592,11 @@ const thebe_selector_output = ".output, .cell_output"
      <li class="toctree-l3">
       <a class="reference internal" href="../../appendix/alternate_apis/solutions/08_solution_sentiment_and_loop_vars.html">
        Ch 8 Practice: Sentiment Analysis and Loop Variables
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../appendix/alternate_apis/solutions/09_solution_functions.html">
+       Ch 9 Practice: Functions
       </a>
      </li>
      <li class="toctree-l3">
@@ -1667,7 +1677,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/kylethayer/social_media_ethics_automation_v0/main?urlpath=lab/tree/book_contents/ch04_data/05_data_python_twitter/03_demo_data_from_twitter.ipynb"
+        <a href="https://mybinder.org/v2/gh/kylethayer/social_media_ethics_automation_v0/main?urlpath=lab/tree/book_contents/ch04_data/05_data_python_reddit/03_demo_data_from_reddit.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1727,7 +1737,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/kylethayer/social_media_ethics_automation_v0/issues/new?title=Issue%20on%20page%20%2Fch04_data/05_data_python_twitter/03_demo_data_from_twitter.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/kylethayer/social_media_ethics_automation_v0/issues/new?title=Issue%20on%20page%20%2Fch04_data/05_data_python_reddit/03_demo_data_from_reddit.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1755,7 +1765,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/ch04_data/05_data_python_twitter/03_demo_data_from_twitter.ipynb"
+        <a href="../../_sources/ch04_data/05_data_python_reddit/03_demo_data_from_reddit.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -1901,7 +1911,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Demo: Data from a Tweet</h1>
+                <h1>Demo: Data from a Reddit Post</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1999,10 +2009,10 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="demo-data-from-a-tweet">
-<h1><span class="section-number">4.5.3. </span>Demo: Data from a Tweet<a class="headerlink" href="#demo-data-from-a-tweet" title="Permalink to this headline">#</a></h1>
-<p>Let’s see what the data actually looks like from a Tweet!</p>
-<p>First we need to do our normal twitter login steps (and optional fake tweepy step)</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="demo-data-from-a-reddit-post">
+<h1><span class="section-number">4.5.3. </span>Demo: Data from a Reddit Post<a class="headerlink" href="#demo-data-from-a-reddit-post" title="Permalink to this headline">#</a></h1>
+<p>Let’s see what the data actually looks like from a Reddit Post!</p>
+<p>First we need to do our normal Reddit login steps (and optional fake tweepy step)</p>
 <section id="log-into-tweepy-or-fake-tweepy">
 <h2>Log into tweepy (or fake tweepy)<a class="headerlink" href="#log-into-tweepy-or-fake-tweepy" title="Permalink to this headline">#</a></h2>
 <section id="id1">
@@ -2302,7 +2312,7 @@ just doing this, so we can get to the point of seeing what tweet data looks like
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./ch04_data\05_data_python_twitter"
+            path: "./ch04_data\05_data_python_reddit"
         },
         predefinedOutput: true
     }
