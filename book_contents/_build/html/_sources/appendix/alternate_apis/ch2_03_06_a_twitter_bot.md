@@ -1,4 +1,4 @@
-# A program that posts one tweet
+# Ch 2.3.6 A program that posts one tweet
 Below is a computer program written in the Python programming language. The program will post a single tweet that says: "This tweet was posted by a computer program!". Since this is a computer program that posts on twitter, we would call this program a twitter bot.
 
 Don't worry if you don't understand any of this Python code yet; we will build an understanding of code like this throughout the book.

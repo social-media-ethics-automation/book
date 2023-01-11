@@ -59,12 +59,12 @@ fourth_chapter = some_book_chapters[3]
 display(fourth_chapter)
 
 
-# Now, let's say we have a list of Twitter users who liked our latest tweet:
+# Now, let's say we have a list of users who liked our latest social media post:
 
 # In[5]:
 
 
-users_who_liked_our_tweet = ["@pretend_user_1", "@pretend_user_2", "@pretend_user_3"]
+users_who_liked_our_post = ["@pretend_user_1", "@pretend_user_2", "@pretend_user_3"]
 
 
 # What if we wanted to follow all of them?
@@ -81,15 +81,15 @@ users_who_liked_our_tweet = ["@pretend_user_1", "@pretend_user_2", "@pretend_use
 # In[6]:
 
 
-for user in users_who_liked_our_tweet:
-    display("Yay! " + user + " liked our tweet!")
+for user in users_who_liked_our_post:
+    display("Yay! " + user + " liked our post!")
 
 
 # Now, there are several things that went into making that for loop code above:
 # - Start the line with a `for`
 # - Make up a new variable name that will be a temporary variable to hold whichever item from the list we are doing our actions on. In this case each item in the list will be a user, so we call our variable `user`
 # - Then we write the word `in` 
-# - Then we put the list that we want to go through, in this case `users_who_liked_our_tweet'
+# - Then we put the list that we want to go through, in this case `users_who_liked_our_post'
 # - Then put a colon (`:`). In Python, a colon like this means that what comes next is a block of statements that goes together. This block of statements is indented over to indicate that it is part of the block.
 # - Then, on the next line and indented over, we have our display function that uses the `user` variable. This is the line of code that is repeated for each item in the list.
 # 
@@ -98,10 +98,10 @@ for user in users_who_liked_our_tweet:
 # In[7]:
 
 
-for user in users_who_liked_our_tweet:
-    print("Yay! " + user + " liked our tweet!")
+for user in users_who_liked_our_post:
+    print("Yay! " + user + " liked our post!")
     print("Perhaps we should follow " + user)
-    print("We could put tweepy code here to do that!")
+    print("We could put code here to do that!")
     print()
 
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Demo: Try Running the Twitter Bot!
+# # Ch 2.3.8 Demo: Try Running the Twitter Bot!
 
 # ## Running this Jupyter Notebook
 # This page is called a "Jupyter Notebook" which it is a text page that has runnable Python code in it.

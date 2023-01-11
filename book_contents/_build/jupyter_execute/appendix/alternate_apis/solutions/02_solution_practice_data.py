@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Ch 4 Practice: Python Basic Data Types
+# # Ch 4 (Twitter) Practice: Python Basic Data Types
 
 # ## Greeting
 # Make a new variable called `greeting_part_1` and assign it the string: `"Welcome, "`

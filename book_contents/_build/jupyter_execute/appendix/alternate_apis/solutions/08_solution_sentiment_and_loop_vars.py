@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Ch 8 Practice: Sentiment Analysis and Loop Variables
+# # Ch 8 (Twitter) Practice: Sentiment Analysis and Loop Variables
 
 # Now it's your turn to practice sentiment analysis and loop variables
 # 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Ch 7 Practice: Conditionals and String Manipulation
+# # Ch 7 (Twitter) Practice: Conditionals and String Manipulation
 
 # ## IF ELSE Statements
 # Look at the following code example and try running it

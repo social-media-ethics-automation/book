@@ -1,4 +1,4 @@
-# Understanding the Twitter Bot Code
+# Ch 2.3.7 Understanding the Twitter Bot Code
 
 Let's look more at that program that posts one tweet.
 

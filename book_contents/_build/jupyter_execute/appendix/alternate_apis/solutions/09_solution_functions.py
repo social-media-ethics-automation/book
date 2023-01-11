@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Ch 9 Practice: Functions
+# # Ch 9 (Twitter) Practice: Functions
 
 # Create a function called `say_goodbye` which displays the text "Goodbye!"
 

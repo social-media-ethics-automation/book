@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Ch 5 Practice: Looping through lists and dictionaries
+# # Ch 5 (Twitter) Practice: Looping through lists and dictionaries
 # Try out these coding problems to practice looping, lists, and dictionaries
 
 # Make a loop that displays "Are you awake yet?" 5 times

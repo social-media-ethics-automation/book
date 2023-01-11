@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Practice: Statements and Variables
+# # Ch 3.3.3 Practice: Statements and Variables (Twitter)
 
 # This Python Notebook is a chance for you to try out the programming concepts we have covered thus far.
 # 

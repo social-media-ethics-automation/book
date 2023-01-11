@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Demo: Dictionaries
+# # Ch 5.4.2 Demo: Dictionaries (Twitter)
 # 
 # We've talked about lists, but the other data organization we need to work with social media data is `dictionaries`.
 # 
