@@ -1534,27 +1534,32 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../appendix/alternate_apis/ch2_03_06_a_twitter_bot.html">
-     A program that posts one tweet
+     Ch 2.3.6 A program that posts one tweet
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../appendix/alternate_apis/ch2_03_07_details_of_bot.html">
-     Understanding the Twitter Bot Code
+     Ch 2.3.7 Understanding the Twitter Bot Code
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../appendix/alternate_apis/ch2_03_08_demo.html">
-     Demo: Try Running the Twitter Bot!
+     Ch 2.3.8 Demo: Try Running the Twitter Bot!
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../appendix/alternate_apis/ch3_03_03_practice_statements_variables_sleep.html">
-     Practice: Statements and Variables
+     Ch 3.3.3 Practice: Statements and Variables (Twitter)
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../appendix/alternate_apis/ch4_05_03_demo_data_from_twitter.html">
-     Demo: Data from a Tweet
+     Ch 4.5.3 Demo: Data from a Tweet
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/alternate_apis/ch5_04_02_demo_dictionaries.html">
+     Ch 5.4.2 Demo: Dictionaries (Twitter)
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -1569,32 +1574,32 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../appendix/alternate_apis/solutions/01_solution_practice_statements_variables_sleep.html">
-       Ch 3 Practice: Statements and Variables
+       Ch 3 (Twitter) Practice: Statements and Variables
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../appendix/alternate_apis/solutions/02_solution_practice_data.html">
-       Ch 4 Practice: Python Basic Data Types
+       Ch 4 (Twitter) Practice: Python Basic Data Types
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../appendix/alternate_apis/solutions/03_practice_lists_dictionaries.html">
-       Ch 5 Practice: Looping through lists and dictionaries
+       Ch 5 (Twitter) Practice: Looping through lists and dictionaries
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../appendix/alternate_apis/solutions/07_practice_strings_conditionals.html">
-       Ch 7 Practice: Conditionals and String Manipulation
+       Ch 7 (Twitter) Practice: Conditionals and String Manipulation
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../appendix/alternate_apis/solutions/08_solution_sentiment_and_loop_vars.html">
-       Ch 8 Practice: Sentiment Analysis and Loop Variables
+       Ch 8 (Twitter) Practice: Sentiment Analysis and Loop Variables
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../appendix/alternate_apis/solutions/09_solution_functions.html">
-       Ch 9 Practice: Functions
+       Ch 9 (Twitter) Practice: Functions
       </a>
      </li>
      <li class="toctree-l3">
@@ -2347,13 +2352,19 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hot</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">AuthorSimplishNamespace</span><span class="p">(</span><span class="n">SimplishNamespace</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">hot</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
     <span class="n">submission_list</span> <span class="o">=</span> <span class="p">[</span>
         <span class="n">SimpleNamespace</span><span class="p">(</span>
             <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;904tjwdf093j&quot;</span><span class="p">,</span>
             <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Look at my cute dog!&quot;</span><span class="p">,</span> 
-            <span class="n">author</span> <span class="o">=</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
-                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;fake_user&quot;</span>
+            <span class="n">author</span> <span class="o">=</span> <span class="n">AuthorSimplishNamespace</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;fake_user&quot;</span><span class="p">,</span>
+                <span class="fm">__str__</span> <span class="o">=</span> <span class="k">lambda</span> <span class="p">:</span> <span class="s2">&quot;fake_user&quot;</span>
             <span class="p">),</span>
             <span class="n">edited</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
             <span class="n">created_utc</span> <span class="o">=</span> <span class="mi">1673327625</span><span class="p">,</span>
@@ -2362,7 +2373,35 @@ title="Print to PDF"
             <span class="n">num_comments</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span>
             <span class="n">selftext</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
             <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;example.com/fake_image.jpg&quot;</span>
-            <span class="p">)</span>
+        <span class="p">),</span>
+        <span class="n">SimpleNamespace</span><span class="p">(</span>
+            <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;lk457j2l63&quot;</span><span class="p">,</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;A baby lizard!&quot;</span><span class="p">,</span> 
+            <span class="n">author</span> <span class="o">=</span> <span class="n">AuthorSimplishNamespace</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;pretend_user&quot;</span>
+            <span class="p">),</span>
+            <span class="n">edited</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="n">created_utc</span> <span class="o">=</span> <span class="mi">1673317625</span><span class="p">,</span>
+            <span class="n">score</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+            <span class="n">upvote_ratio</span> <span class="o">=</span> <span class="mf">.5</span><span class="p">,</span>
+            <span class="n">num_comments</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="n">selftext</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;example.com/pretend_image.jpg&quot;</span>
+        <span class="p">),</span>
+        <span class="n">SimpleNamespace</span><span class="p">(</span>
+            <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;oiu45kje&quot;</span><span class="p">,</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;The cutest bird ever!&quot;</span><span class="p">,</span> 
+            <span class="n">author</span> <span class="o">=</span> <span class="n">AuthorSimplishNamespace</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;imaginary_user&quot;</span>
+            <span class="p">),</span>
+            <span class="n">edited</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="n">created_utc</span> <span class="o">=</span> <span class="mi">1673307625</span><span class="p">,</span>
+            <span class="n">score</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span>
+            <span class="n">upvote_ratio</span> <span class="o">=</span> <span class="mf">.9</span><span class="p">,</span>
+            <span class="n">num_comments</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+            <span class="n">selftext</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;example.com/imaginary_image.jpg&quot;</span>
+        <span class="p">),</span>
     <span class="p">]</span>
     <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="n">submission_list</span><span class="p">)</span>
 </pre></div>

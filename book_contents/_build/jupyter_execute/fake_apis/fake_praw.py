@@ -515,13 +515,19 @@ def get_users_following(id="", max_results=5):
 # In[10]:
 
 
+class AuthorSimplishNamespace(SimplishNamespace):
+    def __str__(self):
+        return self.name
+    pass
+
 def hot(limit=10):
     submission_list = [
         SimpleNamespace(
             id = "904tjwdf093j",
             title = "Look at my cute dog!", 
-            author = SimpleNamespace(
-                name="fake_user"
+            author = AuthorSimplishNamespace(
+                name="fake_user",
+                __str__ = lambda : "fake_user"
             ),
             edited = False,
             created_utc = 1673327625,
@@ -530,7 +536,35 @@ def hot(limit=10):
             num_comments = 7,
             selftext = "",
             url = "example.com/fake_image.jpg"
-            )
+        ),
+        SimpleNamespace(
+            id = "lk457j2l63",
+            title = "A baby lizard!", 
+            author = AuthorSimplishNamespace(
+                name="pretend_user"
+            ),
+            edited = True,
+            created_utc = 1673317625,
+            score = 10,
+            upvote_ratio = .5,
+            num_comments = 1,
+            selftext = "",
+            url = "example.com/pretend_image.jpg"
+        ),
+        SimpleNamespace(
+            id = "oiu45kje",
+            title = "The cutest bird ever!", 
+            author = AuthorSimplishNamespace(
+                name="imaginary_user"
+            ),
+            edited = False,
+            created_utc = 1673307625,
+            score = 30,
+            upvote_ratio = .9,
+            num_comments = 10,
+            selftext = "",
+            url = "example.com/imaginary_image.jpg"
+        ),
     ]
     return iter(submission_list)
 

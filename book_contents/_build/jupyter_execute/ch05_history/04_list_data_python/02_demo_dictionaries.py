@@ -73,25 +73,26 @@ display(user_1_follows)
 # When we go through data from twitter, sometimes we will need to use `.` to get parts of the information out of objects, and sometimes we will need to use `[" "]` to get information out of dictionaries.
 
 # ## Looping through lists of dictionaries
-# Now that we've seen loops, lists, and dictionaries, we can go back to Twitter, run a search and look through multiple tweets:
+# Now that we've seen loops, lists, and dictionaries, we can go to Reddit, run a search and look through multiple submissions:
 
-# ### load tweepy library
+# ### load praw library
 
 # In[6]:
 
 
-# Load some code called "tweepy" that will help us work with twitter
-import tweepy
+# Load some code called "praw" that will help us work with reddit
+import praw
 
 
-# ### (optional) make a fake twitter connection with the fake_tweepy library
+# ### (Optional) make a fake praw connection with the fake_praw library
+# For testing purposes, we've added this line of code, which loads a fake version of praw, so it wont actually connect to reddit. __If you want to try to actually connect to reddit, don't run this line of code.__
 
 # For testing purposes, we’ve added this line of code, which loads a fake version of tweepy, so it wont actually connect to twitter. __If you want to try to actually connect to twitter, don’t run this line of code.__
 
 # In[7]:
 
 
-get_ipython().run_line_magic('run', '../../fake_tweepy/fake_tweepy.ipynb')
+get_ipython().run_line_magic('run', '../../fake_apis/fake_praw.ipynb')
 
 
 # ### load your developer access passwords
@@ -100,59 +101,61 @@ get_ipython().run_line_magic('run', '../../fake_tweepy/fake_tweepy.ipynb')
 
 
 # Load all your developer access passwords into Python
-# TODO: Put your twitter account's special developer access passwords below:
-bearer_token = "n4tossfgsafs_fake_bearer_token_isa53#$%$"
-consumer_key = "sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG"
-consumer_secret = "45adf$T$A_fake_consumer_secret_JESdsg"
-access_token = "56sd5Ss4tsea_fake_access_token_%YE%hDsdr"
-access_token_secret = "j^$dr_fake_consumer_key_^A5s#DR5s"
+# TODO: Put your reddit username, password, and special developer access passwords below:
+username="fake_reddit_username"
+password="sa@#4*fdf_fake_password_$%DSG#%DG"
+client_id="45adf$TW_fake_client_id_JESdsg1O"
+client_secret="56sd_fake_client_secret_%Yh%"
 
 
-# ### give tweepy (or fake_tweepy) your developer access passwords
+# ### give praw (or fake_praw) your developer access passwords
 
 # In[9]:
 
 
-# Give the tweepy code your developer access passwords so
-# it can perform twitter actions
-client = tweepy.Client(
-   bearer_token=bearer_token,
-   consumer_key=consumer_key, consumer_secret=consumer_secret,
-   access_token=access_token, access_token_secret=access_token_secret
+# Give the praw code your reddit account info so
+# it can perform reddit actions
+reddit = praw.Reddit(
+    username=username, password=password,
+    client_id=client_id, client_secret=client_secret,
+    user_agent="a custom python script"
 )
 
 
-# ### find a list of tweets
-# We can now do a search and find a list of tweets.
+# ### find a list of submissions
+# We can now do a search and find a list of submissions.
 # 
-# _Note: If you run this on real twitter, we can’t gurantee anything about how offensive what you might find is. We don’t know of any word search we could guarantee would be safe._
+# _Note: If you run this on real reddit, we can’t gurantee anything about how offensive what you might find is._
 
 # In[10]:
 
 
-# Choose a search to run
-query = '"cute cat"'
+# Look up the subreddit "cuteanimals", then find the "hot" list, getting up to 10 submission
+submissions = reddit.subreddit("cuteanimals").hot(limit=10)
 
-#Run the search and request some additional info
-tweets_info = client.search_recent_tweets(query=query, tweet_fields=["author_id", "created_at", "id", "lang", "public_metrics", "source", "text"])
+# Note: The submissions come back from Reddit as an
+# "iterator" instead of a "list." We can write our
+# normal for loops with it as an iterator, but we will
+# turn it into a list, since we are using those in this class
 
-# Get the actual list of tweets out of the data field (tweets_info also has metadata about our search)
-tweets_list = tweets_info.data
+submissions_list = list(submissions)
 
 
-# ## Loop through the list of tweets
-# The variable `tweets_list` now has a list of tweet. So we can use a for loop to go through each tweet, and then use `.` to access info from each tweet (other pieces of information would need `[" "]` to access).
+# ## Loop through the list of submissions
+# The variable `submissions_list` now has a list of Reddit submissions. So we can use a for loop to go through each submission, and then use `.` to access info from each tweet (other pieces of information would need `[" "]` to access).
 # 
 # For each of the tweets, we will use `print` to display information about the tweet
 
 # In[11]:
 
 
-for tweet in tweets_list:
-    print("Info for tweet with id: " + str(tweet.id))
-    print("  author_id: " + str(tweet.author_id))
-    print("  created_at: " + str(tweet.created_at))
-    print("  source: " + str(tweet.source))
-    print("  text: " + str(tweet.text))
+for submission in submissions_list:
+    print("Info for submission with id: " + str(submission.id))
+    print("  title: " + str(submission.title))
+    print("  author: " + str(submission.author))
+    print("  created_utc: " + str(submission.created_utc))
+    print("  selftext: " + str(submission.selftext))
+    print("  url: " + str(submission.url))
+    print("  score (upvotes): " + str(submission.score))
     print()
 

@@ -5,7 +5,7 @@
 # Let's see what the data actually looks like from a Reddit Post!
 # 
 # First we need to do our normal Reddit login steps (and optional fake praw step)
-# ## Log into tweepy (or fake tweepy)
+# ## Log into Praw (or fake praw)
 # ### Load Praw library
 
 # In[1]:

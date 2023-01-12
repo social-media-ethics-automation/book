@@ -28,3 +28,6 @@ Kumail Nanjiani was a star of the [Silicon Valley](https://www.imdb.com/title/tt
 ## Reflection questions:
 - What do you think is the responsibility of tech workers to think through the ethical implications of what they are making?
 - Why do you think the people who Kumail talked to didn't have answers to his questions?
+
+
+% Add a see also torment nexus: https://twitter.com/alexblechman/status/1457842724128833538, technical debt

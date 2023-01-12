@@ -1,16 +1,21 @@
-# Reflection Activities: Compare Social Media Designs
+# Reflection Activities: Actions on Social Media Designs
+
+## Comparing social media actions
+Open two social media sites and choose equivalent views on each (e.g., a list of posts, an individual post, an author page etc.).
+
+List what actions are immediately available.
+
+Then explore and see what actions are available with after one additional action (e.g., openeing a menu), then what actions are two steps away.
+
+- What do you notice about the similarities and differences in these sites?
 
 
-## Compare social media designs
-Choose two social media sites ([here is a big list](https://en.wikipedia.org/wiki/List_of_social_networking_services)) and look at their interfaces:
-- List the information and actions that are immediately available on equivalent views on each site (e.g., their feed, or a view of a post, or a view of a user profile)
-- Why do you think each of these sites choose to emphasize, hide, or even disallow?
-- How do you think these decisions change how people behave on these sites?
+## Design a social media site
+Now it's your turn to try designing a social media site. 
 
+Decide a type of social media site (e.g., a video site like youtube or tiktok, or a dating site, etc.), and a particular view of that site (e.g., profile picutre, post, comment, etc.).
 
-- list actions that are immediately available (one tap or click or something)
-- list actions that are one step removed (two taps)
-- list actions that are three steps removed
-
-
-possibly Following what you did in the data chapter, design a social media platform interface, but this time focus on what actions are available 
+Draw a rough sketch of the view of the site, and then make a list of:
+- What actions would you want available immediately
+- What actions would you want one or two steps away?
+- What actions would you not allow users to do (e.g., there is no botton anywhere that will let you delete someone else's account)?

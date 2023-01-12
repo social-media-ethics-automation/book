@@ -1536,22 +1536,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../appendix/alternate_apis/ch2_03_06_a_twitter_bot.html">
-     A program that posts one tweet
+     Ch 2.3.6 A program that posts one tweet
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../appendix/alternate_apis/ch2_03_07_details_of_bot.html">
-     Understanding the Twitter Bot Code
+     Ch 2.3.7 Understanding the Twitter Bot Code
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../appendix/alternate_apis/ch2_03_08_demo.html">
-     Demo: Try Running the Twitter Bot!
+     Ch 2.3.8 Demo: Try Running the Twitter Bot!
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../appendix/alternate_apis/ch3_03_03_practice_statements_variables_sleep.html">
-     Practice: Statements and Variables
+     Ch 3.3.3 Practice: Statements and Variables (Twitter)
     </a>
    </li>
    <li class="toctree-l2">
@@ -1561,7 +1561,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../appendix/alternate_apis/ch5_04_02_demo_dictionaries.html">
-     Demo: Dictionaries
+     Ch 5.4.2 Demo: Dictionaries (Twitter)
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -1576,32 +1576,32 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../../appendix/alternate_apis/solutions/01_solution_practice_statements_variables_sleep.html">
-       Ch 3 Practice: Statements and Variables
+       Ch 3 (Twitter) Practice: Statements and Variables
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../appendix/alternate_apis/solutions/02_solution_practice_data.html">
-       Ch 4 Practice: Python Basic Data Types
+       Ch 4 (Twitter) Practice: Python Basic Data Types
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../appendix/alternate_apis/solutions/03_practice_lists_dictionaries.html">
-       Ch 5 Practice: Looping through lists and dictionaries
+       Ch 5 (Twitter) Practice: Looping through lists and dictionaries
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../appendix/alternate_apis/solutions/07_practice_strings_conditionals.html">
-       Ch 7 Practice: Conditionals and String Manipulation
+       Ch 7 (Twitter) Practice: Conditionals and String Manipulation
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../appendix/alternate_apis/solutions/08_solution_sentiment_and_loop_vars.html">
-       Ch 8 Practice: Sentiment Analysis and Loop Variables
+       Ch 8 (Twitter) Practice: Sentiment Analysis and Loop Variables
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../appendix/alternate_apis/solutions/09_solution_functions.html">
-       Ch 9 Practice: Functions
+       Ch 9 (Twitter) Practice: Functions
       </a>
      </li>
      <li class="toctree-l3">
@@ -1851,13 +1851,13 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#load-tweepy-library">
-     load tweepy library
+    <a class="reference internal nav-link" href="#load-praw-library">
+     load praw library
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#optional-make-a-fake-twitter-connection-with-the-fake-tweepy-library">
-     (optional) make a fake twitter connection with the fake_tweepy library
+    <a class="reference internal nav-link" href="#optional-make-a-fake-praw-connection-with-the-fake-praw-library">
+     (Optional) make a fake praw connection with the fake_praw library
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -1866,20 +1866,20 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#give-tweepy-or-fake-tweepy-your-developer-access-passwords">
-     give tweepy (or fake_tweepy) your developer access passwords
+    <a class="reference internal nav-link" href="#give-praw-or-fake-praw-your-developer-access-passwords">
+     give praw (or fake_praw) your developer access passwords
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#find-a-list-of-tweets">
-     find a list of tweets
+    <a class="reference internal nav-link" href="#find-a-list-of-submissions">
+     find a list of submissions
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#loop-through-the-list-of-tweets">
-   Loop through the list of tweets
+  <a class="reference internal nav-link" href="#loop-through-the-list-of-submissions">
+   Loop through the list of submissions
   </a>
  </li>
 </ul>
@@ -1923,13 +1923,13 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#load-tweepy-library">
-     load tweepy library
+    <a class="reference internal nav-link" href="#load-praw-library">
+     load praw library
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#optional-make-a-fake-twitter-connection-with-the-fake-tweepy-library">
-     (optional) make a fake twitter connection with the fake_tweepy library
+    <a class="reference internal nav-link" href="#optional-make-a-fake-praw-connection-with-the-fake-praw-library">
+     (Optional) make a fake praw connection with the fake_praw library
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -1938,20 +1938,20 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#give-tweepy-or-fake-tweepy-your-developer-access-passwords">
-     give tweepy (or fake_tweepy) your developer access passwords
+    <a class="reference internal nav-link" href="#give-praw-or-fake-praw-your-developer-access-passwords">
+     give praw (or fake_praw) your developer access passwords
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#find-a-list-of-tweets">
-     find a list of tweets
+    <a class="reference internal nav-link" href="#find-a-list-of-submissions">
+     find a list of submissions
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#loop-through-the-list-of-tweets">
-   Loop through the list of tweets
+  <a class="reference internal nav-link" href="#loop-through-the-list-of-submissions">
+   Loop through the list of submissions
   </a>
  </li>
 </ul>
@@ -2059,29 +2059,30 @@ title="Print to PDF"
 </section>
 <section id="looping-through-lists-of-dictionaries">
 <h2>Looping through lists of dictionaries<a class="headerlink" href="#looping-through-lists-of-dictionaries" title="Permalink to this headline">#</a></h2>
-<p>Now that we’ve seen loops, lists, and dictionaries, we can go back to Twitter, run a search and look through multiple tweets:</p>
-<section id="load-tweepy-library">
-<h3>load tweepy library<a class="headerlink" href="#load-tweepy-library" title="Permalink to this headline">#</a></h3>
+<p>Now that we’ve seen loops, lists, and dictionaries, we can go to Reddit, run a search and look through multiple submissions:</p>
+<section id="load-praw-library">
+<h3>load praw library<a class="headerlink" href="#load-praw-library" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;tweepy&quot; that will help us work with twitter</span>
-<span class="kn">import</span> <span class="nn">tweepy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;praw&quot; that will help us work with reddit</span>
+<span class="kn">import</span> <span class="nn">praw</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="optional-make-a-fake-twitter-connection-with-the-fake-tweepy-library">
-<h3>(optional) make a fake twitter connection with the fake_tweepy library<a class="headerlink" href="#optional-make-a-fake-twitter-connection-with-the-fake-tweepy-library" title="Permalink to this headline">#</a></h3>
+<section id="optional-make-a-fake-praw-connection-with-the-fake-praw-library">
+<h3>(Optional) make a fake praw connection with the fake_praw library<a class="headerlink" href="#optional-make-a-fake-praw-connection-with-the-fake-praw-library" title="Permalink to this headline">#</a></h3>
+<p>For testing purposes, we’ve added this line of code, which loads a fake version of praw, so it wont actually connect to reddit. <strong>If you want to try to actually connect to reddit, don’t run this line of code.</strong></p>
 <p>For testing purposes, we’ve added this line of code, which loads a fake version of tweepy, so it wont actually connect to twitter. <strong>If you want to try to actually connect to twitter, don’t run this line of code.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_tweepy/fake_tweepy.ipynb
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_apis/fake_praw.ipynb
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake tweepy is replacing the tweepy library. Fake Tweepy doesn&#x27;t need real passwords, and prevents you from accessing real twitter</strong></div></div>
+<div class="output text_html"><strong style='color:darkred'>Fake praw is replacing the praw library. Fake praw doesn&#x27;t need real passwords, and prevents you from accessing real reddit</strong></div></div>
 </div>
 </section>
 <section id="load-your-developer-access-passwords">
@@ -2089,91 +2090,99 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load all your developer access passwords into Python</span>
-<span class="c1"># TODO: Put your twitter account&#39;s special developer access passwords below:</span>
-<span class="n">bearer_token</span> <span class="o">=</span> <span class="s2">&quot;n4tossfgsafs_fake_bearer_token_isa53#$%$&quot;</span>
-<span class="n">consumer_key</span> <span class="o">=</span> <span class="s2">&quot;sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG&quot;</span>
-<span class="n">consumer_secret</span> <span class="o">=</span> <span class="s2">&quot;45adf$T$A_fake_consumer_secret_JESdsg&quot;</span>
-<span class="n">access_token</span> <span class="o">=</span> <span class="s2">&quot;56sd5Ss4tsea_fake_access_token_%YE%hDsdr&quot;</span>
-<span class="n">access_token_secret</span> <span class="o">=</span> <span class="s2">&quot;j^$dr_fake_consumer_key_^A5s#DR5s&quot;</span>
+<span class="c1"># TODO: Put your reddit username, password, and special developer access passwords below:</span>
+<span class="n">username</span><span class="o">=</span><span class="s2">&quot;fake_reddit_username&quot;</span>
+<span class="n">password</span><span class="o">=</span><span class="s2">&quot;sa@#4*fdf_fake_password_$%DSG#%DG&quot;</span>
+<span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;45adf$TW_fake_client_id_JESdsg1O&quot;</span>
+<span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;56sd_fake_client_secret_%Yh%&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="give-tweepy-or-fake-tweepy-your-developer-access-passwords">
-<h3>give tweepy (or fake_tweepy) your developer access passwords<a class="headerlink" href="#give-tweepy-or-fake-tweepy-your-developer-access-passwords" title="Permalink to this headline">#</a></h3>
+<section id="give-praw-or-fake-praw-your-developer-access-passwords">
+<h3>give praw (or fake_praw) your developer access passwords<a class="headerlink" href="#give-praw-or-fake-praw-your-developer-access-passwords" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Give the tweepy code your developer access passwords so</span>
-<span class="c1"># it can perform twitter actions</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span>
-   <span class="n">bearer_token</span><span class="o">=</span><span class="n">bearer_token</span><span class="p">,</span>
-   <span class="n">consumer_key</span><span class="o">=</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">consumer_secret</span><span class="p">,</span>
-   <span class="n">access_token</span><span class="o">=</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">access_token_secret</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Give the praw code your reddit account info so</span>
+<span class="c1"># it can perform reddit actions</span>
+<span class="n">reddit</span> <span class="o">=</span> <span class="n">praw</span><span class="o">.</span><span class="n">Reddit</span><span class="p">(</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">client_id</span><span class="p">,</span> <span class="n">client_secret</span><span class="o">=</span><span class="n">client_secret</span><span class="p">,</span>
+    <span class="n">user_agent</span><span class="o">=</span><span class="s2">&quot;a custom python script&quot;</span>
 <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to log in to twitter</strong></div></div>
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to collect account info to use on reddit</strong></div></div>
 </div>
 </section>
-<section id="find-a-list-of-tweets">
-<h3>find a list of tweets<a class="headerlink" href="#find-a-list-of-tweets" title="Permalink to this headline">#</a></h3>
-<p>We can now do a search and find a list of tweets.</p>
-<p><em>Note: If you run this on real twitter, we can’t gurantee anything about how offensive what you might find is. We don’t know of any word search we could guarantee would be safe.</em></p>
+<section id="find-a-list-of-submissions">
+<h3>find a list of submissions<a class="headerlink" href="#find-a-list-of-submissions" title="Permalink to this headline">#</a></h3>
+<p>We can now do a search and find a list of submissions.</p>
+<p><em>Note: If you run this on real reddit, we can’t gurantee anything about how offensive what you might find is.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Choose a search to run</span>
-<span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;&quot;cute cat&quot;&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Look up the subreddit &quot;cuteanimals&quot;, then find the &quot;hot&quot; list, getting up to 10 submission</span>
+<span class="n">submissions</span> <span class="o">=</span> <span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span><span class="s2">&quot;cuteanimals&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">hot</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 
-<span class="c1">#Run the search and request some additional info</span>
-<span class="n">tweets_info</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">tweet_fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;author_id&quot;</span><span class="p">,</span> <span class="s2">&quot;created_at&quot;</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;lang&quot;</span><span class="p">,</span> <span class="s2">&quot;public_metrics&quot;</span><span class="p">,</span> <span class="s2">&quot;source&quot;</span><span class="p">,</span> <span class="s2">&quot;text&quot;</span><span class="p">])</span>
+<span class="c1"># Note: The submissions come back from Reddit as an</span>
+<span class="c1"># &quot;iterator&quot; instead of a &quot;list.&quot; We can write our</span>
+<span class="c1"># normal for loops with it as an iterator, but we will</span>
+<span class="c1"># turn it into a list, since we are using those in this class</span>
 
-<span class="c1"># Get the actual list of tweets out of the data field (tweets_info also has metadata about our search)</span>
-<span class="n">tweets_list</span> <span class="o">=</span> <span class="n">tweets_info</span><span class="o">.</span><span class="n">data</span>
+<span class="n">submissions_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">submissions</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to search for &#x27;&quot;cute cat&quot;&#x27; and is returning some fake tweets.</strong></div></div>
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to select the subreddit: cuteanimals</strong></div></div>
 </div>
 </section>
 </section>
-<section id="loop-through-the-list-of-tweets">
-<h2>Loop through the list of tweets<a class="headerlink" href="#loop-through-the-list-of-tweets" title="Permalink to this headline">#</a></h2>
-<p>The variable <code class="docutils literal notranslate"><span class="pre">tweets_list</span></code> now has a list of tweet. So we can use a for loop to go through each tweet, and then use <code class="docutils literal notranslate"><span class="pre">.</span></code> to access info from each tweet (other pieces of information would need <code class="docutils literal notranslate"><span class="pre">[&quot;</span> <span class="pre">&quot;]</span></code> to access).</p>
+<section id="loop-through-the-list-of-submissions">
+<h2>Loop through the list of submissions<a class="headerlink" href="#loop-through-the-list-of-submissions" title="Permalink to this headline">#</a></h2>
+<p>The variable <code class="docutils literal notranslate"><span class="pre">submissions_list</span></code> now has a list of Reddit submissions. So we can use a for loop to go through each submission, and then use <code class="docutils literal notranslate"><span class="pre">.</span></code> to access info from each tweet (other pieces of information would need <code class="docutils literal notranslate"><span class="pre">[&quot;</span> <span class="pre">&quot;]</span></code> to access).</p>
 <p>For each of the tweets, we will use <code class="docutils literal notranslate"><span class="pre">print</span></code> to display information about the tweet</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets_list</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Info for tweet with id: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  author_id: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">author_id</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  created_at: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">created_at</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  source: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">source</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  text: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">submission</span> <span class="ow">in</span> <span class="n">submissions_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Info for submission with id: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">submission</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  title: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">submission</span><span class="o">.</span><span class="n">title</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  author: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">submission</span><span class="o">.</span><span class="n">author</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  created_utc: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">submission</span><span class="o">.</span><span class="n">created_utc</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  selftext: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">submission</span><span class="o">.</span><span class="n">selftext</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  url: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">submission</span><span class="o">.</span><span class="n">url</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  score (upvotes): &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">submission</span><span class="o">.</span><span class="n">score</span><span class="p">))</span>
     <span class="nb">print</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Info for tweet with id: 129308937494
-  author_id: 239048094385
-  created_at: 2022-02-22 22:22:22+00:00
-  source: Twitter for Android
-  text: While trying to tweet right now, I am being attacked by my cute cat! It&#39;s so hard to tpye wihsaoae as fesadf asd fssasaf sa
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Info for submission with id: 904tjwdf093j
+  title: Look at my cute dog!
+  author: fake_user
+  created_utc: 1673327625
+  selftext: 
+  url: example.com/fake_image.jpg
+  score (upvotes): 23
 
-Info for tweet with id: 93298432
-  author_id: 23409023
-  created_at: 2022-02-22 02:02:02+00:00
-  source: Twitter for iPhone
-  text: I wish I could be sleeping now like my cute cat is!
+Info for submission with id: lk457j2l63
+  title: A baby lizard!
+  author: pretend_user
+  created_utc: 1673317625
+  selftext: 
+  url: example.com/pretend_image.jpg
+  score (upvotes): 10
 
-Info for tweet with id: 321923
-  author_id: 32892394
-  created_at: 2022-02-22 03:03:03+00:00
-  source: Twitter for iPhone
-  text: Why won&#39;t my cute cat stop scratching my face in the morning!
+Info for submission with id: oiu45kje
+  title: The cutest bird ever!
+  author: imaginary_user
+  created_utc: 1673307625
+  selftext: 
+  url: example.com/imaginary_image.jpg
+  score (upvotes): 30
 </pre></div>
 </div>
 </div>
