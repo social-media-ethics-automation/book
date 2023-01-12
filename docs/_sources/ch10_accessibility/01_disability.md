@@ -7,7 +7,7 @@ A __disability__ is an ability which a person doesn't have, but they were expect
 - If tall grocery store shelves that were made with the assumption that people would be able to reach them, then people who are short, or who can't lift their arms up, or who can't stand up, all would have a disability in that situation.
 - If an airplane seat that was designed with little leg room assuming people's legs wouldn't be too long, then someone who is very tall, or who has difficulty bending their legs would have a disability in that situation.
 
-[^disability_definitions_footnote]: There are a number of ways to think about disability, such as legal (what legally counts as a disability?), medical (what is a problem to be cured?), etc. We are focused here more on disability as it relates to design and who things in our world are designed for.
+[^disability_definitions_footnote]: There are a number of ways to think about disability, such as legal (what legally counts as a disability?), medical (what is a problem to be cured?), identity (who views themselves as "disabled"), etc. We are focused here more on disability as it relates to design and who things in our world are designed for.
 
 Which abilities are expected of people, and therefore what things are considered disabilities, are socially defined. Different societies and groups of people make different assumptions about what people can do, and so what is considered a disability in one group, might just be "normal" in another.
 
@@ -21,8 +21,8 @@ Some people (like many with chronic pain) would welcome a cure that got rid of t
 
 Many of the disabilities we mentioned above were __permanent disabilities__, that is, disabilities that won't go away. But disabilities can also be __temporary disabilities__, like a broken leg in a cast, which will eventually get better. Disabilities can even be __situational disabilities__, like the loss of fine motor skills when wearing thick gloves in the cold, or trying to watch a video on your phone in class with the sound off, or trying to type on a computer while holding a baby.
 
-As you look through all these types of disabilities, you might discover ways you have experienced disability in your life. Though please keep in mind that different disabilities can be very diffirent, and everyone's experience with their own disability can vary. So having some experience with disability (such as situation difficulties caused by wearing gloves) does not make someone an expert in any other disabilities.
+As you look through all these types of disabilities, you might discover ways you have experienced disability in your life. Though please keep in mind that different disabilities can be very diffirent, and everyone's experience with their own disability can vary. So having some experience with disability does not make someone an expert in any other experience of disability.
 
 As for our experience with disability, Kyle has been diagnosed with [generalized anxiety disorder](https://www.mayoclinic.org/diseases-conditions/generalized-anxiety-disorder/symptoms-causes/syc-20360803) and Susan has been diagnosed with [depression](https://www.mayoclinic.org/diseases-conditions/depression/symptoms-causes/syc-20356007). Kyle and Susan also both have:
-- [near sightedness](https://en.wikipedia.org/wiki/Myopia): our eyes cannot focus on things far away
+- [near sightedness](https://en.wikipedia.org/wiki/Myopia): our eyes cannot focus on things far away (unless we use corrective lenses, like glasses or contacts)
 - [ADHD](https://www.youtube.com/watch?v=xMWtGozn5jU): we have difficulty controlling our focus, sometimes being hyperfocused and sometimes being highly distracted, and also have difficulties with [executive dysfunction](https://youtu.be/H4YIHrEu-TU).

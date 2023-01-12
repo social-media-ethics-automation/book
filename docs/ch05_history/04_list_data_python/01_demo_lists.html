@@ -1556,7 +1556,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../appendix/alternate_apis/ch4_05_03_demo_data_from_twitter.html">
-     Demo: Data from a Tweet
+     Ch 4.5.3 Demo: Data from a Tweet
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/alternate_apis/ch5_04_02_demo_dictionaries.html">
+     Demo: Dictionaries
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -1979,10 +1984,10 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>Now, let’s say we have a list of Twitter users who liked our latest tweet:</p>
+<p>Now, let’s say we have a list of users who liked our latest social media post:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">users_who_liked_our_tweet</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;@pretend_user_1&quot;</span><span class="p">,</span> <span class="s2">&quot;@pretend_user_2&quot;</span><span class="p">,</span> <span class="s2">&quot;@pretend_user_3&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">users_who_liked_our_post</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;@pretend_user_1&quot;</span><span class="p">,</span> <span class="s2">&quot;@pretend_user_2&quot;</span><span class="p">,</span> <span class="s2">&quot;@pretend_user_3&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1996,19 +2001,19 @@ title="Print to PDF"
 <p>So, if we wanted to go through all the the users that liked our tweet and display a message for each one, we could do this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users_who_liked_our_tweet</span><span class="p">:</span>
-    <span class="n">display</span><span class="p">(</span><span class="s2">&quot;Yay! &quot;</span> <span class="o">+</span> <span class="n">user</span> <span class="o">+</span> <span class="s2">&quot; liked our tweet!&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users_who_liked_our_post</span><span class="p">:</span>
+    <span class="n">display</span><span class="p">(</span><span class="s2">&quot;Yay! &quot;</span> <span class="o">+</span> <span class="n">user</span> <span class="o">+</span> <span class="s2">&quot; liked our post!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Yay! @pretend_user_1 liked our tweet!&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Yay! @pretend_user_1 liked our post!&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Yay! @pretend_user_2 liked our tweet!&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Yay! @pretend_user_2 liked our post!&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Yay! @pretend_user_3 liked our tweet!&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Yay! @pretend_user_3 liked our post!&#39;
 </pre></div>
 </div>
 </div>
@@ -2018,33 +2023,33 @@ title="Print to PDF"
 <li><p>Start the line with a <code class="docutils literal notranslate"><span class="pre">for</span></code></p></li>
 <li><p>Make up a new variable name that will be a temporary variable to hold whichever item from the list we are doing our actions on. In this case each item in the list will be a user, so we call our variable <code class="docutils literal notranslate"><span class="pre">user</span></code></p></li>
 <li><p>Then we write the word <code class="docutils literal notranslate"><span class="pre">in</span></code></p></li>
-<li><p>Then we put the list that we want to go through, in this case `users_who_liked_our_tweet’</p></li>
+<li><p>Then we put the list that we want to go through, in this case `users_who_liked_our_post’</p></li>
 <li><p>Then put a colon (<code class="docutils literal notranslate"><span class="pre">:</span></code>). In Python, a colon like this means that what comes next is a block of statements that goes together. This block of statements is indented over to indicate that it is part of the block.</p></li>
 <li><p>Then, on the next line and indented over, we have our display function that uses the <code class="docutils literal notranslate"><span class="pre">user</span></code> variable. This is the line of code that is repeated for each item in the list.</p></li>
 </ul>
 <p>If we want to do several actions in our loop, all we need to do is add more lines of code spaced over the same amount, like this (note: We’ll use <code class="docutils literal notranslate"><span class="pre">print</span></code> instead of <code class="docutils literal notranslate"><span class="pre">display</span></code>, which mostly work the same, but we think <code class="docutils literal notranslate"><span class="pre">print</span></code> happens to look a little better in this situation):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users_who_liked_our_tweet</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Yay! &quot;</span> <span class="o">+</span> <span class="n">user</span> <span class="o">+</span> <span class="s2">&quot; liked our tweet!&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users_who_liked_our_post</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Yay! &quot;</span> <span class="o">+</span> <span class="n">user</span> <span class="o">+</span> <span class="s2">&quot; liked our post!&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Perhaps we should follow &quot;</span> <span class="o">+</span> <span class="n">user</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;We could put tweepy code here to do that!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;We could put code here to do that!&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Yay! @pretend_user_1 liked our tweet!
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Yay! @pretend_user_1 liked our post!
 Perhaps we should follow @pretend_user_1
-We could put tweepy code here to do that!
+We could put code here to do that!
 
-Yay! @pretend_user_2 liked our tweet!
+Yay! @pretend_user_2 liked our post!
 Perhaps we should follow @pretend_user_2
-We could put tweepy code here to do that!
+We could put code here to do that!
 
-Yay! @pretend_user_3 liked our tweet!
+Yay! @pretend_user_3 liked our post!
 Perhaps we should follow @pretend_user_3
-We could put tweepy code here to do that!
+We could put code here to do that!
 </pre></div>
 </div>
 </div>

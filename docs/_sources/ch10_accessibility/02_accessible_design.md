@@ -6,7 +6,7 @@ There are a number of ways of managing disabilities. All of these ways of managi
 
 Those with disabilities often find ways to cope with their disability, that is, find ways to work around difficulties they encounter and seek out places and strategies that work for them (whether realizing they have a disability or not). Additionally, people with disabilities might change their behavior (whether intentionally or not) to hide the fact that they have a disability, which is called __masking__, and may take a mental or physical toll on the person masking, which others around them wont realize.
 
-For example, kids who is near sighted and don't realize their ability to see is different from others will seek out seats at the front of classrooms where they can see better. As for us two authors, we both have ADHD and were drawn to PhD programs where our ability to hyperfocus on following our curiosity was rewarded (though executive dysfunction with finishing projects created challenges).
+For example, kids who is near sighted and don't realize their ability to see is different from others will often seek out seats at the front of classrooms where they can see better. As for us two authors, we both have ADHD and were drawn to PhD programs where our tendency to hyperfocus on following our curiosity was rewarded (though executive dysfunction with finishing projects created challenges).
 
 This way of managing disabilities puts the burden fully on disabled people to manage their disability, and try to fit in with "normal" people.
 
