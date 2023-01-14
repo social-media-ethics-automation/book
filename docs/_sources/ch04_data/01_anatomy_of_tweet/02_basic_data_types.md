@@ -66,6 +66,8 @@ average_tweet_length = 133.5
 
 When computers store numbers, there are limits to how much space is can be used to save each number. This limits how big (or small) the numbers can be, and causes rounding with floating point numbers.
 
+% TODO: https://jvns.ca/blog/2023/01/13/examples-of-floating-point-problems/
+
 Additionally programming languages might include other ways of storing numbers, such as fractions, [complex numbers](https://en.wikipedia.org/wiki/Complex_number), or limited number sets (like only positive integers).
 
 
