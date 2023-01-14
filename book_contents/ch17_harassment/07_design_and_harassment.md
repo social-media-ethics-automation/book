@@ -38,6 +38,10 @@ Writer [Leslie Ye argued](https://twitter.com/lesliezye/status/15936316670376386
 >
 > [Twitter] is a place where we have direct access to the most powerful and can hold them to account
 
+% TODO: Better sources:
+% https://absolutelymaybe.plos.org/2023/01/12/quote-tweeting-over-30-studies-dispel-some-myths, https://privacy.thenexus.today/black-twitter-quoting-and-white-toxicity-on-mastodon/
+
+
 ## Reflection Questions
 - How does social media design enable or reduce harassment?
 - What can you lose in trying to reduce harassment?

@@ -68,7 +68,9 @@ For example, the actor Stellan Skarsgård complained that in the film industry, 
 > - [Stellan Skarsgård](https://www.theguardian.com/film/2021/nov/25/stellan-skarsgard-my-tips-for-fatherhood-dont-lie-even-about-santa-claus)
 
 
-Or as another example, if the [richest man in the world offers to buy out a social media site for more than it's worth](https://variety.com/2022/digital/news/elon-musk-twitter-obviously-overpaying-deal-1235409500/), then it is the fiduciary duty of the leaders of the social media site to accept that offer. It doesn't matter if it is clear that this rich man doesn't know what he is doing and is likely to destroy the social media site, the fiduciary duty of the company leaders is to get as much money as possible to their shareholders, and they can't beat being overpaid by the richest man in the world. % TODO: Not accepting this deal would be cheating the stock holders
+Or as another example, if the [richest man in the world offers to buy out a social media site for more than it's worth](https://variety.com/2022/digital/news/elon-musk-twitter-obviously-overpaying-deal-1235409500/), then it is the fiduciary duty of the leaders of the social media site to accept that offer. It doesn't matter if it is clear that this rich man doesn't know what he is doing and is likely to destroy the social media site, the fiduciary duty of the company leaders is to get as much money as possible to their shareholders, and they can't beat being overpaid by the richest man in the world. 
+
+% TODO: Not accepting this deal would be cheating the stock holders
 
 
 ### Other Accontability Models

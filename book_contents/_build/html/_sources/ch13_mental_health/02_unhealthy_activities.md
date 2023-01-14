@@ -38,6 +38,8 @@ Trauma dumping can be bad for the mental health of those who have this trauma un
 
 Munchausen Syndrome (or [Factitious disorder imposed on self](https://en.wikipedia.org/wiki/Factitious_disorder_imposed_on_self)) is when someone pretends to have a disease, like cancer, to get sympathy or attention. People with various illnesses often find support online, and even form online communities, and it is often easier to fake an illness for an online community, so [many have done so](https://www.theatlantic.com/health/archive/2019/05/faking-cancer-online/588334/). People who fake these illnesses often do so as a result of their own mental illness, so, in fact, "[they are sick, albeit it in a very different way than claimed](https://www.theguardian.com/society/2015/apr/29/jules-gibson-munchausen-by-internet-sickness-bloggers-fake-it-whole-pantry)."
 
+% TODO: Reference @Sciencing_Bi
+
 
 ## Digital Self-Harm
 Sometimes people will harm their bodies (called "[self-harm](https://www.mind.org.uk/information-support/types-of-mental-health-problems/self-harm/about-self-harm/)") as a way of expressing or trying to deal with negative emotions or situations.

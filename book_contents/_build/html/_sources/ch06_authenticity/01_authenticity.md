@@ -1,9 +1,8 @@
 # Authenticity
-% TODO: change anecdote to @Sciencing_Bi?
 
 Early in the days of YouTube, one YouTube channel ([lonelygirl15](https://en.wikipedia.org/wiki/Lonelygirl15)) started to release vlogs (video web logs) consisting of a girl in her room giving updates on the mundane dramas of her life. But as the channel continued posting videos and gaining popularity, viewers started to question if the events being told in the vlogs were true stories, or if they were fictional. Eventually users discovered that it was a fictional show, and the girl giving the updates was an actress.
 
-Many users were upset that what they had been watching wasn't __authentic__. That is, users believed the channel was presenting itself as true events about a real girl, and it wasn't that at all.
+Many users were upset that what they had been watching wasn't __authentic__. That is, users believed the channel was presenting itself as true events about a real girl, and it wasn't that at all. Though, even after users discovered it was fictional, the channel continued to grow in popularity.
 
 ## Why We Care About Authenticity
 
