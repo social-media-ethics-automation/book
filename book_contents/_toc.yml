@@ -94,7 +94,7 @@ parts:
       - file: ch06_authenticity/02_posting_sources/00_posting_sources
         sections:
           - file: ch06_authenticity/02_posting_sources/01_authenticity_trump
-          - file: ch06_authenticity/02_posting_sources/02_demo_practice_tweet_source
+          - file: ch06_authenticity/02_posting_sources/02_demo_practice_author_info
       - file: ch06_authenticity/03_inauthenticity
       - file: ch06_authenticity/04_personas
       - file: ch06_authenticity/05_parasocial_relationships
@@ -283,6 +283,7 @@ parts:
           - file: appendix/alternate_apis/ch3_03_03_practice_statements_variables_sleep
           - file: appendix/alternate_apis/ch4_05_03_demo_data_from_twitter
           - file: appendix/alternate_apis/ch5_04_02_demo_dictionaries
+          - file: appendix/alternate_apis/ch6_02_02_demo_practice_tweet_source
           - file: appendix/alternate_apis/solutions/00_solutions
             sections:
               - file: appendix/alternate_apis/solutions/01_solution_practice_statements_variables_sleep

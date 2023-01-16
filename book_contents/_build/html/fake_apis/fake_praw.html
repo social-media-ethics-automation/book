@@ -574,8 +574,8 @@ const thebe_selector_output = ".output, .cell_output"
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../ch06_authenticity/02_posting_sources/02_demo_practice_tweet_source.html">
-       6.2.2. Demo &amp; Practice: Tweet Sources
+      <a class="reference internal" href="../ch06_authenticity/02_posting_sources/02_demo_practice_author_info.html">
+       6.2.2. Demo &amp; Practice: Author Info
       </a>
      </li>
     </ul>
@@ -587,7 +587,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ch06_authenticity/04_personas.html">
-     6.4. Personas and Code Switching
+     6.4. Personas, Code Switching, Context Collapse
     </a>
    </li>
    <li class="toctree-l2">
@@ -1562,6 +1562,11 @@ const thebe_selector_output = ".output, .cell_output"
      Ch 5.4.2 Demo: Dictionaries (Twitter)
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/alternate_apis/ch6_02_02_demo_practice_tweet_source.html">
+     Ch 6.2.2 Demo &amp; Practice: Tweet Sources
+    </a>
+   </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../appendix/alternate_apis/solutions/00_solutions.html">
      Practice Solutions (Twitter)
@@ -2364,7 +2369,11 @@ title="Print to PDF"
             <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Look at my cute dog!&quot;</span><span class="p">,</span> 
             <span class="n">author</span> <span class="o">=</span> <span class="n">AuthorSimplishNamespace</span><span class="p">(</span>
                 <span class="n">name</span><span class="o">=</span><span class="s2">&quot;fake_user&quot;</span><span class="p">,</span>
-                <span class="fm">__str__</span> <span class="o">=</span> <span class="k">lambda</span> <span class="p">:</span> <span class="s2">&quot;fake_user&quot;</span>
+                <span class="n">link_karma</span><span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+                <span class="n">comment_karma</span><span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+                <span class="n">has_verified_email</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="n">is_mod</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                <span class="n">is_gold</span> <span class="o">=</span> <span class="kc">False</span>                
             <span class="p">),</span>
             <span class="n">edited</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
             <span class="n">created_utc</span> <span class="o">=</span> <span class="mi">1673327625</span><span class="p">,</span>
@@ -2378,7 +2387,12 @@ title="Print to PDF"
             <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;lk457j2l63&quot;</span><span class="p">,</span>
             <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;A baby lizard!&quot;</span><span class="p">,</span> 
             <span class="n">author</span> <span class="o">=</span> <span class="n">AuthorSimplishNamespace</span><span class="p">(</span>
-                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;pretend_user&quot;</span>
+                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;pretend_user&quot;</span><span class="p">,</span>
+                <span class="n">link_karma</span><span class="o">=</span> <span class="mi">25</span><span class="p">,</span>
+                <span class="n">comment_karma</span><span class="o">=</span> <span class="mi">15</span><span class="p">,</span>
+                <span class="n">has_verified_email</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="n">is_mod</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="n">is_gold</span> <span class="o">=</span> <span class="kc">False</span>    
             <span class="p">),</span>
             <span class="n">edited</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
             <span class="n">created_utc</span> <span class="o">=</span> <span class="mi">1673317625</span><span class="p">,</span>
@@ -2392,7 +2406,12 @@ title="Print to PDF"
             <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;oiu45kje&quot;</span><span class="p">,</span>
             <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;The cutest bird ever!&quot;</span><span class="p">,</span> 
             <span class="n">author</span> <span class="o">=</span> <span class="n">AuthorSimplishNamespace</span><span class="p">(</span>
-                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;imaginary_user&quot;</span>
+                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;imaginary_user&quot;</span><span class="p">,</span>
+                <span class="n">link_karma</span><span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="n">comment_karma</span><span class="o">=</span> <span class="mi">7</span><span class="p">,</span>
+                <span class="n">has_verified_email</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="n">is_mod</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="n">is_gold</span> <span class="o">=</span> <span class="kc">True</span>    
             <span class="p">),</span>
             <span class="n">edited</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
             <span class="n">created_utc</span> <span class="o">=</span> <span class="mi">1673307625</span><span class="p">,</span>
