@@ -152,28 +152,28 @@ parts:
         - file: ch10_accessibility/05_alt_text/01_alt_text
         - file: ch10_accessibility/05_alt_text/02_extra_data_from_twitter
         - file: ch10_accessibility/05_alt_text/03_alt_text_from_twitter
-    - file: ch11_virality/00_virality
+    - file: ch11_recommendations/00_recommendations
       sections:
-      - file: ch11_virality/01_evolution_memes
-      - file: ch11_virality/02_pre_internet
-      - file: ch11_virality/03_social_media_natural_selection
-      - file: ch11_virality/04_viral_examples
-      - file: ch11_virality/05_ethics_of_copying
-      - file: ch11_virality/06_going_viral
-      - file: ch11_virality/07_reflections
-      - file: ch11_virality/08_learn_more
-    - file: ch12_recommendations/00_recommendations
-      sections:
-      - file: ch12_recommendations/01_recommendations
-      - file: ch12_recommendations/02_individual_concerns
-      - file: ch12_recommendations/03_societal_concerns
-      - file: ch12_recommendations/04_recommend_a_friend/00_intro
+      - file: ch11_recommendations/01_recommendations
+      - file: ch11_recommendations/02_individual_concerns
+      - file: ch11_recommendations/03_societal_concerns
+      - file: ch11_recommendations/04_recommend_a_friend/00_intro
         sections:
-          - file: ch12_recommendations/04_recommend_a_friend/01_demo_dictionary_counters
-          - file: ch12_recommendations/04_recommend_a_friend/02_practice_dictionary_counters
-          - file: ch12_recommendations/04_recommend_a_friend/03_demo_recommend_friend
-      - file: ch12_recommendations/05_design_recommend
-      - file: ch12_recommendations/06_learn_more
+          - file: ch11_recommendations/04_recommend_a_friend/01_demo_dictionary_counters
+          - file: ch11_recommendations/04_recommend_a_friend/02_practice_dictionary_counters
+          - file: ch11_recommendations/04_recommend_a_friend/03_demo_recommend_friend
+      - file: ch11_recommendations/05_design_recommend
+      - file: ch11_recommendations/06_learn_more
+    - file: ch12_virality/00_virality
+      sections:
+      - file: ch12_virality/01_evolution_memes
+      - file: ch12_virality/02_pre_internet
+      - file: ch12_virality/03_social_media_natural_selection
+      - file: ch12_virality/04_viral_examples
+      - file: ch12_virality/05_ethics_of_copying
+      - file: ch12_virality/06_going_viral
+      - file: ch12_virality/07_reflections
+      - file: ch12_virality/08_learn_more
     - file: ch13_mental_health/00_mental_health
       sections:
       - file: ch13_mental_health/01_effects_of_social_media
