@@ -13,7 +13,7 @@ name: multicultural-obama-handshakes_fig
 width: 300
 alt: "President Obama giving a formal distant handshake to a white man (an assistant coach), followed by close Dap handshake with Black basketball star Kevin Durant"
 ---
-President Obama giving a [very different handshakes](https://en.wikipedia.org/wiki/Giving_dap) to a white man and a Black man. See also [this Key & Peele comedy sketch](https://youtu.be/nopWOC4SRm4) with Jordan Peele playing Obama and expanding on this, and also their [Obama's Anger Translator sketch](https://youtu.be/-qv7k2_lc0M).
+President Obama giving a [very different handshakes](https://en.wikipedia.org/wiki/Giving_dap) to a white man and a Black man ([Kevin Durant](https://en.wikipedia.org/wiki/Kevin_Durant)). See also [this Key & Peele comedy sketch on greeting differences](https://youtu.be/nopWOC4SRm4) with [Jordan Peele](https://en.wikipedia.org/wiki/Jordan_Peele) playing Obama, and also Key & Peele's [Obama's Anger Translator sketch](https://youtu.be/-qv7k2_lc0M).
 ```
 
 Read/watch more about code switching here:
