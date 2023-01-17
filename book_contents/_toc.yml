@@ -114,6 +114,7 @@ parts:
           - file: ch07_trolling/05_trolling_reply_bot/02_practice_strings_conditionals
           - file: ch07_trolling/05_trolling_reply_bot/03_demo_reply_bot
       - file: ch07_trolling/06_ethics_and_trolling
+      - file: ch07_trolling/07_learn_more
     - file: ch08_data_mining/00_data_mining
       sections:
       - file: ch08_data_mining/01_data_sources

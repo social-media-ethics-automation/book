@@ -29,15 +29,12 @@ One set of the early Internet-based video games were Multi-User Dungeons ([MUDs]
 
 In the 2000s, trolling went from an activity done in some communities to the creation of communities that centered around trolling such as [4chan](https://en.wikipedia.org/wiki/4chan) (2003), [Encyclopedia Dramatica](https://en.wikipedia.org/wiki/Encyclopedia_Dramatica) (2004), and some forums on [reddit](https://en.wikipedia.org/wiki/Reddit) (2005).
 
-These trolling communities eventually started compiling a half-joking set of internet "[Rules of the Internet](https://knowyourmeme.com/memes/rules-of-the-internet)" that both outlined their trolling philosophy:
+These trolling communities eventually started compiling half-joking sets of "[Rules of the Internet](https://knowyourmeme.com/memes/rules-of-the-internet)" that both outlined their trolling philosophy:
 > Rule 43. The more beautiful and pure a thing is - the more satisfying it is to corrupt it
 
-and their misogyny:
+and their extreme misogyny:
 > Rule 30. There are no girls on the internet
 >
-> Rule 31. [if you claim to be a girl, post a photo of your] TITS or GTFO [Get the Fuck Out] - the choice is yours
-
-% TODO: "extreme misogyny"
-
+> Rule 31. TITS or GTFO - the choice is yours _[meaning: if you claim to be a girl/woman, then either post a photo of your breasts, or get the fuck out]_
 
 You can read more at: [knowyourmeme](https://knowyourmeme.com/memes/cultures/trolling) and [wikipedia](https://en.wikipedia.org/wiki/Internet_troll#Origin_and_etymology)
