@@ -8,7 +8,7 @@ name: fbi_mlk_troll_fig
 width: 300px
 alt: "Post by what looks like the verified FBI account (though the handle is @jaboukie), saying: Just becaues we killed MLK doesn't mean we can't miss him."
 ---
-[Trolling post by Commedian Jaboukie Young-White](https://isitfunnyoroffensive.com/comedian-impersonates-fbi-on-twitter-makes-mlk-assassination-joke/), using his verified identity blue checkmark (before Elon Musk made blue checkmarks purchasable) to impersonate the official FBI account, and then make reference to the theory that the FBI was behind the assassination of Martin Luther King Jr. (note: while [this theory](https://en.wikipedia.org/wiki/Assassination_of_Martin_Luther_King_Jr.#Alleged_government_involvement) is not confirmed, the [FBI definitely tried to get MLK to kill himself](https://en.wikipedia.org/wiki/FBI%E2%80%93King_suicide_letter))"
+[Trolling post by Commedian Jaboukie Young-White](https://isitfunnyoroffensive.com/comedian-impersonates-fbi-on-twitter-makes-mlk-assassination-joke/), using his verified identity blue checkmark (before Elon Musk made blue checkmarks purchasable) to impersonate the official FBI account, and then make reference to the theory that the FBI was behind the assassination of Martin Luther King Jr. (note: while [this theory](https://en.wikipedia.org/wiki/Assassination_of_Martin_Luther_King_Jr.#Alleged_government_involvement) is not confirmed, the [FBI definitely tried to get MLK to kill himself](https://en.wikipedia.org/wiki/FBI%E2%80%93King_suicide_letter)). Twitter quickly suspended Jaboukie's account after this post."
 ```
 
 ## Disruption and provoking reaction
