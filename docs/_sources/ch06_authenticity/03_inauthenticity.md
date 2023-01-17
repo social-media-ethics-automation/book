@@ -4,7 +4,29 @@ In 2016, the Twitter account @Sciencing_Bi was created by an anonymous bisexual 
 
 Separately, in 2018 during the [MeToo movement](https://en.wikipedia.org/wiki/MeToo_movement), one of @Sciencing_Bi's friends, Dr. BethAnn McLaughlin (a white woman), co-founded the MeTooSTEM non-profit organization, to gather stories of sexual harassment in STEM (Science, Technology, Engineering, Math). Kyle also followed her on Twitter until word later spread of Dr. McLaughlin's toxic leadership and bullying in the MeTooSTEM organization (Kyle may have unfollowed @Sciencing_Bi at the same time for defending Dr. McLaughlin, but doesn't remember clearly).
 
-Then, in April 2020, in the early days of the [COVID pandemic](https://en.wikipedia.org/wiki/COVID-19_pandemic), @Sciencing_Bi complained of being forced to teach in person at ASU when it wasn't safe, and then began writing of their COVID symptoms. On July 31st, Dr. McLaughlin announced that @Sciencing_Bi had died of COVID. Many of academics on Twitter expressed sympathy and outrage over what had happened to @Sciencing_Bi. Dr. McLaughlin held a memorial service for @Sciencing_Bi online via zoom.
+Then, in April 2020, in the early days of the [COVID pandemic](https://en.wikipedia.org/wiki/COVID-19_pandemic), @Sciencing_Bi complained of being forced to teach in person at ASU when it wasn't safe, and then began writing of their COVID symptoms. 
+
+```{figure} sciencing_bi_tweet.png
+---
+name: sciencing_bi_tweet_fig
+width: 500
+alt: "Tweet from user Alepo (@Sciencing_Bi) with a profile picture of a flower. Replying to @EvoPhD, they say: Yes. I'm really at the point of wondering if the hell I've been in with Title IX, COVID and BIPOC would amount to a hill of beans for changing the culture if I went more public (I've done two interviews). It is enraging/exhausting."
+---
+Tweet from @Sciencing_Bi complaining about covid, sexual harassment (Title IX) descrimination for their race (BIPOC), and mentioning that they are still posting anonymously. ([screenshot source](https://twitter.com/IsabelOtt/status/1290073135396528129))
+```
+
+On July 31st, Dr. McLaughlin announced that @Sciencing_Bi had died of COVID. 
+
+```{figure} bethann_mclaughlin_tweet.jpg
+---
+name: bethann_mclaughlin_tweet_fig
+width: 400
+alt: "Tweet thread from BethAnn (@McLNeuro), with a profile picture of a mouse: Sad to report @Sciencing_Bi died from COVID this evening. She was a fierce protector of people. She let me take my shoulders away from my ears knowing she was meaner and more loving than everyone else. No one has ever had my back like that. I don't know what I'm going to do. I dont know what her students or my students who loved her will do. She made million first nations indegenous contacts for meetoostem I don't have the lifetime of good will or knowledge of everyone she helped."
+---
+Tweet from Dr. McLaughlin reporting that @Sciencing_Bi died of COVID. ([screenshot source](https://www.buzzfeednews.com/article/peteraldhous/bethann-mclaughlin-twitter-suspension-fake-covid-death))
+```
+
+Many of academics on Twitter expressed sympathy and outrage over what had happened to @Sciencing_Bi. Dr. McLaughlin held a memorial service for @Sciencing_Bi online via zoom.
 
 A few people showed up to Dr. McLaughlin's online zoom memorial service for @Sciencing_Bi, but the guests felt something was off.
 

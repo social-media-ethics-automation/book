@@ -1,5 +1,7 @@
 # Design and Harassment
 
+% TODO: Quoting and Content Warnings on Mastodon
+
 The way social media sites are designed can encourage and discourage different forms of harassment.
 
 For example, people have made complaints about how [Quote Tweets Have Turned Us All Into Jerks](https://onezero.medium.com/quote-tweets-have-turned-us-all-into-jerks-d5776c807942). And the way that even trying to defend people can increase the harassment they face. See the article: [It's Not Your Fault You're a Jerk on Twitter: The design of the internet lets you harass and harm people without ever once interacting with them directly. Even if you're trying to defend them.](https://www.wired.com/story/social-media-harassment-platforms/)
@@ -40,6 +42,19 @@ Writer [Leslie Ye argued](https://twitter.com/lesliezye/status/15936316670376386
 
 % TODO: Better sources:
 % https://absolutelymaybe.plos.org/2023/01/12/quote-tweeting-over-30-studies-dispel-some-myths, https://privacy.thenexus.today/black-twitter-quoting-and-white-toxicity-on-mastodon/
+
+
+
+% https://mastodon.social/@jrm4/109702486481162255 jrm4 @jrm4@mastodon.social
+% Here's the thing:
+
+% Twitter's ability to rapidly spread objectionable and distressing content is (was?) the *best* thing about it, not the worst, see e.g. police brutality.
+
+% It's not pleasant, but long run it's more valuable than "nuanced / moderated conversation," which you can get elsewhere.
+
+% This is more-or-less what is wrong with how many -- if not *most* -- picture #mastodon. and the #fediverse 
+
+% #blackmastodon #blackfedi
 
 
 ## Reflection Questions

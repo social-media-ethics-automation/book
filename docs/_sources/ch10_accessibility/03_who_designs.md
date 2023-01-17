@@ -15,6 +15,9 @@ Similarly, [Twitter looked into bias in how their automatic image cropping algor
 
 
 ## Who gets to be designers
-In how we've been talking about accessible design, the way we've been phrasing things has implied a separation between designers who make things, and the disabled people who things are made for. And unfortunately, as researcher [Dr. Cynthia Bennet](https://www.bennettc.com/) points out, disabled people are often excluded from designing for themselves, or even when they do participate in the design, they aren't considered to be the "real designers." You can see Dr. Bennet's research talk on this in the following Youtube Video:
+In how we've been talking about accessible design, the way we've been phrasing things has implied a separation between designers who make things, and the disabled people who things are made for. And unfortunately, as researcher [Dr. Cynthia Bennett](https://www.bennettc.com/) points out, disabled people are often excluded from designing for themselves, or even when they do participate in the design, they aren't considered to be the "real designers." You can see Dr. Bennet's research talk on this in the following Youtube Video:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2dG_919Nyeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+% TODO: Move design justice here
