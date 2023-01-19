@@ -26,6 +26,8 @@ As this class discusses trolling, as well as many of the other topics of social 
 
 Trolling can be used, in principle, for good or bad ends.
 
+% TODO: Add trolling and nihilism
+
 ## Reflection Exercise
 Revisit the K-Pop protest trolling example in section 7.3. Take your list of ethical frameworks from Chapter 2 and work through them one by one, applying each tool to the K-Pop trolling. For each theory, think of how many different ways the theory could hook up with the example. For example, when using a virtue ethics type of tool, consider how many different people's character and flourishing could be developed through this? When using a tool based on outcomes, like consequentialism, how many different elements of the outcome can you think of? The goal here is to come up with _as many variations as you can_, to see how the tools of ethical analysis can help us see into different aspects of the situation.
 

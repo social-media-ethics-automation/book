@@ -10,4 +10,8 @@ Besides hacking, there are other forms of privacy violations, such as:
 
 % https://www.aljazeera.com/features/2020/10/11/facing-the-music-the-parents-who-share-too-much
 
+% kimmel prank
+
+% John McAfee
+
 % TODO: add about, what if someone purchases a social media platform, then can they view everyone's private messages?  https://www.vox.com/recode/2022/10/27/23427106/elon-musk-twitter-data-direct-messages

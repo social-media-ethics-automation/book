@@ -4,6 +4,7 @@ As a potential worker in the tech industry, you might someday find yourself in a
 
 We hope that if you find yourself in one of these positions, you consider the ethics of what you are doing. We hope you could then bring those concerns into how you design and implement automated systems for social media sites.
 
+% TODO: Add torment nexus tweet
 
 ## An Example of Action
 
