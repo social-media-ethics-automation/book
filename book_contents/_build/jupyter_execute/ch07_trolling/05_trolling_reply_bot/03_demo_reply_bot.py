@@ -116,7 +116,7 @@ if latest_message.subject == expected_subject:
         latest_message.reply(message)
         
     else: # else code for if the message body didn't match
-        display("The message body (" + body + ") didn't match our pattern (" + expected_pattern + ")")
+        display("The message body (" + latest_message.body + ") didn't match our pattern (" + expected_body_pattern + ")")
         
 else: # else code for if the message subject didn't match
     display("The message subject (" + latest_message.subject + ") didn't match our expected subject (" + expected_subject + ")" )
@@ -157,7 +157,7 @@ if latest_message.subject == expected_subject:
         latest_message.reply(message)
         
     else: # else code for if the message body didn't match
-        display("The message body (" + body + ") didn't match our pattern (" + expected_pattern + ")")
+        display("The message body (" + latest_message.body + ") didn't match our pattern (" + expected_body_pattern + ")")
         
 else: # else code for if the message subject didn't match
     display("The message subject (" + latest_message.subject + ") didn't match our expected subject (" + expected_subject + ")" )
@@ -226,7 +226,7 @@ if latest_message.subject == expected_subject:
             latest_message.reply(message)
         
     else: # else code for if the message body didn't match
-        display("The message body (" + body + ") didn't match our pattern (" + expected_pattern + ")")
+        display("The message body (" + latest_message.body + ") didn't match our pattern (" + expected_body_pattern + ")")
         
 else: # else code for if the message subject didn't match
     display("The message subject (" + latest_message.subject + ") didn't match our expected subject (" + expected_subject + ")" )
@@ -278,7 +278,7 @@ if latest_message.subject == expected_subject:
             latest_message.reply(message)
         
     else: # else code for if the message body didn't match
-        display("The message body (" + body + ") didn't match our pattern (" + expected_pattern + ")")
+        display("The message body (" + latest_message.body + ") didn't match our pattern (" + expected_body_pattern + ")")
         
 else: # else code for if the message subject didn't match
     display("The message subject (" + latest_message.subject + ") didn't match our expected subject (" + expected_subject + ")" )
@@ -334,7 +334,7 @@ if latest_message.subject == expected_subject:
             latest_message.reply(message)
         
     else: # else code for if the message body didn't match
-        display("The message body (" + body + ") didn't match our pattern (" + expected_pattern + ")")
+        display("The message body (" + latest_message.body + ") didn't match our pattern (" + expected_body_pattern + ")")
         
 else: # else code for if the message subject didn't match
     display("The message subject (" + latest_message.subject + ") didn't match our expected subject (" + expected_subject + ")" )
