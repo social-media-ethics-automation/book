@@ -23,7 +23,7 @@ for m in reddit.inbox.messages(limit=20):
 
 [1;31m---------------------------------------------------------------------------[0m
 [1;31mAttributeError[0m                            Traceback (most recent call last)
-Input [1;32mIn [6][0m, in [0;36m<cell line: 1>[1;34m()[0m
+Input [1;32mIn [5][0m, in [0;36m<cell line: 1>[1;34m()[0m
 [1;32m----> 1[0m [38;5;28;01mfor[39;00m m [38;5;129;01min[39;00m [43mreddit[49m[38;5;241;43m.[39;49m[43minbox[49m[38;5;241m.[39mmessages(limit[38;5;241m=[39m[38;5;241m20[39m):
 [0;32m      2[0m     [38;5;28mprint[39m(m[38;5;241m.[39msubject)
 
