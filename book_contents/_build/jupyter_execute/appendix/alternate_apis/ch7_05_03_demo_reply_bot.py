@@ -9,67 +9,47 @@
 # 
 # Then we will try trolling it, and fixing it, and trolling it again.
 # 
-# First though we need to do our Redddit PRAW setup:
-# 
-# ## Log into Reddit (PRAW)
+# First though we need to do our tweepy setup:
+# ## Tweepy set-up
 
 # In[1]:
 
 
-import praw
+import tweepy
 
 
-# (optional) make a fake praw connection with the fake_praw library
+# (optional) make a fake twitter connection with the fake_tweepy library
 # 
-# For testing purposes, we've added this line of code, which loads a fake version of praw, so it wont actually connect to reddit. __If you want to try to actually connect to reddit, don't run this line of code.__
+# For testing purposes, we’ve added this line of code, which loads a fake version of tweepy, so it wont actually connect to twitter. If you want to try to actually connect to twitter, don’t run this line of code.
 
 # In[2]:
 
 
-get_ipython().run_line_magic('run', '../../fake_apis/fake_praw.ipynb')
+get_ipython().run_line_magic('run', '../../fake_tweepy/fake_tweepy.ipynb')
 
 
 # In[3]:
 
 
 # Load all your developer access passwords into Python
-# TODO: Put your reddit username, password, and special developer access passwords below:
-username="fake_reddit_username"
-password="sa@#4*fdf_fake_password_$%DSG#%DG"
-client_id="45adf$TW_fake_client_id_JESdsg1O"
-client_secret="56sd_fake_client_secret_%Yh%"
+# TODO: Put your twitter account's special developer access passwords below:
+bearer_token = "n4tossfgsafs_fake_bearer_token_isa53#$%$"
+consumer_key = "sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG"
+consumer_secret = "45adf$T$A_fake_consumer_secret_JESdsg"
+access_token = "56sd5Ss4tsea_fake_access_token_%YE%hDsdr"
+access_token_secret = "j^$dr_fake_consumer_key_^A5s#DR5s"
 
 
 # In[4]:
 
 
-username="kthayer_teacher_bot"
-password="dsalkflkjdsaflase9u0930424j"
-client_id="v1OpfWqfJG6Rs2p1XF1vMg"
-client_secret="QY09ptYSc_jkcpURSn4iOV84WpMQOQ"
-
-
-# In[5]:
-
-
-# Give the praw code your reddit account info so
-# it can perform reddit actions
-reddit = praw.Reddit(
-    username=username, password=password,
-    client_id=client_id, client_secret=client_secret,
-    user_agent="a custom python script"
+# Give the tweepy code your developer access passwords so
+# it can perform twitter actions
+client = tweepy.Client(
+   bearer_token=bearer_token,
+   consumer_key=consumer_key, consumer_secret=consumer_secret,
+   access_token=access_token, access_token_secret=access_token_secret
 )
-
-
-# https://www.reddit.com/message/compose/?to=kthayer_teacher_bot
-# "Wanting bot response"
-# 
-
-# In[6]:
-
-
-for m in reddit.inbox.messages(limit=20):
-    print(m.subject)
 
 
 # ## Finding my twitter bot name
@@ -77,7 +57,7 @@ for m in reddit.inbox.messages(limit=20):
 # 
 # We do this by asking twitter for our user info, then getting the id and username from it:
 
-# In[14]:
+# In[5]:
 
 
 # Ask twitter for my user info
@@ -103,7 +83,7 @@ display("my username is: " + my_username)
 # 
 # _Note: This code will crash, showing error messages if there are no recent tweets mentioning us_
 
-# In[15]:
+# In[6]:
 
 
 # Ask twitter for tweets that mention my id
@@ -125,7 +105,7 @@ display("the text of latest mention of us is: " + latest_mention_text)
 # 
 # First we will create a string with the correct pattern, but with our actual bot name
 
-# In[16]:
+# In[7]:
 
 
 expected_pattern = "Hi @" + my_username + ", please "
@@ -133,7 +113,7 @@ expected_pattern = "Hi @" + my_username + ", please "
 
 # Now, if the mention text starts with that expected pattern, then we will find the action from the end of the mention text (based on the expected_pattern length), and reply using that action:
 
-# In[17]:
+# In[8]:
 
 
 # check if the mention text starts with our set phrase
@@ -156,7 +136,7 @@ if latest_mention_text.startswith(expected_pattern):
 # ## Trolling bot 1
 # This bot is really easy to troll, so if I repeat my steps and get a new mention:
 
-# In[18]:
+# In[9]:
 
 
 # Ask twitter for tweets that mention my id
@@ -201,7 +181,7 @@ if latest_mention_text.startswith(expected_pattern):
 # So, to go back through our steps:
 # ### find my latest mention
 
-# In[19]:
+# In[10]:
 
 
 # Ask twitter for tweets that mention my id
@@ -222,7 +202,7 @@ display("the text of latest mention of us is: " + latest_mention_text)
 # 
 # We will use `in` to see if the action is in our list of allowed actions (called an allow_list)
 
-# In[20]:
+# In[11]:
 
 
 expected_pattern = "Hi @" + my_username + ", please "
@@ -260,7 +240,7 @@ if latest_mention_text.startswith(expected_pattern):
 # 
 # _Note: the code below is just copied from the code sections above_
 
-# In[21]:
+# In[12]:
 
 
 # Ask twitter for tweets that mention my id
@@ -314,7 +294,7 @@ if latest_mention_text.startswith(expected_pattern):
 # 
 # Let's find the latest mention again and see what happens
 
-# In[22]:
+# In[13]:
 
 
 # Ask twitter for tweets that mention my id

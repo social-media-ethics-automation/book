@@ -26,7 +26,35 @@ As this class discusses trolling, as well as many of the other topics of social 
 
 Trolling can be used, in principle, for good or bad ends.
 
-% TODO: Add trolling and nihilism
+
+## Trolling and Nihilism
+While trolling can be done for many reasons, some trolling communities take on a sort of nihilistic philosophy: it doesn't matter if something is true or not, it doesn't matter if people get hurt, the only thing that might matters is if you can provoke a reaction.
+
+We can see this nihilism show up in one of the versions of the self-contradictory "Rules of the Internet:"
+> 8. There are no real rules about posting
+> 
+> ...
+> 
+> 20. Nothing is to be taken seriously
+>
+> ...
+> 
+> 42. Nothing is Sacred
+
+Youtuber [Innuendo Studios](https://www.youtube.com/@InnuendoStudios) talks about the way arguments are made in a community like 4chan:
+> You can't know whether they mean what they say, or are only arguing as though they mean what they say. And entire debates may just be a single person stirring the pot [e.g., sockpuppets]. Such a community will naturally attract people who enjoy argument for its own sake, and will naturally trend oward the most extremte version of any opinion. In short, this is the free marketplace of ideas. No code of ethics, no social mores no accountability.
+>
+> ...
+> 
+> It's not that they're lying, it's that they just don't care. [...] When they make these kinds of arguments they legitimately do not care whether the words coming out of their mouths are true. If they cared, before they said something is true, they would look it up.
+>
+> - [The Alt-Right Playbook: The Card Says Moops](https://www.youtube.com/watch?v=xMabpBvtXr4&t=409s) by Innuendo Studios
+
+
+While there is a nihilistic worldview where nothing matters, we can see how this plays out practicaly, which is that they tend to protect their group (normally white and male), and tend to be extremely hostile to any other group. They will express extreme misogyny (like we saw in the [Rules of the Internet](https://knowyourmeme.com/memes/rules-of-the-internet): "Rule 30. There are no girls on the internet. Rule 31. TITS or GTFO - the choice is yours"), and extreme racism (like an [invented Nazi My Little Pony character](https://www.theatlantic.com/technology/archive/2020/06/my-little-pony-nazi-4chan-black-lives-matter/613348/)). 
+
+Is this hypocritical or ethically wrong? If they are ethically nihilists (or perhaps egoists), then they might argue that thit doesn't matter. Though, we, the authors want to make clear that we say this is ethically wrong.
+
 
 ## Reflection Exercise
 Revisit the K-Pop protest trolling example in section 7.3. Take your list of ethical frameworks from Chapter 2 and work through them one by one, applying each tool to the K-Pop trolling. For each theory, think of how many different ways the theory could hook up with the example. For example, when using a virtue ethics type of tool, consider how many different people's character and flourishing could be developed through this? When using a tool based on outcomes, like consequentialism, how many different elements of the outcome can you think of? The goal here is to come up with _as many variations as you can_, to see how the tools of ethical analysis can help us see into different aspects of the situation.
