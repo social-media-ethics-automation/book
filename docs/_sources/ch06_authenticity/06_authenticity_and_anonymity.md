@@ -17,5 +17,8 @@ We can next ask if authentic self-expression is a good thing or not. But that de
 - Are you authentically expressing hate or cruelty? If so, perhaps authentic self-expression is morally bad.
 - Are you part of an oppressed or marginalized group that has been restricted from self-expression? Then perhaps expressing yourself is morally good. (See [Trans Twitter and the beauty of online anonymity](https://www.vox.com/culture/21432987/trans-twitter-reddit-online-anonymity))
 
+% TODO: Make a table
+% TODO: Add Vonnegut quote: "We are who we pretend to be"
+
 
 [^tracing_back]: In reality, while many times people can remain anonymous, surprisingly often, anonymous users' identities can be discovered and revealed, whether through hacks or accidentally revealed information.

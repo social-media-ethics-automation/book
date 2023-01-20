@@ -681,6 +681,11 @@ const thebe_selector_output = ".output, .cell_output"
      7.6. Ethics and Trolling
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../07_learn_more.html">
+     7.7. Learn More
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -1835,8 +1840,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tweepy-set-up">
-   Tweepy set-up
+  <a class="reference internal nav-link" href="#log-into-reddit-praw">
+   Log into Reddit (PRAW)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1908,8 +1913,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tweepy-set-up">
-   Tweepy set-up
+  <a class="reference internal nav-link" href="#log-into-reddit-praw">
+   Log into Reddit (PRAW)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1979,54 +1984,84 @@ title="Print to PDF"
 <li><p>then the bot will reply, “I will now ____” (where the ___ is that same action).</p></li>
 </ul>
 <p>Then we will try trolling it, and fixing it, and trolling it again.</p>
-<p>First though we need to do our tweepy setup:</p>
-<section id="tweepy-set-up">
-<h2>Tweepy set-up<a class="headerlink" href="#tweepy-set-up" title="Permalink to this headline">#</a></h2>
+<p>First though we need to do our Redddit PRAW setup:</p>
+<section id="log-into-reddit-praw">
+<h2>Log into Reddit (PRAW)<a class="headerlink" href="#log-into-reddit-praw" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tweepy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">praw</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>(optional) make a fake twitter connection with the fake_tweepy library</p>
-<p>For testing purposes, we’ve added this line of code, which loads a fake version of tweepy, so it wont actually connect to twitter. If you want to try to actually connect to twitter, don’t run this line of code.</p>
+<p>(optional) make a fake praw connection with the fake_praw library</p>
+<p>For testing purposes, we’ve added this line of code, which loads a fake version of praw, so it wont actually connect to reddit. <strong>If you want to try to actually connect to reddit, don’t run this line of code.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_tweepy/fake_tweepy.ipynb
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_apis/fake_praw.ipynb
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake tweepy is replacing the tweepy library. Fake Tweepy doesn&#x27;t need real passwords, and prevents you from accessing real twitter</strong></div></div>
+<div class="output text_html"><strong style='color:darkred'>Fake praw is replacing the praw library. Fake praw doesn&#x27;t need real passwords, and prevents you from accessing real reddit</strong></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load all your developer access passwords into Python</span>
-<span class="c1"># TODO: Put your twitter account&#39;s special developer access passwords below:</span>
-<span class="n">bearer_token</span> <span class="o">=</span> <span class="s2">&quot;n4tossfgsafs_fake_bearer_token_isa53#$%$&quot;</span>
-<span class="n">consumer_key</span> <span class="o">=</span> <span class="s2">&quot;sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG&quot;</span>
-<span class="n">consumer_secret</span> <span class="o">=</span> <span class="s2">&quot;45adf$T$A_fake_consumer_secret_JESdsg&quot;</span>
-<span class="n">access_token</span> <span class="o">=</span> <span class="s2">&quot;56sd5Ss4tsea_fake_access_token_%YE%hDsdr&quot;</span>
-<span class="n">access_token_secret</span> <span class="o">=</span> <span class="s2">&quot;j^$dr_fake_consumer_key_^A5s#DR5s&quot;</span>
+<span class="c1"># TODO: Put your reddit username, password, and special developer access passwords below:</span>
+<span class="n">username</span><span class="o">=</span><span class="s2">&quot;fake_reddit_username&quot;</span>
+<span class="n">password</span><span class="o">=</span><span class="s2">&quot;sa@#4*fdf_fake_password_$%DSG#%DG&quot;</span>
+<span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;45adf$TW_fake_client_id_JESdsg1O&quot;</span>
+<span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;56sd_fake_client_secret_%Yh%&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Give the tweepy code your developer access passwords so</span>
-<span class="c1"># it can perform twitter actions</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span>
-   <span class="n">bearer_token</span><span class="o">=</span><span class="n">bearer_token</span><span class="p">,</span>
-   <span class="n">consumer_key</span><span class="o">=</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">consumer_secret</span><span class="p">,</span>
-   <span class="n">access_token</span><span class="o">=</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">access_token_secret</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">username</span><span class="o">=</span><span class="s2">&quot;kthayer_teacher_bot&quot;</span>
+<span class="n">password</span><span class="o">=</span><span class="s2">&quot;dsalkflkjdsaflase9u0930424j&quot;</span>
+<span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;v1OpfWqfJG6Rs2p1XF1vMg&quot;</span>
+<span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;QY09ptYSc_jkcpURSn4iOV84WpMQOQ&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Give the praw code your reddit account info so</span>
+<span class="c1"># it can perform reddit actions</span>
+<span class="n">reddit</span> <span class="o">=</span> <span class="n">praw</span><span class="o">.</span><span class="n">Reddit</span><span class="p">(</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">client_id</span><span class="p">,</span> <span class="n">client_secret</span><span class="o">=</span><span class="n">client_secret</span><span class="p">,</span>
+    <span class="n">user_agent</span><span class="o">=</span><span class="s2">&quot;a custom python script&quot;</span>
 <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to log in to twitter</strong></div></div>
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to collect account info to use on reddit</strong></div></div>
+</div>
+<p>https://www.reddit.com/message/compose/?to=kthayer_teacher_bot
+“Wanting bot response”</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">reddit</span><span class="o">.</span><span class="n">inbox</span><span class="o">.</span><span class="n">messages</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">subject</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="nn">Input In [6],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">reddit</span><span class="o">.</span><span class="n">inbox</span><span class="o">.</span><span class="n">messages</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">subject</span><span class="p">)</span>
+
+<span class="ne">AttributeError</span>: &#39;types.SimpleNamespace&#39; object has no attribute &#39;inbox&#39;
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="finding-my-twitter-bot-name">
