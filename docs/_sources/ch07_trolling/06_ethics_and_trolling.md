@@ -31,18 +31,18 @@ Trolling can be used, in principle, for good or bad ends.
 While trolling can be done for many reasons, some trolling communities take on a sort of nihilistic philosophy: it doesn't matter if something is true or not, it doesn't matter if people get hurt, the only thing that might matters is if you can provoke a reaction.
 
 We can see this nihilism show up in one of the versions of the self-contradictory "Rules of the Internet:"
-> 8. There are no real rules about posting
+> 8\. There are no real rules about posting
 > 
 > ...
 > 
-> 20. Nothing is to be taken seriously
+> 20\. Nothing is to be taken seriously
 >
 > ...
 > 
-> 42. Nothing is Sacred
+> 42\. Nothing is Sacred
 
 Youtuber [Innuendo Studios](https://www.youtube.com/@InnuendoStudios) talks about the way arguments are made in a community like 4chan:
-> You can't know whether they mean what they say, or are only arguing as though they mean what they say. And entire debates may just be a single person stirring the pot [e.g., sockpuppets]. Such a community will naturally attract people who enjoy argument for its own sake, and will naturally trend oward the most extremte version of any opinion. In short, this is the free marketplace of ideas. No code of ethics, no social mores no accountability.
+> You can't know whether they mean what they say, or are only arguing as though they mean what they say. And entire debates may just be a single person stirring the pot [e.g., sockpuppets]. Such a community will naturally attract people who enjoy argument for its own sake, and will naturally trend oward the most extremte version of any opinion. In short, this is the free marketplace of ideas. No code of ethics, no social mores, no accountability.
 >
 > ...
 > 
@@ -57,7 +57,7 @@ Is this just hypocritical, or is it ethically wrong? It depends, of course, on w
 
 If the trolls claim to be nihilists about ethics, or indeed if they are egoists, then they would argue that this doesn't matter, and that there's no normative basis for objecting to the disruption and caused by their trolling. But on just about any other ethical approach, there are one or more reasons available for objecting to the disruptions and harm caused by these trolls! If the only way to get a moral pass on this type of trolling is to choose an ethical framework that tells you harming others doesn't matter, then it looks like this nihilist viewpoint isn't deployed in good faith[^nihilist_good_faith]. Rather, with any serious (i.e., non-avoidant) moral framework, this type of trolling is ethically wrong for one or more reasons (though how we explain it is wrong depends on the specific framework).
 
-[^nihilist_good_faith]: A good faith use of nihilistic ethics framework would be for exploring normative features of situations.
+[^nihilist_good_faith]: A good faith use of a nihilistic ethics framework would be for exploring normative features of situations.
 
 ## Reflection Exercise
 Revisit the K-Pop protest trolling example in section 7.3. Take your list of ethical frameworks from Chapter 2 and work through them one by one, applying each tool to the K-Pop trolling. For each theory, think of how many different ways the theory could hook up with the example. For example, when using a virtue ethics type of tool, consider how many different people's character and flourishing could be developed through this? When using a tool based on outcomes, like consequentialism, how many different elements of the outcome can you think of? The goal here is to come up with _as many variations as you can_, to see how the tools of ethical analysis can help us see into different aspects of the situation.
