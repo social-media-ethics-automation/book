@@ -40,16 +40,13 @@ client_id="45adf$TW_fake_client_id_JESdsg1O"
 client_secret="56sd_fake_client_secret_%Yh%"
 
 
-# In[4]:
-
-
-username="kthayer_teacher_bot"
-password="dsalkflkjdsaflase9u0930424j"
-client_id="v1OpfWqfJG6Rs2p1XF1vMg"
-client_secret="QY09ptYSc_jkcpURSn4iOV84WpMQOQ"
-
-
 # In[5]:
+
+
+
+
+
+# In[4]:
 
 
 # Give the praw code your reddit account info so
@@ -65,7 +62,7 @@ reddit = praw.Reddit(
 # "Wanting bot response"
 # 
 
-# In[6]:
+# In[5]:
 
 
 for m in reddit.inbox.messages(limit=20):
