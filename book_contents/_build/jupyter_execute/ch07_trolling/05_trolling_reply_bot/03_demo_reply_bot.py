@@ -4,7 +4,7 @@
 # # Demo: Trolling a Reply Bot
 # 
 # We are later going to build a bot that, if you tweet at it: 
-# - "Hi @mybotname, please ___" (where the ___ is some action)
+# - Subject: "Wanting bot response", body: "I want you to ___" (where the ___ is some action)
 # - then the bot will reply, "I will now ____" (where the ___ is that same action).
 # 
 # Then we will try trolling it, and fixing it, and trolling it again.
@@ -40,12 +40,6 @@ client_id="45adf$TW_fake_client_id_JESdsg1O"
 client_secret="56sd_fake_client_secret_%Yh%"
 
 
-# In[5]:
-
-
-
-
-
 # In[4]:
 
 
@@ -58,134 +52,118 @@ reddit = praw.Reddit(
 )
 
 
-# https://www.reddit.com/message/compose/?to=kthayer_teacher_bot
+# https://www.reddit.com/message/compose/
 # "Wanting bot response"
 # 
+
+# ## Bot 1: do whatever we are told
+# Our first bot will find our latest inbox message, and then reply with whatever it is told to do
+
+# ### find my latest message
+# We need to find our latest message in our inbox
+# 
+# We do this by looking in our reddit inbox for messages (we limit it to one, since we just want the latest).
+# 
+# It doesn't directly give us the one message (instead it is in something called an "iterator"), but we can use the `next` function to get the message out.
+# 
+# We then display the subject of the message just so we can see that it found something..
 
 # In[5]:
 
 
-for m in reddit.inbox.messages(limit=20):
-    print(m.subject)
+# Look up the subreddit "cuteanimals", then find the "hot" list, getting up to 1 submission
+messages = reddit.inbox.messages(limit=1)
 
+# get the first submission off the list (should only be one anyway)
+latest_message = next(messages) 
 
-# ## Finding my twitter bot name
-# We are going to be looking for people tweeting at us "Hi @mybotname, please ___", except we will need to get our actual twitter handle instead of "@mybotname". We'll need our twitter id number as well to find tweets that mention us.
-# 
-# We do this by asking twitter for our user info, then getting the id and username from it:
-
-# In[14]:
-
-
-# Ask twitter for my user info
-my_user_info = client.get_user(id="me", user_auth=True)
-
-# Get my id number and username from the user info
-my_id = my_user_info.data.id
-my_username = my_user_info.data.username
-
-display("my user id number is: " + str(my_id))
-display("my username is: " + my_username)
-
-
-# ## Bot 1: do whatever we are told
-# our first bot will find our latest mention, and then do whatever it is told
-
-# ### find my latest mention
-# Next we need to find the latest tweet that mentioned us. 
-# 
-# We do this by asking twitter for tweets that mention our user id, then pulling the first thing out of the list (index 0).
-# 
-# Then we get the tweet id and the text of the tweet.
-# 
-# _Note: This code will crash, showing error messages if there are no recent tweets mentioning us_
-
-# In[15]:
-
-
-# Ask twitter for tweets that mention my id
-my_mentions = client.get_users_mentions(id=my_id)
-
-# Get the first tweet from the list (latest tweet)
-latest_mention = my_mentions.data[0]
-
-latest_mention_id = latest_mention.id
-latest_mention_text = latest_mention.text
-
-display("the latest mention of us is tweet id: " + str(latest_mention_id))
-display("the text of latest mention of us is: " + latest_mention_text)
+# display the subject and body of the message, so we can see what we found
+display("latest message subject: " + str(latest_message.subject))
+display("latest message body: " + str(latest_message.body))
 
 
 # ### If tweet matches our pattern, reply
 # 
-# We will now see if our tweet matches our pattern of "Hi @mybotname, please ___" and then we will reply.
+# We will now see if our tweet matches our pattern of a message subject of "Wanting bot response" with a message body of "I want you to ___" and then we will reply.
 # 
-# First we will create a string with the correct pattern, but with our actual bot name
+# First we will create strings with the patterns we are looking for and save them into variables.
 
-# In[16]:
-
-
-expected_pattern = "Hi @" + my_username + ", please "
+# In[6]:
 
 
-# Now, if the mention text starts with that expected pattern, then we will find the action from the end of the mention text (based on the expected_pattern length), and reply using that action:
+expected_subject = "Wanting bot response"
+expected_body_pattern = "I want you to "
 
-# In[17]:
+
+# We will check if the message has the subject we are expecting. If it does it will check if the essage body starts with the expected pattern. If it does, then we will find the action from the end of the message body text (based on the expected_pattern length), and reply using that action. 
+# 
+# We also add "else" cases for when we didn't match the patter, and display a message saying what didn't match.
+
+# In[7]:
 
 
 # check if the mention text starts with our set phrase
-if latest_mention_text.startswith(expected_pattern):
-    # get the action, which should be the end of the string after the expected pattern
-    action = latest_mention_text[len(expected_pattern) :]
+if latest_message.subject == expected_subject:
     
-    # make a new tweet message which says we will do the action
-    message = "I will now " + action
-    
-    # tweet our message in reply to the mention tweet
-    client.create_tweet(
-        text=message, 
-        in_reply_to_tweet_id=latest_mention_id
-    )
+    if latest_message.body.startswith(expected_body_pattern):
+        # get the action, which should be the end of the string after the expected pattern
+        action = latest_message.body[len(expected_body_pattern) :]
+
+        # make a new message which says we will do the action
+        message = "I will now " + action
+
+        # send our message in reply
+        latest_message.reply(message)
+        
+    else: # else code for if the message body didn't match
+        display("The message body (" + body + ") didn't match our pattern (" + expected_pattern + ")")
+        
+else: # else code for if the message subject didn't match
+    display("The message subject (" + latest_message.subject + ") didn't match our expected subject (" + expected_subject + ")" )
 
 
 # Yay! It worked! But there is a problem!
 
 # ## Trolling bot 1
-# This bot is really easy to troll, so if I repeat my steps and get a new mention:
+# This bot is really easy to troll, so if I repeat my steps and get a new mention (this code is just a duplication of the code above):
 
-# In[18]:
+# In[8]:
 
 
-# Ask twitter for tweets that mention my id
-my_mentions = client.get_users_mentions(id=my_id)
+# Look up the subreddit "cuteanimals", then find the "hot" list, getting up to 1 submission
+messages = reddit.inbox.messages(limit=1)
 
-# Get the first tweet from the list (latest tweet)
-latest_mention = my_mentions.data[0]
+# get the first submission off the list (should only be one anyway)
+latest_message = next(messages) 
 
-latest_mention_id = latest_mention.id
-latest_mention_text = latest_mention.text
+# display the subject and body of the message, so we can see what we found
+display("latest message subject: " + str(latest_message.subject))
+display("latest message body: " + str(latest_message.body))
 
-display("the latest mention of us is tweet id: " + str(latest_mention_id))
-display("the thext of latest mention of us is: " + latest_mention_text)
-
-expected_pattern = "Hi @" + my_username + ", please "
+expected_subject = "Wanting bot response"
+expected_body_pattern = "I want you to "
 
 # check if the mention text starts with our set phrase
-if latest_mention_text.startswith(expected_pattern):
-    # get the action, which should be the end of the string after the expected pattern
-    action = latest_mention_text[len(expected_pattern) :]
+if latest_message.subject == expected_subject:
     
-    # make a new tweet message which says we will do the action
-    message = "I will now " + action
-    
-    # tweet our message in reply to the mention tweet
-    client.create_tweet(
-        text=message, 
-        in_reply_to_tweet_id=latest_mention_id
-    )
+    if latest_message.body.startswith(expected_body_pattern):
+        # get the action, which should be the end of the string after the expected pattern
+        action = latest_message.body[len(expected_body_pattern) :]
+
+        # make a new message which says we will do the action
+        message = "I will now " + action
+
+        # sen our message in reply
+        latest_message.reply(message)
+        
+    else: # else code for if the message body didn't match
+        display("The message body (" + body + ") didn't match our pattern (" + expected_pattern + ")")
+        
+else: # else code for if the message subject didn't match
+    display("The message subject (" + latest_message.subject + ") didn't match our expected subject (" + expected_subject + ")" )
 
 
-# Someone tweeted at us: `Hi @fake_user, please do something horrible!`, and we replied `I will now do something horrible!`. 
+# Someone messaged us saying at us: `I want you to do something horrible!`, and we replied `I will now do something horrible!`. 
 # 
 # They could have made us tweet much worse!
 
@@ -198,108 +176,112 @@ if latest_mention_text.startswith(expected_pattern):
 # So, to go back through our steps:
 # ### find my latest mention
 
-# In[19]:
+# In[9]:
 
 
-# Ask twitter for tweets that mention my id
-my_mentions = client.get_users_mentions(id=my_id)
+# Look up the subreddit "cuteanimals", then find the "hot" list, getting up to 1 submission
+messages = reddit.inbox.messages(limit=1)
 
-# Get the first tweet from the list (latest tweet)
-latest_mention = my_mentions.data[0]
+# get the first submission off the list (should only be one anyway)
+latest_message = next(messages) 
 
-latest_mention_id = latest_mention.id
-latest_mention_text = latest_mention.text
-
-display("the latest mention of us is tweet id: " + str(latest_mention_id))
-display("the text of latest mention of us is: " + latest_mention_text)
+# display the subject and body of the message, so we can see what we found
+display("latest message subject: " + str(latest_message.subject))
+display("latest message body: " + str(latest_message.body))
 
 
 # ### If tweet matches our pattern, reply
-# We do the same code for this as before, but after we get the action, we have another `if`/`else` to tweet back our two options.
+# We do the same code for this as before, but after we get the action we are told to do, we put another `if`/`else` to either do the action if we recognize it, or say we didn't recognize the action.
 # 
 # We will use `in` to see if the action is in our list of allowed actions (called an allow_list)
 
-# In[20]:
+# In[10]:
 
 
-expected_pattern = "Hi @" + my_username + ", please "
+expected_subject = "Wanting bot response"
+expected_body_pattern = "I want you to "
 
 actions_allow_list = ["run", "jump", "fly"]
 
 # check if the mention text starts with our set phrase
-if latest_mention_text.startswith(expected_pattern):
-    # get the action, which should be the end of the string after the expected pattern
-    action = latest_mention_text[len(expected_pattern) :]
+if latest_message.subject == expected_subject:
     
-    # See if it is one of our recognized actions
-    if(action in actions_allow_list):
-        # make a new tweet message which says we will do the action
-        message = "I will now " + action
-
-        # tweet our message in reply to the mention tweet
-        client.create_tweet(
-            text=message, 
-            in_reply_to_tweet_id=latest_mention_id
-        )
-    else: # we didn't recognize the action
-        # make a new tweet message which says we will do the action
-        message = "I do not recognize the command " + action
-
-        # tweet our message in reply to the mention tweet
-        client.create_tweet(
-            text=message, 
-            in_reply_to_tweet_id=latest_mention_id
-        )
+    if latest_message.body.startswith(expected_body_pattern):
+        # get the action, which should be the end of the string after the expected pattern
+        action = latest_message.body[len(expected_body_pattern) :]
         
+        # See if it is one of our recognized actions
+        if(action in actions_allow_list):
+            # make a new message which says we will do the action
+            message = "I will now " + action
+
+            # send our message in reply
+            latest_message.reply(message)
+            
+        else: # we didn't recognize the action
+            # make a new message which says we will NOT do the action
+            message = "I do not recognize the command " + action
+
+            # send our message in reply
+            latest_message.reply(message)
+        
+    else: # else code for if the message body didn't match
+        display("The message body (" + body + ") didn't match our pattern (" + expected_pattern + ")")
+        
+else: # else code for if the message subject didn't match
+    display("The message subject (" + latest_message.subject + ") didn't match our expected subject (" + expected_subject + ")" )
+
 
 
 # That one was in our allow list so it worked. Let's do it all again, with the tweet that caused us problems last time
 # 
 # _Note: the code below is just copied from the code sections above_
 
-# In[21]:
+# In[11]:
 
 
-# Ask twitter for tweets that mention my id
-my_mentions = client.get_users_mentions(id=my_id)
+# Look up the subreddit "cuteanimals", then find the "hot" list, getting up to 1 submission
+messages = reddit.inbox.messages(limit=1)
 
-# Get the first tweet from the list (latest tweet)
-latest_mention = my_mentions.data[0]
+# get the first submission off the list (should only be one anyway)
+latest_message = next(messages) 
 
-latest_mention_id = latest_mention.id
-latest_mention_text = latest_mention.text
+# display the subject and body of the message, so we can see what we found
+display("latest message subject: " + str(latest_message.subject))
+display("latest message body: " + str(latest_message.body))
 
-display("the latest mention of us is tweet id: " + str(latest_mention_id))
-display("the text of latest mention of us is: " + latest_mention_text)
-
-expected_pattern = "Hi @" + my_username + ", please "
+expected_subject = "Wanting bot response"
+expected_body_pattern = "I want you to "
 
 actions_allow_list = ["run", "jump", "fly"]
 
 # check if the mention text starts with our set phrase
-if latest_mention_text.startswith(expected_pattern):
-    # get the action, which should be the end of the string after the expected pattern
-    action = latest_mention_text[len(expected_pattern) :]
+if latest_message.subject == expected_subject:
     
-    # See if it is one of our recognized actions
-    if(action in actions_allow_list):
-        # make a new tweet message which says we will do the action
-        message = "I will now " + action
+    if latest_message.body.startswith(expected_body_pattern):
+        # get the action, which should be the end of the string after the expected pattern
+        action = latest_message.body[len(expected_body_pattern) :]
+        
+        # See if it is one of our recognized actions
+        if(action in actions_allow_list):
+            # make a new message which says we will do the action
+            message = "I will now " + action
 
-        # tweet our message in reply to the mention tweet
-        client.create_tweet(
-            text=message, 
-            in_reply_to_tweet_id=latest_mention_id
-        )
-    else: # we didn't recognize the action
-        # make a new tweet message which says we will do the action
-        message = "I do not recognize the command " + action
+            # send our message in reply
+            latest_message.reply(message)
+            
+        else: # we didn't recognize the action
+            # make a new message which says we will NOT do the action
+            message = "I do not recognize the command " + action
 
-        # tweet our message in reply to the mention tweet
-        client.create_tweet(
-            text=message, 
-            in_reply_to_tweet_id=latest_mention_id
-        )
+            # send our message in reply
+            latest_message.reply(message)
+        
+    else: # else code for if the message body didn't match
+        display("The message body (" + body + ") didn't match our pattern (" + expected_pattern + ")")
+        
+else: # else code for if the message subject didn't match
+    display("The message subject (" + latest_message.subject + ") didn't match our expected subject (" + expected_subject + ")" )
 
 
 # Ok, this time we said `I do not recognize the command do something horrible!`. 
@@ -311,53 +293,55 @@ if latest_mention_text.startswith(expected_pattern):
 # 
 # Let's find the latest mention again and see what happens
 
-# In[22]:
+# In[12]:
 
 
-# Ask twitter for tweets that mention my id
-my_mentions = client.get_users_mentions(id=my_id)
+# Look up the subreddit "cuteanimals", then find the "hot" list, getting up to 1 submission
+messages = reddit.inbox.messages(limit=1)
 
-# Get the first tweet from the list (latest tweet)
-latest_mention = my_mentions.data[0]
+# get the first submission off the list (should only be one anyway)
+latest_message = next(messages) 
 
-latest_mention_id = latest_mention.id
-latest_mention_text = latest_mention.text
+# display the subject and body of the message, so we can see what we found
+display("latest message subject: " + str(latest_message.subject))
+display("latest message body: " + str(latest_message.body))
 
-display("the latest mention of us is tweet id: " + str(latest_mention_id))
-display("the text of latest mention of us is: " + latest_mention_text)
-
-expected_pattern = "Hi @" + my_username + ", please "
+expected_subject = "Wanting bot response"
+expected_body_pattern = "I want you to "
 
 actions_allow_list = ["run", "jump", "fly"]
 
 # check if the mention text starts with our set phrase
-if latest_mention_text.startswith(expected_pattern):
-    # get the action, which should be the end of the string after the expected pattern
-    action = latest_mention_text[len(expected_pattern) :]
+if latest_message.subject == expected_subject:
     
-    # See if it is one of our recognized actions
-    if(action in actions_allow_list):
-        # make a new tweet message which says we will do the action
-        message = "I will now " + action
+    if latest_message.body.startswith(expected_body_pattern):
+        # get the action, which should be the end of the string after the expected pattern
+        action = latest_message.body[len(expected_body_pattern) :]
+        
+        # See if it is one of our recognized actions
+        if(action in actions_allow_list):
+            # make a new message which says we will do the action
+            message = "I will now " + action
 
-        # tweet our message in reply to the mention tweet
-        client.create_tweet(
-            text=message, 
-            in_reply_to_tweet_id=latest_mention_id
-        )
-    else: # we didn't recognize the action
-        # make a new tweet message which says we will do the action
-        message = "I do not recognize the command " + action
+            # send our message in reply
+            latest_message.reply(message)
+            
+        else: # we didn't recognize the action
+            # make a new message which says we will NOT do the action
+            message = "I do not recognize the command " + action
 
-        # tweet our message in reply to the mention tweet
-        client.create_tweet(
-            text=message, 
-            in_reply_to_tweet_id=latest_mention_id
-        )
+            # send our message in reply
+            latest_message.reply(message)
+        
+    else: # else code for if the message body didn't match
+        display("The message body (" + body + ") didn't match our pattern (" + expected_pattern + ")")
+        
+else: # else code for if the message subject didn't match
+    display("The message subject (" + latest_message.subject + ") didn't match our expected subject (" + expected_subject + ")" )
 
 
 # Oh no! Someone tweeted at us:
-# - `Hi @fake_user, please stop talking. But that doesn't mean I won't say horrible things like: I hate everybody!`
+# - `I want you to stop talking. But that doesn't mean I won't say horrible things like: I hate everybody!`
 # 
 # And we replied:
 # - `I do not recognize the command stop talking. But that doesn't mean I won't say horrible things like: I hate everybody!`

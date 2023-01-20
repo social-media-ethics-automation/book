@@ -515,6 +515,52 @@ def get_users_following(id="", max_results=5):
 # In[10]:
 
 
+class MessageSimpleNamespace(SimpleNamespace):
+    def reply(self, text):
+        print_info("Fake praw is pretending to reply to a message with: "+ text)
+    pass
+
+
+mentions_counter = 0
+
+def inbox_messages(limit=1):
+    global mentions_counter
+    mentions_counter += 1
+    if(mentions_counter == 1):
+        message = (MessageSimpleNamespace(
+          subject = "Wanting bot response",
+          body = "I want you to jump"
+        ),)
+        return iter(message)
+    elif(mentions_counter == 2):
+        message = (MessageSimpleNamespace(
+          subject = "Wanting bot response",
+          body = "I want you to do something horrible!"
+        ),)
+        return iter(message)
+    elif(mentions_counter == 3):
+        message = (MessageSimpleNamespace(
+          subject = "Wanting bot response",
+          body = "I want you to fly"
+        ),)
+        return iter(message)
+    elif(mentions_counter == 4):
+        message = (MessageSimpleNamespace(
+          subject = "Wanting bot response",
+          body = "I want you to do something horrible!"
+        ),)
+        return iter(message)
+    elif(mentions_counter == 5):
+        message = (MessageSimpleNamespace(
+          subject = "Wanting bot response",
+          body = "I want you to stop talking. But that doesn't mean I won't say horrible things like: I hate everybody!"
+        ),)
+        return iter(message)
+
+
+# In[11]:
+
+
 class AuthorSimplishNamespace(SimplishNamespace):
     def __str__(self):
         return self.name
@@ -583,14 +629,14 @@ def hot(limit=10):
     return iter(submission_list)
 
 
-# In[11]:
+# In[12]:
 
 
 def submit(title, selftext=""):
     print_info("Fake praw is pretending to submit a post with the title: \""+title+"\" and the content: "+ selftext)
 
 
-# In[12]:
+# In[13]:
 
 
 def subreddit(subreddit_name):
@@ -603,17 +649,20 @@ def subreddit(subreddit_name):
 
 # 
 
-# In[13]:
+# In[14]:
 
 
 def client_creator(username="", password="", client_id="", client_secret="", user_agent="" ):
     print_info("Fake praw is pretending to collect account info to use on reddit")
     return SimpleNamespace(
-      subreddit = subreddit
+      subreddit = subreddit,
+      inbox = SimpleNamespace(
+          messages = inbox_messages
+      )
     )
 
 
-# In[14]:
+# In[15]:
 
 
 praw = SimpleNamespace(
