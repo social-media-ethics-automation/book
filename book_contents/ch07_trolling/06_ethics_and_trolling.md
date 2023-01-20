@@ -31,18 +31,18 @@ Trolling can be used, in principle, for good or bad ends.
 While trolling can be done for many reasons, some trolling communities take on a sort of nihilistic philosophy: it doesn't matter if something is true or not, it doesn't matter if people get hurt, the only thing that might matters is if you can provoke a reaction.
 
 We can see this nihilism show up in one of the versions of the self-contradictory "Rules of the Internet:"
-> 8. There are no real rules about posting
+> 8\. There are no real rules about posting
 > 
 > ...
 > 
-> 20. Nothing is to be taken seriously
+> 20\. Nothing is to be taken seriously
 >
 > ...
 > 
-> 42. Nothing is Sacred
+> 42\. Nothing is Sacred
 
 Youtuber [Innuendo Studios](https://www.youtube.com/@InnuendoStudios) talks about the way arguments are made in a community like 4chan:
-> You can't know whether they mean what they say, or are only arguing as though they mean what they say. And entire debates may just be a single person stirring the pot [e.g., sockpuppets]. Such a community will naturally attract people who enjoy argument for its own sake, and will naturally trend oward the most extremte version of any opinion. In short, this is the free marketplace of ideas. No code of ethics, no social mores no accountability.
+> You can't know whether they mean what they say, or are only arguing as though they mean what they say. And entire debates may just be a single person stirring the pot [e.g., sockpuppets]. Such a community will naturally attract people who enjoy argument for its own sake, and will naturally trend oward the most extremte version of any opinion. In short, this is the free marketplace of ideas. No code of ethics, no social mores, no accountability.
 >
 > ...
 > 
