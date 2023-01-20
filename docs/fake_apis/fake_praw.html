@@ -679,6 +679,11 @@ const thebe_selector_output = ".output, .cell_output"
      7.6. Ethics and Trolling
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch07_trolling/07_learn_more.html">
+     7.7. Learn More
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -2357,6 +2362,53 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MessageSimpleNamespace</span><span class="p">(</span><span class="n">SimpleNamespace</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">reply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+        <span class="n">print_info</span><span class="p">(</span><span class="s2">&quot;Fake praw is pretending to reply to a message with: &quot;</span><span class="o">+</span> <span class="n">text</span><span class="p">)</span>
+    <span class="k">pass</span>
+
+
+<span class="n">mentions_counter</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">inbox_messages</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">mentions_counter</span>
+    <span class="n">mentions_counter</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">mentions_counter</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="p">(</span><span class="n">MessageSimpleNamespace</span><span class="p">(</span>
+          <span class="n">subject</span> <span class="o">=</span> <span class="s2">&quot;Wanting bot response&quot;</span><span class="p">,</span>
+          <span class="n">body</span> <span class="o">=</span> <span class="s2">&quot;I want you to jump&quot;</span>
+        <span class="p">),)</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+    <span class="k">elif</span><span class="p">(</span><span class="n">mentions_counter</span> <span class="o">==</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="p">(</span><span class="n">MessageSimpleNamespace</span><span class="p">(</span>
+          <span class="n">subject</span> <span class="o">=</span> <span class="s2">&quot;Wanting bot response&quot;</span><span class="p">,</span>
+          <span class="n">body</span> <span class="o">=</span> <span class="s2">&quot;I want you to do something horrible!&quot;</span>
+        <span class="p">),)</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+    <span class="k">elif</span><span class="p">(</span><span class="n">mentions_counter</span> <span class="o">==</span> <span class="mi">3</span><span class="p">):</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="p">(</span><span class="n">MessageSimpleNamespace</span><span class="p">(</span>
+          <span class="n">subject</span> <span class="o">=</span> <span class="s2">&quot;Wanting bot response&quot;</span><span class="p">,</span>
+          <span class="n">body</span> <span class="o">=</span> <span class="s2">&quot;I want you to fly&quot;</span>
+        <span class="p">),)</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+    <span class="k">elif</span><span class="p">(</span><span class="n">mentions_counter</span> <span class="o">==</span> <span class="mi">4</span><span class="p">):</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="p">(</span><span class="n">MessageSimpleNamespace</span><span class="p">(</span>
+          <span class="n">subject</span> <span class="o">=</span> <span class="s2">&quot;Wanting bot response&quot;</span><span class="p">,</span>
+          <span class="n">body</span> <span class="o">=</span> <span class="s2">&quot;I want you to do something horrible!&quot;</span>
+        <span class="p">),)</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+    <span class="k">elif</span><span class="p">(</span><span class="n">mentions_counter</span> <span class="o">==</span> <span class="mi">5</span><span class="p">):</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="p">(</span><span class="n">MessageSimpleNamespace</span><span class="p">(</span>
+          <span class="n">subject</span> <span class="o">=</span> <span class="s2">&quot;Wanting bot response&quot;</span><span class="p">,</span>
+          <span class="n">body</span> <span class="o">=</span> <span class="s2">&quot;I want you to stop talking. But that doesn&#39;t mean I won&#39;t say horrible things like: I hate everybody!&quot;</span>
+        <span class="p">),)</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">AuthorSimplishNamespace</span><span class="p">(</span><span class="n">SimplishNamespace</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
@@ -2452,7 +2504,10 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">client_creator</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">user_agent</span><span class="o">=</span><span class="s2">&quot;&quot;</span> <span class="p">):</span>
     <span class="n">print_info</span><span class="p">(</span><span class="s2">&quot;Fake praw is pretending to collect account info to use on reddit&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
-      <span class="n">subreddit</span> <span class="o">=</span> <span class="n">subreddit</span>
+      <span class="n">subreddit</span> <span class="o">=</span> <span class="n">subreddit</span><span class="p">,</span>
+      <span class="n">inbox</span> <span class="o">=</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+          <span class="n">messages</span> <span class="o">=</span> <span class="n">inbox_messages</span>
+      <span class="p">)</span>
     <span class="p">)</span>
 </pre></div>
 </div>

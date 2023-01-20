@@ -1845,18 +1845,13 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#finding-my-twitter-bot-name">
-   Finding my twitter bot name
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bot-1-do-whatever-we-are-told">
    Bot 1: do whatever we are told
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#find-my-latest-mention">
-     find my latest mention
+    <a class="reference internal nav-link" href="#find-my-latest-message">
+     find my latest message
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -1877,12 +1872,12 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
+    <a class="reference internal nav-link" href="#find-my-latest-mention">
      find my latest mention
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
+    <a class="reference internal nav-link" href="#id1">
      If tweet matches our pattern, reply
     </a>
    </li>
@@ -1918,18 +1913,13 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#finding-my-twitter-bot-name">
-   Finding my twitter bot name
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bot-1-do-whatever-we-are-told">
    Bot 1: do whatever we are told
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#find-my-latest-mention">
-     find my latest mention
+    <a class="reference internal nav-link" href="#find-my-latest-message">
+     find my latest message
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -1950,12 +1940,12 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
+    <a class="reference internal nav-link" href="#find-my-latest-mention">
      find my latest mention
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
+    <a class="reference internal nav-link" href="#id1">
      If tweet matches our pattern, reply
     </a>
    </li>
@@ -1980,7 +1970,7 @@ title="Print to PDF"
 <h1><span class="section-number">7.5.3. </span>Demo: Trolling a Reply Bot<a class="headerlink" href="#demo-trolling-a-reply-bot" title="Permalink to this headline">#</a></h1>
 <p>We are later going to build a bot that, if you tweet at it:</p>
 <ul class="simple">
-<li><p>“Hi &#64;mybotname, please ___” (where the ___ is some action)</p></li>
+<li><p>Subject: “Wanting bot response”, body: “I want you to ___” (where the ___ is some action)</p></li>
 <li><p>then the bot will reply, “I will now ____” (where the ___ is that same action).</p></li>
 </ul>
 <p>Then we will try trolling it, and fixing it, and trolling it again.</p>
@@ -2032,86 +2022,37 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to collect account info to use on reddit</strong></div></div>
 </div>
-<p>https://www.reddit.com/message/compose/?to=kthayer_teacher_bot
+<p>https://www.reddit.com/message/compose/
 “Wanting bot response”</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">reddit</span><span class="o">.</span><span class="n">inbox</span><span class="o">.</span><span class="n">messages</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">subject</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="nn">Input In [5],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">reddit</span><span class="o">.</span><span class="n">inbox</span><span class="o">.</span><span class="n">messages</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">subject</span><span class="p">)</span>
-
-<span class="ne">AttributeError</span>: &#39;types.SimpleNamespace&#39; object has no attribute &#39;inbox&#39;
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="finding-my-twitter-bot-name">
-<h2>Finding my twitter bot name<a class="headerlink" href="#finding-my-twitter-bot-name" title="Permalink to this headline">#</a></h2>
-<p>We are going to be looking for people tweeting at us “Hi &#64;mybotname, please ___”, except we will need to get our actual twitter handle instead of “&#64;mybotname”. We’ll need our twitter id number as well to find tweets that mention us.</p>
-<p>We do this by asking twitter for our user info, then getting the id and username from it:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ask twitter for my user info</span>
-<span class="n">my_user_info</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;me&quot;</span><span class="p">,</span> <span class="n">user_auth</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># Get my id number and username from the user info</span>
-<span class="n">my_id</span> <span class="o">=</span> <span class="n">my_user_info</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">id</span>
-<span class="n">my_username</span> <span class="o">=</span> <span class="n">my_user_info</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">username</span>
-
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;my user id number is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">my_id</span><span class="p">))</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;my username is: &quot;</span> <span class="o">+</span> <span class="n">my_username</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;my user id number is: 123456789&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;my username is: fake_user&#39;
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 <section id="bot-1-do-whatever-we-are-told">
 <h2>Bot 1: do whatever we are told<a class="headerlink" href="#bot-1-do-whatever-we-are-told" title="Permalink to this headline">#</a></h2>
-<p>our first bot will find our latest mention, and then do whatever it is told</p>
-<section id="find-my-latest-mention">
-<h3>find my latest mention<a class="headerlink" href="#find-my-latest-mention" title="Permalink to this headline">#</a></h3>
-<p>Next we need to find the latest tweet that mentioned us.</p>
-<p>We do this by asking twitter for tweets that mention our user id, then pulling the first thing out of the list (index 0).</p>
-<p>Then we get the tweet id and the text of the tweet.</p>
-<p><em>Note: This code will crash, showing error messages if there are no recent tweets mentioning us</em></p>
+<p>Our first bot will find our latest inbox message, and then reply with whatever it is told to do</p>
+<section id="find-my-latest-message">
+<h3>find my latest message<a class="headerlink" href="#find-my-latest-message" title="Permalink to this headline">#</a></h3>
+<p>We need to find our latest message in our inbox</p>
+<p>We do this by looking in our reddit inbox for messages (we limit it to one, since we just want the latest).</p>
+<p>It doesn’t directly give us the one message (instead it is in something called an “iterator”), but we can use the <code class="docutils literal notranslate"><span class="pre">next</span></code> function to get the message out.</p>
+<p>We then display the subject of the message just so we can see that it found something..</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ask twitter for tweets that mention my id</span>
-<span class="n">my_mentions</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_users_mentions</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">my_id</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Look up the subreddit &quot;cuteanimals&quot;, then find the &quot;hot&quot; list, getting up to 1 submission</span>
+<span class="n">messages</span> <span class="o">=</span> <span class="n">reddit</span><span class="o">.</span><span class="n">inbox</span><span class="o">.</span><span class="n">messages</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="c1"># Get the first tweet from the list (latest tweet)</span>
-<span class="n">latest_mention</span> <span class="o">=</span> <span class="n">my_mentions</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="c1"># get the first submission off the list (should only be one anyway)</span>
+<span class="n">latest_message</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span> 
 
-<span class="n">latest_mention_id</span> <span class="o">=</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">id</span>
-<span class="n">latest_mention_text</span> <span class="o">=</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">text</span>
-
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;the latest mention of us is tweet id: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">latest_mention_id</span><span class="p">))</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;the text of latest mention of us is: &quot;</span> <span class="o">+</span> <span class="n">latest_mention_text</span><span class="p">)</span>
+<span class="c1"># display the subject and body of the message, so we can see what we found</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;latest message subject: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">latest_message</span><span class="o">.</span><span class="n">subject</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;latest message body: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">latest_message</span><span class="o">.</span><span class="n">body</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;the latest mention of us is tweet id: 232434&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;latest message subject: Wanting bot response&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;the text of latest mention of us is: Hi @fake_user, please jump&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;latest message body: I want you to jump&#39;
 </pre></div>
 </div>
 </div>
@@ -2119,93 +2060,96 @@ title="Print to PDF"
 </section>
 <section id="if-tweet-matches-our-pattern-reply">
 <h3>If tweet matches our pattern, reply<a class="headerlink" href="#if-tweet-matches-our-pattern-reply" title="Permalink to this headline">#</a></h3>
-<p>We will now see if our tweet matches our pattern of “Hi &#64;mybotname, please ___” and then we will reply.</p>
-<p>First we will create a string with the correct pattern, but with our actual bot name</p>
+<p>We will now see if our tweet matches our pattern of a message subject of “Wanting bot response” with a message body of “I want you to ___” and then we will reply.</p>
+<p>First we will create strings with the patterns we are looking for and save them into variables.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expected_pattern</span> <span class="o">=</span> <span class="s2">&quot;Hi @&quot;</span> <span class="o">+</span> <span class="n">my_username</span> <span class="o">+</span> <span class="s2">&quot;, please &quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expected_subject</span> <span class="o">=</span> <span class="s2">&quot;Wanting bot response&quot;</span>
+<span class="n">expected_body_pattern</span> <span class="o">=</span> <span class="s2">&quot;I want you to &quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Now, if the mention text starts with that expected pattern, then we will find the action from the end of the mention text (based on the expected_pattern length), and reply using that action:</p>
+<p>We will check if the message has the subject we are expecting. If it does it will check if the essage body starts with the expected pattern. If it does, then we will find the action from the end of the message body text (based on the expected_pattern length), and reply using that action.</p>
+<p>We also add “else” cases for when we didn’t match the patter, and display a message saying what didn’t match.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># check if the mention text starts with our set phrase</span>
-<span class="k">if</span> <span class="n">latest_mention_text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">expected_pattern</span><span class="p">):</span>
-    <span class="c1"># get the action, which should be the end of the string after the expected pattern</span>
-    <span class="n">action</span> <span class="o">=</span> <span class="n">latest_mention_text</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">expected_pattern</span><span class="p">)</span> <span class="p">:]</span>
+<span class="k">if</span> <span class="n">latest_message</span><span class="o">.</span><span class="n">subject</span> <span class="o">==</span> <span class="n">expected_subject</span><span class="p">:</span>
     
-    <span class="c1"># make a new tweet message which says we will do the action</span>
-    <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;I will now &quot;</span> <span class="o">+</span> <span class="n">action</span>
-    
-    <span class="c1"># tweet our message in reply to the mention tweet</span>
-    <span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span>
-        <span class="n">text</span><span class="o">=</span><span class="n">message</span><span class="p">,</span> 
-        <span class="n">in_reply_to_tweet_id</span><span class="o">=</span><span class="n">latest_mention_id</span>
-    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">latest_message</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">expected_body_pattern</span><span class="p">):</span>
+        <span class="c1"># get the action, which should be the end of the string after the expected pattern</span>
+        <span class="n">action</span> <span class="o">=</span> <span class="n">latest_message</span><span class="o">.</span><span class="n">body</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">expected_body_pattern</span><span class="p">)</span> <span class="p">:]</span>
+
+        <span class="c1"># make a new message which says we will do the action</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;I will now &quot;</span> <span class="o">+</span> <span class="n">action</span>
+
+        <span class="c1"># send our message in reply</span>
+        <span class="n">latest_message</span><span class="o">.</span><span class="n">reply</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+        
+    <span class="k">else</span><span class="p">:</span> <span class="c1"># else code for if the message body didn&#39;t match</span>
+        <span class="n">display</span><span class="p">(</span><span class="s2">&quot;The message body (&quot;</span> <span class="o">+</span> <span class="n">body</span> <span class="o">+</span> <span class="s2">&quot;) didn&#39;t match our pattern (&quot;</span> <span class="o">+</span> <span class="n">expected_pattern</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span><span class="p">)</span>
+        
+<span class="k">else</span><span class="p">:</span> <span class="c1"># else code for if the message subject didn&#39;t match</span>
+    <span class="n">display</span><span class="p">(</span><span class="s2">&quot;The message subject (&quot;</span> <span class="o">+</span> <span class="n">latest_message</span><span class="o">.</span><span class="n">subject</span> <span class="o">+</span> <span class="s2">&quot;) didn&#39;t match our expected subject (&quot;</span> <span class="o">+</span> <span class="n">expected_subject</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span> <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to post this tweet (note: real tweepy shows no output here when a tweet is posted): </strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I will now jump
-Tweet in reply to: 232434
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to reply to a message with: I will now jump</strong></div></div>
 </div>
 <p>Yay! It worked! But there is a problem!</p>
 </section>
 </section>
 <section id="trolling-bot-1">
 <h2>Trolling bot 1<a class="headerlink" href="#trolling-bot-1" title="Permalink to this headline">#</a></h2>
-<p>This bot is really easy to troll, so if I repeat my steps and get a new mention:</p>
+<p>This bot is really easy to troll, so if I repeat my steps and get a new mention (this code is just a duplication of the code above):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ask twitter for tweets that mention my id</span>
-<span class="n">my_mentions</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_users_mentions</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">my_id</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Look up the subreddit &quot;cuteanimals&quot;, then find the &quot;hot&quot; list, getting up to 1 submission</span>
+<span class="n">messages</span> <span class="o">=</span> <span class="n">reddit</span><span class="o">.</span><span class="n">inbox</span><span class="o">.</span><span class="n">messages</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="c1"># Get the first tweet from the list (latest tweet)</span>
-<span class="n">latest_mention</span> <span class="o">=</span> <span class="n">my_mentions</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="c1"># get the first submission off the list (should only be one anyway)</span>
+<span class="n">latest_message</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span> 
 
-<span class="n">latest_mention_id</span> <span class="o">=</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">id</span>
-<span class="n">latest_mention_text</span> <span class="o">=</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">text</span>
+<span class="c1"># display the subject and body of the message, so we can see what we found</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;latest message subject: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">latest_message</span><span class="o">.</span><span class="n">subject</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;latest message body: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">latest_message</span><span class="o">.</span><span class="n">body</span><span class="p">))</span>
 
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;the latest mention of us is tweet id: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">latest_mention_id</span><span class="p">))</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;the thext of latest mention of us is: &quot;</span> <span class="o">+</span> <span class="n">latest_mention_text</span><span class="p">)</span>
-
-<span class="n">expected_pattern</span> <span class="o">=</span> <span class="s2">&quot;Hi @&quot;</span> <span class="o">+</span> <span class="n">my_username</span> <span class="o">+</span> <span class="s2">&quot;, please &quot;</span>
+<span class="n">expected_subject</span> <span class="o">=</span> <span class="s2">&quot;Wanting bot response&quot;</span>
+<span class="n">expected_body_pattern</span> <span class="o">=</span> <span class="s2">&quot;I want you to &quot;</span>
 
 <span class="c1"># check if the mention text starts with our set phrase</span>
-<span class="k">if</span> <span class="n">latest_mention_text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">expected_pattern</span><span class="p">):</span>
-    <span class="c1"># get the action, which should be the end of the string after the expected pattern</span>
-    <span class="n">action</span> <span class="o">=</span> <span class="n">latest_mention_text</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">expected_pattern</span><span class="p">)</span> <span class="p">:]</span>
+<span class="k">if</span> <span class="n">latest_message</span><span class="o">.</span><span class="n">subject</span> <span class="o">==</span> <span class="n">expected_subject</span><span class="p">:</span>
     
-    <span class="c1"># make a new tweet message which says we will do the action</span>
-    <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;I will now &quot;</span> <span class="o">+</span> <span class="n">action</span>
-    
-    <span class="c1"># tweet our message in reply to the mention tweet</span>
-    <span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span>
-        <span class="n">text</span><span class="o">=</span><span class="n">message</span><span class="p">,</span> 
-        <span class="n">in_reply_to_tweet_id</span><span class="o">=</span><span class="n">latest_mention_id</span>
-    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">latest_message</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">expected_body_pattern</span><span class="p">):</span>
+        <span class="c1"># get the action, which should be the end of the string after the expected pattern</span>
+        <span class="n">action</span> <span class="o">=</span> <span class="n">latest_message</span><span class="o">.</span><span class="n">body</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">expected_body_pattern</span><span class="p">)</span> <span class="p">:]</span>
+
+        <span class="c1"># make a new message which says we will do the action</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;I will now &quot;</span> <span class="o">+</span> <span class="n">action</span>
+
+        <span class="c1"># sen our message in reply</span>
+        <span class="n">latest_message</span><span class="o">.</span><span class="n">reply</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+        
+    <span class="k">else</span><span class="p">:</span> <span class="c1"># else code for if the message body didn&#39;t match</span>
+        <span class="n">display</span><span class="p">(</span><span class="s2">&quot;The message body (&quot;</span> <span class="o">+</span> <span class="n">body</span> <span class="o">+</span> <span class="s2">&quot;) didn&#39;t match our pattern (&quot;</span> <span class="o">+</span> <span class="n">expected_pattern</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span><span class="p">)</span>
+        
+<span class="k">else</span><span class="p">:</span> <span class="c1"># else code for if the message subject didn&#39;t match</span>
+    <span class="n">display</span><span class="p">(</span><span class="s2">&quot;The message subject (&quot;</span> <span class="o">+</span> <span class="n">latest_message</span><span class="o">.</span><span class="n">subject</span> <span class="o">+</span> <span class="s2">&quot;) didn&#39;t match our expected subject (&quot;</span> <span class="o">+</span> <span class="n">expected_subject</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span> <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;the latest mention of us is tweet id: 234356&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;latest message subject: Wanting bot response&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;the thext of latest mention of us is: Hi @fake_user, please do something horrible!&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;latest message body: I want you to do something horrible!&#39;
 </pre></div>
 </div>
-<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to post this tweet (note: real tweepy shows no output here when a tweet is posted): </strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I will now do something horrible!
-Tweet in reply to: 234356
-</pre></div>
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to reply to a message with: I will now do something horrible!</strong></div></div>
 </div>
-</div>
-</div>
-<p>Someone tweeted at us: <code class="docutils literal notranslate"><span class="pre">Hi</span> <span class="pre">&#64;fake_user,</span> <span class="pre">please</span> <span class="pre">do</span> <span class="pre">something</span> <span class="pre">horrible!</span></code>, and we replied <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">will</span> <span class="pre">now</span> <span class="pre">do</span> <span class="pre">something</span> <span class="pre">horrible!</span></code>.</p>
+<p>Someone messaged us saying at us: <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">want</span> <span class="pre">you</span> <span class="pre">to</span> <span class="pre">do</span> <span class="pre">something</span> <span class="pre">horrible!</span></code>, and we replied <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">will</span> <span class="pre">now</span> <span class="pre">do</span> <span class="pre">something</span> <span class="pre">horrible!</span></code>.</p>
 <p>They could have made us tweet much worse!</p>
 </section>
 <section id="bot-2-trying-to-limit-actions">
@@ -2220,138 +2164,133 @@ Tweet in reply to: 234356
 </li>
 </ul>
 <p>So, to go back through our steps:</p>
-<section id="id1">
-<h3>find my latest mention<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<section id="find-my-latest-mention">
+<h3>find my latest mention<a class="headerlink" href="#find-my-latest-mention" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ask twitter for tweets that mention my id</span>
-<span class="n">my_mentions</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_users_mentions</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">my_id</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Look up the subreddit &quot;cuteanimals&quot;, then find the &quot;hot&quot; list, getting up to 1 submission</span>
+<span class="n">messages</span> <span class="o">=</span> <span class="n">reddit</span><span class="o">.</span><span class="n">inbox</span><span class="o">.</span><span class="n">messages</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="c1"># Get the first tweet from the list (latest tweet)</span>
-<span class="n">latest_mention</span> <span class="o">=</span> <span class="n">my_mentions</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="c1"># get the first submission off the list (should only be one anyway)</span>
+<span class="n">latest_message</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span> 
 
-<span class="n">latest_mention_id</span> <span class="o">=</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">id</span>
-<span class="n">latest_mention_text</span> <span class="o">=</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">text</span>
-
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;the latest mention of us is tweet id: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">latest_mention_id</span><span class="p">))</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;the text of latest mention of us is: &quot;</span> <span class="o">+</span> <span class="n">latest_mention_text</span><span class="p">)</span>
+<span class="c1"># display the subject and body of the message, so we can see what we found</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;latest message subject: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">latest_message</span><span class="o">.</span><span class="n">subject</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;latest message body: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">latest_message</span><span class="o">.</span><span class="n">body</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;the latest mention of us is tweet id: 245454&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;latest message subject: Wanting bot response&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;the text of latest mention of us is: Hi @fake_user, please fly&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;latest message body: I want you to fly&#39;
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="id2">
-<h3>If tweet matches our pattern, reply<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
-<p>We do the same code for this as before, but after we get the action, we have another <code class="docutils literal notranslate"><span class="pre">if</span></code>/<code class="docutils literal notranslate"><span class="pre">else</span></code> to tweet back our two options.</p>
+<section id="id1">
+<h3>If tweet matches our pattern, reply<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p>We do the same code for this as before, but after we get the action we are told to do, we put another <code class="docutils literal notranslate"><span class="pre">if</span></code>/<code class="docutils literal notranslate"><span class="pre">else</span></code> to either do the action if we recognize it, or say we didn’t recognize the action.</p>
 <p>We will use <code class="docutils literal notranslate"><span class="pre">in</span></code> to see if the action is in our list of allowed actions (called an allow_list)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expected_pattern</span> <span class="o">=</span> <span class="s2">&quot;Hi @&quot;</span> <span class="o">+</span> <span class="n">my_username</span> <span class="o">+</span> <span class="s2">&quot;, please &quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expected_subject</span> <span class="o">=</span> <span class="s2">&quot;Wanting bot response&quot;</span>
+<span class="n">expected_body_pattern</span> <span class="o">=</span> <span class="s2">&quot;I want you to &quot;</span>
 
 <span class="n">actions_allow_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;run&quot;</span><span class="p">,</span> <span class="s2">&quot;jump&quot;</span><span class="p">,</span> <span class="s2">&quot;fly&quot;</span><span class="p">]</span>
 
 <span class="c1"># check if the mention text starts with our set phrase</span>
-<span class="k">if</span> <span class="n">latest_mention_text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">expected_pattern</span><span class="p">):</span>
-    <span class="c1"># get the action, which should be the end of the string after the expected pattern</span>
-    <span class="n">action</span> <span class="o">=</span> <span class="n">latest_mention_text</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">expected_pattern</span><span class="p">)</span> <span class="p">:]</span>
+<span class="k">if</span> <span class="n">latest_message</span><span class="o">.</span><span class="n">subject</span> <span class="o">==</span> <span class="n">expected_subject</span><span class="p">:</span>
     
-    <span class="c1"># See if it is one of our recognized actions</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">action</span> <span class="ow">in</span> <span class="n">actions_allow_list</span><span class="p">):</span>
-        <span class="c1"># make a new tweet message which says we will do the action</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;I will now &quot;</span> <span class="o">+</span> <span class="n">action</span>
-
-        <span class="c1"># tweet our message in reply to the mention tweet</span>
-        <span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span>
-            <span class="n">text</span><span class="o">=</span><span class="n">message</span><span class="p">,</span> 
-            <span class="n">in_reply_to_tweet_id</span><span class="o">=</span><span class="n">latest_mention_id</span>
-        <span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span> <span class="c1"># we didn&#39;t recognize the action</span>
-        <span class="c1"># make a new tweet message which says we will do the action</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;I do not recognize the command &quot;</span> <span class="o">+</span> <span class="n">action</span>
-
-        <span class="c1"># tweet our message in reply to the mention tweet</span>
-        <span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span>
-            <span class="n">text</span><span class="o">=</span><span class="n">message</span><span class="p">,</span> 
-            <span class="n">in_reply_to_tweet_id</span><span class="o">=</span><span class="n">latest_mention_id</span>
-        <span class="p">)</span>
+    <span class="k">if</span> <span class="n">latest_message</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">expected_body_pattern</span><span class="p">):</span>
+        <span class="c1"># get the action, which should be the end of the string after the expected pattern</span>
+        <span class="n">action</span> <span class="o">=</span> <span class="n">latest_message</span><span class="o">.</span><span class="n">body</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">expected_body_pattern</span><span class="p">)</span> <span class="p">:]</span>
         
+        <span class="c1"># See if it is one of our recognized actions</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">action</span> <span class="ow">in</span> <span class="n">actions_allow_list</span><span class="p">):</span>
+            <span class="c1"># make a new message which says we will do the action</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;I will now &quot;</span> <span class="o">+</span> <span class="n">action</span>
+
+            <span class="c1"># send our message in reply</span>
+            <span class="n">latest_message</span><span class="o">.</span><span class="n">reply</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+            
+        <span class="k">else</span><span class="p">:</span> <span class="c1"># we didn&#39;t recognize the action</span>
+            <span class="c1"># make a new message which says we will NOT do the action</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;I do not recognize the command &quot;</span> <span class="o">+</span> <span class="n">action</span>
+
+            <span class="c1"># send our message in reply</span>
+            <span class="n">latest_message</span><span class="o">.</span><span class="n">reply</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+        
+    <span class="k">else</span><span class="p">:</span> <span class="c1"># else code for if the message body didn&#39;t match</span>
+        <span class="n">display</span><span class="p">(</span><span class="s2">&quot;The message body (&quot;</span> <span class="o">+</span> <span class="n">body</span> <span class="o">+</span> <span class="s2">&quot;) didn&#39;t match our pattern (&quot;</span> <span class="o">+</span> <span class="n">expected_pattern</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span><span class="p">)</span>
+        
+<span class="k">else</span><span class="p">:</span> <span class="c1"># else code for if the message subject didn&#39;t match</span>
+    <span class="n">display</span><span class="p">(</span><span class="s2">&quot;The message subject (&quot;</span> <span class="o">+</span> <span class="n">latest_message</span><span class="o">.</span><span class="n">subject</span> <span class="o">+</span> <span class="s2">&quot;) didn&#39;t match our expected subject (&quot;</span> <span class="o">+</span> <span class="n">expected_subject</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span> <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to post this tweet (note: real tweepy shows no output here when a tweet is posted): </strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I will now fly
-Tweet in reply to: 245454
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to reply to a message with: I will now fly</strong></div></div>
 </div>
 <p>That one was in our allow list so it worked. Let’s do it all again, with the tweet that caused us problems last time</p>
 <p><em>Note: the code below is just copied from the code sections above</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ask twitter for tweets that mention my id</span>
-<span class="n">my_mentions</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_users_mentions</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">my_id</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Look up the subreddit &quot;cuteanimals&quot;, then find the &quot;hot&quot; list, getting up to 1 submission</span>
+<span class="n">messages</span> <span class="o">=</span> <span class="n">reddit</span><span class="o">.</span><span class="n">inbox</span><span class="o">.</span><span class="n">messages</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="c1"># Get the first tweet from the list (latest tweet)</span>
-<span class="n">latest_mention</span> <span class="o">=</span> <span class="n">my_mentions</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="c1"># get the first submission off the list (should only be one anyway)</span>
+<span class="n">latest_message</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span> 
 
-<span class="n">latest_mention_id</span> <span class="o">=</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">id</span>
-<span class="n">latest_mention_text</span> <span class="o">=</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">text</span>
+<span class="c1"># display the subject and body of the message, so we can see what we found</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;latest message subject: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">latest_message</span><span class="o">.</span><span class="n">subject</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;latest message body: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">latest_message</span><span class="o">.</span><span class="n">body</span><span class="p">))</span>
 
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;the latest mention of us is tweet id: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">latest_mention_id</span><span class="p">))</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;the text of latest mention of us is: &quot;</span> <span class="o">+</span> <span class="n">latest_mention_text</span><span class="p">)</span>
-
-<span class="n">expected_pattern</span> <span class="o">=</span> <span class="s2">&quot;Hi @&quot;</span> <span class="o">+</span> <span class="n">my_username</span> <span class="o">+</span> <span class="s2">&quot;, please &quot;</span>
+<span class="n">expected_subject</span> <span class="o">=</span> <span class="s2">&quot;Wanting bot response&quot;</span>
+<span class="n">expected_body_pattern</span> <span class="o">=</span> <span class="s2">&quot;I want you to &quot;</span>
 
 <span class="n">actions_allow_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;run&quot;</span><span class="p">,</span> <span class="s2">&quot;jump&quot;</span><span class="p">,</span> <span class="s2">&quot;fly&quot;</span><span class="p">]</span>
 
 <span class="c1"># check if the mention text starts with our set phrase</span>
-<span class="k">if</span> <span class="n">latest_mention_text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">expected_pattern</span><span class="p">):</span>
-    <span class="c1"># get the action, which should be the end of the string after the expected pattern</span>
-    <span class="n">action</span> <span class="o">=</span> <span class="n">latest_mention_text</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">expected_pattern</span><span class="p">)</span> <span class="p">:]</span>
+<span class="k">if</span> <span class="n">latest_message</span><span class="o">.</span><span class="n">subject</span> <span class="o">==</span> <span class="n">expected_subject</span><span class="p">:</span>
     
-    <span class="c1"># See if it is one of our recognized actions</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">action</span> <span class="ow">in</span> <span class="n">actions_allow_list</span><span class="p">):</span>
-        <span class="c1"># make a new tweet message which says we will do the action</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;I will now &quot;</span> <span class="o">+</span> <span class="n">action</span>
+    <span class="k">if</span> <span class="n">latest_message</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">expected_body_pattern</span><span class="p">):</span>
+        <span class="c1"># get the action, which should be the end of the string after the expected pattern</span>
+        <span class="n">action</span> <span class="o">=</span> <span class="n">latest_message</span><span class="o">.</span><span class="n">body</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">expected_body_pattern</span><span class="p">)</span> <span class="p">:]</span>
+        
+        <span class="c1"># See if it is one of our recognized actions</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">action</span> <span class="ow">in</span> <span class="n">actions_allow_list</span><span class="p">):</span>
+            <span class="c1"># make a new message which says we will do the action</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;I will now &quot;</span> <span class="o">+</span> <span class="n">action</span>
 
-        <span class="c1"># tweet our message in reply to the mention tweet</span>
-        <span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span>
-            <span class="n">text</span><span class="o">=</span><span class="n">message</span><span class="p">,</span> 
-            <span class="n">in_reply_to_tweet_id</span><span class="o">=</span><span class="n">latest_mention_id</span>
-        <span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span> <span class="c1"># we didn&#39;t recognize the action</span>
-        <span class="c1"># make a new tweet message which says we will do the action</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;I do not recognize the command &quot;</span> <span class="o">+</span> <span class="n">action</span>
+            <span class="c1"># send our message in reply</span>
+            <span class="n">latest_message</span><span class="o">.</span><span class="n">reply</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+            
+        <span class="k">else</span><span class="p">:</span> <span class="c1"># we didn&#39;t recognize the action</span>
+            <span class="c1"># make a new message which says we will NOT do the action</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;I do not recognize the command &quot;</span> <span class="o">+</span> <span class="n">action</span>
 
-        <span class="c1"># tweet our message in reply to the mention tweet</span>
-        <span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span>
-            <span class="n">text</span><span class="o">=</span><span class="n">message</span><span class="p">,</span> 
-            <span class="n">in_reply_to_tweet_id</span><span class="o">=</span><span class="n">latest_mention_id</span>
-        <span class="p">)</span>
+            <span class="c1"># send our message in reply</span>
+            <span class="n">latest_message</span><span class="o">.</span><span class="n">reply</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+        
+    <span class="k">else</span><span class="p">:</span> <span class="c1"># else code for if the message body didn&#39;t match</span>
+        <span class="n">display</span><span class="p">(</span><span class="s2">&quot;The message body (&quot;</span> <span class="o">+</span> <span class="n">body</span> <span class="o">+</span> <span class="s2">&quot;) didn&#39;t match our pattern (&quot;</span> <span class="o">+</span> <span class="n">expected_pattern</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span><span class="p">)</span>
+        
+<span class="k">else</span><span class="p">:</span> <span class="c1"># else code for if the message subject didn&#39;t match</span>
+    <span class="n">display</span><span class="p">(</span><span class="s2">&quot;The message subject (&quot;</span> <span class="o">+</span> <span class="n">latest_message</span><span class="o">.</span><span class="n">subject</span> <span class="o">+</span> <span class="s2">&quot;) didn&#39;t match our expected subject (&quot;</span> <span class="o">+</span> <span class="n">expected_subject</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span> <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;the latest mention of us is tweet id: 245454&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;latest message subject: Wanting bot response&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;the text of latest mention of us is: Hi @fake_user, please do something horrible!&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;latest message body: I want you to do something horrible!&#39;
 </pre></div>
 </div>
-<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to post this tweet (note: real tweepy shows no output here when a tweet is posted): </strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I do not recognize the command do something horrible!
-Tweet in reply to: 245454
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to reply to a message with: I do not recognize the command do something horrible!</strong></div></div>
 </div>
 <p>Ok, this time we said <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">do</span> <span class="pre">not</span> <span class="pre">recognize</span> <span class="pre">the</span> <span class="pre">command</span> <span class="pre">do</span> <span class="pre">something</span> <span class="pre">horrible!</span></code>.</p>
 <p>That looks a little better! Are we safe now?</p>
@@ -2363,65 +2302,63 @@ Tweet in reply to: 245454
 <p>Let’s find the latest mention again and see what happens</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ask twitter for tweets that mention my id</span>
-<span class="n">my_mentions</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_users_mentions</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">my_id</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Look up the subreddit &quot;cuteanimals&quot;, then find the &quot;hot&quot; list, getting up to 1 submission</span>
+<span class="n">messages</span> <span class="o">=</span> <span class="n">reddit</span><span class="o">.</span><span class="n">inbox</span><span class="o">.</span><span class="n">messages</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="c1"># Get the first tweet from the list (latest tweet)</span>
-<span class="n">latest_mention</span> <span class="o">=</span> <span class="n">my_mentions</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="c1"># get the first submission off the list (should only be one anyway)</span>
+<span class="n">latest_message</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span> 
 
-<span class="n">latest_mention_id</span> <span class="o">=</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">id</span>
-<span class="n">latest_mention_text</span> <span class="o">=</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">text</span>
+<span class="c1"># display the subject and body of the message, so we can see what we found</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;latest message subject: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">latest_message</span><span class="o">.</span><span class="n">subject</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;latest message body: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">latest_message</span><span class="o">.</span><span class="n">body</span><span class="p">))</span>
 
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;the latest mention of us is tweet id: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">latest_mention_id</span><span class="p">))</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;the text of latest mention of us is: &quot;</span> <span class="o">+</span> <span class="n">latest_mention_text</span><span class="p">)</span>
-
-<span class="n">expected_pattern</span> <span class="o">=</span> <span class="s2">&quot;Hi @&quot;</span> <span class="o">+</span> <span class="n">my_username</span> <span class="o">+</span> <span class="s2">&quot;, please &quot;</span>
+<span class="n">expected_subject</span> <span class="o">=</span> <span class="s2">&quot;Wanting bot response&quot;</span>
+<span class="n">expected_body_pattern</span> <span class="o">=</span> <span class="s2">&quot;I want you to &quot;</span>
 
 <span class="n">actions_allow_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;run&quot;</span><span class="p">,</span> <span class="s2">&quot;jump&quot;</span><span class="p">,</span> <span class="s2">&quot;fly&quot;</span><span class="p">]</span>
 
 <span class="c1"># check if the mention text starts with our set phrase</span>
-<span class="k">if</span> <span class="n">latest_mention_text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">expected_pattern</span><span class="p">):</span>
-    <span class="c1"># get the action, which should be the end of the string after the expected pattern</span>
-    <span class="n">action</span> <span class="o">=</span> <span class="n">latest_mention_text</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">expected_pattern</span><span class="p">)</span> <span class="p">:]</span>
+<span class="k">if</span> <span class="n">latest_message</span><span class="o">.</span><span class="n">subject</span> <span class="o">==</span> <span class="n">expected_subject</span><span class="p">:</span>
     
-    <span class="c1"># See if it is one of our recognized actions</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">action</span> <span class="ow">in</span> <span class="n">actions_allow_list</span><span class="p">):</span>
-        <span class="c1"># make a new tweet message which says we will do the action</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;I will now &quot;</span> <span class="o">+</span> <span class="n">action</span>
+    <span class="k">if</span> <span class="n">latest_message</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">expected_body_pattern</span><span class="p">):</span>
+        <span class="c1"># get the action, which should be the end of the string after the expected pattern</span>
+        <span class="n">action</span> <span class="o">=</span> <span class="n">latest_message</span><span class="o">.</span><span class="n">body</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">expected_body_pattern</span><span class="p">)</span> <span class="p">:]</span>
+        
+        <span class="c1"># See if it is one of our recognized actions</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">action</span> <span class="ow">in</span> <span class="n">actions_allow_list</span><span class="p">):</span>
+            <span class="c1"># make a new message which says we will do the action</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;I will now &quot;</span> <span class="o">+</span> <span class="n">action</span>
 
-        <span class="c1"># tweet our message in reply to the mention tweet</span>
-        <span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span>
-            <span class="n">text</span><span class="o">=</span><span class="n">message</span><span class="p">,</span> 
-            <span class="n">in_reply_to_tweet_id</span><span class="o">=</span><span class="n">latest_mention_id</span>
-        <span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span> <span class="c1"># we didn&#39;t recognize the action</span>
-        <span class="c1"># make a new tweet message which says we will do the action</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;I do not recognize the command &quot;</span> <span class="o">+</span> <span class="n">action</span>
+            <span class="c1"># send our message in reply</span>
+            <span class="n">latest_message</span><span class="o">.</span><span class="n">reply</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+            
+        <span class="k">else</span><span class="p">:</span> <span class="c1"># we didn&#39;t recognize the action</span>
+            <span class="c1"># make a new message which says we will NOT do the action</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;I do not recognize the command &quot;</span> <span class="o">+</span> <span class="n">action</span>
 
-        <span class="c1"># tweet our message in reply to the mention tweet</span>
-        <span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span>
-            <span class="n">text</span><span class="o">=</span><span class="n">message</span><span class="p">,</span> 
-            <span class="n">in_reply_to_tweet_id</span><span class="o">=</span><span class="n">latest_mention_id</span>
-        <span class="p">)</span>
+            <span class="c1"># send our message in reply</span>
+            <span class="n">latest_message</span><span class="o">.</span><span class="n">reply</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+        
+    <span class="k">else</span><span class="p">:</span> <span class="c1"># else code for if the message body didn&#39;t match</span>
+        <span class="n">display</span><span class="p">(</span><span class="s2">&quot;The message body (&quot;</span> <span class="o">+</span> <span class="n">body</span> <span class="o">+</span> <span class="s2">&quot;) didn&#39;t match our pattern (&quot;</span> <span class="o">+</span> <span class="n">expected_pattern</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span><span class="p">)</span>
+        
+<span class="k">else</span><span class="p">:</span> <span class="c1"># else code for if the message subject didn&#39;t match</span>
+    <span class="n">display</span><span class="p">(</span><span class="s2">&quot;The message subject (&quot;</span> <span class="o">+</span> <span class="n">latest_message</span><span class="o">.</span><span class="n">subject</span> <span class="o">+</span> <span class="s2">&quot;) didn&#39;t match our expected subject (&quot;</span> <span class="o">+</span> <span class="n">expected_subject</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span> <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;the latest mention of us is tweet id: 245454&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;latest message subject: Wanting bot response&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;the text of latest mention of us is: Hi @fake_user, please stop talking. But that doesn&#39;t mean I won&#39;t say horrible things like: I hate everybody!&quot;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;latest message body: I want you to stop talking. But that doesn&#39;t mean I won&#39;t say horrible things like: I hate everybody!&quot;
 </pre></div>
 </div>
-<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to post this tweet (note: real tweepy shows no output here when a tweet is posted): </strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I do not recognize the command stop talking. But that doesn&#39;t mean I won&#39;t say horrible things like: I hate everybody!
-Tweet in reply to: 245454
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to reply to a message with: I do not recognize the command stop talking. But that doesn&#x27;t mean I won&#x27;t say horrible things like: I hate everybody!</strong></div></div>
 </div>
 <p>Oh no! Someone tweeted at us:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Hi</span> <span class="pre">&#64;fake_user,</span> <span class="pre">please</span> <span class="pre">stop</span> <span class="pre">talking.</span> <span class="pre">But</span> <span class="pre">that</span> <span class="pre">doesn't</span> <span class="pre">mean</span> <span class="pre">I</span> <span class="pre">won't</span> <span class="pre">say</span> <span class="pre">horrible</span> <span class="pre">things</span> <span class="pre">like:</span> <span class="pre">I</span> <span class="pre">hate</span> <span class="pre">everybody!</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">want</span> <span class="pre">you</span> <span class="pre">to</span> <span class="pre">stop</span> <span class="pre">talking.</span> <span class="pre">But</span> <span class="pre">that</span> <span class="pre">doesn't</span> <span class="pre">mean</span> <span class="pre">I</span> <span class="pre">won't</span> <span class="pre">say</span> <span class="pre">horrible</span> <span class="pre">things</span> <span class="pre">like:</span> <span class="pre">I</span> <span class="pre">hate</span> <span class="pre">everybody!</span></code></p></li>
 </ul>
 <p>And we replied:</p>
 <ul class="simple">

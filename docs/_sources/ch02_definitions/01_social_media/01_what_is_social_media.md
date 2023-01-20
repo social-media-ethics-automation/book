@@ -20,3 +20,12 @@ We will think of social media in terms of __internet-based social media platform
 > - [Wikipedia](https://en.wikipedia.org/wiki/Social_media)
 
 But, even though our focus is on internet-based social media platforms, since all media are social and all society is mediated, we will find that much of what we observe is also common throughout the rest of human culture.
+
+% Moving our parts of our social media experience onto the Internet-based social media platforms does not fundamentally change how they work, but it can amplify different aspects of social media. 
+% TODO: Add amplification theory (Kentaro)
+% Perhaps restate part in colonialism
+% https://www.theguardian.com/commentisfree/2015/jun/11/age-of-machines-humans-save-the-world
+% https://medium.com/not-evenly-distributed/amplifying-inequality-64479f9aee85
+% [1] Agre, Philip E. 1998. Yesterday’s tomorrow. Times Literary Supplement. July 3, 1998, pp. 3-4. 
+% [2] Agre, Philip E. 2002. “Real-Time Politics: The Internet and the Political Process.” The Information Society 18:311-331. 
+% - "The Internet changes nothing on its own, but it can amplify existing forces, and those amplified forces might change something."
