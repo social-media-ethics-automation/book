@@ -126,7 +126,7 @@ parts:
         sections:
           - file: ch08_data_mining/06_sentiment_analysis/01_demo_sentiment_and_loop_vars
           - file: ch08_data_mining/06_sentiment_analysis/02_practice_sentiment_and_loop_vars
-          - file: ch08_data_mining/06_sentiment_analysis/03_demo_sentiment_twitter
+          - file: ch08_data_mining/06_sentiment_analysis/03_demo_sentiment_reddit
       - file: ch08_data_mining/07_data_poisoning
       - file: ch08_data_mining/08_reflection_questions
       - file: ch08_data_mining/09_learn_more

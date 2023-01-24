@@ -4,7 +4,7 @@ People working with data sets always have to deal with problems in their data, s
 Sometimes a dataset has so many problems that it is effectively __poisened__ or not feasible to work with.
 
 ## Unintentional Data Poisoning
-Datasets can be poisoned unintentionally. For example, many scientists posted online surveys that people can get paid to take. Getting useful results depended on a wide range of people taking them. But when one TikToker's video about taking them went viral, the surveys got filled out with mostly one narrow demographic, preventing many of the data sets from being used as intended.
+Datasets can be poisoned unintentionally. For example, many scientists posted online surveys that people can get paid to take. Getting useful results depended on a wide range of people taking them. But when one TikToker's video about taking them went viral, the surveys got filled out with mostly one narrow demographic, preventing many of the datasets from being used as intended.
 
 See more in
 - [A teenager on TikTok disrupted thousands of scientific studies with a single video -- The Verge](https://www.theverge.com/2021/9/24/22688278/tiktok-science-study-survey-prolific)

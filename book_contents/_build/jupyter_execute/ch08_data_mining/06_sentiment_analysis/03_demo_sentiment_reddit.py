@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Demo: Sentiment Analysis on Twitter
+# # Demo: Sentiment Analysis on Reddit
 # 
 # Now let's try using sentiment analysis (and loop variables) on Reddit:
 # 
@@ -60,8 +60,8 @@ from nltk.sentiment import SentimentIntensityAnalyzer
 sia = SentimentIntensityAnalyzer()
 
 
-# ### loop through tweets, finding average sentiment
-# We can now combine our previous examples of looping through tweets with what we just learned of sentiment analysis and looping variables to find the average sentiment of a set of tweets.
+# ### loop through submissions, finding average sentiment
+# We can now combine our previous examples of looping through reddit submissions with what we just learned of sentiment analysis and looping variables to find the average sentiment of a set of submission titles.
 
 # In[6]:
 

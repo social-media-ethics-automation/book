@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="8.7. Reflections on Data Mining" href="../07_reflection_questions.html" />
+    <link rel="next" title="8.7. Data Poisoning" href="../07_data_poisoning.html" />
     <link rel="prev" title="8.6.2. Practice: Sentiment Analysis and Loop Variables" href="02_practice_sentiment_and_loop_vars.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -681,6 +681,11 @@ const thebe_selector_output = ".output, .cell_output"
      7.6. Ethics and Trolling
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ch07_trolling/07_learn_more.html">
+     7.7. Learn More
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
@@ -699,8 +704,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../02_twitter_api_data.html">
-     8.2. Data From the Twitter API
+    <a class="reference internal" href="../02_reddit_api_data.html">
+     8.2. Data From the Reddit API
     </a>
    </li>
    <li class="toctree-l2">
@@ -746,13 +751,18 @@ const thebe_selector_output = ".output, .cell_output"
     </ul>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../07_reflection_questions.html">
-     8.7. Reflections on Data Mining
+    <a class="reference internal" href="../07_data_poisoning.html">
+     8.7. Data Poisoning
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../08_learn_more.html">
-     8.8. Learn More
+    <a class="reference internal" href="../08_reflection_questions.html">
+     8.8. Reflections on Data Mining
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../09_learn_more.html">
+     8.9. Learn More
     </a>
    </li>
   </ul>
@@ -1569,6 +1579,21 @@ const thebe_selector_output = ".output, .cell_output"
      Ch 6.2.2 Demo &amp; Practice: Tweet Sources
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/alternate_apis/ch7_05_03_demo_reply_bot.html">
+     Demo: Trolling a Reply Bot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/alternate_apis/ch8_02_twitter_api_data.html">
+     Data From the Twitter API
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/alternate_apis/ch8_06_03_demo_sentiment_twitter.html">
+     Demo: Sentiment Analysis on Twitter
+    </a>
+   </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../appendix/alternate_apis/solutions/00_solutions.html">
      Practice Solutions (Twitter)
@@ -1835,8 +1860,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tweepy-setup">
-   Tweepy Setup
+  <a class="reference internal nav-link" href="#reddit-praw-setup">
+   Reddit PRAW Setup
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1876,8 +1901,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tweepy-setup">
-   Tweepy Setup
+  <a class="reference internal nav-link" href="#reddit-praw-setup">
+   Reddit PRAW Setup
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1909,55 +1934,54 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="demo-sentiment-analysis-on-twitter">
 <h1><span class="section-number">8.6.3. </span>Demo: Sentiment Analysis on Twitter<a class="headerlink" href="#demo-sentiment-analysis-on-twitter" title="Permalink to this headline">#</a></h1>
-<p>Now let’s try using sentiment analysis (and loop variables) on Twitter:</p>
-<p>We’ll start by doing our normal steps to load tweepy (or fake tweepy)</p>
-<section id="tweepy-setup">
-<h2>Tweepy Setup<a class="headerlink" href="#tweepy-setup" title="Permalink to this headline">#</a></h2>
+<p>Now let’s try using sentiment analysis (and loop variables) on Reddit:</p>
+<p>We’ll start by doing our normal steps to load Reddit PRAW (or fake praw)</p>
+<section id="reddit-praw-setup">
+<h2>Reddit PRAW Setup<a class="headerlink" href="#reddit-praw-setup" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tweepy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">praw</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>(optional) make a fake twitter connection with the fake_tweepy library</p>
-<p>For testing purposes, we’ve added this line of code, which loads a fake version of tweepy, so it wont actually connect to twitter. If you want to try to actually connect to twitter, don’t run this line of code.</p>
+<p>(optional) make a fake praw connection with the fake_praw library</p>
+<p>For testing purposes, we’ve added this line of code, which loads a fake version of praw, so it wont actually connect to reddit. <strong>If you want to try to actually connect to reddit, don’t run this line of code.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_tweepy/fake_tweepy.ipynb
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_apis/fake_praw.ipynb
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake tweepy is replacing the tweepy library. Fake Tweepy doesn&#x27;t need real passwords, and prevents you from accessing real twitter</strong></div></div>
+<div class="output text_html"><strong style='color:darkred'>Fake praw is replacing the praw library. Fake praw doesn&#x27;t need real passwords, and prevents you from accessing real reddit</strong></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load all your developer access passwords into Python</span>
-<span class="c1"># TODO: Put your twitter account&#39;s special developer access passwords below:</span>
-<span class="n">bearer_token</span> <span class="o">=</span> <span class="s2">&quot;n4tossfgsafs_fake_bearer_token_isa53#$%$&quot;</span>
-<span class="n">consumer_key</span> <span class="o">=</span> <span class="s2">&quot;sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG&quot;</span>
-<span class="n">consumer_secret</span> <span class="o">=</span> <span class="s2">&quot;45adf$T$A_fake_consumer_secret_JESdsg&quot;</span>
-<span class="n">access_token</span> <span class="o">=</span> <span class="s2">&quot;56sd5Ss4tsea_fake_access_token_%YE%hDsdr&quot;</span>
-<span class="n">access_token_secret</span> <span class="o">=</span> <span class="s2">&quot;j^$dr_fake_consumer_key_^A5s#DR5s&quot;</span>
+<span class="c1"># TODO: Put your reddit username, password, and special developer access passwords below:</span>
+<span class="n">username</span><span class="o">=</span><span class="s2">&quot;fake_reddit_username&quot;</span>
+<span class="n">password</span><span class="o">=</span><span class="s2">&quot;sa@#4*fdf_fake_password_$%DSG#%DG&quot;</span>
+<span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;45adf$TW_fake_client_id_JESdsg1O&quot;</span>
+<span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;56sd_fake_client_secret_%Yh%&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Give the tweepy code your developer access passwords so</span>
-<span class="c1"># it can perform twitter actions</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span>
-   <span class="n">bearer_token</span><span class="o">=</span><span class="n">bearer_token</span><span class="p">,</span>
-   <span class="n">consumer_key</span><span class="o">=</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">consumer_secret</span><span class="p">,</span>
-   <span class="n">access_token</span><span class="o">=</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">access_token_secret</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Give the praw code your reddit account info so</span>
+<span class="c1"># it can perform reddit actions</span>
+<span class="n">reddit</span> <span class="o">=</span> <span class="n">praw</span><span class="o">.</span><span class="n">Reddit</span><span class="p">(</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">client_id</span><span class="p">,</span> <span class="n">client_secret</span><span class="o">=</span><span class="n">client_secret</span><span class="p">,</span>
+    <span class="n">user_agent</span><span class="o">=</span><span class="s2">&quot;a custom python script&quot;</span>
 <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to log in to twitter</strong></div></div>
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to collect account info to use on reddit</strong></div></div>
 </div>
 </section>
 <section id="sentiment-analysis">
@@ -1987,48 +2011,50 @@ title="Print to PDF"
 <p>We can now combine our previous examples of looping through tweets with what we just learned of sentiment analysis and looping variables to find the average sentiment of a set of tweets.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;&quot;cute cat&quot;&#39;</span>
-<span class="n">tweets</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-
-<span class="n">num_tweets</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_submissions</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">total_sentiment</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="c1"># go through each tweet</span>
-<span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
-    
-    <span class="c1">#calculate sentiment</span>
-    <span class="n">tweet_sentiment</span> <span class="o">=</span> <span class="n">sia</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">text</span><span class="p">)[</span><span class="s2">&quot;compound&quot;</span><span class="p">]</span>
-    <span class="n">num_tweets</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="n">total_sentiment</span> <span class="o">+=</span> <span class="n">tweet_sentiment</span>
+<span class="c1"># Look up the subreddit &quot;cuteanimals&quot;, then find the &quot;hot&quot; list, getting up to 10 submission</span>
+<span class="n">submissions</span> <span class="o">=</span> <span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span><span class="s2">&quot;cuteanimals&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">hot</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sentiment: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tweet_sentiment</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   Tweet: &quot;</span> <span class="o">+</span> <span class="n">tweet</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="c1"># Turn the submission results into a Python List</span>
+<span class="n">submissions_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">submissions</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">submission</span> <span class="ow">in</span> <span class="n">submissions_list</span><span class="p">:</span>
+    <span class="c1">#calculate sentiment</span>
+    <span class="n">submission_sentiment</span> <span class="o">=</span> <span class="n">sia</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">submission</span><span class="o">.</span><span class="n">title</span><span class="p">)[</span><span class="s2">&quot;compound&quot;</span><span class="p">]</span>
+    <span class="n">num_submissions</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">total_sentiment</span> <span class="o">+=</span> <span class="n">submission_sentiment</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sentiment: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">submission_sentiment</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   Submission Title: &quot;</span> <span class="o">+</span> <span class="n">submission</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">()</span>
 
 
-<span class="n">average_sentiment</span> <span class="o">=</span> <span class="n">total_sentiment</span> <span class="o">/</span> <span class="n">num_tweets</span>
+
+<span class="n">average_sentiment</span> <span class="o">=</span> <span class="n">total_sentiment</span> <span class="o">/</span> <span class="n">num_submissions</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average sentiment was &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">average_sentiment</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to search for &#x27;&quot;cute cat&quot;&#x27; and is returning some fake tweets.</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sentiment: -0.2865
-   Tweet: While trying to tweet right now, I am being attacked by my cute cat! It&#39;s so hard to tpye wihsaoae as fesadf asd fssasaf sa
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to select the subreddit: cuteanimals</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sentiment: 0.5093
+   Submission Title: Look at my cute dog!
 
-Sentiment: 0.8172
-   Tweet: I wish I could be sleeping now like my cute cat is!
+Sentiment: 0.0
+   Submission Title: A baby lizard!
 
-Sentiment: -0.6088
-   Tweet: Why won&#39;t my cute cat stop scratching my face in the morning!
+Sentiment: 0.6239
+   Submission Title: The cutest bird ever!
 
-Average sentiment was -0.026033333333333315
+Average sentiment was 0.3777333333333333
 </pre></div>
 </div>
 </div>
 </div>
-<p>We can now see the average sentiment of a set of tweets based on our search of twitter!</p>
-<p>If you use your twitter bot keys, you can change the <code class="docutils literal notranslate"><span class="pre">query</span></code> to be whatever twitter search you want and see whether people are tweeting positively or negatively about it.</p>
-<p><em>note: You can change <code class="docutils literal notranslate"><span class="pre">max_results=10</span></code> to go up to 100 to get more tweets at a time to find the average of</em></p>
+<p>We can now see the average sentiment of a set of reddit post titles based on our search of a subreddit!</p>
+<p>If you use your reddit bot keys, you can change the <code class="docutils literal notranslate"><span class="pre">subreddit</span></code> to be whatever one you want and see whether people are posting positively or negatively in it.</p>
+<p><em>note: You can change <code class="docutils literal notranslate"><span class="pre">limit=10</span></code> to go up higher to get more submissions at a time to find the average of</em></p>
 </section>
 </section>
 </section>
@@ -2067,10 +2093,10 @@ Average sentiment was -0.026033333333333315
             <p class="prev-next-title"><span class="section-number">8.6.2. </span>Practice: Sentiment Analysis and Loop Variables</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../07_reflection_questions.html" title="next page">
+    <a class='right-next' id="next-link" href="../07_data_poisoning.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">8.7. </span>Reflections on Data Mining</p>
+        <p class="prev-next-title"><span class="section-number">8.7. </span>Data Poisoning</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
