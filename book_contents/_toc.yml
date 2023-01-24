@@ -118,7 +118,7 @@ parts:
     - file: ch08_data_mining/00_data_mining
       sections:
       - file: ch08_data_mining/01_data_sources
-      - file: ch08_data_mining/02_twitter_api_data
+      - file: ch08_data_mining/02_reddit_api_data
       - file: ch08_data_mining/03_data_mining
       - file: ch08_data_mining/04_data_uses
       - file: ch08_data_mining/05_what_platforms_think_of_you
@@ -127,8 +127,9 @@ parts:
           - file: ch08_data_mining/06_sentiment_analysis/01_demo_sentiment_and_loop_vars
           - file: ch08_data_mining/06_sentiment_analysis/02_practice_sentiment_and_loop_vars
           - file: ch08_data_mining/06_sentiment_analysis/03_demo_sentiment_twitter
-      - file: ch08_data_mining/07_reflection_questions
-      - file: ch08_data_mining/08_learn_more
+      - file: ch08_data_mining/07_data_poisoning
+      - file: ch08_data_mining/08_reflection_questions
+      - file: ch08_data_mining/09_learn_more
     - file: ch09_privacy/00_privacy
       sections:
       - file: ch09_privacy/01_privacy_concerns
@@ -285,6 +286,9 @@ parts:
           - file: appendix/alternate_apis/ch4_05_03_demo_data_from_twitter
           - file: appendix/alternate_apis/ch5_04_02_demo_dictionaries
           - file: appendix/alternate_apis/ch6_02_02_demo_practice_tweet_source
+          - file: appendix/alternate_apis/ch7_05_03_demo_reply_bot
+          - file: appendix/alternate_apis/ch8_02_twitter_api_data
+          - file: appendix/alternate_apis/ch8_06_03_demo_sentiment_twitter
           - file: appendix/alternate_apis/solutions/00_solutions
             sections:
               - file: appendix/alternate_apis/solutions/01_solution_practice_statements_variables_sleep

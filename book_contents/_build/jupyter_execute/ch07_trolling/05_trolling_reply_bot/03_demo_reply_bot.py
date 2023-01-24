@@ -3,15 +3,27 @@
 
 # # Demo: Trolling a Reply Bot
 # 
-# We are later going to build a bot that, if you tweet at it: 
+# We are later going to build a bot that, if you message it with: 
 # - Subject: "Wanting bot response", body: "I want you to ___" (where the ___ is some action)
 # - then the bot will reply, "I will now ____" (where the ___ is that same action).
 # 
 # Then we will try trolling it, and fixing it, and trolling it again.
 # 
-# First though we need to do our Redddit PRAW setup:
+# ## Sending ourselves a message
+# In order to send ourselves a message we can reply to, go to:
+# - [https://www.reddit.com/message/compose/](https://www.reddit.com/message/compose/)
+# 
+# Then compose a message to your own account with the subject:
+# - Wanting bot response
+# and a message body of something like:
+# - I want you to jump
+# 
+# ![The Reddit "Send a Private Message" screen, with From "/u/kthayer_teacher_bot" filled in by default and uneditable, then To "kthayer_teacher_bot", Subject "Wanting bot response" and Body "I want you to jump"](send_reddit_message.png)
+# 
+# 
 # 
 # ## Log into Reddit (PRAW)
+# Our code starts with our Redddit PRAW setup:
 
 # In[1]:
 
@@ -52,8 +64,6 @@ reddit = praw.Reddit(
 )
 
 
-# https://www.reddit.com/message/compose/
-# "Wanting bot response"
 # 
 
 # ## Bot 1: do whatever we are told

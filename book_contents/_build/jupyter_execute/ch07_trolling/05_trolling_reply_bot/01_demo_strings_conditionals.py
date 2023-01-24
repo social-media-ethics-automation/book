@@ -3,8 +3,8 @@
 
 # # Demo: Conditionals and String Manipulation
 # 
-# We are later going to build a bot that, if you tweet at it: 
-# - "Hi @mybotname, please ___" (where the ___ is some action)
+# We are later going to build a bot that, if you message it: 
+# - Subject: "Wanting bot response", body: "I want you to ___" (where the ___ is some action)
 # - then the bot will reply, "I will now ____" (where the ___ is that same action).
 # 
 # But in order to build a bot that does this, we will first need to learn how to use conditionals (`if`) and some string manipulation techniques.

@@ -37,3 +37,6 @@ Data collection and storage can go wrong in other ways as well, with incorrect o
 - [![image that says "ah yes, the three genders" and below it is a screenshot of a form that says "What is your gender? Please select one." and the options are: "Male", "Female", and "I have no plans to purchase a new vehicle"](gender_select2.png)](https://twitter.com/annabookwriter/status/1349410399574102016?s=20)
 
 You can see more of these types of forms at [https://genders.wtf/](https://genders.wtf/)
+
+% TODO: Add Individual vs. systemic analysis here, include structural problem tweet: https://twitter.com/athertonkd/status/1120376944061583360
+% Probably add Anna's thing about humanizing

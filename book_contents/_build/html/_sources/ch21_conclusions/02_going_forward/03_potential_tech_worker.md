@@ -6,6 +6,10 @@ We hope that if you find yourself in one of these positions, you consider the et
 
 % TODO: Add torment nexus tweet
 
+% TODO: Clip from Silicon Valley, Parody of a tech conference where everyone claims their idea is "Making the world a better place"
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/B8C5sjjhsso" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## An Example of Action
 
 As an example of what someone in this position might do, let's consider this story from Steve Krenzel, who was a software engineer at Twitter from 2015-2017.
