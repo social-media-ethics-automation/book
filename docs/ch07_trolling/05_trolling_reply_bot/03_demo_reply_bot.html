@@ -704,8 +704,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../ch08_data_mining/02_twitter_api_data.html">
-     8.2. Data From the Twitter API
+    <a class="reference internal" href="../../ch08_data_mining/02_reddit_api_data.html">
+     8.2. Data From the Reddit API
     </a>
    </li>
    <li class="toctree-l2">
@@ -744,20 +744,25 @@ const thebe_selector_output = ".output, .cell_output"
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../ch08_data_mining/06_sentiment_analysis/03_demo_sentiment_twitter.html">
-       8.6.3. Demo: Sentiment Analysis on Twitter
+      <a class="reference internal" href="../../ch08_data_mining/06_sentiment_analysis/03_demo_sentiment_reddit.html">
+       8.6.3. Demo: Sentiment Analysis on Reddit
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../ch08_data_mining/07_reflection_questions.html">
-     8.7. Reflections on Data Mining
+    <a class="reference internal" href="../../ch08_data_mining/07_data_poisoning.html">
+     8.7. Data Poisoning
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../ch08_data_mining/08_learn_more.html">
-     8.8. Learn More
+    <a class="reference internal" href="../../ch08_data_mining/08_reflection_questions.html">
+     8.8. Reflections on Data Mining
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ch08_data_mining/09_learn_more.html">
+     8.9. Learn More
     </a>
    </li>
   </ul>
@@ -1574,6 +1579,21 @@ const thebe_selector_output = ".output, .cell_output"
      Ch 6.2.2 Demo &amp; Practice: Tweet Sources
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/alternate_apis/ch7_05_03_demo_reply_bot.html">
+     Demo: Trolling a Reply Bot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/alternate_apis/ch8_02_twitter_api_data.html">
+     Data From the Twitter API
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/alternate_apis/ch8_06_03_demo_sentiment_twitter.html">
+     Demo: Sentiment Analysis on Twitter
+    </a>
+   </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../appendix/alternate_apis/solutions/00_solutions.html">
      Practice Solutions (Twitter)
@@ -1840,6 +1860,11 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sending-ourselves-a-message">
+   Sending ourselves a message
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#log-into-reddit-praw">
    Log into Reddit (PRAW)
   </a>
@@ -1908,6 +1933,11 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sending-ourselves-a-message">
+   Sending ourselves a message
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#log-into-reddit-praw">
    Log into Reddit (PRAW)
   </a>
@@ -1968,15 +1998,29 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="demo-trolling-a-reply-bot">
 <h1><span class="section-number">7.5.3. </span>Demo: Trolling a Reply Bot<a class="headerlink" href="#demo-trolling-a-reply-bot" title="Permalink to this headline">#</a></h1>
-<p>We are later going to build a bot that, if you tweet at it:</p>
+<p>We are later going to build a bot that, if you message it with:</p>
 <ul class="simple">
 <li><p>Subject: “Wanting bot response”, body: “I want you to ___” (where the ___ is some action)</p></li>
 <li><p>then the bot will reply, “I will now ____” (where the ___ is that same action).</p></li>
 </ul>
 <p>Then we will try trolling it, and fixing it, and trolling it again.</p>
-<p>First though we need to do our Redddit PRAW setup:</p>
+<section id="sending-ourselves-a-message">
+<h2>Sending ourselves a message<a class="headerlink" href="#sending-ourselves-a-message" title="Permalink to this headline">#</a></h2>
+<p>In order to send ourselves a message we can reply to, go to:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.reddit.com/message/compose/">https://www.reddit.com/message/compose/</a></p></li>
+</ul>
+<p>Then compose a message to your own account with the subject:</p>
+<ul class="simple">
+<li><p>Wanting bot response
+and a message body of something like:</p></li>
+<li><p>I want you to jump</p></li>
+</ul>
+<p><img alt="The Reddit &quot;Send a Private Message&quot; screen, with From &quot;/u/kthayer_teacher_bot&quot; filled in by default and uneditable, then To &quot;kthayer_teacher_bot&quot;, Subject &quot;Wanting bot response&quot; and Body &quot;I want you to jump&quot;" src="../../_images/send_reddit_message.png" /></p>
+</section>
 <section id="log-into-reddit-praw">
 <h2>Log into Reddit (PRAW)<a class="headerlink" href="#log-into-reddit-praw" title="Permalink to this headline">#</a></h2>
+<p>Our code starts with our Redddit PRAW setup:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">praw</span>
@@ -2022,8 +2066,6 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to collect account info to use on reddit</strong></div></div>
 </div>
-<p>https://www.reddit.com/message/compose/
-“Wanting bot response”</p>
 </section>
 <section id="bot-1-do-whatever-we-are-told">
 <h2>Bot 1: do whatever we are told<a class="headerlink" href="#bot-1-do-whatever-we-are-told" title="Permalink to this headline">#</a></h2>
