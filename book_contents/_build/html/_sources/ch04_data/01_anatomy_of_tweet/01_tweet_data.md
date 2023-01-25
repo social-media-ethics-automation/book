@@ -43,5 +43,6 @@ For example:
 
 % TODO: Another metadata example: tweet search, the results are data, the search string and time are metadata
 
+% TODO: Define a database
 
 Now that we've looked some at the data in a tweet, let's look next at how different pieces of this information are saved.

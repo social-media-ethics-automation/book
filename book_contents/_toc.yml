@@ -135,12 +135,12 @@ parts:
       - file: ch09_privacy/01_privacy_concerns
       - file: ch09_privacy/02_security
       - file: ch09_privacy/03_privacy_violations
-      - file: ch09_privacy/04_context_collapse
-      - file: ch09_privacy/05_tracking_use/00_intro
+      - file: ch09_privacy/04_tracking_use/00_intro
         sections:
-          - file: ch09_privacy/05_tracking_use/01_demo_functions
-          - file: ch09_privacy/05_tracking_use/02_practice_functions
-          - file: ch09_privacy/05_tracking_use/03_demo_tweepy_track_use
+          - file: ch09_privacy/04_tracking_use/01_demo_functions
+          - file: ch09_privacy/04_tracking_use/02_practice_functions
+          - file: ch09_privacy/04_tracking_use/03_demo_track_use
+      - file: ch09_privacy/05_activity_gdpr
       - file: ch09_privacy/06_reflections
       - file: ch09_privacy/07_learn_more
     - file: ch10_accessibility/00_accessibility

@@ -15,3 +15,6 @@ Besides hacking, there are other forms of privacy violations, such as:
 % John McAfee
 
 % TODO: add about, what if someone purchases a social media platform, then can they view everyone's private messages?  https://www.vox.com/recode/2022/10/27/23427106/elon-musk-twitter-data-direct-messages
+
+
+% Context collapse: Context collapse causes difficulties with privacy, since users have an understanding of who can see what you say or do, even if they don't think of it as being private. But if it ends up being seen by other people, then they may consider their privacy to have been violated.

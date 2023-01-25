@@ -2,8 +2,6 @@
 
 While we have our concerns about the privacy of our information, we often share it with social media platforms under the understanding that they will hold that information securely. But social media companies often fail at keeping our information securely.
 
-% TODO: Define databases earlier, maybe data mining
-
 For example, the proper security practice for storing user passwords is to use a [special individual encryption](https://en.wikipedia.org/wiki/Salt_(cryptography)) for each password. This way the database can only confirm that a password was the right one, but it can't independently up what the password is. Therefore if someone had access to the database, the only way to figure out the right password is to use "brute force," that is, keep guessing passwords until they guess the right one (and [each guess takes a lot of time](https://stackoverflow.com/a/15763243)).
 
 But while that is the proper security for storing passwords. So for example, [Facebook stored millions of Instagram passwords in plain text](https://www.theverge.com/2019/4/18/18485599/facebook-instagram-passwords-plain-text-millions-users), meaning the passwords weren't encrypted and anyone with access to the database could simply read everyone's passwords. And Adobe encrypted their passwords improperly and then [hackers leaked their password database of 153 million users](https://www.explainxkcd.com/wiki/index.php/1286:_Encryptic).

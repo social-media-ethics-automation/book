@@ -13,6 +13,8 @@ Additionally groups keep trying to re-invent old debunked psuedo-scientific (and
 
 Social media data can also be used to infer information about larger social trends like [the spread of misinformation](https://www.science.org/content/article/researchers-are-tracking-another-epidemic-too-misinformation).
 
+% TODO: Include my paper https://medium.com/bits-and-behavior/how-culture-influences-debugging-747f5358c9b8
+
 One particularly striking example of an attempt to infer information from seemingly unconnected data was someone noticing that the number of people sick with COVID-19 correlated with how many people were leaving bad reviews of Yankee Candles saying "they don't have any scent" (note: COVID-19 can cause a loss of the ability to smell):
 
 ```{figure} covid_candles.png

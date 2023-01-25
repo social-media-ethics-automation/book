@@ -6,3 +6,5 @@ In order to do that, we need to learn how to use functions.
 
 ```{tableofcontents}
 ```
+
+% TODO: Instead of wrapped function, do global variables, and then make a useful function (like the sentiment analysis above), but then add tracking to it. Wrapped function can be bonus at end
