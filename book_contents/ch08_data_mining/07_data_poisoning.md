@@ -29,3 +29,5 @@ Then Sean Black, a programmer on TikTok saw this and decided to contribute by cr
 
 See also:
 - [How to poison the data that Big Tech uses to surveil you -- MIT Technology Review](https://www.technologyreview.com/2021/03/05/1020376/resist-big-tech-surveillance-data/)
+
+% Add ChatGPT
