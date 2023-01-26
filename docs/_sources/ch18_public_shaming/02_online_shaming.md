@@ -6,6 +6,8 @@ We've seen examples of this before with Justine Sacco, and with crowd harassment
 
 We can also consider events in the #MeToo movement as public shaming of sexual harassers.
 
+% TODO: kimmel prank
+
 
 ## Aside on “Cancel Culture”
 The term "cancel culture" can be used for public shaming, but is used in a variety of ways, and it doesn't refer to just one thing.

@@ -792,14 +792,9 @@ const thebe_selector_output = ".output, .cell_output"
      9.3. Additional Privacy Violations
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="04_context_collapse.html">
-     9.4. Context Collapse
-    </a>
-   </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="05_tracking_use/00_intro.html">
-     9.5. Tracking Use
+    <a class="reference internal" href="04_tracking_use/00_intro.html">
+     9.4. Tracking Use
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
     <label for="toctree-checkbox-20">
@@ -808,21 +803,26 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="05_tracking_use/01_demo_functions.html">
-       9.5.1. Demo: Writing Functions
+      <a class="reference internal" href="04_tracking_use/01_demo_functions.html">
+       9.4.1. Demo: Writing Functions
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="05_tracking_use/02_practice_functions.html">
-       9.5.2. Practice: Functions
+      <a class="reference internal" href="04_tracking_use/02_practice_functions.html">
+       9.4.2. Practice: Functions
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="05_tracking_use/03_demo_tweepy_track_use.html">
-       9.5.3. Demo: Track Tweepy Use
+      <a class="reference internal" href="04_tracking_use/03_demo_track_use.html">
+       9.4.3. Demo: Track Use of Sentiment Analysis Code
       </a>
      </li>
     </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="05_activity_gdpr.html">
+     9.5. Design Analysis: GDPR
+    </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="06_reflections.html">
@@ -1873,7 +1873,9 @@ title="Print to PDF"
 <h1><span class="section-number">9.1. </span>Privacy<a class="headerlink" href="#privacy" title="Permalink to this headline">#</a></h1>
 <p>There are many reasons, both good and bad, that we might want to keep information private.</p>
 <ul class="simple">
+<li><p>There might be some things that we just feel like aren’t for public sharing (like how most people wear clothes in public, hiding portions of their bodies)</p></li>
 <li><p>We might want to discuss something privately, avoiding embarrassment that might happen if it were shared publicly</p></li>
+<li><p>We might want a conversation or action that happens in one context not to be shared in another (context collapse)</p></li>
 <li><p>We might want to avoid the consequences of something we’ve done (whether ethically good or bad), so we keep the action or our identity private</p></li>
 <li><p>We might have done or said something we want to be forgotten or make at least made less prominent</p></li>
 <li><p>We might want to prevent people from stealing our identities or accounts, so we keep information (like passwords) private</p></li>
@@ -1885,7 +1887,13 @@ title="Print to PDF"
 <p>In some cases we might want a social media company to be able to see our “private” messages, such as if someone was sending us death threats.  We might want to report that user to the social media company for a ban, or to law enforcement (though many people have found law enforcement to be not helpful), and we want to open access to those “private” messages to prove that they were sent.</p>
 <section id="privacy-rights">
 <h2><span class="section-number">9.1.1. </span><a class="reference external" href="https://en.wikipedia.org/wiki/Right_to_privacy">Privacy Rights</a><a class="headerlink" href="#privacy-rights" title="Permalink to this headline">#</a></h2>
-<p>Some governments and laws protect the privacy of individuals (using a Natural Rights ethical framing). These include the European Union’s <a class="reference external" href="https://en.wikipedia.org/wiki/General_Data_Protection_Regulation">General Data Protection Regulation</a>, which includes a “right to be forgotten”, and the United State’s Supreme Court has at times <a class="reference external" href="https://en.wikipedia.org/wiki/Right_to_privacy#United_States">inferred a constitutional right to privacy</a>.</p>
+<p>Some governments and laws protect the privacy of individuals (using a Natural Rights ethical framing). These include the European Union’s <a class="reference external" href="https://en.wikipedia.org/wiki/General_Data_Protection_Regulation">General Data Protection Regulation</a> (GDPR), which includes a “right to be forgotten”, and the United State’s Supreme Court has at times <a class="reference external" href="https://en.wikipedia.org/wiki/Right_to_privacy#United_States">inferred a constitutional right to privacy</a>.</p>
+<figure class="align-default" id="wired-privacy-settings-fig">
+<a class="reference internal image-reference" href="../_images/wired_privacy_settings.png"><img alt="pop-up window for &quot;Manage Consent Preferences&quot;, with options for: Strictly Necessary Cookies (marked always on), Audience Measurment, Performance Cookies, Functional Cookies, Targeting Cookies, Store and/or access information on a device, and Select basic ads." src="../_images/wired_privacy_settings.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 9.1 </span><span class="caption-text">Privacy tracking settings prompt on <a class="reference external" href="https://www.wired.com/">wired.com</a>. These prompts were added as part of following the EU’s new GDPR regulations.</span><a class="headerlink" href="#wired-privacy-settings-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 </section>
 
