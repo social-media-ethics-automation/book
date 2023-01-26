@@ -814,7 +814,7 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="03_demo_track_use.html">
-       9.4.3. Demo: Track Tweepy Use
+       9.4.3. Demo: Track Use of Sentiment Analysis Code
       </a>
      </li>
     </ul>
@@ -1884,11 +1884,6 @@ title="Print to PDF"
    Returns
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#wrapping-functions">
-   Wrapping Functions
-  </a>
- </li>
 </ul>
 
     </nav>
@@ -1933,11 +1928,6 @@ title="Print to PDF"
    Returns
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#wrapping-functions">
-   Wrapping Functions
-  </a>
- </li>
 </ul>
 
                         </nav>
@@ -1950,7 +1940,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="demo-writing-functions">
 <h1><span class="section-number">9.4.1. </span>Demo: Writing Functions<a class="headerlink" href="#demo-writing-functions" title="Permalink to this headline">#</a></h1>
-<p>Before we can do our demo of tracking tweepy use, we need to learn how to create functions in Python.</p>
+<p>Before we can do our demo of tracking function use, we need to learn how to create functions in Python.</p>
 <p>Functions allow us to run another computer program. In our recipe analogy earlier, we said it was like:</p>
 <p><code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">Make</span> <span class="pre">the</span> <span class="pre">dumpling</span> <span class="pre">dough</span> <span class="pre">(see</span> <span class="pre">recipe</span> <span class="pre">on</span> <span class="pre">page</span> <span class="pre">42).</span></code></p>
 <p>Or</p>
@@ -2229,129 +2219,6 @@ Hi Another Person!
 </div>
 </div>
 </div>
-</section>
-<section id="wrapping-functions">
-<h2>Wrapping Functions<a class="headerlink" href="#wrapping-functions" title="Permalink to this headline">#</a></h2>
-<p>One final trick we can do is wrap a function in another function.</p>
-<p>This is a bit of an unusual trick, so you generally don’t have to worry 5oo much about it, but we are going to use it in the “Track Tweepy Use” demo shortly, so we want to explain it.</p>
-<p>Let’s start with a function that adds two numbers together (and yes, this is an unneccesarily complicated replacement for just using <code class="docutils literal notranslate"><span class="pre">+</span></code>)</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="n">num_1</span><span class="p">,</span> <span class="n">num_2</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">num_1</span> <span class="o">+</span> <span class="n">num_2</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>We can use this function to calculate the current state of our money:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_money</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">money_you_gave_me</span> <span class="o">=</span> <span class="mi">3</span>
-
-<span class="n">my_current_money</span> <span class="o">=</span> <span class="n">add_numbers</span><span class="p">(</span><span class="n">my_money</span><span class="p">,</span> <span class="n">money_you_gave_me</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">my_current_money</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now, we can take this function that already exists <code class="docutils literal notranslate"><span class="pre">add_numbers</span></code> and make a <code class="docutils literal notranslate"><span class="pre">new_add_numbers</span></code> function that works the same (it takes the same parameters and then calls the old <code class="docutils literal notranslate"><span class="pre">add_numbers</span></code> function with them), but it also displays what numbers it was called with.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">new_add_numbers</span><span class="p">(</span><span class="n">num_1</span><span class="p">,</span> <span class="n">num_2</span><span class="p">):</span>
-    <span class="n">display</span><span class="p">(</span><span class="s2">&quot;--add_numbers was called with &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; and &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_2</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">add_numbers</span><span class="p">(</span><span class="n">num_1</span><span class="p">,</span> <span class="n">num_2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>We’ve now “wrapped” a new function (<code class="docutils literal notranslate"><span class="pre">new_add_numbers</span></code>) around the old <code class="docutils literal notranslate"><span class="pre">add_numbers</span></code> function.</p>
-<p>When we use this new_add_numbers function, we see the output display when the function is called, but we still get the same result back.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_money</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">money_you_gave_me</span> <span class="o">=</span> <span class="mi">3</span>
-
-<span class="n">my_current_money</span> <span class="o">=</span> <span class="n">new_add_numbers</span><span class="p">(</span><span class="n">my_money</span><span class="p">,</span> <span class="n">money_you_gave_me</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;--add_numbers was called with 4 and 3&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">my_current_money</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now, we can take this one step further and <em>replace</em> the original add_numbers function with the wrapped version. To do this, we need to save the old <code class="docutils literal notranslate"><span class="pre">add_number</span></code>s function in a variable which we will call <code class="docutils literal notranslate"><span class="pre">old_add_numbers</span></code> (and yes, we can save functions themselves into variables just like they were any other value)</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># save the original add_numbers function</span>
-<span class="n">old_add_numbers</span> <span class="o">=</span> <span class="n">add_numbers</span>
-
-<span class="c1"># wrap a new add numbers function around the original one</span>
-<span class="c1"># and have it display the arguments it was called with</span>
-<span class="k">def</span> <span class="nf">new_add_numbers</span><span class="p">(</span><span class="n">num_1</span><span class="p">,</span> <span class="n">num_2</span><span class="p">):</span>
-    <span class="n">display</span><span class="p">(</span><span class="s2">&quot;--add_numbers was called with &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; and &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_2</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">old_add_numbers</span><span class="p">(</span><span class="n">num_1</span><span class="p">,</span> <span class="n">num_2</span><span class="p">)</span>
-
-<span class="c1"># replace the original add_numbers function with the new wrapped one</span>
-<span class="n">add_numbers</span> <span class="o">=</span> <span class="n">new_add_numbers</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now, we can go back to our code that used the original <code class="docutils literal notranslate"><span class="pre">add_numbers</span></code> function, but now it will get the wrapped version.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_money</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">money_you_gave_me</span> <span class="o">=</span> <span class="mi">3</span>
-
-<span class="n">my_current_money</span> <span class="o">=</span> <span class="n">add_numbers</span><span class="p">(</span><span class="n">my_money</span><span class="p">,</span> <span class="n">money_you_gave_me</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;--add_numbers was called with 4 and 3&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">my_current_money</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
-</pre></div>
-</div>
-</div>
-</div>
-<p>If wrapping functions was a confusing process, don’t worry. We are only using it in the “Track Tweepy Use” demo in this chapter, and won’t be using it again.</p>
 </section>
 </section>
 

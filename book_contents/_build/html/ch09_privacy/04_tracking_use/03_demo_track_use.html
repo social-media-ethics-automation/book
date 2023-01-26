@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>9.4.3. Demo: Track Tweepy Use &#8212; Social Media, Ethics, and Automation</title>
+    <title>9.4.3. Demo: Track Use of Sentiment Analysis Code &#8212; Social Media, Ethics, and Automation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -814,7 +814,7 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       9.4.3. Demo: Track Tweepy Use
+       9.4.3. Demo: Track Use of Sentiment Analysis Code
       </a>
      </li>
     </ul>
@@ -1860,13 +1860,30 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#normal-tweepy-set-up">
-   Normal Tweepy Set-Up
+  <a class="reference internal nav-link" href="#reddit-praw-setup">
+   Reddit PRAW Setup
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-sentiment-analysis-library-and-make-analyzer">
+     load sentiment analysis library and make analyzer
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#original-code-to-loop-through-submissions-finding-average-sentiment">
+     original code to loop through submissions, finding average sentiment
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#make-a-function-using-the-code-above-for-finding-the-average-sentiment">
+   Make a function using the code above for finding the average sentiment
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tracking-the-create-tweet-function-use">
-   Tracking the create_tweet function use
+  <a class="reference internal nav-link" href="#modify-the-function-so-it-tracks-use">
+   Modify the function so it tracks use
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1883,7 +1900,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Demo: Track Tweepy Use</h1>
+                <h1>Demo: Track Use of Sentiment Analysis Code</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1894,13 +1911,30 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#normal-tweepy-set-up">
-   Normal Tweepy Set-Up
+  <a class="reference internal nav-link" href="#reddit-praw-setup">
+   Reddit PRAW Setup
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-sentiment-analysis-library-and-make-analyzer">
+     load sentiment analysis library and make analyzer
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#original-code-to-loop-through-submissions-finding-average-sentiment">
+     original code to loop through submissions, finding average sentiment
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#make-a-function-using-the-code-above-for-finding-the-average-sentiment">
+   Make a function using the code above for finding the average sentiment
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tracking-the-create-tweet-function-use">
-   Tracking the create_tweet function use
+  <a class="reference internal nav-link" href="#modify-the-function-so-it-tracks-use">
+   Modify the function so it tracks use
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1918,113 +1952,293 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="demo-track-tweepy-use">
-<h1><span class="section-number">9.4.3. </span>Demo: Track Tweepy Use<a class="headerlink" href="#demo-track-tweepy-use" title="Permalink to this headline">#</a></h1>
-<p>In this code demo, we will take the <code class="docutils literal notranslate"><span class="pre">create_tweet</span></code> function that we’ve used several times earlier in this book, but now we will use the “wrapping function” trick from “Demo: Writing Functions” and track the uses of <code class="docutils literal notranslate"><span class="pre">create_tweet</span></code>.</p>
-<p>If we were being malicious we could track all the other Tweepy functions, hide the code we are using to wrap <code class="docutils literal notranslate"><span class="pre">create_tweet</span></code>, and send the results to some other account. In doing this we would violate the privacy of anyone who used tweepy with our malicious code.</p>
-<section id="normal-tweepy-set-up">
-<h2>Normal Tweepy Set-Up<a class="headerlink" href="#normal-tweepy-set-up" title="Permalink to this headline">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="demo-track-use-of-sentiment-analysis-code">
+<h1><span class="section-number">9.4.3. </span>Demo: Track Use of Sentiment Analysis Code<a class="headerlink" href="#demo-track-use-of-sentiment-analysis-code" title="Permalink to this headline">#</a></h1>
+<p>In this code demo, we will take the sentiment analysis code we used in the last chapter (Data Mining), and we will turn it into a function which will make it easier to use.</p>
+<p>After turning it into a function though, we will add code to that function to track how it is used. We could theoretically take this information we are tracking and send to results to some other account. In doing this, we would be violating the privacy of anyone using our funtion who doesn’t know we are tracking its use.</p>
+<section id="reddit-praw-setup">
+<h2>Reddit PRAW Setup<a class="headerlink" href="#reddit-praw-setup" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tweepy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">praw</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>(optional) use the fake version of tweepy, so you don’t have to use real twitter developer access passwords</p>
+<p>(optional) use the fake version of Reddit praw, so you don’t have to use real Reddit developer access passwords</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_tweepy/fake_tweepy.ipynb
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_apis/fake_praw.ipynb
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake tweepy is replacing the tweepy library. Fake Tweepy doesn&#x27;t need real passwords, and prevents you from accessing real twitter</strong></div></div>
+<div class="output text_html"><strong style='color:darkred'>Fake praw is replacing the praw library. Fake praw doesn&#x27;t need real passwords, and prevents you from accessing real reddit</strong></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load all your developer access passwords into Python</span>
-<span class="c1"># TODO: Put your twitter account&#39;s special developer access passwords below:</span>
-<span class="n">bearer_token</span> <span class="o">=</span> <span class="s2">&quot;n4tossfgsafs_fake_bearer_token_isa53#$%$&quot;</span>
-<span class="n">consumer_key</span> <span class="o">=</span> <span class="s2">&quot;sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG&quot;</span>
-<span class="n">consumer_secret</span> <span class="o">=</span> <span class="s2">&quot;45adf$T$A_fake_consumer_secret_JESdsg&quot;</span>
-<span class="n">access_token</span> <span class="o">=</span> <span class="s2">&quot;56sd5Ss4tsea_fake_access_token_%YE%hDsdr&quot;</span>
-<span class="n">access_token_secret</span> <span class="o">=</span> <span class="s2">&quot;j^$dr_fake_consumer_key_^A5s#DR5s&quot;</span>
+<span class="c1"># TODO: Put your reddit username, password, and special developer access passwords below:</span>
+<span class="n">username</span><span class="o">=</span><span class="s2">&quot;fake_reddit_username&quot;</span>
+<span class="n">password</span><span class="o">=</span><span class="s2">&quot;sa@#4*fdf_fake_password_$%DSG#%DG&quot;</span>
+<span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;45adf$TW_fake_client_id_JESdsg1O&quot;</span>
+<span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;56sd_fake_client_secret_%Yh%&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Give the tweepy code your developer access passwords so</span>
-<span class="c1"># it can perform twitter actions</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span>
-   <span class="n">bearer_token</span><span class="o">=</span><span class="n">bearer_token</span><span class="p">,</span>
-   <span class="n">consumer_key</span><span class="o">=</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">consumer_secret</span><span class="p">,</span>
-   <span class="n">access_token</span><span class="o">=</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">access_token_secret</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Give the praw code your reddit account info so</span>
+<span class="c1"># it can perform reddit actions</span>
+<span class="n">reddit</span> <span class="o">=</span> <span class="n">praw</span><span class="o">.</span><span class="n">Reddit</span><span class="p">(</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">client_id</span><span class="p">,</span> <span class="n">client_secret</span><span class="o">=</span><span class="n">client_secret</span><span class="p">,</span>
+    <span class="n">user_agent</span><span class="o">=</span><span class="s2">&quot;a custom python script&quot;</span>
 <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to log in to twitter</strong></div></div>
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to collect account info to use on reddit</strong></div></div>
+</div>
+<section id="load-sentiment-analysis-library-and-make-analyzer">
+<h3>load sentiment analysis library and make analyzer<a class="headerlink" href="#load-sentiment-analysis-library-and-make-analyzer" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">([</span><span class="s2">&quot;vader_lexicon&quot;</span><span class="p">])</span>
+<span class="kn">from</span> <span class="nn">nltk.sentiment</span> <span class="kn">import</span> <span class="n">SentimentIntensityAnalyzer</span>
+<span class="n">sia</span> <span class="o">=</span> <span class="n">SentimentIntensityAnalyzer</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package vader_lexicon to
+[nltk_data]     C:\Users\kmthayer\AppData\Roaming\nltk_data...
+[nltk_data]   Package vader_lexicon is already up-to-date!
+</pre></div>
+</div>
+</div>
 </div>
 </section>
-<section id="tracking-the-create-tweet-function-use">
-<h2>Tracking the create_tweet function use<a class="headerlink" href="#tracking-the-create-tweet-function-use" title="Permalink to this headline">#</a></h2>
+<section id="original-code-to-loop-through-submissions-finding-average-sentiment">
+<h3>original code to loop through submissions, finding average sentiment<a class="headerlink" href="#original-code-to-loop-through-submissions-finding-average-sentiment" title="Permalink to this headline">#</a></h3>
+<p>This is the code from chapter 8 that loops through submissions in the “cuteanimals” subreddit and calculates the average sentiment</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># list to hold the information we are tracking</span>
-<span class="n">tweets_created</span> <span class="o">=</span> <span class="p">[]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_submissions</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">total_sentiment</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="c1"># save the original create_tweet function</span>
-<span class="n">old_create_tweet</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span>
+<span class="c1"># Look up the subreddit &quot;cuteanimals&quot;, then find the &quot;hot&quot; list, getting up to 10 submission</span>
+<span class="n">submissions</span> <span class="o">=</span> <span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span><span class="s2">&quot;cuteanimals&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">hot</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 
-<span class="c1"># make a new create tweet function that will track information,</span>
-<span class="c1"># then call the original create_tweet function</span>
-<span class="k">def</span> <span class="nf">new_create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
-    <span class="n">tweets_created</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-    
-    <span class="n">old_create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">text</span><span class="p">)</span> 
-    
-<span class="c1"># replace client.create_tweet with our new version, which also is tracking use</span>
-<span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span> <span class="o">=</span> <span class="n">new_create_tweet</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;I am using the tweepy library like normal&quot;</span><span class="p">)</span>
-<span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;There is no indication that anything is working differntly&quot;</span><span class="p">)</span>
-<span class="n">client</span><span class="o">.</span><span class="n">create_tweet</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;I might not realize these tweets are being tracked&quot;</span><span class="p">)</span>
+<span class="c1"># Turn the submission results into a Python List</span>
+<span class="n">submissions_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">submissions</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">submission</span> <span class="ow">in</span> <span class="n">submissions_list</span><span class="p">:</span>
+    <span class="c1">#calculate sentiment</span>
+    <span class="n">submission_sentiment</span> <span class="o">=</span> <span class="n">sia</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">submission</span><span class="o">.</span><span class="n">title</span><span class="p">)[</span><span class="s2">&quot;compound&quot;</span><span class="p">]</span>
+    <span class="n">num_submissions</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">total_sentiment</span> <span class="o">+=</span> <span class="n">submission_sentiment</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sentiment: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">submission_sentiment</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   Submission Title: &quot;</span> <span class="o">+</span> <span class="n">submission</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+
+
+
+<span class="n">average_sentiment</span> <span class="o">=</span> <span class="n">total_sentiment</span> <span class="o">/</span> <span class="n">num_submissions</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average sentiment was &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">average_sentiment</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to post this tweet (note: real tweepy shows no output here when a tweet is posted): </strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I am using the tweepy library like normal
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to select the subreddit: cuteanimals</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sentiment: 0.5093
+   Submission Title: Look at my cute dog!
+
+Sentiment: 0.0
+   Submission Title: A baby lizard!
+
+Sentiment: 0.6239
+   Submission Title: The cutest bird ever!
+
+Average sentiment was 0.3777333333333333
 </pre></div>
 </div>
-<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to post this tweet (note: real tweepy shows no output here when a tweet is posted): </strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>There is no indication that anything is working differntly
-</pre></div>
-</div>
-<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to post this tweet (note: real tweepy shows no output here when a tweet is posted): </strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I might not realize these tweets are being tracked
-</pre></div>
 </div>
 </div>
-</div>
-<p>So, our calls to <code class="docutils literal notranslate"><span class="pre">client.create_tweet</span></code> worked like normal.</p>
-<p>But if I look at the <code class="docutils literal notranslate"><span class="pre">tweets_created</span></code> variable I can see all the tweets there</p>
+</section>
+</section>
+<section id="make-a-function-using-the-code-above-for-finding-the-average-sentiment">
+<h2>Make a function using the code above for finding the average sentiment<a class="headerlink" href="#make-a-function-using-the-code-above-for-finding-the-average-sentiment" title="Permalink to this headline">#</a></h2>
+<p>We now make a function of that code above by doing the following:</p>
+<ul class="simple">
+<li><p>Add a <code class="docutils literal notranslate"><span class="pre">def</span></code> line at the start to make a function called <code class="docutils literal notranslate"><span class="pre">find_average_sentiment</span></code></p></li>
+<li><p>Indent all the old code so that it becomes the contents of the function <code class="docutils literal notranslate"><span class="pre">find_average_sentiment</span></code></p></li>
+<li><p>Make the function take two arguments:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">subreddit_name</span></code>, which takes place of “cuteanimals”, so the person calling the function can choose which subreddit to search</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">display_progress</span></code> which defaults to False. This decides whether or not the print statements are run when the function is run, so we can see the progress if we want, or just get the answer by default</p></li>
+</ul>
+</li>
+<li><p>At the end of the function, return the average_sentiment as the result</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">tweets_created</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="k">def</span> <span class="nf">find_average_sentiment</span><span class="p">(</span><span class="n">subreddit_name</span><span class="p">,</span> <span class="n">display_progress</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+    <span class="n">num_submissions</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">total_sentiment</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># Look up the subreddit given as a parameter, then find the &quot;hot&quot; list, getting up to 10 submission</span>
+    <span class="n">submissions</span> <span class="o">=</span> <span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span><span class="n">subreddit_name</span><span class="p">)</span><span class="o">.</span><span class="n">hot</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+    <span class="c1"># Turn the submission results into a Python List</span>
+    <span class="n">submissions_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">submissions</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">submission</span> <span class="ow">in</span> <span class="n">submissions_list</span><span class="p">:</span>
+        <span class="c1">#calculate sentiment</span>
+        <span class="n">submission_sentiment</span> <span class="o">=</span> <span class="n">sia</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">submission</span><span class="o">.</span><span class="n">title</span><span class="p">)[</span><span class="s2">&quot;compound&quot;</span><span class="p">]</span>
+        <span class="n">num_submissions</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">total_sentiment</span> <span class="o">+=</span> <span class="n">submission_sentiment</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">display_progress</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sentiment: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">submission_sentiment</span><span class="p">))</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   Submission Title: &quot;</span> <span class="o">+</span> <span class="n">submission</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">()</span>
+
+
+
+    <span class="n">average_sentiment</span> <span class="o">=</span> <span class="n">total_sentiment</span> <span class="o">/</span> <span class="n">num_submissions</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">display_progress</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average sentiment was &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">average_sentiment</span><span class="p">))</span>
+    
+    <span class="k">return</span> <span class="n">average_sentiment</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let’s try using the function</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">find_average_sentiment</span><span class="p">(</span><span class="s2">&quot;cuteanimals&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;I am using the tweepy library like normal&#39;,
- &#39;There is no indication that anything is working differntly&#39;,
- &#39;I might not realize these tweets are being tracked&#39;]
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to select the subreddit: cuteanimals</strong></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.3777333333333333
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">find_average_sentiment</span><span class="p">(</span><span class="s2">&quot;science&quot;</span><span class="p">,</span> <span class="n">display_progress</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to select the subreddit: science</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sentiment: -0.5255
+   Submission Title: Scientists have cloned dangerous dinosaurs!
+
+Sentiment: 0.7574
+   Submission Title: Scientists have created the best tasting food ever!
+
+Sentiment: 0.0
+   Submission Title: F*** magnets, how do they work? And I don&#39;t wanna talk to a scientist
+
+Average sentiment was 0.0773
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0773
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="modify-the-function-so-it-tracks-use">
+<h2>Modify the function so it tracks use<a class="headerlink" href="#modify-the-function-so-it-tracks-use" title="Permalink to this headline">#</a></h2>
+<p>Now we make another version of the same function, but with a small difference:</p>
+<ul class="simple">
+<li><p>We make a list variable called <code class="docutils literal notranslate"><span class="pre">sentiment_searches</span></code> which exists outside the function.</p></li>
+<li><p>At the start of the function we add the subreddit being searched to that list.
+This way, as the function gets used, we’ll keep a history of its use in the <code class="docutils literal notranslate"><span class="pre">sentiment_searches</span></code> list</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make a list to save what subreddit was used for each time `find_average_sentiment` is run</span>
+<span class="n">sentiment_searches</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">def</span> <span class="nf">find_average_sentiment</span><span class="p">(</span><span class="n">subreddit_name</span><span class="p">,</span> <span class="n">display_progress</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+    
+    <span class="c1"># Add the current subreddit being searched to the sentiment_searches list</span>
+    <span class="n">sentiment_searches</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">subreddit_name</span><span class="p">)</span>
+    
+    <span class="n">num_submissions</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">total_sentiment</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># Look up the subreddit name given as a parameter, then find the &quot;hot&quot; list, getting up to 10 submission</span>
+    <span class="n">submissions</span> <span class="o">=</span> <span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span><span class="n">subreddit_name</span><span class="p">)</span><span class="o">.</span><span class="n">hot</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+    <span class="c1"># Turn the submission results into a Python List</span>
+    <span class="n">submissions_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">submissions</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">submission</span> <span class="ow">in</span> <span class="n">submissions_list</span><span class="p">:</span>
+        <span class="c1">#calculate sentiment</span>
+        <span class="n">submission_sentiment</span> <span class="o">=</span> <span class="n">sia</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">submission</span><span class="o">.</span><span class="n">title</span><span class="p">)[</span><span class="s2">&quot;compound&quot;</span><span class="p">]</span>
+        <span class="n">num_submissions</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">total_sentiment</span> <span class="o">+=</span> <span class="n">submission_sentiment</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">display_progress</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sentiment: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">submission_sentiment</span><span class="p">))</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   Submission Title: &quot;</span> <span class="o">+</span> <span class="n">submission</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">()</span>
+
+
+
+    <span class="n">average_sentiment</span> <span class="o">=</span> <span class="n">total_sentiment</span> <span class="o">/</span> <span class="n">num_submissions</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">display_progress</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average sentiment was &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">average_sentiment</span><span class="p">))</span>
+    
+    <span class="k">return</span> <span class="n">average_sentiment</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let’s run this version of the function</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">find_average_sentiment</span><span class="p">(</span><span class="s2">&quot;cuteanimals&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to select the subreddit: cuteanimals</strong></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.3777333333333333
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">find_average_sentiment</span><span class="p">(</span><span class="s2">&quot;science&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to select the subreddit: science</strong></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0773
+</pre></div>
+</div>
+</div>
+</div>
+<p>It looks like it works like normal, but our calls to the function have been tracked!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">sentiment_searches</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;cuteanimals&#39;, &#39;science&#39;]
 </pre></div>
 </div>
 </div>
@@ -2033,7 +2247,7 @@ title="Print to PDF"
 </section>
 <section id="how-can-we-trust-code-libraries">
 <h2>How can we trust code libraries?<a class="headerlink" href="#how-can-we-trust-code-libraries" title="Permalink to this headline">#</a></h2>
-<p>If people can make code libraries track us and violate our privacy, how can we trust them? We could try looking at the <a class="reference external" href="https://github.com/tweepy/tweepy/blob/ad5e31be58965d67e353128f711857a47f8d45d0/tweepy/client.py#L714">source code for tweepy</a> to try and make sure the library we are using isn’t doing anything bad, but no programmer can be expected to read through all the libraries they use. There is unfortunately no simple answer to this.</p>
+<p>If people can make code libraries track us and violate our privacy, how can we trust them? We could try looking at the <a class="reference external" href="https://github.com/praw-dev/praw/">source code for the PRAW library</a> to try and make sure the library we are using isn’t doing anything bad, but no programmer can be expected to read through all the libraries they use. There is unfortunately no simple answer to this.</p>
 <p>In fact, there are cases where people have messed with code libraries:</p>
 <ul class="simple">
 <li><p>The United States National Security Agency “<a class="reference external" href="https://gizmodo.com/nsa-paid-security-firm-10-million-bribe-to-keep-encryp-1487442397">paid massive computer security firm RSA $10 million to promote a flawed encryption system so that the surveillance organization could wiggle its way around security.</a>”</p>

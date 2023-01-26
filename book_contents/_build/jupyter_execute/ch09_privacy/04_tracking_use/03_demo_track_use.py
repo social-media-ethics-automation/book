@@ -1,95 +1,220 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Demo: Track Tweepy Use
-# In this code demo, we will take the `create_tweet` function that we've used several times earlier in this book, but now we will use the "wrapping function" trick from "Demo: Writing Functions" and track the uses of `create_tweet`. 
+# # Demo: Track Use of Sentiment Analysis Code
+# In this code demo, we will take the sentiment analysis code we used in the last chapter (Data Mining), and we will turn it into a function which will make it easier to use.
 # 
-# If we were being malicious we could track all the other Tweepy functions, hide the code we are using to wrap `create_tweet`, and send the results to some other account. In doing this we would violate the privacy of anyone who used tweepy with our malicious code.
+# After turning it into a function though, we will add code to that function to track how it is used. We could theoretically take this information we are tracking and send to results to some other account. In doing this, we would be violating the privacy of anyone using our funtion who doesn't know we are tracking its use.
 
-# ## Normal Tweepy Set-Up
+# ## Reddit PRAW Setup
 
 # In[1]:
 
 
-import tweepy
+import praw
 
 
-#  (optional) use the fake version of tweepy, so you don't have to use real twitter developer access passwords
+# (optional) use the fake version of Reddit praw, so you don't have to use real Reddit developer access passwords
 
 # In[2]:
 
 
-get_ipython().run_line_magic('run', '../../fake_tweepy/fake_tweepy.ipynb')
+get_ipython().run_line_magic('run', '../../fake_apis/fake_praw.ipynb')
 
 
 # In[3]:
 
 
 # Load all your developer access passwords into Python
-# TODO: Put your twitter account's special developer access passwords below:
-bearer_token = "n4tossfgsafs_fake_bearer_token_isa53#$%$"
-consumer_key = "sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG"
-consumer_secret = "45adf$T$A_fake_consumer_secret_JESdsg"
-access_token = "56sd5Ss4tsea_fake_access_token_%YE%hDsdr"
-access_token_secret = "j^$dr_fake_consumer_key_^A5s#DR5s"
+# TODO: Put your reddit username, password, and special developer access passwords below:
+username="fake_reddit_username"
+password="sa@#4*fdf_fake_password_$%DSG#%DG"
+client_id="45adf$TW_fake_client_id_JESdsg1O"
+client_secret="56sd_fake_client_secret_%Yh%"
 
 
 # In[4]:
 
 
-# Give the tweepy code your developer access passwords so
-# it can perform twitter actions
-client = tweepy.Client(
-   bearer_token=bearer_token,
-   consumer_key=consumer_key, consumer_secret=consumer_secret,
-   access_token=access_token, access_token_secret=access_token_secret
+# Give the praw code your reddit account info so
+# it can perform reddit actions
+reddit = praw.Reddit(
+    username=username, password=password,
+    client_id=client_id, client_secret=client_secret,
+    user_agent="a custom python script"
 )
 
 
-# ## Tracking the create_tweet function use
+# ### load sentiment analysis library and make analyzer
 
 # In[5]:
 
 
-# list to hold the information we are tracking
-tweets_created = []
+import nltk
+nltk.download(["vader_lexicon"])
+from nltk.sentiment import SentimentIntensityAnalyzer
+sia = SentimentIntensityAnalyzer()
 
-# save the original create_tweet function
-old_create_tweet = client.create_tweet
 
-# make a new create tweet function that will track information,
-# then call the original create_tweet function
-def new_create_tweet(text=""):
-    tweets_created.append(text)
-    
-    old_create_tweet(text=text) 
-    
-# replace client.create_tweet with our new version, which also is tracking use
-client.create_tweet = new_create_tweet
-
+# ### original code to loop through submissions, finding average sentiment
+# This is the code from chapter 8 that loops through submissions in the "cuteanimals" subreddit and calculates the average sentiment
 
 # In[6]:
 
 
-client.create_tweet(text="I am using the tweepy library like normal")
-client.create_tweet(text="There is no indication that anything is working differntly")
-client.create_tweet(text="I might not realize these tweets are being tracked")
+num_submissions = 0
+total_sentiment = 0
+
+# Look up the subreddit "cuteanimals", then find the "hot" list, getting up to 10 submission
+submissions = reddit.subreddit("cuteanimals").hot(limit=10)
+
+# Turn the submission results into a Python List
+submissions_list = list(submissions)
+
+for submission in submissions_list:
+    #calculate sentiment
+    submission_sentiment = sia.polarity_scores(submission.title)["compound"]
+    num_submissions += 1
+    total_sentiment += submission_sentiment
+
+    print("Sentiment: " + str(submission_sentiment))
+    print("   Submission Title: " + submission.title)
+    print()
 
 
-# So, our calls to `client.create_tweet` worked like normal.
-# 
-# But if I look at the `tweets_created` variable I can see all the tweets there
+
+average_sentiment = total_sentiment / num_submissions
+print("Average sentiment was " + str(average_sentiment))
+
+
+# ## Make a function using the code above for finding the average sentiment
+# We now make a function of that code above by doing the following:
+# - Add a `def` line at the start to make a function called `find_average_sentiment`
+# - Indent all the old code so that it becomes the contents of the function `find_average_sentiment`
+# - Make the function take two arguments:
+#   - `subreddit_name`, which takes place of "cuteanimals", so the person calling the function can choose which subreddit to search
+#   - `display_progress` which defaults to False. This decides whether or not the print statements are run when the function is run, so we can see the progress if we want, or just get the answer by default
+# - At the end of the function, return the average_sentiment as the result
 
 # In[7]:
 
 
-display(tweets_created)
+def find_average_sentiment(subreddit_name, display_progress = False):
+   num_submissions = 0
+   total_sentiment = 0
+
+   # Look up the subreddit given as a parameter, then find the "hot" list, getting up to 10 submission
+   submissions = reddit.subreddit(subreddit_name).hot(limit=10)
+
+   # Turn the submission results into a Python List
+   submissions_list = list(submissions)
+
+   for submission in submissions_list:
+       #calculate sentiment
+       submission_sentiment = sia.polarity_scores(submission.title)["compound"]
+       num_submissions += 1
+       total_sentiment += submission_sentiment
+
+       if(display_progress):
+           print("Sentiment: " + str(submission_sentiment))
+           print("   Submission Title: " + submission.title)
+           print()
+
+
+
+   average_sentiment = total_sentiment / num_submissions
+   if(display_progress):
+       print("Average sentiment was " + str(average_sentiment))
+   
+   return average_sentiment
+
+
+# Now let's try using the function
+
+# In[8]:
+
+
+find_average_sentiment("cuteanimals")
+
+
+# In[9]:
+
+
+find_average_sentiment("science", display_progress=True)
+
+
+# ## Modify the function so it tracks use
+# Now we make another version of the same function, but with a small difference:
+# - We make a list variable called `sentiment_searches` which exists outside the function.
+# - At the start of the function we add the subreddit being searched to that list.
+# This way, as the function gets used, we'll keep a history of its use in the `sentiment_searches` list
+
+# In[10]:
+
+
+# Make a list to save what subreddit was used for each time `find_average_sentiment` is run
+sentiment_searches = []
+
+def find_average_sentiment(subreddit_name, display_progress = False):
+    
+    # Add the current subreddit being searched to the sentiment_searches list
+    sentiment_searches.append(subreddit_name)
+    
+    num_submissions = 0
+    total_sentiment = 0
+
+    # Look up the subreddit name given as a parameter, then find the "hot" list, getting up to 10 submission
+    submissions = reddit.subreddit(subreddit_name).hot(limit=10)
+
+    # Turn the submission results into a Python List
+    submissions_list = list(submissions)
+
+    for submission in submissions_list:
+        #calculate sentiment
+        submission_sentiment = sia.polarity_scores(submission.title)["compound"]
+        num_submissions += 1
+        total_sentiment += submission_sentiment
+
+        if(display_progress):
+            print("Sentiment: " + str(submission_sentiment))
+            print("   Submission Title: " + submission.title)
+            print()
+
+
+
+    average_sentiment = total_sentiment / num_submissions
+    if(display_progress):
+        print("Average sentiment was " + str(average_sentiment))
+    
+    return average_sentiment
+
+
+# Now let's run this version of the function
+
+# In[11]:
+
+
+find_average_sentiment("cuteanimals")
+
+
+# In[12]:
+
+
+find_average_sentiment("science")
+
+
+# It looks like it works like normal, but our calls to the function have been tracked!
+
+# In[13]:
+
+
+display(sentiment_searches)
 
 
 # Now, if we were being malicious, we would hide this code in some other code library we would try to convince you to use, that way you wouldn't notice the code. And instead of just saving those tweets to a variable, we would send it to ourselves, perhaps by putting code into our new_create_tweet to log into a different twitter account and private messaged that info to ourselves.
 
 # ## How can we trust code libraries?
-# If people can make code libraries track us and violate our privacy, how can we trust them? We could try looking at the [source code for tweepy](https://github.com/tweepy/tweepy/blob/ad5e31be58965d67e353128f711857a47f8d45d0/tweepy/client.py#L714) to try and make sure the library we are using isn't doing anything bad, but no programmer can be expected to read through all the libraries they use. There is unfortunately no simple answer to this.
+# If people can make code libraries track us and violate our privacy, how can we trust them? We could try looking at the [source code for the PRAW library](https://github.com/praw-dev/praw/) to try and make sure the library we are using isn't doing anything bad, but no programmer can be expected to read through all the libraries they use. There is unfortunately no simple answer to this.
 # 
 # In fact, there are cases where people have messed with code libraries:
 # - The United States National Security Agency "[paid massive computer security firm RSA $10 million to promote a flawed encryption system so that the surveillance organization could wiggle its way around security.](https://gizmodo.com/nsa-paid-security-firm-10-million-bribe-to-keep-encryp-1487442397)"

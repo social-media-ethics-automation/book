@@ -3,7 +3,7 @@
 
 # # Demo: Writing Functions
 # 
-# Before we can do our demo of tracking tweepy use, we need to learn how to create functions in Python.
+# Before we can do our demo of tracking function use, we need to learn how to create functions in Python.
 # 
 # Functions allow us to run another computer program. In our recipe analogy earlier, we said it was like:
 # 
@@ -226,100 +226,3 @@ tweet_to_make = create_hi_message("Susan", "Notess")
 
 display(tweet_to_make)
 
-
-# ## Wrapping Functions
-# One final trick we can do is wrap a function in another function. 
-# 
-# This is a bit of an unusual trick, so you generally don't have to worry 5oo much about it, but we are going to use it in the "Track Tweepy Use" demo shortly, so we want to explain it.
-# 
-# Let's start with a function that adds two numbers together (and yes, this is an unneccesarily complicated replacement for just using `+`)
-
-# In[21]:
-
-
-def add_numbers(num_1, num_2):
-    return num_1 + num_2
-
-
-# We can use this function to calculate the current state of our money:
-
-# In[22]:
-
-
-my_money = 4
-money_you_gave_me = 3
-
-my_current_money = add_numbers(my_money, money_you_gave_me)
-
-
-# In[23]:
-
-
-display(my_current_money)
-
-
-# Now, we can take this function that already exists `add_numbers` and make a `new_add_numbers` function that works the same (it takes the same parameters and then calls the old `add_numbers` function with them), but it also displays what numbers it was called with.
-
-# In[24]:
-
-
-def new_add_numbers(num_1, num_2):
-    display("--add_numbers was called with " + str(num_1) + " and " + str(num_2))
-    return add_numbers(num_1, num_2)
-
-
-# We've now "wrapped" a new function (`new_add_numbers`) around the old `add_numbers` function. 
-# 
-# When we use this new_add_numbers function, we see the output display when the function is called, but we still get the same result back.
-
-# In[25]:
-
-
-my_money = 4
-money_you_gave_me = 3
-
-my_current_money = new_add_numbers(my_money, money_you_gave_me)
-
-
-# In[26]:
-
-
-display(my_current_money)
-
-
-# Now, we can take this one step further and _replace_ the original add_numbers function with the wrapped version. To do this, we need to save the old `add_number`s function in a variable which we will call `old_add_numbers` (and yes, we can save functions themselves into variables just like they were any other value)
-
-# In[27]:
-
-
-# save the original add_numbers function
-old_add_numbers = add_numbers
-
-# wrap a new add numbers function around the original one
-# and have it display the arguments it was called with
-def new_add_numbers(num_1, num_2):
-    display("--add_numbers was called with " + str(num_1) + " and " + str(num_2))
-    return old_add_numbers(num_1, num_2)
-
-# replace the original add_numbers function with the new wrapped one
-add_numbers = new_add_numbers
-
-
-# Now, we can go back to our code that used the original `add_numbers` function, but now it will get the wrapped version.
-
-# In[28]:
-
-
-my_money = 4
-money_you_gave_me = 3
-
-my_current_money = add_numbers(my_money, money_you_gave_me)
-
-
-# In[29]:
-
-
-display(my_current_money)
-
-
-# If wrapping functions was a confusing process, don't worry. We are only using it in the "Track Tweepy Use" demo in this chapter, and won't be using it again.

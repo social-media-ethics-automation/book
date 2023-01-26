@@ -566,7 +566,7 @@ class AuthorSimplishNamespace(SimplishNamespace):
         return self.name
     pass
 
-def hot(limit=10):
+def cuteanimals_hot(limit=10):
     submission_list = [
         SimpleNamespace(
             id = "904tjwdf093j",
@@ -628,6 +628,68 @@ def hot(limit=10):
     ]
     return iter(submission_list)
 
+def science_hot(limit=10):
+    submission_list = [
+        SimpleNamespace(
+            id = "09u435kndsf",
+            title = "Scientists have cloned dangerous dinosaurs!", 
+            author = AuthorSimplishNamespace(
+                name="fake_user",
+                link_karma= 3,
+                comment_karma= 4,
+                has_verified_email = False,
+                is_mod = False,
+                is_gold = False                
+            ),
+            edited = False,
+            created_utc = 1673327425,
+            score = 10,
+            upvote_ratio = .5,
+            num_comments = 9,
+            selftext = "",
+            url = "example.com/fake_news_story"
+        ),
+        SimpleNamespace(
+            id = "9uj3n4tsd",
+            title = "Scientists have created the best tasting food ever!", 
+            author = AuthorSimplishNamespace(
+                name="pretend_user",
+                link_karma= 13,
+                comment_karma= 45,
+                has_verified_email = False,
+                is_mod = True,
+                is_gold = False    
+            ),
+            edited = True,
+            created_utc = 1673327625,
+            score = 10,
+            upvote_ratio = .9,
+            num_comments = 1,
+            selftext = "",
+            url = "example.com/pretend_story.html"
+        ),
+        SimpleNamespace(
+            id = "093j4tsfkndf",
+            title = "F*** magnets, how do they work? And I don't wanna talk to a scientist", 
+            author = AuthorSimplishNamespace(
+                name="imaginary_user",
+                link_karma= 4,
+                comment_karma= 10,
+                has_verified_email = True,
+                is_mod = True,
+                is_gold = True    
+            ),
+            edited = False,
+            created_utc = 1673367625,
+            score = 50,
+            upvote_ratio = .7,
+            num_comments = 5,
+            selftext = "",
+            url = "example.com/imaginary_story.html"
+        ),
+    ]
+    return iter(submission_list)
+
 
 # In[12]:
 
@@ -641,10 +703,16 @@ def submit(title, selftext=""):
 
 def subreddit(subreddit_name):
     print_info("Fake praw is pretending to select the subreddit: " + str(subreddit_name))
-    return SimpleNamespace(
-      submit = submit,
-      hot = hot
-    )
+    if subreddit_name == "cuteanimals":
+        return SimpleNamespace(
+          submit = submit,
+          hot = cuteanimals_hot
+        )
+    elif subreddit_name == "science":
+        return SimpleNamespace(
+          submit = submit,
+          hot = science_hot
+        )
 
 
 # 
