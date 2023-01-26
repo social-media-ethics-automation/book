@@ -241,7 +241,7 @@ reddit.subreddit(
 # ``` 
 # (with whatever your variable name was instead of "title_variable" and "content_variable")
 
-# In[18]:
+# In[7]:
 
 
 title_to_post = "I can use more complicated code"
@@ -260,7 +260,7 @@ reddit.subreddit(
 # 
 # 
 
-# In[19]:
+# In[ ]:
 
 
 reddit.subreddit(
