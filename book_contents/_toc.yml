@@ -148,12 +148,10 @@ parts:
       - file: ch10_accessibility/01_disability
       - file: ch10_accessibility/02_accessible_design
       - file: ch10_accessibility/03_who_designs
-      - file: ch10_accessibility/04_accessibility_on_social_media
-      - file: ch10_accessibility/05_alt_text/00_intro
+      - file: ch10_accessibility/04_alt_text/00_intro
         sections:
-        - file: ch10_accessibility/05_alt_text/01_alt_text
-        - file: ch10_accessibility/05_alt_text/02_extra_data_from_twitter
-        - file: ch10_accessibility/05_alt_text/03_alt_text_from_twitter
+        - file: ch10_accessibility/04_alt_text/01_alt_text
+      - file: ch10_accessibility/05_accessibility_on_social_media
     - file: ch11_recommendations/00_recommendations
       sections:
       - file: ch11_recommendations/01_recommendations
@@ -289,6 +287,8 @@ parts:
           - file: appendix/alternate_apis/ch7_05_03_demo_reply_bot
           - file: appendix/alternate_apis/ch8_02_twitter_api_data
           - file: appendix/alternate_apis/ch8_06_03_demo_sentiment_twitter
+          - file: appendix/alternate_apis/ch10_05_02_extra_data_from_twitter
+          - file: appendix/alternate_apis/ch10_05_03_alt_text_from_twitter
           - file: appendix/alternate_apis/solutions/00_solutions
             sections:
               - file: appendix/alternate_apis/solutions/01_solution_practice_statements_variables_sleep
