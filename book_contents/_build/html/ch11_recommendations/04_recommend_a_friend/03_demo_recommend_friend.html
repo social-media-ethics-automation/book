@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>11.4.3. Demo: Recommend a User to Follow &#8212; Social Media, Ethics, and Automation</title>
+    <title>11.4.3. Demo: Recommend a Subreddit &#8212; Social Media, Ethics, and Automation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -932,7 +932,7 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       11.4.3. Demo: Recommend a User to Follow
+       11.4.3. Demo: Recommend a Subreddit
       </a>
      </li>
     </ul>
@@ -1860,23 +1860,23 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#normal-tweepy-set-up">
-   Normal Tweepy Set-Up
+  <a class="reference internal nav-link" href="#normal-reddit-praw-setup">
+   Normal Reddit PRAW Setup
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#make-a-helper-function-id-from-username">
-   Make a helper function (id_from_username
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#make-a-function-to-get-follow-suggestions">
-   Make a function to get follow suggestions
+  <a class="reference internal nav-link" href="#make-a-function-to-get-subreddit-suggestions">
+   Make a function to get subreddit suggestions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#test-our-function-suggest-follows">
    Test our function (suggest follows)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#try-it-youself">
+   Try it youself!
   </a>
  </li>
 </ul>
@@ -1888,7 +1888,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Demo: Recommend a User to Follow</h1>
+                <h1>Demo: Recommend a Subreddit</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1899,23 +1899,23 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#normal-tweepy-set-up">
-   Normal Tweepy Set-Up
+  <a class="reference internal nav-link" href="#normal-reddit-praw-setup">
+   Normal Reddit PRAW Setup
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#make-a-helper-function-id-from-username">
-   Make a helper function (id_from_username
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#make-a-function-to-get-follow-suggestions">
-   Make a function to get follow suggestions
+  <a class="reference internal nav-link" href="#make-a-function-to-get-subreddit-suggestions">
+   Make a function to get subreddit suggestions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#test-our-function-suggest-follows">
    Test our function (suggest follows)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#try-it-youself">
+   Try it youself!
   </a>
  </li>
 </ul>
@@ -1928,124 +1928,117 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="demo-recommend-a-user-to-follow">
-<h1><span class="section-number">11.4.3. </span>Demo: Recommend a User to Follow<a class="headerlink" href="#demo-recommend-a-user-to-follow" title="Permalink to this headline">#</a></h1>
-<p>Now let’s look at a recommendation algorithm for a new person to friend or follow. Our algorithm will be</p>
-<p>For a given user:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="demo-recommend-a-subreddit">
+<h1><span class="section-number">11.4.3. </span>Demo: Recommend a Subreddit<a class="headerlink" href="#demo-recommend-a-subreddit" title="Permalink to this headline">#</a></h1>
+<p>Now let’s look at a recommendation algorithm for a new subreddit to follow. Our algorithm will be</p>
+<p>For a given subreddit:</p>
 <ol class="simple">
-<li><p>Look at the people this user follows</p></li>
-<li><p>For each of those follows, look at who they follow</p></li>
-<li><p>While doing this, keep track of what accounts showed up most</p></li>
-<li><p>Recommend the accounts that showed up the most (the users most followed by people followed by our given user)</p></li>
+<li><p>Make a list of the accounts who made the most recent posts to the subreddit</p></li>
+<li><p>For each of those accounts, look up what subreddits they also follow</p></li>
+<li><p>While doing this, keep track of what subreddits showed up most</p></li>
+<li><p>Recommend the subreddits that showed up the most (the subreddits followed by people posting in a given subreddit)</p></li>
 </ol>
-<section id="normal-tweepy-set-up">
-<h2>Normal Tweepy Set-Up<a class="headerlink" href="#normal-tweepy-set-up" title="Permalink to this headline">#</a></h2>
+<section id="normal-reddit-praw-setup">
+<h2>Normal Reddit PRAW Setup<a class="headerlink" href="#normal-reddit-praw-setup" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make sure tweepy library is installed</span>
-<span class="kn">import</span> <span class="nn">tweepy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">praw</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>(optional) use the fake version of tweepy, so you don’t have to use real twitter developer access passwords</p>
+<p>(optional) use the fake version of Reddit praw, so you don’t have to use real Reddit developer access passwords</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_tweepy/fake_tweepy.ipynb
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_apis/fake_praw.ipynb
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake tweepy is replacing the tweepy library. Fake Tweepy doesn&#x27;t need real passwords, and prevents you from accessing real twitter</strong></div></div>
+<div class="output text_html"><strong style='color:darkred'>Fake praw is replacing the praw library. Fake praw doesn&#x27;t need real passwords, and prevents you from accessing real reddit</strong></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load all your developer access passwords into Python</span>
-<span class="c1"># TODO: Put your twitter account&#39;s special developer access passwords below:</span>
-<span class="n">bearer_token</span> <span class="o">=</span> <span class="s2">&quot;n4tossfgsafs_fake_bearer_token_isa53#$%$&quot;</span>
-<span class="n">consumer_key</span> <span class="o">=</span> <span class="s2">&quot;sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG&quot;</span>
-<span class="n">consumer_secret</span> <span class="o">=</span> <span class="s2">&quot;45adf$T$A_fake_consumer_secret_JESdsg&quot;</span>
-<span class="n">access_token</span> <span class="o">=</span> <span class="s2">&quot;56sd5Ss4tsea_fake_access_token_%YE%hDsdr&quot;</span>
-<span class="n">access_token_secret</span> <span class="o">=</span> <span class="s2">&quot;j^$dr_fake_consumer_key_^A5s#DR5s&quot;</span>
+<span class="c1"># TODO: Put your reddit username, password, and special developer access passwords below:</span>
+<span class="n">username</span><span class="o">=</span><span class="s2">&quot;fake_reddit_username&quot;</span>
+<span class="n">password</span><span class="o">=</span><span class="s2">&quot;sa@#4*fdf_fake_password_$%DSG#%DG&quot;</span>
+<span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;45adf$TW_fake_client_id_JESdsg1O&quot;</span>
+<span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;56sd_fake_client_secret_%Yh%&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Give the tweepy code your developer access passwords so</span>
-<span class="c1"># it can perform twitter actions</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span>
-   <span class="n">bearer_token</span><span class="o">=</span><span class="n">bearer_token</span><span class="p">,</span>
-   <span class="n">consumer_key</span><span class="o">=</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">consumer_secret</span><span class="p">,</span>
-   <span class="n">access_token</span><span class="o">=</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">access_token_secret</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Give the praw code your reddit account info so</span>
+<span class="c1"># it can perform reddit actions</span>
+<span class="n">reddit</span> <span class="o">=</span> <span class="n">praw</span><span class="o">.</span><span class="n">Reddit</span><span class="p">(</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">client_id</span><span class="p">,</span> <span class="n">client_secret</span><span class="o">=</span><span class="n">client_secret</span><span class="p">,</span>
+    <span class="n">user_agent</span><span class="o">=</span><span class="s2">&quot;a custom python script&quot;</span>
 <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to log in to twitter</strong></div></div>
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to collect account info to use on reddit</strong></div></div>
 </div>
 </section>
-<section id="make-a-helper-function-id-from-username">
-<h2>Make a helper function (id_from_username<a class="headerlink" href="#make-a-helper-function-id-from-username" title="Permalink to this headline">#</a></h2>
-<p>Now that we’ve learned functions, we will be putting much of our code in functions.</p>
-<p>So in order to simplify our code later, we will make a function that, when given a username, looks up the user and gets their id number (since we’ll need to use that id later)</p>
+<section id="make-a-function-to-get-subreddit-suggestions">
+<h2>Make a function to get subreddit suggestions<a class="headerlink" href="#make-a-function-to-get-subreddit-suggestions" title="Permalink to this headline">#</a></h2>
+<p>Now we make a function that will generate subreddit suggestions.</p>
+<p>The function takes a subreddit name to start with, and also two optional arguments: <code class="docutils literal notranslate"><span class="pre">num_subreddit_posts</span></code> for how many posts it should look through in the starting subreddit, and <code class="docutils literal notranslate"><span class="pre">num_author_posts</span></code> for how many other posts by the post authors it should look through.</p>
+<p>We first get a list of submissions to the given starting subreddit. Then we create a dictionary counter (<code class="docutils literal notranslate"><span class="pre">possible_suggestion_counts</span></code>).</p>
+<p>For each of the submissions to the starting subreddit, we find the author. Then for the author we look at their recent submissions and see what subreddit that submission was on. We make sure it isn’t an over18 (NSFW) subreddit, and then call it a <code class="docutils literal notranslate"><span class="pre">possible_suggestion</span></code></p>
+<p>We then check and see if our <code class="docutils literal notranslate"><span class="pre">possible_suggestion</span></code> subreddit is already in the <code class="docutils literal notranslate"><span class="pre">possible_suggestion_counts</span></code> dictionary. If it wasn’t already in the dictionary we add it (starting with a count of 1), otherwise add 1 to the count if it was already there.</p>
+<p>After the for loop we have counts for our possible suggestion subreddits. So we sort the list to put the most commonly appearing ones at the top, and we return the results.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">id_from_username</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
-    <span class="n">user_info</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">)</span>
-    <span class="n">user_id</span> <span class="o">=</span> <span class="n">user_info</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">id</span>
-    <span class="k">return</span> <span class="n">user_id</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="make-a-function-to-get-follow-suggestions">
-<h2>Make a function to get follow suggestions<a class="headerlink" href="#make-a-function-to-get-follow-suggestions" title="Permalink to this headline">#</a></h2>
-<p>Now we make a function that will generate follow suggestions.</p>
-<p>The function takes a username (who we are making suggestions for), and a num_followers_to_check, which limits how many follows of our user we check (since Twitter limits how many requests we can make)</p>
-<p>We then get a list of the follows for our user, and we create a dictionary counter (<code class="docutils literal notranslate"><span class="pre">possible_suggestion_counts</span></code>).</p>
-<p>For each of our user’s follows, we get a list of who they follow (the follow-follows). Then for each of the follow_follows, we see if that user is in the <code class="docutils literal notranslate"><span class="pre">possible_suggestion_counts</span></code> dictionary, and add it if it wasn’t there (starting with 1), or add 1 to it if it was already there.</p>
-<p>After the for loop we have counts for our possible suggestions (how often the follow-follows appeared). So we sort the list to put the most common ones at the top, and we return the results.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_follow_suggestions</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">num_followers_to_check</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
-    <span class="c1"># for a given user, I need to user id</span>
-    <span class="n">user_id</span> <span class="o">=</span> <span class="n">id_from_username</span><span class="p">(</span><span class="n">username</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_follow_suggestions</span><span class="p">(</span><span class="n">subreddit_name</span><span class="p">,</span> <span class="n">num_subreddit_posts</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">num_author_posts</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    
+    <span class="c1"># Look up the given subreddit, then find the &quot;hot&quot; list, getting up to 10 submission</span>
+    <span class="n">submissions</span> <span class="o">=</span> <span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span><span class="n">subreddit_name</span><span class="p">)</span><span class="o">.</span><span class="n">hot</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="n">num_subreddit_posts</span><span class="p">)</span>
 
-    <span class="c1"># find the people that user currently follows</span>
-    <span class="n">follow_users</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_users_following</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">user_id</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="n">num_followers_to_check</span><span class="p">)</span>
-
-    <span class="c1"># dictionary to track who my follow follows are, as possible suggestions</span>
+    <span class="c1"># Turn the submission results into a Python List</span>
+    <span class="n">submissions_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">submissions</span><span class="p">)</span>
+    
+    <span class="c1"># dictionary to track subreddits posted to by the authors of those submissions</span>
+    <span class="c1"># which will be possible suggestions</span>
     <span class="c1"># The keys will be the username, and the values will be how often they</span>
-    <span class="c1"># appeared as follow follows</span>
+    <span class="c1"># appeared as post subreddits for authors of the subreddit we are starting with</span>
     <span class="n">possible_suggestion_counts</span> <span class="o">=</span> <span class="p">{}</span>
 
-    <span class="c1"># for each of those people, see who they follow</span>
-    <span class="k">for</span> <span class="n">follow_user</span> <span class="ow">in</span> <span class="n">follow_users</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;looking for followings of user: &quot;</span> <span class="o">+</span> <span class="n">follow_user</span><span class="o">.</span><span class="n">username</span><span class="p">)</span>
-        <span class="n">follow_follow_users</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_users_following</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">follow_user</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="c1"># Go through each of the posts on the subreddit we are starting with</span>
+    <span class="k">for</span> <span class="n">submission</span> <span class="ow">in</span> <span class="n">submissions_list</span><span class="p">:</span>
         
-        <span class="c1"># print out the follow-follows (using some python tricks to make it display nicer)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  the follow-follows are: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">username</span><span class="p">,</span> <span class="n">follow_follow_users</span><span class="o">.</span><span class="n">data</span><span class="p">))))</span>
+        <span class="c1"># display some information about the post we are looking at</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Getting info for submission: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">submission</span><span class="o">.</span><span class="n">title</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  author: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">submission</span><span class="o">.</span><span class="n">author</span><span class="p">))</span>
+        
+        <span class="c1"># Get the latest submissions from the author of that post</span>
+        <span class="n">latest_author_submissions</span> <span class="o">=</span> <span class="n">submission</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">submissions</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="n">num_author_posts</span><span class="p">)</span>
+        
+        <span class="c1"># For each of those posts by that author, we&#39;ll look at what subreddit it was on</span>
+        <span class="k">for</span> <span class="n">author_submission</span> <span class="ow">in</span> <span class="n">latest_author_submissions</span><span class="p">:</span>
 
-        <span class="k">for</span> <span class="n">follow_follow_user</span> <span class="ow">in</span> <span class="n">follow_follow_users</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
-            <span class="n">possible_suggestion</span> <span class="o">=</span> <span class="n">follow_follow_user</span><span class="o">.</span><span class="n">username</span>
-
-            <span class="c1"># If this possible suggestion is not yet in the dictionary,</span>
-            <span class="c1"># add it with a count of one</span>
-            <span class="k">if</span> <span class="n">possible_suggestion</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">possible_suggestion_counts</span><span class="p">:</span>
-                <span class="n">possible_suggestion_counts</span><span class="p">[</span><span class="n">possible_suggestion</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-            <span class="k">else</span><span class="p">:</span> <span class="c1">#otherwise, update the count in the dictionary</span>
-                <span class="n">possible_suggestion_counts</span><span class="p">[</span><span class="n">possible_suggestion</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-
-        <span class="nb">print</span><span class="p">()</span>
+            <span class="c1"># A lot of subreddits are not safe for work, so we&#39;ll skip those...</span>
+            <span class="k">if</span><span class="p">(</span><span class="ow">not</span> <span class="n">author_submission</span><span class="o">.</span><span class="n">subreddit</span><span class="o">.</span><span class="n">over18</span><span class="p">):</span>
+                
+                <span class="c1"># Get the name of the subreddit that post was made in</span>
+                <span class="n">possible_suggestion</span> <span class="o">=</span> <span class="n">author_submission</span><span class="o">.</span><span class="n">subreddit</span><span class="o">.</span><span class="n">display_name</span>
+                
+                <span class="c1"># If this possible suggestion is not yet in the dictionary,</span>
+                <span class="c1"># add it with a count of one</span>
+                <span class="k">if</span> <span class="n">possible_suggestion</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">possible_suggestion_counts</span><span class="p">:</span>
+                    <span class="n">possible_suggestion_counts</span><span class="p">[</span><span class="n">possible_suggestion</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="k">else</span><span class="p">:</span> <span class="c1">#otherwise, update the count in the dictionary</span>
+                    <span class="n">possible_suggestion_counts</span><span class="p">[</span><span class="n">possible_suggestion</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
 
     <span class="c1"># sort the suggestions by who appeared the most</span>
     <span class="n">ordered_suggestions</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">possible_suggestion_counts</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-    <span class="c1"># recommend that I follow the people who those people follow most</span>
+
+    <span class="c1"># return our recommendations for subreddits to follow</span>
     <span class="k">return</span> <span class="n">ordered_suggestions</span>
 </pre></div>
 </div>
@@ -2057,36 +2050,39 @@ title="Print to PDF"
 <p>Now that our function is ready, we can test it out and see who we suggest our “fake_user” should follow (if you skip fake_tweepy and log into real twitter, you can do this for real users)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">suggestions</span> <span class="o">=</span> <span class="n">get_follow_suggestions</span><span class="p">(</span><span class="s2">&quot;fake_user&quot;</span><span class="p">,</span> <span class="n">num_followers_to_check</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">suggestions</span> <span class="o">=</span> <span class="n">get_follow_suggestions</span><span class="p">(</span><span class="s2">&quot;cuteanimals&quot;</span><span class="p">)</span>
 
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;suggested subreddits:&quot;</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">suggestions</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>looking for followings of user: unreal_user
-  the follow-follows are: [&#39;great_user&#39;, &#39;awesome_user&#39;]
-
-looking for followings of user: imaginary_user
-  the follow-follows are: [&#39;ok_user&#39;, &#39;awesome_user&#39;]
-
-looking for followings of user: false_user
-  the follow-follows are: [&#39;great_user&#39;, &#39;awesome_user&#39;, &#39;mediocre_user&#39;, &#39;another_user&#39;]
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to select the subreddit: cuteanimals</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Getting info for submission: Look at my cute dog!
+  author: fake_user
+Getting info for submission: A baby lizard!
+  author: pretend_user
+Getting info for submission: The cutest bird ever!
+  author: imaginary_user
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;awesome_user&#39;, 3),
- (&#39;great_user&#39;, 2),
- (&#39;ok_user&#39;, 1),
- (&#39;mediocre_user&#39;, 1),
- (&#39;another_user&#39;, 1)]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;suggested subreddits:&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;science&#39;, 3), (&#39;politics&#39;, 2), (&#39;cats&#39;, 1), (&#39;birds&#39;, 1)]
 </pre></div>
 </div>
 </div>
 </div>
-<p>If you skip the fake_tweepy step and run this on real Twitter, you might see some issues with the suggestions that we haven’t accounted for, such as:</p>
+</section>
+<section id="try-it-youself">
+<h2>Try it youself!<a class="headerlink" href="#try-it-youself" title="Permalink to this headline">#</a></h2>
+<p>If you skip the fake_praw step and run this on real Reddit, you might notice:</p>
 <ul class="simple">
-<li><p>it might suggest the user follow themself, or someone they already follow</p></li>
-<li><p>the follow lists can be very long and you might not be getting the whole list in the <code class="docutils literal notranslate"><span class="pre">client.get_users_following()</span></code> function call (you could use <a class="reference external" href="https://docs.tweepy.org/en/stable/v2_pagination.html">pagination</a> to get more)</p></li>
+<li><p>The top suggestion is often the subreddit you are already looking at</p></li>
+<li><p>If the same author posted multiple times in our starting subreddit, we count all the places they posted again (double counting)</p></li>
+<li><p>There might still be some offensive subreddits even after we tried to filter out specifically labeled NSFW ones</p></li>
+<li><p>the suggestion lists can be very long, even if you are only looking at the default num_subreddit_posts=10 and num_author_posts=10</p></li>
 </ul>
 <p>We could of course add more code to deal with those issues, but hopefully you can at least get the idea of how this recommendation algorithm works :)</p>
 </section>

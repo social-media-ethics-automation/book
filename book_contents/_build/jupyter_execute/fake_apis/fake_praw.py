@@ -577,7 +577,27 @@ def cuteanimals_hot(limit=10):
                 comment_karma= 50,
                 has_verified_email = True,
                 is_mod = False,
-                is_gold = False                
+                is_gold = False,
+                submissions = SimpleNamespace(
+                       new = lambda limit=10: [
+                           SimpleNamespace(
+                                id = "045k353",
+                                title = "This is my cat",
+                                subreddit = SimpleNamespace(
+                                    over18 = False,
+                                    display_name = "cats"
+                                )
+                           ),
+                           SimpleNamespace(
+                                id = "045k353",
+                                title = "Science says cats are cool",
+                                subreddit = SimpleNamespace(
+                                    over18 = False,
+                                    display_name = "science"
+                                )
+                           )
+                       ]
+                )
             ),
             edited = False,
             created_utc = 1673327625,
@@ -596,7 +616,27 @@ def cuteanimals_hot(limit=10):
                 comment_karma= 15,
                 has_verified_email = True,
                 is_mod = True,
-                is_gold = False    
+                is_gold = False,
+                submissions = SimpleNamespace(
+                   new = lambda limit=10: [
+                       SimpleNamespace(
+                            id = "045k353",
+                            title = "reptiles are the best",
+                            subreddit = SimpleNamespace(
+                                over18 = False,
+                                display_name = "science"
+                            )
+                       ),
+                       SimpleNamespace(
+                            id = "045k353",
+                            title = "Don't outlaw reptiles",
+                            subreddit = SimpleNamespace(
+                                over18 = False,
+                                display_name = "politics"
+                            )
+                       )
+                   ]
+                )
             ),
             edited = True,
             created_utc = 1673317625,
@@ -615,7 +655,35 @@ def cuteanimals_hot(limit=10):
                 comment_karma= 7,
                 has_verified_email = True,
                 is_mod = True,
-                is_gold = True    
+                is_gold = True,
+                submissions = SimpleNamespace(
+                   new = lambda limit=10: [
+                       SimpleNamespace(
+                            id = "045k353",
+                            title = "Yay, look at my bird",
+                            subreddit = SimpleNamespace(
+                                over18 = False,
+                                display_name = "birds"
+                            )
+                       ),
+                       SimpleNamespace(
+                            id = "045k353",
+                            title = "Outlaw outdoor cats cause they kill birds",
+                            subreddit = SimpleNamespace(
+                                over18 = False,
+                                display_name = "politics"
+                            )
+                       ),
+                       SimpleNamespace(
+                            id = "045k353",
+                            title = "Science says cats are bad cause they kill birds",
+                            subreddit = SimpleNamespace(
+                                over18 = False,
+                                display_name = "science"
+                            )
+                       )
+                   ]
+                )
             ),
             edited = False,
             created_utc = 1673307625,

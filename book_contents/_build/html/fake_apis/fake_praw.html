@@ -930,7 +930,7 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../ch11_recommendations/04_recommend_a_friend/03_demo_recommend_friend.html">
-       11.4.3. Demo: Recommend a User to Follow
+       11.4.3. Demo: Recommend a Subreddit
       </a>
      </li>
     </ul>
@@ -2445,7 +2445,27 @@ title="Print to PDF"
                 <span class="n">comment_karma</span><span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
                 <span class="n">has_verified_email</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
                 <span class="n">is_mod</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-                <span class="n">is_gold</span> <span class="o">=</span> <span class="kc">False</span>                
+                <span class="n">is_gold</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                <span class="n">submissions</span> <span class="o">=</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+                       <span class="n">new</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">:</span> <span class="p">[</span>
+                           <span class="n">SimpleNamespace</span><span class="p">(</span>
+                                <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;045k353&quot;</span><span class="p">,</span>
+                                <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;This is my cat&quot;</span><span class="p">,</span>
+                                <span class="n">subreddit</span> <span class="o">=</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+                                    <span class="n">over18</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                                    <span class="n">display_name</span> <span class="o">=</span> <span class="s2">&quot;cats&quot;</span>
+                                <span class="p">)</span>
+                           <span class="p">),</span>
+                           <span class="n">SimpleNamespace</span><span class="p">(</span>
+                                <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;045k353&quot;</span><span class="p">,</span>
+                                <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Science says cats are cool&quot;</span><span class="p">,</span>
+                                <span class="n">subreddit</span> <span class="o">=</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+                                    <span class="n">over18</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                                    <span class="n">display_name</span> <span class="o">=</span> <span class="s2">&quot;science&quot;</span>
+                                <span class="p">)</span>
+                           <span class="p">)</span>
+                       <span class="p">]</span>
+                <span class="p">)</span>
             <span class="p">),</span>
             <span class="n">edited</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
             <span class="n">created_utc</span> <span class="o">=</span> <span class="mi">1673327625</span><span class="p">,</span>
@@ -2464,7 +2484,27 @@ title="Print to PDF"
                 <span class="n">comment_karma</span><span class="o">=</span> <span class="mi">15</span><span class="p">,</span>
                 <span class="n">has_verified_email</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
                 <span class="n">is_mod</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-                <span class="n">is_gold</span> <span class="o">=</span> <span class="kc">False</span>    
+                <span class="n">is_gold</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                <span class="n">submissions</span> <span class="o">=</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+                   <span class="n">new</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">:</span> <span class="p">[</span>
+                       <span class="n">SimpleNamespace</span><span class="p">(</span>
+                            <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;045k353&quot;</span><span class="p">,</span>
+                            <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;reptiles are the best&quot;</span><span class="p">,</span>
+                            <span class="n">subreddit</span> <span class="o">=</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+                                <span class="n">over18</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                                <span class="n">display_name</span> <span class="o">=</span> <span class="s2">&quot;science&quot;</span>
+                            <span class="p">)</span>
+                       <span class="p">),</span>
+                       <span class="n">SimpleNamespace</span><span class="p">(</span>
+                            <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;045k353&quot;</span><span class="p">,</span>
+                            <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Don&#39;t outlaw reptiles&quot;</span><span class="p">,</span>
+                            <span class="n">subreddit</span> <span class="o">=</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+                                <span class="n">over18</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                                <span class="n">display_name</span> <span class="o">=</span> <span class="s2">&quot;politics&quot;</span>
+                            <span class="p">)</span>
+                       <span class="p">)</span>
+                   <span class="p">]</span>
+                <span class="p">)</span>
             <span class="p">),</span>
             <span class="n">edited</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
             <span class="n">created_utc</span> <span class="o">=</span> <span class="mi">1673317625</span><span class="p">,</span>
@@ -2483,7 +2523,35 @@ title="Print to PDF"
                 <span class="n">comment_karma</span><span class="o">=</span> <span class="mi">7</span><span class="p">,</span>
                 <span class="n">has_verified_email</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
                 <span class="n">is_mod</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-                <span class="n">is_gold</span> <span class="o">=</span> <span class="kc">True</span>    
+                <span class="n">is_gold</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="n">submissions</span> <span class="o">=</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+                   <span class="n">new</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">:</span> <span class="p">[</span>
+                       <span class="n">SimpleNamespace</span><span class="p">(</span>
+                            <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;045k353&quot;</span><span class="p">,</span>
+                            <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Yay, look at my bird&quot;</span><span class="p">,</span>
+                            <span class="n">subreddit</span> <span class="o">=</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+                                <span class="n">over18</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                                <span class="n">display_name</span> <span class="o">=</span> <span class="s2">&quot;birds&quot;</span>
+                            <span class="p">)</span>
+                       <span class="p">),</span>
+                       <span class="n">SimpleNamespace</span><span class="p">(</span>
+                            <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;045k353&quot;</span><span class="p">,</span>
+                            <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Outlaw outdoor cats cause they kill birds&quot;</span><span class="p">,</span>
+                            <span class="n">subreddit</span> <span class="o">=</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+                                <span class="n">over18</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                                <span class="n">display_name</span> <span class="o">=</span> <span class="s2">&quot;politics&quot;</span>
+                            <span class="p">)</span>
+                       <span class="p">),</span>
+                       <span class="n">SimpleNamespace</span><span class="p">(</span>
+                            <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;045k353&quot;</span><span class="p">,</span>
+                            <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Science says cats are bad cause they kill birds&quot;</span><span class="p">,</span>
+                            <span class="n">subreddit</span> <span class="o">=</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+                                <span class="n">over18</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                                <span class="n">display_name</span> <span class="o">=</span> <span class="s2">&quot;science&quot;</span>
+                            <span class="p">)</span>
+                       <span class="p">)</span>
+                   <span class="p">]</span>
+                <span class="p">)</span>
             <span class="p">),</span>
             <span class="n">edited</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
             <span class="n">created_utc</span> <span class="o">=</span> <span class="mi">1673307625</span><span class="p">,</span>
