@@ -157,11 +157,11 @@ parts:
       - file: ch11_recommendations/01_recommendations
       - file: ch11_recommendations/02_individual_concerns
       - file: ch11_recommendations/03_societal_concerns
-      - file: ch11_recommendations/04_recommend_a_friend/00_intro
+      - file: ch11_recommendations/04_recommend_bot/00_intro
         sections:
-          - file: ch11_recommendations/04_recommend_a_friend/01_demo_dictionary_counters
-          - file: ch11_recommendations/04_recommend_a_friend/02_practice_dictionary_counters
-          - file: ch11_recommendations/04_recommend_a_friend/03_demo_recommend_friend
+          - file: ch11_recommendations/04_recommend_bot/01_demo_dictionary_counters
+          - file: ch11_recommendations/04_recommend_bot/02_practice_dictionary_counters
+          - file: ch11_recommendations/04_recommend_bot/03_demo_recommend_subreddit
       - file: ch11_recommendations/05_design_recommend
       - file: ch11_recommendations/06_learn_more
     - file: ch12_virality/00_virality

@@ -8,6 +8,8 @@ Before the internet, there were many activities that we would probably now call 
 - Hazing: Causing difficulty or suffering for people who are new to a group
 - Satire: (e.g., [A Modest Proposal](https://en.wikipedia.org/wiki/A_Modest_Proposal)) which takes a known form, but does something unexpected or disruptive with it.
 
+% TODO: Add spaghetti trees: https://www.youtube.com/watch?v=tVo_wkxH9dU
+
 Additionally the enjoyment at causing others pain or distress ("lulz") has also been part of the human experience for millennia:
 > “Boys throw stones at frogs in fun, but the frogs do not die in fun, but in earnest.”
 >

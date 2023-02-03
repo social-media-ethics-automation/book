@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="10.4. Activity: Accessibility on Social Media" href="04_accessibility_on_social_media.html" />
+    <link rel="next" title="10.4. Alt-text on Social Media" href="04_alt_text/00_intro.html" />
     <link rel="prev" title="10.2. Accessible Design" href="02_accessible_design.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -861,14 +861,9 @@ const thebe_selector_output = ".output, .cell_output"
      10.3. Why It Matters Who Designs
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="04_accessibility_on_social_media.html">
-     10.4. Activity: Accessibility on Social Media
-    </a>
-   </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="05_alt_text/00_intro.html">
-     10.5. Alt-text on Twitter
+    <a class="reference internal" href="04_alt_text/00_intro.html">
+     10.4. Alt-text on Social Media
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
     <label for="toctree-checkbox-22">
@@ -877,21 +872,16 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="05_alt_text/01_alt_text.html">
-       10.5.1. Alt-text
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="05_alt_text/02_extra_data_from_twitter.html">
-       10.5.2. Demo: Extra Data From Twitter
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="05_alt_text/03_alt_text_from_twitter.html">
-       10.5.3. Demo: Alt-text From Twitter
+      <a class="reference internal" href="04_alt_text/01_alt_text.html">
+       10.4.1. Alt-text
       </a>
      </li>
     </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="05_accessibility_on_social_media.html">
+     10.5. Design Analysis: Accessibility
+    </a>
    </li>
   </ul>
  </li>
@@ -1594,6 +1584,16 @@ const thebe_selector_output = ".output, .cell_output"
      Demo: Sentiment Analysis on Twitter
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/alternate_apis/ch10_05_02_extra_data_from_twitter.html">
+     Ch10.5.2: Demo: Extra Data From Twitter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/alternate_apis/ch10_05_03_alt_text_from_twitter.html">
+     Ch10.5.2: Demo: Alt-text From Twitter
+    </a>
+   </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../appendix/alternate_apis/solutions/00_solutions.html">
      Practice Solutions (Twitter)
@@ -1840,6 +1840,11 @@ title="Print to PDF"
    10.3.2. Who gets to be designers
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#design-justice">
+   10.3.3. Design Justice
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -1869,6 +1874,11 @@ title="Print to PDF"
    10.3.2. Who gets to be designers
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#design-justice">
+   10.3.3. Design Justice
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -1886,12 +1896,17 @@ title="Print to PDF"
 <p>When designers and programmers don’t think to take into account different groups of people, then they might make designs that don’t work for everyone. This problem often shows up for how designs do or do not work for people with disabilities. But it also shows up in other areas as well.</p>
 <p>The following tweet has a video of a soap dispenser that apparently was only designed to work for people with light-colored skin.<a class="footnote-reference brackets" href="#soap-video" id="id1">1</a></p>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">If you have ever had a problem grasping the importance of diversity in tech and its impact on society, watch this video <a href="https://t.co/ZJ1Je1C4NW">pic.twitter.com/ZJ1Je1C4NW</a></p>&mdash; Chukwuemeka Afigbo (@nke_ise) <a href="https://twitter.com/nke_ise/status/897756900753891328?ref_src=twsrc%5Etfw">August 16, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<br>
 <p>Similarly, <a class="reference external" href="https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm">Twitter looked into bias in how their automatic image cropping algorithm worked</a>.</p>
 </section>
 <section id="who-gets-to-be-designers">
 <h2><span class="section-number">10.3.2. </span>Who gets to be designers<a class="headerlink" href="#who-gets-to-be-designers" title="Permalink to this headline">#</a></h2>
 <p>In how we’ve been talking about accessible design, the way we’ve been phrasing things has implied a separation between designers who make things, and the disabled people who things are made for. And unfortunately, as researcher <a class="reference external" href="https://www.bennettc.com/">Dr. Cynthia Bennett</a> points out, disabled people are often excluded from designing for themselves, or even when they do participate in the design, they aren’t considered to be the “real designers.” You can see Dr. Bennet’s research talk on this in the following Youtube Video:</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2dG_919Nyeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+<section id="design-justice">
+<h2><span class="section-number">10.3.3. </span>Design Justice<a class="headerlink" href="#design-justice" title="Permalink to this headline">#</a></h2>
+<p>We mentioned <a class="reference external" href="https://design-justice.pubpub.org/">Design Justice</a> earlier, but it is worth reiterating again here that design justice includes considering which groups get to be part of the design process itself.</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="soap-video"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
@@ -1935,10 +1950,10 @@ title="Print to PDF"
             <p class="prev-next-title"><span class="section-number">10.2. </span>Accessible Design</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="04_accessibility_on_social_media.html" title="next page">
+    <a class='right-next' id="next-link" href="04_alt_text/00_intro.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">10.4. </span>Activity: Accessibility on Social Media</p>
+        <p class="prev-next-title"><span class="section-number">10.4. </span>Alt-text on Social Media</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

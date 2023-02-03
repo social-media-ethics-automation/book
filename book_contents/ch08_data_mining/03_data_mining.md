@@ -2,6 +2,8 @@
 
 Data mining is the process of taking a set of data and trying to learn new things from it.
 
+% TODO: Add EEAAO IRS clip
+
 For example, social media data about who you are friends with might be [used to infer your sexual orientation](https://www.vice.com/en/article/gvydky/your-friends-online-connections-can-reveal-your-sexual-orientation). Social media data might also be used to infer people's:
 - Race
 - Political leanings

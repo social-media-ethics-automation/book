@@ -861,14 +861,9 @@ const thebe_selector_output = ".output, .cell_output"
      10.3. Why It Matters Who Designs
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="04_accessibility_on_social_media.html">
-     10.4. Activity: Accessibility on Social Media
-    </a>
-   </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="05_alt_text/00_intro.html">
-     10.5. Alt-text on Twitter
+    <a class="reference internal" href="04_alt_text/00_intro.html">
+     10.4. Alt-text on Social Media
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
     <label for="toctree-checkbox-22">
@@ -877,21 +872,16 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="05_alt_text/01_alt_text.html">
-       10.5.1. Alt-text
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="05_alt_text/02_extra_data_from_twitter.html">
-       10.5.2. Demo: Extra Data From Twitter
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="05_alt_text/03_alt_text_from_twitter.html">
-       10.5.3. Demo: Alt-text From Twitter
+      <a class="reference internal" href="04_alt_text/01_alt_text.html">
+       10.4.1. Alt-text
       </a>
      </li>
     </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="05_accessibility_on_social_media.html">
+     10.5. Design Analysis: Accessibility
+    </a>
    </li>
   </ul>
  </li>
@@ -1594,6 +1584,16 @@ const thebe_selector_output = ".output, .cell_output"
      Demo: Sentiment Analysis on Twitter
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/alternate_apis/ch10_05_02_extra_data_from_twitter.html">
+     Ch10.5.2: Demo: Extra Data From Twitter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/alternate_apis/ch10_05_03_alt_text_from_twitter.html">
+     Ch10.5.2: Demo: Alt-text From Twitter
+    </a>
+   </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../appendix/alternate_apis/solutions/00_solutions.html">
      Practice Solutions (Twitter)
@@ -1841,13 +1841,14 @@ title="Print to PDF"
 <li><p>If tall grocery store shelves that were made with the assumption that people would be able to reach them, then people who are short, or who can’t lift their arms up, or who can’t stand up, all would have a disability in that situation.</p></li>
 <li><p>If an airplane seat that was designed with little leg room assuming people’s legs wouldn’t be too long, then someone who is very tall, or who has difficulty bending their legs would have a disability in that situation.</p></li>
 </ul>
-<p>Which abilities are expected of people, and therefore what things are considered disabilities, are socially defined. Different societies and groups of people make different assumptions about what people can do, and so what is considered a disability in one group, might just be “normal” in another.</p>
+<p>Which abilities are expected of people, and therefore what things are considered disabilities, are <a class="reference external" href="https://en.wikipedia.org/wiki/Social_model_of_disability#Social_construction_of_disability">socially defined</a>. Different societies and groups of people make different assumptions about what people can do, and so what is considered a disability in one group, might just be “normal” in another.</p>
 <p>There are many things we might not be able to do that won’t be considered disabilities because our social groups don’t expect us to be able to do them. For example, none of us have wings that we can fly with, but that is not considered a disability, because our social groups didn’t assume we would be able to. Or, for a more practical example, let’s look at color vision:</p>
 <p>Most humans are trichromats, meaning they can see three base colors (red, green, and blue), along with all combinations of those colors. Human societies often assume that people will be trichromats. So people who can’t see as many colors are considered to be <a class="reference external" href="https://en.wikipedia.org/wiki/Color_blindness">color blind</a>, a disability. But there are also a <a class="reference external" href="https://www.bbc.com/future/article/20140905-the-women-with-super-human-vision">small number of people who are tetrachromats</a>, and can see four base colors (trying to name these base colors in trichromat terms is not straightforward) and all combinations of those colors. In comparison to tetrachromats, trichromats (the majority of people), lack an ability to see some colors. But our society doesn’t build things for tetrachromats, so their extra ability to see color doesn’t help them much, and trichromats’ relative reduction in seeing color doesn’t cause them difficulty, so being a trichromat isn’t considered to be a disability.</p>
-<p>Some disabilities are <strong>visible disabilities</strong> that other people can notice by observing the disabled person (e.g., wearing glasses is an indication of a visual disability, a missing limb might be noticeable). Other disabilities are <strong>invisible disabilities</strong> that other people cannot notice by observing the disabled person (e.g., <a class="reference external" href="https://www.mayoclinic.org/diseases-conditions/chronic-fatigue-syndrome/symptoms-causes/syc-20360490">chronic fatigue syndrome</a>, contact lenses for a visual disability, or some prosthetics for a missing limb). Sometimes people with invisible disabilities get unfairly accused of “faking” or “making up” their disability.</p>
+<p>Some disabilities are <strong>visible disabilities</strong> that other people can notice by observing the disabled person (e.g., wearing glasses is an indication of a visual disability, a missing limb might be noticeable). Other disabilities are <strong>invisible disabilities</strong> that other people cannot notice by observing the disabled person (e.g., <a class="reference external" href="https://www.mayoclinic.org/diseases-conditions/chronic-fatigue-syndrome/symptoms-causes/syc-20360490">chronic fatigue syndrome</a>, contact lenses for a visual disability, or a prosthetics for a missing limb covered by clothing). Sometimes people with invisible disabilities get unfairly accused of “faking” or “making up” their disability.</p>
+<p>Disabilities can be accepted as socially normal, like is sometimes the case for wearing glasses or contacts, or it can be <a class="reference external" href="https://en.wikipedia.org/wiki/Ableism">stigmatized</a> as socially unacceptable, inconvenient, or blamed on the disabled person.</p>
 <p>Some people (like many with chronic pain) would welcome a cure that got rid of their disability. Others (like <a class="reference external" href="https://www.autism360.com/news/autism-is-not-a-disability/">many autistic people</a>), are insulted by the suggestion that there is something wrong with them that needs to be “cured,” and think the only reason autism is considered a “disability” at all is because society doesn’t make reasonable accommodations for them the way it does for neurotypical people.</p>
-<p>Many of the disabilities we mentioned above were <strong>permanent disabilities</strong>, that is, disabilities that won’t go away. But disabilities can also be <strong>temporary disabilities</strong>, like a broken leg in a cast, which will eventually get better. Disabilities can even be <strong>situational disabilities</strong>, like the loss of fine motor skills when wearing thick gloves in the cold, or trying to watch a video on your phone in class with the sound off, or trying to type on a computer while holding a baby.</p>
-<p>As you look through all these types of disabilities, you might discover ways you have experienced disability in your life. Though please keep in mind that different disabilities can be very diffirent, and everyone’s experience with their own disability can vary. So having some experience with disability does not make someone an expert in any other experience of disability.</p>
+<p>Many of the disabilities we mentioned above were <strong>permanent disabilities</strong>, that is, disabilities that won’t go away. But disabilities can also be <strong>temporary disabilities</strong>, like a broken leg in a cast, which will eventually get better. Disabilities can also vary over time (e.g., “today is a bad day for my back pain”). Disabilities can even be <strong>situational disabilities</strong>, like the loss of fine motor skills when wearing thick gloves in the cold, or trying to watch a video on your phone in class with the sound off, or trying to type on a computer while holding a baby.</p>
+<p>As you look through all these types of disabilities, you might discover ways you have experienced disability in your life. Though please keep in mind that different disabilities can be very different, and everyone’s experience with their own disability can vary. So having some experience with disability does not make someone an expert in any other experience of disability.</p>
 <p>As for our experience with disability, Kyle has been diagnosed with <a class="reference external" href="https://www.mayoclinic.org/diseases-conditions/generalized-anxiety-disorder/symptoms-causes/syc-20360803">generalized anxiety disorder</a> and Susan has been diagnosed with <a class="reference external" href="https://www.mayoclinic.org/diseases-conditions/depression/symptoms-causes/syc-20356007">depression</a>. Kyle and Susan also both have:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Myopia">near sightedness</a>: our eyes cannot focus on things far away (unless we use corrective lenses, like glasses or contacts)</p></li>
