@@ -901,18 +901,23 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="02_individual_concerns.html">
-     11.2. Individual Concerns with Recommendation Algorithms
+    <a class="reference internal" href="02_ethical_analysis_recommendations.html">
+     11.2. Ethical Analysis of Recommendation Algorithms
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="03_societal_concerns.html">
-     11.3. Societal Concerns with Recommendation Algorithms
+    <a class="reference internal" href="03_individual_concerns.html">
+     11.3. Individual Concerns with Recommendation Algorithms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_societal_concerns.html">
+     11.4. Societal Concerns with Recommendation Algorithms
     </a>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="04_recommend_a_friend/00_intro.html">
-     11.4. Recommend a Friend
+    <a class="reference internal" href="05_recommend_bot/00_intro.html">
+     11.5. Recommendation Bot
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
     <label for="toctree-checkbox-24">
@@ -921,30 +926,30 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="04_recommend_a_friend/01_demo_dictionary_counters.html">
-       11.4.1. Demo: Dictionary Counters
+      <a class="reference internal" href="05_recommend_bot/01_demo_dictionary_counters.html">
+       11.5.1. Demo: Dictionary Counters
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="04_recommend_a_friend/02_practice_dictionary_counters.html">
-       11.4.2. Practice: Dictionary Counters
+      <a class="reference internal" href="05_recommend_bot/02_practice_dictionary_counters.html">
+       11.5.2. Practice: Dictionary Counters
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="04_recommend_a_friend/03_demo_recommend_friend.html">
-       11.4.3. Demo: Recommend a User to Follow
+      <a class="reference internal" href="05_recommend_bot/03_demo_recommend_subreddit.html">
+       11.5.3. Demo: Recommend a Subreddit
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="05_design_recommend.html">
-     11.5. Design Activity
+    <a class="reference internal" href="06_design_recommend.html">
+     11.6. Design Activity
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="06_learn_more.html">
-     11.6. Learn More
+    <a class="reference internal" href="07_learn_more.html">
+     11.7. Learn More
     </a>
    </li>
   </ul>
@@ -1594,6 +1599,11 @@ const thebe_selector_output = ".output, .cell_output"
      Ch10.5.2: Demo: Alt-text From Twitter
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/alternate_apis/ch11_04_03_demo_recommend_friend.html">
+     Ch 11.4.3: Demo: Recommend a User to Follow
+    </a>
+   </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../appendix/alternate_apis/solutions/00_solutions.html">
      Practice Solutions (Twitter)
@@ -1834,20 +1844,21 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="recommendation-algorithms">
 <h1><span class="section-number">11. </span>Recommendation Algorithms<a class="headerlink" href="#recommendation-algorithms" title="Permalink to this headline">#</a></h1>
-<p>One of the key components of what makes content go viral is the recommendation algorithms used by social media platforms, so let’s look at those in more detail.</p>
+<p>Now let’s look at how social media platforms decide what content to show you or recommend for you: recommendation algorithms.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="01_recommendations.html">11.1. What Recommendation Algorithms Do</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_individual_concerns.html">11.2. Individual Concerns with Recommendation Algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_societal_concerns.html">11.3. Societal Concerns with Recommendation Algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04_recommend_a_friend/00_intro.html">11.4. Recommend a Friend</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="04_recommend_a_friend/01_demo_dictionary_counters.html">11.4.1. Demo: Dictionary Counters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="04_recommend_a_friend/02_practice_dictionary_counters.html">11.4.2. Practice: Dictionary Counters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="04_recommend_a_friend/03_demo_recommend_friend.html">11.4.3. Demo: Recommend a User to Follow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_ethical_analysis_recommendations.html">11.2. Ethical Analysis of Recommendation Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_individual_concerns.html">11.3. Individual Concerns with Recommendation Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_societal_concerns.html">11.4. Societal Concerns with Recommendation Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_recommend_bot/00_intro.html">11.5. Recommendation Bot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="05_recommend_bot/01_demo_dictionary_counters.html">11.5.1. Demo: Dictionary Counters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_recommend_bot/02_practice_dictionary_counters.html">11.5.2. Practice: Dictionary Counters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_recommend_bot/03_demo_recommend_subreddit.html">11.5.3. Demo: Recommend a Subreddit</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="05_design_recommend.html">11.5. Design Activity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="06_learn_more.html">11.6. Learn More</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_design_recommend.html">11.6. Design Activity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_learn_more.html">11.7. Learn More</a></li>
 </ul>
 </div>
 </section>

@@ -18,8 +18,8 @@ Now, how these algorithms precisely work is hard to know, because social media s
 - They don't want users to see the algorithm and then be able to complain about specific details
 - They don't want malicious users to see the algorithm and figure out how to best make their content go viral
 
-% TODO: Follow up on virality. The recommendation algorithms (and general design of the site), provide an environment in which memes evolve and adapt and go viral. Changing these rules changes what content is best adapted. This can make for big consequences
 
 ## Reflections
 - What experiences do you have of social media sites making particularly good recommendations for you?
 - What experiences do you have of social media sites making particularly bad recommendations for you?
+
