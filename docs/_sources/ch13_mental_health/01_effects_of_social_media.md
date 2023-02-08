@@ -33,7 +33,7 @@ Some people view internet-based social media (and other online activities) as in
 
 While taking a break from parts or all of social media can be good for someone's mental health (e.g., doomscrolling is making them feel more anxious, or they are currently getting harassed online), viewing internet-based social media as inherently toxic and trying to return to an idyllic time from before the Internet is not realistic or honest view of the matter. 
 
-In her essay "[The Great Offline](https://reallifemag.com/the-great-offline/)," Lauren Collee argues that this is just a repeat of earlier views of "wilderness." As white Americans were colonizing the American continent, they began idealized "wilderness" as being uninhabited land (either ignoring the Indigenous people who already lived there, or kicking them out).
+In her essay "[The Great Offline](https://reallifemag.com/the-great-offline/)," Lauren Collee argues that this is just a repeat of earlier views of city-living and the "wilderness." As white Americans were colonizing the American continent, they began idealized "wilderness" as being uninhabited land (either ignoring the Indigenous people who already lived there, or kicking them out).
 > In the 19th century, as wilderness tourism was taking off as an industry, natural landscapes were figured as an antidote to the social pressures of urban living, offering truth in place of artifice, interiority in place of exteriority, solitude in place of small talk. 
 
 Similarly, advocates for digital detox build an idealized "offline" separate from the complications of modern life:
