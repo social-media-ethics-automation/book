@@ -38,7 +38,7 @@ Additionally, White Americans' use of images and gifs of Black people reacting a
 ## Citation and giving credit
 
 So given the community activities on social media of copying, remixing, cultural appropriate, and cultural exchange:
-- How do you think attribution should work when copying and reusing content on social media?
+- How do you think attribution should work when copying and reusing content on social media (like if you post a meme on social media)?
   - When is it ok to not cite sources for content?
   - When should sources be cited, and how should they be cited?
 - How can you participate in cultural exchange without harmful cultural appropriation?
@@ -51,3 +51,5 @@ So given the community activities on social media of copying, remixing, cultural
 % 'Tandoh’s inviting generosity also extends to how she showcases the cooks and kitchens that have made her the cook she is, too. Citation in cookbook publishing has long been a thorny issue (ask James Beard); today, the internet, Instagram, and TikTok have deepened the mythic import of the recipe creator, turning attribution into a parasocial pursuit more than a sociocultural one. Who made the recipe is more important than where it came from.
 
 % 'Tandoh pushes back on this by referring to inspirations in headnotes, providing reading lists for each chapter, and noting when recipes belong to other published authors, like Rukmini Iyer of the bestselling Roasting Tin series. Even the easy-read version — which visualizes every single step and item required for 10 simple recipes through photography — suggests other charity cookbooks to try if this one doesn’t work for the cook using it. (Publisher Serpent’s Tail, with whom Tandoh also worked on Eat Up!, has distributed this version of the book to community centers and kitchens across the U.K.)'
+
+% This is fine meme reflections https://kcggggg.tumblr.com/post/706263607432921088/we-passed-it-a-couple-of-days-ago-but-it-has-been

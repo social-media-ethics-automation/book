@@ -1,6 +1,6 @@
 # Recommendation Algorithms
 
-One of the key components of what makes content go viral is the recommendation algorithms used by social media platforms, so let's look at those in more detail.
+Now let's look at how social media platforms decide what content to show you or recommend for you: recommendation algorithms.
 
 ```{tableofcontents}
 ```
