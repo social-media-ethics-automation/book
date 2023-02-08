@@ -173,8 +173,9 @@ parts:
       - file: ch12_virality/04_viral_examples
       - file: ch12_virality/05_ethics_of_copying
       - file: ch12_virality/06_going_viral
-      - file: ch12_virality/07_reflections
-      - file: ch12_virality/08_learn_more
+      - file: ch12_virality/07_activity_virality_values
+      - file: ch12_virality/08_reflections
+      - file: ch12_virality/09_learn_more
     - file: ch13_mental_health/00_mental_health
       sections:
       - file: ch13_mental_health/01_effects_of_social_media

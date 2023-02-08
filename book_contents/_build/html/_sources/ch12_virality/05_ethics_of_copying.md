@@ -1,5 +1,7 @@
 # Ethics of copying
 
+Elon Musk, who purchased Twitter in 2022 has long been known to copy others' images and jokes and post them as his own without attribution (often specifically cropping images to hide any attribution) ([source](https://www.nytimes.com/2021/05/07/style/elon-musk-memes.html), [source](https://www.sfgate.com/tech/article/2021-04-elon-musk-twitter-covid-19-meme-tesla-ceo-16118139.php), [source](https://www.forbes.com/sites/mattnovak/2023/02/05/18-jokes-elon-musk-stole-from-his-fans-on-twitter)). So let's consider ethical issues and complications around how content is copied on the internet.
+
 ## Remixing
 
 Much of the internet has developed a culture of copying and modifying other content, and not necessarily giving attribution to where it came from.
@@ -12,11 +14,11 @@ width: 400px
 name: steal_meme_4_fig
 alt: "A image of Keanu Reeves as Jesus with laughing emoji. Above it is text that says: \"Me, blessing your meme with a \"HaHa\" before I steal it.\""
 ---
-A meme about stealing memes. (It is unclear how we should cite this)
+A meme about stealing memes. (It is unclear how we should cite this).
 ```
 
 The meme above is composed of many pieces copied from elsewhere, and modified and put together. Here are the pieces we could identify:
-  - A painting: [SACRED HEART OF JESUS by Dona Gelsinger](https://www.glowdecor.com/products/sacred-heart-of-jesus-canvas-wall-art) (which itself is copying the form of many paintings before of the [sacred heart](https://en.wikipedia.org/wiki/Sacred_Heart))
+  - A painting: [SACRED HEART OF JESUS by Dona Gelsinger](https://www.glowdecor.com/products/sacred-heart-of-jesus-canvas-wall-art) (which itself is copying its form from centuries of paintings of the [sacred heart](https://en.wikipedia.org/wiki/Sacred_Heart))
   - The background was switched out to make a yellow disk [halo](https://en.wikipedia.org/wiki/Halo_(religious_iconography)) behind the head of Jesus
   - Jesus face is replaces with Keanu Reeves' bearded face (perhaps from the [spongebob movie](https://youtu.be/CJJYewh4Nco?t=57))
   - A laughing [emoticon](https://en.wikipedia.org/wiki/List_of_emoticons#Western) is placed in Jesus' hand.
@@ -32,13 +34,35 @@ In an anthropological introduction to YouTube (from 2008), [Michael Wesch observ
 ## Cultural appropriation
 The online community activity of copying and remixing can be a means of __[cultural appropriation](https://en.wikipedia.org/wiki/Cultural_appropriation)__, which is when one cultural group adopts something from another culture in an unfair or disrespectful way (as opposed to a fair, respectful __[cultural exchange](https://www.youtube.com/watch?v=wQ45VpBB0rQ)__). For example, [many phrases from Black American culture have been appropriated by white Americans](https://www.buzzfeednews.com/article/sydneethompson/aave-language-appropriation) and had their meanings changed or altered (like "woke", "cancel", "shade", "sip/spill the tea", etc.).
 
-Additionally, White Americans' use of images and gifs of Black people reacting and expressing emotions [has been compared](https://www.teenvogue.com/story/digital-blackface-reaction-gifs) to earlier (and racist) art forms of [blackface](https://en.wikipedia.org/wiki/Blackface), where White actors would paint their faces black and then act in exaggerated unintelligent ways.
+Additionally, white Americans' use of images and gifs of Black people reacting and expressing emotions [has been compared](https://www.teenvogue.com/story/digital-blackface-reaction-gifs) to earlier (and racist) art forms of [blackface](https://en.wikipedia.org/wiki/Blackface), where white actors would paint their faces black and then act in exaggerated unintelligent ways.
 
+% TODO That above was I think worded a little confusingly
 
 ## Citation and giving credit
 
-So given the community activities on social media of copying, remixing, cultural appropriate, and cultural exchange:
-- How do you think attribution should work when copying and reusing content on social media (like if you post a meme on social media)?
+
+```{figure} this_is_fine.jpg
+---
+width: 400px
+name: this_is_fine_fig
+alt: 'A dog is sitting at a table with coffee, while the house around is on fire. The dog says while smiling, "This is fine."'
+---
+The ["This is fine" meme](https://knowyourmeme.com/memes/this-is-fine) image by K.C. Green
+```
+ On the 10th anniversary of the webcomic by K.C. Green where the "This is fine" meme came from, [he reflected on his feelings](https://kcggggg.tumblr.com/post/706263607432921088/we-passed-it-a-couple-of-days-ago-but-it-has-been) about how those frames from his comic became a viral meme:
+ > When a work gets as big as this has, is it still yours? Not talking about copyright and legal stuff. It says something larger that everyone can feel and relate to.
+ >
+ > [...]
+ >
+ > I’ve been forced time and time again with these 6 panels, to be the party pooper, gate-keeper, girlboss, etc and just to get people to recognize there are artists behind these drawings online. These memes we share.
+ >
+ > [...]
+ >
+ > So I do what I can and try to keep in good humor and be thankful that I can still do what I do for a living.
+
+
+Given the community activities on social media of copying, remixing, cultural appropriate, and cultural exchange:
+- How do you think attribution should work when copying and reusing content on social media (like if you post a meme or gif on social media)?
   - When is it ok to not cite sources for content?
   - When should sources be cited, and how should they be cited?
 - How can you participate in cultural exchange without harmful cultural appropriation?
@@ -52,4 +76,4 @@ So given the community activities on social media of copying, remixing, cultural
 
 % 'Tandoh pushes back on this by referring to inspirations in headnotes, providing reading lists for each chapter, and noting when recipes belong to other published authors, like Rukmini Iyer of the bestselling Roasting Tin series. Even the easy-read version — which visualizes every single step and item required for 10 simple recipes through photography — suggests other charity cookbooks to try if this one doesn’t work for the cook using it. (Publisher Serpent’s Tail, with whom Tandoh also worked on Eat Up!, has distributed this version of the book to community centers and kitchens across the U.K.)'
 
-% This is fine meme reflections https://kcggggg.tumblr.com/post/706263607432921088/we-passed-it-a-couple-of-days-ago-but-it-has-been
+% This is fine meme reflections 

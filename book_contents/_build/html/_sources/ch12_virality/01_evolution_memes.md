@@ -36,9 +36,7 @@ When those three conditions are present, then over time successive generations o
 ## Memes
 In the 1976 book [The Selfish Gene](https://en.wikipedia.org/wiki/The_Selfish_Gene), evolutionary biologist Richard Dawkins[^dawkins_note] said rather than looking at evolution of organism, it made even more sense to look at the evolution of the genes of those organism (sections of DNA that perform some functions and are inherited). For example, if a bee protects it's nest by stinging an attacking animal and dying, then it can't reproduce and it might look like a failure of evolution. But if the gene that told the bee to die protecting the nest was shared by the other bees in the nest, then that one bee dying allows the gene to keep being replicated, so the gene is successful evolutionarily.
 
-Since genes contained information for how organisms would grow and live, then biological evolution could be considered to be evolving information. Dawkins then took this idea of evolution of information and applied it to culture, coining the term "meme."
-
-% meant to sound like "gene"
+Since genes contained information for how organisms would grow and live, then biological evolution could be considered to be evolving information. Dawkins then took this idea of evolution of information and applied it to culture, coining the term "meme" (intended to [sound like "gene"](https://en.wikipedia.org/wiki/Meme#Etymology)).
 
 A __meme__ is a piece of culture that might reproduce in an evolutionary fashion, like a hummable tune that someone hears and starts humming to themselves, perhaps changing it, and then others overhearing next. In this view, any piece of human culture can be considered a meme that is spreading (or failing to spread) according to evolutionary forces. So we can use an evolutionary perspective to consider the spread of:
 - Technology (languages, weapons, medicine, writing, math, computers, etc.),

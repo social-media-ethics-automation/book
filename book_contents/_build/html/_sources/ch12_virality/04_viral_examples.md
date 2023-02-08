@@ -37,8 +37,6 @@ Sometimes the original source of the content doesn't have intentions about it's 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_C1FZ4HtzGY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-% TODO: children, e.g., https://www.nbcnews.com/pop-culture/influencers-parents-posting-kids-online-privacy-security-concerns-rcna55318
-
 
 ## Antagonistic to original intention
 Sometimes content goes viral in a way that is against the intended purpose of the original content. For example, in this video started as of a TikToker introducing his girlfriend. Other TikTokers then used the duet feature to add an out of frame gun pointed at the girlfriend's head, and her out of frame hands tied together, being held hostage. TikTokers continued to build on this with hostage negotiators, press conferences and news sources. All of this is almost certainly not the impression the original TikToker was trying to convey.
@@ -46,8 +44,8 @@ Sometimes content goes viral in a way that is against the intended purpose of th
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TY2l8yd5tys" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-## Viral for being "bad" or "embarrassing"
-Similar to the previous example, social media content can go viral for being perceived as "bad" or "embarrassing." For example, in 2002, a 15 year old kid made a video of himself swinging a pretend lightsaber, that went viral and was mocked:
+## Viral for being "embarrassing"
+Similar to the previous example, social media content can go viral for being perceived as "embarrassing." For example, in 2002, a 15 year old kid made a video of himself swinging a pretend lightsaber, that went viral and was mocked:
 
 ```{figure} star_wars_kid.png
 ---
@@ -105,3 +103,19 @@ In the comments, people post their horrified reactions, and the original poster 
 It turns out that this video and other similar cooking videos are intentionally made to be bad videos and intended to produce a reaction (see article: [Your Least Favorite Gross Viral Food Videos Are All Connected to This Guy](https://www.eater.com/2021/5/11/22430383/why-are-gross-viral-food-videos-popular-rick-lax-facebook-watch)).
 
 Saying and doing provocative, shocking, and offensive things can also be an effective political strategy, and getting viral attention through other's negative reactions has been seen as a [key component of Donald Trump's political successes](https://www.wired.co.uk/article/us-president-donald-trump-attention-economy).
+
+
+% ## Recording others
+
+% - children
+% - onion
+
+% - Police brutality and murder
+
+
+% onion_tiktok_ruin_life.png https://www.theonion.com/do-you-mind-if-i-put-you-in-my-tiktok-asks-younger-c-1840052744
+
+% [Their children went viral. Now they wish they could wipe them from the internet.](https://www.nbcnews.com/pop-culture/influencers-parents-posting-kids-online-privacy-security-concerns-rcna55318)
+% TODO: children, e.g., https://www.nbcnews.com/pop-culture/influencers-parents-posting-kids-online-privacy-security-concerns-rcna55318
+
+% Add the cat video here too
