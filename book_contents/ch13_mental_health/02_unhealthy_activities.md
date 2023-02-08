@@ -53,6 +53,7 @@ Another form of digital self-harm is through joining toxic negative communities 
 In 2018, Youtuber [ContraPoints](https://www.youtube.com/c/ContraPoints) (Natalie Wynn) made a video exploring the extremely toxic online Incel community, and related it to her own experience with a toxic 4chan community. (Content warning: Sex, self-hatred, and self-harm)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fD2briZ6fB0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Note: The video might not embed right, and if you want to watch it, you might have to click to open it in youtube.
 
 Since you might not want to watch a 35 minute video, here are a few key points and quotes:

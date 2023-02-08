@@ -26,3 +26,6 @@ It can be difficult to measure the effects of social media on mental health sinc
 Some researchers have found that [people using social media may enter a dissociation state](https://www.sciencedaily.com/releases/2022/05/220523135018.htm), where they lose track of time (like what happens when someone is reading a good book).
 
 Researchers at Facebook decided to try to measure how their recommendation algorithm was influencing people's mental health. So they changed their recommendation algorithm to show some people more negative posts and some people more positive posts. They found that people who were given more negative posts tended to post more negatively themselves. Now, this while experiment was done without informing users that they were part of an experiment, and [when people found out that they might be part of a secret mood manipulation experiment, they were upset](https://www.theatlantic.com/technology/archive/2014/06/everything-we-know-about-facebooks-secret-mood-manipulation-experiment/373648/).
+
+
+% TODO: Social media breaks: https://reallifemag.com/the-great-offline/
