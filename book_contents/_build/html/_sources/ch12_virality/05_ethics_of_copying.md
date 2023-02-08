@@ -4,7 +4,7 @@ Elon Musk, who purchased Twitter in 2022 has long been known to copy others' ima
 
 ## Remixing
 
-Much of the internet has developed a culture of copying and modifying other content, and not necessarily giving attribution to where it came from.
+Much of the internet has developed a culture of copying without necessarily giving attribution to where it came from. Often, unlike with Elon Musk, this copying also involves modifying the content, recontextualizing the content to give it new meaning, or combining it with other content.
 
 For example, let's look at this meme about stealing memes:
 
@@ -14,7 +14,7 @@ width: 400px
 name: steal_meme_4_fig
 alt: "A image of Keanu Reeves as Jesus with laughing emoji. Above it is text that says: \"Me, blessing your meme with a \"HaHa\" before I steal it.\""
 ---
-A meme about stealing memes. (It is unclear how we should cite this).
+A meme about stealing memes. (It is unclear how we should or even could cite this).
 ```
 
 The meme above is composed of many pieces copied from elsewhere, and modified and put together. Here are the pieces we could identify:
@@ -25,7 +25,7 @@ The meme above is composed of many pieces copied from elsewhere, and modified an
   - A watermark from @AllMemes appears on Jesus' shoulder.
   - The text about stealing memes added at the top
 
-Communities based on this type of remixing have existed outside the Internet before showing up in social media platforms, such as [sampling in hip hop music](https://en.wikipedia.org/wiki/Sampling_(music)#Hip_hop) in the 1980s.
+Communities based on this type of remixing have existed outside the Internet before showing up in internet-based social media platforms, such as [sampling in hip hop music](https://en.wikipedia.org/wiki/Sampling_(music)#Hip_hop) in the 1980s.
 
 In an anthropological introduction to YouTube (from 2008), [Michael Wesch observes this phenomenon]( https://www.youtube.com/watch?v=TPAO-lZ4_hU):
 > And this is something really quite profound that's happening. Where we can remix this culture that's being thrown at us, where we can take it, re-appropriate it and throw it back. [...] Most of what we do is actually illegal, any remixing is basically illegal. And I could talk more about the- the parameters of that, we have fair use laws that should protect it but the simple fact of ripping a DVD is actually illegal which makes virtually everything we do illegal.
@@ -49,7 +49,7 @@ alt: 'A dog is sitting at a table with coffee, while the house around is on fire
 ---
 The ["This is fine" meme](https://knowyourmeme.com/memes/this-is-fine) image by K.C. Green
 ```
- On the 10th anniversary of the webcomic by K.C. Green where the "This is fine" meme came from, [he reflected on his feelings](https://kcggggg.tumblr.com/post/706263607432921088/we-passed-it-a-couple-of-days-ago-but-it-has-been) about how those frames from his comic became a viral meme:
+ On the 10th anniversary of the [webcomic](https://gunshowcomic.com/648) by K.C. Green where the "This is fine" meme came from, [he reflected on his feelings](https://kcggggg.tumblr.com/post/706263607432921088/we-passed-it-a-couple-of-days-ago-but-it-has-been) about how those frames from his comic became a viral meme:
  > When a work gets as big as this has, is it still yours? Not talking about copyright and legal stuff. It says something larger that everyone can feel and relate to.
  >
  > [...]
@@ -75,5 +75,3 @@ Given the community activities on social media of copying, remixing, cultural ap
 % 'Tandoh’s inviting generosity also extends to how she showcases the cooks and kitchens that have made her the cook she is, too. Citation in cookbook publishing has long been a thorny issue (ask James Beard); today, the internet, Instagram, and TikTok have deepened the mythic import of the recipe creator, turning attribution into a parasocial pursuit more than a sociocultural one. Who made the recipe is more important than where it came from.
 
 % 'Tandoh pushes back on this by referring to inspirations in headnotes, providing reading lists for each chapter, and noting when recipes belong to other published authors, like Rukmini Iyer of the bestselling Roasting Tin series. Even the easy-read version — which visualizes every single step and item required for 10 simple recipes through photography — suggests other charity cookbooks to try if this one doesn’t work for the cook using it. (Publisher Serpent’s Tail, with whom Tandoh also worked on Eat Up!, has distributed this version of the book to community centers and kitchens across the U.K.)'
-
-% This is fine meme reflections 

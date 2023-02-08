@@ -32,12 +32,6 @@ Content might even have direct indication for how to modify it. For example, the
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4fKYPkVitMs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-## Source with no social media intentions
-Sometimes the original source of the content doesn't have intentions about it's use in social media, such as this cat, whose drinking sounds are used to build a musical piece (using TikTok Duet), eventually becoming the song [Nature Boy by Nat King Cole](https://genius.com/Nat-king-cole-nature-boy-lyrics) and then with added [original lyrics](https://thegeniuslyrics.com/this-looks-like-a-cavalcade-of-beggars-sin-and-wine-lyrics/):
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_C1FZ4HtzGY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
 ## Antagonistic to original intention
 Sometimes content goes viral in a way that is against the intended purpose of the original content. For example, in this video started as of a TikToker introducing his girlfriend. Other TikTokers then used the duet feature to add an out of frame gun pointed at the girlfriend's head, and her out of frame hands tied together, being held hostage. TikTokers continued to build on this with hostage negotiators, press conferences and news sources. All of this is almost certainly not the impression the original TikToker was trying to convey.
 
@@ -105,17 +99,32 @@ It turns out that this video and other similar cooking videos are intentionally 
 Saying and doing provocative, shocking, and offensive things can also be an effective political strategy, and getting viral attention through other's negative reactions has been seen as a [key component of Donald Trump's political successes](https://www.wired.co.uk/article/us-president-donald-trump-attention-economy).
 
 
-% ## Recording others
 
-% - children
-% - onion
+## Content made about others
+Sometimes people make content about other people that then goes viral.
 
-% - Police brutality and murder
+Sometimes the original source of the content doesn't have intentions or awareness of social media, such as this cat, whose drinking sounds are used to build a musical piece (using TikTok Duet), eventually becoming the song [Nature Boy by Nat King Cole](https://genius.com/Nat-king-cole-nature-boy-lyrics) and then with added [original lyrics](https://thegeniuslyrics.com/this-looks-like-a-cavalcade-of-beggars-sin-and-wine-lyrics/):
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_C1FZ4HtzGY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
+<br>
 
-% onion_tiktok_ruin_life.png https://www.theonion.com/do-you-mind-if-i-put-you-in-my-tiktok-asks-younger-c-1840052744
+Other times, the subject has no limited or no awareness of social media because they are a child (see the article: [Their children went viral. Now they wish they could wipe them from the internet.](https://www.nbcnews.com/pop-culture/influencers-parents-posting-kids-online-privacy-security-concerns-rcna55318))
 
-% [Their children went viral. Now they wish they could wipe them from the internet.](https://www.nbcnews.com/pop-culture/influencers-parents-posting-kids-online-privacy-security-concerns-rcna55318)
-% TODO: children, e.g., https://www.nbcnews.com/pop-culture/influencers-parents-posting-kids-online-privacy-security-concerns-rcna55318
+Content or recordings of others can also be shared in a way that may embarrass or harm the other person, such as is mocked in this parody headline from The Onion:
 
-% Add the cat video here too
+```{figure} onion_tiktok_ruin_life.png
+---
+width: 400px
+name: onion_tiktok_ruin_life_fig
+alt: "Onion headline for local news: '‘Do You Mind If I Put You In My TikTok?’ Asks Younger Cousin About To Ruin Your Life. Photo under headline is a white teenager holding up an iPhone."
+---
+[Parody headline from The Onion](https://www.theonion.com/do-you-mind-if-i-put-you-in-my-tiktok-asks-younger-c-1840052744).
+```
+
+Posting content about others (that they don't want go viral) can also be a way of trying to get justice, such as two videos recorded on May 25, 2020 that went viral:
+* [A Black bird watcher named Christian Cooper talked to a white woman named Amy Cooper [coincidentally same last name] in Central Park in New York City](https://en.wikipedia.org/wiki/Central_Park_birdwatching_incident). Amy's dog was not on a leash (which was against the rules of the park), and when Christian confronted her she got angry. Christian then recorded Amy saying she was going to call the police and say "There's an African American man threating my life," and then she followed through and called 911 (this could have easily resulted in police violence against Christian Cooper).
+* On the same day in Minneapolis, Minnesota, a police officer named [Derek Chauvin murdered a Black man named George Floyd](https://en.wikipedia.org/wiki/Murder_of_George_Floyd) by kneeling on his neck until he died, while a crowd around him filmed the incident and begged Derek Chauvin to stop.
+
+While neither Amy in New York, nor Derek Chauvin in Minneapolis likely wanted those videos to go viral, the posting of those videos brought consequences to both Amy Cooper and Derek Chauvin for their racist actions which they probably wouldn't have faced if not for the viral videos.
+

@@ -10,6 +10,6 @@ When content goes viral there may be many people with a stake in it's going vira
 List at least three different scenarios of content going viral and list out the interests of different groups and people in the content going viral.
 
 ## Create value statements
-Social media platforms have some ability to influence what goes viral and how (e.g., recommendation algorithms, what actions are available, what data is displayed, etc.), though they don't have complete control. Still, we can think of what goals you might want them to have as their decisions shape what goes viral online.
+Social media platforms have some ability to influence what goes viral and how (e.g., recommendation algorithms, what actions are available, what data is displayed, etc.), though they only have partial control, since human interaction and organization also plays a large role. Still, regardless of whether we can force any particular outcome, we can still think of what you think would be best for what content should go viral, how much, and in what ways.
 
-Create a set of values statements for when and how you think ideally you would want content to go viral (try to get at least 10). We encourage you to consider different ethics frameworks for ideas. 
+Create a set of values statements for when and how you ideally you would want content to go viral. Try to come up with at least 10 values statements. We encourage you to consider different ethics frameworks as you try to come up with ideas. 

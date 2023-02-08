@@ -4,7 +4,7 @@ Elon Musk, who purchased Twitter in 2022 has long been known to copy others' ima
 
 ## Remixing
 
-Much of the internet has developed a culture of copying and modifying other content, and not necessarily giving attribution to where it came from.
+Much of the internet has developed a culture of copying without necessarily giving attribution to where it came from. Often, unlike with Elon Musk, this copying also involves modifying the content, recontextualizing the content to give it new meaning, or combining it with other content.
 
 For example, let's look at this meme about stealing memes:
 
@@ -14,7 +14,7 @@ width: 400px
 name: steal_meme_4_fig
 alt: "A image of Keanu Reeves as Jesus with laughing emoji. Above it is text that says: \"Me, blessing your meme with a \"HaHa\" before I steal it.\""
 ---
-A meme about stealing memes. (It is unclear how we should cite this).
+A meme about stealing memes. (It is unclear how we should or even could cite this).
 ```
 
 The meme above is composed of many pieces copied from elsewhere, and modified and put together. Here are the pieces we could identify:
@@ -25,7 +25,7 @@ The meme above is composed of many pieces copied from elsewhere, and modified an
   - A watermark from @AllMemes appears on Jesus' shoulder.
   - The text about stealing memes added at the top
 
-Communities based on this type of remixing have existed outside the Internet before showing up in social media platforms, such as [sampling in hip hop music](https://en.wikipedia.org/wiki/Sampling_(music)#Hip_hop) in the 1980s.
+Communities based on this type of remixing have existed outside the Internet before showing up in internet-based social media platforms, such as [sampling in hip hop music](https://en.wikipedia.org/wiki/Sampling_(music)#Hip_hop) in the 1980s.
 
 In an anthropological introduction to YouTube (from 2008), [Michael Wesch observes this phenomenon]( https://www.youtube.com/watch?v=TPAO-lZ4_hU):
 > And this is something really quite profound that's happening. Where we can remix this culture that's being thrown at us, where we can take it, re-appropriate it and throw it back. [...] Most of what we do is actually illegal, any remixing is basically illegal. And I could talk more about the- the parameters of that, we have fair use laws that should protect it but the simple fact of ripping a DVD is actually illegal which makes virtually everything we do illegal.
