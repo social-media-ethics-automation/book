@@ -36,7 +36,9 @@ Additionally, content can be copied by being screenshotted, or photoshopped. Tex
 
 <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@lubalin/video/6909126447332347142" data-video-id="6909126447332347142" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@lubalin" href="https://www.tiktok.com/@lubalin?refer=embed">@lubalin</a> that escalated quickly... <a title="sodramatic" target="_blank" href="https://www.tiktok.com/tag/sodramatic?refer=embed">#sodramatic</a> <a title="humor" target="_blank" href="https://www.tiktok.com/tag/humor?refer=embed">#humor</a> <a title="oldpeoplefacebook" target="_blank" href="https://www.tiktok.com/tag/oldpeoplefacebook?refer=embed">#oldpeoplefacebook</a> <a title="boomer" target="_blank" href="https://www.tiktok.com/tag/boomer?refer=embed">#boomer</a> <a title="musician" target="_blank" href="https://www.tiktok.com/tag/musician?refer=embed">#musician</a> <a title="producer" target="_blank" href="https://www.tiktok.com/tag/producer?refer=embed">#producer</a> <a target="_blank" title="♬ original sound - Lubalin" href="https://www.tiktok.com/music/original-sound-6909126476889656070?refer=embed">♬ original sound - Lubalin</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
 
-## Natural Selection
+## "Natural" Selection
+It isn't clear what should be considered as "nature" in a social media environment (human nature? the nature of the design of the social media platform? are bots unnatural?), so we'll just instead talk about __selection__.
+
 When content (and modified copies of content) is in a position to be replicated, there are factors that determine whether it gets __selected__ for replicated or not. As humans look at the content they see on social media they decide whether they want to replicated it for some reason, such as:
 - "that's funny, so I'll retweet it"
 - "that's horrible, so I'll respond with an angry face emoji"
@@ -45,15 +47,10 @@ When content (and modified copies of content) is in a position to be replicated,
 
 Groups and organizations make their own decisions on what social media content to replicate as well (e.g., a news organization might find a social media post newsworthy, so they write articles about it).
 
-The above ways of social media content selection for replication can be considered __natural selection__ in that they are being replicated according to human interest in the content itself.
-
-There are also other ways that social media content get replicated that could be called __unnatural selection__, where something else is driving the replication of social media content. This includes things like:
+Additionally content may be replicated because of:
 - Paid promotion and ads, where someone pays money to have their content replicated
 - Astroturfing: where crowds, often of bots, are paid to replicated social media content (e.g., like, retweet)
 
+Finally, the social media platforms use algorithms and design layouts which determine what posts people see. There are various rules and designs social media sites can use, and they can amplify the natural selection and unnatural selection in various ways. They can do this through recommendation algorithms as we saw last chapter, as well as choosing what actions are allowed, and what amount of friction is given to those actions, as well as what data is collected and displayed.
 
-Finally, the social media platforms use algorithms and design layouts which determine what posts people see. There are various rules and designs social media sites can use, and they can amplify the natural selection and unnatural selection in various ways. Our next chapter, [](../ch12_recommendations/00_recommendations.md), will go into this more.
-
-% TODO: Bring back in evolution consequences, adaptation, diversification, cooperation/competition. In particular, adaptation to environment (a social media platform's interface, focus, recommendation algorithm), niches
-
-% TODO: The recommendation algorithms (and general design of the site), provide an environment in which memes evolve and adapt and go viral. Changing these rules changes what content is best adapted. This can make for big consequences
+Different designs of social media platforms will have different consequences in what content has viral, just like how different physical environments determine which forms of life thrive and how they adapt and fill [ecological niches](https://en.wikipedia.org/wiki/Ecological_niche).

@@ -30,4 +30,6 @@ alt: "Tweet from Elon Musk (@elonmusk): Trashing accounts that you hate will cau
 [A tweet](https://twitter.com/elonmusk/status/1615194151737520128) from current Twitter owner Elon Musk blaming users for how the recommendation algorithm interprets their behavior.
 ```
 
+% Different than previous owners: https://www.vox.com/2019/3/8/18245536/exclusive-twitter-healthy-conversations-dunking-research-product-incentives
+
 % TODO: Note that human behavior and social groups also are systems that a recommendation algorithm might not be able to overcome.
