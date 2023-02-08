@@ -1,6 +1,6 @@
 # Unhealthy Activities on Social Media
 
-There are various activities that people on social media may find harmful to their mental health. Here are a few examples:
+Given the complex relationship between internet-based social media and mental health, let's first look at some social media activities that people may find harmful to their mental health. Here are a few examples:
 
 ## Doomscrolling
 
