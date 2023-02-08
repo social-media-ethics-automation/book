@@ -92,7 +92,6 @@ ContraPoints then gives her advice to these incels who have turned inward with s
 
 
 
-
 ```{note}
 If you are suffering from mental health problems (as both authors of this book have), please seek help, whether from friends, counselors, or [mental health crisis hotlines](https://www.google.com/search?q=mental+health+crisis+hotline) such as the [new 988 hotline](https://www.npr.org/sections/health-shots/2022/07/15/1111316589/988-suicide-hotline-number).
 ```

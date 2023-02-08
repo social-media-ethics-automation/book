@@ -28,4 +28,22 @@ Some researchers have found that [people using social media may enter a dissocia
 Researchers at Facebook decided to try to measure how their recommendation algorithm was influencing people's mental health. So they changed their recommendation algorithm to show some people more negative posts and some people more positive posts. They found that people who were given more negative posts tended to post more negatively themselves. Now, this while experiment was done without informing users that they were part of an experiment, and [when people found out that they might be part of a secret mood manipulation experiment, they were upset](https://www.theatlantic.com/technology/archive/2014/06/everything-we-know-about-facebooks-secret-mood-manipulation-experiment/373648/).
 
 
-% TODO: Social media breaks: https://reallifemag.com/the-great-offline/
+## Digital Detox?
+Some people view internet-based social media (and other online activities) as inherently toxic, and thus encourage a [digital detox](https://en.wikipedia.org/wiki/Digital_detox), where people take some form of a break from social media platforms and digital devices.
+
+While taking a break from parts or all of social media can be good for someone's mental health (e.g., doomscrolling is making them feel more anxious, or they are currently getting harassed online), viewing internet-based social media as inherently toxic and trying to return to an idyllic time from before the Internet is not realistic or honest view of the matter. 
+
+In her essay "[The Great Offline](https://reallifemag.com/the-great-offline/)," Lauren Collee argues that this is just a repeat of earlier views of "wilderness." As white Americans were colonizing the American continent, they began idealized "wilderness" as being uninhabited land (either ignoring the Indigenous people who already lived there, or kicking them out).
+> In the 19th century, as wilderness tourism was taking off as an industry, natural landscapes were figured as an antidote to the social pressures of urban living, offering truth in place of artifice, interiority in place of exteriority, solitude in place of small talk. 
+
+Similarly, advocates for digital detox build an idealized "offline" separate from the complications of modern life:
+> Sherry Turkle, author of Alone Together, characterizes the offline world as a physical place, a kind of Edenic paradise. “Not too long ago,” she writes, “people walked with their heads up, looking at the water, the sky, the sand” —  now, “they often walk with their heads down, typing.”
+>
+> [...]
+> 
+> Gone are the happy days when families would gather around a weekly televised program like our ancestors around the campfire!
+
+But Lauren Collee argues that by placing the blame on the use of technology itself, and making not using technology (a digital detox) the solution, we lose our ability to deal with the nuances of how we use technology and how it is designed:
+> I’m no stranger to apps that help me curb my screen time, and I’ll admit I’ve often felt better for using them. But on a more communal level, I suspect that cultures of digital detox — in suggesting that the online world is inherently corrupting and cannot be improved — discourage us from seeking alternative models for what the internet could look like. I don’t want to be trapped in cycles of connection and disconnection, deleting my social media profiles for weeks at a time, feeling calmer but isolated, re-downloading them, feeling worse but connected again. For as long as we keep dumping our hopes into the conceptual pit of “the offline world,” those hopes will cease to exist as forces that might generate change in the worlds we _actually_ live in together.
+
+So in this chapter, we will not consider internet-based social media as inherently toxic or beneficial for mental health. We will be looking for more nuance and where things go well, where they do not, and why.
