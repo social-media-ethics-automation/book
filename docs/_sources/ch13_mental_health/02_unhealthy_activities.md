@@ -36,9 +36,7 @@ Trauma dumping can be bad for the mental health of those who have this trauma un
 
 ## Munchausen by Internet
 
-Munchausen Syndrome (or [Factitious disorder imposed on self](https://en.wikipedia.org/wiki/Factitious_disorder_imposed_on_self)) is when someone pretends to have a disease, like cancer, to get sympathy or attention. People with various illnesses often find support online, and even form online communities, and it is often easier to fake an illness for an online community, so [many have done so](https://www.theatlantic.com/health/archive/2019/05/faking-cancer-online/588334/). People who fake these illnesses often do so as a result of their own mental illness, so, in fact, "[they are sick, albeit it in a very different way than claimed](https://www.theguardian.com/society/2015/apr/29/jules-gibson-munchausen-by-internet-sickness-bloggers-fake-it-whole-pantry)."
-
-% TODO: Reference @Sciencing_Bi
+Munchausen Syndrome (or [Factitious disorder imposed on self](https://en.wikipedia.org/wiki/Factitious_disorder_imposed_on_self)) is when someone pretends to have a disease, like cancer, to get sympathy or attention (like the story of the fake professor @Sciencing_Bi in the authenticity chapter). People with various illnesses often find support online, and even form online communities. It is often easier to fake an illness for an online community than in an in-person community, so [many have done so](https://www.theatlantic.com/health/archive/2019/05/faking-cancer-online/588334/). People who fake these illnesses often do so as a result of their own mental illness, so, in fact, "[they are sick, albeit it in a very different way than claimed](https://www.theguardian.com/society/2015/apr/29/jules-gibson-munchausen-by-internet-sickness-bloggers-fake-it-whole-pantry)."
 
 
 ## Digital Self-Harm
@@ -55,6 +53,8 @@ Another form of digital self-harm is through joining toxic negative communities 
 In 2018, Youtuber [ContraPoints](https://www.youtube.com/c/ContraPoints) (Natalie Wynn) made a video exploring the extremely toxic online Incel community, and related it to her own experience with a toxic 4chan community. (Content warning: Sex, self-hatred, and self-harm)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fD2briZ6fB0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Note: The video might not embed right, and if you want to watch it, you might have to click to open it in youtube.
 
 Since you might not want to watch a 35 minute video, here are a few key points and quotes:
 
@@ -94,5 +94,5 @@ ContraPoints then gives her advice to these incels who have turned inward with s
 
 
 ```{note}
-If you are suffering from mental health problems (as both authors of this book have), please seek help, whether from friends, counselors, or [mental health crisis hotlines](https://www.google.com/search?q=mental+health+crisis+hotline).
+If you are suffering from mental health problems (as both authors of this book have), please seek help, whether from friends, counselors, or [mental health crisis hotlines](https://www.google.com/search?q=mental+health+crisis+hotline) such as the [new 988 hotline](https://www.npr.org/sections/health-shots/2022/07/15/1111316589/988-suicide-hotline-number).
 ```
