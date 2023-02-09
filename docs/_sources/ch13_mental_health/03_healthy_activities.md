@@ -1,6 +1,6 @@
 # Healthy Activities on Social Media
 
-Now let's look at a more healthy side of social media.
+Now let's look at some of the more healthy sides of social media use.
 
 First let's consider that, while social media use is often talked as "addiction" or "junk food," there might be [better ways to think about social media use](https://amandabaughan.medium.com/make-peace-with-social-media-113877582006), as a place that you might enjoy, connect with others, learn new things, and express yourself.
 
