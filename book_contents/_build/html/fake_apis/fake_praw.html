@@ -2645,6 +2645,88 @@ title="Print to PDF"
         <span class="p">),</span>
     <span class="p">]</span>
     <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="n">submission_list</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">news_hot</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">submission_list</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">SimpleNamespace</span><span class="p">(</span>
+            <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;54oi6refs&quot;</span><span class="p">,</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Breaking news: A lovely cat took a nice long nap today!&quot;</span><span class="p">,</span> 
+            <span class="n">author</span> <span class="o">=</span> <span class="n">AuthorSimplishNamespace</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;fake_user&quot;</span><span class="p">,</span>
+                <span class="n">link_karma</span><span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="n">comment_karma</span><span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="n">has_verified_email</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                <span class="n">is_mod</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                <span class="n">is_gold</span> <span class="o">=</span> <span class="kc">False</span>                
+            <span class="p">),</span>
+            <span class="n">edited</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="n">created_utc</span> <span class="o">=</span> <span class="mi">1673327425</span><span class="p">,</span>
+            <span class="n">score</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+            <span class="n">upvote_ratio</span> <span class="o">=</span> <span class="mf">.5</span><span class="p">,</span>
+            <span class="n">num_comments</span> <span class="o">=</span> <span class="mi">9</span><span class="p">,</span>
+            <span class="n">selftext</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;example.com/fake_news_story&quot;</span>
+        <span class="p">),</span>
+        <span class="n">SimpleNamespace</span><span class="p">(</span>
+            <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;56etffew3s&quot;</span><span class="p">,</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Breaking news: Someone said a really mean thing on the internet today!&quot;</span><span class="p">,</span> 
+            <span class="n">author</span> <span class="o">=</span> <span class="n">AuthorSimplishNamespace</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;pretend_user&quot;</span><span class="p">,</span>
+                <span class="n">link_karma</span><span class="o">=</span> <span class="mi">13</span><span class="p">,</span>
+                <span class="n">comment_karma</span><span class="o">=</span> <span class="mi">45</span><span class="p">,</span>
+                <span class="n">has_verified_email</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                <span class="n">is_mod</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="n">is_gold</span> <span class="o">=</span> <span class="kc">False</span>    
+            <span class="p">),</span>
+            <span class="n">edited</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="n">created_utc</span> <span class="o">=</span> <span class="mi">1673327625</span><span class="p">,</span>
+            <span class="n">score</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+            <span class="n">upvote_ratio</span> <span class="o">=</span> <span class="mf">.9</span><span class="p">,</span>
+            <span class="n">num_comments</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="n">selftext</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;example.com/pretend_story.html&quot;</span>
+        <span class="p">),</span>
+        <span class="n">SimpleNamespace</span><span class="p">(</span>
+            <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;a443t43&quot;</span><span class="p">,</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Breaking news: Some grandparents made some yummy cookies for all the kids to share!&quot;</span><span class="p">,</span> 
+            <span class="n">author</span> <span class="o">=</span> <span class="n">AuthorSimplishNamespace</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;imaginary_user&quot;</span><span class="p">,</span>
+                <span class="n">link_karma</span><span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="n">comment_karma</span><span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+                <span class="n">has_verified_email</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="n">is_mod</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="n">is_gold</span> <span class="o">=</span> <span class="kc">True</span>    
+            <span class="p">),</span>
+            <span class="n">edited</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="n">created_utc</span> <span class="o">=</span> <span class="mi">1673367625</span><span class="p">,</span>
+            <span class="n">score</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+            <span class="n">upvote_ratio</span> <span class="o">=</span> <span class="mf">.7</span><span class="p">,</span>
+            <span class="n">num_comments</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+            <span class="n">selftext</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;example.com/imaginary_story.html&quot;</span>
+        <span class="p">),</span>
+        <span class="n">SimpleNamespace</span><span class="p">(</span>
+            <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;324lkji34oi324&quot;</span><span class="p">,</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Breaking news: All the horrors of the universe revealed at last!&quot;</span><span class="p">,</span> 
+            <span class="n">author</span> <span class="o">=</span> <span class="n">AuthorSimplishNamespace</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;imaginary_user&quot;</span><span class="p">,</span>
+                <span class="n">link_karma</span><span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="n">comment_karma</span><span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+                <span class="n">has_verified_email</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="n">is_mod</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="n">is_gold</span> <span class="o">=</span> <span class="kc">True</span>    
+            <span class="p">),</span>
+            <span class="n">edited</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="n">created_utc</span> <span class="o">=</span> <span class="mi">1673367635</span><span class="p">,</span>
+            <span class="n">score</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+            <span class="n">upvote_ratio</span> <span class="o">=</span> <span class="mf">.7</span><span class="p">,</span>
+            <span class="n">num_comments</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+            <span class="n">selftext</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;example.com/imaginary_story.html&quot;</span>
+        <span class="p">)</span>
+    <span class="p">]</span>
+    <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="n">submission_list</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2670,6 +2752,11 @@ title="Print to PDF"
         <span class="k">return</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
           <span class="n">submit</span> <span class="o">=</span> <span class="n">submit</span><span class="p">,</span>
           <span class="n">hot</span> <span class="o">=</span> <span class="n">science_hot</span>
+        <span class="p">)</span>
+    <span class="k">elif</span> <span class="n">subreddit_name</span> <span class="o">==</span> <span class="s2">&quot;news&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
+          <span class="n">submit</span> <span class="o">=</span> <span class="n">submit</span><span class="p">,</span>
+          <span class="n">hot</span> <span class="o">=</span> <span class="n">news_hot</span>
         <span class="p">)</span>
 </pre></div>
 </div>

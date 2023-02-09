@@ -1880,8 +1880,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#normal-tweepy-set-up">
-   13.5.1. Normal Tweepy Set-Up
+  <a class="reference internal nav-link" href="#normal-reddit-praw-setup">
+   13.5.1. Normal Reddit PRAW Setup
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1890,18 +1890,18 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#code-to-search-and-display-news-tweets">
-   13.5.3. Code to search and display news tweets
+  <a class="reference internal nav-link" href="#code-to-search-and-display-news">
+   13.5.3. Code to search and display news
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#search-through-tweets-and-only-display-good-news">
-   13.5.4. Search through tweets and only display good news
+  <a class="reference internal nav-link" href="#search-through-news-submissions-and-only-display-good-news">
+   13.5.4. Search through news submissions and only display good news
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#try-it-out-on-real-twitter">
-   13.5.5. Try it out on real twitter
+  <a class="reference internal nav-link" href="#try-it-out-on-real-reddit">
+   13.5.5. Try it out on real Reddit
   </a>
  </li>
 </ul>
@@ -1924,8 +1924,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#normal-tweepy-set-up">
-   13.5.1. Normal Tweepy Set-Up
+  <a class="reference internal nav-link" href="#normal-reddit-praw-setup">
+   13.5.1. Normal Reddit PRAW Setup
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1934,18 +1934,18 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#code-to-search-and-display-news-tweets">
-   13.5.3. Code to search and display news tweets
+  <a class="reference internal nav-link" href="#code-to-search-and-display-news">
+   13.5.3. Code to search and display news
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#search-through-tweets-and-only-display-good-news">
-   13.5.4. Search through tweets and only display good news
+  <a class="reference internal nav-link" href="#search-through-news-submissions-and-only-display-good-news">
+   13.5.4. Search through news submissions and only display good news
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#try-it-out-on-real-twitter">
-   13.5.5. Try it out on real twitter
+  <a class="reference internal nav-link" href="#try-it-out-on-real-reddit">
+   13.5.5. Try it out on real Reddit
   </a>
  </li>
 </ul>
@@ -1961,55 +1961,54 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="demo-only-positive-news">
 <h1><span class="section-number">13.5. </span>Demo: Only positive news<a class="headerlink" href="#demo-only-positive-news" title="Permalink to this headline">#</a></h1>
 <p>Let’s look at something we could try to do to improve the mental health for our users: Only show positive news!</p>
-<p>We’ll use sentiment analysis again, but this time we’ll do a search for news from a news account, but only display the tweets with a positive sentiment.</p>
+<p>We’ll use sentiment analysis again, but this time we’ll get posts from the news subreddit, but only display the tweets with a positive sentiment.</p>
 <p>Would this actually improve someone’s mental health? It’s hard to say! But we can see something that we might try out if we wanted to improve mental health of our users.</p>
-<section id="normal-tweepy-set-up">
-<h2><span class="section-number">13.5.1. </span>Normal Tweepy Set-Up<a class="headerlink" href="#normal-tweepy-set-up" title="Permalink to this headline">#</a></h2>
+<section id="normal-reddit-praw-setup">
+<h2><span class="section-number">13.5.1. </span>Normal Reddit PRAW Setup<a class="headerlink" href="#normal-reddit-praw-setup" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make sure tweepy library is installed</span>
-<span class="kn">import</span> <span class="nn">tweepy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">praw</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>(optional) use the fake version of tweepy, so you don’t have to use real twitter developer access passwords</p>
+<p>(optional) make a fake praw connection with the fake_praw library</p>
+<p>For testing purposes, we’ve added this line of code, which loads a fake version of praw, so it wont actually connect to reddit. <strong>If you want to try to actually connect to reddit, don’t run this line of code.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../fake_tweepy/fake_tweepy.ipynb
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../fake_apis/fake_praw.ipynb
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake tweepy is replacing the tweepy library. Fake Tweepy doesn&#x27;t need real passwords, and prevents you from accessing real twitter</strong></div></div>
+<div class="output text_html"><strong style='color:darkred'>Fake praw is replacing the praw library. Fake praw doesn&#x27;t need real passwords, and prevents you from accessing real reddit</strong></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load all your developer access passwords into Python</span>
-<span class="c1"># TODO: Put your twitter account&#39;s special developer access passwords below:</span>
-<span class="n">bearer_token</span> <span class="o">=</span> <span class="s2">&quot;n4tossfgsafs_fake_bearer_token_isa53#$%$&quot;</span>
-<span class="n">consumer_key</span> <span class="o">=</span> <span class="s2">&quot;sa@#4@fdfdsa_fake_consumer_key_$%DSG#%DG&quot;</span>
-<span class="n">consumer_secret</span> <span class="o">=</span> <span class="s2">&quot;45adf$T$A_fake_consumer_secret_JESdsg&quot;</span>
-<span class="n">access_token</span> <span class="o">=</span> <span class="s2">&quot;56sd5Ss4tsea_fake_access_token_%YE%hDsdr&quot;</span>
-<span class="n">access_token_secret</span> <span class="o">=</span> <span class="s2">&quot;j^$dr_fake_consumer_key_^A5s#DR5s&quot;</span>
+<span class="c1"># TODO: Put your reddit username, password, and special developer access passwords below:</span>
+<span class="n">username</span><span class="o">=</span><span class="s2">&quot;fake_reddit_username&quot;</span>
+<span class="n">password</span><span class="o">=</span><span class="s2">&quot;sa@#4*fdf_fake_password_$%DSG#%DG&quot;</span>
+<span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;45adf$TW_fake_client_id_JESdsg1O&quot;</span>
+<span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;56sd_fake_client_secret_%Yh%&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Give the tweepy code your developer access passwords so</span>
-<span class="c1"># it can perform twitter actions</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">tweepy</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span>
-   <span class="n">bearer_token</span><span class="o">=</span><span class="n">bearer_token</span><span class="p">,</span>
-   <span class="n">consumer_key</span><span class="o">=</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="o">=</span><span class="n">consumer_secret</span><span class="p">,</span>
-   <span class="n">access_token</span><span class="o">=</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="o">=</span><span class="n">access_token_secret</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Give the praw code your reddit account info so</span>
+<span class="c1"># it can perform reddit actions</span>
+<span class="n">reddit</span> <span class="o">=</span> <span class="n">praw</span><span class="o">.</span><span class="n">Reddit</span><span class="p">(</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">client_id</span><span class="p">,</span> <span class="n">client_secret</span><span class="o">=</span><span class="n">client_secret</span><span class="p">,</span>
+    <span class="n">user_agent</span><span class="o">=</span><span class="s2">&quot;a custom python script&quot;</span>
 <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to log in to twitter</strong></div></div>
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to collect account info to use on reddit</strong></div></div>
 </div>
 </section>
 <section id="load-sentiment-analyis-code">
@@ -2032,23 +2031,26 @@ title="Print to PDF"
 </div>
 </div>
 </section>
-<section id="code-to-search-and-display-news-tweets">
-<h2><span class="section-number">13.5.3. </span>Code to search and display news tweets<a class="headerlink" href="#code-to-search-and-display-news-tweets" title="Permalink to this headline">#</a></h2>
-<p>Now let’s make code that will do a search for news tweets (tweets from a fake_news_site), and display all of them. We will then make a modified version below to compare the results.</p>
+<section id="code-to-search-and-display-news">
+<h2><span class="section-number">13.5.3. </span>Code to search and display news<a class="headerlink" href="#code-to-search-and-display-news" title="Permalink to this headline">#</a></h2>
+<p>Now let’s make code that will get submissions from the news subreddit (or from a fake_news_site), and display all of them. We will then make a modified version below to compare the results.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;from:fake_news_site&#39;</span>
-<span class="n">tweets</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Look up the subreddit &quot;news&quot;, then find the &quot;hot&quot; list, getting up to 10 submission</span>
+<span class="n">submissions</span> <span class="o">=</span> <span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span><span class="s2">&quot;news&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">hot</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 
-<span class="c1"># go through each tweet</span>
-<span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="c1"># Turn the submission results into a Python List</span>
+<span class="n">submissions_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">submissions</span><span class="p">)</span>
+
+<span class="c1"># go through each reddit submission</span>
+<span class="k">for</span> <span class="n">submission</span> <span class="ow">in</span> <span class="n">submissions_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">submission</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to search for &#x27;from:fake_news_site&#x27; and is returning some fake tweets.</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Breaking news: A lovely cat took a nice long nap today!
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to select the subreddit: news</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Breaking news: A lovely cat took a nice long nap today!
 
 Breaking news: Someone said a really mean thing on the internet today!
 
@@ -2060,28 +2062,31 @@ Breaking news: All the horrors of the universe revealed at last!
 </div>
 </div>
 </section>
-<section id="search-through-tweets-and-only-display-good-news">
-<h2><span class="section-number">13.5.4. </span>Search through tweets and only display good news<a class="headerlink" href="#search-through-tweets-and-only-display-good-news" title="Permalink to this headline">#</a></h2>
-<p>Now we will make a different version of the code that computes the sentiment of each tweet and only displays the ones with positive sentiment.</p>
+<section id="search-through-news-submissions-and-only-display-good-news">
+<h2><span class="section-number">13.5.4. </span>Search through news submissions and only display good news<a class="headerlink" href="#search-through-news-submissions-and-only-display-good-news" title="Permalink to this headline">#</a></h2>
+<p>Now we will make a different version of the code that computes the sentiment of each submission title and only displays the ones with positive sentiment.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;from:fake_news_site&#39;</span>
-<span class="n">tweets</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search_recent_tweets</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Look up the subreddit &quot;news&quot;, then find the &quot;hot&quot; list, getting up to 10 submission</span>
+<span class="n">submissions</span> <span class="o">=</span> <span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span><span class="s2">&quot;news&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">hot</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 
-<span class="c1"># go through each tweet</span>
-<span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+<span class="c1"># Turn the submission results into a Python List</span>
+<span class="n">submissions_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">submissions</span><span class="p">)</span>
+
+<span class="c1"># go through each reddit submission</span>
+<span class="k">for</span> <span class="n">submission</span> <span class="ow">in</span> <span class="n">submissions_list</span><span class="p">:</span>
     
     <span class="c1">#calculate sentiment</span>
-    <span class="n">tweet_sentiment</span> <span class="o">=</span> <span class="n">sia</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">text</span><span class="p">)[</span><span class="s2">&quot;compound&quot;</span><span class="p">]</span>
-
-    <span class="k">if</span><span class="p">(</span><span class="n">tweet_sentiment</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">tweet</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">title_sentiment</span> <span class="o">=</span> <span class="n">sia</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">submission</span><span class="o">.</span><span class="n">title</span><span class="p">)[</span><span class="s2">&quot;compound&quot;</span><span class="p">]</span>
+    
+    <span class="k">if</span><span class="p">(</span><span class="n">title_sentiment</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">submission</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to search for &#x27;from:fake_news_site&#x27; and is returning some fake tweets.</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Breaking news: A lovely cat took a nice long nap today!
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to select the subreddit: news</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Breaking news: A lovely cat took a nice long nap today!
 
 Breaking news: Some grandparents made some yummy cookies for all the kids to share!
 </pre></div>
@@ -2089,11 +2094,11 @@ Breaking news: Some grandparents made some yummy cookies for all the kids to sha
 </div>
 </div>
 </section>
-<section id="try-it-out-on-real-twitter">
-<h2><span class="section-number">13.5.5. </span>Try it out on real twitter<a class="headerlink" href="#try-it-out-on-real-twitter" title="Permalink to this headline">#</a></h2>
-<p>If you want, you can skip the fake_tweepy step and try it out on real twitter with a query like “from:npr”, “from:msnbc”, “from:cnn”, etc.</p>
+<section id="try-it-out-on-real-reddit">
+<h2><span class="section-number">13.5.5. </span>Try it out on real Reddit<a class="headerlink" href="#try-it-out-on-real-reddit" title="Permalink to this headline">#</a></h2>
+<p>If you want, you can skip the fake_praw step and try it out on real Reddit, from whatever subreddit you want</p>
 <p>Did it work like you expected?</p>
-<p>You can also only show negative sentiment tweets (sentiment &lt; 0) if you want to see only bad news.</p>
+<p>You can also only show negative sentiment submissions (sentiment &lt; 0) if you want to see only bad news.</p>
 </section>
 </section>
 

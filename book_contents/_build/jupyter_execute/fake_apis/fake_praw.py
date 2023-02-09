@@ -759,6 +759,88 @@ def science_hot(limit=10):
     return iter(submission_list)
 
 
+def news_hot(limit=10):
+    submission_list = [
+        SimpleNamespace(
+            id = "54oi6refs",
+            title = "Breaking news: A lovely cat took a nice long nap today!", 
+            author = AuthorSimplishNamespace(
+                name="fake_user",
+                link_karma= 3,
+                comment_karma= 4,
+                has_verified_email = False,
+                is_mod = False,
+                is_gold = False                
+            ),
+            edited = False,
+            created_utc = 1673327425,
+            score = 10,
+            upvote_ratio = .5,
+            num_comments = 9,
+            selftext = "",
+            url = "example.com/fake_news_story"
+        ),
+        SimpleNamespace(
+            id = "56etffew3s",
+            title = "Breaking news: Someone said a really mean thing on the internet today!", 
+            author = AuthorSimplishNamespace(
+                name="pretend_user",
+                link_karma= 13,
+                comment_karma= 45,
+                has_verified_email = False,
+                is_mod = True,
+                is_gold = False    
+            ),
+            edited = True,
+            created_utc = 1673327625,
+            score = 10,
+            upvote_ratio = .9,
+            num_comments = 1,
+            selftext = "",
+            url = "example.com/pretend_story.html"
+        ),
+        SimpleNamespace(
+            id = "a443t43",
+            title = "Breaking news: Some grandparents made some yummy cookies for all the kids to share!", 
+            author = AuthorSimplishNamespace(
+                name="imaginary_user",
+                link_karma= 4,
+                comment_karma= 10,
+                has_verified_email = True,
+                is_mod = True,
+                is_gold = True    
+            ),
+            edited = False,
+            created_utc = 1673367625,
+            score = 50,
+            upvote_ratio = .7,
+            num_comments = 5,
+            selftext = "",
+            url = "example.com/imaginary_story.html"
+        ),
+        SimpleNamespace(
+            id = "324lkji34oi324",
+            title = "Breaking news: All the horrors of the universe revealed at last!", 
+            author = AuthorSimplishNamespace(
+                name="imaginary_user",
+                link_karma= 4,
+                comment_karma= 10,
+                has_verified_email = True,
+                is_mod = True,
+                is_gold = True    
+            ),
+            edited = False,
+            created_utc = 1673367635,
+            score = 50,
+            upvote_ratio = .7,
+            num_comments = 5,
+            selftext = "",
+            url = "example.com/imaginary_story.html"
+        )
+    ]
+    return iter(submission_list)
+
+
 # In[12]:
 
 
@@ -780,6 +862,11 @@ def subreddit(subreddit_name):
         return SimpleNamespace(
           submit = submit,
           hot = science_hot
+        )
+    elif subreddit_name == "news":
+        return SimpleNamespace(
+          submit = submit,
+          hot = news_hot
         )
 
 
