@@ -293,6 +293,7 @@ parts:
           - file: appendix/alternate_apis/ch10_05_02_extra_data_from_twitter
           - file: appendix/alternate_apis/ch10_05_03_alt_text_from_twitter
           - file: appendix/alternate_apis/ch11_04_03_demo_recommend_friend
+          - file: appendix/alternate_apis/ch13_05_demo_only_positive_news
           - file: appendix/alternate_apis/solutions/00_solutions
             sections:
               - file: appendix/alternate_apis/solutions/01_solution_practice_statements_variables_sleep
