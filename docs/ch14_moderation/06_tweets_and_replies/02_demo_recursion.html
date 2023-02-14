@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>14.6.2. Demo: Navigating Trees (recursion) &#8212; Social Media, Ethics, and Automation</title>
+    <title>14.7.2. Demo: Navigating Trees (recursion) &#8212; Social Media, Ethics, and Automation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="14.6.3. Demo: Hide Some Tweets" href="03_demo_hide_some_tweets.html" />
-    <link rel="prev" title="14.6.1. Tree Structures" href="01_trees.html" />
+    <link rel="next" title="14.7.3. Demo: Hide Some Comments" href="03_demo_hide_some_tweets.html" />
+    <link rel="prev" title="14.7.1. Tree Structures" href="01_trees.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -1090,17 +1090,17 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../04_moderation_and_ethics.html">
-     14.4. Moderation and Ethics
+     14.5. Moderation and Ethics
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../05_reflections.html">
-     14.5. Activity and Reflections on Moderation
+     14.6. Activity and Reflections on Moderation
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="00_intro.html">
-     14.6. Viewing Tweets and Replies
+     14.7. Viewing Tweets and Replies
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/>
     <label for="toctree-checkbox-28">
@@ -1110,24 +1110,24 @@ const thebe_selector_output = ".output, .cell_output"
     <ul class="current">
      <li class="toctree-l3">
       <a class="reference internal" href="01_trees.html">
-       14.6.1. Tree Structures
+       14.7.1. Tree Structures
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       14.6.2. Demo: Navigating Trees (recursion)
+       14.7.2. Demo: Navigating Trees (recursion)
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="03_demo_hide_some_tweets.html">
-       14.6.3. Demo: Hide Some Tweets
+       14.7.3. Demo: Hide Some Comments
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../07_learn_more.html">
-     14.7. Learn More
+     14.8. Learn More
     </a>
    </li>
   </ul>
@@ -1614,6 +1614,11 @@ const thebe_selector_output = ".output, .cell_output"
      Ch 11.4.3: Demo: Recommend a User to Follow
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/alternate_apis/ch13_05_demo_only_positive_news.html">
+     Demo: Only positive news
+    </a>
+   </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../appendix/alternate_apis/solutions/00_solutions.html">
      Practice Solutions (Twitter)
@@ -1880,8 +1885,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#structure-of-tweets-replies">
-   Structure of Tweets &amp; Replies
+  <a class="reference internal nav-link" href="#structure-of-comments-replies">
+   Structure of Comments &amp; Replies
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1928,8 +1933,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#structure-of-tweets-replies">
-   Structure of Tweets &amp; Replies
+  <a class="reference internal nav-link" href="#structure-of-comments-replies">
+   Structure of Comments &amp; Replies
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1967,9 +1972,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="demo-navigating-trees-recursion">
-<h1><span class="section-number">14.6.2. </span>Demo: Navigating Trees (recursion)<a class="headerlink" href="#demo-navigating-trees-recursion" title="Permalink to this headline">#</a></h1>
-<section id="structure-of-tweets-replies">
-<h2>Structure of Tweets &amp; Replies<a class="headerlink" href="#structure-of-tweets-replies" title="Permalink to this headline">#</a></h2>
+<h1><span class="section-number">14.7.2. </span>Demo: Navigating Trees (recursion)<a class="headerlink" href="#demo-navigating-trees-recursion" title="Permalink to this headline">#</a></h1>
+<section id="structure-of-comments-replies">
+<h2>Structure of Comments &amp; Replies<a class="headerlink" href="#structure-of-comments-replies" title="Permalink to this headline">#</a></h2>
 <p>Let’s look at our example from before of comments and replies:
 <img alt="Initial tweet: &quot;That last exam in sure was hard!&quot; Two main replies, the first is &quot;It sure was hard, what score did you get?&quot; and that replies has two replies: &quot;I got a 67% :(&quot; and &quot;I got a 73%&quot;. The second main reply is &quot;I didn't think it was that bad&quot;. That second main reply has two replies, the first is &quot;how was that not a super hard exam?&quot; and the second is &quot;of course you didn't&quot;, which has a reply &quot;what's that supposed to mean?&quot; which has a reply &quot;you're an overacheiver&quot; which has a reply &quot;and that's bad how?&quot;" src="../../_images/comments_replies_trees.png" /></p>
 <p>When we want to represent Trees (like comments and replies) in code, one way of doing so is by using dictionaries.</p>
@@ -1979,7 +1984,7 @@ title="Print to PDF"
 <p>Below is code to store that in a variable (though it looks kind of messy):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tweet_about_exam</span> <span class="o">=</span> <span class="p">{</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">comment_about_exam</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;That last exam in sure was hard!&#39;</span><span class="p">,</span>
     <span class="s1">&#39;replies&#39;</span><span class="p">:[{</span>
         <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;It sure was hard, what score did you get? &#39;</span><span class="p">,</span>
@@ -2058,7 +2063,7 @@ title="Print to PDF"
 <p>First, we can just print out the initial tweet (the root):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display_indented</span><span class="p">(</span><span class="n">tweet_about_exam</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display_indented</span><span class="p">(</span><span class="n">comment_about_exam</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -2070,9 +2075,9 @@ title="Print to PDF"
 <p>If we want to print the initial tweet, and just the replies to that tweet, we can use a for loop, like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display_indented</span><span class="p">(</span><span class="n">tweet_about_exam</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display_indented</span><span class="p">(</span><span class="n">comment_about_exam</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">])</span>
 
-<span class="k">for</span> <span class="n">reply</span> <span class="ow">in</span> <span class="n">tweet_about_exam</span><span class="p">[</span><span class="s1">&#39;replies&#39;</span><span class="p">]:</span>
+<span class="k">for</span> <span class="n">reply</span> <span class="ow">in</span> <span class="n">comment_about_exam</span><span class="p">[</span><span class="s1">&#39;replies&#39;</span><span class="p">]:</span>
     <span class="n">display_indented</span><span class="p">(</span><span class="n">reply</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">],</span> <span class="n">left_margin</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2083,9 +2088,9 @@ title="Print to PDF"
 <p>If we also want to include the replies to those initial replies, we can put another for loop inside of there:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display_indented</span><span class="p">(</span><span class="n">tweet_about_exam</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display_indented</span><span class="p">(</span><span class="n">comment_about_exam</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">])</span>
 
-<span class="k">for</span> <span class="n">reply</span> <span class="ow">in</span> <span class="n">tweet_about_exam</span><span class="p">[</span><span class="s1">&#39;replies&#39;</span><span class="p">]:</span>
+<span class="k">for</span> <span class="n">reply</span> <span class="ow">in</span> <span class="n">comment_about_exam</span><span class="p">[</span><span class="s1">&#39;replies&#39;</span><span class="p">]:</span>
     <span class="n">display_indented</span><span class="p">(</span><span class="n">reply</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">],</span> <span class="n">left_margin</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
     
     <span class="k">for</span> <span class="n">reply_reply</span> <span class="ow">in</span> <span class="n">reply</span><span class="p">[</span><span class="s1">&#39;replies&#39;</span><span class="p">]:</span>
@@ -2099,9 +2104,9 @@ title="Print to PDF"
 <p>If we want to get all of the replies in our example though, we’ll need to have a for loop for each level, but the code is going to be getting messy:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display_indented</span><span class="p">(</span><span class="n">tweet_about_exam</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display_indented</span><span class="p">(</span><span class="n">comment_about_exam</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">])</span>
 
-<span class="k">for</span> <span class="n">reply</span> <span class="ow">in</span> <span class="n">tweet_about_exam</span><span class="p">[</span><span class="s1">&#39;replies&#39;</span><span class="p">]:</span>
+<span class="k">for</span> <span class="n">reply</span> <span class="ow">in</span> <span class="n">comment_about_exam</span><span class="p">[</span><span class="s1">&#39;replies&#39;</span><span class="p">]:</span>
     <span class="n">display_indented</span><span class="p">(</span><span class="n">reply</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">],</span> <span class="n">left_margin</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
     
     <span class="k">for</span> <span class="n">reply_reply</span> <span class="ow">in</span> <span class="n">reply</span><span class="p">[</span><span class="s1">&#39;replies&#39;</span><span class="p">]:</span>
@@ -2129,25 +2134,25 @@ title="Print to PDF"
 <section id="navigate-with-recursion-a-function-that-calls-itself">
 <h3>Navigate with recursion: a function that calls itself<a class="headerlink" href="#navigate-with-recursion-a-function-that-calls-itself" title="Permalink to this headline">#</a></h3>
 <p>We can use a clever programming trick that will work better.</p>
-<p>We make a function that prints a tweet and all the replies (<code class="docutils literal notranslate"><span class="pre">print_tweet_and_replies</span></code>). So our function will first print the text of the tweet, and then it will go through each reply, but instead of printing the reply directly, there is a function that will print that tweet and all replies to it: <code class="docutils literal notranslate"><span class="pre">print_tweet_and_replies</span></code> (which is the function we are writing).</p>
+<p>We make a function that prints a comment and all the replies (<code class="docutils literal notranslate"><span class="pre">print_comment_and_replies</span></code>). So our function will first print the text of the comment, and then it will go through each reply, but instead of printing the reply directly, there is a function that will print that comment and all replies to it: <code class="docutils literal notranslate"><span class="pre">print_comment_and_replies</span></code> (which is the function we are writing).</p>
 <p>This trick can be confusing to understand (and it’s ok if you don’t), but let’s look at it again in psuedocode:</p>
-<p>The function <code class="docutils literal notranslate"><span class="pre">print_tweet_and_replies</span></code> does the following</p>
+<p>The function <code class="docutils literal notranslate"><span class="pre">print_comment_and_replies</span></code> does the following</p>
 <ol class="simple">
-<li><p>Print the text of the tweet</p></li>
-<li><p>For each of the replies to that tweet, use the <code class="docutils literal notranslate"><span class="pre">print_tweet_and_replies</span></code> function to print it out</p></li>
+<li><p>Print the text of the comment</p></li>
+<li><p>For each of the replies to that comment, use the <code class="docutils literal notranslate"><span class="pre">print_comment_and_replies</span></code> function to print it out</p></li>
 </ol>
-<p>So, we will call <code class="docutils literal notranslate"><span class="pre">print_tweet_and_replies</span></code> with our initial tweet, and that function will then call <code class="docutils literal notranslate"><span class="pre">print_tweet_and_replies</span></code> for each of the replys to that tweet, and then those new calls to <code class="docutils literal notranslate"><span class="pre">print_tweet_and_replies</span></code> will call <code class="docutils literal notranslate"><span class="pre">print_tweet_and_replies</span></code> for all the replies to those tweets, and so on, until all the tweets are printed out.</p>
+<p>So, we will call <code class="docutils literal notranslate"><span class="pre">print_comment_and_replies</span></code> with our initial comment, and that function will then call <code class="docutils literal notranslate"><span class="pre">print_comment_and_replies</span></code> for each of the replys to that comment, and then those new calls to <code class="docutils literal notranslate"><span class="pre">print_comment_and_replies</span></code> will call <code class="docutils literal notranslate"><span class="pre">print_comment_and_replies</span></code> for all the replies to those comments, and so on, until all the comments are printed out.</p>
 <p><em>Note: In computer science terms, this is called a “depth-first search” algorithm</em></p>
-<p>The actual code for <code class="docutils literal notranslate"><span class="pre">print_tweet_and_replies</span></code> is here:</p>
+<p>The actual code for <code class="docutils literal notranslate"><span class="pre">print_comment_and_replies</span></code> is here:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_tweet_and_replies</span><span class="p">(</span><span class="n">tweet</span><span class="p">):</span>
-    <span class="c1"># print tweet</span>
-    <span class="n">display_indented</span><span class="p">(</span><span class="n">tweet</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_comment_and_replies</span><span class="p">(</span><span class="n">comment</span><span class="p">):</span>
+    <span class="c1"># print comment</span>
+    <span class="n">display_indented</span><span class="p">(</span><span class="n">comment</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">])</span>
     
     <span class="c1">#print replies (and the replies of those, etc.)</span>
-    <span class="k">for</span> <span class="n">reply</span> <span class="ow">in</span> <span class="n">tweet</span><span class="p">[</span><span class="s1">&#39;replies&#39;</span><span class="p">]:</span>
-        <span class="n">print_tweet_and_replies</span><span class="p">(</span><span class="n">reply</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">reply</span> <span class="ow">in</span> <span class="n">comment</span><span class="p">[</span><span class="s1">&#39;replies&#39;</span><span class="p">]:</span>
+        <span class="n">print_comment_and_replies</span><span class="p">(</span><span class="n">reply</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2155,7 +2160,7 @@ title="Print to PDF"
 <p>And we can test it out on our tweet and see it work</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_tweet_and_replies</span><span class="p">(</span><span class="n">tweet_about_exam</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_comment_and_replies</span><span class="p">(</span><span class="n">comment_about_exam</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2165,13 +2170,13 @@ title="Print to PDF"
 <p>In the above result, there were no indents, but we can use another trick (getting more confusing) where we track how many indents to make when the function is called (by default, it starts at 0). When the function calls itself to print the replies, we adde:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_tweet_and_replies</span><span class="p">(</span><span class="n">tweet</span><span class="p">,</span> <span class="n">num_indents</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-    <span class="c1"># print indented tweet</span>
-    <span class="n">display_indented</span><span class="p">(</span><span class="n">tweet</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">],</span> <span class="n">left_margin</span><span class="o">=</span><span class="n">num_indents</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_comment_and_replies</span><span class="p">(</span><span class="n">comment</span><span class="p">,</span> <span class="n">num_indents</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="c1"># print indented comment</span>
+    <span class="n">display_indented</span><span class="p">(</span><span class="n">comment</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">],</span> <span class="n">left_margin</span><span class="o">=</span><span class="n">num_indents</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span>
     
     <span class="c1">#print replies (and the replies of those, etc.)</span>
-    <span class="k">for</span> <span class="n">reply</span> <span class="ow">in</span> <span class="n">tweet</span><span class="p">[</span><span class="s1">&#39;replies&#39;</span><span class="p">]:</span>
-        <span class="n">print_tweet_and_replies</span><span class="p">(</span><span class="n">reply</span><span class="p">,</span> <span class="n">num_indents</span> <span class="o">=</span> <span class="n">num_indents</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">reply</span> <span class="ow">in</span> <span class="n">comment</span><span class="p">[</span><span class="s1">&#39;replies&#39;</span><span class="p">]:</span>
+        <span class="n">print_comment_and_replies</span><span class="p">(</span><span class="n">reply</span><span class="p">,</span> <span class="n">num_indents</span> <span class="o">=</span> <span class="n">num_indents</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2179,7 +2184,7 @@ title="Print to PDF"
 <p>And when we test this out, we can see the result</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_tweet_and_replies</span><span class="p">(</span><span class="n">tweet_about_exam</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_comment_and_replies</span><span class="p">(</span><span class="n">comment_about_exam</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2221,13 +2226,13 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">14.6.1. </span>Tree Structures</p>
+            <p class="prev-next-title"><span class="section-number">14.7.1. </span>Tree Structures</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="03_demo_hide_some_tweets.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">14.6.3. </span>Demo: Hide Some Tweets</p>
+        <p class="prev-next-title"><span class="section-number">14.7.3. </span>Demo: Hide Some Comments</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

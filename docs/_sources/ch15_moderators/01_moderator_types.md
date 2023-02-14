@@ -14,7 +14,7 @@ If you are running your own site and suddenly realize you have a moderation prob
 ## Dedicated Moderation Teams
 After a company starts working on moderation, they might decide to invest in teams specifically dedicated to content moderation.
 
-% TODO: Talk about this in terms of human computers
+These teams of content moderators could be considered human computers hired to evaluate examples against the content moderation policy of the platform they are working for.
 
 ## Individuals moderating their own spaces
 You can also having people moderate their own spaces. For example:

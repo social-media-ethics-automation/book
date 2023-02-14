@@ -15,7 +15,7 @@ So most social media sites will often have rules about content moderation, and a
 With copyrighted content, the platform YouTube is very aggressive in allowing movie studios to get videos taken down, so [many content creators on YouTube have had their videos taken down erroneously](https://www.theverge.com/2021/12/6/22820318/youtube-copyright-claims-transparency-report).
 
 ## Safety
-Another concern is for the safety of the users on the social media platform (or at least the users that the platform cares about). Users who don't feel safe will leave the platform, so social media companies are incentivized to help their users feel safe. So this often means moderation to stop trolling and harassment.
+Another concern is for the safety of the users on the social media platform (or at least the users that the platform cares about). Users who don't feel safe will leave the platform, so social media companies are incentivize to help their users feel safe. So this often means moderation to stop trolling and harassment.
 
 ## Potentially Offensive
 Another category is content that users or advertisers might find offensive. If users see things that offend them too often, they might leave the site, and if advertisers see their ads next to too much offensive content, they might stop paying for ads on the site. So platforms might put limits on language (e.g., racial slurs), violence, sex, and nudity. Sometimes different users or advertisers have different opinions on what should be allowed or not. For example, "[The porn ban of 2018 was a defining event for Tumblr that led to a 30 percent drop in traffic and a mass exodus of users that blindsided the company](https://mashable.com/article/how-tumblr-lost-its-way)."
