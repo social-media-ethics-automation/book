@@ -3,7 +3,7 @@
 
 # # Demo: Navigating Trees (recursion)
 
-# ## Structure of Tweets & Replies
+# ## Structure of Comments & Replies
 # Let's look at our example from before of comments and replies:
 # ![Initial tweet: "That last exam in sure was hard!" Two main replies, the first is "It sure was hard, what score did you get?" and that replies has two replies: "I got a 67% :(" and "I got a 73%". The second main reply is "I didn't think it was that bad". That second main reply has two replies, the first is "how was that not a super hard exam?" and the second is "of course you didn't", which has a reply "what's that supposed to mean?" which has a reply "you're an overacheiver" which has a reply "and that's bad how?"](comments_replies_trees.png)
 # 
@@ -20,7 +20,7 @@
 # In[1]:
 
 
-tweet_about_exam = {
+comment_about_exam = {
     'text': 'That last exam in sure was hard!',
     'replies':[{
         'text': 'It sure was hard, what score did you get? ',
@@ -95,7 +95,7 @@ display_indented("Here is an example with an left_margin of 20", left_margin=20)
 # In[5]:
 
 
-display_indented(tweet_about_exam['text'])
+display_indented(comment_about_exam['text'])
 
 
 # ### Navigate with for loops
@@ -105,9 +105,9 @@ display_indented(tweet_about_exam['text'])
 # In[6]:
 
 
-display_indented(tweet_about_exam['text'])
+display_indented(comment_about_exam['text'])
 
-for reply in tweet_about_exam['replies']:
+for reply in comment_about_exam['replies']:
     display_indented(reply['text'], left_margin=20)
 
 
@@ -116,9 +116,9 @@ for reply in tweet_about_exam['replies']:
 # In[7]:
 
 
-display_indented(tweet_about_exam['text'])
+display_indented(comment_about_exam['text'])
 
-for reply in tweet_about_exam['replies']:
+for reply in comment_about_exam['replies']:
     display_indented(reply['text'], left_margin=20)
     
     for reply_reply in reply['replies']:
@@ -130,9 +130,9 @@ for reply in tweet_about_exam['replies']:
 # In[8]:
 
 
-display_indented(tweet_about_exam['text'])
+display_indented(comment_about_exam['text'])
 
-for reply in tweet_about_exam['replies']:
+for reply in comment_about_exam['replies']:
     display_indented(reply['text'], left_margin=20)
     
     for reply_reply in reply['replies']:
@@ -154,30 +154,30 @@ for reply in tweet_about_exam['replies']:
 # ### Navigate with recursion: a function that calls itself
 # We can use a clever programming trick that will work better.
 # 
-# We make a function that prints a tweet and all the replies (`print_tweet_and_replies`). So our function will first print the text of the tweet, and then it will go through each reply, but instead of printing the reply directly, there is a function that will print that tweet and all replies to it: `print_tweet_and_replies` (which is the function we are writing).
+# We make a function that prints a comment and all the replies (`print_comment_and_replies`). So our function will first print the text of the comment, and then it will go through each reply, but instead of printing the reply directly, there is a function that will print that comment and all replies to it: `print_comment_and_replies` (which is the function we are writing).
 # 
 # This trick can be confusing to understand (and it's ok if you don't), but let's look at it again in psuedocode:
 # 
-# The function `print_tweet_and_replies` does the following
-# 1. Print the text of the tweet
-# 2. For each of the replies to that tweet, use the `print_tweet_and_replies` function to print it out
+# The function `print_comment_and_replies` does the following
+# 1. Print the text of the comment
+# 2. For each of the replies to that comment, use the `print_comment_and_replies` function to print it out
 # 
-# So, we will call `print_tweet_and_replies` with our initial tweet, and that function will then call `print_tweet_and_replies` for each of the replys to that tweet, and then those new calls to `print_tweet_and_replies` will call `print_tweet_and_replies` for all the replies to those tweets, and so on, until all the tweets are printed out.
+# So, we will call `print_comment_and_replies` with our initial comment, and that function will then call `print_comment_and_replies` for each of the replys to that comment, and then those new calls to `print_comment_and_replies` will call `print_comment_and_replies` for all the replies to those comments, and so on, until all the comments are printed out.
 # 
 # _Note: In computer science terms, this is called a "depth-first search" algorithm_
 # 
-# The actual code for `print_tweet_and_replies` is here:
+# The actual code for `print_comment_and_replies` is here:
 
 # In[9]:
 
 
-def print_tweet_and_replies(tweet):
-    # print tweet
-    display_indented(tweet['text'])
+def print_comment_and_replies(comment):
+    # print comment
+    display_indented(comment['text'])
     
     #print replies (and the replies of those, etc.)
-    for reply in tweet['replies']:
-        print_tweet_and_replies(reply)
+    for reply in comment['replies']:
+        print_comment_and_replies(reply)
 
 
 # And we can test it out on our tweet and see it work
@@ -185,7 +185,7 @@ def print_tweet_and_replies(tweet):
 # In[10]:
 
 
-print_tweet_and_replies(tweet_about_exam)
+print_comment_and_replies(comment_about_exam)
 
 
 # In the above result, there were no indents, but we can use another trick (getting more confusing) where we track how many indents to make when the function is called (by default, it starts at 0). When the function calls itself to print the replies, we adde:
@@ -193,13 +193,13 @@ print_tweet_and_replies(tweet_about_exam)
 # In[11]:
 
 
-def print_tweet_and_replies(tweet, num_indents=0):
-    # print indented tweet
-    display_indented(tweet['text'], left_margin=num_indents*20)
+def print_comment_and_replies(comment, num_indents=0):
+    # print indented comment
+    display_indented(comment['text'], left_margin=num_indents*20)
     
     #print replies (and the replies of those, etc.)
-    for reply in tweet['replies']:
-        print_tweet_and_replies(reply, num_indents = num_indents + 1)
+    for reply in comment['replies']:
+        print_comment_and_replies(reply, num_indents = num_indents + 1)
 
 
 # And when we test this out, we can see the result
@@ -207,11 +207,5 @@ def print_tweet_and_replies(tweet, num_indents=0):
 # In[12]:
 
 
-print_tweet_and_replies(tweet_about_exam)
-
-
-# In[ ]:
-
-
-
+print_comment_and_replies(comment_about_exam)
 

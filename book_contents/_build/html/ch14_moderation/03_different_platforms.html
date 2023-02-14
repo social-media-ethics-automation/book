@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="14.4. Moderation and Ethics" href="04_moderation_and_ethics.html" />
+    <link rel="next" title="14.5. Moderation and Ethics" href="04_moderation_and_ethics.html" />
     <link rel="prev" title="14.2. Moderation Tools" href="02_moderation_tools.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -1090,17 +1090,17 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="04_moderation_and_ethics.html">
-     14.4. Moderation and Ethics
+     14.5. Moderation and Ethics
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="05_reflections.html">
-     14.5. Activity and Reflections on Moderation
+     14.6. Activity and Reflections on Moderation
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="06_tweets_and_replies/00_intro.html">
-     14.6. Viewing Tweets and Replies
+     14.7. Viewing Tweets and Replies
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/>
     <label for="toctree-checkbox-28">
@@ -1110,24 +1110,24 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="06_tweets_and_replies/01_trees.html">
-       14.6.1. Tree Structures
+       14.7.1. Tree Structures
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="06_tweets_and_replies/02_demo_recursion.html">
-       14.6.2. Demo: Navigating Trees (recursion)
+       14.7.2. Demo: Navigating Trees (recursion)
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="06_tweets_and_replies/03_demo_hide_some_tweets.html">
-       14.6.3. Demo: Hide Some Tweets
+       14.7.3. Demo: Hide Some Comments
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="07_learn_more.html">
-     14.7. Learn More
+     14.8. Learn More
     </a>
    </li>
   </ul>
@@ -1614,6 +1614,11 @@ const thebe_selector_output = ".output, .cell_output"
      Ch 11.4.3: Demo: Recommend a User to Follow
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/alternate_apis/ch13_05_demo_only_positive_news.html">
+     Demo: Only positive news
+    </a>
+   </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../appendix/alternate_apis/solutions/00_solutions.html">
      Practice Solutions (Twitter)
@@ -1850,29 +1855,41 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#chan-8chan-minimal-moderation">
-   14.3.1. 4chan/8chan (minimal moderation)
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   14.3. Comparing Different Platforms
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#chan-8chan-minimal-moderation">
+     14.3.1. 4chan/8chan (minimal moderation)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reddit-subreddits-with-volunteer-moderators">
+     14.3.2. Reddit (subreddits with volunteer moderators)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#facebook-hired-moderators">
+     14.3.3. Facebook (hired moderators)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#removing-the-option-of-feedback">
+     14.3.4. Removing the option of feedback
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#public-figure-exception">
+     14.3.5. Public Figure Exception
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reddit-subreddits-with-volunteer-moderators">
-   14.3.2. Reddit (subreddits with volunteer moderators)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#facebook-hired-moderators">
-   14.3.3. Facebook (hired moderators)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#removing-the-option-of-feedback">
-   14.3.4. Removing the option of feedback
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#public-figure-exception">
-   14.3.5. Public Figure Exception
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#government-censorship">
+   14.4. Government Censorship
   </a>
  </li>
 </ul>
@@ -1894,29 +1911,41 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#chan-8chan-minimal-moderation">
-   14.3.1. 4chan/8chan (minimal moderation)
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   14.3. Comparing Different Platforms
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#chan-8chan-minimal-moderation">
+     14.3.1. 4chan/8chan (minimal moderation)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reddit-subreddits-with-volunteer-moderators">
+     14.3.2. Reddit (subreddits with volunteer moderators)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#facebook-hired-moderators">
+     14.3.3. Facebook (hired moderators)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#removing-the-option-of-feedback">
+     14.3.4. Removing the option of feedback
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#public-figure-exception">
+     14.3.5. Public Figure Exception
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reddit-subreddits-with-volunteer-moderators">
-   14.3.2. Reddit (subreddits with volunteer moderators)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#facebook-hired-moderators">
-   14.3.3. Facebook (hired moderators)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#removing-the-option-of-feedback">
-   14.3.4. Removing the option of feedback
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#public-figure-exception">
-   14.3.5. Public Figure Exception
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#government-censorship">
+   14.4. Government Censorship
   </a>
  </li>
 </ul>
@@ -1935,7 +1964,7 @@ title="Print to PDF"
 <section id="chan-8chan-minimal-moderation">
 <h2><span class="section-number">14.3.1. </span>4chan/8chan (minimal moderation)<a class="headerlink" href="#chan-8chan-minimal-moderation" title="Permalink to this headline">#</a></h2>
 <p>Sites like 4chan and 8chan bill themselves as sites that support free-speech, in the sense that they don’t ban trolling and hateful speech, though they may remove some illegal content, like child pornography.</p>
-<p>One thing these sites do ban though, is spam. While spam is certainly legal, and a form of speech, this speech is restricted on these sites. If the chat boards filled up with spam, the users would find it boring and leave, so for practical reasons, these sites still moderate for spam (though they may allow some uses of ironic spam, <a class="reference external" href="https://knowyourmeme.com/memes/copypasta">copypasta</a>).</p>
+<p>One thing these sites do ban though, is spam. While much of spam is certainly legal, and a form of speech, this speech is restricted on these sites. If the chat boards filled up with spam, the users would find it boring and leave, so for practical reasons, these sites still moderate for spam (though they may allow some uses of ironic spam, <a class="reference external" href="https://knowyourmeme.com/memes/copypasta">copypasta</a>).</p>
 </section>
 <section id="reddit-subreddits-with-volunteer-moderators">
 <h2><span class="section-number">14.3.2. </span>Reddit (subreddits with volunteer moderators)<a class="headerlink" href="#reddit-subreddits-with-volunteer-moderators" title="Permalink to this headline">#</a></h2>
@@ -1964,6 +1993,10 @@ title="Print to PDF"
 <h2><span class="section-number">14.3.5. </span>Public Figure Exception<a class="headerlink" href="#public-figure-exception" title="Permalink to this headline">#</a></h2>
 <p>Twitter, Facebook, and other platforms had an <a class="reference external" href="https://help.twitter.com/en/rules-and-policies/public-interest">exception to their normal moderation policies for political leaders</a>, where they wouldn’t ban them even if they violated site policies (most notably applied to Donald Trump). After the January 6th insurrection at the US Capital, Donald Trump was banned first from Twitter, then from Facebook, and <a class="reference external" href="https://www.theverge.com/2021/6/3/22474738/facebook-ending-political-figure-exemption-moderation-policy">Facebook announced an end special treatment for politicians</a>.</p>
 </section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="government-censorship">
+<h1><span class="section-number">14.4. </span>Government Censorship<a class="headerlink" href="#government-censorship" title="Permalink to this headline">#</a></h1>
+<p>Governments might also have rules about content moderation and censorship, such as laws in the US against Child Sexual Abuse Material (CSAM). China additionally censors various news stories in their country, like stories about protests. In addition to banning news on their platforms, in late 2022 China took took advantage of Elon Musk having fired almost all Twitter content moderators to hide news of protests by <a class="reference external" href="https://techcrunch.com/2022/11/28/great-wall-of-porn-obscures-china-protest-news-on-twitter/">flooding Twitter with spam and porn</a>.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -2003,7 +2036,7 @@ title="Print to PDF"
     <a class='right-next' id="next-link" href="04_moderation_and_ethics.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">14.4. </span>Moderation and Ethics</p>
+        <p class="prev-next-title"><span class="section-number">14.5. </span>Moderation and Ethics</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

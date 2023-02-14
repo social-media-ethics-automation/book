@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>14.6.1. Tree Structures &#8212; Social Media, Ethics, and Automation</title>
+    <title>14.7.1. Tree Structures &#8212; Social Media, Ethics, and Automation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="14.6.2. Demo: Navigating Trees (recursion)" href="02_demo_recursion.html" />
-    <link rel="prev" title="14.6. Viewing Tweets and Replies" href="00_intro.html" />
+    <link rel="next" title="14.7.2. Demo: Navigating Trees (recursion)" href="02_demo_recursion.html" />
+    <link rel="prev" title="14.7. Viewing Tweets and Replies" href="00_intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -1090,17 +1090,17 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../04_moderation_and_ethics.html">
-     14.4. Moderation and Ethics
+     14.5. Moderation and Ethics
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../05_reflections.html">
-     14.5. Activity and Reflections on Moderation
+     14.6. Activity and Reflections on Moderation
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="00_intro.html">
-     14.6. Viewing Tweets and Replies
+     14.7. Viewing Tweets and Replies
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/>
     <label for="toctree-checkbox-28">
@@ -1110,24 +1110,24 @@ const thebe_selector_output = ".output, .cell_output"
     <ul class="current">
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       14.6.1. Tree Structures
+       14.7.1. Tree Structures
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="02_demo_recursion.html">
-       14.6.2. Demo: Navigating Trees (recursion)
+       14.7.2. Demo: Navigating Trees (recursion)
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="03_demo_hide_some_tweets.html">
-       14.6.3. Demo: Hide Some Tweets
+       14.7.3. Demo: Hide Some Comments
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../07_learn_more.html">
-     14.7. Learn More
+     14.8. Learn More
     </a>
    </li>
   </ul>
@@ -1614,6 +1614,11 @@ const thebe_selector_output = ".output, .cell_output"
      Ch 11.4.3: Demo: Recommend a User to Follow
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/alternate_apis/ch13_05_demo_only_positive_news.html">
+     Demo: Only positive news
+    </a>
+   </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../appendix/alternate_apis/solutions/00_solutions.html">
      Practice Solutions (Twitter)
@@ -1853,7 +1858,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="tree-structures">
-<h1><span class="section-number">14.6.1. </span>Tree Structures<a class="headerlink" href="#tree-structures" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">14.7.1. </span>Tree Structures<a class="headerlink" href="#tree-structures" title="Permalink to this headline">#</a></h1>
 <p>Let’s look at an example of a comment with replies, and replies to those replies, etc. (this could be on twitter or any other social media system):</p>
 <figure class="align-default" id="comments-and-replies-fig">
 <a class="reference internal image-reference" href="../../_images/comments_and_replies.png"><img alt="Initial tweet: &quot;That last exam in sure was hard!&quot; Two main replies, the first is &quot;It sure was hard, what score did you get?&quot; and that replies has two replies: &quot;I got a 67% :(&quot; and &quot;I got a 73%&quot;. The second main reply is &quot;I didn't think it was that bad&quot;. That second main reply has two replies, the first is &quot;how was that not a super hard exam?&quot; and the second is &quot;of course you didn't&quot;, which has a reply &quot;what's that supposed to mean?&quot; which has a reply &quot;you're an overacheiver&quot; which has a reply &quot;and that's bad how?&quot;" src="../../_images/comments_and_replies.png" style="width: 300px;" /></a>
@@ -1904,13 +1909,13 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">14.6. </span>Viewing Tweets and Replies</p>
+            <p class="prev-next-title"><span class="section-number">14.7. </span>Viewing Tweets and Replies</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="02_demo_recursion.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">14.6.2. </span>Demo: Navigating Trees (recursion)</p>
+        <p class="prev-next-title"><span class="section-number">14.7.2. </span>Demo: Navigating Trees (recursion)</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

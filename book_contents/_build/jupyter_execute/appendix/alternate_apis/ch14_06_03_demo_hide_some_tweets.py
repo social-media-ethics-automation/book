@@ -1,16 +1,16 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Demo: Hide Some Comments
+# # Ch 14.6.3: Demo: Hide Some Tweets
 # 
-# Now we will use our code from before, but we will skip displaying some comments, and we can make up whatever rule we want to do this.
+# Now we will use our code from before, but we will skip displaying some tweets, and we can make up whatever rule we want to do this.
 # 
 # First let's make our fake conversation data:
 
 # In[1]:
 
 
-comment_about_exam = {
+tweet_about_exam = {
     'text': 'That last exam in sure was hard!',
     'replies':[{
         'text': 'It sure was hard, what score did you get? ',
@@ -67,13 +67,13 @@ def display_indented(text, left_margin=0):
 # In[3]:
 
 
-def print_comment_and_replies(comment, num_indents=0):
+def print_tweet_and_replies(tweet, num_indents=0):
     # print indented tweet
-    display_indented(comment['text'], left_margin=num_indents*20)
+    display_indented(tweet['text'], left_margin=num_indents*20)
     
     #print replies (and the replies of those, etc.)
-    for reply in comment['replies']:
-        print_comment_and_replies(reply, num_indents = num_indents + 1)
+    for reply in tweet['replies']:
+        print_tweet_and_replies(reply, num_indents = num_indents + 1)
 
 
 # And when we test this out, we can see the result
@@ -81,7 +81,7 @@ def print_comment_and_replies(comment, num_indents=0):
 # In[4]:
 
 
-print_comment_and_replies(comment_about_exam)
+print_tweet_and_replies(tweet_about_exam)
 
 
 # ## Display only some
@@ -105,14 +105,14 @@ def should_display(comment):
 # In[6]:
 
 
-def print_comment_and_replies(comment, num_indents=0):
-    if(should_display(comment)):
+def print_tweet_and_replies(tweet, num_indents=0):
+    if(should_display(tweet)):
         # print indented tweet
-        display_indented(comment['text'], left_margin=num_indents*20)
+        display_indented(tweet['text'], left_margin=num_indents*20)
 
         #print replies (and the replies of those, etc.)
-        for reply in comment['replies']:
-            print_comment_and_replies(reply, num_indents = num_indents + 1)
+        for reply in tweet['replies']:
+            print_tweet_and_replies(reply, num_indents = num_indents + 1)
 
 
 # Now let's test it out and see that fewer of the messages were printed out (only the long ones)
@@ -120,7 +120,7 @@ def print_comment_and_replies(comment, num_indents=0):
 # In[7]:
 
 
-print_comment_and_replies(comment_about_exam)
+print_tweet_and_replies(tweet_about_exam)
 
 
 # ## Making up new rules
@@ -144,11 +144,5 @@ def should_display(comment):
 # In[9]:
 
 
-print_comment_and_replies(comment_about_exam)
-
-
-# In[ ]:
-
-
-
+print_tweet_and_replies(tweet_about_exam)
 
