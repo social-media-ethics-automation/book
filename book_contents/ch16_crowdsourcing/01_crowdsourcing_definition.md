@@ -1,8 +1,8 @@
 # Crowdsourcing Definition
 
-When tasks are done through large groups of people making relatively small contributions, this is called __crowd work__. The people making the contributions generally come from a crowd of people that aren't necessarily tied to the task (e.g., all internet users can edit Wikipedia), but then people from the crowd either get chosen to participate, or volunteer themselves.
+When tasks are done through large groups of people making relatively small contributions, this is called __crowdsourcing__. The people making the contributions generally come from a crowd of people that aren't necessarily tied to the task (e.g., all internet users can edit Wikipedia), but then people from the crowd either get chosen to participate, or volunteer themselves.
 
- When a task or project is given to a crowd to work on, it is called __crowdsourcing__ (e.g., Wikipedia building an encyclopedia of knowledge). When a crowd is providing financial contributions, that is called crowdfunding (e.g., [patreon](https://www.patreon.com/), [kickstarter](https://www.kickstarter.com/), [gofundme](https://www.gofundme.com/)).
+ When a crowd is providing financial contributions, that is called crowdfunding (e.g., [patreon](https://www.patreon.com/), [kickstarter](https://www.kickstarter.com/), [gofundme](https://www.gofundme.com/)).
 
 Humans have always collaborated on tasks, and [crowds have been enlisted in performing tasks long before the internet existed](https://en.wikipedia.org/wiki/Crowdsourcing#Historical_examples). What social media (and other internet systems) have done is expand the options for how people can collaborate on tasks.
 
@@ -16,6 +16,6 @@ Some of the different characteristics that means of communication can have inclu
 - __Archiving__: Some forms of communication automatically produce an archive of the communication (like a chat message history), while others do not (like an in-person conversation)
 - __Anonymity__: Some forms of communication make anonymity nearly impossible (like an in-person conversation), while others make it easy to remain anonymous.
 
-Because of these (and other) differences, different forms of communication might be preferrable for different tasks. For example, you might send an email to the person sitting next at work to you if you want to keep an archive of the communication (which is also conveniently grouped into email threads). Or you might send a text message to the person sitting next to you if you are criticizing the teacher, but want to do so discretely, so the teacher doesn't notice.
+Because of these (and other) differences, different forms of communication might be preferable for different tasks. For example, you might send an email to the person sitting next at work to you if you want to keep an archive of the communication (which is also conveniently grouped into email threads). Or you might send a text message to the person sitting next to you if you are criticizing the teacher, but want to do so discretely, so the teacher doesn't notice.
 
-These different forms of communication can then support different methods of crowd work.
+These different forms of communication can then support different methods of crowdsourcing.
