@@ -1,8 +1,7 @@
 # Ad-hoc Crowdsourcing Examples
-Crowd work isn't always pre-planned or designed for. Sometimes a crowd stumbles into crowd work in an unplanned, [ad hoc](https://www.merriam-webster.com/dictionary/ad%20hoc) manner.
+Crowdsourcing isn't always pre-planned or designed for. Sometimes a crowd stumbles into crowd tasks in an unplanned, [ad hoc](https://www.merriam-webster.com/dictionary/ad%20hoc) manner. Like identifying someone and sharing the news in this scene from the movie [Crazy Rich Asians](https://www.imdb.com/title/tt3104988/):
 
-% - Social media allows for new ways of organizing and performing crowd harassment
-%  - https://www.youtube.com/watch?v=PeB41BBzZSo
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PeB41BBzZSo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## "Solving" a "Problem"
 When social media users work together, we can consider what problem they are solving. For example, for some of the Tiktok Duet videos from the virality chapter, the "problem" would be something like "how do we create music out of this source video" and the different musicians contribute their own piece to the solution. For some other examples:
@@ -17,16 +16,16 @@ For example, in the immediate aftermath of the 2013 Boston Marathon bombing, FBI
 
 
 ## Social and political movements
-Some ad hoc crowd work can be part of a social or political movement. For example, [Social media organizing](https://www.pewresearch.org/journalism/2012/11/28/role-social-media-arab-uprisings/) played a role in the Arab Spring revolutions in the 2010s, and Social Media platforms were a large part of the [#MeToo movement](https://en.wikipedia.org/wiki/MeToo_movement), where victims of sexual abuse/harassment spoke up and stood together.
+Some ad hoc crowdsourcing can be part of a social or political movement. For example, [Social media organizing](https://www.pewresearch.org/journalism/2012/11/28/role-social-media-arab-uprisings/) played a role in the Arab Spring revolutions in the 2010s, and Social Media platforms were a large part of the [#MeToo movement](https://en.wikipedia.org/wiki/MeToo_movement), where victims of sexual abuse/harassment spoke up and stood together.
 
 ## Crowd harassment
-Social media crowd work can also be used for harassment, which we'll look at more in the next couple chapters. But for some examples: the case of Justine Sacco involved crowd work to identify and track her flight, and even get a photo of her turning on her phone.
+Social media crowdsoucing can also be used for harassment, which we'll look at more in the next couple chapters. But for some examples: the case of Justine Sacco involved crowdsourcing to identify and track her flight, and even get a photo of her turning on her phone.
 
 
 ## Spreading rumors and disinformation
 Crowds on social media can also share rumors, and can be [an essential (if unreliable) way of spreading information during a crises](https://www.sciencedirect.com/science/article/pii/S2405844020316479).
 
-Disinformation campaigns also make use of crowd work. An academic research paper [Disinformation as Collaborative Work](https://dl.acm.org/doi/abs/10.1145/3359229) ([pdf](https://dl.acm.org/doi/pdf/10.1145/3359229)) lays out a range of disinformation campaigns:
+Disinformation campaigns also make use of crowdsoucing. An academic research paper [Disinformation as Collaborative Work](https://dl.acm.org/doi/abs/10.1145/3359229) ([pdf](https://dl.acm.org/doi/pdf/10.1145/3359229)) lays out a range of disinformation campaigns:
 - __Orchestrated__: Entirely fake and astro-turfed, no genuine users contributing.
 - __Cultivated__: Intentionally created misinformation that is planted in a community. It is then spread by real users not aware they are part of a disinformation campaign.
 - __Emergent and self-sustaining__: Communities creating and spreading their own rumors or own conspiracy narratives.

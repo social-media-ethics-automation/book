@@ -1,8 +1,8 @@
 # Planned Crowdsourcing Examples
-Let's now consider some examples of planned crowd work, meaning a system or task was intentionally created and given to a crowd to work on.
+Let's now consider some examples of planned crowdsourcing, meaning a system or task was intentionally created and given to a crowd to work on.
 
-## Crowd Work Platforms
-Some online platforms are specifically created for crowd work. For example:
+## Crowdsourcing Platforms
+Some online platforms are specifically created for crowdsourcing. For example:
 - [Wikipedia](https://www.wikipedia.org/): Is an online encyclopedia whose content is crowdsourced. Anyone can contribute, just go to an unlocked Wikipedia page and press the edit button. Institutions don't get special permissions (e.g., [it was a scandal when US congressional staff edited Wikipedia pages](https://en.wikipedia.org/wiki/United_States_congressional_staff_edits_to_Wikipedia)), and the expectation that editors do not have outside institutional support is intended to encourage more people to contribute.
 - [Quora](https://www.quora.com/): An crowdsourced question and answer site.
 - [Stack Overflow](https://stackoverflow.com/):  A crowdsourced question and answer site specifically for programming questions.
@@ -10,7 +10,7 @@ Some online platforms are specifically created for crowd work. For example:
 - [Upwork](https://www.upwork.com/): A site that lets people find and contract work with freelancers (generally larger and more specialized tasks than Amazon Mechanical Turk.
 - [Project Sidewalk](projectsidewalk.org): Crowdsourcing sidewalk information for mobility needs (e.g., wheelchair users).
 
-## Example Crowd Work Tasks
+## Example Crowdsourcing Tasks
 
 You probably already have some ideas of how crowds can work together on things like editing articles on a site like Wikipedia or answer questions on a site like Quora, but let's look at some other examples of how crowds can work together.
 
