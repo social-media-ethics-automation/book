@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>17.7. Design and Harassment &#8212; Social Media, Ethics, and Automation</title>
+    <title>17.7. Design Example: Quoting &#8212; Social Media, Ethics, and Automation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -1090,17 +1090,17 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ch14_moderation/04_moderation_and_ethics.html">
-     14.4. Moderation and Ethics
+     14.5. Moderation and Ethics
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ch14_moderation/05_reflections.html">
-     14.5. Activity and Reflections on Moderation
+     14.6. Activity and Reflections on Moderation
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../ch14_moderation/06_tweets_and_replies/00_intro.html">
-     14.6. Viewing Tweets and Replies
+     14.7. Viewing Tweets and Replies
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/>
     <label for="toctree-checkbox-28">
@@ -1110,24 +1110,24 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../ch14_moderation/06_tweets_and_replies/01_trees.html">
-       14.6.1. Tree Structures
+       14.7.1. Tree Structures
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../ch14_moderation/06_tweets_and_replies/02_demo_recursion.html">
-       14.6.2. Demo: Navigating Trees (recursion)
+       14.7.2. Demo: Navigating Trees (recursion)
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../ch14_moderation/06_tweets_and_replies/03_demo_hide_some_tweets.html">
-       14.6.3. Demo: Hide Some Tweets
+       14.7.3. Demo: Hide Some Comments
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ch14_moderation/07_learn_more.html">
-     14.7. Learn More
+     14.8. Learn More
     </a>
    </li>
   </ul>
@@ -1253,7 +1253,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     17.7. Design and Harassment
+     17.7. Design Example: Quoting
     </a>
    </li>
    <li class="toctree-l2">
@@ -1614,6 +1614,11 @@ const thebe_selector_output = ".output, .cell_output"
      Ch 11.4.3: Demo: Recommend a User to Follow
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/alternate_apis/ch13_05_demo_only_positive_news.html">
+     Demo: Only positive news
+    </a>
+   </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../appendix/alternate_apis/solutions/00_solutions.html">
      Practice Solutions (Twitter)
@@ -1851,8 +1856,23 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quote-tweets">
+   17.7.1. Quote Tweets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mastodon">
+   17.7.2. Mastodon
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reflection-questions">
-   17.7.1. Reflection Questions
+   17.7.3. Reflection Questions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#further-reading">
+   17.7.4. Further Reading
   </a>
  </li>
 </ul>
@@ -1864,7 +1884,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Design and Harassment</h1>
+                <h1>Design Example: Quoting</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1875,8 +1895,23 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quote-tweets">
+   17.7.1. Quote Tweets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mastodon">
+   17.7.2. Mastodon
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reflection-questions">
-   17.7.1. Reflection Questions
+   17.7.3. Reflection Questions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#further-reading">
+   17.7.4. Further Reading
   </a>
  </li>
 </ul>
@@ -1889,16 +1924,22 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="design-and-harassment">
-<h1><span class="section-number">17.7. </span>Design and Harassment<a class="headerlink" href="#design-and-harassment" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="design-example-quoting">
+<h1><span class="section-number">17.7. </span>Design Example: Quoting<a class="headerlink" href="#design-example-quoting" title="Permalink to this headline">#</a></h1>
+<section id="quote-tweets">
+<h2><span class="section-number">17.7.1. </span>Quote Tweets<a class="headerlink" href="#quote-tweets" title="Permalink to this headline">#</a></h2>
 <p>The way social media sites are designed can encourage and discourage different forms of harassment.</p>
-<p>For example, people have made complaints about how <a class="reference external" href="https://onezero.medium.com/quote-tweets-have-turned-us-all-into-jerks-d5776c807942">Quote Tweets Have Turned Us All Into Jerks</a>. And the way that even trying to defend people can increase the harassment they face. See the article: <a class="reference external" href="https://www.wired.com/story/social-media-harassment-platforms/">It’s Not Your Fault You’re a Jerk on Twitter: The design of the internet lets you harass and harm people without ever once interacting with them directly. Even if you’re trying to defend them.</a></p>
+<p>For example, people have made complaints about how <a class="reference external" href="https://onezero.medium.com/quote-tweets-have-turned-us-all-into-jerks-d5776c807942">Quote Tweets Have Turned Us All Into Jerks</a>. And the way that even trying to defend people can increase the harassment they face. One of the arguments is that by allowing quote Tweets, users will find a Tweet they disagree with, and quote the Tweet with a joke, insult, or comment to show how bad the original Tweet was (“dunking”). Then the original Tweet will spread through communities who disagree with it, all trying to do their own version of their best dunk or insult. As it spreads, some users may turn to other means of harassment, like direct messaging threats, or doxing the original Tweeter. Katherine Cross argues in <a class="reference external" href="https://www.wired.com/story/social-media-harassment-platforms/">It’s Not Your Fault You’re a Jerk on Twitter: The design of the internet lets you harass and harm people without ever once interacting with them directly. Even if you’re trying to defend them.</a> that even people jumping in to defend the original Tweet may only cause it to go more viral and get even more negative attention.</p>
+<p>In 2019 <a class="reference external" href="https://www.vox.com/2019/3/8/18245536/exclusive-twitter-healthy-conversations-dunking-research-product-incentives">Twitter began considering how to measure “health” of interactions</a> on the platform and figure out how to optimize their platform for healthier interactions. In 2020 <a class="reference external" href="https://www.theverge.com/2020/5/5/21248201/twitter-reply-warning-harmful-language-revise-tweet-moderation">Twitter began giving users a warning before posting something that it’s algorithm guessed could be offensive</a>, and <a class="reference external" href="https://www.theverge.com/2021/5/5/22420586/twitter-offensive-tweet-warning-prompt-updated-success-rate">made further updates in 2021</a>.</p>
+</section>
+<section id="mastodon">
+<h2><span class="section-number">17.7.2. </span>Mastodon<a class="headerlink" href="#mastodon" title="Permalink to this headline">#</a></h2>
 <p>When creating the Twitter-like social media protocol Mastodon, its creator, Eugen Rochko, decided not to allow quote-tweet like posts:</p>
 <blockquote>
 <div><p>I’ve made a deliberate choice against a quoting feature because it inevitably adds toxicity to people’s behaviours. You are tempted to quote when you should be replying, and so you speak at your audience instead of with the person you are talking to. It becomes performative. Even when doing it for “good” like ridiculing awful comments, you are giving awful comments more eyeballs that way. No quote toots. Thank’s</p>
 <p><a class="reference external" href="https://mastodon.social/&#64;Gargron/99662106175542726">Eugen</a></p>
 </div></blockquote>
-<p>But others have argued that design decisions and community decisions made on Mastodon, such as no quotes, and their content-warning system have made it more outwardly polite. But they also complain that this has made the platform very white, hostile to people of color talking about experiences of racism, and difficult to make a social movement.</p>
+<p>But others have argued that design decisions and community decisions made on Mastodon, such as no quotes (as well as their content-warning system) have made it more outwardly polite. But they also complain that this has made the platform very white, hostile to people of color talking about experiences of racism, and difficult to make a social movement.</p>
 <p><a class="reference external" href="https://mastodon.cloud/&#64;mekkaokereke/109334079258663352">&#64;mekkaokereke&#64;mastodon.cloud questions</a>:</p>
 <blockquote>
 <div><p>Is it possible to drive social change through Mastodon? Could “Black Lives Matter” have happened on Mastodon? Or do the “intentionally slow, pleasant conversation” features eliminate the possibility of this? Do the “interest silo” tendencies discourage cross pollination?</p>
@@ -1911,18 +1952,42 @@ title="Print to PDF"
 <div><p>The quote tweet function in conjunction with the hashtag are what allow users to align with communities, and communities with conversations through how they enable cultural practices by means of a digital environment.</p>
 <p>On Black Twitter, the quote tweet and hashtag enable what Black cultural scholars call “call and response,” something crucial to Black community practices. The hashtags curate the conversation and allow for its visibility.</p>
 </div></blockquote>
+<p>(See also an interview with Dr. Jonathan Flowers on (The Whiteness of Mastodon)[https://techpolicy.press/the-whiteness-of-mastodon/])</p>
 <p>Writer <a class="reference external" href="https://twitter.com/lesliezye/status/1593631667037638660">Leslie Ye argued</a> about some of the advantages of what Twitter:</p>
 <blockquote>
 <div><p>many of us have spent our lives observing institutional power from the outside, how power behaves, how power acts, when confronted when communities like ours who are actually able to HOLD power to account, connect the dots across expertises and specialties</p>
 <p>[…]</p>
 <p>[Twitter] is a place where we have direct access to the most powerful and can hold them to account</p>
 </div></blockquote>
+<p>Professor John R. Marks, IV argued that the <a class="reference external" href="https://mastodon.social/&#64;jrm4/109702486481162255">spread of negative content was actually a good thing on Twitter</a>.</p>
+<blockquote>
+<div><p>Here’s the thing:</p>
+<p>Twitter’s ability to rapidly spread objectionable and distressing content is (was?) the <em>best</em> thing about it, not the worst, see e.g. police brutality.</p>
+<p>It’s not pleasant, but long run it’s more valuable than “nuanced / moderated conversation,” which you can get elsewhere.</p>
+<p>This is more-or-less what is wrong with how many – if not <em>most</em> – picture #mastodon. and the #fediverse</p>
+<p>#blackmastodon #blackfedi</p>
+</div></blockquote>
+<br>
+<figure class="align-default" id="this-you-fbi-fig">
+<a class="reference internal image-reference" href="../_images/this_you_fbi.png"><img alt="Tweet from Marc Lamont Hill (&#64;marclamonthill) quote Tweeting the FBI. The FBI tweet says &quot;On this 40th anniversary of #MLKDay as a federal holiday, the #FBI honors one of the most prominent leaders of the Civil Rights movement and reaffirms its commitment to Dr. King’s legacy of fairness and equal justice for all.&quot; Marc Lamont Hill quotes with the words &quot;This you?&quot; and a photo of a letter send to King to encourage him to commit suicide," src="../_images/this_you_fbi.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 17.4 </span><span class="caption-text">When the FBI account made a <a class="reference external" href="https://twitter.com/FBI/status/1614986534318493696">Tweet in honor of Martin Luther King Jr. on the MLK holiday</a>, author Marc Lamont Hill <a class="reference external" href="https://twitter.com/marclamonthill/status/1615156250735435782">used a quote tweet to dunk on the FBI Tweet by posting a copy of the letter the FBI sent Martin Luther King Jr. encouraging him to kill himself</a>. This is a different style of making the same point as the Tweet we showed in the Trolling chapter where Jaboukie Young-White impersonated the FBI account.</span><a class="headerlink" href="#this-you-fbi-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
 <section id="reflection-questions">
-<h2><span class="section-number">17.7.1. </span>Reflection Questions<a class="headerlink" href="#reflection-questions" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">17.7.3. </span>Reflection Questions<a class="headerlink" href="#reflection-questions" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>How does social media design enable or reduce harassment?</p></li>
-<li><p>What can you lose in trying to reduce harassment?</p></li>
+<li><p>What good things are lost in trying to reduce harassment?</p></li>
 <li><p>How do you balance these different concerns?</p></li>
+</ul>
+</section>
+<section id="further-reading">
+<h2><span class="section-number">17.7.4. </span>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://absolutelymaybe.plos.org/2023/01/12/quote-tweeting-over-30-studies-dispel-some-myths/">Quote Tweeting: Over 30 Studies Dispel Some Myths</a></p></li>
+<li><p><a class="reference external" href="https://privacy.thenexus.today/black-twitter-quoting-and-white-toxicity-on-mastodon/">Black Twitter, quoting, and white views of toxicity on Mastodon</a></p></li>
 </ul>
 </section>
 </section>

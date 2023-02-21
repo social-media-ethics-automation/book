@@ -1,19 +1,25 @@
-# Design and Harassment
+# Design Example: Quoting
 
-% TODO: Quoting and Content Warnings on Mastodon
+% TODO: change file name
+
+
+## Quote Tweets
 
 The way social media sites are designed can encourage and discourage different forms of harassment.
 
-For example, people have made complaints about how [Quote Tweets Have Turned Us All Into Jerks](https://onezero.medium.com/quote-tweets-have-turned-us-all-into-jerks-d5776c807942). And the way that even trying to defend people can increase the harassment they face. See the article: [It's Not Your Fault You're a Jerk on Twitter: The design of the internet lets you harass and harm people without ever once interacting with them directly. Even if you're trying to defend them.](https://www.wired.com/story/social-media-harassment-platforms/)
+For example, people have made complaints about how [Quote Tweets Have Turned Us All Into Jerks](https://onezero.medium.com/quote-tweets-have-turned-us-all-into-jerks-d5776c807942). And the way that even trying to defend people can increase the harassment they face. One of the arguments is that by allowing quote Tweets, users will find a Tweet they disagree with, and quote the Tweet with a joke, insult, or comment to show how bad the original Tweet was ("dunking"). Then the original Tweet will spread through communities who disagree with it, all trying to do their own version of their best dunk or insult. As it spreads, some users may turn to other means of harassment, like direct messaging threats, or doxing the original Tweeter. Katherine Cross argues in [It's Not Your Fault You're a Jerk on Twitter: The design of the internet lets you harass and harm people without ever once interacting with them directly. Even if you're trying to defend them.](https://www.wired.com/story/social-media-harassment-platforms/) that even people jumping in to defend the original Tweet may only cause it to go more viral and get even more negative attention. 
+
+In 2019 [Twitter began considering how to measure "health" of interactions](https://www.vox.com/2019/3/8/18245536/exclusive-twitter-healthy-conversations-dunking-research-product-incentives) on the platform and figure out how to optimize their platform for healthier interactions. In 2020 [Twitter began giving users a warning before posting something that it's algorithm guessed could be offensive](https://www.theverge.com/2020/5/5/21248201/twitter-reply-warning-harmful-language-revise-tweet-moderation), and [made further updates in 2021](https://www.theverge.com/2021/5/5/22420586/twitter-offensive-tweet-warning-prompt-updated-success-rate).
 
 
+## Mastodon
 When creating the Twitter-like social media protocol Mastodon, its creator, Eugen Rochko, decided not to allow quote-tweet like posts:
 
 > I've made a deliberate choice against a quoting feature because it inevitably adds toxicity to people's behaviours. You are tempted to quote when you should be replying, and so you speak at your audience instead of with the person you are talking to. It becomes performative. Even when doing it for "good" like ridiculing awful comments, you are giving awful comments more eyeballs that way. No quote toots. Thank's
 >
 > [Eugen](https://mastodon.social/@Gargron/99662106175542726)
 
-But others have argued that design decisions and community decisions made on Mastodon, such as no quotes, and their content-warning system have made it more outwardly polite. But they also complain that this has made the platform very white, hostile to people of color talking about experiences of racism, and difficult to make a social movement.
+But others have argued that design decisions and community decisions made on Mastodon, such as no quotes (as well as their content-warning system) have made it more outwardly polite. But they also complain that this has made the platform very white, hostile to people of color talking about experiences of racism, and difficult to make a social movement.
 
 [@mekkaokereke@mastodon.cloud questions](https://mastodon.cloud/@mekkaokereke/109334079258663352):
 > Is it possible to drive social change through Mastodon? Could "Black Lives Matter" have happened on Mastodon? Or do the "intentionally slow, pleasant conversation" features eliminate the possibility of this? Do the "interest silo" tendencies discourage cross pollination?
@@ -24,13 +30,13 @@ But others have argued that design decisions and community decisions made on Mas
 >
 > What I'm unsure of, is if that means giving up on the capacity for social change. Are we Lotus eating?
 
+
 And [Dr. Jonathan Flowers argues](https://zirk.us/@shengokai/109347027270208314):
 > The quote tweet function in conjunction with the hashtag are what allow users to align with communities, and communities with conversations through how they enable cultural practices by means of a digital environment.
 >
 > On Black Twitter, the quote tweet and hashtag enable what Black cultural scholars call "call and response," something crucial to Black community practices. The hashtags curate the conversation and allow for its visibility.
 
-
-% TODO: perhaps use this source: https://techpolicy.press/the-whiteness-of-mastodon/
+(See also an interview with Dr. Jonathan Flowers on (The Whiteness of Mastodon)[https://techpolicy.press/the-whiteness-of-mastodon/])
 
 
 Writer [Leslie Ye argued](https://twitter.com/lesliezye/status/1593631667037638660) about some of the advantages of what Twitter:
@@ -40,24 +46,34 @@ Writer [Leslie Ye argued](https://twitter.com/lesliezye/status/15936316670376386
 >
 > [Twitter] is a place where we have direct access to the most powerful and can hold them to account
 
-% TODO: Better sources:
-% https://absolutelymaybe.plos.org/2023/01/12/quote-tweeting-over-30-studies-dispel-some-myths, https://privacy.thenexus.today/black-twitter-quoting-and-white-toxicity-on-mastodon/
 
+Professor John R. Marks, IV argued that the [spread of negative content was actually a good thing on Twitter](https://mastodon.social/@jrm4/109702486481162255 ).
+> Here's the thing:
+>
+> Twitter's ability to rapidly spread objectionable and distressing content is (was?) the *best* thing about it, not the worst, see e.g. police brutality.
+>
+> It's not pleasant, but long run it's more valuable than "nuanced / moderated conversation," which you can get elsewhere.
+>
+> This is more-or-less what is wrong with how many -- if not *most* -- picture #mastodon. and the #fediverse 
+>
+> #blackmastodon #blackfedi
 
+<br>
 
-% https://mastodon.social/@jrm4/109702486481162255 jrm4 @jrm4@mastodon.social
-% Here's the thing:
-
-% Twitter's ability to rapidly spread objectionable and distressing content is (was?) the *best* thing about it, not the worst, see e.g. police brutality.
-
-% It's not pleasant, but long run it's more valuable than "nuanced / moderated conversation," which you can get elsewhere.
-
-% This is more-or-less what is wrong with how many -- if not *most* -- picture #mastodon. and the #fediverse 
-
-% #blackmastodon #blackfedi
-
+```{figure} this_you_fbi.png
+---
+name: this_you_fbi_fig
+width: 300px
+alt: "Tweet from Marc Lamont Hill (@marclamonthill) quote Tweeting the FBI. The FBI tweet says \"On this 40th anniversary of #MLKDay as a federal holiday, the #FBI honors one of the most prominent leaders of the Civil Rights movement and reaffirms its commitment to Dr. King’s legacy of fairness and equal justice for all.\" Marc Lamont Hill quotes with the words \"This you?\" and a photo of a letter send to King to encourage him to commit suicide,"
+---
+When the FBI account made a [Tweet in honor of Martin Luther King Jr. on the MLK holiday](https://twitter.com/FBI/status/1614986534318493696), author Marc Lamont Hill [used a quote tweet to dunk on the FBI Tweet by posting a copy of the letter the FBI sent Martin Luther King Jr. encouraging him to kill himself](https://twitter.com/marclamonthill/status/1615156250735435782). This is a different style of making the same point as the Tweet we showed in the Trolling chapter where Jaboukie Young-White impersonated the FBI account.
+```
 
 ## Reflection Questions
 - How does social media design enable or reduce harassment?
-- What can you lose in trying to reduce harassment?
+- What good things are lost in trying to reduce harassment?
 - How do you balance these different concerns?
+
+## Further Reading
+- [Quote Tweeting: Over 30 Studies Dispel Some Myths](https://absolutelymaybe.plos.org/2023/01/12/quote-tweeting-over-30-studies-dispel-some-myths/)
+- [Black Twitter, quoting, and white views of toxicity on Mastodon](https://privacy.thenexus.today/black-twitter-quoting-and-white-toxicity-on-mastodon/)

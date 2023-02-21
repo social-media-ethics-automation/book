@@ -16,6 +16,8 @@ Some of the different characteristics that means of communication can have inclu
 - __Archiving__: Some forms of communication automatically produce an archive of the communication (like a chat message history), while others do not (like an in-person conversation)
 - __Anonymity__: Some forms of communication make anonymity nearly impossible (like an in-person conversation), while others make it easy to remain anonymous.
 
+% TODO: Add one-way vs. two way, public vs. private
+
 Because of these (and other) differences, different forms of communication might be preferable for different tasks. For example, you might send an email to the person sitting next at work to you if you want to keep an archive of the communication (which is also conveniently grouped into email threads). Or you might send a text message to the person sitting next to you if you are criticizing the teacher, but want to do so discretely, so the teacher doesn't notice.
 
 These different forms of communication can then support different methods of crowdsourcing.

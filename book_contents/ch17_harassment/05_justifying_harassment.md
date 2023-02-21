@@ -77,5 +77,5 @@ We already mentioned this in the trolling chapter, but we thought we'd copy it h
 
 
 ## Reflection Questions
-- Are there times where you think crowd harassment is justified?
-- Do you feel differently about crowd harassment if the target is rich, famous, or powerful (e.g., a politician)? Do you feel different depending on what the target has been doing or saying?
+- When do you think crowd harassment is justified (or do you think it is never justified)?
+- Do you feel differently about crowd harassment if the target is rich, famous, or powerful (e.g., a politician)? Do you feel different about crowd harassment depending on what the target has been doing or saying?
