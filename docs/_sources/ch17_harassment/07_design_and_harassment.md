@@ -69,6 +69,11 @@ alt: "Tweet from Marc Lamont Hill (@marclamonthill) quote Tweeting the FBI. The 
 When the FBI account made a [Tweet in honor of Martin Luther King Jr. on the MLK holiday](https://twitter.com/FBI/status/1614986534318493696), author Marc Lamont Hill [used a quote tweet to dunk on the FBI Tweet by posting a copy of the letter the FBI sent Martin Luther King Jr. encouraging him to kill himself](https://twitter.com/marclamonthill/status/1615156250735435782). This is a different style of making the same point as the Tweet we showed in the Trolling chapter where Jaboukie Young-White impersonated the FBI account.
 ```
 
+<br>
+
+On January 2nd, 2023, Mastodon creator [Eugen Rochko said](https://mastodon.social/@Gargron/109623891328707089):
+> I don't feel as strongly about quote posts as I did in 2018. Personally, I am not a fan, but there is clearly a lot of demand for it. We're considering it.
+
 ## Reflection Questions
 - How does social media design enable or reduce harassment?
 - What good things are lost in trying to reduce harassment?
