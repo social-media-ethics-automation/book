@@ -17,9 +17,9 @@ When creating the Twitter-like social media protocol Mastodon, its creator, Euge
 
 > I've made a deliberate choice against a quoting feature because it inevitably adds toxicity to people's behaviours. You are tempted to quote when you should be replying, and so you speak at your audience instead of with the person you are talking to. It becomes performative. Even when doing it for "good" like ridiculing awful comments, you are giving awful comments more eyeballs that way. No quote toots. Thank's
 >
-> [Eugen](https://mastodon.social/@Gargron/99662106175542726)
+> [Eugen](https://mastodon.social/@Gargron/99662106175542726) in 2018
 
-But others have argued that design decisions and community decisions made on Mastodon, such as no quotes (as well as their content-warning system) have made it more outwardly polite. But they also complain that this has made the platform very white, hostile to people of color talking about experiences of racism, and difficult to make a social movement.
+But others have argued that design decisions and community decisions made on Mastodon, such as no quotes (as well as their content-warning system) have made it more outwardly polite. But they also complain that this has made the platform very white, hostile to people of color talking about experiences of racism, and difficult to make a social movement. When masses of Twitter users migrated to Mastodon following Elon Musk's purchase of Twitter in the fall of 2022, there was renewed discussion:
 
 [@mekkaokereke@mastodon.cloud questions](https://mastodon.cloud/@mekkaokereke/109334079258663352):
 > Is it possible to drive social change through Mastodon? Could "Black Lives Matter" have happened on Mastodon? Or do the "intentionally slow, pleasant conversation" features eliminate the possibility of this? Do the "interest silo" tendencies discourage cross pollination?
@@ -36,7 +36,7 @@ And [Dr. Jonathan Flowers argues](https://zirk.us/@shengokai/109347027270208314)
 >
 > On Black Twitter, the quote tweet and hashtag enable what Black cultural scholars call "call and response," something crucial to Black community practices. The hashtags curate the conversation and allow for its visibility.
 
-(See also an interview with Dr. Jonathan Flowers on (The Whiteness of Mastodon)[https://techpolicy.press/the-whiteness-of-mastodon/])
+(See also an interview with Dr. Jonathan Flowers on [The Whiteness of Mastodon](https://techpolicy.press/the-whiteness-of-mastodon/))
 
 
 Writer [Leslie Ye argued](https://twitter.com/lesliezye/status/1593631667037638660) about some of the advantages of what Twitter:
