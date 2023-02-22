@@ -4,6 +4,7 @@ While public shaming has always been a part of human culture, the Internet and s
 
 We've seen examples of this before with Justine Sacco, and with crowd harassment (particularly dogpiling).
 
+% TODO: in part
 We can also consider events in the #MeToo movement as public shaming of sexual harassers.
 
 % TODO: kimmel prank

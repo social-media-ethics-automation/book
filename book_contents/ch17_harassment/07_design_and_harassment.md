@@ -9,6 +9,17 @@ The way social media sites are designed can encourage and discourage different f
 
 For example, people have made complaints about how [Quote Tweets Have Turned Us All Into Jerks](https://onezero.medium.com/quote-tweets-have-turned-us-all-into-jerks-d5776c807942). And the way that even trying to defend people can increase the harassment they face. One of the arguments is that by allowing quote Tweets, users will find a Tweet they disagree with, and quote the Tweet with a joke, insult, or comment to show how bad the original Tweet was ("dunking"). Then the original Tweet will spread through communities who disagree with it, all trying to do their own version of their best dunk or insult. As it spreads, some users may turn to other means of harassment, like direct messaging threats, or doxing the original Tweeter. Katherine Cross argues in [It's Not Your Fault You're a Jerk on Twitter: The design of the internet lets you harass and harm people without ever once interacting with them directly. Even if you're trying to defend them.](https://www.wired.com/story/social-media-harassment-platforms/) that even people jumping in to defend the original Tweet may only cause it to go more viral and get even more negative attention. 
 
+
+% Story: Neighbor Chili
+% original Tweet: https://twitter.com/Chinchillazllla/status/1591921147611856901
+% Author info: https://twitter.com/Chinchillazllla, https://twitter.com/KuneKuneRufus, https://www.patreon.com/RufusTheKunekune?fan_landing=true
+% Might not want to be part of another story... "you all discoursed me into the fucking Washington Post against my will."
+% chili_ images
+% The people who complained then got dogpiled themselves. People involved deleted or temporarily deactivated their accounts. Yay! Healthy discourse!
+% sources https://cheezburger.com/18473221/woman-cooks-for-neighbors-insults-weirdos-on-the-internet
+% https://www.washingtonpost.com/food/2022/11/18/chili-neighbors-twitter-etiquette/
+%   archive copy: https://web.archive.org/web/20221121094327/https://www.washingtonpost.com/food/2022/11/18/chili-neighbors-twitter-etiquette/
+
 In 2019 [Twitter began considering how to measure "health" of interactions](https://www.vox.com/2019/3/8/18245536/exclusive-twitter-healthy-conversations-dunking-research-product-incentives) on the platform and figure out how to optimize their platform for healthier interactions. In 2020 [Twitter began giving users a warning before posting something that it's algorithm guessed could be offensive](https://www.theverge.com/2020/5/5/21248201/twitter-reply-warning-harmful-language-revise-tweet-moderation), and [made further updates in 2021](https://www.theverge.com/2021/5/5/22420586/twitter-offensive-tweet-warning-prompt-updated-success-rate).
 
 
