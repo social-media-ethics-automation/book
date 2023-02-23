@@ -1088,17 +1088,17 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ch14_moderation/04_moderation_and_ethics.html">
-     14.4. Moderation and Ethics
+     14.5. Moderation and Ethics
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ch14_moderation/05_reflections.html">
-     14.5. Activity and Reflections on Moderation
+     14.6. Activity and Reflections on Moderation
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../ch14_moderation/06_tweets_and_replies/00_intro.html">
-     14.6. Viewing Tweets and Replies
+     14.7. Viewing Tweets and Replies
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/>
     <label for="toctree-checkbox-28">
@@ -1108,24 +1108,24 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../ch14_moderation/06_tweets_and_replies/01_trees.html">
-       14.6.1. Tree Structures
+       14.7.1. Tree Structures
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../ch14_moderation/06_tweets_and_replies/02_demo_recursion.html">
-       14.6.2. Demo: Navigating Trees (recursion)
+       14.7.2. Demo: Navigating Trees (recursion)
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../ch14_moderation/06_tweets_and_replies/03_demo_hide_some_tweets.html">
-       14.6.3. Demo: Hide Some Tweets
+       14.7.3. Demo: Hide Some Comments
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ch14_moderation/07_learn_more.html">
-     14.7. Learn More
+     14.8. Learn More
     </a>
    </li>
   </ul>
@@ -1251,7 +1251,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ch17_harassment/07_design_and_harassment.html">
-     17.7. Design and Harassment
+     17.7. Design Example: Quoting
     </a>
    </li>
    <li class="toctree-l2">
@@ -2410,8 +2410,15 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MessageSimpleNamespace</span><span class="p">(</span><span class="n">SimpleNamespace</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">reply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
         <span class="n">print_info</span><span class="p">(</span><span class="s2">&quot;Fake praw is pretending to reply to a message with: &quot;</span><span class="o">+</span> <span class="n">text</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">print_info</span><span class="p">(</span><span class="s2">&quot;Fake praw is pretending to delete this message: &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">subject</span><span class="p">)</span>
     <span class="k">pass</span>
 
+                   
+<span class="k">class</span> <span class="nc">MessageAuthorSimpleNamespace</span><span class="p">(</span><span class="n">SimpleNamespace</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">block</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">print_info</span><span class="p">(</span><span class="s2">&quot;Fake praw is pretending to reply to block the author of this message:&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">pass</span>
 
 <span class="n">mentions_counter</span> <span class="o">=</span> <span class="mi">0</span>
 
@@ -2421,31 +2428,36 @@ title="Print to PDF"
     <span class="k">if</span><span class="p">(</span><span class="n">mentions_counter</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
         <span class="n">message</span> <span class="o">=</span> <span class="p">(</span><span class="n">MessageSimpleNamespace</span><span class="p">(</span>
           <span class="n">subject</span> <span class="o">=</span> <span class="s2">&quot;Wanting bot response&quot;</span><span class="p">,</span>
-          <span class="n">body</span> <span class="o">=</span> <span class="s2">&quot;I want you to jump&quot;</span>
+          <span class="n">body</span> <span class="o">=</span> <span class="s2">&quot;I want you to jump&quot;</span><span class="p">,</span>
+          <span class="n">author</span> <span class="o">=</span> <span class="n">MessageAuthorSimpleNamespace</span><span class="p">(</span><span class="n">name</span><span class="o">=</span> <span class="s2">&quot;fake_user&quot;</span><span class="p">)</span>
         <span class="p">),)</span>
         <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
     <span class="k">elif</span><span class="p">(</span><span class="n">mentions_counter</span> <span class="o">==</span> <span class="mi">2</span><span class="p">):</span>
         <span class="n">message</span> <span class="o">=</span> <span class="p">(</span><span class="n">MessageSimpleNamespace</span><span class="p">(</span>
           <span class="n">subject</span> <span class="o">=</span> <span class="s2">&quot;Wanting bot response&quot;</span><span class="p">,</span>
-          <span class="n">body</span> <span class="o">=</span> <span class="s2">&quot;I want you to do something horrible!&quot;</span>
+          <span class="n">body</span> <span class="o">=</span> <span class="s2">&quot;I want you to do something horrible!&quot;</span><span class="p">,</span>
+          <span class="n">author</span> <span class="o">=</span> <span class="n">MessageAuthorSimpleNamespace</span><span class="p">(</span><span class="n">name</span><span class="o">=</span> <span class="s2">&quot;pretend_user&quot;</span><span class="p">)</span>
         <span class="p">),)</span>
         <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
     <span class="k">elif</span><span class="p">(</span><span class="n">mentions_counter</span> <span class="o">==</span> <span class="mi">3</span><span class="p">):</span>
         <span class="n">message</span> <span class="o">=</span> <span class="p">(</span><span class="n">MessageSimpleNamespace</span><span class="p">(</span>
           <span class="n">subject</span> <span class="o">=</span> <span class="s2">&quot;Wanting bot response&quot;</span><span class="p">,</span>
-          <span class="n">body</span> <span class="o">=</span> <span class="s2">&quot;I want you to fly&quot;</span>
+          <span class="n">body</span> <span class="o">=</span> <span class="s2">&quot;I want you to fly&quot;</span><span class="p">,</span>
+          <span class="n">author</span> <span class="o">=</span> <span class="n">MessageAuthorSimpleNamespace</span><span class="p">(</span><span class="n">name</span><span class="o">=</span> <span class="s2">&quot;imaginary_user&quot;</span><span class="p">)</span>
         <span class="p">),)</span>
         <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
     <span class="k">elif</span><span class="p">(</span><span class="n">mentions_counter</span> <span class="o">==</span> <span class="mi">4</span><span class="p">):</span>
         <span class="n">message</span> <span class="o">=</span> <span class="p">(</span><span class="n">MessageSimpleNamespace</span><span class="p">(</span>
           <span class="n">subject</span> <span class="o">=</span> <span class="s2">&quot;Wanting bot response&quot;</span><span class="p">,</span>
-          <span class="n">body</span> <span class="o">=</span> <span class="s2">&quot;I want you to do something horrible!&quot;</span>
+          <span class="n">body</span> <span class="o">=</span> <span class="s2">&quot;I want you to do something horrible!&quot;</span><span class="p">,</span>
+          <span class="n">author</span> <span class="o">=</span> <span class="n">MessageAuthorSimpleNamespace</span><span class="p">(</span><span class="n">name</span><span class="o">=</span> <span class="s2">&quot;non_existant_user&quot;</span><span class="p">)</span>
         <span class="p">),)</span>
         <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
     <span class="k">elif</span><span class="p">(</span><span class="n">mentions_counter</span> <span class="o">==</span> <span class="mi">5</span><span class="p">):</span>
         <span class="n">message</span> <span class="o">=</span> <span class="p">(</span><span class="n">MessageSimpleNamespace</span><span class="p">(</span>
           <span class="n">subject</span> <span class="o">=</span> <span class="s2">&quot;Wanting bot response&quot;</span><span class="p">,</span>
-          <span class="n">body</span> <span class="o">=</span> <span class="s2">&quot;I want you to stop talking. But that doesn&#39;t mean I won&#39;t say horrible things like: I hate everybody!&quot;</span>
+          <span class="n">body</span> <span class="o">=</span> <span class="s2">&quot;I want you to stop talking. But that doesn&#39;t mean I won&#39;t say horrible things like: I hate everybody!&quot;</span><span class="p">,</span>
+          <span class="n">author</span> <span class="o">=</span> <span class="n">MessageAuthorSimpleNamespace</span><span class="p">(</span><span class="n">name</span><span class="o">=</span> <span class="s2">&quot;you_can&#39;t_believe_this_isn&#39;t_a_real_user&quot;</span><span class="p">)</span>
         <span class="p">),)</span>
         <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
 </pre></div>
@@ -2650,88 +2662,6 @@ title="Print to PDF"
         <span class="p">),</span>
     <span class="p">]</span>
     <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="n">submission_list</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">news_hot</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
-    <span class="n">submission_list</span> <span class="o">=</span> <span class="p">[</span>
-        <span class="n">SimpleNamespace</span><span class="p">(</span>
-            <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;54oi6refs&quot;</span><span class="p">,</span>
-            <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Breaking news: A lovely cat took a nice long nap today!&quot;</span><span class="p">,</span> 
-            <span class="n">author</span> <span class="o">=</span> <span class="n">AuthorSimplishNamespace</span><span class="p">(</span>
-                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;fake_user&quot;</span><span class="p">,</span>
-                <span class="n">link_karma</span><span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
-                <span class="n">comment_karma</span><span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
-                <span class="n">has_verified_email</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-                <span class="n">is_mod</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-                <span class="n">is_gold</span> <span class="o">=</span> <span class="kc">False</span>                
-            <span class="p">),</span>
-            <span class="n">edited</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-            <span class="n">created_utc</span> <span class="o">=</span> <span class="mi">1673327425</span><span class="p">,</span>
-            <span class="n">score</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
-            <span class="n">upvote_ratio</span> <span class="o">=</span> <span class="mf">.5</span><span class="p">,</span>
-            <span class="n">num_comments</span> <span class="o">=</span> <span class="mi">9</span><span class="p">,</span>
-            <span class="n">selftext</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-            <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;example.com/fake_news_story&quot;</span>
-        <span class="p">),</span>
-        <span class="n">SimpleNamespace</span><span class="p">(</span>
-            <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;56etffew3s&quot;</span><span class="p">,</span>
-            <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Breaking news: Someone said a really mean thing on the internet today!&quot;</span><span class="p">,</span> 
-            <span class="n">author</span> <span class="o">=</span> <span class="n">AuthorSimplishNamespace</span><span class="p">(</span>
-                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;pretend_user&quot;</span><span class="p">,</span>
-                <span class="n">link_karma</span><span class="o">=</span> <span class="mi">13</span><span class="p">,</span>
-                <span class="n">comment_karma</span><span class="o">=</span> <span class="mi">45</span><span class="p">,</span>
-                <span class="n">has_verified_email</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-                <span class="n">is_mod</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-                <span class="n">is_gold</span> <span class="o">=</span> <span class="kc">False</span>    
-            <span class="p">),</span>
-            <span class="n">edited</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-            <span class="n">created_utc</span> <span class="o">=</span> <span class="mi">1673327625</span><span class="p">,</span>
-            <span class="n">score</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
-            <span class="n">upvote_ratio</span> <span class="o">=</span> <span class="mf">.9</span><span class="p">,</span>
-            <span class="n">num_comments</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="n">selftext</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-            <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;example.com/pretend_story.html&quot;</span>
-        <span class="p">),</span>
-        <span class="n">SimpleNamespace</span><span class="p">(</span>
-            <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;a443t43&quot;</span><span class="p">,</span>
-            <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Breaking news: Some grandparents made some yummy cookies for all the kids to share!&quot;</span><span class="p">,</span> 
-            <span class="n">author</span> <span class="o">=</span> <span class="n">AuthorSimplishNamespace</span><span class="p">(</span>
-                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;imaginary_user&quot;</span><span class="p">,</span>
-                <span class="n">link_karma</span><span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
-                <span class="n">comment_karma</span><span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
-                <span class="n">has_verified_email</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-                <span class="n">is_mod</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-                <span class="n">is_gold</span> <span class="o">=</span> <span class="kc">True</span>    
-            <span class="p">),</span>
-            <span class="n">edited</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-            <span class="n">created_utc</span> <span class="o">=</span> <span class="mi">1673367625</span><span class="p">,</span>
-            <span class="n">score</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
-            <span class="n">upvote_ratio</span> <span class="o">=</span> <span class="mf">.7</span><span class="p">,</span>
-            <span class="n">num_comments</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-            <span class="n">selftext</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-            <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;example.com/imaginary_story.html&quot;</span>
-        <span class="p">),</span>
-        <span class="n">SimpleNamespace</span><span class="p">(</span>
-            <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;324lkji34oi324&quot;</span><span class="p">,</span>
-            <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Breaking news: All the horrors of the universe revealed at last!&quot;</span><span class="p">,</span> 
-            <span class="n">author</span> <span class="o">=</span> <span class="n">AuthorSimplishNamespace</span><span class="p">(</span>
-                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;imaginary_user&quot;</span><span class="p">,</span>
-                <span class="n">link_karma</span><span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
-                <span class="n">comment_karma</span><span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
-                <span class="n">has_verified_email</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-                <span class="n">is_mod</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-                <span class="n">is_gold</span> <span class="o">=</span> <span class="kc">True</span>    
-            <span class="p">),</span>
-            <span class="n">edited</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-            <span class="n">created_utc</span> <span class="o">=</span> <span class="mi">1673367635</span><span class="p">,</span>
-            <span class="n">score</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
-            <span class="n">upvote_ratio</span> <span class="o">=</span> <span class="mf">.7</span><span class="p">,</span>
-            <span class="n">num_comments</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-            <span class="n">selftext</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-            <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;example.com/imaginary_story.html&quot;</span>
-        <span class="p">)</span>
-    <span class="p">]</span>
-    <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="n">submission_list</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2757,11 +2687,6 @@ title="Print to PDF"
         <span class="k">return</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
           <span class="n">submit</span> <span class="o">=</span> <span class="n">submit</span><span class="p">,</span>
           <span class="n">hot</span> <span class="o">=</span> <span class="n">science_hot</span>
-        <span class="p">)</span>
-    <span class="k">elif</span> <span class="n">subreddit_name</span> <span class="o">==</span> <span class="s2">&quot;news&quot;</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">SimpleNamespace</span><span class="p">(</span>
-          <span class="n">submit</span> <span class="o">=</span> <span class="n">submit</span><span class="p">,</span>
-          <span class="n">hot</span> <span class="o">=</span> <span class="n">news_hot</span>
         <span class="p">)</span>
 </pre></div>
 </div>
