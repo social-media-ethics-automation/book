@@ -8,16 +8,7 @@ The Washington Post wrote a series of articles on the experience of going viral,
 
 % Dead link?? [Accidentally famous: The psychology of going viral](https://www.cnn.com/2018/03/16/health/social-media-fame/index.html)
 
-% ## Aside on “Cancel Culture”
-% - It seems to me that the term “cancel culture” is used to mean a number of different things.
-%  - For offenses ranging from a minor statement that offends some group, to sexual assault of minors (e.g., R. Kelly, Woody Allen, Kevin Spacey)
-%  - Facing a range of consequences like:
-%    - Celebrity losing  an audience (which may be their livelihood)
-%    - Public criticism of a comment or action
-%    - Harassment of a person for a comment  or action
-%    - Loss of jobs
-%    - Rejection of an apology or of a non-apology (e.g., I’m sorry if you were offended)
-% - Rather than discuss “cancel culture” as a single thing, we will cover it in pieces:
-%  - Here: Virality and Context Collapse
-%  - Chapter ??: Harassment
-%  - Chapter ??: Public Shaming
+% Viral can make people the symbols of different causes (good or bad), or the center of larger arguments. Going viral brings extra scrutiny. Randomness of who goes viral and gets singled out. Ethics about equality like maybe Native American Ethics?
+
+% https://knowyourmeme.com/memes/milkshake-duck
+https://twitter.com/pixelatedboat/status/741904787361300481

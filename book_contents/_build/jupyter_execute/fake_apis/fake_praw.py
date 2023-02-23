@@ -518,8 +518,15 @@ def get_users_following(id="", max_results=5):
 class MessageSimpleNamespace(SimpleNamespace):
     def reply(self, text):
         print_info("Fake praw is pretending to reply to a message with: "+ text)
+    def delete(self):
+        print_info("Fake praw is pretending to delete this message: " + self.subject)
     pass
 
+                   
+class MessageAuthorSimpleNamespace(SimpleNamespace):
+    def block(self):
+        print_info("Fake praw is pretending to reply to block the author of this message:" + self.name)
+    pass
 
 mentions_counter = 0
 
@@ -529,31 +536,36 @@ def inbox_messages(limit=1):
     if(mentions_counter == 1):
         message = (MessageSimpleNamespace(
           subject = "Wanting bot response",
-          body = "I want you to jump"
+          body = "I want you to jump",
+          author = MessageAuthorSimpleNamespace(name= "fake_user")
         ),)
         return iter(message)
     elif(mentions_counter == 2):
         message = (MessageSimpleNamespace(
           subject = "Wanting bot response",
-          body = "I want you to do something horrible!"
+          body = "I want you to do something horrible!",
+          author = MessageAuthorSimpleNamespace(name= "pretend_user")
         ),)
         return iter(message)
     elif(mentions_counter == 3):
         message = (MessageSimpleNamespace(
           subject = "Wanting bot response",
-          body = "I want you to fly"
+          body = "I want you to fly",
+          author = MessageAuthorSimpleNamespace(name= "imaginary_user")
         ),)
         return iter(message)
     elif(mentions_counter == 4):
         message = (MessageSimpleNamespace(
           subject = "Wanting bot response",
-          body = "I want you to do something horrible!"
+          body = "I want you to do something horrible!",
+          author = MessageAuthorSimpleNamespace(name= "non_existant_user")
         ),)
         return iter(message)
     elif(mentions_counter == 5):
         message = (MessageSimpleNamespace(
           subject = "Wanting bot response",
-          body = "I want you to stop talking. But that doesn't mean I won't say horrible things like: I hate everybody!"
+          body = "I want you to stop talking. But that doesn't mean I won't say horrible things like: I hate everybody!",
+          author = MessageAuthorSimpleNamespace(name= "you_can't_believe_this_isn't_a_real_user")
         ),)
         return iter(message)
 
@@ -759,88 +771,6 @@ def science_hot(limit=10):
     return iter(submission_list)
 
 
-def news_hot(limit=10):
-    submission_list = [
-        SimpleNamespace(
-            id = "54oi6refs",
-            title = "Breaking news: A lovely cat took a nice long nap today!", 
-            author = AuthorSimplishNamespace(
-                name="fake_user",
-                link_karma= 3,
-                comment_karma= 4,
-                has_verified_email = False,
-                is_mod = False,
-                is_gold = False                
-            ),
-            edited = False,
-            created_utc = 1673327425,
-            score = 10,
-            upvote_ratio = .5,
-            num_comments = 9,
-            selftext = "",
-            url = "example.com/fake_news_story"
-        ),
-        SimpleNamespace(
-            id = "56etffew3s",
-            title = "Breaking news: Someone said a really mean thing on the internet today!", 
-            author = AuthorSimplishNamespace(
-                name="pretend_user",
-                link_karma= 13,
-                comment_karma= 45,
-                has_verified_email = False,
-                is_mod = True,
-                is_gold = False    
-            ),
-            edited = True,
-            created_utc = 1673327625,
-            score = 10,
-            upvote_ratio = .9,
-            num_comments = 1,
-            selftext = "",
-            url = "example.com/pretend_story.html"
-        ),
-        SimpleNamespace(
-            id = "a443t43",
-            title = "Breaking news: Some grandparents made some yummy cookies for all the kids to share!", 
-            author = AuthorSimplishNamespace(
-                name="imaginary_user",
-                link_karma= 4,
-                comment_karma= 10,
-                has_verified_email = True,
-                is_mod = True,
-                is_gold = True    
-            ),
-            edited = False,
-            created_utc = 1673367625,
-            score = 50,
-            upvote_ratio = .7,
-            num_comments = 5,
-            selftext = "",
-            url = "example.com/imaginary_story.html"
-        ),
-        SimpleNamespace(
-            id = "324lkji34oi324",
-            title = "Breaking news: All the horrors of the universe revealed at last!", 
-            author = AuthorSimplishNamespace(
-                name="imaginary_user",
-                link_karma= 4,
-                comment_karma= 10,
-                has_verified_email = True,
-                is_mod = True,
-                is_gold = True    
-            ),
-            edited = False,
-            created_utc = 1673367635,
-            score = 50,
-            upvote_ratio = .7,
-            num_comments = 5,
-            selftext = "",
-            url = "example.com/imaginary_story.html"
-        )
-    ]
-    return iter(submission_list)
-
-
 # In[12]:
 
 
@@ -862,11 +792,6 @@ def subreddit(subreddit_name):
         return SimpleNamespace(
           submit = submit,
           hot = science_hot
-        )
-    elif subreddit_name == "news":
-        return SimpleNamespace(
-          submit = submit,
-          hot = news_hot
         )
 
 
