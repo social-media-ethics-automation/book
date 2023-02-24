@@ -9,7 +9,7 @@ The reason few non-English programming languages exist is due to the network eff
 
 Now, since many people do speak other languages, you can often find comments, variable names, and even sometimes coding libraries which use non-English languages, but the core coding terms (e.g., `for`, `if`, etc.), are still almost always in English.
 
-% TODO: Add Philip Guo's paper on non-native English speakers
+See also this academic paper: [Non-Native English Speakers Learning Computer Programming: Barriers, Desires, and Design Opportunities](https://dl.acm.org/doi/abs/10.1145/3173574.3173970)
 
 
 ## Programming Adoption Through Silicon Valley

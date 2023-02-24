@@ -9,7 +9,7 @@ Google+ tried to mimic much of what Facebook did, but it got little use and neve
 
 Other social media sites have used more unique features to distinguish themselves from Facebook and get a foothold, such as Twitter with its character limit (forcing short messages, so you can see lots of posts in quick succession), Vine and then TikTok based on short videos, etc.
 
-[Mastodon](https://en.wikipedia.org/wiki/Mastodon_(software)) has a different way of distinguishing itself as a social media network, in that it is an open-source, community funded social media network (no ads), and hopes people will join to get away from corporate control.
+[Mastodon](https://en.wikipedia.org/wiki/Mastodon_(software)) ([Fediverse](https://en.wikipedia.org/wiki/Fediverse) set of connected social media platforms that it is part of) has a different way of distinguishing itself as a social media network, in that it is an open-source, community funded social media network (no ads), and hopes people will join to get away from corporate control.
 
 
 Other social media networks have focused on parts of the world where Facebook was less dominant, and so they got a foothold there first, and then spread, like the social media platforms in China (e.g., Sina Weibo, QQ, and TikTok).

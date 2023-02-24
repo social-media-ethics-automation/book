@@ -4,7 +4,7 @@ While we've been talking about capitalism and social media platforms, we also wa
 ## Programming as Womens' Work
 As you may have noticed in chapter 2 of the book, the first programmers were almost all women. When computers were being invented, men put themselves in charge of building the physical devices (hardware), and then gave the work of programming the computer (software) to their assistants, often women. So, for example, you can see this at various stages of computer development, such as:
 - 1800s: [Charles Babbage](https://en.wikipedia.org/wiki/Charles_Babbage) describes the first full computer (Analytical Engine), and [Ada Lovelace](https://en.wikipedia.org/wiki/Ada_Lovelace) writes down the first computer program for it.
-- 1945: The first general-purpose electical computer was created by men and programmed by women
+- 1945: The first general-purpose electrical computer was created by men and programmed by women
 - 1950s: Grace Hopper invents the compiler to help with programming the computers (built by men)
 
 As women were advancing the field of computer programming, some of them became frustrated with how they were viewed, such as Margaret Hamilton:
@@ -18,7 +18,7 @@ alt: "Photo of Margaret Hamilton, with long hair, a dress, and glasses, standing
 [Photo](https://en.wikipedia.org/wiki/File:Margaret_Hamilton_-_restoration.jpg) of Margaret Hamilton next to the computer program source code (which she was in charge of) for the [Apollo missions](https://en.wikipedia.org/wiki/Apollo_program) to the moon.
 ```
 
-When Margaret Hamilton was in charge of creating the software to run on the Apollo rockets, the men around her considered programming to be easy and less serious than the "engineering" they were doing in building the rocket. So, she began calling the programming she was doing "[software engineering](https://en.wikipedia.org/wiki/Software_engineering)" to convey the complexity and rigor of the work she and her team were doing. She was able to convince her collegues, and the term "software engineering" became common.
+When Margaret Hamilton was in charge of creating the software to run on the Apollo rockets, the men around her considered programming to be easy and less serious than the "engineering" they were doing in building the rocket. So, she began calling the programming she was doing "[software engineering](https://en.wikipedia.org/wiki/Software_engineering)" to convey the complexity and rigor of the work she and her team were doing. She was able to convince her colleagues, and the term "software engineering" became common.
 
 Still, up through the 1960s and 1970s, most computer companies made their money by selling the physical hardware. They happened to include some software to go with it, and people who bought the hardware would sometimes hire people to make more software. So software was still considered secondary, and up until the early 1980s, [women were getting around 37% of computer science degrees](https://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding).
 
