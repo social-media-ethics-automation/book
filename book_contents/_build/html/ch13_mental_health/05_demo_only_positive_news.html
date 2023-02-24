@@ -1090,17 +1090,17 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ch14_moderation/04_moderation_and_ethics.html">
-     14.4. Moderation and Ethics
+     14.5. Moderation and Ethics
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ch14_moderation/05_reflections.html">
-     14.5. Activity and Reflections on Moderation
+     14.6. Activity and Reflections on Moderation
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../ch14_moderation/06_tweets_and_replies/00_intro.html">
-     14.6. Viewing Tweets and Replies
+     14.7. Viewing Tweets and Replies
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/>
     <label for="toctree-checkbox-28">
@@ -1110,24 +1110,24 @@ const thebe_selector_output = ".output, .cell_output"
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../ch14_moderation/06_tweets_and_replies/01_trees.html">
-       14.6.1. Tree Structures
+       14.7.1. Tree Structures
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../ch14_moderation/06_tweets_and_replies/02_demo_recursion.html">
-       14.6.2. Demo: Navigating Trees (recursion)
+       14.7.2. Demo: Navigating Trees (recursion)
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../ch14_moderation/06_tweets_and_replies/03_demo_hide_some_tweets.html">
-       14.6.3. Demo: Hide Some Tweets
+       14.7.3. Demo: Hide Some Comments
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ch14_moderation/07_learn_more.html">
-     14.7. Learn More
+     14.8. Learn More
     </a>
    </li>
   </ul>
@@ -1253,7 +1253,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../ch17_harassment/07_design_and_harassment.html">
-     17.7. Design and Harassment
+     17.7. Design Example: Quoting
     </a>
    </li>
    <li class="toctree-l2">
@@ -1419,9 +1419,14 @@ const thebe_selector_output = ".output, .cell_output"
      21.1. What We Covered
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ch21_conclusions/02_ethics_tech.html">
+     21.2. Ethics in Tech
+    </a>
+   </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../ch21_conclusions/02_going_forward/00_intro.html">
-     21.2. Going Forward
+    <a class="reference internal" href="../ch21_conclusions/03_going_forward/00_intro.html">
+     21.3. Going Forward
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" type="checkbox"/>
     <label for="toctree-checkbox-36">
@@ -1430,30 +1435,30 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../ch21_conclusions/02_going_forward/01_social_media_user.html">
-       21.2.1. As a Social Media User
+      <a class="reference internal" href="../ch21_conclusions/03_going_forward/01_social_media_user.html">
+       21.3.1. As a Social Media User
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../ch21_conclusions/02_going_forward/02_member_of_society.html">
-       21.2.2. As a Member of Society
+      <a class="reference internal" href="../ch21_conclusions/03_going_forward/02_member_of_society.html">
+       21.3.2. As a Member of Society
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../ch21_conclusions/02_going_forward/03_potential_tech_worker.html">
-       21.2.3. As a Potential Tech Worker
+      <a class="reference internal" href="../ch21_conclusions/03_going_forward/03_potential_tech_worker.html">
+       21.3.3. As a Potential Tech Worker
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ch21_conclusions/03_final_reflections.html">
-     21.3. Final Reflection Questions
+    <a class="reference internal" href="../ch21_conclusions/04_final_reflections.html">
+     21.4. Final Reflection Questions
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../ch21_conclusions/04_more_resources.html">
-     21.4. More Resources
+    <a class="reference internal" href="../ch21_conclusions/05_more_resources.html">
+     21.5. More Resources
     </a>
    </li>
   </ul>
@@ -2055,13 +2060,15 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to select the subreddit: news</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Breaking news: A lovely cat took a nice long nap today!
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to select the subreddit: news</strong></div><div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="nn">Input In [6],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Look up the subreddit &quot;news&quot;, then find the &quot;hot&quot; list, getting up to 10 submission</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">submissions</span> <span class="o">=</span> <span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span><span class="s2">&quot;news&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">hot</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Turn the submission results into a Python List</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">submissions_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">submissions</span><span class="p">)</span>
 
-Breaking news: Someone said a really mean thing on the internet today!
-
-Breaking news: Some grandparents made some yummy cookies for all the kids to share!
-
-Breaking news: All the horrors of the universe revealed at last!
+<span class="ne">AttributeError</span>: &#39;NoneType&#39; object has no attribute &#39;hot&#39;
 </pre></div>
 </div>
 </div>
