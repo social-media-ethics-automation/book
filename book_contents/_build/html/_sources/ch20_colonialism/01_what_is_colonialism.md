@@ -1,9 +1,7 @@
 # What is Colonialism?
 
-We already defined colonialism in chapter 2, but we thought we'd define it here again.
-
-## [Colonialism](https://plato.stanford.edu/entries/colonialism/)
-Colonialism is when one group or country subjugates another group, often imposing laws, religion, culture, and languages on that group, and taking resources from them. Colonialism is often justified by belief that the subjugated people are inferior (e.g., barbaric, savage, godless, backwards), and the superiority of the group doing the subjugation (e.g., civilized, advanced).
+## Colonialism Defined
+[Colonialism](https://plato.stanford.edu/entries/colonialism/) is when one group or country subjugates another group, often imposing laws, religion, culture, and languages on that group, and taking resources from them. Colonialism is often justified by belief that the subjugated people are inferior (e.g., barbaric, savage, godless, backwards), and the superiority of the group doing the subjugation (e.g., civilized, advanced).
 
 - Key figures:
   - [![Painting of Hernán Cortés](cortes.png)](https://en.wikipedia.org/wiki/Hern%C3%A1n_Cort%C3%A9s) [Hernán Cortés](https://en.wikipedia.org/wiki/Hern%C3%A1n_Cort%C3%A9s), 1500s, Spain &rarr; America
@@ -12,21 +10,21 @@ Colonialism is when one group or country subjugates another group, often imposin
   - [![Photo of King Leopold II of Belgium](leopold.png)](https://en.wikipedia.org/wiki/Leopold_II_of_Belgium) [King Leopold II of Belgium](https://en.wikipedia.org/wiki/Leopold_II_of_Belgium), 1800s, Belgium &rarr; Congo
 
 ### "[White Saviors](https://en.wikipedia.org/wiki/White_savior)"
-Sometimes colonialism is a little bit more subtle. For example, the term "White Savior" is a sarcastic term for white people being seen as liberating or rescuing “helpless” non-white people. This is common in TV and movies (see the TVTropes entries on [Mighty Whitey](https://tvtropes.org/pmwiki/pmwiki.php/Main/MightyWhitey), and [White Man’s Burden](https://tvtropes.org/pmwiki/pmwiki.php/Main/WhiteMansBurden)). For example, consider movies like James Cameron’s Avatar, Dances with Wolves, The Last Samuri (starring Tom Cruise), The Blind Side, The Help, La La Land, etc.
+Sometimes colonialism is a little bit more subtle. For example, the term "White Savior" is a sarcastic term for white people being seen as liberating or rescuing “helpless” non-white people. This is common in TV and movies (see the TVTropes entries on [Mighty Whitey](https://tvtropes.org/pmwiki/pmwiki.php/Main/MightyWhitey), and [White Man’s Burden](https://tvtropes.org/pmwiki/pmwiki.php/Main/WhiteMansBurden)). For example, consider movies like James Cameron’s Avatar movies, Dances with Wolves, The Last Samuri (starring the Tom Cruise), The Blind Side, The Help, La La Land ([where a white man is trying to save "real" Jazz music](https://www.mtv.com/news/5qr32e/la-la-lands-white-jazz-narrative)), etc.
 
 ```{figure} the_last_samurai.jpg
 ---
 name: the_last_samurai_fig
 alt: "Movie Poster. Top center is Tom Cruise's face. Below it is text \"Tom Cruise\", then in smaller text \"The Last Samurai\". On the sides of the poster are Japanese characters."
 ---
-[Poster](https://en.wikipedia.org/wiki/File:The_Last_Samurai.jpg) for the movie [The Last Samurai](https://en.wikipedia.org/wiki/The_Last_Samurai), starring Tom Cruise.
+[Poster](https://en.wikipedia.org/wiki/File:The_Last_Samurai.jpg) for the movie [The Last Samurai](https://en.wikipedia.org/wiki/The_Last_Samurai), starring white American Tom Cruise.
 ```
 
 
 
 ## [Decolonization](https://en.wikipedia.org/wiki/Decolonization) / [Postcolonialism](https://en.wikipedia.org/wiki/Postcolonialism) / [Liberation](https://en.wikipedia.org/wiki/Liberation_movement) / [Landback](https://en.wikipedia.org/wiki/Land_Back)
 
-Counter to colonialism, decolonization, postcolonialism, liberation, and landback are movements where the colonized/oppressed take back power from the colonialists/oppressors, and graple with the consequences of having been colonized. This may be a response to colonization by:
+Counter to colonialism, decolonization, postcolonialism, liberation, and landback are movements where the colonized/oppressed take back power from the colonialists/oppressors, and grapple with the consequences of having been colonized. This may be a response to colonization by:
 - Government occupation (e.g., England ruling India/Pakistan, USA removing Indigenous Americans from their land, USA ruling Cuba and the Philippines)
   - Key figures:
     - [![Photo of Mahatma Gandhi](gandhi.png)](https://en.wikipedia.org/wiki/Mahatma_Gandhi) [Mahatma Gandhi](https://en.wikipedia.org/wiki/Mahatma_Gandhi), 1800s-1900s, India

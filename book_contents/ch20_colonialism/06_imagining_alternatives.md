@@ -2,7 +2,7 @@
 
 Now try thinking about different ways online social media could work.
 
-Are these alternatives good ideas? ¯\\_(ツ)_/¯
+Are these alternatives good ideas? 🤷
 
 
 Reflect on these prompts and try to work out what the consequences would be for different ways of social media working:

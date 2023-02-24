@@ -3,7 +3,13 @@ The tech industry is full of colonialist thinking and practices, some more subtl
 
 To begin with, much of the tech industry is centralized geographically, specifically in Silicon Valley, San Francisco, California. The leaders and decisions in how tech operates come out of this one wealthy location in a wealthy nation.
 
-% TODO: Find citation, I thought there was a Yuri Takhteyev citation for this (separate from coding places), but I can't find it now.
+% TODO: Find citation, I thought there was a Yuri Takhteyev citation for this (separate from coding places), but I can't find it now. Coding places page 101 
+
+% Headquarters of software companies*: • • San Francisco Bay Area: > 37% Seattle: 23% Other: < 40%  * Market value of publicly traded “software development” and “computer services” companies on the US markets in 2008. http:// www.infoq.com/news/2014/01/IDCsoftwaredevelopers Takhteyev , Yuri. American city Coding places: Software practice in a South . MIT Press, 2012 http . Page 101. ://codingplaces.net /
+
+% solving the problem of being young and single in a big city
+% https://www.newyorker.com/magazine/2013/05/27/change-the-world
+%  "It suddenly occurred to me that the hottest tech start-ups are solving all the problems of being twenty years old, with cash on hand, because that’s who thinks them up."
 
 Then, much of tech is dependent on exploiting cheap labor, often in dangerous conditions, in other countries (thus extracting the resource of cheap labor, from places with "inferior" governments and economies). This labor might be physical labor, or dealing with dangerous chemicals, or the content moderators who deal with viewing horrific online content.
 
@@ -23,4 +29,4 @@ OLPC wanted to give every child in the world a laptop, so they could learn compu
 
 In the end, this project fell apart, and most of tech moved on to whatever next big idea to save the world.
 
-% solving the problem of being young and single in a big city
+
