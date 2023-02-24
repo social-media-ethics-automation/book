@@ -254,13 +254,14 @@ parts:
     - file: ch21_conclusions/00_conclusions
       sections:
         - file: ch21_conclusions/01_what_we_covered
-        - file: ch21_conclusions/02_going_forward/00_intro
+        - file: ch21_conclusions/02_ethics_tech
+        - file: ch21_conclusions/03_going_forward/00_intro
           sections:
-          - file: ch21_conclusions/02_going_forward/01_social_media_user
-          - file: ch21_conclusions/02_going_forward/02_member_of_society
-          - file: ch21_conclusions/02_going_forward/03_potential_tech_worker
-        - file: ch21_conclusions/03_final_reflections
-        - file: ch21_conclusions/04_more_resources
+          - file: ch21_conclusions/03_going_forward/01_social_media_user
+          - file: ch21_conclusions/03_going_forward/02_member_of_society
+          - file: ch21_conclusions/03_going_forward/03_potential_tech_worker
+        - file: ch21_conclusions/04_final_reflections
+        - file: ch21_conclusions/05_more_resources
 
   - caption: Appendix
     chapters:

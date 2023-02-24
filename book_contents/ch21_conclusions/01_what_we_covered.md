@@ -13,12 +13,12 @@ We covered a number of topics in relation to social media:
 - Data Mining
 - Privacy and Security
 - Accessibility
-- Virality
 - Recommendation Algorithms
+- Virality
 - Mental Health
 - Content Moderation
 - Content Moderators
-- Crowd Work
+- Crowdsourcing
 - Harassment
 - Public Shaming
 - Capitalism
@@ -30,7 +30,7 @@ We also hope you are able to recognize how trends on internet-based social media
 
 
 ## Ethics
-We covered a number of ethics frameworks and you got practice applying them in diffierent situations:
+We covered a number of ethics frameworks and you got practice applying them in different situations:
 - Confucianism
 - Taoism
 - Virtue Ethics
@@ -57,7 +57,7 @@ We also covered a number of topics in automation, such as:
 - JupyterHub and JupyterNotebooks
 - Variables
 - Data types (e.g., numbers, strings)
-- Tweepy (posting tweets, searching tweets)
+- Reddit Praw library (posting, searching, etc.)
 - Other code libraries (e.g., time)
 - For Loops
 - Conditionals (if/else)
@@ -67,4 +67,4 @@ We also covered a number of topics in automation, such as:
 - Sentiment Analysis
 - Recursion (for printing tweets and replies)
 
-We hope that by the end of this course you have a familiarity of what programming is and some of what you can do with it. We particularly hope you have a familiarity with basic Python programming concepts, and an ability to interact with Twitter using comptuer programs.
+We hope that by the end of this course you have a familiarity of what programming is and some of what you can do with it. We particularly hope you have a familiarity with basic Python programming concepts, and an ability to interact with Reddit using computer programs.

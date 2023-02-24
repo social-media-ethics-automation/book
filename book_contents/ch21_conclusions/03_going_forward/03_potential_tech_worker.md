@@ -4,12 +4,6 @@ As a potential worker in the tech industry, you might someday find yourself in a
 
 We hope that if you find yourself in one of these positions, you consider the ethics of what you are doing. We hope you could then bring those concerns into how you design and implement automated systems for social media sites.
 
-% TODO: Add torment nexus tweet
-
-% TODO: Clip from Silicon Valley, Parody of a tech conference where everyone claims their idea is "Making the world a better place"
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/B8C5sjjhsso" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 ## An Example of Action
 
 As an example of what someone in this position might do, let's consider this story from Steve Krenzel, who was a software engineer at Twitter from 2015-2017.
@@ -60,4 +54,4 @@ As an example of what someone in this position might do, let's consider this sto
 > - [Business Insider Article](https://www.businessinsider.com/former-twitter-engineer-worried-how-elon-musk-treat-user-data-2022-11)
 
 
-% TODO: You aren't likely to end up in a situation as dramatic as this. Your stand for ethical tech work would probably look more like arguing about what restrictions to put on a name field (e.g., minimum length), or arguing that a small piece of data about users is not really needed and shouldn't be tracked, or or???
+You aren't likely to end up in a situation as dramatic as this. If you find yourself making a stand for ethical tech work, it would probably look more like arguing about what restrictions to put on a name field (e.g., minimum length), or arguing that a small piece of data about users is not really needed and shouldn't be tracked. But regardless, if you end up in a position to have an influence in tech, we want you to be able to think through the ethical implications of what you are asked to do and how you choose to respond.
