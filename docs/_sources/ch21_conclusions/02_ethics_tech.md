@@ -2,7 +2,7 @@
 
 In the first chapter of our book we quoted actor Kumail Nanjiani on tech innovators' lack of consideration of ethical implications of their work. 
 
-Concerns about the implications of technological advancement are nothing new.
+Of course, concerns about the implications of technological advancement are nothing new.
 
 ```{figure} xkcd_pace_of_life.png
 ---
@@ -34,7 +34,7 @@ alt: "Tweet from Alex Blechman (@AlexBlechman): Sci-Fi Author: In my book I inve
 ```
 
 
-Many people like to believe (or at least convince others) that they are doing something to make the world a better place, as in this parody clip from the Silicon Valley show (the one Kumail Nanjiani was on, though not in this clip):
+Many people like to believe (or at least convince others) that they are doing something to make the world a better place, as in this parody clip from the [Silicon Valley show](https://www.imdb.com/title/tt2575988/) (the one Kumail Nanjiani was on, though not in this clip):
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/B8C5sjjhsso" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 

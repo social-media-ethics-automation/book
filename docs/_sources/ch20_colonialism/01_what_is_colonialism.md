@@ -1,4 +1,7 @@
 # What is Colonialism?
+As most social media platforms are headquartered in a very set of locations (e.g., Silicon Valley in the US, and Beijing China), but used all over the world, it is important for us to look at the concepts and history of colonialism to understand what it means for social media to be controlled in these few places.
+
+So let's start by defining colonialism and some related concepts.
 
 ## Colonialism Defined
 [Colonialism](https://plato.stanford.edu/entries/colonialism/) is when one group or country subjugates another group, often imposing laws, religion, culture, and languages on that group, and taking resources from them. Colonialism is often justified by belief that the subjugated people are inferior (e.g., barbaric, savage, godless, backwards), and the superiority of the group doing the subjugation (e.g., civilized, advanced).

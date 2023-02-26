@@ -4,7 +4,7 @@ We wanted to conclude by linking you to more resources that you might be interes
 
 ## Recommended Articles
 - [A People’s History of Black Twitter](https://www.wired.com/story/black-twitter-oral-history-part-i-coming-together/)
-% TODO: There Is No Replacement for Black Twitter | WIRED https://www.wired.com/story/black-twitter-elon-musk/
+- [There Is No Replacement for Black Twitter | WIRED](https://www.wired.com/story/black-twitter-elon-musk/)
 - [Facebook won’t call itself a media company.​ ​Is it time to reimagine journalism for the digital age?](https://www.theverge.com/2016/11/16/13655102/facebook-journalism-ethics-media-company-algorithm-tax)
 - [Social media and science](https://www.theverge.com/2021/9/24/22688278/tiktok-science-study-survey-prolific), etc.
 

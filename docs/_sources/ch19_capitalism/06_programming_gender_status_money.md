@@ -1,7 +1,7 @@
 # Programming, Gender, Status, and Money
 While we've been talking about capitalism and social media platforms, we also want to look at the world of programming as well. In particular, we want to highlight how the profession of programming went from being a disrespected, low-pay job for women, to being a highly respected and high paying job for men.
 
-## Programming as Womens' Work
+## Programming as Women's Work
 As you may have noticed in chapter 2 of the book, the first programmers were almost all women. When computers were being invented, men put themselves in charge of building the physical devices (hardware), and then gave the work of programming the computer (software) to their assistants, often women. So, for example, you can see this at various stages of computer development, such as:
 - 1800s: [Charles Babbage](https://en.wikipedia.org/wiki/Charles_Babbage) describes the first full computer (Analytical Engine), and [Ada Lovelace](https://en.wikipedia.org/wiki/Ada_Lovelace) writes down the first computer program for it.
 - 1945: The first general-purpose electrical computer was created by men and programmed by women
@@ -21,6 +21,15 @@ alt: "Photo of Margaret Hamilton, with long hair, a dress, and glasses, standing
 When Margaret Hamilton was in charge of creating the software to run on the Apollo rockets, the men around her considered programming to be easy and less serious than the "engineering" they were doing in building the rocket. So, she began calling the programming she was doing "[software engineering](https://en.wikipedia.org/wiki/Software_engineering)" to convey the complexity and rigor of the work she and her team were doing. She was able to convince her colleagues, and the term "software engineering" became common.
 
 Still, up through the 1960s and 1970s, most computer companies made their money by selling the physical hardware. They happened to include some software to go with it, and people who bought the hardware would sometimes hire people to make more software. So software was still considered secondary, and up until the early 1980s, [women were getting around 37% of computer science degrees](https://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding).
+
+```{figure} women_cs_degrees.png
+---
+name: women_cs_degrees_fig
+width: 450px
+alt: "graph of % of women receiving degrees in Medicine, Law, Physics, and Computer science over time. All start around 5-15% in the 1970s, go up to 30-40% in the 1980s, but then while Medicine, Law, and Physics keep going up toward 40-50% in the 2000s, CS plummets to around 17%"
+---
+Graph showing percentage of women receiving degrees in different fields [from NPR](https://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding).
+```
 
 ## Programming for Boys and Men
 In the early 1980s, a number of things changed which ended up with programming seen as a male profession, and a highly profitable and respected one.
