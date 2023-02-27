@@ -1,6 +1,8 @@
 # What is Capitalism?
 
-Let's start by looking at what capitalism is.
+Why do social media platforms make decisions that harm users? And why do social media platforms sometimes go down paths of self-destruction and alienating their users? Sometimes these questions can be answered by looking at the economic forces that drive decision making on social media platforms, in particular with capitalism. 
+
+So let's start by defining capitalism.
 
 ## Definition of Capitalism:
 Capitalism is:
@@ -14,11 +16,13 @@ In other words, capitalism is a system where:
 - These business owners then hire [wage-laborers](https://en.wikipedia.org/wiki/Wage_labour) at predetermined rates for their work, while the owners get the excess business profits or losses.
 
 ### Related Terms
-Here are a few more terms that are relevant to capitalism.
+Here are a few more terms that are relevant to capitalism that we need to understand in order to get to the details of decision making and strategies employed by social media companies.
 
 - [Shares](https://en.wikipedia.org/wiki/Sre_(finance)) / Stocks
-  - Shares or stocks are ownership of a percentage of a business, normally coming with getting a percentage of the profits and a percentage of power in making business decisions (like deciding who is the CEO).
-  - CEOs of companies (like Mark Zuckerberg of Meta) are often both wage-laborers (they get a salary, Zuckerberg gets a tiny $1/year) and shareholders (they get a share of the profits, Zuckerberg owns 16.8%)
+  - Shares or stocks are ownership of a percentage of a business, normally coming with getting a percentage of the profits and a percentage of power in making business decisions.
+  - Companies then have a board of directors who represent these shareholders. The board are in charge of choosing who runs the company (the CEO). They have the power to hire and fire CEOs
+     - For example: in 1985, the board of directors for Apple Computers denied [Steve Jobs](https://en.wikipedia.org/wiki/Steve_Jobs) (co-founded Apple) the position of CEO and then they fired him completely
+  - CEOs of companies (like Mark Zuckerberg of Meta) are often both wage-laborers (they get a salary, Zuckerberg gets a tiny symbolic $1/year) and shareholders (they get a share of the profits, Zuckerberg owns 16.8%)
 - [Free Market](https://en.wikipedia.org/wiki/Free_market)
   - Businesses set their own prices and customers decide what they are willing to pay, so prices go up or down as each side decides what they are willing to charge/spend (no government intervention)
     - See [supply and demand](https://en.wikipedia.org/wiki/Supply_and_demand)
@@ -59,7 +63,7 @@ In capitalism, business decisions are accountable to the people who own the busi
 
 When shareholders buy stocks in a company, they are owed a percentage of the profits. Therefore it is the company leaders' [fiduciary duty](https://www.investopedia.com/ask/answers/042915/what-are-some-examples-fiduciary-duty.asp) to maximize the profits of the company (called the [Friedman Doctrine](https://en.wikipedia.org/wiki/Friedman_doctrine)). If the leader of the company (the CEO) intentionally makes a decision that they know will reduce the company's profits, then they are cheating the shareholders out of money the shareholders could have had. CEOs mistakenly do things that lose money all the time, but doing so on purpose is a violation of fiduciary duty.
 
-There are many ways a CEO might intentionally lower profits unfairly, such as by having their company pay more than necessary when buying something from the CEO's friend's company. But even if a CEO decides to reduce profits for a good reason (e.g., it may be unethical to overwork the employees), then they are still violating their fiduciary duty.
+There are many ways a CEO might intentionally lower profits unfairly, such as by having their company pay more than necessary when buying something from the CEO's friend's company. But even if a CEO decides to reduce profits for a good reason (e.g., it may be unethical to overwork the employees), then they are still violating their fiduciary duty, and the board of directors might fire them or pressure them into prioritizing profits above all else.
 
 For example, the actor Stellan Skarsgård complained that in the film industry, it didn't matter if a company was making good movies at a decent profit. If there is an opportunity for even more profit by making worse movies, then that is what business leaders are obligated to do:
 
@@ -69,6 +73,8 @@ For example, the actor Stellan Skarsgård complained that in the film industry, 
 
 
 Or as another example, if the [richest man in the world offers to buy out a social media site for more than it's worth](https://variety.com/2022/digital/news/elon-musk-twitter-obviously-overpaying-deal-1235409500/), then it is the fiduciary duty of the leaders of the social media site to accept that offer. It doesn't matter if it is clear that this rich man doesn't know what he is doing and is likely to destroy the social media site, and potential cause harms to society-at-large; the fiduciary duty of the company leaders is to get as much money as possible to their shareholders, and they can't beat being overpaid by the richest man in the world. Rejecting that deal would be cheating the stock holders out of money. 
+
+CEOs of social media companies, under the pressure from the board of directors, might also make decisions that prioritize short-term profits for the shareholders over long term benefits, leading to what author Corey Doctorow calls the "Enshittification" of platforms (See his article: [The ‘Enshittification’ of TikTok: Or how, exactly, platforms die.](https://www.wired.com/story/tiktok-platforms-cory-doctorow/), also [archived here](https://web.archive.org/web/20230124035335/https://www.wired.com/story/tiktok-platforms-cory-doctorow/)).
 
 __[Privately owned](https://en.wikipedia.org/wiki/Privately_held_company)__ businesses or organizations are a little different in that the owner (or owners) have full say on what happens, and is free to make it as unprofitable or profitable as they want. Though, if the private ownership of the business [was purchased with loans](https://www.npr.org/2022/11/30/1139964806/how-elon-bought-twitter-with-other-peoples-money), then they have some responsibilities to the lenders.
 
@@ -83,4 +89,4 @@ In a __[worker co-operative](https://en.wikipedia.org/wiki/Worker_cooperative)__
 
 
 ## Reflection Questions
-- In what ways do you see capitalism and socialism show up in the country you are from or are living in?
+- In what ways do you see capitalism, socialism, and other funding models show up in the country you are from or are living in?
