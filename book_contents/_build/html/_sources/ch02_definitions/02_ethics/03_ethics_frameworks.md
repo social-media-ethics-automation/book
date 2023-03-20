@@ -6,13 +6,11 @@ Below are some summaries of a selection ethics frameworks. There are many more e
 Here are few ancient ethics systems. These examples are mostly about qualities of a good person.
 
 ### [Confucianism](https://plato.stanford.edu/entries/confucius/) (another [link](https://www.researchgate.net/publication/290481794_Ethical_Studies_Overview_Eastern))
-- Being and becoming an exemplary person (e.g., sincere; honoring and sacrificing to ancestors; respectful to parents, elders and authorites, taking care of children and the young; generous to family and others). These traits are often performed and achieved through ceremonies and rituals (including sacrificing to ancestors, music, and tea drinking), resulting in a harmonious society.
+- Being and becoming an exemplary person (e.g., benevolent; sincere; honoring and sacrificing to ancestors; respectful to parents, elders and authorities, taking care of children and the young; generous to family and others). These traits are often performed and achieved through ceremonies and rituals (including sacrificing to ancestors, music, and tea drinking), resulting in a harmonious society.
 - Key figures:
   - [![Drawing of Confucius](confucius.png)](https://en.wikipedia.org/wiki/Confucius) [Confucius](https://plato.stanford.edu/entries/confucius/) ~500, China
   - [![Drawing of Mencius](mencius.png)](https://en.wikipedia.org/wiki/Mencius) [Mencius](https://plato.stanford.edu/entries/mencius/) ~350, China
   - [![Drawing of Xunzi](xunzi.png)](https://en.wikipedia.org/wiki/Xun_Kuang) [Xunzi](https://plato.stanford.edu/entries/xunzi/) ~300 BCE, China
-
-% TODO: List benevolence first
 
 ### [Taoism](https://plato.stanford.edu/entries/daoism/)
 - Act with unforced actions in harmony with the natural cycles of the universe. Trying to force something to happen will likely backfire.
@@ -162,3 +160,5 @@ You can also follow any of the other links in this page or read books like [this
 One final note we'd like to make here is that, as we said before, we can use ethics frameworks as tools to help us see into situations. But just because we use an ethics framework to look at a situation doesn't mean that we will come out with a morally good conclusion. This is perhaps most obvious with something like nihilism, which rejects the very existance of a morally good conclusion. But we can also see this with other frameworks, such as egoism, which we (the authors) believe often gives morally wrong results, or with consequentialist reasoning, which has been challenged at many points in history (e.g., [A Modest Proposal](https://en.wikipedia.org/wiki/A_Modest_Proposal) from 1729, the [character Ivan arguing with his brother](https://en.wikisource.org/wiki/The_Brothers_Karamazov/Book_V/Chapter_4) in [Brothers Karamazov](https://en.wikipedia.org/wiki/The_Brothers_Karamazov) fromn 1880, and the two articles [Effective Altruism Is Pushing a Dangerous Brand of ‘AI Safety’](https://www.wired.com/story/effective-altruism-artificial-intelligence-sam-bankman-fried/) [[archived here](https://web.archive.org/web/20221229022417/https://www.wired.com/story/effective-altruism-artificial-intelligence-sam-bankman-fried/)] and [Effective altruism’s most controversial idea](https://www.vox.com/future-perfect/23298870/effective-altruism-longtermism-will-macaskill-future) from 2022). Still, we hope that in using different frameworks (even ones you often disagree with) you are able to understand situations better and with more nuance.
 
 % TODO: consequentialist reasoning -> consequentialist/utilitarianist reasoning
+
+% TODO: boundaries between frameworks can be considered part of others. The Confucianist definition of an exemplary person can be considered as virtues. Existentialism can be considered a form of Nihilism. Moral Relativism can also be considered a form of Nihilism.

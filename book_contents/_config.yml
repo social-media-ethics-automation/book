@@ -45,9 +45,9 @@ html:
   use_issues_button: true
   use_repository_button: true
   extra_footer: >
-    <!-- <script type="application/json" class="js-hypothesis-config">
+    <script type="application/json" class="js-hypothesis-config">
       {
         "showHighlights": "whenSidebarOpen"
       }
-    </script> -->
+    </script>
     <script async src="https://hypothes.is/embed.js"></script>
