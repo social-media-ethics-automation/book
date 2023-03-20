@@ -7,6 +7,8 @@ Meta's way of making profits fits in a category called __[Surveillance Capitalis
 
 Surveillance capitalism began when internet companies started tracking user behavior data to make their sites more personally tailored to users. These companies realized that this data was something that they could profit from, so they began to collect more data than strictly necessary ("behavioral surplus") and see what more they could predict about users. Companies could then sell this data about users directly, or (more commonly), they could keep their data hidden, but use it to sell targeted advertizement. So, for example, Meta might let an advertizer say they want an ad to only go to people likely to be pregnant. Or they might [let advertizes make ads go only to "Jew Haters"](https://www.propublica.org/article/facebook-enabled-advertisers-to-reach-jew-haters) (which is ethically very bad, and something Meta allowed).
 
+% TODO: Mention grocery store discounts for getting an account (allowing them to track you)
+
 
 ## Meta’s Business Model
 So, what Meta does to make money (that is, how shareholders get profits), is that the collect data on their users to make predictions about them (e.g., demographics, interests, etc.). Then they sell advertisements, giving advertisers a large list of categories that they can target for their ads.

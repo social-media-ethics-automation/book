@@ -4,6 +4,8 @@ In the first chapter of our book we quoted actor Kumail Nanjiani on tech innovat
 
 Of course, concerns about the implications of technological advancement are nothing new.
 
+% TODO: Plato, Luddites
+
 ```{figure} xkcd_pace_of_life.png
 ---
 name: xkcd_pace_of_life
@@ -42,3 +44,5 @@ Many people like to believe (or at least convince others) that they are doing so
 <br>
 
 But even people who thought they were doing something good regretted the consequences of their creations, such as [Eli Whitney](https://en.wikipedia.org/wiki/Eli_Whitney) who hoped his invention of the cotton gin would reduce slavery in the United States, but only made it worse, or [Albert Einstein regretting his role in convincing the US government to invent nuclear weapons](https://www.amnh.org/exhibitions/einstein/peace-and-war/the-manhattan-project#:~:text=He%20came%20to%20regret%20taking,I%20would%20have%20done%20nothing.%22).
+
+% TODO: Re-mention creator of infinite scroll, perhaps Nobel
