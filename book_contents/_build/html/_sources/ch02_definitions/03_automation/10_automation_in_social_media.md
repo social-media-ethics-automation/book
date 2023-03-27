@@ -1,12 +1,12 @@
 # Automation in Social Media
 
-Now that we have looked at what automation is and seen one example of automation on social media (a Reddit bot), let's consider some different ways auotmation shows up on social media:
+Now that we have looked at what automation is and seen one example of automation on social media (a Reddit bot), let's consider some different ways automation shows up on social media:
 
 ## External Programs
 Some automation on social media is done with programs that are separate from the social media platform.
 
 ###  Bots
-Bots are a computer program that acts through a social media account. We will talk about them more in the next (Chapter 3).
+Bots are computer programs that act through a social media account. We will talk about them more in the next (Chapter 3).
 
 There are also various applications that are made to help users interact with social media. For example, there are social media manager programs that help people schedule posts and let multiple people use the same account (particularly useful if you are something like a news organization).
 

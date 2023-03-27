@@ -5,7 +5,7 @@ Before electronic computers were generally available, when scientists wanted the
 
 ![Black and white photo of two rows of women standing for a group photo. They appear to be all white women except one in the center, who is Black (Janez Lawson).](human_computers_cropped.jpg)
 
-When scientists wanted these human computers to do a task for them, they would give these human computers instructions for what they wanted calculated. These instructions were given in a regular human languages (like English), and in math notation. Then the human computers would send back the results of whatever calculation they had been asked to perform.
+When scientists wanted these human computers to do a task for them, they would give these human computers instructions for what they wanted calculated. These instructions were given in a regular human language (like English), and in math notation. Then the human computers would send back the results of whatever calculation they had been asked to perform.
 
 But human computers were eventually replaced by electronic computers, and communication with electronic computers was not straightforward.
 

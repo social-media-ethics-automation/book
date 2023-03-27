@@ -37,7 +37,7 @@ But these binary 0s and 1s can be used for more than just representing numbers. 
 
 Everything a modern computer does happens through binary. So all information is stored in binary, such as:
   - Text (like in this book). [For example](https://en.wikipedia.org/wiki/ASCII#Printable_characters): "_A_" can be stored as "_1000001_" and "_B_" can be stored as "_1000010_"
-  - Images are represented as a grid of points called [pixels](https://en.wikipedia.org/wiki/Pixel), and each pixel has a number representing it's color in terms of Red, Green, and Blue. So a pixel with the color of "_000000001111111100000000_" would be green.
+  - Images are represented as a grid of points called [pixels](https://en.wikipedia.org/wiki/Pixel), and each pixel has a number representing its color in terms of Red, Green, and Blue. So a pixel with the color of "_000000001111111100000000_" would be green.
   - Social media connections. For example, somewhere in Facebook's computer systems is information stored with your ID number, and it has a list of the ID numbers of the people you are friends with.
 
 Additionally, all the instructions which tell a computer what to do are stored in binary as well. For example, in the [Intel 8080 computer](http://dunfield.classiccmp.org/r/8080.txt):
