@@ -8,7 +8,7 @@ This was used as a way to devalue time spent on social media sites, and to dismi
 Versions of this phrase are still around, such as in this tweet from statistician Nate Silver:
 > [![Nate Silver tweets: "Twitter is not real life part 69420", quote tweeting Harry Enten saying "Most of the polling indicated NYC'ers wanted Amazon in NYC. When tax breaks were mentioned, support did fall. But even with it mentioned, support was very strong in Queens." Tweet was post at 8:55 AM on February 14th, 2019.](twitter_not_real_life.png)](https://twitter.com/natesilver538/status/1096090507762167810)
 
-In that tweet, Nate Silver seems to be saying that that conversations and views represented on Twitter are not representative of most people, and thus devaluing the conversations and views expressed on Twitter.
+In that tweet, Nate Silver seems to be saying that conversations and views represented on Twitter are not representative of most people, thus devaluing the conversations and views expressed on Twitter.
 
 We also see this phrase used to say that things seen on social media are not authentic, but are manipulated, such as people only posting their good news and not bad news, or people using photo manipulation software to change how they look.
 

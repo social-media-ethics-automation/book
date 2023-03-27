@@ -1,6 +1,6 @@
 # Understanding the Reddit Bot Code
 
-Let's look more at that program that cretaes one Reddit post.
+Let's look more at that program that creates one Reddit post.
 
 There are a number of ways of looking at the code, but first, let's look at it as a template with a couple pieces we can change.
 
@@ -32,13 +32,13 @@ reddit.subreddit(
 
 </pre>
 
-The first four highlighted pieces of code are for the special passwords that let you run a bot. You can get when you get those passwords by following thse steps to get [developer access to reddit](../../appendix/bot_set_ups/making_reddit_account.md) (I've put fake values in them for now):
+The first four highlighted pieces of code are for the special passwords that let you run a bot. You can get when you get those passwords by following these steps to get [developer access to reddit](../../appendix/bot_set_ups/making_reddit_account.md) (I've put fake values in them for now):
 - username
 - password
 - client_id
 - client_secret
 
-The final three highlighted pieces of code are the information for what to post on reddit. First, in the parentheses after `subreddit` is which subreddit to post on. In the parenthese after teh `submit` is first the title of the post, and next is the text of the post itself. You can change any of these values ot change which subreddit you post to, and what title and text to post.
+The final three highlighted pieces of code are the information for what to post on reddit. First, in the parentheses after `subreddit` is which subreddit to post on. In the parentheses after the `submit` is first the title of the post, and next is the text of the post itself. You can change any of these values ot change which subreddit you post to, and what title and text to post.
 
 So, by changing those sections of code, you run this program to post whatever reddit you want to post on a subreddit. It is, of course, much easier to just open reddit and post something, but as we get to more complicated programs, we'll start to see more of the power (and pitfalls) of automation on social media.
 
@@ -46,11 +46,11 @@ _Note: all the highlighted sections of code are surrounded by double quotes. In 
 
 ## Adding code comments
 
-The goal of programming language code is to be readable by both humans and computers, but sometimes the meaning of code isn't always clear to humans trying to read it. In order to aid humans reading the code, programming languages allow programmers to do things to make the code more readable, such as add extra blank lines between sections of code. Blank lines can be used to have some lines of code be visually grouped together, and some be separated, so humans can better follow the outline of the code.
+The goal of programming language code is to be readable by both humans and computers, but sometimes the meaning of code isn't always clear to humans trying to read it. In order to aid humans reading the code, programming languages allow programmers to do things to make the code more readable, such as adding extra blank lines between sections of code. Blank lines can be used to have some lines of code be visually grouped together, and some be separated, so humans can better follow the outline of the code.
 
 Most programming languages also allow "comments," which are pieces of code that the computer will ignore. These comments allow the person writing the code to leave a note to future people reading the code, knowing that the computer won't read it (like an [aside](https://en.wikipedia.org/wiki/Aside) in a play).
 
-In Python, you can add a comment by use the `#` symbol. Python will ignore everything on a line that comes after the `#`. But humans programmers will often look for the meaning of the program in these comments.
+In Python, you can add a comment by using the `#` symbol. Python will ignore everything on a line that comes after the `#`. But human programmers will often look for the meaning of the program in these comments.
 
 So, in order to make the program above easier for future humans to understand, let's add two comments telling these future humans where to add their special passwords and where they can change the text of the tweet:
 
@@ -134,7 +134,7 @@ reddit.subreddit(
 )
 ```
 
-This is the lines of code where a reddit post is actually made. First the `subreddit` section selects which subreddit an action will be taken on, and then `submit` creates a new post with the given title and text.
+These are the lines of code where a reddit post is actually made. First, the `subreddit` section selects which subreddit an action will be taken on, and then `submit` creates a new post with the given title and text.
 
 ## Adding more code comments
 Now that we've looked at the purpose of each section of code, we can add additional comments explaining what each section does, so that future humans reading the code are more likely to understand it.

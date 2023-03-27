@@ -1931,7 +1931,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="understanding-the-reddit-bot-code">
 <h1><span class="section-number">2.3.7. </span>Understanding the Reddit Bot Code<a class="headerlink" href="#understanding-the-reddit-bot-code" title="Permalink to this headline">#</a></h1>
-<p>Let’s look more at that program that cretaes one Reddit post.</p>
+<p>Let’s look more at that program that creates one Reddit post.</p>
 <p>There are a number of ways of looking at the code, but first, let’s look at it as a template with a couple pieces we can change.</p>
 <section id="the-program-as-a-template">
 <h2>The program as a template<a class="headerlink" href="#the-program-as-a-template" title="Permalink to this headline">#</a></h2>
@@ -1959,22 +1959,22 @@ reddit.subreddit(
 
 
 </pre>
-<p>The first four highlighted pieces of code are for the special passwords that let you run a bot. You can get when you get those passwords by following thse steps to get <a class="reference internal" href="../../appendix/bot_set_ups/making_reddit_account.html"><span class="doc std std-doc">developer access to reddit</span></a> (I’ve put fake values in them for now):</p>
+<p>The first four highlighted pieces of code are for the special passwords that let you run a bot. You can get when you get those passwords by following these steps to get <a class="reference internal" href="../../appendix/bot_set_ups/making_reddit_account.html"><span class="doc std std-doc">developer access to reddit</span></a> (I’ve put fake values in them for now):</p>
 <ul class="simple">
 <li><p>username</p></li>
 <li><p>password</p></li>
 <li><p>client_id</p></li>
 <li><p>client_secret</p></li>
 </ul>
-<p>The final three highlighted pieces of code are the information for what to post on reddit. First, in the parentheses after <code class="docutils literal notranslate"><span class="pre">subreddit</span></code> is which subreddit to post on. In the parenthese after teh <code class="docutils literal notranslate"><span class="pre">submit</span></code> is first the title of the post, and next is the text of the post itself. You can change any of these values ot change which subreddit you post to, and what title and text to post.</p>
+<p>The final three highlighted pieces of code are the information for what to post on reddit. First, in the parentheses after <code class="docutils literal notranslate"><span class="pre">subreddit</span></code> is which subreddit to post on. In the parentheses after the <code class="docutils literal notranslate"><span class="pre">submit</span></code> is first the title of the post, and next is the text of the post itself. You can change any of these values ot change which subreddit you post to, and what title and text to post.</p>
 <p>So, by changing those sections of code, you run this program to post whatever reddit you want to post on a subreddit. It is, of course, much easier to just open reddit and post something, but as we get to more complicated programs, we’ll start to see more of the power (and pitfalls) of automation on social media.</p>
 <p><em>Note: all the highlighted sections of code are surrounded by double quotes. In the Python programming language, putting something in quotes indicates that you want the computer to think of the things inside the quotes as pieces of text, in this case passwords and reddit post information.</em></p>
 </section>
 <section id="adding-code-comments">
 <h2>Adding code comments<a class="headerlink" href="#adding-code-comments" title="Permalink to this headline">#</a></h2>
-<p>The goal of programming language code is to be readable by both humans and computers, but sometimes the meaning of code isn’t always clear to humans trying to read it. In order to aid humans reading the code, programming languages allow programmers to do things to make the code more readable, such as add extra blank lines between sections of code. Blank lines can be used to have some lines of code be visually grouped together, and some be separated, so humans can better follow the outline of the code.</p>
+<p>The goal of programming language code is to be readable by both humans and computers, but sometimes the meaning of code isn’t always clear to humans trying to read it. In order to aid humans reading the code, programming languages allow programmers to do things to make the code more readable, such as adding extra blank lines between sections of code. Blank lines can be used to have some lines of code be visually grouped together, and some be separated, so humans can better follow the outline of the code.</p>
 <p>Most programming languages also allow “comments,” which are pieces of code that the computer will ignore. These comments allow the person writing the code to leave a note to future people reading the code, knowing that the computer won’t read it (like an <a class="reference external" href="https://en.wikipedia.org/wiki/Aside">aside</a> in a play).</p>
-<p>In Python, you can add a comment by use the <code class="docutils literal notranslate"><span class="pre">#</span></code> symbol. Python will ignore everything on a line that comes after the <code class="docutils literal notranslate"><span class="pre">#</span></code>. But humans programmers will often look for the meaning of the program in these comments.</p>
+<p>In Python, you can add a comment by using the <code class="docutils literal notranslate"><span class="pre">#</span></code> symbol. Python will ignore everything on a line that comes after the <code class="docutils literal notranslate"><span class="pre">#</span></code>. But human programmers will often look for the meaning of the program in these comments.</p>
 <p>So, in order to make the program above easier for future humans to understand, let’s add two comments telling these future humans where to add their special passwords and where they can change the text of the tweet:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">praw</span>
 
@@ -2041,7 +2041,7 @@ reddit.subreddit(
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>This is the lines of code where a reddit post is actually made. First the <code class="docutils literal notranslate"><span class="pre">subreddit</span></code> section selects which subreddit an action will be taken on, and then <code class="docutils literal notranslate"><span class="pre">submit</span></code> creates a new post with the given title and text.</p>
+<p>These are the lines of code where a reddit post is actually made. First, the <code class="docutils literal notranslate"><span class="pre">subreddit</span></code> section selects which subreddit an action will be taken on, and then <code class="docutils literal notranslate"><span class="pre">submit</span></code> creates a new post with the given title and text.</p>
 </section>
 <section id="adding-more-code-comments">
 <h2>Adding more code comments<a class="headerlink" href="#adding-more-code-comments" title="Permalink to this headline">#</a></h2>

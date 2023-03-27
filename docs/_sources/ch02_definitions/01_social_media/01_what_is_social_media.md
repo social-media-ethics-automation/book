@@ -6,7 +6,7 @@ There is no clear single definition for what counts as social media. John Hartle
 
 This means that media, which includes painting, movies, books, speech, songs, dance, etc., all communicates in some way, and thus are social. And every social thing humans do is done through various mediums. So, for example, a war is enacted through the mediums of speech (e.g., threats, treaties, battle plans), coordinated movements, clothing (uniforms), and, of course, the mediums of weapons and violence.
 
-But when we use the phrase "social media," we mean something much more specific, something involving computers (or smart-phones), the internet, communication, and networks of connected people.
+But when we use the phrase "social media," we mean something much more specific, something involving computers (or smartphones), the internet, communication, and networks of connected people.
 
 We will think of social media in terms of __internet-based social media platforms__, along the lines of these definitions:
 
