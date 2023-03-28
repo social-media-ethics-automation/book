@@ -26,7 +26,6 @@ Here are few ancient ethics systems. These examples are mostly about qualities o
 - Different groups have different sets of virtues:
   -  Quaker [SPICES](https://www.friendsjournal.org/s-p-i-c-e-s-quaker-testimonies/) (Simplicity, Peace, Integrity, Community, Equality, Stewardship)
   - US Army [LDRSHP](https://www.army.mil/values/): Loyalty, Duty, Respect, Selfless Service, Honor, Integrity, Personal Courage
-  - The Confucianist definition of an exemplary person can be considered as virtues
 - Key figures:
   - [![Marble bust of Aristotle](aristotle.png)](https://en.wikipedia.org/wiki/Aristotle) [Aristotle](https://en.wikipedia.org/wiki/Aristotle), 300s BCE Greece
   - [![Photo of Martha Nussbaum](nussbaum.png)](https://en.wikipedia.org/wiki/Aristotle) [Martha Nussbaum](https://en.wikipedia.org/wiki/Martha_Nussbaum), present USA
@@ -45,12 +44,11 @@ A few ethics systems that originated in the 1600s and 1700s in Europe. Note that
 ### [Natural Rights](https://plato.stanford.edu/entries/rights/)
 - Locke: Everyone has a right to life, liberty, and property
 - Jefferson in the [Declaration of Independence](https://www.archives.gov/founding-docs/declaration-transcript): “We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.”
-- This is where discussions of “human rights” comes from
+- Discussions of "human rights" fit in the Natural Rights ethics framework
 - Key figures:
   - [![Painting of John Locke](locke.png)](https://en.wikipedia.org/wiki/John_Locke) [John Locke](https://en.wikipedia.org/wiki/John_Locke), 1600s England
   - [![Painting of Thomas Jefferson](jefferson.png)](https://en.wikipedia.org/wiki/Thomas_Jefferson) [Thomas Jefferson](https://en.wikipedia.org/wiki/Thomas_Jefferson) 1700s American Colonies / USA
 
-% TODO: This is where discussions of “human rights” comes from -> Discussions of "human rights" fit in the Natural Rights ethics framework
 
 ### [Consequentialism](https://plato.stanford.edu/entries/consequentialism/):
 - Actions are judged on the sum total of their consequences (utility calculus)
@@ -135,12 +133,11 @@ These are a few ethics systems which center on maintaining proper relationships.
 ### [Nihilism](https://plato.stanford.edu/entries/skepticism-moral/)
 - There is no right or wrong. Nothing matters.
 - There are many different types of moral nihilism. But they all boil down, one way or another, to the idea that moral reasoning or trying to think about ethics is not real, or is based on a mistake.
-- It can help you in your studies to be aware that, according to professional ethicists, moral relativism is classed as a type of nihilism! Moral relativism says that what is good or bad is just totally subjective, and depends on who you ask. But that is not what an ethics is! An ethics does say something about how we work out what's right and wrong. That's why ethicists class moral relativism as a nihilistic theory.
-- Even if one is inclined towards nihilism or relativism, there is still truth in the anthropological observation that people do deliberate about how to act and how to live, and that these deliberations consistently take the shape of one or more of the ethical frameworks above, considering principles, character, virtues, consequences, responsibilities, and so on. So it is still interesting to look at ethics, even if you like the idea of nihilism or moral relativism.
+- Even if one is inclined towards nihilism, there is still truth in the anthropological observation that people do deliberate about how to act and how to live, and that these deliberations consistently take the shape of one or more of the ethical frameworks above, considering principles, character, virtues, consequences, responsibilities, and so on. So it is still interesting to look at ethics, even if you like the idea of nihilism.
 
 ### [Existentialism](https://plato.stanford.edu/entries/existentialism/)
 - Like nihilism, existentialism starts with a claim that there is no fundamental meaning or morality. But in existentialism, people must create their own meaning and morality. 
-  - In philisopical terms: “existence precedes essence.” That is, things exist first without meaning or value. They only have value because we choose to create meaning or value for them.
+  - In philosophical terms: “existence precedes essence.” That is, things exist first without meaning or value. They only have value because we choose to create meaning or value for them.
 - Existential ethics: your actions have consequences, but the consequences are unknowable. Even though you desire to do what’s right, there is no objective morality to follow (part of existential angst). You are forced to invent some sort of meaning-giving basis for life that can tell you what to care about. This might include constructing a kind of "morality" to follow.
 - Key figures:
   - [![Photo of Søren Kierkegaard](kierkegaard.png)](https://en.wikipedia.org/wiki/S%C3%B8ren_Kierkegaard) [Søren Kierkegaard](https://en.wikipedia.org/wiki/S%C3%B8ren_Kierkegaard), 1800s Denmark
@@ -151,14 +148,14 @@ These are a few ethics systems which center on maintaining proper relationships.
 
 There are many more ethics frameworks that we haven't mentioned here. You can look up some more [here](https://plato.stanford.edu/search/searcher.py?query=ethics). 
 
+Also, many of these ethics frameworks overlap and different ones can be considered versions of another. So the Confucianist definition of an exemplary person could be considered as virtues in virtue ethics. Existentialism can be considered a form of Nihilism. Moral Relativism (saying that what is good or bad is just totally subjective, and depends on who you ask.) can also be considered a form of Nihilism, etc.
+
 You can also follow any of the other links in this page or read books like [this](https://www.routledge.com/The-Philosophy-of-Well-Being-An-Introduction/Fletcher/p/book/9781138818354), or watch the TV show The Good Place  (currently streaming on [nbc.com](https://www.nbc.com/the-good-place/episodes/season-1) and [Netflix](https://www.netflix.com/title/80113701))
 
 [![Poster for The Good Place](good_place.png)](https://www.nbc.com/the-good-place/episodes/season-1)
 
 ## Ethics Frameworks Don't Guarantee Moral Goodness
 
-One final note we'd like to make here is that, as we said before, we can use ethics frameworks as tools to help us see into situations. But just because we use an ethics framework to look at a situation doesn't mean that we will come out with a morally good conclusion. This is perhaps most obvious with something like nihilism, which rejects the very existance of a morally good conclusion. But we can also see this with other frameworks, such as egoism, which we (the authors) believe often gives morally wrong results, or with consequentialist reasoning, which has been challenged at many points in history (e.g., [A Modest Proposal](https://en.wikipedia.org/wiki/A_Modest_Proposal) from 1729, the [character Ivan arguing with his brother](https://en.wikisource.org/wiki/The_Brothers_Karamazov/Book_V/Chapter_4) in [Brothers Karamazov](https://en.wikipedia.org/wiki/The_Brothers_Karamazov) fromn 1880, and the two articles [Effective Altruism Is Pushing a Dangerous Brand of ‘AI Safety’](https://www.wired.com/story/effective-altruism-artificial-intelligence-sam-bankman-fried/) [[archived here](https://web.archive.org/web/20221229022417/https://www.wired.com/story/effective-altruism-artificial-intelligence-sam-bankman-fried/)] and [Effective altruism’s most controversial idea](https://www.vox.com/future-perfect/23298870/effective-altruism-longtermism-will-macaskill-future) from 2022). Still, we hope that in using different frameworks (even ones you often disagree with) you are able to understand situations better and with more nuance.
+One final note we'd like to make here is that, as we said before, we can use ethics frameworks as tools to help us see into situations. But just because we use an ethics framework to look at a situation doesn't mean that we will come out with a morally good conclusion. This is perhaps most obvious with something like nihilism, which rejects the very existence of a morally good conclusion. But we can also see this with other frameworks, such as egoism, which we (the authors) believe often gives morally wrong results, or with consequentialist/utilitarianist reasoning reasoning, which has been challenged at many points in history (e.g., [A Modest Proposal](https://en.wikipedia.org/wiki/A_Modest_Proposal) from 1729, the [character Ivan arguing with his brother](https://en.wikisource.org/wiki/The_Brothers_Karamazov/Book_V/Chapter_4) in [Brothers Karamazov](https://en.wikipedia.org/wiki/The_Brothers_Karamazov) fromn 1880, and the two articles [Effective Altruism Is Pushing a Dangerous Brand of ‘AI Safety’](https://www.wired.com/story/effective-altruism-artificial-intelligence-sam-bankman-fried/) [[archived here](https://web.archive.org/web/20221229022417/https://www.wired.com/story/effective-altruism-artificial-intelligence-sam-bankman-fried/)] and [Effective altruism’s most controversial idea](https://www.vox.com/future-perfect/23298870/effective-altruism-longtermism-will-macaskill-future) from 2022). Still, we hope that in using different frameworks (even ones you often disagree with) you are able to understand situations better and with more nuance.
 
-% TODO: consequentialist reasoning -> consequentialist/utilitarianist reasoning
 
-% TODO: boundaries between frameworks can be considered part of others. The Confucianist definition of an exemplary person can be considered as virtues. Existentialism can be considered a form of Nihilism. Moral Relativism can also be considered a form of Nihilism.
