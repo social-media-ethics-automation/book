@@ -6,8 +6,7 @@ We've seen examples of this before with Justine Sacco, and with crowd harassment
 
 % TODO: Note Jimmy Kimmel's late night TV host
 
-% TODO: pay_gap_bot.png https://twitter.com/PayGapApp/status/1633538112373784581   "Whenever an employer tweets about #IWD, their most recent gender pay gap is published as a quote tweet. UK companies with more than 250 employees are required to publish this data on https://gender-pay-gap.service.gov.uk, and that's where @PayGapApp
- pulls the data from." https://twitter.com/PayGapApp/status/1632727863597096962
+
 
 Another example we can look at is Jimmy Kimmel's annual Halloween prank, where he has parents film their children as they tell the parents tell children that the parents all ate all the kids' halloween candy. Parents post these videos online, where viewers are intended to laugh at the distress, despair, and sense betrayal the children express. I will not link to these videos which I find horrible, but instead link you to these articles:
 - [Jimmy Kimmel’s Halloween prank can scar children. Why are we laughing?](https://www.washingtonpost.com/outlook/jimmy-kimmel-wants-to-prank-kids-why-are-we-laughing/2017/10/20/9be17716-aed0-11e7-9e58-e6288544af98_story.html) ([archived copy](https://web.archive.org/web/20171109000921/https://www.washingtonpost.com/outlook/jimmy-kimmel-wants-to-prank-kids-why-are-we-laughing/2017/10/20/9be17716-aed0-11e7-9e58-e6288544af98_story.html))

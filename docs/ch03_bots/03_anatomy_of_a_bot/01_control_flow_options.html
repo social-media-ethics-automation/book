@@ -1976,7 +1976,7 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="organizing-a-computer-program">
 <h1><span class="section-number">3.3.1. </span>Organizing a Computer Program<a class="headerlink" href="#organizing-a-computer-program" title="Permalink to this headline">#</a></h1>
 <p>In order to understand how a bot is built and can work, we will now look at the different ways computer programs can be organized. We will cover a bunch of examples quickly here, to hopefully give you an idea of many options for how to write a program. Don’t worry if you don’t follow all of it, as we will go back over these one at a time in more detail throughout the book.</p>
-<p>In this section we will not show actual Python computer programs (that will be in the next section). Instead here we will focus on what programmers call “<a class="reference external" href="https://en.wikipedia.org/wiki/Pseudocode">psuedocode</a>,” which is a human language outline of a program. Psuedocode is intended to be easier to read and write. Pseudocode is often used by programmers to plan how they want their programs to work, and once the programmer is somewhat confident in their pseudocode, they will then try to write it in actual programming language code.</p>
+<p>In this section, we will not show actual Python computer programs (that will be in the next section). Instead, here we will focus on what programmers call “<a class="reference external" href="https://en.wikipedia.org/wiki/Pseudocode">psuedocode</a>,” which is a human language outline of a program. Psuedocode is intended to be easier to read and write. Pseudocode is often used by programmers to plan how they want their programs to work, and once the programmer is somewhat confident in their pseudocode, they will then try to write it in actual programming language code.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The programs outlined below in pseudocode are meant to demonstrate what could be done with a computer program, not what should be done or what would necessarily be a good idea.</p>
@@ -2105,7 +2105,7 @@ A human computer running a cooking program. In other words: “someone following
 </pre></div>
 </div>
 <p>In a computer program, when you save information for later use, instead of putting it in a bowl, you give it a name. The computer then makes a place in its memory with that name, and saves the information you asked it to save. Then you can use that name later in the program to ask the computer what was saved in that spot.</p>
-<p>For example I might save my first and last name separately in the computer, then combine them together to make my full name (which I save), and then use that full name to send a private message to introduce myself:</p>
+<p>For example, I might save my first and last name separately in the computer, then combine them together to make my full name (which I save), and then use that full name to send a private message to introduce myself:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- Save my first name in a variable called &quot;first_name&quot;
 - Save my last name in a variable called &quot;last_name&quot;
 - Create the text of my full name by combining what is in the variable &quot;first_name&quot;,
@@ -2311,7 +2311,7 @@ A human computer running a cooking program. In other words: “someone following
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- Continue kneading the dough until it is smooth and elastic, not rough and floury.
 </pre></div>
 </div>
-<p>In computer programming you can repeat an action a set number of times</p>
+<p>In computer programming, you can repeat an action a set number of times</p>
 <pre>
 - Tweet this 100 times: "Warner Brothers should <a href="https://www.rollingstone.com/tv-movies/tv-movie-features/justice-league-the-snyder-cut-bots-fans-1384231/">#ReleaseTheSnyderCut</a> of the Justice League movie."
 </pre>
@@ -2396,7 +2396,7 @@ A human computer running a cooking program. In other words: “someone following
 <section id="functions-libraries-run-another-program">
 <h2>Functions/Libraries: Run another program<a class="headerlink" href="#functions-libraries-run-another-program" title="Permalink to this headline">#</a></h2>
 <p>The final programming organization feature we will cover here is functions and libraries, which basically allow you to run another computer program. This could be a small program that you made that want to use, or it could be a program written by someone else that you are using.</p>
-<p>In cooking this might look like a step of asking the cook to make something from another recipe.</p>
+<p>In cooking, this might look like a step of asking the cook to make something from another recipe.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>- Make the dumpling dough (see recipe on page 42).
 </pre></div>
 </div>
@@ -2415,7 +2415,7 @@ A human computer running a cooking program. In other words: “someone following
 <li><p><code class="docutils literal notranslate"><span class="pre">upvote</span></code> (to upvote a post or comment)</p></li>
 <li><p>etc.<a class="footnote-reference brackets" href="#praw-functions-footnote" id="id2">2</a></p></li>
 </ul>
-<p>If you look back over the various psuedocode and code examples above, most of them involve calling various functions, (though those examples use the tweepy library for Twitter). Additionally the scheduling example code includes defining a new function and using it.</p>
+<p>If you look back over the various psuedocode and code examples above, most of them involve calling various functions, (though those examples use the tweepy library for Twitter). Additionally, the scheduling example code includes defining a new function and using it.</p>
 <p>We will show examples of calling functions starting in the next section.</p>
 <p>We will show how to write functions in Chapter 9 (Privacy and Security).</p>
 <hr class="footnotes docutils" />
@@ -2424,7 +2424,7 @@ A human computer running a cooking program. In other words: “someone following
 <dd><p>There are other types of programming organizations as well, such as <a class="reference external" href="https://en.wikipedia.org/wiki/Functional_programming">functional programming</a> (like <a class="reference external" href="https://www.microsoft.com/en-us/research/blog/lambda-the-ultimatae-excel-worksheet-function/">Excel</a> and <a class="reference external" href="https://www.google.com/sheets/about/">Google Sheets</a>),  <a class="reference external" href="https://en.wikipedia.org/wiki/Visual_programming_language">visual programming</a> (like the educational <a class="reference external" href="https://scratch.mit.edu/">Scratch</a>, or the 3D Graphics <a class="reference external" href="https://docs.blender.org/manual/en/2.79/editors/node_editor/introduction.html%5D">Blender node editor</a>), <a class="reference external" href="https://en.wikipedia.org/wiki/Declarative_programming">declarative programming</a> (like HTML and CSS web content) <a class="reference external" href="https://en.wikipedia.org/wiki/Object-oriented_programming">object oriented programming</a> (can be done in Python, JavaScript, and many others), and <a class="reference external" href="https://en.wikipedia.org/wiki/Programming_paradigm">many more</a>.</p>
 </dd>
 <dt class="label" id="praw-functions-footnote"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>You can get a full list of praw functions by starting from <a class="reference external" href="https://praw.readthedocs.io/en/latest/code_overview/praw_models.html">this Praw documentation page</a>. That page has links for each type of thing on reddit, such as a comment, redditor, submission, etc. If you follow one of those you will get information on the different things you can do with those on using praw. Unfortunately it is not easy to read this information, but we will cover pieces of it as w ego in this book.</p>
+<dd><p>You can get a full list of praw functions by starting from <a class="reference external" href="https://praw.readthedocs.io/en/latest/code_overview/praw_models.html">this Praw documentation page</a>. That page has links for each type of thing on reddit, such as a comment, redditor, submission, etc. If you follow one of those you will get information on the different things you can do with those on using praw. Unfortunately, it is not easy to read this information, but we will cover pieces of it as w ego in this book.</p>
 </dd>
 </dl>
 </section>
