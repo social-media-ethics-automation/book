@@ -16,7 +16,7 @@ In this example, some clever protesters have made a donkey perform the act of pr
 
 % Act vs. Agent based views - "Who's a good bot?" Can a good person make a bad bot?
 
-## Bots and responsibilty
+## Bots and responsibility
 
 Bots present a similar disconnect between intentions and actions. Bot programs are written by one or more people, potentially all with different intentions, and they are run by others people, or sometimes scheduled by people to be run by computers.
 
@@ -27,7 +27,7 @@ This means we can analyze the ethics of the action of the bot, as well as the in
 - Choose an example social media bot (find on your own or look at [](02_bot_examples.md).)
   - What does this bot do that a normal person wouldn't be able to, or wouldn't be able to as easily?
   - Who is in charge of creating and running this bot?
-  - Does the fact that it is a bot change how you feel about it's actions?
+  - Does the fact that it is a bot change how you feel about its actions?
 - Why do you think social media platforms allow bots to operate?
    - Why would users want to be able to make bots?
    - How does allowing bots influence social media sites' profitability?

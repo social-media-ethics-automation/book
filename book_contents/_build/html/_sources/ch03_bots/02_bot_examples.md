@@ -14,8 +14,8 @@ Some bots are intended to be helpful, using automation to make tasks easier for 
 Bots might have significant limits on how helpful they are, such as tech support bots you might have had frustrating experiences with on various websites.
 
 
-## Malicious bots:
-On the other hand, some bots are created with the intentions of harming or deceiving others. For example, people use bots to spam advertizments, or harass others. You can use bots as a way of [buying fake followiers](https://www.socialwick.com/tiktok/followers), or making fake crowds that appear to support a cause (called [Astroturfing](https://en.wikipedia.org/wiki/Astroturfing)).
+## Antagonistic bots:
+On the other hand, some bots are made with the intention of harming, countering, or deceiving others. For example, people use bots to spam advertisements at people. You can use bots as a way of [buying fake followers](https://www.socialwick.com/tiktok/followers), or making fake crowds that appear to support a cause (called [Astroturfing](https://en.wikipedia.org/wiki/Astroturfing)).
 
 As one example, in 2016, Rian Johnson, who was in the middle of directing Star Wars: The Last Jedi, got bombarded by tweets that all originated in Russia (likely making at least some use of bots).
 >   "I've gotten a rush of tweets -- coordinated tweets. Like, somewhere else on the internet there's like a group on the internet saying, 'Okay, everyone tweet Rian Johnson.' All from Russian accounts, and all begging me not to kill Admiral Hux in this movie."
@@ -27,21 +27,38 @@ After the Star Wars: Last Jedi was released, there was a significant online back
 >
 > [https://www.indiewire.com/2018/10/star-wars-last-jedi-backlash-study-russian-trolls-rian-johnson-1202008645/](https://www.indiewire.com/2018/10/star-wars-last-jedi-backlash-study-russian-trolls-rian-johnson-1202008645/)
 
+Antagonistic bots can also be used as a form of political pushback that may be ethically justifiable. For example, the "[Gender Pay Gap Bot](https://twitter.com/PayGapApp)" bot on Twitter is connected to a database on gender pay gaps for companies in the UK. Then on International Women's Day, the bot automatically finds when any of those companies make an official tweet celebrating International Women's Day and it quote tweets it with the pay gap at that company:
+
+```{figure} pay_gap_bot.png
+---
+name: pay_gap_bot_fig
+width: 500
+alt: "The Gender Pay Gap Bot
+(@PayGapApp) quote tweeting 
+Loughborough University
+@lborouniversity. @PayGapApp says: \"In this organisation, women's median hourly pay is 31.3% lower than men's. The pay gap is 8.1 percentage points wider than the previous year.\". The original Loughborough University said \"Today @LboroWomensNwrk and @LboroMaia celebrated #IWD2023 by marching across campus. 🚶‍♀️Thank you to everyone who joined!\""
+---
+When Loughborough University tweeted in celebration of International Women's Day, the [Gender Pay Gap Bot automatically quote tweeted](https://twitter.com/PayGapApp/status/1633538112373784581) pointing out how much less the median salary of women was then men at Loughborough University.
+```
+
 ## Corrupted bots
 As a final example, we wanted to tell you about Microsoft Tay a bot that got corrupted.
 
-In 2016, Microsft launched a twitter bot that was intended to learn to speak from other twitter users and have conversations. Twitter users quickly started tweeting racist comments at Tay, which Tay learned from and started tweeting out within one day.
+In 2016, Microsft launched a Twitter bot that was intended to learn to speak from other Twitter users and have conversations. Twitter users quickly started tweeting racist comments at Tay, which Tay learned from and started tweeting out within one day.
 
 Read more about what went wrong from Vice [How to Make a Bot That Isn't Racist](https://www.vice.com/en_us/article/mg7g3y/how-to-make-a-not-racist-bot)
+
+
+
 
 
 ## Registered vs. Unregistered bots
 Most social media platforms provide an official way to connect a bot to their platform (called an [Application Programming Interface](https://en.wikipedia.org/wiki/API), or API). This lets the social media platform track these registered bots and provide certain capabilities and limits to the bots (like a rate limit on how often the bot can post). 
 
-But when some people want to get around these limits, they can make bots that don't use this official API, but instead open the website or app and then have a program perform clicks and scrolls the way a human might. These are much harder for social media platforms to track, and they normally ban accounts doing this if they are able to figure out that is what is happening.
+But when some people want to get around these limits, they can make bots that don't use this official API, but instead, open the website or app and then have a program perform clicks and scrolls the way a human might. These are much harder for social media platforms to track, and they normally ban accounts doing this if they are able to figure out that is what is happening.
 
 ## Fake Bots
-We also would like to point out that there are fake bots as well, that is real people pretending their work is the result of a Bot. For example, TikTok user Curt Skelton posted a video claiming that he was actually an AI generated / deepfake character:
+We also would like to point out that there are fake bots as well, that is real people pretending their work is the result of a Bot. For example, TikTok user Curt Skelton posted a video claiming that he was actually an AI-generated / deepfake character:
 
 <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@curt.skelton/video/7135836562771758382" data-video-id="7135836562771758382" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@curt.skelton" href="https://www.tiktok.com/@curt.skelton?refer=embed">@curt.skelton</a> <p></p> <a target="_blank" title="♬ Mr. Roboto - Live - Styx" href="https://www.tiktok.com/music/Mr-Roboto-Live-7006146083274295298?refer=embed">♬ Mr. Roboto - Live - Styx</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
 

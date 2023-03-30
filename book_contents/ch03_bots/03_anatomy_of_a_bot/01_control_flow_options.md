@@ -2,7 +2,7 @@
 
 In order to understand how a bot is built and can work, we will now look at the different ways computer programs can be organized. We will cover a bunch of examples quickly here, to hopefully give you an idea of many options for how to write a program. Don't worry if you don't follow all of it, as we will go back over these one at a time in more detail throughout the book.
 
-In this section we will not show actual Python computer programs (that will be in the next section). Instead here we will focus on what programmers call "[psuedocode](https://en.wikipedia.org/wiki/Pseudocode)," which is a human language outline of a program. Psuedocode is intended to be easier to read and write. Pseudocode is often used by programmers to plan how they want their programs to work, and once the programmer is somewhat confident in their pseudocode, they will then try to write it in actual programming language code.
+In this section, we will not show actual Python computer programs (that will be in the next section). Instead, here we will focus on what programmers call "[psuedocode](https://en.wikipedia.org/wiki/Pseudocode)," which is a human language outline of a program. Psuedocode is intended to be easier to read and write. Pseudocode is often used by programmers to plan how they want their programs to work, and once the programmer is somewhat confident in their pseudocode, they will then try to write it in actual programming language code.
 
 ```{note}
 The programs outlined below in pseudocode are meant to demonstrate what could be done with a computer program, not what should be done or what would necessarily be a good idea.
@@ -143,7 +143,7 @@ To make the dumpling filling:
 
 In a computer program, when you save information for later use, instead of putting it in a bowl, you give it a name. The computer then makes a place in its memory with that name, and saves the information you asked it to save. Then you can use that name later in the program to ask the computer what was saved in that spot.
 
-For example I might save my first and last name separately in the computer, then combine them together to make my full name (which I save), and then use that full name to send a private message to introduce myself:
+For example, I might save my first and last name separately in the computer, then combine them together to make my full name (which I save), and then use that full name to send a private message to introduce myself:
 ```text
 - Save my first name in a variable called "first_name"
 - Save my last name in a variable called "last_name"
@@ -383,7 +383,7 @@ Or you can repeat the same action until you get a certain result:
 - Continue kneading the dough until it is smooth and elastic, not rough and floury.
 ```
 
-In computer programming you can repeat an action a set number of times
+In computer programming, you can repeat an action a set number of times
 
 <pre>
 - Tweet this 100 times: "Warner Brothers should <a href="https://www.rollingstone.com/tv-movies/tv-movie-features/justice-league-the-snyder-cut-bots-fans-1384231/">#ReleaseTheSnyderCut</a> of the Justice League movie."
@@ -487,7 +487,7 @@ We will show how to use code blocks in Chapter 5: History of Social Media.
 ## Functions/Libraries: Run another program
 The final programming organization feature we will cover here is functions and libraries, which basically allow you to run another computer program. This could be a small program that you made that want to use, or it could be a program written by someone else that you are using.
 
-In cooking this might look like a step of asking the cook to make something from another recipe.
+In cooking, this might look like a step of asking the cook to make something from another recipe.
 ```text
 - Make the dumpling dough (see recipe on page 42).
 ```
@@ -508,9 +508,9 @@ In this book, we will be using the [praw](https://praw.readthedocs.io/) code lib
 - `upvote` (to upvote a post or comment)
 - etc.[^praw_functions_footnote]
 
-[^praw_functions_footnote]: You can get a full list of praw functions by starting from [this Praw documentation page](https://praw.readthedocs.io/en/latest/code_overview/praw_models.html). That page has links for each type of thing on reddit, such as a comment, redditor, submission, etc. If you follow one of those you will get information on the different things you can do with those on using praw. Unfortunately it is not easy to read this information, but we will cover pieces of it as w ego in this book.
+[^praw_functions_footnote]: You can get a full list of praw functions by starting from [this Praw documentation page](https://praw.readthedocs.io/en/latest/code_overview/praw_models.html). That page has links for each type of thing on reddit, such as a comment, redditor, submission, etc. If you follow one of those you will get information on the different things you can do with those on using praw. Unfortunately, it is not easy to read this information, but we will cover pieces of it as w ego in this book.
 
-If you look back over the various psuedocode and code examples above, most of them involve calling various functions, (though those examples use the tweepy library for Twitter). Additionally the scheduling example code includes defining a new function and using it.
+If you look back over the various psuedocode and code examples above, most of them involve calling various functions, (though those examples use the tweepy library for Twitter). Additionally, the scheduling example code includes defining a new function and using it.
 
 We will show examples of calling functions starting in the next section.
 

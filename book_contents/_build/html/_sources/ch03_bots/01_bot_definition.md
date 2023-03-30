@@ -1,6 +1,6 @@
 # Definition of a bot
 
-There several ways computer programs are involved with social media. One of them is as a "bot," a computer program that acts through a social media account.
+There are several ways computer programs are involved with social media. One of them is a "bot," a computer program that acts through a social media account.
 
 There are other ways of programming with social media that we won't consider a bot (and we will cover these at various points as well):
 - The social media platform itself is run with computer programs, such as recommendation algorithms (chapter 12).
@@ -16,5 +16,5 @@ name: click_farmer_fig
 width: 300px
 alt: A photo of a woman sitting in front of a board which has three rows of iPhones all turned on and plugged in, about 50 in total, and all in easy reach. She is interacting with one of them.
 ---
-A photo that is [likely from a click-farm](https://www.businessinsider.com/photo-shows-how-fake-app-store-rankings-are-made-2015-2), where a human computer is paid to do actions through multiple accounts, such as like a post or rate an app. For our purposes here, we are not considering this a bot, since it is not using (electrical) computer programming.
+A photo that is [likely from a click-farm](https://www.businessinsider.com/photo-shows-how-fake-app-store-rankings-are-made-2015-2), where a human computer is paid to do actions through multiple accounts, such as like a post or rate an app. For our purposes here, we consider this a type of automation, but we are not considering this a "bot," since it is not using (electrical) computer programming.
 ```
