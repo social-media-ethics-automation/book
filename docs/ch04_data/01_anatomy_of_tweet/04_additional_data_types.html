@@ -1943,9 +1943,9 @@ title="Print to PDF"
 <p><span class="caption-number">Fig. 4.11 </span><span class="caption-text">When viewing the fire emoji (🔥) close-up on a screen, you can see the bands of red, green, and blue that make up each pixel. If you try squinting your eyes or looking at the image from far away, it should blur back into the emoji.</span><a class="headerlink" href="#pixels-fire-emoji-fig" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p><strong>Sounds</strong> are represented as the electric current needed to move a speaker diaphragm back and forth over time to make the specific sound waves. The electric current is saved as a number, and those electric current numbers are saved at each time point, so the sound information is saved as a list of numbers.</p>
+<p><strong>Sounds</strong> are represented as the electric current needed to move a speaker’s diaphragm back and forth over time to make the specific sound waves. The electric current is saved as a number, and those electric current numbers are saved at each time point, so the sound information is saved as a list of numbers.</p>
 <figure class="align-center" id="id1">
-<a class="reference internal image-reference" href="../../_images/sound_wave_this.png"><img alt="An image of a sound wave for the word &quot;this&quot;. There is a horizontal line in the middle, and a bunch of vertical bars that are approxomitely centered. The vertical bars are different lengths makking a pattern of ups and downs that represent the sound wave." src="../../_images/sound_wave_this.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sound_wave_this.png"><img alt="An image of a sound wave for the word &quot;this&quot;. There is a horizontal line in the middle, and a bunch of vertical bars that are approximately centered. The vertical bars are different lengths making a pattern of ups and downs that represent the sound wave." src="../../_images/sound_wave_this.png" style="width: 300px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.12 </span><span class="caption-text">A computer representation of the sound of Kyle saying “this.”</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -1953,23 +1953,23 @@ title="Print to PDF"
 <figure class="align-center" id="id2">
 <a class="reference internal image-reference" href="../../_images/sound_wave_animation.gif"><img alt="An animation showing a sound wave data going up and down (like a sine wave). When the wave is high it pushes the speaker diaphragm away, and when it is low it pulls the speaker diaphragm closer, and as the diaphragm goes back and forth, sound waves come off of it." src="../../_images/sound_wave_animation.gif" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.13 </span><span class="caption-text">How sound information turns into an electric signal, which then works with a magnet to push and pull on a <a class="reference external" href="https://en.wikipedia.org/wiki/Electrodynamic_speaker_driver#Components">diaphram inside a speaker</a> to create physical sound waves. Microphones do this process in exactly the reverse, the sound waves in the air make the speaker diaphragm go back and forth, making an electric current in the wire which gets measured and saved by the computer.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.13 </span><span class="caption-text">How sound information turns into an electric signal, which then works with a magnet to push and pull on a <a class="reference external" href="https://en.wikipedia.org/wiki/Electrodynamic_speaker_driver#Components">diaphragm inside a speaker</a> to create physical sound waves. Microphones do this process in exactly the reverse, the sound waves in the air make the speaker diaphragm go back and forth, making an electric current in the wire which gets measured and saved by the computer.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p><strong>Videos</strong> are represented as a squence of images (a list of images) called frames, often with a sound wave to be played at the same time.</p>
-<p><img alt="the &quot;mind blown&quot; gif: animated gif of a man making hand explosion out of his forhead while stars and explosions are overlayed on top" src="../../_images/mind_blown.gif" /></p>
+<p><strong>Videos</strong> are represented as a sequence of images (a list of images) called frames, often with a sound wave to be played at the same time.</p>
+<p><img alt="the &quot;mind blown&quot; gif: animated gif of a man making hand explosion out of his forehead while stars and explosions are overlayed on top" src="../../_images/mind_blown.gif" /></p>
 <p>In most cases, after the initial data representation is created, the computer runs a compression algorithm, which takes the image, sound, or video, and finds a way of storing it in much less computer memory, often losing some of the quality when doing so.</p>
-<p><img alt="Two idenitcal side-by-side photos of the author of Kyle Thayer, but the one on the right is highly compressed, making it look somewhat blocky and colors are a little off, and it is noisy." src="../../_images/kylethayer_compress_compare.png" /></p>
+<p><img alt="Two identical side-by-side photos of the author of Kyle Thayer, but the one on the right is highly compressed, making it look somewhat blocky and colors are a little off, and it is noisy." src="../../_images/kylethayer_compress_compare.png" /></p>
 <section id="metadata">
 <h3>Metadata<a class="headerlink" href="#metadata" title="Permalink to this headline">#</a></h3>
 <p>In addition to the main components of the images, sound, and video data, this information is often stored with metadata, such as:</p>
 <ul class="simple">
 <li><p>The time the image/sound/video was created</p></li>
-<li><p>The location wher the image/sound/video was taken</p></li>
+<li><p>The location where the image/sound/video was taken</p></li>
 <li><p>The type of camera or recording device used to create the image/sound/video</p></li>
 <li><p>etc.</p></li>
 </ul>
-<p>For our purposes in this class, most of the the time we run into images, we will find a string that tells us where the image, video, or sound is saved (e.g., we’ll get something like “kylethayer.jpg”), and we might additionally get some metadata.</p>
+<p>For our purposes in this class, most of the time we run into images, we will find a string that tells us where the image, video, or sound is saved (e.g., we’ll get something like “kylethayer.jpg”), and we might additionally get some metadata.</p>
 </section>
 </section>
 <section id="dates-and-times">
@@ -1982,8 +1982,8 @@ title="Print to PDF"
 </figcaption>
 </figure>
 <p>There are several options for how to save dates and times. Some options include a series of numbers (year, month, day, hour, minute, and second), or a string that with all of those pieces of information written out. Sometimes only the date is saved, with no time information, and sometimes the time information will include the timezone.</p>
-<p>Dates turn out to be one of the trickier data types to work with in practice. One of the main reasons for this is that what time or day it is depends on what time zone you are in.</p>
-<p>So, for example, when twitter tells me that the tweet was posted on Feb 10, 2020, does it mean Feb 10 for me? Or for the person who posted it? Those might not be the same. Or if I want to see for a given account, how much they tweeted “yesteday,” what do I mean by “yesterday?” We might be in different time zones and have different start and end times for what we each call “yesterday.”</p>
+<p>Dates turn out to be one of the trickier data types to work with in practice. One of the main reasons for this is that what time or day it depends on what time zone you are in.</p>
+<p>So, for example, when Twitter tells me that the tweet was posted on Feb 10, 2020, does it mean Feb 10 for me? Or for the person who posted it? Those might not be the same. Or if I want to see for a given account, how much they tweeted “yesterday,” what do I mean by “yesterday?” We might be in different time zones and have different start and end times for what we each call “yesterday.”</p>
 <p>Note: We’ll work with dates and times a little bit in chapter 18: Public Shaming</p>
 </section>
 </section>

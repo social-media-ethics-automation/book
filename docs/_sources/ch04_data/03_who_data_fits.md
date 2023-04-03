@@ -1,5 +1,5 @@
 # Who does data fit?
-Because all data is a simplification of reality, those simplifications work well for some people and some situations, but can cause problems for other people and other situations.
+Because all data is a simplification of reality, those simplifications work well for some people and some situations but can cause problems for other people and other situations.
 
 Thus, when designers of social media systems make decisions about how data will be saved and what constraints will be put on the data, they are making decisions about who will get a better experience. Based on these decisions, some people will fit naturally into the data system, while others will have to put in extra work to make themselves fit, and others will have to modify themselves or misrepresent themselves to fit into the system.
 
@@ -12,7 +12,7 @@ So, for example, if we made a form that someone needed to enter their address, w
 
 Someone in another country would have to try to find a way to indicate that they aren't in the United States even though there is no clear place to indicate that. If this is a form for shipping to people in the US only, then this limitation might make sense.
 
-If we wanted people to be able to enter other countries we could make a country drop down tool to select a country, but then would we auto-fill it with a country? If there is a list of countries to scroll through, what order do we put them in? If it's alphbetical, that will make it easier for people in countries whose name starts with "A."
+If we wanted people to be able to enter other countries we could make a country drop-down tool to select a country, but then would we auto-fill it with a country? If there is a list of countries to scroll through, what order do we put them in? If it's alphabetical, that will make it easier for people in countries whose name starts with "A."
 
 
 ## Form fails
@@ -21,11 +21,11 @@ Let's look at some examples where forms show problems with data entry and repres
 ### Name Length
 Here are some screenshots from a [help forum discussion](https://ttlc.intuit.com/community/taxes/discussion/my-last-name-is-to-long-what-do-i-do/00/655670) on the United States tax software TurboTax:
 
-![Screenshot from turbotax help forum. A user in 2019 has posted the question: "My last name is to long, what do I do?"](tax_name1.png)
+![Screenshot from turbotax help forum. A user in 2019 posted the question: "My last name is too long, what do I do?"](tax_name1.png)
 
-![Screenshot from turbotax help forum. A user in 2019 has replied "You can fix that by removing the last letters that don't fit. The IRS matches the social security number with only the first few letters of the last name."](tax_name2.png)
+![Screenshot from turbotax help forum. A user in 2019 replied "You can fix that by removing the last letters that don't fit. The IRS matches the social security number with only the first few letters of the last name."](tax_name2.png)
 
-![Screenshot from turbotax help forum. A user in 2020 has replied "Same thing for me. I end up filling by mail because it fails every time."](tax_name3.png)
+![Screenshot from turbotax help forum. A user in 2020 replied "Same thing for me. I end up filling by mail because it fails every time."](tax_name3.png)
 
 As you can see, TurboTax has a limit on how long last names are allowed to be, and people with too long of names have different strategies with how to deal with not fitting in the system.
 
