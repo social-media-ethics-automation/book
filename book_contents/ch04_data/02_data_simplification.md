@@ -14,17 +14,17 @@ Let's look at a debate around a specific data point:
 >
 > [Musk’s Dispute With Twitter Over Bots Continues to Dog Deal](https://www.bloomberg.com/news/articles/2022-07-07/twitter-reiterates-that-spam-bots-are-well-under-5-of-users), by Kurt Wagner, Bloomberg July 7, 2022
 
-The data in question here is over what percentage of twitter users are spam bots, which Twitter claimed was less than 5%, and Elon Musk claimed is higher than 5%.
+The data in question here is over what percentage of Twitter users are spam bots, which Twitter claimed was less than 5%, and Elon Musk claimed is higher than 5%.
 
-Data points often give the appearance of being concrete and reliable, especially if they are numerical. So when Twitter initially came out with a claim that less than 5% of users are spam bots, it may have been accepted by most people who heard it. Elon Musk then questioned that figure and attempted to [back out of buying twitter](https://www.npr.org/2022/07/08/1110539504/twitter-elon-musk-deal-jeopardy), and Twitter is [accusing Musk's complaint of being an invented excuse](https://www.npr.org/transcripts/1111032233) to back out of the deal, and [the case is now in court](https://www.npr.org/transcripts/1111032233).
+Data points often give the appearance of being concrete and reliable, especially if they are numerical. So when Twitter initially came out with a claim that less than 5% of users are spam bots, it may have been accepted by most people who heard it. Elon Musk then questioned that figure and attempted to [back out of buying Twitter](https://www.npr.org/2022/07/08/1110539504/twitter-elon-musk-deal-jeopardy), and Twitter is [accusing Musk's complaint of being an invented excuse](https://www.npr.org/transcripts/1111032233) to back out of the deal, and [the case is now in court](https://www.npr.org/transcripts/1111032233).
 
-When looking at real life data claims and datasets, you will likely run into many different problems and pitfalls in using that data. Any dataset you find might have:
+When looking at real-life data claims and datasets, you will likely run into many different problems and pitfalls in using that data. Any dataset you find might have:
 - missing data
 - erroneous data (e.g., mislabeled, typos)
 - biased data
 - manipulated data
 
-Any one of those issues might show up in Twitter's claim or Musk's counter claim, but even in the best of situations there is still a fundamental issue when looking at claims like this, and that is that:
+Any one of those issues might show up in Twitter's claim or Musk's counterclaim, but even in the best of situations there is still a fundamental issue when looking at claims like this, and that is that:
 
 > All data is a simplification of reality.
 
@@ -33,11 +33,11 @@ Let's consider a concrete example involving apples:
 ## Counting Apples
 We all know simple math facts, like 2 + 2 = 4, and 4 = 1 x 4. So that means that if we had two apples like this:
 
-![photo of two regular size apples](apples_1.png)
+![photo of two regular-sized apples](apples_1.png)
 
-And we added two more apples, we would have 4 apples (because 2 + 2 = 4), like this:
+And if we added two more apples, we would have 4 apples (because 2 + 2 = 4), like this:
 
-![photo of the two regular size apples from before, but now next to two tiny apples](apples_2.png)
+![photo of the two regular-sized apples from before, but now next to two tiny apples](apples_2.png)
 
 And if there were four of us who wanted to have apples, we could give each person 1 apple, and they would have the same number of apples (because 4 = 1 x 4), like this:
 
@@ -52,11 +52,11 @@ So, there was a simplification here. In this example, I decided that each of the
 ## What we lose in simplifying
 
 As you can see in the apple example, any time we turn something into data, we are making a simplification.[^symbolic_data_not_simplified] If we are counting the number of something, like apples, we are deciding that each one is equivalent. If we are writing down what someone said, we are losing their tone of voice, accent, etc. If we are taking a photograph, it is only from one perspective, etc.
-- Different simplifications are useful for different tasks. Any given simplification will be helpful for some task and be unhelpful for others.
+- Different simplifications are useful for different tasks. Any given simplification will be helpful for some tasks and be unhelpful for others.
   - See also, this saying in statistics: [All models are wrong, but some are useful](https://en.wikipedia.org/wiki/All_models_are_wrong)
 
 
-[^symbolic_data_not_simplified]:There is one exception where you can have data that isn't a simplification, and that is if the data source is symbolic (e.g., numbers) and you are applying unambiguous rules (e.g., math). Since it starts out as a symbol, it doesn't need to be simplified to be represented with symbols. For example, data that can be made without simplification include: <ul><li>A list of the first 10 prime numbers.</li> <li>The number of times the letter 'a' (capital or lower case) appears in this sentence.</li>
+[^symbolic_data_not_simplified]: There is one exception where you can have data that isn't a simplification, and that is if the data source is symbolic (e.g., numbers) and you are applying unambiguous rules (e.g., math). Since it starts out as a symbol, it doesn't need to be simplified to be represented with symbols. For example, data that can be made without simplification include: <ul><li>A list of the first 10 prime numbers.</li> <li>The number of times the letter 'a' (capital or lowercase) appears in this sentence.</li>
 
 
 ## More examples of simplifications
@@ -71,14 +71,14 @@ So all data that you might find is a simplification. There are many seemingly si
 
 ## Revisiting Twitter Users vs. Bots
 
-Let's go back to the question of whether less than 5% of twitter users are spam bots.
+Let's go back to the question of whether less than 5% of Twitter users are spam bots.
 
-In this claim are several places where there are simplifications being made, particularly in the definition of "twitter users" and of "spam bots."
+In this claim are several places where there are simplifications being made, particularly in the definitions of "Twitter users" and "spam bots."
 
-### Measuring twitter users:
+### Measuring Twitter users:
 How do we count how many users are on Twitter?
 
-It depends on if we mean how many accounts have been registered vs. how many people are logged into twitter on a given day. And it also depends on how we count situations where one person has many accounts, or many people share a corporate account.
+It depends on if we mean how many accounts have been registered vs. how many people are logged into Twitter on a given day. And it also depends on how we count situations where one person has many accounts, or many people share a corporate account.
 
 
 ### Measuring spam bots

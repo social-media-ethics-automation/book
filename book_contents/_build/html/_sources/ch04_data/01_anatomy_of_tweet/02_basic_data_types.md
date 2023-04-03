@@ -1,9 +1,9 @@
 # Basic Data Types
 
-First we'll look at a few basic data storage types. We'll also be including some code examples you can look at, though don't worry yet if you don't understand the code, since we'll be covering these in more detail throughout the rest of the book.
+First, we'll look at a few basic data storage types. We'll also be including some code examples you can look at, though don't worry yet if you don't understand the code, since we'll be covering these in more detail throughout the rest of the book.
 
 ## Booleans (True / False)
-Binary consisting of 0s and 1s make it easy to represent true and false values, where 1 often represents true and 0 represents false. Most programming languages have built in ways of representing True and False values.
+Binary consisting of 0s and 1s make it easy to represent true and false values, where 1 often represents true and 0 represents false. Most programming languages have built-in ways of representing True and False values.
 
 ```{figure} dog_tweet_binary.png
 ---
@@ -64,11 +64,11 @@ average_tweet_length = 133.5
 ```
 ````
 
-When computers store numbers, there are limits to how much space is can be used to save each number. This limits how big (or small) the numbers can be, and causes rounding with floating point numbers.
+When computers store numbers, there are limits to how much space is can be used to save each number. This limits how big (or small) the numbers can be, and causes rounding with floating-point numbers.
 
 % TODO: https://jvns.ca/blog/2023/01/13/examples-of-floating-point-problems/
 
-Additionally programming languages might include other ways of storing numbers, such as fractions, [complex numbers](https://en.wikipedia.org/wiki/Complex_number), or limited number sets (like only positive integers).
+Additionally, programming languages might include other ways of storing numbers, such as fractions, [complex numbers](https://en.wikipedia.org/wiki/Complex_number), or limited number sets (like only positive integers).
 
 
 
