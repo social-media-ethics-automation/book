@@ -54,6 +54,8 @@ Sources:
 
 ## Inauthentic Behaviors
 
+% TODO: Add photo of fairies that fooled Arthur Conan Doyle
+
 Inauthentic behavior is when the reality doesn't match what is being presented. There are many ways inauthnticity shows up on social media, such as:
 
   - Catfishing: Create a fake profile that doesn't match the actual user, usually in an attempt to trick or scam someone

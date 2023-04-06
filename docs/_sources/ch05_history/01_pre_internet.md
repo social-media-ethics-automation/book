@@ -5,7 +5,7 @@ The book [Writing on the Wall: Social Media - The First 2,000 Years](https://www
 - Graffiti and other notes left on walls were used for sharing updates, spreading rumors, and tracking accounts
 - Books and news write-ups had to be copied by hand, so that only the most desired books went "viral" and spread
 
-Later, some time after the printing press, Stondage highlights how there was an unusual period in American history that roughly took up the 1900s where, in America, news sources were centralized in certain newspapers and then the big 3 TV networks. In this period of time these sources were roughly in agreement and broadcast news out to the country, making a more unified, consistent news environment (though, of course we can point out how they were biased in ways like being almost exclusively white men).
+Later, sometime after the printing press, Stondage highlights how there was an unusual period in American history that roughly took up the 1900s where, in America, news sources were centralized in certain newspapers and then the big 3 TV networks. In this period of time, these sources were roughly in agreement and broadcast news out to the country, making a more unified, consistent news environment (though, of course, we can point out how they were biased in ways like being almost exclusively white men).
 
 Before this centralization of media in the 1900s, newspapers and pamphlets were [full of rumors and conspiracy theories](https://www.smithsonianmag.com/history/conspiracy-theories-abounded-19th-century-american-politics-180971940/). And now as the internet and social media have taken off in the early 2000s, we are again in a world full of rumors and conspiracy theories.
 
