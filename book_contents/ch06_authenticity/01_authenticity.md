@@ -18,6 +18,8 @@ The need to trust other people is obscured by the many institutions that we have
 
 This need of ours is what leads us to place value on _authenticity_.
 
+% TODO: Add image of ancient seal on scroll or something to prove authenticity
+
 ## What Is Authenticity?
 
 Authenticity is a rich concept, loaded with several connotations. To describe something as authentic, we are often talking about honesty, in that the thing is what it claims to be. But we also describe something as authentic when we want to say that it offers a certain kind of connection. A knock-off designer item does not offer the purchaser the same sort of connection to the designer brand that an _authentic_ item does. Authenticity in connection requires honesty about who we are and what we're doing; it also requires that there be some sort of reality to the connection that is supposedly being made between parties. Authentic connections frequently place high value on a sense of proximity and intimacy. Someone who pretends to be your friend, but does not spend time _with_ you (proximity) or does not open themselves up to trusting mutual interdependence (intimacy) is offering one kind of connection (being an acquaintance) under the guise of a different kind of connection (friendship).

@@ -13,9 +13,9 @@ Let's look at some of these design decisions more closely:
 ## Social Media Connection Types
 
 One difference you may notice with different social media sites is in how you form connections with others.
-- Some social media sites don't have any formal connections. Like two users who happen to be in the same bulletin board.
+- Some social media sites don't have any formal connections. Like two users who happen to be on the same bulletin board.
 - Some social media sites only allow reciprocal connections, like being "friends" on Facebook
-- Some social media sites offer one-way connections, like following someone on Twitter, or subscribing to a YouTube channel.
+- Some social media sites offer one-way connections, like following someone on Twitter or subscribing to a YouTube channel.
 
 There are, of course, many variations and nuances besides what we mentioned above, but we wanted to get you started thinking about some different options.
 
@@ -27,15 +27,15 @@ Look at the different ethics frameworks and see which ones might have something 
 
 The [user interface](https://en.wikipedia.org/wiki/User_interface) of a computer system (like a social media site), is the part that you view and interact with. It's what you see on your screen and what you press or type or scroll over. Designers of social media sites have to decide how to layout information for users to navigate and decide how the user performs various actions (like, retweet, post, look up user, etc.). Some information and actions will be made larger and easier to access while others will be smaller or hidden in menus or settings.
 
-As we look a these interfaces, there are two key terms we want you to know:
+As we look at these interfaces, there are two key terms we want you to know:
 
-[Affordances](https://en.wikipedia.org/wiki/Affordance#As_perceived_action_possibilities) are what a user interface let's you do. In particular, it's what a user interface makes feel natural to do. So for example, an interface might have something that looks like it should be pressed, or an interface might open by scrolling a little so it is clear that if you touch it you can make it scroll more ([see a more nuanced explanation here](https://www.interaction-design.org/literature/topics/affordances))
+[Affordances](https://en.wikipedia.org/wiki/Affordance#As_perceived_action_possibilities) are what a user interface lets you do. In particular, it's what a user interface makes feel natural to do. So for example, an interface might have something that looks like it should be pressed, or an interface might open by scrolling a little so it is clear that if you touch it you can make it scroll more ([see a more nuanced explanation here](https://www.interaction-design.org/literature/topics/affordances))
 
-[Friction](https://www.fullstory.com/user-friction) is anything that gets in the way of a user performing an action. For example, if you have to open and navigate through several menus to find the privacy settings, that is significant friction. Or if one of the buttons has a bug and doesn't work when you press it, so you have to find another way or performing that action, that is significant friction.
+[Friction](https://www.fullstory.com/user-friction) is anything that gets in the way of a user performing an action. For example, if you have to open and navigate through several menus to find the privacy settings, that is significant friction. Or if one of the buttons has a bug and doesn't work when you press it, so you have to find another way of performing that action, which is significant friction.
 
 Designers sometimes talk about trying to make their user interfaces _frictionless_, meaning the user can use the site without feeling anything slowing them down.
 
-Sometimes desginers add friction to sites intentionally. For example, ads in mobile games make the "x" you need to press incredibly small and hard to press to make it harder to leave their ad:
+Sometimes designers add friction to sites intentionally. For example, ads in mobile games make the "x" you need to press incredibly small and hard to press to make it harder to leave their ad:
 
 ```{figure} ad_screenshot.jpg
 ---
@@ -46,7 +46,7 @@ alt: Screenshot of an ad playing (video of a woman walking with stars around). A
 An ad on a mobile device, which has an incredibly small, hard to press "x" button. You need to press that button to close the ad. If you miss the "x", it takes you to more advertising.
 ```
 
-Another example of intentionally adding friction was a design change Twitter made in an attmempt to reduce misinformation: When you try to retweet an article, if you haven't clicked on the link to read the article, it stops you to ask if you want read it first before retweeting.
+Another example of intentionally adding friction was a design change Twitter made in an attempt to reduce misinformation: When you try to retweet an article, if you haven't clicked on the link to read the article, it stops you to ask if you want to read it first before retweeting.
 
 ```{figure} read_article_check.jpg
 ---
@@ -59,7 +59,7 @@ When Kyle attempted to retweet this article, twitter stopped me to ask if he wan
 
 
 
-One famous example of reducing friction was the invention of [infinite scroll](https://en.wikipedia.org/wiki/Scrolling#Infinite_scrolling). When trying to view results from a search, or look through social media posts, you could only view a few at a time, and to see more you had to press a button to see the next "page" of results. This is how both google search and amazon search work at the time this was written. In 2006, [Aza Raskin](https://en.wikipedia.org/wiki/Aza_Raskin) invented infinite scroll, where you can scroll to the bottom of the current results, and new results will get automatically filled in below. Most social media sites now use this, so you can then scroll forever and never hit an obstacle or friction as you endlessly look at social media posts. Aza Raskin [regrets](https://www.thetimes.co.uk/article/i-m-so-sorry-says-inventor-of-endless-online-scrolling-9lrv59mdk) what infinite scroll has done to make it harder for users to break away from looking at social media sites.
+One famous example of reducing friction was the invention of [infinite scroll](https://en.wikipedia.org/wiki/Scrolling#Infinite_scrolling). When trying to view results from a search, or look through social media posts, you could only view a few at a time, and to see more you had to press a button to see the next "page" of results. This is how both Google search and Amazon search work at the time this is written. In 2006, [Aza Raskin](https://en.wikipedia.org/wiki/Aza_Raskin) invented infinite scroll, where you can scroll to the bottom of the current results, and new results will get automatically filled in below. Most social media sites now use this, so you can then scroll forever and never hit an obstacle or friction as you endlessly look at social media posts. Aza Raskin [regrets](https://www.thetimes.co.uk/article/i-m-so-sorry-says-inventor-of-endless-online-scrolling-9lrv59mdk) what infinite scroll has done to make it harder for users to break away from looking at social media sites.
 
 
 

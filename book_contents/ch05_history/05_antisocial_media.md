@@ -1,6 +1,6 @@
 # Antisocial Media
 
-While mainstream social media platforms grew in popularity, there was a parallel growth of social media platforms that were based on having "no rules", and were sources for many memes and piecs of internet culture, as well as hubs of much anti-social behavior (e.g., trolling, harassment, hate-groups, murders, etc.).
+While mainstream social media platforms grew in popularity, there was a parallel growth of social media platforms that were based on having "no rules", and were sources for many memes and pieces of internet culture, as well as hubs of much anti-social behavior (e.g., trolling, harassment, hate-groups, murders, etc.).
 
 ```{note}
 This page is about various toxic online communities.
@@ -12,9 +12,9 @@ The comedy website [Something Awful](https://en.wikipedia.org/wiki/Something_Awf
 While the Something Awful forums had edgy content, one 15-year-old member of the Something Awful forum called "Anime Death Tentacle Rape Whorehouse" was frustrated by content restrictions on Something Awful, and created his own new site with less restrictions: 4Chan.
 
 ## 4Chan
-[4Chan](https://en.wikipedia.org/wiki/4chan) was created in 2003 by copying the code from a Japanese image sharing bulletin board called [Futaba or 2chan](https://en.wikipedia.org/wiki/Futaba_Channel).
+[4Chan](https://en.wikipedia.org/wiki/4chan) was created in 2003 by copying the code from a Japanese image-sharing bulletin board called [Futaba or 2chan](https://en.wikipedia.org/wiki/Futaba_Channel).
 
-4Chan has various image sharing bulletin boards, where users post anonymously. Perhaps the most infamous board is the "/b/" board for "random" topics. This board emphasizes "free speech" and "no rules" (with exceptions for child pornography and some other illegal content). In these message boards users attempt to troll each other and post the most shocking content they can come up with. They also have a history of collectively choosing a target website or community and doing a "raid" where they all try to join and troll and offend the people in that community.
+4Chan has various image-sharing bulletin boards, where users post anonymously. Perhaps the most infamous board is the "/b/" board for "random" topics. This board emphasizes "free speech" and "no rules" (with exceptions for child pornography and some other illegal content). In these message boards, users attempt to troll each other and post the most shocking content they can come up with. They also have a history of collectively choosing a target website or community and doing a "raid" where they all try to join and troll and offend the people in that community.
 
 Many memes, groups, and forms of internet slang come from 4Chan, such as:
 - [lolcats](https://knowyourmeme.com/memes/lolcats)
@@ -24,8 +24,8 @@ Many memes, groups, and forms of internet slang come from 4Chan, such as:
 - [Bronies](https://www.theatlantic.com/technology/archive/2020/06/my-little-pony-nazi-4chan-black-lives-matter/613348/) (male My Little Pony fans)
 - much of trolling culture (we will talk more about in Chapter 7: Trolling)
 
-But one 4Chan user found 4chan to be too authoritarian and restrictive and set out to create a new "free-speech-friendly" image sharing bulletin board, which he called 8chan.
+But one 4Chan user found 4chan to be too authoritarian and restrictive and set out to create a new "free-speech-friendly" image-sharing bulletin board, which he called 8chan.
 
 ## 8Chan (now 8Kun)
 
-[8Chan](https://en.wikipedia.org/wiki/8chan) (now called 8Kun) is an image sharing bulletin board site that was started in 2013. It has been host to white-supremecist, neo-nazi and other hate content. 8Chan has had trouble finding companies to host its servers and internet registration due to presence of child pornography, and for being the place where various mass shooters spread their hateful manifestos. 8Chan is also the source and home of the false conspiracy theory [QAnon](https://en.wikipedia.org/wiki/QAnon/)
+[8Chan](https://en.wikipedia.org/wiki/8chan) (now called 8Kun) is an image-sharing bulletin board site that was started in 2013. It has been host to white-supremacist, neo-nazi and other hate content. 8Chan has had trouble finding companies to host its servers and internet registration due to the presence of child sexual abuse material (CSAM), and for being the place where various mass shooters spread their hateful manifestos. 8Chan is also the source and home of the false conspiracy theory [QAnon](https://en.wikipedia.org/wiki/QAnon/)
