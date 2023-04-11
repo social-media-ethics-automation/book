@@ -1,10 +1,10 @@
 # Activity: Evaluating Trolling Examples
 
-This page has several examples of trolling. For each one consider the following:
-- What are potential benefits of this example (e.g., it’s funny, in-group identifying)? And who would get the benefits?
-- What are potential harms of this example? And who would suffer the harms?
+This page has several examples of trolling. For each one, consider the following:
+- What are the potential benefits of this example (e.g., it’s funny, in-group identifying)? And who would get the benefits?
+- What are the potential harms of this example? And who would suffer the harms?
 
-These examples will range mild to much more extreme.
+These examples will range from mild to much more extreme.
 
 ## Banana Slicer Reviews
 In 2011, Amazon users started leaving parody reviews of a [banana slicer on Amazon](https://www.amazon.com/Hutzler-3571-571-Banana-Slicer/dp/B0047E0EII)
@@ -12,7 +12,7 @@ In 2011, Amazon users started leaving parody reviews of a [banana slicer on Amaz
 ```{figure} banana_1.png
 ---
 name: banana_slicer_amazon_fig
-alt: Screenshot of Amazon page for the Hutzler 571 Banana Slicer. The slicer is a flat piece of plasticm roughly in the shape of a banana, but wider. It is hollow with rows of thin plastic slicers across it, so when it is pressed down onto a banana, it will turn the whole banana into about equal size slices. It costs $5.28.
+alt: Screenshot of Amazon page for the Hutzler 571 Banana Slicer. The slicer is a flat piece of plastic roughly in the shape of a banana, but wider. It is hollow with rows of thin plastic slicers across it, so when it is pressed down onto a banana, it will turn the whole banana into about equal size slices. It costs $5.28.
 ---
 The Hutzler 571 Banana Slicer on Amazon.
 ```
@@ -47,7 +47,7 @@ Note: you can find the [real pronunciation guide here](https://dictionary.cambri
 
 [^fake_pronounce]: In American English, "Hors d'oeuvres" is pronounced like "or-dervs". In the fake pronunciation video they pronounce it: "haars-doovs-dees" and then give an example sentence: "MMmm, what a die-loose-us [instead of delicious (dee-lish-us)] haars-doovs-dees"
 
-In the youtube comments some people played along and others celebrated or worried about who would get tricked.
+In the youtube comments, some people played along and others celebrated or worried about who would get tricked.
 
 ```{figure} pronounce_comments.png
 ---
@@ -100,7 +100,7 @@ RIP trolling is where trolls find a memorial page and then all work together to 
 
 To go in a different direction for our last example, let's look at an example of trolling as a form of protest.
 
-In the Black Lives Matters protests of 2020, Dallas Police made an app where they asked people to upload videos of protesters doing anything illegal. In support of the protesters, K-pop fans swarmed the app and uploaded as many K-pop videos as they could eventually leading to the app to crash and become unusable, and thus protecting the protesters from this attempt at Police surveillance.
+In the Black Lives Matters protests of 2020, Dallas Police made an app where they asked people to upload videos of protesters doing anything illegal. In support of the protesters, K-pop fans swarmed the app and uploaded as many K-pop videos as they could eventually leading to the app crashing and becoming unusable, and thus protecting the protesters from this attempt at Police surveillance.
 
 Read more at the Verge: [K-pop stans overwhelm app after Dallas police ask for videos of protesters](https://www.theverge.com/2020/6/1/21277423/k-pop-dallas-pd-iwatch-app-flood-review-bomb-surveillance-protests-george-floyd)
 

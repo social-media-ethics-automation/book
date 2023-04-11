@@ -28,7 +28,7 @@ Now, as children, I (Kyle) and my sister watched this program and felt the effec
 ---
 name: mr_rogers_letter_to_kyle
 width: 400
-alt: "A letter written on a typewritter:
+alt: "A letter written on a typewriter:
 June, 1988
 Dear Kyle,
 It was good to get to know you and your sister from your letter and the photo you sent. We will be sure to find a special place for your picture in the album we keep of our television friends.
@@ -46,7 +46,7 @@ My younger sister then wanted to send her own letter to Mr. Rogers, inviting him
 ---
 name: mr_rogers_letter_to_jessica
 width: 400
-alt: "A letter written on a typewritter (note: I fixed a close quote):
+alt: "A letter written on a typewriter (note: I fixed a close quote):
 November, 1989
 Dear Jessica,
 Thank you for you letter and the photograph you sent. I liked seeing the picture of you and Kyle. What fine children you are! We will be sure to find a special place for your photo in the album of our television friends.
@@ -62,7 +62,7 @@ Fred Rogers explaining to my younger sister (Jessica), that he can't come visit 
 Now, of the two of us at this time, I had some skepticism, but my younger sister, Jessica, had the strongest parasocial relationship with Mr. Rogers. Jessica probably believed that Mr. Rogers knew her and liked her. We can break this into two parts:
 - She believed Mr. Rogers knew her (or was at least close enough that he would come over to visit).
   - This belief was almost certainly false. He may have known who she was for a brief moment when responding to this letter (or signing one his secretary wrote or something).
-- She believed that if she saw Mr. Rogers (like, if he came over to our house), that he would like her.
+- She believed that if she saw Mr. Rogers (like if he came over to our house), he would like her.
   - Based on [what is known publicly about Fred Rogers](https://www.esquire.com/entertainment/tv/a27134/can-you-say-hero-esq1198/), this was probably true.
 
 
@@ -72,4 +72,4 @@ In the above example, you can see how Fred Rogers was trying to define and clari
 - Where do you see parasocial relationships on social media?
 - In what ways are you in parasocial relationships?
 - What are the ways in which a parasocial relationship can be authentic or inauthentic?
-  - both for the celebrity, and for the viewer/follower
+  - both for the celebrity and for the viewer/follower

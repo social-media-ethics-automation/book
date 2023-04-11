@@ -6,7 +6,7 @@ We mentioned in the last chapter the cases of 4chan and 8chan, where anonymous u
 The answer to this question might be yes in some circumstances, but also, the opposite might occur in others.
 
 ## Anonymity encouraging inauthentic behavior
-Anonymity can encourage _inauthentic_ behavior, because with no way of tracing anything back to you[^tracing_back], you can get away with pretending you are someone you are not, or behaving in ways that would get your true self in trouble.
+Anonymity can encourage _inauthentic_ behavior because, with no way of tracing anything back to you[^tracing_back], you can get away with pretending you are someone you are not, or behaving in ways that would get your true self in trouble.
 
 
 ## Anonymity encouraging authentic behavior

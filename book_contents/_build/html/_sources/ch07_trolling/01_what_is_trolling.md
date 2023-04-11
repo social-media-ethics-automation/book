@@ -1,18 +1,16 @@
 # What is trolling
 
-% - fake fbi post: https://isitfunnyoroffensive.com/comedian-impersonates-fbi-on-twitter-makes-mlk-assassination-joke/
-
 ```{figure} fbi_mlk_troll.jpg
 ---
 name: fbi_mlk_troll_fig
 width: 300px
-alt: "Post by what looks like the verified FBI account (though the handle is @jaboukie), saying: Just becaues we killed MLK doesn't mean we can't miss him."
+alt: "Post by what looks like the verified FBI account (though the handle is @jaboukie), saying: Just because we killed MLK doesn't mean we can't miss him."
 ---
-[Trolling post by Commedian Jaboukie Young-White](https://isitfunnyoroffensive.com/comedian-impersonates-fbi-on-twitter-makes-mlk-assassination-joke/), using his verified identity blue checkmark (before Elon Musk made blue checkmarks purchasable) to impersonate the official FBI account, and then make reference to the theory that the FBI was behind the assassination of Martin Luther King Jr. (note: while [this theory](https://en.wikipedia.org/wiki/Assassination_of_Martin_Luther_King_Jr.#Alleged_government_involvement) is not confirmed, the [FBI definitely tried to get MLK to kill himself](https://en.wikipedia.org/wiki/FBI%E2%80%93King_suicide_letter)). Twitter quickly suspended Jaboukie's account after this post.
+On Martin Luther King Day Jr. Day 2020, comedian Jaboukie Young-White, used his verified identity blue checkmark (before Elon Musk made blue checkmarks purchasable) to impersonate the official FBI account. He then [made a trolling Tweet](https://isitfunnyoroffensive.com/comedian-impersonates-fbi-on-twitter-makes-mlk-assassination-joke/), pretending to be the FBI and referring to the theory that the FBI was behind the assassination of Martin Luther King Jr. (note: while [this theory](https://en.wikipedia.org/wiki/Assassination_of_Martin_Luther_King_Jr.#Alleged_government_involvement) is not confirmed, the [FBI definitely tried to get MLK to kill himself](https://en.wikipedia.org/wiki/FBI%E2%80%93King_suicide_letter)). Twitter quickly suspended Jaboukie's account after this post, but many viewed his Tweet as a heroic (and funny) act of protest.
 ```
 
 ## Disruption and provoking reaction
-Trolling is when an Internet user posts inauthentically (often false, upsetting, or strange) with the goal of causing disruption or provoking an emotional reaction. When the goal is provoking an emotional reaction, it is often for a negative emotion, such as anger or emotional pain. When the goal is disruption, it might be attempting to derail a conversation (e.g., [concern trolling](https://en.wiktionary.org/wiki/concern_troll)), or make a space no longer useful for it's original purpose (e.g., joke product reviews), or try to get people to [take absurd fake stories seriously](https://www.scientificamerican.com/article/internet-troll-sub-culture-s-savage-spoofing-of-mainstream-media-excerpt/).
+Trolling is when an Internet user posts inauthentically (often false, upsetting, or strange) with the goal of causing disruption or provoking an emotional reaction. When the goal is provoking an emotional reaction, it is often for a negative emotion, such as anger or emotional pain. When the goal is disruption, it might be attempting to derail a conversation (e.g., [concern trolling](https://en.wiktionary.org/wiki/concern_troll)), or make a space no longer useful for its original purpose (e.g., joke product reviews), or try to get people to [take absurd fake stories seriously](https://www.scientificamerican.com/article/internet-troll-sub-culture-s-savage-spoofing-of-mainstream-media-excerpt/).
 
 ## Why troll?
 If the immediate goal of the action of trolling is to cause disruption or provoke emotional reactions, what is it that makes people want to do this disruption or provoking of emotional reactions?

@@ -1,10 +1,10 @@
 # Design Analysis: Facebook Names Rules
 We want to provide you, the reader, a chance to explore authenticity more, particularly considering how the rules built into social media platforms influence authenticity.
 
-In this activity you will be looking at Facebook's name policy, and thinking through who this version of authenticity works for, and who it doesn't[^alternate_exercise].
+In this activity, you will be looking at Facebook's name policy, and thinking through who this version of authenticity works for, and who it doesn't[^alternate_exercise].
 
 
-[^alternate_exercise]: You could also try this with different social media authenticity system, like [How to Get Verified on Bumble](
+[^alternate_exercise]: You could also try this with different social media authenticity systems, like [How to Get Verified on Bumble](
 https://bumble.com/en-us/the-buzz/the-end-of-catfishing-introducing-photo-verification), which has the user take photos while mimicking poses.
 
 ```{figure} facebook_name_policy.png
@@ -33,14 +33,14 @@ Things to keep in mind
 The Facebook name policy as of 8/24/2022. You can see the current version [here](https://www.facebook.com/help/112146705538576/)
 ```
 
-This activity follows [the five step CIDER method](https://medium.com/@OAlannah/beyond-average-users-building-inclusive-design-skills-with-the-cider-technique-413969544e6d?source=friends_link&sk=6c9184c8a88feae058cfb073a44985f7) (Critique, Imagine, Design, Expand, Repeat), created by [Alannah Oleson, et. al.](https://alannaholeson.com/). This activity works best if you can do it with others (like in a classroom), so you can learn from their observations as well.
+This activity follows [the five-step CIDER method](https://medium.com/@OAlannah/beyond-average-users-building-inclusive-design-skills-with-the-cider-technique-413969544e6d?source=friends_link&sk=6c9184c8a88feae058cfb073a44985f7) (Critique, Imagine, Design, Expand, Repeat), created by [Alannah Oleson, et. al.](https://alannaholeson.com/). This activity works best if you can do it with others (like in a classroom), so you can learn from their observations as well.
 
 ![Diagram of the CIDER method. 5 steps in order from left to right: Critique (Identify embedded assumptions about users); Imagine (Pick one assumption and envision how it excludes users); Design (Brainstorm changes to improve inclusion); Expand (Learn about new types of bias from peers' assumptions); Repeat (Redo I and D using new-to-you assumptions from EXPAND list).](cider-method.jpeg)
 
-So read through the Facebook name policy above (for this activity ignore clarifications or exceptions Facebook may have made elsewhere, since those weren't deemed important enough to put on this main policy page). Then do the following (preferrably on paper or in a blank computer document):
+So read through the Facebook name policy above (for this activity ignore clarifications or exceptions Facebook may have made elsewhere, since those weren't deemed important enough to put on this main policy page). Then do the following (preferably on paper or in a blank computer document):
 
 ## Critique (3-5 minutes, by yourself):
-What assumptions does Facebook's name policy make about it's users identities and their needs that might not be true or might cause problems? List as many as you can think of (bullet points encouraged).
+What assumptions does Facebook's name policy make about its users' identities and their needs that might not be true or might cause problems? List as many as you can think of (bullet points encouraged).
 
 
 ````{admonition} If you are having trouble getting started, click to see some sample assumptions
@@ -54,7 +54,7 @@ Facebook assumes a real name is safe to use (not necessarily true for some LGBTQ
 Select one of the above assumptions that you think is important to address. Then write a 1-2 sentence scenario where a user could not use Facebook as expected because of the assumption you selected. This represents one way the design could exclude certain users.
 
 ## Design (3-5 minutes, by yourself):
-Brainstorm ways to change the Facebook's name policy to avoid the scenario you wrote above. List as many different kinds of potential solutions you can think of – aim for ten or more (bullet points encouraged).
+Brainstorm ways to change Facebook's name policy to avoid the scenario you wrote above. List as many different kinds of potential solutions you can think of – aim for ten or more (bullet points encouraged).
 
 ## Expand (5-10 minutes, with others):
 Combine your list of critiques with someone else's (or if possible, have a whole class combine theirs).
