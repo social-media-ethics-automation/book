@@ -4,8 +4,8 @@ When we've been accessing Reddit through Python and the "PRAW" code library. The
 
 If you are interested in learning more about what you can do with praw and what information you can get back, you can look at the official documentation for those. But be warned they are not organized in a friendly way for newcomers and take some getting used to to figure out what these documentation pages are talking about.
 
-So, if you are interested, you can look at [the praw library documentation](https://praw.readthedocs.io/en/stable/) to find out what the library can do (again, not organized in a beginner friendly way). You can learn a little more by clicking on of [the praw models](https://praw.readthedocs.io/en/stable/code_overview/praw_models.html) and finding a list of the types of data for each of the models, and a list of functions (i.e., actions) you can do with them.
+So, if you are interested, you can look at [the praw library documentation](https://praw.readthedocs.io/en/stable/) to find out what the library can do (again, not organized in a beginner-friendly way). You can learn a little more by clicking on [the praw models](https://praw.readthedocs.io/en/stable/code_overview/praw_models.html) and finding a list of the types of data for each of the models, and a list of functions (i.e., actions) you can do with them.
 
-You can also look at information on the data that you can get from the Reddit API by looking at the [Reddit API Documentation](https://www.reddit.com/dev/api/). 
+You can also look up information on the data that you can get from the Reddit API by looking at the [Reddit API Documentation](https://www.reddit.com/dev/api/). 
 
 The Reddit API lets you access just some of the data that Reddit tracks, but Reddit and other social media platforms track much more than they let you have access to.

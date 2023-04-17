@@ -56,6 +56,15 @@ As you can see in the apple example, any time we turn something into data, we ar
   - See also, this saying in statistics: [All models are wrong, but some are useful](https://en.wikipedia.org/wiki/All_models_are_wrong)
 
 
+% TODO:
+  % Arhie Phinney (Nez Perce)
+
+	% A sad thing in recording these animal stories is the loss of spirit — the fascination furnished by the peculiar Indian vocal rendition for humor.  Indians are better storytellers than whites.  When I read my story mechanically I find only the cold corpse.
+
+	% https://thebcreview.ca/2016/12/15/chapter-seven/#_ftn11
+	% Archie Phinney to Franz Boas, 20 November 1929.  2394. PHINNEY, ARCHIE. Correspondence with Franz Boas 1929-1934. Courtesy C. Greifenstein, Manuscripts Library, American Philosophical Society. Phinney was a Nez Perce anthropologist who worked with Boas at Columbia University. See “Archie Phinney obituary”. American Anthropologists 52:3, pp. 442 (1950).
+
+
 [^symbolic_data_not_simplified]: There is one exception where you can have data that isn't a simplification, and that is if the data source is symbolic (e.g., numbers) and you are applying unambiguous rules (e.g., math). Since it starts out as a symbol, it doesn't need to be simplified to be represented with symbols. For example, data that can be made without simplification include: <ul><li>A list of the first 10 prime numbers.</li> <li>The number of times the letter 'a' (capital or lowercase) appears in this sentence.</li>
 
 
