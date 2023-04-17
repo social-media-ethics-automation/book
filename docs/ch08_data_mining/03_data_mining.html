@@ -1902,6 +1902,12 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="mining-social-media-data">
 <h1><span class="section-number">8.3. </span>Mining Social Media Data<a class="headerlink" href="#mining-social-media-data" title="Permalink to this headline">#</a></h1>
 <p>Data mining is the process of taking a set of data and trying to learn new things from it.</p>
+<figure class="align-default" id="eeaao-irs-fig">
+<img alt="IRS agent from movie Everything Everywhere All at Once saying: &quot;Now you may only see a pile of boring forms and numbers, but I see a story. With nothing but a stack of receipts I can trace the ups and downs of your lives.&quot;" src="../_images/eeaao_irs.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.1 </span><span class="caption-text">Clip from movie <a class="reference external" href="https://en.wikipedia.org/wiki/Everything_Everywhere_All_at_Once">Everything Everywhere All at Once</a> where the IRS agent talks about what information (“story”) she can mine from tax data.</span><a class="headerlink" href="#eeaao-irs-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>For example, social media data about who you are friends with might be <a class="reference external" href="https://www.vice.com/en/article/gvydky/your-friends-online-connections-can-reveal-your-sexual-orientation">used to infer your sexual orientation</a>. Social media data might also be used to infer people’s:</p>
 <ul class="simple">
 <li><p>Race</p></li>
@@ -1910,27 +1916,27 @@ title="Print to PDF"
 <li><p>Susceptibility to financial scams</p></li>
 <li><p>Being prone to addiction (e.g., gambling)</p></li>
 </ul>
-<p>Additionally groups keep trying to re-invent old debunked psuedo-scientific (and racist) methods of judging people based on facial features (size of nose, chin, forehead, etc.), but <a class="reference external" href="https://www.americanscientist.org/article/the-dark-past-of-algorithms-that-associate-appearance-and-criminality">now using artificial intelligence</a>.</p>
+<p>Additionally, groups keep trying to re-invent old debunked pseudo-scientific (and racist) methods of judging people based on facial features (size of nose, chin, forehead, etc.), but <a class="reference external" href="https://www.americanscientist.org/article/the-dark-past-of-algorithms-that-associate-appearance-and-criminality">now using artificial intelligence</a>.</p>
 <p>Social media data can also be used to infer information about larger social trends like <a class="reference external" href="https://www.science.org/content/article/researchers-are-tracking-another-epidemic-too-misinformation">the spread of misinformation</a>.</p>
 <p>One particularly striking example of an attempt to infer information from seemingly unconnected data was someone noticing that the number of people sick with COVID-19 correlated with how many people were leaving bad reviews of Yankee Candles saying “they don’t have any scent” (note: COVID-19 can cause a loss of the ability to smell):</p>
 <figure class="align-default" id="covid-candles-fig">
 <a class="reference internal image-reference" href="../_images/covid_candles.png"><img alt="Tweet by eleanor (&#64;zomsllama). Tweet says, &quot;blue line: daily COVID cases in the USA. red line: bad reviews of Yankee Candles on Amazon saying 'they don't have any scent'. sources: google and [sic].&quot; The tweet has a graph from 8 Apr to 13 Nov, showing a blue line that goes up and down noisily but with two big peaks. A much smoother red line has two big peaks lining up the blue big peaks." src="../_images/covid_candles.png" style="width: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 8.1 </span><span class="caption-text">Twitter user &#64;zomsllama <a class="reference external" href="https://twitter.com/zornsllama/status/147357550878495539">pointing out the correlation of COVID cases and candle reviews complaining of no scent</a>.</span><a class="headerlink" href="#covid-candles-fig" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 8.2 </span><span class="caption-text">Twitter user &#64;zomsllama <a class="reference external" href="https://twitter.com/zornsllama/status/147357550878495539">pointing out the correlation of COVID cases and candle reviews complaining of no scent</a>.</span><a class="headerlink" href="#covid-candles-fig" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="spurious-correlations">
 <h2><span class="section-number">8.3.1. </span>Spurious Correlations<a class="headerlink" href="#spurious-correlations" title="Permalink to this headline">#</a></h2>
 <p>One thing to note in the above case of candle reviews and COVID is that just because something appears to be correlated, doesn’t mean that it is connected in the way it looks like. In the above, the correlation might be due mostly to people buying and reviewing candles in the fall, and diseases, like COVID, spreading most during the fall.</p>
-<p>It turns out if you look at a lot of data, it is easy to discover <a class="reference external" href="https://en.wikipedia.org/wiki/Spurious_relationship">spurious correlations</a> where two things look like they are related, but actually aren’t. Instead the appearance of being related may be due to chance or some other cause. For example:</p>
+<p>It turns out that if you look at a lot of data, it is easy to discover <a class="reference external" href="https://en.wikipedia.org/wiki/Spurious_relationship">spurious correlations</a> where two things look like they are related, but actually aren’t. Instead, the appearance of being related may be due to chance or some other cause. For example:</p>
 <figure class="align-default" id="spurious-divorce-margarine-fig">
 <img alt="Chart of Divorce Rate in Maine compared with Per capita consumption of margarine, which correlates 99.26%. The graph shows lines for divorce and margarine from 2000 to 2009. Both lines generally decline, but the places where they decline steeper or shallow out line up." src="../_images/spurious_divorce_margarine.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 8.2 </span><span class="caption-text">An example spurious correlation from <a class="reference external" href="https://www.tylervigen.com/spurious-correlations">Tyler Vigen’s collection of Spurious Correlations</a></span><a class="headerlink" href="#spurious-divorce-margarine-fig" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 8.3 </span><span class="caption-text">An example spurious correlation from <a class="reference external" href="https://www.tylervigen.com/spurious-correlations">Tyler Vigen’s collection of Spurious Correlations</a></span><a class="headerlink" href="#spurious-divorce-margarine-fig" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>By looking at enough data in enough different ways, you can find evidence for pretty much any conclusion you want to. This is because sometimes different pieces of data line up coincidentally (coincidences happen), and if you try enough combinations, you can find the coincidence that lines up with your conclusion.</p>
-<p>If you want to explore the difficulty of inferring trends from data, the website <a class="reference external" href="https://fivethirtyeight.com/">fivethirtyeight.com</a> has an interactive feature called “<a class="reference external" href="https://projects.fivethirtyeight.com/p-hacking/">Hack Your Way To Scientific Glory</a>” where by changing how you measure the US economy and how you measure what political party is in power in the US, you can “prove” that either Democrats or Republicans are better for the economy. Fivethirtyeight has a longer article on this called “<a class="reference external" href="https://fivethirtyeight.com/features/science-isnt-broken/">Science Isn’t Broken: It’s just a hell of a lot harder than we give it credit for.</a>”</p>
+<p>By looking at enough data in enough different ways, you can find evidence for pretty much any conclusion you want. This is because sometimes different pieces of data line up coincidentally (coincidences happen), and if you try enough combinations, you can find the coincidence that lines up with your conclusion.</p>
+<p>If you want to explore the difficulty of inferring trends from data, the website <a class="reference external" href="https://fivethirtyeight.com/">fivethirtyeight.com</a> has an interactive feature called “<a class="reference external" href="https://projects.fivethirtyeight.com/p-hacking/">Hack Your Way To Scientific Glory</a>” where, by changing how you measure the US economy and how you measure what political party is in power in the US, you can “prove” that either Democrats or Republicans are better for the economy. Fivethirtyeight has a longer article on this called “<a class="reference external" href="https://fivethirtyeight.com/features/science-isnt-broken/">Science Isn’t Broken: It’s just a hell of a lot harder than we give it credit for.</a>”</p>
 </section>
 </section>
 

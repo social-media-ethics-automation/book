@@ -17,10 +17,8 @@ Platforms also collect information on how users interact with the site. They mig
 - where users are located
 - what users send in direct messages to each other
 
-% TODO: Add cross-site tracking (e.g., view something on amazon, ad displayed on amazon tracks this, advertizer then shows you related ads on social media site)
+Online advertisers can see what pages their ads are being requested on, and [track users](https://en.wikipedia.org/wiki/Web_tracking) across those sites. So, if an advertiser sees their ad is being displayed on an Amazon page for shoes, then the advertiser can start showing shoe ads to that same user when they go to another website.
 
-Additionally, social media might collect information about non-users ([Facebook does this](https://www.vox.com/2018/4/20/17254312/facebook-shadow-profiles-data-collection-non-users-mark-zuckerberg)).
+Additionally, social media might collect information about non-users, such as when a user posts a picture of themselves with a friend who doesn't have an account, or a user shares their phone contact list with a social media site, some of whom don't have accounts ([Facebook does this](https://www.vox.com/2018/4/20/17254312/facebook-shadow-profiles-data-collection-non-users-mark-zuckerberg)).
 
-% TODO: explain that this is from pictures or phone numbers, etc.
-
-Social media platforms then use "data mining" to search through all this data to try to learn more about their users, find patterns of behavior, and in the end make more money.
+Social media platforms then use "data mining" to search through all this data to try to learn more about their users, find patterns of behavior, and in the end, make more money.
