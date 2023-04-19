@@ -2,17 +2,17 @@
 
 We want to provide you, the reader, a chance to explore online privacy more.
 
-In this activity you will be looking at an [official brochure on the EU's GDPR privacy law](https://commission.europa.eu/system/files/2019-10/data-protection-factsheet-citizens_en.pdf)[^alternate_privacy_exercise].
+In this activity, you will be looking at an [official brochure on the EU's GDPR privacy law](https://commission.europa.eu/system/files/2019-10/data-protection-factsheet-citizens_en.pdf)[^alternate_privacy_exercise].
 
 
-[^alternate_privacy_exercise]: You could also try this with a [brochure for businiesses](https://commission.europa.eu/system/files/2018-11/ds-02-18-544-en-n.pdf), or look at a privacy and security settings page on a social media site.
+[^alternate_privacy_exercise]: You could also try this with a [brochure for businesses](https://commission.europa.eu/system/files/2018-11/ds-02-18-544-en-n.pdf), or look at a privacy and security settings page on a social media site.
 
 
-We will again follow the five step [CIDER method](https://medium.com/@OAlannah/beyond-average-users-building-inclusive-design-skills-with-the-cider-technique-413969544e6d?source=friends_link&sk=6c9184c8a88feae058cfb073a44985f7) (Critique, Imagine, Design, Expand, Repeat).
+We will again follow the five-step [CIDER method](https://medium.com/@OAlannah/beyond-average-users-building-inclusive-design-skills-with-the-cider-technique-413969544e6d?source=friends_link&sk=6c9184c8a88feae058cfb073a44985f7) (Critique, Imagine, Design, Expand, Repeat).
 
 ![Diagram of the CIDER method. 5 steps in order from left to right: Critique (Identify embedded assumptions about users); Imagine (Pick one assumption and envision how it excludes users); Design (Brainstorm changes to improve inclusion); Expand (Learn about new types of bias from peers' assumptions); Repeat (Redo I and D using new-to-you assumptions from EXPAND list).](cider-method.jpeg)
 
-So read through the [official brochure on the EU's GDPR privacy law](https://commission.europa.eu/system/files/2019-10/data-protection-factsheet-citizens_en.pdf) (for this activity ignore any additional details or clarifications made elsewhere in the GDPR, since those weren't deemed important enough to put on this brochure). Then do the following (preferrably on paper or in a blank computer document):
+So read through the [official brochure on the EU's GDPR privacy law](https://commission.europa.eu/system/files/2019-10/data-protection-factsheet-citizens_en.pdf) (for this activity ignore any additional details or clarifications made elsewhere in the GDPR, since those weren't deemed important enough to put on this brochure). Then do the following (preferably on paper or in a blank computer document):
 
 ## Critique (3-5 minutes, by yourself):
 What assumptions does GDPR make about individuals or groups using social media, which might not be true or might cause problems? List as many as you can think of (bullet points encouraged).
