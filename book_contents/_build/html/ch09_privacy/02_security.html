@@ -1864,10 +1864,10 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="security">
 <h1><span class="section-number">9.2. </span>Security<a class="headerlink" href="#security" title="Permalink to this headline">#</a></h1>
-<p>While we have our concerns about the privacy of our information, we often share it with social media platforms under the understanding that they will hold that information securely. But social media companies often fail at keeping our information securely.</p>
-<p>For example, the proper security practice for storing user passwords is to use a <a class="reference external" href="https://en.wikipedia.org/wiki/Salt_(cryptography)">special individual encryption</a> for each password. This way the database can only confirm that a password was the right one, but it can’t independently up what the password is. Therefore if someone had access to the database, the only way to figure out the right password is to use “brute force,” that is, keep guessing passwords until they guess the right one (and <a class="reference external" href="https://stackoverflow.com/a/15763243">each guess takes a lot of time</a>).</p>
+<p>While we have our concerns about the privacy of our information, we often share it with social media platforms under the understanding that they will hold that information securely. But social media companies often fail at keeping our information secure.</p>
+<p>For example, the proper security practice for storing user passwords is to use a <a class="reference external" href="https://en.wikipedia.org/wiki/Salt_(cryptography)">special individual encryption process</a> for each individual password. This way the database can only confirm that a password was the right one, but it can’t independently look up what the password is or even tell if two people used the same password. Therefore if someone had access to the database, the only way to figure out the right password is to use “brute force,” that is, keep guessing passwords until they guess the right one (and <a class="reference external" href="https://stackoverflow.com/a/15763243">each guess takes a lot of time</a>).</p>
 <p>But while that is the proper security for storing passwords. So for example, <a class="reference external" href="https://www.theverge.com/2019/4/18/18485599/facebook-instagram-passwords-plain-text-millions-users">Facebook stored millions of Instagram passwords in plain text</a>, meaning the passwords weren’t encrypted and anyone with access to the database could simply read everyone’s passwords. And Adobe encrypted their passwords improperly and then <a class="reference external" href="https://www.explainxkcd.com/wiki/index.php/1286:_Encryptic">hackers leaked their password database of 153 million users</a>.</p>
-<p>From a security perspectives there are many risks that a company faces, such as:</p>
+<p>From a security perspective there are many risks that a company faces, such as:</p>
 <ul class="simple">
 <li><p>Employees at the company misusing their access, like <a class="reference external" href="https://www.themarysue.com/facebook-employees-abused-access-target-women/">Facebook employees using their database permissions to stalk women</a></p></li>
 <li><p>Hackers finding a vulnerability and inserting, modifying, or downloading information. For example:</p>
@@ -1892,7 +1892,7 @@ title="Print to PDF"
 </ul>
 </li>
 </ul>
-<p>One of the things you can do as an individual to better protect yourself against hacking is enable <a class="reference external" href="https://en.wikipedia.org/wiki/Multi-factor_authentication">2-factor authentication</a> on your accounts.</p>
+<p>One of the things you can do as an individual to better protect yourself against hacking is to enable <a class="reference external" href="https://en.wikipedia.org/wiki/Multi-factor_authentication">2-factor authentication</a> on your accounts.</p>
 </section>
 
     <script type="text/x-thebe-config">

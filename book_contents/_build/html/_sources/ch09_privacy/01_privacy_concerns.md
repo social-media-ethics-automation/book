@@ -24,7 +24,7 @@ Some governments and laws protect the privacy of individuals (using a Natural Ri
 ---
 name: wired_privacy_settings_fig
 width: 300px
-alt: "pop-up window for \"Manage Consent Preferences\", with options for: Strictly Necessary Cookies (marked always on), Audience Measurment, Performance Cookies, Functional Cookies, Targeting Cookies, Store and/or access information on a device, and Select basic ads."
+alt: "pop-up window for \"Manage Consent Preferences\", with options for: Strictly Necessary Cookies (marked always on), Audience Measurement, Performance Cookies, Functional Cookies, Targeting Cookies, Store and/or access information on a device, and Select basic ads."
 ---
 Privacy tracking settings prompt on [wired.com](https://www.wired.com/). These prompts were added as part of following the EU's new GDPR regulations.
 ```
