@@ -11,7 +11,7 @@ We will again follow the five step [CIDER method](https://medium.com/@OAlannah/b
 So open a social media site on your device (the website or app may have additional accessibility settings, but don't use those for now, just consider how it works as it is currently). Then do the following (preferably on paper or in a blank computer document):
 
 ## Critique (3-5 minutes, by yourself):
-What assumptions does the site and your device make about individuals or groups using social media, which might not be true or might cause problems? List as many as you can think of (bullet points encouraged).
+What assumptions do the site and your device make about individuals or groups using social media, which might not be true or might cause problems? List as many as you can think of (bullet points encouraged).
 
 
 %  ````{admonition} If you are having trouble getting started, click to see some sample assumptions
