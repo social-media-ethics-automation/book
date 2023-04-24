@@ -6,7 +6,9 @@ There are several ways of managing disabilities. All of these ways of managing d
 
 Those with disabilities often find ways to cope with their disability, that is, find ways to work around difficulties they encounter and seek out places and strategies that work for them (whether realizing they have a disability or not). Additionally, people with disabilities might change their behavior (whether intentionally or not) to hide the fact that they have a disability, which is called __masking__ and may take a mental or physical toll on the person masking, which others around them won't realize.
 
-For example, kids who are nearsighted and don't realize their ability to see is different from other kids will often seek out seats at the front of classrooms where they can see better. As for us two authors, we both have ADHD and were drawn to PhD programs where our tendency to hyperfocus on following our curiosity was rewarded (though executive dysfunction with finishing projects created challenges).
+For example, kids who are nearsighted and don't realize their ability to see is different from other kids will often seek out seats at the front of classrooms where they can see better. As for us two authors, we both have ADHD and were drawn to PhD programs where our tendency to hyperfocus on following our curiosity was rewarded (though executive dysfunction with finishing projects created challenges)[^youtuber_adhd].
+
+[^youtuber_adhd]: We've also noticed many youtube video essayists have mentioned having ADHD. This is perhaps another job that attracts those who tend to hyperfocus on whatever topic grabbed their attention, and then after releasing their video, move on to something completely different.
 
 This way of managing disabilities puts the burden fully on disabled people to manage their disability in a world that was not designed for them, trying to fit in with "normal" people.
 
