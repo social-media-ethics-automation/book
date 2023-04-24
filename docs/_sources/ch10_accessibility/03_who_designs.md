@@ -1,7 +1,7 @@
 # Why It Matters Who Designs
 
 ## Who gets designed for
-When designers and programmers don't think to take into account different groups of people, then they might make designs that don't work for everyone. This problem often shows up for how designs do or do not work for people with disabilities. But it also shows up in other areas as well.
+When designers and programmers don't think to take into account different groups of people, then they might make designs that don't work for everyone. This problem often shows up in how designs do or do not work for people with disabilities. But it also shows up in other areas as well.
 
 The following tweet has a video of a soap dispenser that apparently was only designed to work for people with light-colored skin.[^soap_video]
 
