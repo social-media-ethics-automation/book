@@ -19,6 +19,8 @@ There are many things we might not be able to do that won't be considered disabi
 
 Most humans are trichromats, meaning they can see three base colors (red, green, and blue), along with all combinations of those three colors. Human societies often assume that people will be trichromats. So people who can't see as many colors are considered to be [color blind](https://en.wikipedia.org/wiki/Color_blindness), a disability. But there are also a [small number of people who are tetrachromats](https://www.bbc.com/future/article/20140905-the-women-with-super-human-vision) and can see four base colors[^four_base_colors] and all combinations of those four colors. In comparison to tetrachromats, trichromats (the majority of people), lack the ability to see some colors. But our society doesn't build things for tetrachromats, so their extra ability to see color doesn't help them much. And trichromats' relative reduction in seeing color doesn't cause them difficulty, so being a trichromat isn't considered to be a disability.
 
+% See more on human vision here: https://www.youtube.com/watch?v=TypihLhpd-I&t=476s
+
 [^four_base_colors]: Trying to name the four base colors seen by tetrachromats is not straightforward since our color names are based on trichromat vision. It seems that for tetrachromats blue would be the same, but they would see three different base colors in the red/green range instead of two.
 
 

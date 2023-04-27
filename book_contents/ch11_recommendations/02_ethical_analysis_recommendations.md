@@ -30,6 +30,6 @@ alt: "Tweet from Elon Musk (@elonmusk): Trashing accounts that you hate will cau
 [A tweet](https://twitter.com/elonmusk/status/1615194151737520128) from current Twitter owner Elon Musk blaming users for how the recommendation algorithm interprets their behavior.
 ```
 
-% Different than previous owners: https://www.vox.com/2019/3/8/18245536/exclusive-twitter-healthy-conversations-dunking-research-product-incentives
+Elon Musk's view expressed in that tweet is different than some of the ideas of the previous owners, who at least [tried to figure out how to make Twitter's algorithm support healthier conversation](https://www.vox.com/2019/3/8/18245536/exclusive-twitter-healthy-conversations-dunking-research-product-incentives). 
 
-% TODO: Note that human behavior and social groups also are systems that a recommendation algorithm might not be able to overcome.
+Though even modifying a recommendation algorithm has limits in what it can do, as social groups and human behavior may be able to overcome the recommendation algorithms influence.

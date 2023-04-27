@@ -36,7 +36,7 @@ Knowing that there is a recommendation algorithm, users of the platform will try
 For example, in the case of the simple "show latest posts" algorithm, the best way to get your content seen is to constantly post and repost your content (though if you annoy users too much, it might backfire).
 
 Other strategies include things like:
-- Clickbait: trying to give you a mystery you have to click to find the answer to (e.g., "you won't believe what happened when this person tried to eat a stapler!"). They do this to boost clicks on their link, which they hope boosts them in the recommendation algorithm, and gets their ads more views
+- Clickbait: trying to give you a mystery you have to click to find the answer to (e.g., "You won't believe what happened when this person tried to eat a stapler!"). They do this to boost clicks on their link, which they hope boosts them in the recommendation algorithm, and gets their ads more views
 - Trolling: by provoking reactions, they hope to boost their content more
 - Coordinated actions: have many accounts (possibly including bots) like a post, or many people use a hashtag, or have people trade positive reviews
 
@@ -58,7 +58,7 @@ aside, it's pretty impressive what they're able to do. But these bots have no so
 >
 > [As I follow YouTube recommendations] It's far more likely that my biases will be confirmed and possibly even enhanced than they are to be challenged and re-evaluated. And it's likely for a lot of consumers of YouTube that they will be segregated by political cultural and ethnic lines.
 
-Since recommendation algorithm bases its decisions on how users engage with content, the biases of users plays into what gets boosted by the algorithm. For example, one common piece of advice on YouTube is for creators to put their faces on their preview thumbnail, but given that many users have a bias against Black people (whether intentional or not), this advice might not work:
+Since a recommendation algorithm may base its decisions on how users engage with content, the biases of users play into what gets boosted by the algorithm. For example, one common piece of advice on YouTube is for creators to put their faces on their preview thumbnail, but given that many users have a bias against Black people (whether intentional or not), this advice might not work:
 > In preparation for this video, and in just wanting to test out how to improve my channel's reach, I took my Black face off of pretty much every thumbnail of any video that I've made up until this point. And the result was a clear uptick in views on each video that i did this for.
 
 Additionally, because of how YouTube categorizes content, if someone tries to make content that doesn't fill well in the existing categories, the recommendation algorithm might not boost it, or it might boost it in ill-fitting locations.
