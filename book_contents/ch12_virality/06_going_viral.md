@@ -8,7 +8,8 @@ The Washington Post wrote a series of articles on the experience of going viral,
 
 % Dead link?? [Accidentally famous: The psychology of going viral](https://www.cnn.com/2018/03/16/health/social-media-fame/index.html)
 
+
 % Viral can make people the symbols of different causes (good or bad), or the center of larger arguments. Going viral brings extra scrutiny. Randomness of who goes viral and gets singled out. Ethics about equality like maybe Native American Ethics?
 
 % https://knowyourmeme.com/memes/milkshake-duck
-https://twitter.com/pixelatedboat/status/741904787361300481
+% https://twitter.com/pixelatedboat/status/741904787361300481
