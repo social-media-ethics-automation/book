@@ -6,19 +6,19 @@ As we said before, evolution occurs when there is: replication (with inheritance
 
 
 ## Replication (With Inheritance)
-For social media content, replications means that the content (or a copy or modified version) get seen by more people. Additionally, when a modified version gets distributed, future replications of that version will include the modification (a.k.a., inheritance).
+For social media content, replication means that the content (or a copy or modified version) gets seen by more people. Additionally, when a modified version gets distributed, future replications of that version will include the modification (a.k.a., inheritance).
 
 There are ways of duplicating that are built into social media platforms:
 - Actions such as: liking, reposting, replying, and paid promotion get the original posting to show up for users more
 - Actions like quote tweeting, or the TikTok Duet feature let people see the original content, but modified with new context.
 - Social media sites also provide ways of embedding posts in other places, like in news articles
 
-There are also ways of replicating social media content that aren't directly built in to the social media platform, such as:
+There are also ways of replicating social media content that aren't directly built into the social media platform, such as:
 - copying images or text and reposting them yourself
 - taking screenshots, and cross-posting to different sites
 
 ## Variations / Mutations
-When content is replicated on social media, it may be modified. The Social media system might have built in ways to do this, like a quote tweet or reply adds some sort of comment to the original post, effectively making a new version of the post that can spread around.
+When content is replicated on social media, it may be modified. The Social media system might have built-in ways to do this, like a quote tweet or reply adding some sort of comment to the original post, effectively making a new version of the post that can spread around.
 
 
 ```{figure} lewinsky_tweet.jpg
@@ -39,7 +39,7 @@ Additionally, content can be copied by being screenshotted, or photoshopped. Tex
 ## "Natural" Selection
 It isn't clear what should be considered as "nature" in a social media environment (human nature? the nature of the design of the social media platform? are bots unnatural?), so we'll just instead talk about __selection__.
 
-When content (and modified copies of content) is in a position to be replicated, there are factors that determine whether it gets __selected__ for replicated or not. As humans look at the content they see on social media they decide whether they want to replicated it for some reason, such as:
+When content (and modified copies of content) is in a position to be replicated, there are factors that determine whether it gets __selected__ for replicated or not. As humans look at the content they see on social media they decide whether they want to replicate it for some reason, such as:
 - "that's funny, so I'll retweet it"
 - "that's horrible, so I'll respond with an angry face emoji"
 - "reposting this will make me look smart"
@@ -47,10 +47,10 @@ When content (and modified copies of content) is in a position to be replicated,
 
 Groups and organizations make their own decisions on what social media content to replicate as well (e.g., a news organization might find a social media post newsworthy, so they write articles about it).
 
-Additionally content may be replicated because of:
+Additionally, content may be replicated because of:
 - Paid promotion and ads, where someone pays money to have their content replicated
-- Astroturfing: where crowds, often of bots, are paid to replicated social media content (e.g., like, retweet)
+- Astroturfing: where crowds, often of bots, are paid to replicate social media content (e.g., like, retweet)
 
-Finally, the social media platforms use algorithms and design layouts which determine what posts people see. There are various rules and designs social media sites can use, and they can amplify the natural selection and unnatural selection in various ways. They can do this through recommendation algorithms as we saw last chapter, as well as choosing what actions are allowed, and what amount of friction is given to those actions, as well as what data is collected and displayed.
+Finally, social media platforms use algorithms and design layouts which determine what posts people see. There are various rules and designs social media sites can use, and they can amplify natural selection and unnatural selection in various ways. They can do this through recommendation algorithms as we saw last chapter, as well as choosing what actions are allowed and what amount of friction is given to those actions, as well as what data is collected and displayed.
 
 Different designs of social media platforms will have different consequences in what content has viral, just like how different physical environments determine which forms of life thrive and how they adapt and fill [ecological niches](https://en.wikipedia.org/wiki/Ecological_niche).
