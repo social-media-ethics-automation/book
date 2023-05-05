@@ -85,6 +85,21 @@ When the FBI account made a [Tweet in honor of Martin Luther King Jr. on the MLK
 On January 2nd, 2023, Mastodon creator [Eugen Rochko said](https://mastodon.social/@Gargron/109623891328707089):
 > I don't feel as strongly about quote posts as I did in 2018. Personally, I am not a fan, but there is clearly a lot of demand for it. We're considering it.
 
+% masto_quote_announce.png
+% https://mastodon.social/@Mastodon/110294411952997299
+% You asked for it, and it’s coming. Quote posts, search, and groups are on their way. In the meantime, check out the new onboarding experience launching today. https://blog.joinmastodon.org/2023/05/
+
+% https://ubiqueros.com/notes/9e8u8l4ui2
+% Are0h@ubiqueros.com
+% Ro @Are0h@ubiqueros.com
+%I'll say one thing about Bluesky. It's making Mastodon's leadership nervous.
+
+% And white guys don't pay attention to anyone like other white guys.
+
+% Because we've been talking about Masto's failing for a loooooooooooooooong time, but here we are.
+
+% May 01, 2023
+
 ## Reflection Questions
 - How does social media design enable or reduce harassment?
 - What good things are lost in trying to reduce harassment?
