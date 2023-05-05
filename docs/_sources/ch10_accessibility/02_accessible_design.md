@@ -23,6 +23,8 @@ Assistive technologies give tools to disabled people to help them become more "n
 
 Additionally, attempts to make disabled people (or people with other differences) act "normal" can be abusive, such as [Applied Behavior Analysis (ABA) therapy for autistic people](https://neuroclastic.com/invisible-abuse-aba-and-the-things-only-autistic-people-can-see/), or "[Gay Conversion Therapy](https://www.hrc.org/resources/the-lies-and-dangers-of-reparative-therapy)."
 
+% ABA (note: same links in mental health section): (see also [this more scientific explanation of that linked article](https://link.springer.com/article/10.1007/s41252-021-00201-1))
+
 
 ## Making an environment work for all
 Another strategy for managing disability is to use __[Universal Design](https://en.wikipedia.org/wiki/Universal_design)__, which originated in architecture. In universal design, the goal is to make environments and buildings have options so that there is a way for everyone to use it[^universal_design_note]. For example, a building with stairs might also have ramps and elevators, so people with different mobility needs (e.g., people with wheelchairs, baby strollers, or luggage) can access each area. In the elevators the buttons might be at a height that both short and tall people can reach. The elevator buttons might have labels both drawn (for people who can see them) and in braille (for people who cannot), and the ground floor button may be marked with a star, so that even those who cannot read can at least choose the ground floor.
