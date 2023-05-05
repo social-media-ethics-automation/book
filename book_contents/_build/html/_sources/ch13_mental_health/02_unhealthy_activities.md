@@ -20,7 +20,7 @@ alt: 'Tweet by Ethan Jacobs (@ethanjacobslaw): OK doomscrolling is bad but have 
 ```
 
 
-The seeking out of bad news, or trying to get news even though it might be bad, has existed as long as people have kept watch to see if a family member will return home safely. But of course new mediums can provide more information to sift through and more quickly, such as with the advent of the [24-hour news cycle](https://en.wikipedia.org/wiki/24-hour_news_cycle) in the 1990s, or, now social media.
+The seeking out of bad news, or trying to get news even though it might be bad, has existed as long as people have kept watch to see if a family member will return home safely. But of course, new mediums can provide more information to sift through and more quickly, such as with the advent of the [24-hour news cycle](https://en.wikipedia.org/wiki/24-hour_news_cycle) in the 1990s, or, now social media.
 
 
 ## Trauma Dumping
@@ -36,7 +36,7 @@ Trauma dumping can be bad for the mental health of those who have this trauma un
 
 ## Munchausen by Internet
 
-Munchausen Syndrome (or [Factitious disorder imposed on self](https://en.wikipedia.org/wiki/Factitious_disorder_imposed_on_self)) is when someone pretends to have a disease, like cancer, to get sympathy or attention. People with various illnesses often find support online, and even form online communities. It is often easier to fake an illness for an online community than in an in-person community, so [many have done so](https://www.theatlantic.com/health/archive/2019/05/faking-cancer-online/588334/) (like the fake professor @Sciencing_Bi in the authenticity chapter). People who fake these illnesses often do so as a result of their own mental illness, so, in fact, "[they are sick, albeit it in a very different way than claimed](https://www.theguardian.com/society/2015/apr/29/jules-gibson-munchausen-by-internet-sickness-bloggers-fake-it-whole-pantry)."
+Munchausen Syndrome (or [Factitious disorder imposed on self](https://en.wikipedia.org/wiki/Factitious_disorder_imposed_on_self)) is when someone pretends to have a disease, like cancer, to get sympathy or attention. People with various illnesses often find support online, and even form online communities. It is often easier to fake an illness in an online community than in an in-person community, so [many have done so](https://www.theatlantic.com/health/archive/2019/05/faking-cancer-online/588334/) (like the fake @Sciencing_Bi fake dying of covid in the authenticity chapter). People who fake these illnesses often do so as a result of their own mental illness, so, in fact, "[they are sick, albeit [...] in a very different way than claimed](https://www.theguardian.com/society/2015/apr/29/jules-gibson-munchausen-by-internet-sickness-bloggers-fake-it-whole-pantry)."
 
 
 ## Digital Self-Harm
@@ -45,27 +45,27 @@ Sometimes people will harm their bodies (called "[self-harm](https://www.mind.or
 Self-harm doesn't always have to be physical though, and some people find ways of causing emotional self-harm through the internet.
 
 ### Self-Bullying
-One form of digital self-harm is through [self-bullying](https://www.npr.org/sections/health-shots/2018/04/21/604073315/when-teens-cyberbully-themselves), where people set up fake alternate accounts which they then use to post bullying messages at themselves.
+One form of digital self-harm is [self-bullying](https://www.npr.org/sections/health-shots/2018/04/21/604073315/when-teens-cyberbully-themselves), where people set up fake alternate accounts which they then use to post bullying messages at themselves.
 
 ### Negative Communities
-Another form of digital self-harm is through joining toxic negative communities built around tearing each other down and reinforcing a hopeless worldview. (Content warning: sex and self harm)
+Another form of digital self-harm is through joining toxic negative communities built around tearing each other down and reinforcing a hopeless worldview. (Content warning: sex and self-harm)
 
-In 2018, Youtuber [ContraPoints](https://www.youtube.com/c/ContraPoints) (Natalie Wynn) made a video exploring the extremely toxic online Incel community, and related it to her own experience with a toxic 4chan community. (Content warning: Sex, self-hatred, and self-harm)
+In 2018, Youtuber [ContraPoints](https://www.youtube.com/c/ContraPoints) (Natalie Wynn) made a video exploring the extremely toxic online Incel community and related it to her own experience with a toxic 4chan community. (*Content warning: Sex, violence, self-hatred, and self-harm*)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fD2briZ6fB0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Note: The video might not embed right, and if you want to watch it, you might have to click to open it in youtube.
 
-Since you might not want to watch a 35 minute video, here are a few key points and quotes:
+Since you might not want to watch a 35-minute video, here are a few key summary points and quotes:
 
-“[Incel](https://en.wikipedia.org/wiki/Incel)” is short for “involuntarily celibate,” meaning they are men who have centered their identity on wanting to have sex with women, but with no women “giving” them sex. Incels objectify women and sex, claiming they have a right to have women want to have sex with them. Incels believe they are being unfairly denied this sex because of the few sexually attractive men ("[Chads](https://knowyourmeme.com/memes/chad)"), and because feminism told women they could refuse to have sex. Some incels believe their biology (e.g., skull shape) means no women will “give” them sex. They will be forever alone, without sex, and unhappy. The incel community has produced [multiple mass murderers / terrorists attacks](https://en.wikipedia.org/wiki/Incel#Mass_murders_and_violence).
+“[Incel](https://en.wikipedia.org/wiki/Incel)” is short for “involuntarily celibate,” meaning they are men who have centered their identity on wanting to have sex with women, but with no women “giving” them sex. Incels objectify women and sex, claiming they have a right to have women want to have sex with them. Incels believe they are being unfairly denied this sex because of the few sexually attractive men ("[Chads](https://knowyourmeme.com/memes/chad)"), and because feminism told women they could refuse to have sex. Some incels believe their biology (e.g., skull shape) means no women will “give” them sex. They will be forever alone, without sex, and unhappy. The incel community has produced [multiple mass murderers and terrorist attacks](https://en.wikipedia.org/wiki/Incel#Mass_murders_and_violence).
 
 In the video, ContraPoints says that in some forums, incels will post pictures of themselves, knowing and expecting that the community will proceed to criticize everything about their appearance and reinforce hopelessness:
 > The truth about incels is that almost
 all of them are completely normal looking guys.
 But of course that’s not the feedback they get from other incels. The feedback they get is that their chins are weak, their hair is thin, their skin is garbage and there’s no hope whatsoever, no woman will ever love them, they are truecels with no option but to lie down and rot.
 
-ContraPoints then relates this to her experience with a 4chan message board that, unlike other in other online trans communities, consisted of trans women tearing down each others appearances, saying that no one would ever see them as a woman (they would never "pass" as a woman), and saying that no trans woman could ever pass. As a somewhat public trans woman, the community often posted about her:
+ContraPoints then relates this to her experience with a 4chan message board that, unlike other in other online trans communities, consisted of trans women tearing down each others' appearances, saying that no one would ever see them as a woman (they would never "pass" as a woman), and saying that no trans woman could ever pass. As a somewhat public trans woman, the community often posted about her:
 > For a while I had some stans on the board who basically viewed me as inspiration [...] of course that kind of post is frowned upon.
 >
 > If I’m not looked at as a big-skulled manly freak, if my transition is going well, that means that some of their transitions might go well too, and that is an unacceptable conclusion for a community founded on self-loathing and hopelessness.
@@ -81,7 +81,7 @@ ContraPoints says she regularly searched these forums to see what terrible thing
 >
 > And at first I justified the habit by telling myself I was just doing research. I have to keep tabs on what the bigots are saying, that’s simply my job. But soon I realized it wasn’t just research, and it was infecting me away from the computer.
 
-She then describes this as a form of digital self-harm, calling it "__masochistic epistemology__: whatever hurts is true" (note: "masochistic" means seeking pain, and "epistemology" means how you determine what is true):
+She then describes this as a form of digital self-harm, calling it "__masochistic epistemology__: whatever hurts is true" (note: "masochistic" means seeking pain, and "epistemology" means how you determine what is true).
 
 ContraPoints then gives her advice to these incels who have turned inward with self-hatred and digital self-harm:
 > So, incels. I’m not going to respond to your worldview like its an intellectual position worthy of rational debate. Because these ideas and arguments, you’re not using them the way rational people use arguments. You’re using them as razor blades to abuse yourselves.

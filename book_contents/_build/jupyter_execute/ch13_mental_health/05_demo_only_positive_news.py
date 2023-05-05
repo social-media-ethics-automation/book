@@ -82,7 +82,7 @@ for submission in submissions_list:
 # ## Search through news submissions and only display good news
 # Now we will make a different version of the code that computes the sentiment of each submission title and only displays the ones with positive sentiment.
 
-# In[34]:
+# In[7]:
 
 
 # Look up the subreddit "news", then find the "hot" list, getting up to 10 submission
