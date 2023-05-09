@@ -28,5 +28,5 @@ Two YouTubers Tweeting about YouTube's comment moderation options vs. Twitter.
 Social media platforms themselves have their own options for how they can moderate comments, such as:
 - __Delete__: Platforms can delete posts or comments.
 - __Suspend__: Platforms can temporarily lock a user out until, for a set amount of time, or until they agree to delete some content and behave differently
-- __Ban__: Platforms can permanently ban users, and also try to ban users coming from certain internet connections
+- __Ban__: Platforms can permanently ban users and also try to ban users coming from certain internet connections
 - __Auto-detect__: Platforms can also use computer programs to automatically detect potential violations of content to automatically block, or flag for follow-up.
