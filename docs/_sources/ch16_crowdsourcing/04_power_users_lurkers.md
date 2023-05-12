@@ -10,4 +10,7 @@ alt: 'A chart titled "A large majority of tweets come from a small minority of t
 [Summary of Twitter use by Pew Research Center](https://www.pewresearch.org/internet/2019/04/24/sizing-up-twitter-users/)
 ```
 
+This small percentage of people doing most of the work in some areas is not a new phenomenon. In many aspects of our lives, some tasks have been done by a small group of people with specialization or resources. Their work is then shared with others. This goes back many thousands of years with activities such as collecting [obsidian](https://en.wikipedia.org/wiki/Obsidian#Prehistoric_and_historical_use) and making jewelry, to more modern activities like writing books, building cars, reporting on news, and making movies.
+
 % TODO: Tie to unneveness of virality (and also to maybe Native American ethics?)
+
