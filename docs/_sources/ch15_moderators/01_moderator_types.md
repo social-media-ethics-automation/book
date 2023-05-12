@@ -17,13 +17,13 @@ After a company starts working on moderation, they might decide to invest in tea
 These teams of content moderators could be considered human computers hired to evaluate examples against the content moderation policy of the platform they are working for.
 
 ## Individuals moderating their own spaces
-You can also having people moderate their own spaces. For example:
+You can also have people moderate their own spaces. For example:
 - when you text on the phone, you are in charge of blocking numbers if you want to (though the phone company might warn you of potential spam or scams)
-- When you make posts on Facebook, or upload videos to YouTube, you can delete comments and replies
-- Also in some of these systems you can allow friends access to your spaces to let them help you moderate them.
+- When you make posts on Facebook or upload videos to YouTube, you can delete comments and replies
+- Also in some of these systems, you can allow friends access to your spaces to let them help you moderate them.
 
 ## Volunteer Moderation
-Letting individuals moderate their own spaces is expecting individuals to put in their own time and labor. You can do the same thing with larger groups, and have volunteers moderate them. Reddit does something similar where subreddits are moderated by volunteers, and Wikipedia moderators (and editors) are also volunteers.
+Letting individuals moderate their own spaces is expecting individuals to put in their own time and labor. You can do the same thing with larger groups and have volunteers moderate them. Reddit does something similar where subreddits are moderated by volunteers, and Wikipedia moderators (and editors) are also volunteers.
 
 ## Automated Moderators (bots)
 Another strategy for content moderation is using bots, that is computer programs that look through posts or other content and try to automatically detect problems. These bots might remove content, or they might flag things for human moderators to review.
