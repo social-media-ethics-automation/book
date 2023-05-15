@@ -5,7 +5,7 @@ You might remember from Chapter 14 that social contracts, whether literal or met
 
   - Say you have broken a bone and you are in pain. A doctor might say that the bone needs to be set; this will be painful, and kind of a forceful, "violent" action in which someone is interfering with your body in a painful way. So the doctor asks if you agree to let her set the bone. You agree, and so the doctor's action is construed as being a legitimate interference with your body and your freedom.
 
-  - If someone random just walked up to you and started pulling at the injured limb, this unagreed violence would not be considered legitimate. Likewise, when medical practitioners interfere with a patient's body in a way that is non-consensual or not what the patient agreed to, then the violence is considered illegitimate, or morally bad.
+  - If someone randomly just walked up to you and started pulling at the injured limb, this unagreed violence would not be considered legitimate. Likewise, when medical practitioners interfere with a patient's body in a way that is non-consensual or not what the patient agreed to, then the violence is considered illegitimate, or morally bad.
 
 We tend to think of violence as being another "normatively loaded" word, like authenticity. But where authenticity is usually loaded with a positive connotation--on the whole, people often value authenticity as a good thing--violence is loaded with a negative connotation. Yes, the doctor setting the bone is violent and invasive, but we don't usually call this "violence" because it is considered to be a legitimate exercise of violence. Instead, we reserve the term "violence" mostly for describing forms of interference that we consider to be morally bad.
 

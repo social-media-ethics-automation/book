@@ -4,7 +4,7 @@ While anyone is vulnerable to harassment online (and offline as well), some peop
 
 Historically of course, different demographic groups have been subject to harassment or violence, such as women, LGBTA+ people, and Black people (e.g., the [FBI trying to convince Martin Luther King Jr. to commit suicide](https://en.wikipedia.org/wiki/FBI%E2%80%93King_suicide_letter)).
 
-On social media this is true as well. For example, the last section mentioned the (partially bot driven) harassment campaign against Meghan Markle and Prince Henry was at least partially driven by Meghan Markle being Black (the [same racism shown in the British Press](https://www.cnn.com/2021/03/08/media/uk-media-meghan-race-diversity/index.html)).
+On social media this is true as well. For example, the last section mentioned the (partially bot-driven) harassment campaign against Meghan Markle and Prince Henry was at least partially driven by Meghan Markle being Black (the [same racism shown in the British Press](https://www.cnn.com/2021/03/08/media/uk-media-meghan-race-diversity/index.html)).
 
 
 When Amnesty International looked at online harassment, they found that:
@@ -15,9 +15,9 @@ When Amnesty International looked at online harassment, they found that:
 
 
 ## Intersectionality
-As we look at the above examples we can see examples of [intersectionality](https://en.wikipedia.org/wiki/Intersectionality), which means that not only are people are treated differently based on their identities (e.g., race, gender, class, disability, weight, height, etc.), but combinations of those identities can compound unfair treatment in complicated ways.
+As we look at the above examples we can see examples of [intersectionality](https://en.wikipedia.org/wiki/Intersectionality), which means that not only are people treated differently based on their identities (e.g., race, gender, class, disability, weight, height, etc.), but combinations of those identities can compound unfair treatment in complicated ways.
 
-For example, you can test a resume filter and find that it isn’t biased against black people, and it isn’t biased against women. But it might turn out that it is still biased against black women. This could happen because the filter “fixed” the gender and race bias by over-selecting white women and black men, while under-selecting black women.
+For example, you can test a resume filter and find that it isn’t biased against Black people, and it isn’t biased against women. But it might turn out that it is still biased against Black women. This could happen because the filter “fixed” the gender and race bias by over-selecting white women and Black men while under-selecting Black women.
 
 Key figures:
   - [![Photo of Kimberlé Crenshaw](crenshaw.png)](https://en.wikipedia.org/wiki/Kimberl%C3%A9_Crenshaw) [Kimberlé Crenshaw](https://en.wikipedia.org/wiki/Kimberl%C3%A9_Crenshaw), present USA

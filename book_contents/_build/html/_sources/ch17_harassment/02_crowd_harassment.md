@@ -7,7 +7,7 @@ Social media then allows new ways for crowd harassment to occur.
 Crowd harassment includes all the forms of individual harassment we already mentioned (like bullying, stalking, etc.), but done by a group of people.
 
 Additionally, we can consider the following forms of crowd harassment:
-- [Dogpiling](https://en.wikipedia.org/wiki/Dogpiling_(Internet)): When a crowd of people target or harass the same person.
+- [Dogpiling](https://en.wikipedia.org/wiki/Dogpiling_(Internet)): When a crowd of people targets or harasses the same person.
 - Public Shaming (this will be our next chapter)
 - Cross-platform raids (e.g., [4chan group planning harassment on another platform](https://theconversation.com/4chan-raids-how-one-dark-corner-of-the-internet-is-spreading-its-shadows-68394))
 - [Stochastic terrorism](https://en.wikipedia.org/wiki/Lone_wolf_attack#Stochastic_terrorism)

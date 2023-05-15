@@ -2,12 +2,12 @@
 
 So let's look at how harassment gets justified.
 
-One research paper ([Morally Motivated Networked Harassment as Normative Reinforcement](https://journals.sagepub.com/doi/full/10.1177/20563051211021378)) suggests a process that often happens with online harassment, where the harassers feel thier actions are justified. They say these play out as follows:
+One research paper ([Morally Motivated Networked Harassment as Normative Reinforcement](https://journals.sagepub.com/doi/full/10.1177/20563051211021378)) suggests a process that often happens with online harassment, where the harassers feel their actions are justified. They say these play out as follows:
 - A __target__ is identified as breaking the norm of a community (often not their own community, so this is a case of context collapse). This provides a justification for people to harass the target.
-- A key social media aaccount (the __amplifier__), promotes the accusation in their community (again, often not the one the target is in).
-- The amplifier's audience then harass the target.
-- The target experiences negative emotions (stress, depression, etc.), and self-censors and withdaws. The targets' speech (and others who might have said something similar) is therefore silenced.
-- The apmlifier's network found a common enemy and cause, and this reinforces their values and norms.
+- A key social media account (the __amplifier__), promotes the accusation in their community (again, often not the one the target is in).
+- The amplifier's audience then harasses the target.
+- The target experiences negative emotions (stress, depression, etc.), and self-censors and withdraws. The targets' speech (and others who might have said something similar) is therefore silenced.
+- The amplifier's network found a common enemy and cause, and this reinforces their values and norms.
 
 Does this sound bad? Let's look at some more specific examples and see what you think.
 
@@ -62,7 +62,7 @@ Dr. Palmer later apologized for killing the lion, but then in 2020, [he went to 
 
 
 ### Billionaires
-One phrase that became popular on Twitter in 2022, especially as Elon Musk was in the process of buying Twitter, was: "It is always morally correct to bully billionaires." (Note: We could not find the exact origins of this phrase or its variations).
+One phrase that became popular on Twitter in 2022, especially as Elon Musk was in the process of buying Twitter, was: "It is always morally correct to bully billionaires." (Note: We could not find the exact origins of this phrase or its variations). This is related to the concept in comedy of "[punching up](https://en.wiktionary.org/wiki/punch_up)," that is, making fun of people in positions of relatively more power.
 
 ### Trolling
 We already mentioned this in the trolling chapter, but we thought we'd copy it here again, but this is one troll's justification for trolling:
@@ -78,4 +78,4 @@ We already mentioned this in the trolling chapter, but we thought we'd copy it h
 
 ## Reflection Questions
 - When do you think crowd harassment is justified (or do you think it is never justified)?
-- Do you feel differently about crowd harassment if the target is rich, famous, or powerful (e.g., a politician)? Do you feel different about crowd harassment depending on what the target has been doing or saying?
+- Do you feel differently about crowd harassment if the target is rich, famous, or powerful (e.g., a politician)? Do you feel differently about crowd harassment depending on what the target has been doing or saying?
