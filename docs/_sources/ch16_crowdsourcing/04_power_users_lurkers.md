@@ -14,5 +14,5 @@ This small percentage of people doing most of the work in some areas is not a ne
 
 % TODO: Wording above is a bit redundant
 
-% TODO: Tie to unneveness of virality (and also to maybe Native American ethics?)
+
 
