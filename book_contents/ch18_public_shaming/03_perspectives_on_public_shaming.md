@@ -1,6 +1,6 @@
 # Perspectives on the Ethics of Public Shaming
 
-We just looked at how shame might play out in childhood development, let's look at different views of people being shamed in public.
+We previously looked at how shame might play out in childhood development, let's look at different views of people being shamed in public.
 
 ## Weak against strong
 Jennifer Jacquet argues that shame can be morally good as a tool the weak can use against the strong:
@@ -27,10 +27,10 @@ A 2009 satirical article from the parody news site The Onion satirizes public sh
 
 
 ## Normal People
-While the example from The Onion above focuses on celebrity, in the time since it was written, social media has taken a larger role in society and democratized celebrity,. As comedian Bo Burnham puts it:
+While the example from The Onion above focuses on celebrity, in the time since it was written, social media has taken a larger role in society and democratized celebrity. As comedian Bo Burnham puts it:
 > “[This] celebrity pressure I had experienced on stage has now been democratized and given to everybody [through social media]. And everyone is feeling this pressure of having an audience, of having to perform, of having a sort of, like, proper noun version of your own name and then the self in your heart.” ([NPR Fresh Air Interview](https://www.npr.org/transcripts/630069876))
 
-Also Rebecca Jennings worries about how public shaming is used against "normal" people who are plucked out of obscurity to be shamed by huge crowds online:
+Also, Rebecca Jennings worries about how public shaming is used against "normal" people who are plucked out of obscurity to be shamed by huge crowds online:
 
 > “Millions of people became invested in this (niche! not very interesting!) drama because it gives us something easy to be angry or curious or self-righteous about, something to project our own experiences onto, and thereby contributing even more content to the growing avalanche. Naturally, some decided to go look up the central character’s address, phone number, and workplace and share it on the internet.
 >
@@ -47,9 +47,9 @@ Also Rebecca Jennings worries about how public shaming is used against "normal" 
 ## Enforcing Norms
 In the philosophy paper [Enforcing Social Norms: The Morality of Public Shaming](https://philpapers.org/archive/BILESN.pdf), Paul Billingham and Tom Parr discuss under what conditions public shaming would be morally permissible. They are concerned not with actions primarily intended to induce shame in the target, but rather actions that may cause a person to shame, but are motivated by "seeking to draw attention to a social norm violation, and to rally others to their cause."
 
-In this situation they outline the following constraints that must be considered when publicly shaming someone in this way:
+In this situation, they outline the following constraints that must be considered when publicly shaming someone in this way:
 - __Proportionality__: The negative consequences of shaming someone should not be worse than the positive consequences
-- __Necessity__: There must not be another more effective method of achieving goal
+- __Necessity__: There must not be another more effective method of achieving the goal
 - __Respect for Privacy__: There must not be unnecessary violations of privacy
 - __Non-Abusiveness__: The shaming must not use abusive tactics.
 - __Reintegration__ “Public shaming must aim at, and make possible, the reintegration of the norm violator back into the community, rather than permanently stigmatizing them.”

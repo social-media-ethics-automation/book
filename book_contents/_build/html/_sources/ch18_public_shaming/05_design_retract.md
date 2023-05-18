@@ -9,4 +9,4 @@ So now, it's your turn to think about how you would want a retraction feature to
 - How would that retracted tweet look when it is part of a retweet or quote tweet?
 - Would there be any notifications sent when a tweet is retracted?
 - Outline 3 different examples of how and when a user might retract a tweet
-  - E.g., misinformation, regret bad idea, regret mean tone, etc.
+  - E.g., misinformation, regret a bad idea, regret mean tone, etc.

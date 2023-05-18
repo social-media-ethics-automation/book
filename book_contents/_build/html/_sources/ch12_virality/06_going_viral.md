@@ -11,5 +11,9 @@ The Washington Post wrote a series of articles on the experience of going viral,
 
 % Viral can make people the symbols of different causes (good or bad), or the center of larger arguments. Going viral brings extra scrutiny. Randomness of who goes viral and gets singled out. Ethics about equality like maybe Native American Ethics?
 
+% TODO: Tie to unneveness of virality (and also to maybe Native American ethics?)
+
+% Some indigenous cultures
+
 % https://knowyourmeme.com/memes/milkshake-duck
 % https://twitter.com/pixelatedboat/status/741904787361300481
