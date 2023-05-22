@@ -10,7 +10,7 @@ alt: "Title screen of article, with the title and subtitle on the sides (Inside 
 Time Magazine article: [Inside Facebook’s Plan to Wire the World](https://time.com/facebook-world-plan/), featuring a capitalist doing colonialism. This article is well worth reading.
 ```
 
-The subtitle of the above [Time Magazine article](https://time.com/facebook-world-plan/) is "Mark Zuckerberg is on a crusade to put every single human being online." In it Mark Zuckerberg outlines his humanitarian goal of trying to get every human on earth an Internet connection. Zuckerberg claims he is doing this for benevolent reasons and not selfish ones. The article quotes Sheryl Sandberg (Meta's Chief Operating Officer) saying:
+The subtitle of the above [Time Magazine article](https://time.com/facebook-world-plan/) is "Mark Zuckerberg is on a crusade to put every single human being online." In it, Mark Zuckerberg outlines his humanitarian goal of trying to get every human on earth an Internet connection. Zuckerberg claims he is doing this for benevolent reasons and not selfish ones. The article quotes Sheryl Sandberg (Meta's Chief Operating Officer) saying:
 > When we’ve been accused of doing this for our own profit, the joke we have is, God, if we were trying to maximize profits, we have a long list of ad products to build! We’d have to work our way pretty far down that list before we got to this.
 
 We can see this too in Facebook's 2017 mission statement: "Make the world more open and connected."
@@ -18,7 +18,7 @@ We can see this too in Facebook's 2017 mission statement: "Make the world more o
 ## Questioning Zuckerberg’s Plan
 Mark Zuckerberg here has put himself in the position of a "White Savior" who has come to fix the problems of people all over the world by giving them the Internet. But we can question whether his plan is a good one.
 
-First: do users want the connection that Mark Zuckerberg is offering? The answer is at least in part yes, as people have signed up for the Internet through Zuckerberg's program, and many are excited to access resources, be connected to the online world like everyone else.
+First: do users want the connection that Mark Zuckerberg is offering? The answer is at least in part yes, as people have signed up for the Internet through Zuckerberg's program, and many are excited to access resources and be connected to the online world like everyone else.
 
 Second: is connecting everyone a good thing? The answer to this is not necessarily yes. The 1979 comedic sci-Fi novel [The Hitchhiker’s Guide to the Galaxy](https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy_(novel)), mocks the idea of the good of connecting everyone:
 > [I]f you stick a Babel fish in your ear you can instantly understand anything said to you in any form of language. [...] Meanwhile, the poor Babel fish, by effectively removing all barriers to communication between different races and cultures, has caused more and bloodier wars than anything else in the history of creation.

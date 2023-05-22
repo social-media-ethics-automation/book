@@ -10,7 +10,7 @@ See also:
 - ['It's digital colonialism': how Facebook's free internet service has failed its users](https://www.theguardian.com/technology/2017/jul/27/facebook-free-basics-developing-markets)
 
 ## Taking Resources
-In colonialism, the colonialist group also takes resources from the subjugated group. But what resources is Meta getting out of this? Especially if the people they are giving free Internet to don't have money to make it worth selling ads to show them?
+In colonialism, the colonialist group also takes resources from the subjugated group. But what resources is Meta getting out of this? Especially if the people they are giving free Internet to don't have money to make it worth selling ads to show them.
 
 In our view, Meta is getting two main benefits out of getting people with no Internet access onto the Internet with Facebook:
 

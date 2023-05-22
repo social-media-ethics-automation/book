@@ -19,4 +19,4 @@ alt: "Tweet from lesbian mothman (@verysmallriver)on April 14, 2022: i was on tu
 ```
 
 - Vote for government representatives (or pressure the government) so that they will regulate social media sites
-  - Meta spends a lot of money to lobby US government leaders, so they wont be inclined to regulate Meta in a way it doesn't like
+  - Meta spends a lot of money to lobby US government leaders, so they won't be inclined to regulate Meta in a way it doesn't like

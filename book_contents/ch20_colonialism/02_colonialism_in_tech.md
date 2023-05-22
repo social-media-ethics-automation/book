@@ -16,14 +16,14 @@ Then, much of tech is dependent on exploiting cheap labor, often in dangerous co
 Tech industry leaders in Silicon Valley then take what they made with exploited labor, and sell it around the world, feeling good about themselves, believing they are benefitting the world with their "superior" products.
 
 ## Example: One Laptop Per Child
-An example of how this can play out, is the failed [One Laptop Per Child](https://en.wikipedia.org/wiki/One_Laptop_per_Child) (OLPC) project.
+An example of how this can play out is the failed [One Laptop Per Child](https://en.wikipedia.org/wiki/One_Laptop_per_Child) (OLPC) project.
 
 > In late 2005, tech visionary and MIT Media Lab founder Nicholas Negroponte [introduced a] $100 laptop would have all the features of an ordinary computer but require so little electricity that a child could power it with a hand crank
 >
 > - [OLPC’s $100 laptop was going to change the world — then it all went wrong](https://www.theverge.com/2018/4/16/17233946/olpcs-100-laptop-education-where-is-it-now)
 
 OLPC wanted to give every child in the world a laptop, so they could learn computers, believing he would benefit the world. But this project failed for a number of reasons, such as:
-- The physical device didn't work well. The hand-powered generator was unreliable, the screen to small to read. OLPC was not actually providing a "superior" product to the rest of the world.
+- The physical device didn't work well. The hand-powered generator was unreliable, the screen too small to read. OLPC was not actually providing a "superior" product to the rest of the world.
 - When they did hand out some, it didn't come with good instructions. Kids were just supposed to figure it out on their own. If this failed, it must be the fault of the poor people around the world.
 - It wasn't designed for what kids around the world would actually want. They didn't take input from actual kids around the world. OLPC thought they had superior knowledge and just assumed they knew what people would want.
 
