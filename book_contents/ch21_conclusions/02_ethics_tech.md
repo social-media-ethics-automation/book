@@ -1,10 +1,17 @@
 # Ethics in Tech
 
-In the first chapter of our book we quoted actor Kumail Nanjiani on tech innovators' lack of consideration of ethical implications of their work. 
+In the first chapter of our book we quoted actor Kumail Nanjiani on tech innovators' lack of consideration of ethical implications of their work. Of course, concerns about the implications of technological advancement are nothing new.
 
-Of course, concerns about the implications of technological advancement are nothing new.
+In Plato's [Phaedrus](https://www.gutenberg.org/files/1636/1636-h/1636-h.htm) (~370BCE), Socrates tells (or makes up[^socrates_invents]) a story from Egypt critical of the invention of writing:
+> Now in those days the god Thamus was the king of the whole country of Egypt, [...] [then] came Theuth and showed his inventions, desiring that the other Egyptians might be allowed to have the benefit of them; [...] 
+>
+>[W]hen they came to letters, This, said Theuth, will make the Egyptians wiser and give them better memories; it is a specific both for the memory and for the wit. 
+>
+> Thamus replied: [...] this discovery of yours will create forgetfulness in the learners' souls, because they will not use their memories; they will trust to the external written characters and not remember of themselves. The specific which you have discovered is an aid not to memory, but to reminiscence, and you give your disciples not truth, but only the semblance of truth; they will be hearers of many things and will have learned nothing; they will appear to be omniscient and will generally know nothing; they will be tiresome company, having the show of wisdom without the reality.
 
-% TODO: Plato, Luddites
+[^socrates_invents]: In response to Socrates' story, his debate partner Phaedrus says, "Yes, Socrates, you can easily invent tales of Egypt, or of any other country."
+
+In England in the early 1800s, [Luddites](https://en.wikipedia.org/wiki/Luddite) were upset that textile factories were using machines to replace them, leaving them unemployed, so they sabotaged the machines. The English government sent soldiers to stop them, killing and executing many. (See also Sci-Fi author [Ted Chiang on Luddites and AI](https://www.newyorker.com/science/annals-of-artificial-intelligence/will-ai-become-the-new-mckinsey))
 
 ```{figure} xkcd_pace_of_life.png
 ---
@@ -15,7 +22,7 @@ alt: "The start of an xkcd comic consisting of quotes: The art of letter-writing
 The start of an [xkcd comic](https://xkcd.com/1227/) compiling a hundred years of complaints about how technology has speed up the pace of life. (full transcript of comic available at [explainxkcd](https://www.explainxkcd.com/wiki/index.php/1227:_The_Pace_of_Modern_Life))
 ```
 
-And inventors ignoring the ethical consequences of their creations is nothing new as well, and gets critiqued regularly:
+Inventors ignoring the ethical consequences of their creations is nothing new as well, and gets critiqued regularly:
 
 ```{figure} jurassic_park_scientists.gif
 ---
@@ -43,6 +50,4 @@ Many people like to believe (or at least convince others) that they are doing so
 <br>
 <br>
 
-But even people who thought they were doing something good regretted the consequences of their creations, such as [Eli Whitney](https://en.wikipedia.org/wiki/Eli_Whitney) who hoped his invention of the cotton gin would reduce slavery in the United States, but only made it worse, or [Albert Einstein regretting his role in convincing the US government to invent nuclear weapons](https://www.amnh.org/exhibitions/einstein/peace-and-war/the-manhattan-project#:~:text=He%20came%20to%20regret%20taking,I%20would%20have%20done%20nothing.%22).
-
-% TODO: Re-mention creator of infinite scroll, perhaps Nobel
+But even people who thought they were doing something good regretted the consequences of their creations, such as [Eli Whitney](https://en.wikipedia.org/wiki/Eli_Whitney) who hoped his invention of the cotton gin would reduce slavery in the United States, but only made it worse, or [Alfred Nobel](https://en.wikipedia.org/wiki/Alfred_Nobel) who invented dynamite (which could be used in construction or in war) and decided to create the Nobel prizes, or [Albert Einstein regretting his role in convincing the US government to invent nuclear weapons](https://www.amnh.org/exhibitions/einstein/peace-and-war/the-manhattan-project#:~:text=He%20came%20to%20regret%20taking,I%20would%20have%20done%20nothing.%22), or Aza Raskin regretting his invention infinite scroll.
