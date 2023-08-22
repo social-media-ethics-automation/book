@@ -1,10 +1,10 @@
 # As a Potential Tech Worker
 
-As a potential worker in the tech industry, you might someday find yourself in a position where you have influence over how social media platforms are designed, programmed, or operated (e.g., you could be a programmer, or designer, or content moderator).
+As a potential worker in the tech industry, you might someday find yourself in a position where you have influence over how social media platforms are designed, programmed, or operated (e.g., you could be a programmer, designer, or content moderator).
 
 We hope that if you find yourself in one of these positions, you consider the ethics of what you are doing. We hope you could then bring those concerns into how you design and implement automated systems for social media sites.
 
-% TODO: Mention unions / walkouts (like at Google for weapons contract)
+% TODO: Mention unions/walkouts (like at Google for weapons contract)
 
 ## An Example of Action
 
@@ -58,4 +58,4 @@ As an example of what someone in this position might do, let's consider this sto
 
 You aren't likely to end up in a situation as dramatic as this. If you find yourself making a stand for ethical tech work, it would probably look more like arguing about what restrictions to put on a name field (e.g., minimum length), prioritizing accessibility, or arguing that a small piece of data about users is not really needed and shouldn't be tracked. But regardless, if you end up in a position to have an influence in tech, we want you to be able to think through the ethical implications of what you are asked to do and how you choose to respond.
 
-You can also look at how you can organize with other workers, through things like the [Alphabet Workers Union](https://alphabetworkersunion.org/people/our-union/) (Alphabet is the parent company at Google).
+You can also look at how you can organize with other workers, through things like the [Alphabet Workers Union](https://alphabetworkersunion.org/people/our-union/) (Alphabet is the parent company of Google).
