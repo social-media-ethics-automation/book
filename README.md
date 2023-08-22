@@ -68,8 +68,9 @@ To build the website version, first you'll have to have some stuff installed:
 To build the book:
 - Opening your command line, and change directory to the directory of the book project (using "cd" commands)
 - run the following command:
-  - jupyter-book build book_contents
-- Note: sometimes changes aren't picked up completely, like updated versions of images, so you might need to run clean first to delete the old version of the build:
-  - jupyter-book clean book_contents
+  - python build.py
+
+- Note: sometimes changes aren't picked up completely, like updated versions of images, so you might need to run a "clean" build which will first to delete the old version of the build:
+  - python build.py --clean
 
 Once the book is built, then open your finder or file explorer, find the book project code, and the "book_contents" folder inside of that, and the "_build" folder inside of that, and the "html" folder inside of that. Then you should be able to double click on "index.html" to open it in your web browser and view your copy of the ebook webpage files.
