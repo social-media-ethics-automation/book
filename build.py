@@ -77,6 +77,7 @@ if os.path.exists("docs") and os.path.isdir("docs"):
 # make new docs
 os.mkdir("docs")
 
+
 # copy each platform
 for platform in platforms:
     shutil.copytree("_build/"+platform+"/_build/html", "docs/"+platform + "/")
@@ -84,4 +85,8 @@ for platform in platforms:
 # make default forwarding in index.html
 with open('docs/index.html', 'w') as file:
     file.write('<meta http-equiv="Refresh" content="0; url='+platforms[0]+'/intro.html" />')
+
+# github by default uses jekyll, which doesn't work with _ folders
+with open('docs/.nojekyll', 'w') as file:
+    file.write('')
 
