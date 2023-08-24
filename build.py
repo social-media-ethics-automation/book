@@ -25,16 +25,14 @@ def make_social_media_links(platform, destination_filename):
         if target_platform == platform:
             platform_selector_options.append("__" + target_platform["full_name"] + "__")
         else:
-            #TODO: ../ for as many times as after the index, then new platform, then all the parts after the index
+            #  ../ for as many times as after the index, then new platform, then all the parts after the index
             relative_path = "../" * len(path_parts) + target_platform["file_name"] + "/" + "/".join(path_parts) + ".html"
-            print(relative_path)
 
             platform_selector_options.append("<a href='"+relative_path+"'>"+target_platform["full_name"]+"</a>" )
 
     platform_selector += " | ".join(platform_selector_options)
     platform_selector += "_"
 
-    print(platform_selector)
     return platform_selector
 
 book_directory = "book_contents"
@@ -63,7 +61,6 @@ for platform in platforms:
                 toc_line.split(": ")[1]
             )
             new_toc[i] = toc_line.replace("-***", "")
-            print("updated: " + new_toc[i])
 
 
     for filename in platform_specific_files:
@@ -100,7 +97,8 @@ for platform in platforms:
     build_path = "_build/" + platform["file_name"]
 
     if "--clean" in sys.argv:
-        os.system('jupyter-book clean book_contents --path-output ' + build_path)
+        if os.path.exists(build_path) and os.path.isdir(build_path):
+            shutil.rmtree(build_path)
 
     os.system('jupyter-book build book_contents --path-output ' + build_path)
 
