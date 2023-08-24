@@ -12,8 +12,12 @@ platforms = [
 ]
 
 # make function for creating social media list
-def make_social_media_links(platform, destination_file_location):
-    # TODO: also need path to udpate path
+def make_social_media_links(platform, destination_filename):
+    # figure out path to updated version of file
+    path_parts = destination_filename.split("/")
+    path_parts.pop(0) # get rid of the book_contents directory
+
+    # create markdown list of social media sites
     platform_selector = "_Choose Social Media Platform: "
 
     platform_selector_options = []
@@ -21,11 +25,16 @@ def make_social_media_links(platform, destination_file_location):
         if target_platform == platform:
             platform_selector_options.append("__" + target_platform["full_name"] + "__")
         else:
-            platform_selector_options.append("[" + target_platform["full_name"] + "]("+ "" + ")" )
+            #TODO: ../ for as many times as after the index, then new platform, then all the parts after the index
+            relative_path = "../" * len(path_parts) + target_platform["file_name"] + "/" + "/".join(path_parts) + ".html"
+            print(relative_path)
+
+            platform_selector_options.append("<a href='"+relative_path+"'>"+target_platform["full_name"]+"</a>" )
 
     platform_selector += " | ".join(platform_selector_options)
     platform_selector += "_"
 
+    print(platform_selector)
     return platform_selector
 
 book_directory = "book_contents"
@@ -76,7 +85,7 @@ for platform in platforms:
         
         file_contents = open(original_file_location, "r").read().split("\n")
 
-        platform_selector = make_social_media_links(platform, destination_file_location)
+        platform_selector = make_social_media_links(platform, destination_filename)
         file_contents.insert(1, platform_selector + "\n")
 
         with open(destination_file_location, 'w') as file:

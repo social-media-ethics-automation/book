@@ -1,5 +1,5 @@
 # A program that makes one Discord post
-_Choose Social Media Platform: [Reddit]() | __Discord___
+_Choose Social Media Platform: <a href='../../../reddit/ch02_definitions/03_automation/06_a_social_media_bot.html'>Reddit</a> | __Discord___
 
 
 TODO: Fix
