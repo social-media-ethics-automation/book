@@ -1,4 +1,6 @@
 # A program that makes one Discord post
+_Choose Social Media Platform: [Reddit]() | __Discord___
+
 
 TODO: Fix
 

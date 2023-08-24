@@ -6,18 +6,43 @@ from colorama import Fore
 
 
 
-platforms = ["reddit", "discord"]
+platforms = [
+    {"full_name": "Reddit", "file_name": "reddit"},
+    {"full_name": "Discord", "file_name": "discord"}
+]
+
+# make function for creating social media list
+def make_social_media_links(platform, destination_file_location):
+    # TODO: also need path to udpate path
+    platform_selector = "_Choose Social Media Platform: "
+
+    platform_selector_options = []
+    for target_platform in platforms:
+        if target_platform == platform:
+            platform_selector_options.append("__" + target_platform["full_name"] + "__")
+        else:
+            platform_selector_options.append("[" + target_platform["full_name"] + "]("+ "" + ")" )
+
+    platform_selector += " | ".join(platform_selector_options)
+    platform_selector += "_"
+
+    return platform_selector
+
 book_directory = "book_contents"
 
 
 toc_source = open(book_directory + '/_toc_source.yml', "r").read().split("\n")
 
 
+
+
 for platform in platforms:
 
     print("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
-    print("platform" + platform)
+    print("platform: " + platform["full_name"])
     print("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
+
+    
 
     new_toc = toc_source.copy()
 
@@ -33,7 +58,7 @@ for platform in platforms:
 
 
     for filename in platform_specific_files:
-        platform_filename = book_directory + "/" + filename.replace("***", platform)
+        platform_filename = book_directory + "/" + filename.replace("***", platform["file_name"])
         destination_filename = book_directory + "/" + filename.replace("-***", "")
         
         # figure out file extensions!
@@ -45,7 +70,17 @@ for platform in platforms:
         else:
             print(Fore.RED + 'Problem: found ' + len(matching_files) + 'files when looking for ' + platform_filename)
 
-        shutil.copy(platform_filename + "." + file_extension, destination_filename + "." + file_extension)
+        #Copy file but add links to other versions
+        original_file_location = platform_filename + "." + file_extension
+        destination_file_location =  destination_filename + "." + file_extension
+        
+        file_contents = open(original_file_location, "r").read().split("\n")
+
+        platform_selector = make_social_media_links(platform, destination_file_location)
+        file_contents.insert(1, platform_selector + "\n")
+
+        with open(destination_file_location, 'w') as file:
+            file.write("\n".join(file_contents))
 
     with open(book_directory + '/_toc.yml', 'w') as file:
         file.write("\n".join(new_toc))
@@ -53,7 +88,7 @@ for platform in platforms:
     #print("\n".join(new_toc))
 
 
-    build_path = "_build/" + platform
+    build_path = "_build/" + platform["file_name"]
 
     if "--clean" in sys.argv:
         os.system('jupyter-book clean book_contents --path-output ' + build_path)
@@ -80,11 +115,11 @@ os.mkdir("docs")
 
 # copy each platform
 for platform in platforms:
-    shutil.copytree("_build/"+platform+"/_build/html", "docs/"+platform + "/")
+    shutil.copytree("_build/"+platform["file_name"]+"/_build/html", "docs/"+platform["file_name"] + "/")
 
 # make default forwarding in index.html
 with open('docs/index.html', 'w') as file:
-    file.write('<meta http-equiv="Refresh" content="0; url='+platforms[0]+'/intro.html" />')
+    file.write('<meta http-equiv="Refresh" content="0; url='+platforms[0]["file_name"]+'/intro.html" />')
 
 # github by default uses jekyll, which doesn't work with _ folders
 with open('docs/.nojekyll', 'w') as file:
