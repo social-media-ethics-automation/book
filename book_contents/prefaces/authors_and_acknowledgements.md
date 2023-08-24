@@ -21,7 +21,7 @@ Susan is a philosopher working in ethics (among other things). They did their Ph
 We would like to thank the following people for their contributions: Emily Giverts (who made the first version of the programming exercises) and Kristen Thayer (for programming ideas, explanations, and analogies)
 
 ## Feedback and insights:
-We would like to thank the following people for their feedback and insights: Anna Lauren Hoffmann and Professor Annie Searle.
+We would like to thank the following people for their feedback and insights: Alannah Oleson, Anna Lauren Hoffmann and Professor Annie Searle.
 
 ## Image and Materials Attributions (placeholder)
 Logo phone image is from [pixabay](https://pixabay.com/vectors/smartphone-icon-modern-symbol-1557796/)
