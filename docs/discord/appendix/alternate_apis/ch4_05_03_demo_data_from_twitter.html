@@ -1,35 +1,45 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Ch 4.5.3 Demo: Data from a Tweet &#8212; Social Media, Ethics, and Automation</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -37,12 +47,12 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -50,61 +60,93 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'appendix/alternate_apis/ch4_05_03_demo_data_from_twitter';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Ch 5.4.2 Demo: Dictionaries (Twitter)" href="ch5_04_02_demo_dictionaries.html" />
     <link rel="prev" title="Ch 3.3.3 Practice: Statements and Variables (Twitter)" href="ch3_03_03_practice_statements_variables_sleep.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Social Media, Ethics, and Automation</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -114,1967 +156,603 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../prefaces/authors_and_acknowledgements.html">
-   Authors and Acknowledgements
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../prefaces/perspectives_and_biases.html">
-   Perspectives and Biases
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../prefaces/authors_and_acknowledgements.html">Authors and Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../prefaces/perspectives_and_biases.html">Perspectives and Biases</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Book
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Book</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ch01_intro/00_intro.html">
-   1. Introduction
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch01_intro/01_sacco_tweet.html">
-     1.1. The case of Justine Sacco’s racist joke tweet
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch01_intro/02_kumail.html">
-     1.2. Kumail Nanjiani’s Reflections on Ethics in Tech
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ch02_definitions/00_intro.html">
-   2. Definitions
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../ch02_definitions/01_social_media/00_intro.html">
-     2.1. Social Media
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-    <label for="toctree-checkbox-3">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch02_definitions/01_social_media/01_what_is_social_media.html">
-       2.1.1. What is Social Media?
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch02_definitions/01_social_media/02_social_media_examples.html">
-       2.1.2. Social Media Platform Examples
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch02_definitions/01_social_media/03_social_media_and_real_life.html">
-       2.1.3. Social Media and “Real Life”
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../ch02_definitions/02_ethics/00_ethics.html">
-     2.2. Ethics
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-    <label for="toctree-checkbox-4">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch02_definitions/02_ethics/01_what_is_ethics.html">
-       2.2.1. What is Ethics?
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch02_definitions/02_ethics/02_golden_rule.html">
-       2.2.2. The “Golden Rule”
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch02_definitions/02_ethics/03_ethics_frameworks.html">
-       2.2.3. Ethics Frameworks
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch02_definitions/02_ethics/04_using_frameworks.html">
-       2.2.4. Practice Using Frameworks
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../ch02_definitions/03_automation/00_automation.html">
-     2.3. Automation
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch02_definitions/03_automation/01_language_translation.html">
-       2.3.1. Language Translation (Analogy)
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch02_definitions/03_automation/02_human_computers.html">
-       2.3.2. Human Computers
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch02_definitions/03_automation/03_binary.html">
-       2.3.3. Computers Speak Binary
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch02_definitions/03_automation/04_first_programmers.html">
-       2.3.4. First Programmers
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch02_definitions/03_automation/05_compilers.html">
-       2.3.5. Compilers and Programimng Languages
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch02_definitions/03_automation/06_a_social_media_bot.html">
-       2.3.6. A program that makes one Discord post
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch02_definitions/03_automation/07_details_of_bot.html">
-       2.3.7. Understanding the Reddit Bot Code
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch02_definitions/03_automation/08_demo.html">
-       2.3.8. Demo: Try Running the Reddit Bot!
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch02_definitions/03_automation/09_reflecting_on_programming.html">
-       2.3.9. Reflections on the Reddit Bot
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch02_definitions/03_automation/10_automation_in_social_media.html">
-       2.3.10. Automation in Social Media
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch02_definitions/04_tying_them_together.html">
-     2.4. Tying It Together
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch02_definitions/05_learn_more.html">
-     2.5. Learn more
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ch03_bots/00_bots.html">
-   3. Bots
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch03_bots/01_bot_definition.html">
-     3.1. Definition of a bot
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch03_bots/02_bot_examples.html">
-     3.2. Examples of Bots (or apps)
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../ch03_bots/03_anatomy_of_a_bot/00_intro.html">
-     3.3. Anatomy of a Bot
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch03_bots/03_anatomy_of_a_bot/01_control_flow_options.html">
-       3.3.1. Organizing a Computer Program
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch03_bots/03_anatomy_of_a_bot/02_demo_statements_variables_sleep.html">
-       3.3.2. Demo: Statements, Variables, and Sleep
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch03_bots/03_anatomy_of_a_bot/03_practice_statements_variables_sleep.html">
-       3.3.3. Practice: Statements and Variables
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch03_bots/04_bots_and_responsibility.html">
-     3.4. Bots and Responsibility
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch03_bots/05_bot_activity.html">
-     3.5. Activity: Find Lists of Bots
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch03_bots/06_learn_more.html">
-     3.6. Learn more
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ch04_data/00_data.html">
-   4. Data
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../ch04_data/01_anatomy_of_post/00_intro.html">
-     4.1. Anatomy of a Social Media Post
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-    <label for="toctree-checkbox-9">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch04_data/01_anatomy_of_post/01_post_data.html">
-       4.1.1. Data in a Social Media Post
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch04_data/01_anatomy_of_post/02_basic_data_types.html">
-       4.1.2. Basic Data Types
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch04_data/01_anatomy_of_post/03_grouping_data_types.html">
-       4.1.3. Grouping data
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch04_data/01_anatomy_of_post/04_additional_data_types.html">
-       4.1.4. Additional Data Types
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch04_data/01_anatomy_of_post/05_data_constraints.html">
-       4.1.5. Data Constraints
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch04_data/01_anatomy_of_post/06_reflection_questions.html">
-       4.1.6. Reflection Questions
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch04_data/02_data_simplification.html">
-     4.2. All data is a simplification of reality
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch04_data/03_who_data_fits.html">
-     4.3. Who does data fit?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch04_data/04_data_informing_ethics.html">
-     4.4. How Data Informs Ethics
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../ch04_data/05_data_python_reddit/00_intro.html">
-     4.5. Data in Python and Reddit
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-    <label for="toctree-checkbox-10">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch04_data/05_data_python_reddit/01_demo_data.html">
-       4.5.1. Demo: Python Basic Data Types
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch04_data/05_data_python_reddit/02_practice_data.html">
-       4.5.2. Practice: Python Basic Data Types
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch04_data/05_data_python_reddit/03_demo_data_from_reddit.html">
-       4.5.3. Demo: Data from a Reddit Post
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch04_data/05_data_python_reddit/04_activity.html">
-       4.5.4. Design Activity: Data and Social media
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch04_data/06_reflection_in_data_design.html">
-     4.6. Reflection: Ethics of Choosing Data Representation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch04_data/07_learn_more.html">
-     4.7. Learn more
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ch05_history/00_history.html">
-   5. History of Social Media
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-  <label for="toctree-checkbox-11">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch05_history/01_pre_internet.html">
-     5.1. Pre-Internet Social Media
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch05_history/02_web_1.html">
-     5.2. Web 1.0 Social Media
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch05_history/03_web_2.html">
-     5.3. Web 2.0 Social Media
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../ch05_history/04_list_data_python/00_intro.html">
-     5.4. Looping with Lists and Dictionaries in Social Media
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-    <label for="toctree-checkbox-12">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch05_history/04_list_data_python/01_demo_lists.html">
-       5.4.1. Demo: Lists and Loops
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch05_history/04_list_data_python/02_demo_dictionaries.html">
-       5.4.2. Demo: Dictionaries
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch05_history/04_list_data_python/03_practice_lists_dictionaries.html">
-       5.4.3. Practice: Looping through lists and dictionaries
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch05_history/05_antisocial_media.html">
-     5.5. Antisocial Media
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch05_history/06_social_media_design.html">
-     5.6. Social Media Design
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch05_history/07_reflections.html">
-     5.7. Reflection Activities: Actions on Social Media Designs
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch05_history/08_learn_more.html">
-     5.8. Learn More
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ch06_authenticity/00_authenticity.html">
-   6. Authenticity
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-  <label for="toctree-checkbox-13">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch06_authenticity/01_authenticity.html">
-     6.1. Authenticity
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../ch06_authenticity/02_posting_sources/00_posting_sources.html">
-     6.2. Posting Sources
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-    <label for="toctree-checkbox-14">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch06_authenticity/02_posting_sources/01_authenticity_trump.html">
-       6.2.1. Example: Trump Tweet Sources
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch06_authenticity/02_posting_sources/02_demo_practice_author_info.html">
-       6.2.2. Demo &amp; Practice: Author Info
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch06_authenticity/03_inauthenticity.html">
-     6.3. Inauthenticity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch06_authenticity/04_personas.html">
-     6.4. Personas, Code Switching, Context Collapse
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch06_authenticity/05_parasocial_relationships.html">
-     6.5. Parasocial Relationships
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch06_authenticity/06_authenticity_and_anonymity.html">
-     6.6. Authenticity and Anonymity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch06_authenticity/07_examples_of_complicated_authenticity.html">
-     6.7. Example: Corporate Brand Authenticity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch06_authenticity/08_design_analysis_facebook_name.html">
-     6.8. Design Analysis: Facebook Names Rules
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch06_authenticity/09_learn_more.html">
-     6.9. Learn More
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ch07_trolling/00_trolling.html">
-   7. Trolling
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
-  <label for="toctree-checkbox-15">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch07_trolling/01_what_is_trolling.html">
-     7.1. What is trolling
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch07_trolling/02_origins_trolling.html">
-     7.2. Origins of trolling
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch07_trolling/03_trolling_examples.html">
-     7.3. Activity: Evaluating Trolling Examples
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch07_trolling/04_responding_to_trolls.html">
-     7.4. Responding to trolls?
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../ch07_trolling/05_trolling_reply_bot/00_introduction.html">
-     7.5. Trolling a Reply Bot
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
-    <label for="toctree-checkbox-16">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch07_trolling/05_trolling_reply_bot/01_demo_strings_conditionals.html">
-       7.5.1. Demo: Conditionals and String Manipulation
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch07_trolling/05_trolling_reply_bot/02_practice_strings_conditionals.html">
-       7.5.2. Practice: Conditionals and String Manipulation
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch07_trolling/05_trolling_reply_bot/03_demo_reply_bot.html">
-       7.5.3. Demo: Trolling a Reply Bot
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch07_trolling/06_ethics_and_trolling.html">
-     7.6. Ethics and Trolling
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch07_trolling/07_learn_more.html">
-     7.7. Learn More
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ch08_data_mining/00_data_mining.html">
-   8. Data Mining
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
-  <label for="toctree-checkbox-17">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch08_data_mining/01_data_sources.html">
-     8.1. Sources of Social Media Data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch08_data_mining/02_reddit_api_data.html">
-     8.2. Data From the Reddit API
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch08_data_mining/03_data_mining.html">
-     8.3. Mining Social Media Data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch08_data_mining/04_data_uses.html">
-     8.4. How is this data used
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch08_data_mining/05_what_platforms_think_of_you.html">
-     8.5. Activity: What platforms think of you
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../ch08_data_mining/06_sentiment_analysis/00_intro.html">
-     8.6. Sentiment Analysis on Twitter
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
-    <label for="toctree-checkbox-18">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch08_data_mining/06_sentiment_analysis/01_demo_sentiment_and_loop_vars.html">
-       8.6.1. Demo: Sentiment Analysis and Loop Variables
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch08_data_mining/06_sentiment_analysis/02_practice_sentiment_and_loop_vars.html">
-       8.6.2. Practice: Sentiment Analysis and Loop Variables
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch08_data_mining/06_sentiment_analysis/03_demo_sentiment_reddit.html">
-       8.6.3. Demo: Sentiment Analysis on Reddit
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch08_data_mining/07_data_poisoning.html">
-     8.7. Data Poisoning
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch08_data_mining/08_reflection_questions.html">
-     8.8. Reflections on Data Mining
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch08_data_mining/09_learn_more.html">
-     8.9. Learn More
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ch09_privacy/00_privacy.html">
-   9. Privacy and Security
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
-  <label for="toctree-checkbox-19">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch09_privacy/01_privacy_concerns.html">
-     9.1. Privacy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch09_privacy/02_security.html">
-     9.2. Security
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch09_privacy/03_privacy_violations.html">
-     9.3. Additional Privacy Violations
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../ch09_privacy/04_tracking_use/00_intro.html">
-     9.4. Tracking Use
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
-    <label for="toctree-checkbox-20">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch09_privacy/04_tracking_use/01_demo_functions.html">
-       9.4.1. Demo: Writing Functions
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch09_privacy/04_tracking_use/02_practice_functions.html">
-       9.4.2. Practice: Functions
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch09_privacy/04_tracking_use/03_demo_track_use.html">
-       9.4.3. Demo: Track Use of Sentiment Analysis Code
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch09_privacy/05_activity_gdpr.html">
-     9.5. Design Analysis: GDPR
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch09_privacy/06_reflections.html">
-     9.6. Reflection Questions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch09_privacy/07_learn_more.html">
-     9.7. Learn More
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ch10_accessibility/00_accessibility.html">
-   10. Accessibility
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
-  <label for="toctree-checkbox-21">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch10_accessibility/01_disability.html">
-     10.1. Disability
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch10_accessibility/02_accessible_design.html">
-     10.2. Accessible Design
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch10_accessibility/03_who_designs.html">
-     10.3. Why It Matters Who Designs
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../ch10_accessibility/04_alt_text/00_intro.html">
-     10.4. Alt-text on Social Media
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
-    <label for="toctree-checkbox-22">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch10_accessibility/04_alt_text/01_alt_text.html">
-       10.4.1. Alt-text
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch10_accessibility/05_accessibility_on_social_media.html">
-     10.5. Design Analysis: Accessibility
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ch11_recommendations/00_recommendations.html">
-   11. Recommendation Algorithms
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
-  <label for="toctree-checkbox-23">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch11_recommendations/01_recommendations.html">
-     11.1. What Recommendation Algorithms Do
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch11_recommendations/02_ethical_analysis_recommendations.html">
-     11.2. Ethical Analysis of Recommendation Algorithms
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch11_recommendations/03_individual_concerns.html">
-     11.3. Individual Concerns with Recommendation Algorithms
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch11_recommendations/04_societal_concerns.html">
-     11.4. Societal Concerns with Recommendation Algorithms
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../ch11_recommendations/05_recommend_bot/00_intro.html">
-     11.5. Recommendation Bot
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
-    <label for="toctree-checkbox-24">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch11_recommendations/05_recommend_bot/01_demo_dictionary_counters.html">
-       11.5.1. Demo: Dictionary Counters
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch11_recommendations/05_recommend_bot/02_practice_dictionary_counters.html">
-       11.5.2. Practice: Dictionary Counters
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch11_recommendations/05_recommend_bot/03_demo_recommend_subreddit.html">
-       11.5.3. Demo: Recommend a Subreddit
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch11_recommendations/06_design_recommend.html">
-     11.6. Design Activity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch11_recommendations/07_learn_more.html">
-     11.7. Learn More
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ch12_virality/00_virality.html">
-   12. Virality
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/>
-  <label for="toctree-checkbox-25">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch12_virality/01_evolution_memes.html">
-     12.1. Evolution and Memes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch12_virality/02_pre_internet.html">
-     12.2. Pre-internet Virality Examples
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch12_virality/03_social_media_natural_selection.html">
-     12.3. Evolution in social media
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch12_virality/04_viral_examples.html">
-     12.4. Virality and Intention
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch12_virality/05_ethics_of_copying.html">
-     12.5. Ethics of copying
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch12_virality/06_going_viral.html">
-     12.6. The Experience of Going Viral
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch12_virality/07_activity_virality_values.html">
-     12.7. Activity: Value statements in what goes viral
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch12_virality/08_reflections.html">
-     12.8. Reflections
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch12_virality/09_learn_more.html">
-     12.9. Learn More
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ch13_mental_health/00_mental_health.html">
-   13. Mental Health
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/>
-  <label for="toctree-checkbox-26">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch13_mental_health/01_effects_of_social_media.html">
-     13.1. Social Media Influence on Mental Health
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch13_mental_health/02_unhealthy_activities.html">
-     13.2. Unhealthy Activities on Social Media
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch13_mental_health/03_healthy_activities.html">
-     13.3. Healthy Activities on Social Media
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch13_mental_health/04_mental_health_detection.html">
-     13.4. Mental Health Detection
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch13_mental_health/05_demo_only_positive_news.html">
-     13.5. Demo: Only positive news
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch13_mental_health/06_design_activity_mental_health.html">
-     13.6. Design Analysis: Mental Health
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch13_mental_health/07_reflections.html">
-     13.7. Reflection questions on mental health
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch13_mental_health/08_learn_more.html">
-     13.8. Learn more
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ch14_moderation/00_moderation.html">
-   14. Content Moderation
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/>
-  <label for="toctree-checkbox-27">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch14_moderation/01_content.html">
-     14.1. What Content Gets Moderated
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch14_moderation/02_moderation_tools.html">
-     14.2. Moderation Tools
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch14_moderation/03_different_platforms.html">
-     14.3. Comparing Different Platforms
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch14_moderation/04_moderation_and_ethics.html">
-     14.5. Moderation and Ethics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch14_moderation/05_reflections.html">
-     14.6. Activity and Reflections on Moderation
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../ch14_moderation/06_tweets_and_replies/00_intro.html">
-     14.7. Viewing Tweets and Replies
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/>
-    <label for="toctree-checkbox-28">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch14_moderation/06_tweets_and_replies/01_trees.html">
-       14.7.1. Tree Structures
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch14_moderation/06_tweets_and_replies/02_demo_recursion.html">
-       14.7.2. Demo: Navigating Trees (recursion)
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch14_moderation/06_tweets_and_replies/03_demo_hide_some_tweets.html">
-       14.7.3. Demo: Hide Some Comments
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch14_moderation/07_learn_more.html">
-     14.8. Learn More
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ch15_moderators/00_moderators.html">
-   15. Content Moderators
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/>
-  <label for="toctree-checkbox-29">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch15_moderators/01_moderator_types.html">
-     15.1. Types of Content Moderator Set-Ups
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch15_moderators/02_example_moderators.html">
-     15.2. Example Moderator Set-ups
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch15_moderators/03_toll_on_moderators.html">
-     15.3. The Toll on Moderators
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch15_moderators/04_learn_more.html">
-     15.4. Learn More
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ch16_crowdsourcing/00_crowdsourcing.html">
-   16. Crowdsourcing
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/>
-  <label for="toctree-checkbox-30">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch16_crowdsourcing/01_crowdsourcing_definition.html">
-     16.1. Crowdsourcing Definition
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch16_crowdsourcing/02_planned_crowdsourcing.html">
-     16.2. Planned Crowdsourcing Examples
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch16_crowdsourcing/03_ad_hoc.html">
-     16.3. Ad-hoc Crowdsourcing Examples
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch16_crowdsourcing/04_power_users_lurkers.html">
-     16.4. Power Users and Lurkers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch16_crowdsourcing/05_visualizing_networks.html">
-     16.5. Visualizing Networks
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch16_crowdsourcing/06_reflections.html">
-     16.6. Reflection Questions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch16_crowdsourcing/07_learn_more.html">
-     16.7. Learn More
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ch17_harassment/00_harassment.html">
-   17. Harassment
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/>
-  <label for="toctree-checkbox-31">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch17_harassment/01_individual_harassment.html">
-     17.1. Individual harassment
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch17_harassment/02_crowd_harassment.html">
-     17.2. Crowd Harassment
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch17_harassment/03_who_gets_harassed.html">
-     17.3. Who gets harassed?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch17_harassment/04_ethics_harassment.html">
-     17.4. Ethics and Harassment
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch17_harassment/05_justifying_harassment.html">
-     17.5. Justifying Harassment
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch17_harassment/06_stopping_harassment.html">
-     17.6. Stopping Harassment?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch17_harassment/07_design_example_quoting.html">
-     17.7. Design Example: Quoting
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch17_harassment/08_reflections.html">
-     17.8. Reflection Questions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch17_harassment/09_learn_more.html">
-     17.9. Learn More
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ch18_public_shaming/00_public_shaming.html">
-   18. Public Criticism and Public Shaming
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/>
-  <label for="toctree-checkbox-32">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch18_public_shaming/01_shame_guilt_childhood.html">
-     18.1. Shame vs. Guilt in childhood development
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch18_public_shaming/02_online_shaming.html">
-     18.2. Online Criticism and Shaming
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch18_public_shaming/03_perspectives_on_public_shaming.html">
-     18.3. Perspectives on the Ethics of Public Shaming
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch18_public_shaming/04_repair_and_reintegration.html">
-     18.4. Repair and Reconciliation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch18_public_shaming/05_design_retract.html">
-     18.5. Design a Retract Feature
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch18_public_shaming/06_learn_more.html">
-     18.6. Learn More
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ch19_capitalism/00_capitalism.html">
-   19. Capitalism
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/>
-  <label for="toctree-checkbox-33">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch19_capitalism/01_what_is_capitalism.html">
-     19.1. What is Capitalism?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch19_capitalism/02_metas_strategy.html">
-     19.2. Meta’s Capitalist Strategy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch19_capitalism/03_responses_to_meta.html">
-     19.3. Responses to Meta’s Business Strategies
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch19_capitalism/04_meta_vs_users.html">
-     19.4. Meta vs. Users
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch19_capitalism/05_imagining_alternatives.html">
-     19.5. Imagining Alternatives
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch19_capitalism/06_programming_gender_status_money.html">
-     19.6. Programming, Gender, Status, and Money
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch19_capitalism/07_learn_more.html">
-     19.7. Learn More
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ch20_colonialism/00_colonialism.html">
-   20. Colonialism
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" type="checkbox"/>
-  <label for="toctree-checkbox-34">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch20_colonialism/01_what_is_colonialism.html">
-     20.1. What is Colonialism?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch20_colonialism/02_colonialism_in_tech.html">
-     20.2. Colonialism in Tech
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch20_colonialism/03_colonialism_in_programming.html">
-     20.3. Colonialism in Programming
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch20_colonialism/04_zuckerbergs_goals.html">
-     20.4. Mark Zuckerberg’s “Benevolent” Goals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch20_colonialism/05_colonialism_and_meta.html">
-     20.5. Colonialism and Meta’s Strategy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch20_colonialism/06_imagining_alternatives.html">
-     20.6. Imagining Alternatives
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch20_colonialism/07_learn_more.html">
-     20.7. Learn More
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../ch21_conclusions/00_conclusions.html">
-   21. Conclusions
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" type="checkbox"/>
-  <label for="toctree-checkbox-35">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch21_conclusions/01_what_we_covered.html">
-     21.1. What We Covered
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch21_conclusions/02_ethics_tech.html">
-     21.2. Ethics in Tech
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../ch21_conclusions/03_going_forward/00_intro.html">
-     21.3. Going Forward
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" type="checkbox"/>
-    <label for="toctree-checkbox-36">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch21_conclusions/03_going_forward/01_social_media_user.html">
-       21.3.1. As a Social Media User
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch21_conclusions/03_going_forward/02_member_of_society.html">
-       21.3.2. As a Member of Society
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../ch21_conclusions/03_going_forward/03_potential_tech_worker.html">
-       21.3.3. As a Potential Tech Worker
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch21_conclusions/04_final_reflections.html">
-     21.4. Final Reflection Questions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../ch21_conclusions/05_more_resources.html">
-     21.5. More Resources
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch01_intro/00_intro.html">1. Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ch01_intro/01_sacco_tweet.html">1.1. The case of Justine Sacco’s racist joke tweet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch01_intro/02_kumail.html">1.2. Kumail Nanjiani’s Reflections on Ethics in Tech</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendix
- </span>
-</p>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch02_definitions/00_intro.html">2. Definitions</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch02_definitions/01_social_media/00_intro.html">2.1. Social Media</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch02_definitions/01_social_media/01_what_is_social_media.html">2.1.1. What is Social Media?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch02_definitions/01_social_media/02_social_media_examples.html">2.1.2. Social Media Platform Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch02_definitions/01_social_media/03_social_media_and_real_life.html">2.1.3. Social Media and “Real Life”</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch02_definitions/02_ethics/00_ethics.html">2.2. Ethics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch02_definitions/02_ethics/01_what_is_ethics.html">2.2.1. What is Ethics?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch02_definitions/02_ethics/02_golden_rule.html">2.2.2. The “Golden Rule”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch02_definitions/02_ethics/03_ethics_frameworks.html">2.2.3. Ethics Frameworks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch02_definitions/02_ethics/04_using_frameworks.html">2.2.4. Practice Using Frameworks</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch02_definitions/03_automation/00_automation.html">2.3. Automation</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch02_definitions/03_automation/01_language_translation.html">2.3.1. Language Translation (Analogy)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch02_definitions/03_automation/02_human_computers.html">2.3.2. Human Computers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch02_definitions/03_automation/03_binary.html">2.3.3. Computers Speak Binary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch02_definitions/03_automation/04_first_programmers.html">2.3.4. First Programmers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch02_definitions/03_automation/05_compilers.html">2.3.5. Compilers and Programimng Languages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch02_definitions/03_automation/06_a_social_media_bot.html">2.3.6. A program that makes one Discord post</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch02_definitions/03_automation/07_details_of_bot.html">2.3.7. Understanding the Reddit Bot Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch02_definitions/03_automation/08_demo.html">2.3.8. Demo: Try Running the Reddit Bot!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch02_definitions/03_automation/09_reflecting_on_programming.html">2.3.9. Reflections on the Reddit Bot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch02_definitions/03_automation/10_automation_in_social_media.html">2.3.10. Automation in Social Media</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch02_definitions/04_tying_them_together.html">2.4. Tying It Together</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch02_definitions/05_learn_more.html">2.5. Learn more</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch03_bots/00_bots.html">3. Bots</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ch03_bots/01_bot_definition.html">3.1. Definition of a bot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch03_bots/02_bot_examples.html">3.2. Examples of Bots (or apps)</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch03_bots/03_anatomy_of_a_bot/00_intro.html">3.3. Anatomy of a Bot</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch03_bots/03_anatomy_of_a_bot/01_control_flow_options.html">3.3.1. Organizing a Computer Program</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch03_bots/03_anatomy_of_a_bot/02_demo_statements_variables_sleep.html">3.3.2. Demo: Statements, Variables, and Sleep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch03_bots/03_anatomy_of_a_bot/03_practice_statements_variables_sleep.html">3.3.3. Practice: Statements and Variables</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch03_bots/04_bots_and_responsibility.html">3.4. Bots and Responsibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch03_bots/05_bot_activity.html">3.5. Activity: Find Lists of Bots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch03_bots/06_learn_more.html">3.6. Learn more</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch04_data/00_data.html">4. Data</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch04_data/01_anatomy_of_post/00_intro.html">4.1. Anatomy of a Social Media Post</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch04_data/01_anatomy_of_post/01_post_data.html">4.1.1. Data in a Social Media Post</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch04_data/01_anatomy_of_post/02_basic_data_types.html">4.1.2. Basic Data Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch04_data/01_anatomy_of_post/03_grouping_data_types.html">4.1.3. Grouping data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch04_data/01_anatomy_of_post/04_additional_data_types.html">4.1.4. Additional Data Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch04_data/01_anatomy_of_post/05_data_constraints.html">4.1.5. Data Constraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch04_data/01_anatomy_of_post/06_reflection_questions.html">4.1.6. Reflection Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch04_data/02_data_simplification.html">4.2. All data is a simplification of reality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch04_data/03_who_data_fits.html">4.3. Who does data fit?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch04_data/04_data_informing_ethics.html">4.4. How Data Informs Ethics</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch04_data/05_data_python_reddit/00_intro.html">4.5. Data in Python and Reddit</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch04_data/05_data_python_reddit/01_demo_data.html">4.5.1. Demo: Python Basic Data Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch04_data/05_data_python_reddit/02_practice_data.html">4.5.2. Practice: Python Basic Data Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch04_data/05_data_python_reddit/03_demo_data_from_reddit.html">4.5.3. Demo: Data from a Reddit Post</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch04_data/05_data_python_reddit/04_activity.html">4.5.4. Design Activity: Data and Social media</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch04_data/06_reflection_in_data_design.html">4.6. Reflection: Ethics of Choosing Data Representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch04_data/07_learn_more.html">4.7. Learn more</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch05_history/00_history.html">5. History of Social Media</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ch05_history/01_pre_internet.html">5.1. Pre-Internet Social Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch05_history/02_web_1.html">5.2. Web 1.0 Social Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch05_history/03_web_2.html">5.3. Web 2.0 Social Media</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch05_history/04_list_data_python/00_intro.html">5.4. Looping with Lists and Dictionaries in Social Media</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch05_history/04_list_data_python/01_demo_lists.html">5.4.1. Demo: Lists and Loops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch05_history/04_list_data_python/02_demo_dictionaries.html">5.4.2. Demo: Dictionaries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch05_history/04_list_data_python/03_practice_lists_dictionaries.html">5.4.3. Practice: Looping through lists and dictionaries</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch05_history/05_antisocial_media.html">5.5. Antisocial Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch05_history/06_social_media_design.html">5.6. Social Media Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch05_history/07_reflections.html">5.7. Reflection Activities: Actions on Social Media Designs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch05_history/08_learn_more.html">5.8. Learn More</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch06_authenticity/00_authenticity.html">6. Authenticity</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ch06_authenticity/01_authenticity.html">6.1. Authenticity</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch06_authenticity/02_posting_sources/00_posting_sources.html">6.2. Posting Sources</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch06_authenticity/02_posting_sources/01_authenticity_trump.html">6.2.1. Example: Trump Tweet Sources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch06_authenticity/02_posting_sources/02_demo_practice_author_info.html">6.2.2. Demo &amp; Practice: Author Info</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch06_authenticity/03_inauthenticity.html">6.3. Inauthenticity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch06_authenticity/04_personas.html">6.4. Personas, Code Switching, Context Collapse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch06_authenticity/05_parasocial_relationships.html">6.5. Parasocial Relationships</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch06_authenticity/06_authenticity_and_anonymity.html">6.6. Authenticity and Anonymity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch06_authenticity/07_examples_of_complicated_authenticity.html">6.7. Example: Corporate Brand Authenticity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch06_authenticity/08_design_analysis_facebook_name.html">6.8. Design Analysis: Facebook Names Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch06_authenticity/09_learn_more.html">6.9. Learn More</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch07_trolling/00_trolling.html">7. Trolling</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ch07_trolling/01_what_is_trolling.html">7.1. What is trolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch07_trolling/02_origins_trolling.html">7.2. Origins of trolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch07_trolling/03_trolling_examples.html">7.3. Activity: Evaluating Trolling Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch07_trolling/04_responding_to_trolls.html">7.4. Responding to trolls?</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch07_trolling/05_trolling_reply_bot/00_introduction.html">7.5. Trolling a Reply Bot</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch07_trolling/05_trolling_reply_bot/01_demo_strings_conditionals.html">7.5.1. Demo: Conditionals and String Manipulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch07_trolling/05_trolling_reply_bot/02_practice_strings_conditionals.html">7.5.2. Practice: Conditionals and String Manipulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch07_trolling/05_trolling_reply_bot/03_demo_reply_bot.html">7.5.3. Demo: Trolling a Reply Bot</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch07_trolling/06_ethics_and_trolling.html">7.6. Ethics and Trolling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch07_trolling/07_learn_more.html">7.7. Learn More</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch08_data_mining/00_data_mining.html">8. Data Mining</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ch08_data_mining/01_data_sources.html">8.1. Sources of Social Media Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch08_data_mining/02_reddit_api_data.html">8.2. Data From the Reddit API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch08_data_mining/03_data_mining.html">8.3. Mining Social Media Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch08_data_mining/04_data_uses.html">8.4. How is this data used</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch08_data_mining/05_what_platforms_think_of_you.html">8.5. Activity: What platforms think of you</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch08_data_mining/06_sentiment_analysis/00_intro.html">8.6. Sentiment Analysis on Twitter</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch08_data_mining/06_sentiment_analysis/01_demo_sentiment_and_loop_vars.html">8.6.1. Demo: Sentiment Analysis and Loop Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch08_data_mining/06_sentiment_analysis/02_practice_sentiment_and_loop_vars.html">8.6.2. Practice: Sentiment Analysis and Loop Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch08_data_mining/06_sentiment_analysis/03_demo_sentiment_reddit.html">8.6.3. Demo: Sentiment Analysis on Reddit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch08_data_mining/07_data_poisoning.html">8.7. Data Poisoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch08_data_mining/08_reflection_questions.html">8.8. Reflections on Data Mining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch08_data_mining/09_learn_more.html">8.9. Learn More</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch09_privacy/00_privacy.html">9. Privacy and Security</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ch09_privacy/01_privacy_concerns.html">9.1. Privacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch09_privacy/02_security.html">9.2. Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch09_privacy/03_privacy_violations.html">9.3. Additional Privacy Violations</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/00_intro.html">9.4. Tracking Use</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/01_demo_functions.html">9.4.1. Demo: Writing Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/02_practice_functions.html">9.4.2. Practice: Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/03_demo_track_use.html">9.4.3. Demo: Track Use of Sentiment Analysis Code</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch09_privacy/05_activity_gdpr.html">9.5. Design Analysis: GDPR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch09_privacy/06_reflections.html">9.6. Reflection Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch09_privacy/07_learn_more.html">9.7. Learn More</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch10_accessibility/00_accessibility.html">10. Accessibility</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ch10_accessibility/01_disability.html">10.1. Disability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch10_accessibility/02_accessible_design.html">10.2. Accessible Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch10_accessibility/03_who_designs.html">10.3. Why It Matters Who Designs</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch10_accessibility/04_alt_text/00_intro.html">10.4. Alt-text on Social Media</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch10_accessibility/04_alt_text/01_alt_text.html">10.4.1. Alt-text</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch10_accessibility/05_accessibility_on_social_media.html">10.5. Design Analysis: Accessibility</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch11_recommendations/00_recommendations.html">11. Recommendation Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ch11_recommendations/01_recommendations.html">11.1. What Recommendation Algorithms Do</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch11_recommendations/02_ethical_analysis_recommendations.html">11.2. Ethical Analysis of Recommendation Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch11_recommendations/03_individual_concerns.html">11.3. Individual Concerns with Recommendation Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch11_recommendations/04_societal_concerns.html">11.4. Societal Concerns with Recommendation Algorithms</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch11_recommendations/05_recommend_bot/00_intro.html">11.5. Recommendation Bot</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch11_recommendations/05_recommend_bot/01_demo_dictionary_counters.html">11.5.1. Demo: Dictionary Counters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch11_recommendations/05_recommend_bot/02_practice_dictionary_counters.html">11.5.2. Practice: Dictionary Counters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch11_recommendations/05_recommend_bot/03_demo_recommend_subreddit.html">11.5.3. Demo: Recommend a Subreddit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch11_recommendations/06_design_recommend.html">11.6. Design Activity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch11_recommendations/07_learn_more.html">11.7. Learn More</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch12_virality/00_virality.html">12. Virality</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ch12_virality/01_evolution_memes.html">12.1. Evolution and Memes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch12_virality/02_pre_internet.html">12.2. Pre-internet Virality Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch12_virality/03_social_media_natural_selection.html">12.3. Evolution in social media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch12_virality/04_viral_examples.html">12.4. Virality and Intention</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch12_virality/05_ethics_of_copying.html">12.5. Ethics of copying</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch12_virality/06_going_viral.html">12.6. The Experience of Going Viral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch12_virality/07_activity_virality_values.html">12.7. Activity: Value statements in what goes viral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch12_virality/08_reflections.html">12.8. Reflections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch12_virality/09_learn_more.html">12.9. Learn More</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch13_mental_health/00_mental_health.html">13. Mental Health</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-26"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ch13_mental_health/01_effects_of_social_media.html">13.1. Social Media Influence on Mental Health</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch13_mental_health/02_unhealthy_activities.html">13.2. Unhealthy Activities on Social Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch13_mental_health/03_healthy_activities.html">13.3. Healthy Activities on Social Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch13_mental_health/04_mental_health_detection.html">13.4. Mental Health Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch13_mental_health/05_demo_only_positive_news.html">13.5. Demo: Only positive news</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch13_mental_health/06_design_activity_mental_health.html">13.6. Design Analysis: Mental Health</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch13_mental_health/07_reflections.html">13.7. Reflection questions on mental health</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch13_mental_health/08_learn_more.html">13.8. Learn more</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch14_moderation/00_moderation.html">14. Content Moderation</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-27"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ch14_moderation/01_content.html">14.1. What Content Gets Moderated</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch14_moderation/02_moderation_tools.html">14.2. Moderation Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch14_moderation/03_different_platforms.html">14.3. Comparing Different Platforms</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../ch14_moderation/04_moderation_and_ethics.html">14.5. Moderation and Ethics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch14_moderation/05_reflections.html">14.6. Activity and Reflections on Moderation</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch14_moderation/06_tweets_and_replies/00_intro.html">14.7. Viewing Tweets and Replies</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-28"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch14_moderation/06_tweets_and_replies/01_trees.html">14.7.1. Tree Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch14_moderation/06_tweets_and_replies/02_demo_recursion.html">14.7.2. Demo: Navigating Trees (recursion)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch14_moderation/06_tweets_and_replies/03_demo_hide_some_tweets.html">14.7.3. Demo: Hide Some Comments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch14_moderation/07_learn_more.html">14.8. Learn More</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch15_moderators/00_moderators.html">15. Content Moderators</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-29"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ch15_moderators/01_moderator_types.html">15.1. Types of Content Moderator Set-Ups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch15_moderators/02_example_moderators.html">15.2. Example Moderator Set-ups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch15_moderators/03_toll_on_moderators.html">15.3. The Toll on Moderators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch15_moderators/04_learn_more.html">15.4. Learn More</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch16_crowdsourcing/00_crowdsourcing.html">16. Crowdsourcing</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-30"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ch16_crowdsourcing/01_crowdsourcing_definition.html">16.1. Crowdsourcing Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch16_crowdsourcing/02_planned_crowdsourcing.html">16.2. Planned Crowdsourcing Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch16_crowdsourcing/03_ad_hoc.html">16.3. Ad-hoc Crowdsourcing Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch16_crowdsourcing/04_power_users_lurkers.html">16.4. Power Users and Lurkers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch16_crowdsourcing/05_visualizing_networks.html">16.5. Visualizing Networks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch16_crowdsourcing/06_reflections.html">16.6. Reflection Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch16_crowdsourcing/07_learn_more.html">16.7. Learn More</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch17_harassment/00_harassment.html">17. Harassment</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-31"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ch17_harassment/01_individual_harassment.html">17.1. Individual harassment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch17_harassment/02_crowd_harassment.html">17.2. Crowd Harassment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch17_harassment/03_who_gets_harassed.html">17.3. Who gets harassed?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch17_harassment/04_ethics_harassment.html">17.4. Ethics and Harassment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch17_harassment/05_justifying_harassment.html">17.5. Justifying Harassment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch17_harassment/06_stopping_harassment.html">17.6. Stopping Harassment?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch17_harassment/07_design_example_quoting.html">17.7. Design Example: Quoting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch17_harassment/08_reflections.html">17.8. Reflection Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch17_harassment/09_learn_more.html">17.9. Learn More</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch18_public_shaming/00_public_shaming.html">18. Public Criticism and Public Shaming</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-32"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ch18_public_shaming/01_shame_guilt_childhood.html">18.1. Shame vs. Guilt in childhood development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch18_public_shaming/02_online_shaming.html">18.2. Online Criticism and Shaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch18_public_shaming/03_perspectives_on_public_shaming.html">18.3. Perspectives on the Ethics of Public Shaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch18_public_shaming/04_repair_and_reintegration.html">18.4. Repair and Reconciliation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch18_public_shaming/05_design_retract.html">18.5. Design a Retract Feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch18_public_shaming/06_learn_more.html">18.6. Learn More</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch19_capitalism/00_capitalism.html">19. Capitalism</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-33"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ch19_capitalism/01_what_is_capitalism.html">19.1. What is Capitalism?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch19_capitalism/02_metas_strategy.html">19.2. Meta’s Capitalist Strategy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch19_capitalism/03_responses_to_meta.html">19.3. Responses to Meta’s Business Strategies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch19_capitalism/04_meta_vs_users.html">19.4. Meta vs. Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch19_capitalism/05_imagining_alternatives.html">19.5. Imagining Alternatives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch19_capitalism/06_programming_gender_status_money.html">19.6. Programming, Gender, Status, and Money</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch19_capitalism/07_learn_more.html">19.7. Learn More</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch20_colonialism/00_colonialism.html">20. Colonialism</a><input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-34"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ch20_colonialism/01_what_is_colonialism.html">20.1. What is Colonialism?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch20_colonialism/02_colonialism_in_tech.html">20.2. Colonialism in Tech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch20_colonialism/03_colonialism_in_programming.html">20.3. Colonialism in Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch20_colonialism/04_zuckerbergs_goals.html">20.4. Mark Zuckerberg’s “Benevolent” Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch20_colonialism/05_colonialism_and_meta.html">20.5. Colonialism and Meta’s Strategy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch20_colonialism/06_imagining_alternatives.html">20.6. Imagining Alternatives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch20_colonialism/07_learn_more.html">20.7. Learn More</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch21_conclusions/00_conclusions.html">21. Conclusions</a><input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-35"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ch21_conclusions/01_what_we_covered.html">21.1. What We Covered</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch21_conclusions/02_ethics_tech.html">21.2. Ethics in Tech</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch21_conclusions/03_going_forward/00_intro.html">21.3. Going Forward</a><input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-36"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../ch21_conclusions/03_going_forward/01_social_media_user.html">21.3.1. As a Social Media User</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch21_conclusions/03_going_forward/02_member_of_society.html">21.3.2. As a Member of Society</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch21_conclusions/03_going_forward/03_potential_tech_worker.html">21.3.3. As a Potential Tech Worker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch21_conclusions/04_final_reflections.html">21.4. Final Reflection Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch21_conclusions/05_more_resources.html">21.5. More Resources</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../bot_set_ups/00_intro.html">
-   Bot Account Set-Ups
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" type="checkbox"/>
-  <label for="toctree-checkbox-37">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../bot_set_ups/making_reddit_account.html">
-     Making a Reddit Bot Account
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../bot_set_ups/making_twitter_account.html">
-     Making a Twitter Bot Account
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../solutions/00_solutions.html">
-   Practice Solutions
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" type="checkbox"/>
-  <label for="toctree-checkbox-38">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../solutions/01_solution_practice_statements_variables_sleep.html">
-     Ch 3 Practice: Statements and Variables
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../solutions/02_solution_practice_data.html">
-     Ch 4 Practice: Python Basic Data Types
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../solutions/03_practice_lists_dictionaries.html">
-     Ch 5 Practice: Looping through lists and dictionaries
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../solutions/07_practice_strings_conditionals.html">
-     Ch 7 Practice: Conditionals and String Manipulation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../solutions/08_solution_sentiment_and_loop_vars.html">
-     Ch 8 Practice: Sentiment Analysis and Loop Variables
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../solutions/09_solution_functions.html">
-     Ch 9 Practice: Functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../solutions/ch12_solution_dictionary_counters.html">
-     Ch 12 Solution: Dictionary Counters
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../solutions/ch14_demo_recursion_on_twitter.html">
-     Ch14 Demo: recursion with real tweets
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="00_intro.html">
-   Alternate Social Media APIs
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-39" name="toctree-checkbox-39" type="checkbox"/>
-  <label for="toctree-checkbox-39">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="ch2_03_06_a_twitter_bot.html">
-     Ch 2.3.6 A program that posts one tweet
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ch2_03_07_details_of_bot.html">
-     Ch 2.3.7 Understanding the Twitter Bot Code
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ch2_03_08_demo.html">
-     Ch 2.3.8 Demo: Try Running the Twitter Bot!
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ch3_03_03_practice_statements_variables_sleep.html">
-     Ch 3.3.3 Practice: Statements and Variables (Twitter)
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Ch 4.5.3 Demo: Data from a Tweet
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ch5_04_02_demo_dictionaries.html">
-     Ch 5.4.2 Demo: Dictionaries (Twitter)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ch6_02_02_demo_practice_tweet_source.html">
-     Ch 6.2.2 Demo &amp; Practice: Tweet Sources
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ch7_05_03_demo_reply_bot.html">
-     Demo: Trolling a Reply Bot
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ch8_02_twitter_api_data.html">
-     Data From the Twitter API
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ch8_06_03_demo_sentiment_twitter.html">
-     Demo: Sentiment Analysis on Twitter
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ch10_05_02_extra_data_from_twitter.html">
-     Ch10.5.2: Demo: Extra Data From Twitter
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ch10_05_03_alt_text_from_twitter.html">
-     Ch10.5.2: Demo: Alt-text From Twitter
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ch11_04_03_demo_recommend_friend.html">
-     Ch 11.4.3: Demo: Recommend a User to Follow
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ch13_05_demo_only_positive_news.html">
-     Demo: Only positive news
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="solutions/00_solutions.html">
-     Practice Solutions (Twitter)
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-40" name="toctree-checkbox-40" type="checkbox"/>
-    <label for="toctree-checkbox-40">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="solutions/01_solution_practice_statements_variables_sleep.html">
-       Ch 3 (Twitter) Practice: Statements and Variables
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="solutions/02_solution_practice_data.html">
-       Ch 4 (Twitter) Practice: Python Basic Data Types
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="solutions/03_practice_lists_dictionaries.html">
-       Ch 5 (Twitter) Practice: Looping through lists and dictionaries
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="solutions/07_practice_strings_conditionals.html">
-       Ch 7 (Twitter) Practice: Conditionals and String Manipulation
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="solutions/08_solution_sentiment_and_loop_vars.html">
-       Ch 8 (Twitter) Practice: Sentiment Analysis and Loop Variables
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="solutions/09_solution_functions.html">
-       Ch 9 (Twitter) Practice: Functions
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="solutions/ch12_solution_dictionary_counters.html">
-       Ch 12 Solution: Dictionary Counters
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="solutions/ch14_demo_recursion_on_twitter.html">
-       Ch14 Demo: recursion with real tweets
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../teaching_with_this_book.html">
-   (Incomplete) Teaching With This Book
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../bot_set_ups/00_intro.html">Bot Account Set-Ups</a><input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-37"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../bot_set_ups/making_reddit_account.html">Making a Reddit Bot Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bot_set_ups/making_twitter_account.html">Making a Twitter Bot Account</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../solutions/00_solutions.html">Practice Solutions</a><input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-38"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/01_solution_practice_statements_variables_sleep.html">Ch 3 Practice: Statements and Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/02_solution_practice_data.html">Ch 4 Practice: Python Basic Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/03_practice_lists_dictionaries.html">Ch 5 Practice: Looping through lists and dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/07_practice_strings_conditionals.html">Ch 7 Practice: Conditionals and String Manipulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/08_solution_sentiment_and_loop_vars.html">Ch 8 Practice: Sentiment Analysis and Loop Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/09_solution_functions.html">Ch 9 Practice: Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/ch12_solution_dictionary_counters.html">Ch 12 Solution: Dictionary Counters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solutions/ch14_demo_recursion_on_twitter.html">Ch14 Demo: recursion with real tweets</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="00_intro.html">Alternate Social Media APIs</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-39" name="toctree-checkbox-39" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-39"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ch2_03_06_a_twitter_bot.html">Ch 2.3.6 A program that posts one tweet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch2_03_07_details_of_bot.html">Ch 2.3.7 Understanding the Twitter Bot Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch2_03_08_demo.html">Ch 2.3.8 Demo: Try Running the Twitter Bot!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch3_03_03_practice_statements_variables_sleep.html">Ch 3.3.3 Practice: Statements and Variables (Twitter)</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Ch 4.5.3 Demo: Data from a Tweet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch5_04_02_demo_dictionaries.html">Ch 5.4.2 Demo: Dictionaries (Twitter)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch6_02_02_demo_practice_tweet_source.html">Ch 6.2.2 Demo &amp; Practice: Tweet Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch7_05_03_demo_reply_bot.html">Demo: Trolling a Reply Bot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch8_02_twitter_api_data.html">Data From the Twitter API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch8_06_03_demo_sentiment_twitter.html">Demo: Sentiment Analysis on Twitter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch10_05_02_extra_data_from_twitter.html">Ch10.5.2: Demo: Extra Data From Twitter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch10_05_03_alt_text_from_twitter.html">Ch10.5.2: Demo: Alt-text From Twitter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch11_04_03_demo_recommend_friend.html">Ch 11.4.3: Demo: Recommend a User to Follow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch13_05_demo_only_positive_news.html">Demo: Only positive news</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="solutions/00_solutions.html">Practice Solutions (Twitter)</a><input class="toctree-checkbox" id="toctree-checkbox-40" name="toctree-checkbox-40" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-40"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="solutions/01_solution_practice_statements_variables_sleep.html">Ch 3 (Twitter) Practice: Statements and Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="solutions/02_solution_practice_data.html">Ch 4 (Twitter) Practice: Python Basic Data Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="solutions/03_practice_lists_dictionaries.html">Ch 5 (Twitter) Practice: Looping through lists and dictionaries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="solutions/07_practice_strings_conditionals.html">Ch 7 (Twitter) Practice: Conditionals and String Manipulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="solutions/08_solution_sentiment_and_loop_vars.html">Ch 8 (Twitter) Practice: Sentiment Analysis and Loop Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="solutions/09_solution_functions.html">Ch 9 (Twitter) Practice: Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="solutions/ch12_solution_dictionary_counters.html">Ch 12 Solution: Dictionary Counters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="solutions/ch14_demo_recursion_on_twitter.html">Ch14 Demo: recursion with real tweets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../teaching_with_this_book.html">(Incomplete) Teaching With This Book</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/kylethayer/social_media_ethics_automation_v0/main?urlpath=lab/tree/book_contents/appendix/alternate_apis/ch4_05_03_demo_data_from_twitter.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/kylethayer/social_media_ethics_automation_v0/main?urlpath=lab/tree/book_contents/appendix/alternate_apis/ch4_05_03_demo_data_from_twitter.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="../../_static/images/logo_binder.svg">
   </span>
-<span class="headerbtn__text-container">Binder</span>
+<span class="btn__text-container">Binder</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/kylethayer/social_media_ethics_automation_v0" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/kylethayer/social_media_ethics_automation_v0/issues/new?title=Issue%20on%20page%20%2Fappendix/alternate_apis/ch4_05_03_demo_data_from_twitter.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/appendix/alternate_apis/ch4_05_03_demo_data_from_twitter.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/kylethayer/social_media_ethics_automation_v0"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/kylethayer/social_media_ethics_automation_v0/issues/new?title=Issue%20on%20page%20%2Fappendix/alternate_apis/ch4_05_03_demo_data_from_twitter.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../_sources/appendix/alternate_apis/ch4_05_03_demo_data_from_twitter.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#log-into-tweepy-or-fake-tweepy">
-   Log into tweepy (or fake tweepy)
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#optional-make-a-fake-twitter-connection-with-the-fake-tweepy-library">
-     (optional) make a fake twitter connection with the fake_tweepy library
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#load-your-developer-access-passwords">
-     load your developer access passwords
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#give-tweepy-or-fake-tweepy-your-developer-access-passwords">
-     give tweepy (or fake_tweepy) your developer access passwords
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#find-a-tweet">
-   Find a tweet
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#look-at-data-in-tweet">
-   Look at data in tweet
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tweet-text">
-     tweet text:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tweet-id">
-     tweet id
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tweet-author-id">
-     tweet author id
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tweet-created-at">
-     tweet created at
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tweet-lang-language">
-     tweet lang (language)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tweet-source-device-that-made-the-tweet">
-     tweet source (device that made the tweet)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#public-metrics">
-     public metrics
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#still-more">
-   Still more!
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Ch 4.5.3 Demo: Data from a Tweet</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#log-into-tweepy-or-fake-tweepy">
-   Log into tweepy (or fake tweepy)
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#optional-make-a-fake-twitter-connection-with-the-fake-tweepy-library">
-     (optional) make a fake twitter connection with the fake_tweepy library
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#load-your-developer-access-passwords">
-     load your developer access passwords
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#give-tweepy-or-fake-tweepy-your-developer-access-passwords">
-     give tweepy (or fake_tweepy) your developer access passwords
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#find-a-tweet">
-   Find a tweet
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#look-at-data-in-tweet">
-   Look at data in tweet
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tweet-text">
-     tweet text:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tweet-id">
-     tweet id
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tweet-author-id">
-     tweet author id
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tweet-created-at">
-     tweet created at
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tweet-lang-language">
-     tweet lang (language)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tweet-source-device-that-made-the-tweet">
-     tweet source (device that made the tweet)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#public-metrics">
-     public metrics
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#still-more">
-   Still more!
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Ch 4.5.3 Demo: Data from a Tweet</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log-into-tweepy-or-fake-tweepy">Log into tweepy (or fake tweepy)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-make-a-fake-twitter-connection-with-the-fake-tweepy-library">(optional) make a fake twitter connection with the fake_tweepy library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-your-developer-access-passwords">load your developer access passwords</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#give-tweepy-or-fake-tweepy-your-developer-access-passwords">give tweepy (or fake_tweepy) your developer access passwords</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-a-tweet">Find a tweet</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#look-at-data-in-tweet">Look at data in tweet</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tweet-text">tweet text:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tweet-id">tweet id</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tweet-author-id">tweet author id</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tweet-created-at">tweet created at</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tweet-lang-language">tweet lang (language)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tweet-source-device-that-made-the-tweet">tweet source (device that made the tweet)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#public-metrics">public metrics</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#still-more">Still more!</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
-  <section class="tex2jax_ignore mathjax_ignore" id="ch-4-5-3-demo-data-from-a-tweet">
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="ch-4-5-3-demo-data-from-a-tweet">
 <h1>Ch 4.5.3 Demo: Data from a Tweet<a class="headerlink" href="#ch-4-5-3-demo-data-from-a-tweet" title="Permalink to this headline">#</a></h1>
 <p>Let’s see what the data actually looks like from a Tweet!</p>
 <p>First we need to do our normal twitter login steps (and optional fake tweepy step)</p>
@@ -2376,7 +1054,7 @@ just doing this, so we can get to the point of seeing what tweet data looks like
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./appendix\alternate_apis"
         },
         predefinedOutput: true
@@ -2384,58 +1062,131 @@ just doing this, so we can get to the point of seeing what tweet data looks like
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="ch3_03_03_practice_statements_variables_sleep.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Ch 3.3.3 Practice: Statements and Variables (Twitter)</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ch3_03_03_practice_statements_variables_sleep.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Ch 3.3.3 Practice: Statements and Variables (Twitter)</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="ch5_04_02_demo_dictionaries.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="ch5_04_02_demo_dictionaries.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Ch 5.4.2 Demo: Dictionaries (Twitter)</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log-into-tweepy-or-fake-tweepy">Log into tweepy (or fake tweepy)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-make-a-fake-twitter-connection-with-the-fake-tweepy-library">(optional) make a fake twitter connection with the fake_tweepy library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-your-developer-access-passwords">load your developer access passwords</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#give-tweepy-or-fake-tweepy-your-developer-access-passwords">give tweepy (or fake_tweepy) your developer access passwords</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-a-tweet">Find a tweet</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#look-at-data-in-tweet">Look at data in tweet</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tweet-text">tweet text:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tweet-id">tweet id</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tweet-author-id">tweet author id</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tweet-created-at">tweet created at</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tweet-lang-language">tweet lang (language)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tweet-source-device-that-made-the-tweet">tweet source (device that made the tweet)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#public-metrics">public metrics</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#still-more">Still more!</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Kyle Thayer and Susan Notess<br/>
+  <div class="footer-item">
+    
+<p class="component-author">
+By Kyle Thayer and Susan Notess
+</p>
+
+  </div>
   
-      &copy; Copyright 2022.<br/>
-    <div class="extra_footer">
-      <script type="application/json" class="js-hypothesis-config">
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <script type="application/json" class="js-hypothesis-config">
   {
     "showHighlights": "whenSidebarOpen"
   }
 </script> <script async src="https://hypothes.is/embed.js"></script>
 
-    </div>
-</p>
-        </footer>
-    </div>
-    
 </div>
+  </div>
+  
+</div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
