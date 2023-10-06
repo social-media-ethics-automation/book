@@ -1,6 +1,6 @@
-# Understanding the Reddit Bot Code
+# Understanding the Discord Bot Code
 
-Let's look more at that program that creates one Reddit post.
+Let's look more at that program that creates one Discord post.
 
 There are a number of ways of looking at the code, but first, let's look at it as a template with a couple pieces we can change.
 
