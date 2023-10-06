@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2.3.6. A program that makes one Discord post &#8212; Social Media, Ethics, and Automation</title>
+    <title>Understanding the Reddit Bot Code &#8212; Social Media, Ethics, and Automation</title>
   
   
   
@@ -60,11 +60,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch02_definitions/03_automation/06_a_social_media_bot';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch02_definitions/03_automation/07_details_of_bot-reddit';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.3.7. Understanding the Discord Bot Code" href="07_details_of_bot.html" />
-    <link rel="prev" title="2.3.5. Compilers and Programimng Languages" href="05_compilers.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -160,13 +158,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../../prefaces/perspectives_and_biases.html">Perspectives and Biases</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../ch01_intro/00_intro.html">1. Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../ch01_intro/01_sacco_tweet.html">1.1. The case of Justine Sacco’s racist joke tweet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch01_intro/02_kumail.html">1.2. Kumail Nanjiani’s Reflections on Ethics in Tech</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../00_intro.html">2. Definitions</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../00_intro.html">2. Definitions</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../01_social_media/00_intro.html">2.1. Social Media</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../01_social_media/01_what_is_social_media.html">2.1.1. What is Social Media?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../01_social_media/02_social_media_examples.html">2.1.2. Social Media Platform Examples</a></li>
@@ -180,13 +178,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="../02_ethics/04_using_frameworks.html">2.2.4. Practice Using Frameworks</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="00_automation.html">2.3. Automation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="00_automation.html">2.3. Automation</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="01_language_translation.html">2.3.1. Language Translation (Analogy)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="02_human_computers.html">2.3.2. Human Computers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="03_binary.html">2.3.3. Computers Speak Binary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="04_first_programmers.html">2.3.4. First Programmers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="05_compilers.html">2.3.5. Compilers and Programimng Languages</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">2.3.6. A program that makes one Discord post</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_a_social_media_bot.html">2.3.6. A program that makes one Discord post</a></li>
 <li class="toctree-l3"><a class="reference internal" href="07_details_of_bot.html">2.3.7. Understanding the Discord Bot Code</a></li>
 <li class="toctree-l3"><a class="reference internal" href="08_demo.html">2.3.8. Demo: Try Running the Reddit Bot!</a></li>
 <li class="toctree-l3"><a class="reference internal" href="09_reflecting_on_programming.html">2.3.9. Reflections on the Bot</a></li>
@@ -569,7 +567,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/kylethayer/social_media_ethics_automation_v0/issues/new?title=Issue%20on%20page%20%2Fch02_definitions/03_automation/06_a_social_media_bot.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/kylethayer/social_media_ethics_automation_v0/issues/new?title=Issue%20on%20page%20%2Fch02_definitions/03_automation/07_details_of_bot-reddit.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -599,7 +597,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/ch02_definitions/03_automation/06_a_social_media_bot.md" target="_blank"
+      <li><a href="../../_sources/ch02_definitions/03_automation/07_details_of_bot-reddit.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -668,7 +666,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -679,11 +679,22 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>A program that makes one Discord post</h1>
+    <h1>Understanding the Reddit Bot Code</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-program-as-a-template">The program as a template</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-code-comments">Adding code comments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose-of-each-section-of-code">Purpose of each section of code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-more-code-comments">Adding more code comments</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -693,42 +704,154 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="a-program-that-makes-one-discord-post">
-<h1><span class="section-number">2.3.6. </span>A program that makes one Discord post<a class="headerlink" href="#a-program-that-makes-one-discord-post" title="Permalink to this headline">#</a></h1>
-<p><em>Choose Social Media Platform: <a href='../../../reddit/ch02_definitions/03_automation/06_a_social_media_bot.html'>Reddit</a> | <strong>Discord</strong></em></p>
-<p>Below is a computer program written in the Python programming language. The program will make a Discord post in the the discord channel that has an id of 123456789 (this is a fake channel number). The post will say: “This post was made by a computer program!”. Since this is a computer program that posts on Discord, we would call this program a Discord bot.</p>
-<p>Don’t worry if you don’t understand any of this Python code yet; we will build an understanding of code like this throughout the book.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">discord</span>
+  <section id="understanding-the-reddit-bot-code">
+<h1>Understanding the Reddit Bot Code<a class="headerlink" href="#understanding-the-reddit-bot-code" title="Permalink to this headline">#</a></h1>
+<p>Let’s look more at that program that creates one Reddit post.</p>
+<p>There are a number of ways of looking at the code, but first, let’s look at it as a template with a couple pieces we can change.</p>
+<section id="the-program-as-a-template">
+<h2>The program as a template<a class="headerlink" href="#the-program-as-a-template" title="Permalink to this headline">#</a></h2>
+<p>Below I’ve highlighted the text of the sections of the program that you might want to modify.</p>
+<pre style="color:gray">
+import praw
 
-<span class="n">discord_token</span> <span class="o">=</span> <span class="s2">&quot;m#5@_fake_discord_token_$%Ds&quot;</span>
+username="<strong style="color:black;background-color:lightgreen">fake_reddit_username</strong>"
+password="<strong style="color:black;background-color:lightgreen">sa@#4*fdf_fake_password_$%DSG#%DG</strong>"
+client_id="<strong style="color:black;background-color:lightgreen">45adf$TW_fake_client_id_JESdsg1O</strong>"
+client_secret="<strong style="color:black;background-color:lightgreen">56sd_fake_client_secret_%Yh%</strong>"
 
-<span class="n">client</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">intents</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">Intents</span><span class="o">.</span><span class="n">default</span><span class="p">())</span>
+reddit = praw.Reddit(
+    username=username, password=password,
+    client_id=client_id, client_secret=client_secret,
+    user_agent="a custom python script"
+)
 
-<span class="nd">@client</span><span class="o">.</span><span class="n">event</span>
-<span class="k">async</span> <span class="k">def</span> <span class="nf">on_ready</span><span class="p">():</span>
-    <span class="n">channel_id</span> <span class="o">=</span> <span class="mi">123456789</span>
-    <span class="n">channel</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_channel</span><span class="p">(</span><span class="n">channel_id</span><span class="p">)</span>
-    <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;This post was made by a computer program!&quot;</span><span class="p">)</span>
-    <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    
-<span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">discord_token</span><span class="p">)</span>
+reddit.subreddit(
+   "<strong style="color:black;background-color:lightgreen">soc_media_ethics_auto</strong>"
+).submit(
+   "<strong style="color:black;background-color:lightgreen">A bot post</strong>", 
+   selftext = "<strong style="color:black;background-color:lightgreen">This post was made by a computer program!</strong>"
+)
+
+
+</pre>
+<p>The first four highlighted pieces of code are for the special passwords that let you run a bot. You can get when you get those passwords by following these steps to get <a class="reference internal" href="../../appendix/bot_set_ups/making_reddit_account.html"><span class="doc std std-doc">developer access to reddit</span></a> (I’ve put fake values in them for now):</p>
+<ul class="simple">
+<li><p>username</p></li>
+<li><p>password</p></li>
+<li><p>client_id</p></li>
+<li><p>client_secret</p></li>
+</ul>
+<p>The final three highlighted pieces of code are the information for what to post on reddit. First, in the parentheses after <code class="docutils literal notranslate"><span class="pre">subreddit</span></code> is which subreddit to post on. In the parentheses after the <code class="docutils literal notranslate"><span class="pre">submit</span></code> is first the title of the post, and next is the text of the post itself. You can change any of these values ot change which subreddit you post to, and what title and text to post.</p>
+<p>So, by changing those sections of code, you run this program to post whatever reddit you want to post on a subreddit. It is, of course, much easier to just open reddit and post something, but as we get to more complicated programs, we’ll start to see more of the power (and pitfalls) of automation on social media.</p>
+<p><em>Note: all the highlighted sections of code are surrounded by double quotes. In the Python programming language, putting something in quotes indicates that you want the computer to think of the things inside the quotes as pieces of text, in this case passwords and reddit post information.</em></p>
+</section>
+<section id="adding-code-comments">
+<h2>Adding code comments<a class="headerlink" href="#adding-code-comments" title="Permalink to this headline">#</a></h2>
+<p>The goal of programming language code is to be readable by both humans and computers, but sometimes the meaning of code isn’t always clear to humans trying to read it. In order to aid humans reading the code, programming languages allow programmers to do things to make the code more readable, such as adding extra blank lines between sections of code. Blank lines can be used to have some lines of code be visually grouped together, and some be separated, so humans can better follow the outline of the code.</p>
+<p>Most programming languages also allow “comments,” which are pieces of code that the computer will ignore. These comments allow the person writing the code to leave a note to future people reading the code, knowing that the computer won’t read it (like an <a class="reference external" href="https://en.wikipedia.org/wiki/Aside">aside</a> in a play).</p>
+<p>In Python, you can add a comment by using the <code class="docutils literal notranslate"><span class="pre">#</span></code> symbol. Python will ignore everything on a line that comes after the <code class="docutils literal notranslate"><span class="pre">#</span></code>. But human programmers will often look for the meaning of the program in these comments.</p>
+<p>So, in order to make the program above easier for future humans to understand, let’s add two comments telling these future humans where to add their special passwords and where they can change the text of the post:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">praw</span>
+
+<span class="c1"># TODO: Put your reddit username, password, and special developer access passwords below:</span>
+<span class="n">username</span><span class="o">=</span><span class="s2">&quot;fake_reddit_username&quot;</span>
+<span class="n">password</span><span class="o">=</span><span class="s2">&quot;sa@#4*fdf_fake_password_$%DSG#%DG&quot;</span>
+<span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;45adf$TW_fake_client_id_JESdsg1O&quot;</span>
+<span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;56sd_fake_client_secret_%Yh%&quot;</span>
+
+<span class="n">reddit</span> <span class="o">=</span> <span class="n">praw</span><span class="o">.</span><span class="n">Reddit</span><span class="p">(</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">client_id</span><span class="p">,</span> <span class="n">client_secret</span><span class="o">=</span><span class="n">client_secret</span><span class="p">,</span>
+    <span class="n">user_agent</span><span class="o">=</span><span class="s2">&quot;a custom python script&quot;</span>
+<span class="p">)</span>
+
+
+
+<span class="c1"># TODO: modify the text in the quotes below to change what and where this bot posts to reddit:</span>
+<span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span>
+   <span class="s2">&quot;soc_media_ethics_auto&quot;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span>
+   <span class="s2">&quot;A bot post&quot;</span><span class="p">,</span> 
+   <span class="n">selftext</span> <span class="o">=</span> <span class="s2">&quot;This post was made by a computer program!&quot;</span>
+<span class="p">)</span>
 
 </pre></div>
 </div>
-<p>Though you may not understand anything in the above code yet, I want to point out a couple things:</p>
-<ul class="simple">
-<li><p>The code above is full of English words like “import”, “token”, “ready”, “channel”, and “send,” which may help you guess the meaning of the code.</p></li>
-<li><p>There are also other symbols as well, though being used in a different way than in normal English, symbols like <code class="docutils literal notranslate"><span class="pre">=</span></code>, <code class="docutils literal notranslate"><span class="pre">_</span></code>, <code class="docutils literal notranslate"><span class="pre">.</span></code>, <code class="docutils literal notranslate"><span class="pre">:</span></code>, <code class="docutils literal notranslate"><span class="pre">(</span></code>, and <code class="docutils literal notranslate"><span class="pre">)</span></code>, as well as some unusual spacing</p></li>
-<li><p>The indented lines of code gives good hints as to what it is doing: <code class="docutils literal notranslate"><span class="pre">get_channel</span></code> loads a specific discord channel to post on, and <code class="docutils literal notranslate"><span class="pre">send</span></code> has the information to make as a new post.</p></li>
-<li><p>There is one pieces of text with random letters and numbers called the “discord_token” which is basically a password for your discord bot to log in. There is also a piece of text with a number called the “channel_id” which is a number that lets your bot look up a specific discord channel. You can get these special passwords and discord channel ids (see the page on <a class="reference internal" href="../../appendix/bot_set_ups/making_reddit_account.html"><span class="doc std std-doc">setting up your discord bot</span></a>).. Once you put your special token and channel ids in those locations, then this code will make a discord post</p></li>
-</ul>
-<figure class="align-default" id="bot-post-fig">
-<img alt="Screenshot of a post on discord, posted by &quot;info_103_teaching_example_app&quot; with the text of &quot;This post was made by a computer program!&quot;" src="../../_images/discord_bot_post.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">A discord post made by running the code above with the account information for “info_103_teaching_example_app”.</span><a class="headerlink" href="#bot-post-fig" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>We will go through that example code in more detail next.</p>
+<p>With those, hopefully a future human reader will have a better chance of understanding how to modify the program to do what they want.</p>
+<p><em>Note: I started each comment with “TODO” to tell the future human that there is a task they have <strong>to do</strong> to get the program to work for them. Since this is only intended for human readers, I could have written it in any way I want, but all capital letter TODOs are commonly used like this by programmers.</em></p>
+</section>
+<section id="purpose-of-each-section-of-code">
+<h2>Purpose of each section of code<a class="headerlink" href="#purpose-of-each-section-of-code" title="Permalink to this headline">#</a></h2>
+<p>Now that we’ve looked at the code as a modifiable template, let’s break the code into sections and look at what the purpose of each part is. The code is run starting at the top and going down from there, so we will go through the code in that order.</p>
+<p><em>Note: It’s normal if you don’t understand everything here. Over the course of this book you will learn to understand more of how programs work, but also, even professional programmers often don’t understand parts of the programs they are working on, they just understand enough to modify the parts they need to.</em></p>
+<p>The first line of code is:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">praw</span>
+</pre></div>
+</div>
+<p>The purpose of this line of code that loads another set of code. The code it loads is called <a class="reference external" href="https://praw.readthedocs.io/en/stable/">praw</a> (The Python Reddit API Wrapper), which is code specially written to help make programs that work with Reddit.</p>
+<p>The next section of code is four lines long:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">username</span><span class="o">=</span><span class="s2">&quot;fake_reddit_username&quot;</span>
+<span class="n">password</span><span class="o">=</span><span class="s2">&quot;sa@#4*fdf_fake_password_$%DSG#%DG&quot;</span>
+<span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;45adf$TW_fake_client_id_JESdsg1O&quot;</span>
+<span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;56sd_fake_client_secret_%Yh%&quot;</span>
+</pre></div>
+</div>
+<p>This is code to store all of the reddit password information we need to use a bot. You need your reddit username and password, and then a special client_id and client_secret for the bot. Again, you’ll have to get your actual developer access passwords and replace the fake ones currently in the code.</p>
+<p>The next section of code is five lines long:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">reddit</span> <span class="o">=</span> <span class="n">praw</span><span class="o">.</span><span class="n">Reddit</span><span class="p">(</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">client_id</span><span class="p">,</span> <span class="n">client_secret</span><span class="o">=</span><span class="n">client_secret</span><span class="p">,</span>
+    <span class="n">user_agent</span><span class="o">=</span><span class="s2">&quot;a custom python script&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>The purpose of this code is to take all the developer access passwords you entered above, and give them to the praw code so that the praw code can log into your reddit account and provide the needed passwords for running a reddit bot.</p>
+<p>Note that the last line is setting the <code class="docutils literal notranslate"><span class="pre">user_agent</span></code> which is a description of which program is being used to post from. For example, it might be “Reddit web page” or “Reddit iPhone app” or “Sprout social media manager.” For our programs, I’ve just labeled our posts as being from “a custom python script.”</p>
+<p>The final lines of code are:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span>
+   <span class="s2">&quot;soc_media_ethics_auto&quot;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span>
+   <span class="s2">&quot;A bot post&quot;</span><span class="p">,</span> 
+   <span class="n">selftext</span> <span class="o">=</span> <span class="s2">&quot;This post was made by a computer program!&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>These are the lines of code where a reddit post is actually made. First, the <code class="docutils literal notranslate"><span class="pre">subreddit</span></code> section selects which subreddit an action will be taken on, and then <code class="docutils literal notranslate"><span class="pre">submit</span></code> creates a new post with the given title and text.</p>
+</section>
+<section id="adding-more-code-comments">
+<h2>Adding more code comments<a class="headerlink" href="#adding-more-code-comments" title="Permalink to this headline">#</a></h2>
+<p>Now that we’ve looked at the purpose of each section of code, we can copy our bot code one more time, now adding comments explaining what each section does, so that future humans reading the code are more likely to understand it.</p>
+<p>Following the common practice of programmers, we will put the comment before the section of code that the comment is explaining. We can also make multiple comment lines as needed if our comments are long.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;praw&quot; that will help us work with reddit</span>
+<span class="kn">import</span> <span class="nn">praw</span>
+
+<span class="c1"># Load all your developer access passwords into Python</span>
+<span class="c1"># TODO: Put your reddit username, password, and special developer access passwords below:</span>
+<span class="n">username</span><span class="o">=</span><span class="s2">&quot;fake_reddit_username&quot;</span>
+<span class="n">password</span><span class="o">=</span><span class="s2">&quot;sa@#4*fdf_fake_password_$%DSG#%DG&quot;</span>
+<span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;45adf$TW_fake_client_id_JESdsg1O&quot;</span>
+<span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;56sd_fake_client_secret_%Yh%&quot;</span>
+
+<span class="c1"># Give the praw code your reddit account info so</span>
+<span class="c1"># it can perform reddit actions</span>
+<span class="n">reddit</span> <span class="o">=</span> <span class="n">praw</span><span class="o">.</span><span class="n">Reddit</span><span class="p">(</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">client_id</span><span class="p">,</span> <span class="n">client_secret</span><span class="o">=</span><span class="n">client_secret</span><span class="p">,</span>
+    <span class="n">user_agent</span><span class="o">=</span><span class="s2">&quot;a custom python script&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># Post a reddit post</span>
+<span class="c1"># TODO: modify the text in the quotes below to change what and where this bot posts to reddit:</span>
+<span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span>
+   <span class="s2">&quot;soc_media_ethics_auto&quot;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span>
+   <span class="s2">&quot;A bot post&quot;</span><span class="p">,</span> 
+   <span class="n">selftext</span> <span class="o">=</span> <span class="s2">&quot;This post was made by a computer program!&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Now that we’ve looked over the code and commented it, let’s go to the next page, where you can try running it!</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -762,24 +885,6 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="05_compilers.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.3.5. </span>Compilers and Programimng Languages</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="07_details_of_bot.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.3.7. </span>Understanding the Discord Bot Code</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>
@@ -789,6 +894,23 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-program-as-a-template">The program as a template</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-code-comments">Adding code comments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose-of-each-section-of-code">Purpose of each section of code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-more-code-comments">Adding more code comments</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

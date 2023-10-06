@@ -708,6 +708,7 @@ document.write(`
                   
   <section id="understanding-the-reddit-bot-code">
 <h1><span class="section-number">2.3.7. </span>Understanding the Reddit Bot Code<a class="headerlink" href="#understanding-the-reddit-bot-code" title="Permalink to this headline">#</a></h1>
+<p><em>Choose Social Media Platform: <strong>Reddit</strong> | <a href='../../../discord/ch02_definitions/03_automation/07_details_of_bot.html'>Discord</a></em></p>
 <p>Let’s look more at that program that creates one Reddit post.</p>
 <p>There are a number of ways of looking at the code, but first, let’s look at it as a template with a couple pieces we can change.</p>
 <section id="the-program-as-a-template">
@@ -752,7 +753,7 @@ reddit.subreddit(
 <p>The goal of programming language code is to be readable by both humans and computers, but sometimes the meaning of code isn’t always clear to humans trying to read it. In order to aid humans reading the code, programming languages allow programmers to do things to make the code more readable, such as adding extra blank lines between sections of code. Blank lines can be used to have some lines of code be visually grouped together, and some be separated, so humans can better follow the outline of the code.</p>
 <p>Most programming languages also allow “comments,” which are pieces of code that the computer will ignore. These comments allow the person writing the code to leave a note to future people reading the code, knowing that the computer won’t read it (like an <a class="reference external" href="https://en.wikipedia.org/wiki/Aside">aside</a> in a play).</p>
 <p>In Python, you can add a comment by using the <code class="docutils literal notranslate"><span class="pre">#</span></code> symbol. Python will ignore everything on a line that comes after the <code class="docutils literal notranslate"><span class="pre">#</span></code>. But human programmers will often look for the meaning of the program in these comments.</p>
-<p>So, in order to make the program above easier for future humans to understand, let’s add two comments telling these future humans where to add their special passwords and where they can change the text of the tweet:</p>
+<p>So, in order to make the program above easier for future humans to understand, let’s add two comments telling these future humans where to add their special passwords and where they can change the text of the post:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">praw</span>
 
 <span class="c1"># TODO: Put your reddit username, password, and special developer access passwords below:</span>
@@ -822,7 +823,7 @@ reddit.subreddit(
 </section>
 <section id="adding-more-code-comments">
 <h2>Adding more code comments<a class="headerlink" href="#adding-more-code-comments" title="Permalink to this headline">#</a></h2>
-<p>Now that we’ve looked at the purpose of each section of code, we can add additional comments explaining what each section does, so that future humans reading the code are more likely to understand it.</p>
+<p>Now that we’ve looked at the purpose of each section of code, we can copy our bot code one more time, now adding comments explaining what each section does, so that future humans reading the code are more likely to understand it.</p>
 <p>Following the common practice of programmers, we will put the comment before the section of code that the comment is explaining. We can also make multiple comment lines as needed if our comments are long.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;praw&quot; that will help us work with reddit</span>
 <span class="kn">import</span> <span class="nn">praw</span>

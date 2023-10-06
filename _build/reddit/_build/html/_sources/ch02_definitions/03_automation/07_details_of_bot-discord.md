@@ -1,6 +1,4 @@
 # Understanding the Discord Bot Code
-_Choose Social Media Platform: <a href='../../../reddit/ch02_definitions/03_automation/07_details_of_bot.html'>Reddit</a> | __Discord___
-
 
 Let's look more at that program that creates one Discord post.
 

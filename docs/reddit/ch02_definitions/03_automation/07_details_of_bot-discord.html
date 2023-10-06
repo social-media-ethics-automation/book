@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2.3.6. A program that makes one Discord post &#8212; Social Media, Ethics, and Automation</title>
+    <title>Understanding the Discord Bot Code &#8212; Social Media, Ethics, and Automation</title>
   
   
   
@@ -60,11 +60,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch02_definitions/03_automation/06_a_social_media_bot';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch02_definitions/03_automation/07_details_of_bot-discord';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.3.7. Understanding the Discord Bot Code" href="07_details_of_bot.html" />
-    <link rel="prev" title="2.3.5. Compilers and Programimng Languages" href="05_compilers.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -160,13 +158,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../../prefaces/perspectives_and_biases.html">Perspectives and Biases</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../ch01_intro/00_intro.html">1. Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../ch01_intro/01_sacco_tweet.html">1.1. The case of Justine Sacco’s racist joke tweet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch01_intro/02_kumail.html">1.2. Kumail Nanjiani’s Reflections on Ethics in Tech</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../00_intro.html">2. Definitions</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../00_intro.html">2. Definitions</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../01_social_media/00_intro.html">2.1. Social Media</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../01_social_media/01_what_is_social_media.html">2.1.1. What is Social Media?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../01_social_media/02_social_media_examples.html">2.1.2. Social Media Platform Examples</a></li>
@@ -180,14 +178,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="../02_ethics/04_using_frameworks.html">2.2.4. Practice Using Frameworks</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="00_automation.html">2.3. Automation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="00_automation.html">2.3. Automation</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="01_language_translation.html">2.3.1. Language Translation (Analogy)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="02_human_computers.html">2.3.2. Human Computers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="03_binary.html">2.3.3. Computers Speak Binary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="04_first_programmers.html">2.3.4. First Programmers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="05_compilers.html">2.3.5. Compilers and Programimng Languages</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">2.3.6. A program that makes one Discord post</a></li>
-<li class="toctree-l3"><a class="reference internal" href="07_details_of_bot.html">2.3.7. Understanding the Discord Bot Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_a_social_media_bot.html">2.3.6. A program that makes one reddit post</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_details_of_bot.html">2.3.7. Understanding the Reddit Bot Code</a></li>
 <li class="toctree-l3"><a class="reference internal" href="08_demo.html">2.3.8. Demo: Try Running the Reddit Bot!</a></li>
 <li class="toctree-l3"><a class="reference internal" href="09_reflecting_on_programming.html">2.3.9. Reflections on the Bot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="10_automation_in_social_media.html">2.3.10. Automation in Social Media</a></li>
@@ -569,7 +567,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/kylethayer/social_media_ethics_automation_v0/issues/new?title=Issue%20on%20page%20%2Fch02_definitions/03_automation/06_a_social_media_bot.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/kylethayer/social_media_ethics_automation_v0/issues/new?title=Issue%20on%20page%20%2Fch02_definitions/03_automation/07_details_of_bot-discord.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -599,7 +597,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/ch02_definitions/03_automation/06_a_social_media_bot.md" target="_blank"
+      <li><a href="../../_sources/ch02_definitions/03_automation/07_details_of_bot-discord.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -668,7 +666,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -679,11 +679,22 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>A program that makes one Discord post</h1>
+    <h1>Understanding the Discord Bot Code</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-program-as-a-template">The program as a template</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-code-comments">Adding code comments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose-of-each-section-of-code">Purpose of each section of code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-more-code-comments">Adding more code comments</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -693,42 +704,137 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="a-program-that-makes-one-discord-post">
-<h1><span class="section-number">2.3.6. </span>A program that makes one Discord post<a class="headerlink" href="#a-program-that-makes-one-discord-post" title="Permalink to this headline">#</a></h1>
-<p><em>Choose Social Media Platform: <a href='../../../reddit/ch02_definitions/03_automation/06_a_social_media_bot.html'>Reddit</a> | <strong>Discord</strong></em></p>
-<p>Below is a computer program written in the Python programming language. The program will make a Discord post in the the discord channel that has an id of 123456789 (this is a fake channel number). The post will say: “This post was made by a computer program!”. Since this is a computer program that posts on Discord, we would call this program a Discord bot.</p>
-<p>Don’t worry if you don’t understand any of this Python code yet; we will build an understanding of code like this throughout the book.</p>
+  <section id="understanding-the-discord-bot-code">
+<h1>Understanding the Discord Bot Code<a class="headerlink" href="#understanding-the-discord-bot-code" title="Permalink to this headline">#</a></h1>
+<p>Let’s look more at that program that creates one Discord post.</p>
+<p>There are a number of ways of looking at the code, but first, let’s look at it as a template with a couple pieces we can change.</p>
+<section id="the-program-as-a-template">
+<h2>The program as a template<a class="headerlink" href="#the-program-as-a-template" title="Permalink to this headline">#</a></h2>
+<p>Below I’ve highlighted the text of the sections of the program that you might want to modify.</p>
+<pre style="color:gray">
+import discord
+
+discord_token = "<strong style="color:black;background-color:lightgreen">m#5@_fake_discord_token_$%Ds</strong>"
+
+client = discord.Client(intents=discord.Intents.default())
+
+@client.event
+async def on_ready():
+    channel_id = <strong style="color:black;background-color:lightgreen">123456789</strong>
+    channel = client.get_channel(channel_id)
+    channel.send("<strong style="color:black;background-color:lightgreen">This post was made by a computer program!</strong>")
+    await client.close()
+    
+client.run(discord_token)
+</pre>
+<p>The first highlighted pieces of code is the discord token (your bot’s special passwords), so your bot can log in. You can get when you get those passwords by following these steps to get <a class="reference internal" href="../../appendix/bot_set_ups/making_reddit_account.html"><span class="doc std std-doc">developer access to reddit</span></a> (I’ve put fake values in them for now).</p>
+<p>The second highlighted piece of code is the id number for the discord channel you want to post to. Instructions for getting a channel’s id number are also on the <a class="reference internal" href="../../appendix/bot_set_ups/making_reddit_account.html"><span class="doc std std-doc">developer access to reddit page</span></a></p>
+<p>The final highlighted pieces of code is what text to post to Discord.</p>
+<p>So, by changing those sections of code, you run this program to post whatever message you want to post on the Discord channel of your choosing. It is, of course, much easier to just open Discord and post something, but as we get to more complicated programs, we’ll start to see more of the power (and pitfalls) of automation on social media.</p>
+<p><em>Note: two of the highlighted sections of code are surrounded by double quotes. In the Python programming language, putting something in quotes indicates that you want the computer to think of the things inside the quotes as pieces of text, in this case passwords and reddit post information. The highlighted code that doesn’t have quotes is a number.</em></p>
+</section>
+<section id="adding-code-comments">
+<h2>Adding code comments<a class="headerlink" href="#adding-code-comments" title="Permalink to this headline">#</a></h2>
+<p>The goal of programming language code is to be readable by both humans and computers, but sometimes the meaning of code isn’t always clear to humans trying to read it. In order to aid humans reading the code, programming languages allow programmers to do things to make the code more readable, such as adding extra blank lines between sections of code. Blank lines can be used to have some lines of code be visually grouped together, and some be separated, so humans can better follow the outline of the code. (We’ll add or remove some blank lines to emphasize different things in the code below).</p>
+<p>Most programming languages also allow “comments,” which are pieces of code that the computer will ignore. These comments allow the person writing the code to leave a note to future people reading the code, knowing that the computer won’t read it (like an <a class="reference external" href="https://en.wikipedia.org/wiki/Aside">aside</a> in a play).</p>
+<p>In Python, you can add a comment by using the <code class="docutils literal notranslate"><span class="pre">#</span></code> symbol. Python will ignore everything on a line that comes after the <code class="docutils literal notranslate"><span class="pre">#</span></code>. But human programmers will often look for the meaning of the program in these comments.</p>
+<p>So, in order to make the program above easier for future humans to understand, let’s add three comments telling these future humans where to add their special bot password, where to put the id for the Discord channel to post to, and where they can change the text of the post:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">discord</span>
 
+<span class="c1"># TODO: put the discord token for your bot below</span>
 <span class="n">discord_token</span> <span class="o">=</span> <span class="s2">&quot;m#5@_fake_discord_token_$%Ds&quot;</span>
 
 <span class="n">client</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">intents</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">Intents</span><span class="o">.</span><span class="n">default</span><span class="p">())</span>
 
 <span class="nd">@client</span><span class="o">.</span><span class="n">event</span>
 <span class="k">async</span> <span class="k">def</span> <span class="nf">on_ready</span><span class="p">():</span>
+    <span class="c1"># TODO: put the discord channel id number below</span>
     <span class="n">channel_id</span> <span class="o">=</span> <span class="mi">123456789</span>
+
     <span class="n">channel</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_channel</span><span class="p">(</span><span class="n">channel_id</span><span class="p">)</span>
+
+    <span class="c1"># TODO: put the message you want to post to discord below</span>
     <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;This post was made by a computer program!&quot;</span><span class="p">)</span>
+
     <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     
 <span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">discord_token</span><span class="p">)</span>
-
 </pre></div>
 </div>
-<p>Though you may not understand anything in the above code yet, I want to point out a couple things:</p>
-<ul class="simple">
-<li><p>The code above is full of English words like “import”, “token”, “ready”, “channel”, and “send,” which may help you guess the meaning of the code.</p></li>
-<li><p>There are also other symbols as well, though being used in a different way than in normal English, symbols like <code class="docutils literal notranslate"><span class="pre">=</span></code>, <code class="docutils literal notranslate"><span class="pre">_</span></code>, <code class="docutils literal notranslate"><span class="pre">.</span></code>, <code class="docutils literal notranslate"><span class="pre">:</span></code>, <code class="docutils literal notranslate"><span class="pre">(</span></code>, and <code class="docutils literal notranslate"><span class="pre">)</span></code>, as well as some unusual spacing</p></li>
-<li><p>The indented lines of code gives good hints as to what it is doing: <code class="docutils literal notranslate"><span class="pre">get_channel</span></code> loads a specific discord channel to post on, and <code class="docutils literal notranslate"><span class="pre">send</span></code> has the information to make as a new post.</p></li>
-<li><p>There is one pieces of text with random letters and numbers called the “discord_token” which is basically a password for your discord bot to log in. There is also a piece of text with a number called the “channel_id” which is a number that lets your bot look up a specific discord channel. You can get these special passwords and discord channel ids (see the page on <a class="reference internal" href="../../appendix/bot_set_ups/making_reddit_account.html"><span class="doc std std-doc">setting up your discord bot</span></a>).. Once you put your special token and channel ids in those locations, then this code will make a discord post</p></li>
-</ul>
-<figure class="align-default" id="bot-post-fig">
-<img alt="Screenshot of a post on discord, posted by &quot;info_103_teaching_example_app&quot; with the text of &quot;This post was made by a computer program!&quot;" src="../../_images/discord_bot_post.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">A discord post made by running the code above with the account information for “info_103_teaching_example_app”.</span><a class="headerlink" href="#bot-post-fig" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>We will go through that example code in more detail next.</p>
+<p>With those, hopefully a future human reader will have a better chance of understanding how to modify the program to do what they want.</p>
+<p><em>Note: I started each comment with “TODO” to tell the future human that there is a task they have <strong>to do</strong> to get the program to work for them. Since this is only intended for human readers, I could have written it in any way I want, but all capital letter TODOs are commonly used like this by programmers.</em></p>
+</section>
+<section id="purpose-of-each-section-of-code">
+<h2>Purpose of each section of code<a class="headerlink" href="#purpose-of-each-section-of-code" title="Permalink to this headline">#</a></h2>
+<p>Now that we’ve looked at the code as a modifiable template, let’s break the code into sections and look at what the purpose of each part is. The code is run starting at the top and going down from there, so we will go through the code in that order.</p>
+<p><em>Note: It’s normal if you don’t understand everything here. Over the course of this book you will learn to understand more of how programs work, but also, even professional programmers often don’t understand parts of the programs they are working on, they just understand enough to modify the parts they need to.</em></p>
+<p>The first line of code is:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">discord</span>
+</pre></div>
+</div>
+<p>The purpose of this line of code that loads another set of code. The code it loads is called <a class="reference external" href="https://discordpy.readthedocs.io/en/stable/">discord.py</a>, which is code specially written to help make programs that work with Discord.</p>
+<p>The next section of code is two lines long:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">discord_token</span> <span class="o">=</span> <span class="s2">&quot;m#5@_fake_discord_token_$%Ds&quot;</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">intents</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">Intents</span><span class="o">.</span><span class="n">default</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>This is code is starting the setup of our bot. It first line of code stores the discord token, so our bot can log in (Again, you’ll have to get your actual discord token for your bot and replace the fake one currently in the code). Then second line of code it creates a bot program with some default settings.</p>
+<p>The next section of code is six lines long (plus two added blank lines to help group related actions):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@client</span><span class="o">.</span><span class="n">event</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_ready</span><span class="p">():</span>
+    <span class="n">channel_id</span> <span class="o">=</span> <span class="mi">123456789</span>
+    <span class="n">channel</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_channel</span><span class="p">(</span><span class="n">channel_id</span><span class="p">)</span>
+
+    <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;This post was made by a computer program!&quot;</span><span class="p">)</span>
+
+    <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The purpose of this code is to provide instructions for what your discord bot should do once it has logged in, specifically to make a post to a given channel and then close the bot.</p>
+<p>The first two lines (<code class="docutils literal notranslate"><span class="pre">&#64;client.event</span></code> and <code class="docutils literal notranslate"><span class="pre">async</span> <span class="pre">def</span> <span class="pre">on_ready():</span></code>) are just an indication that these are instructions for what the bot should do once it has logged in. Note: <code class="docutils literal notranslate"><span class="pre">def</span></code> means define, and <code class="docutils literal notranslate"><span class="pre">on_ready</span></code> means we are defining what the bot should do once it is ready (that is, logged in). The rest of the lines in this section are indented, indicating that they are the things we want the bot to do once it is logged in and ready.</p>
+<p>The next two lines of code (<code class="docutils literal notranslate"><span class="pre">channel_id</span> <span class="pre">=</span> <span class="pre">123456789</span></code> and <code class="docutils literal notranslate"><span class="pre">channel</span> <span class="pre">=</span> <span class="pre">client.get_channel(channel_id)</span></code>) are for loading a specific discord channel. The first line is where a specific channel id is saved into python, and the second line is where the <code class="docutils literal notranslate"><span class="pre">discord</span></code> code finds that specific channel.</p>
+<p>The next line of code is what actually makes the post on the given channel (<code class="docutils literal notranslate"><span class="pre">channel.send(&quot;This</span> <span class="pre">post</span> <span class="pre">was</span> <span class="pre">made</span> <span class="pre">by</span> <span class="pre">a</span> <span class="pre">computer</span> <span class="pre">program!&quot;)</span></code>).</p>
+<p>The final line of code in this section (<code class="docutils literal notranslate"><span class="pre">await</span> <span class="pre">client.close()</span></code>) tells the bot to shut down (note: there are other ways of writing bots where they keep running so that they can do things like automatically reply to someone).</p>
+<p>The final section of the code is this one line:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">discord_token</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This code uses the discord_token that was saved into Python to start running the bot, which will log in and then do the actions that we defined above to do once the bot is ready (find a channel, post to it, and close the bot).</p>
+</section>
+<section id="adding-more-code-comments">
+<h2>Adding more code comments<a class="headerlink" href="#adding-more-code-comments" title="Permalink to this headline">#</a></h2>
+<p>Now that we’ve looked at the purpose of each section of code, we can copy our bot code one more time, now adding comments explaining what each section does, so that future humans reading the code are more likely to understand it.</p>
+<p>Following the common practice of programmers, we will put the comment before the section of code that the comment is explaining. We can also make multiple comment lines as needed if our comments are long.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;discord&quot; that will help us work with Discord</span>
+<span class="kn">import</span> <span class="nn">discord</span>
+
+<span class="c1"># Set up your Discord connection</span>
+<span class="c1"># TODO: put the discord token for your bot below</span>
+<span class="n">discord_token</span> <span class="o">=</span> <span class="s2">&quot;m#5@_fake_discord_token_$%Ds&quot;</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">intents</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">Intents</span><span class="o">.</span><span class="n">default</span><span class="p">())</span>
+
+<span class="c1"># Provide instructions for what your discord bot should do once it has logged in</span>
+<span class="nd">@client</span><span class="o">.</span><span class="n">event</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_ready</span><span class="p">():</span>
+    <span class="c1"># Load the discord channel you want to post to</span>
+    <span class="c1"># TODO: put the discord channel id number below</span>
+    <span class="n">channel_id</span> <span class="o">=</span> <span class="mi">123456789</span>
+    <span class="n">channel</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_channel</span><span class="p">(</span><span class="n">channel_id</span><span class="p">)</span>
+
+    <span class="c1"># Post a message to your discord channel</span>
+    <span class="c1"># TODO: put the message you want to post to discord below</span>
+    <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;This post was made by a computer program!&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Tell your bot to stop running</span>
+    <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+
+<span class="c1"># Now that we&#39;ve defined how the bot should work, start running your bot</span>
+<span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">discord_token</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now that we’ve looked over the code and commented it, let’s go to the next page, where you can try running it!</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -762,24 +868,6 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="05_compilers.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.3.5. </span>Compilers and Programimng Languages</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="07_details_of_bot.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.3.7. </span>Understanding the Discord Bot Code</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>
@@ -789,6 +877,23 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-program-as-a-template">The program as a template</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-code-comments">Adding code comments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose-of-each-section-of-code">Purpose of each section of code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-more-code-comments">Adding more code comments</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

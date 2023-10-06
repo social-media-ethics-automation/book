@@ -1,6 +1,8 @@
-# Understanding the Reddit Bot Code
+# Understanding the Discord Bot Code
+_Choose Social Media Platform: <a href='../../../reddit/ch02_definitions/03_automation/07_details_of_bot.html'>Reddit</a> | __Discord___
 
-Let's look more at that program that creates one Reddit post.
+
+Let's look more at that program that creates one Discord post.
 
 There are a number of ways of looking at the code, but first, let's look at it as a template with a couple pieces we can change.
 
@@ -9,76 +11,63 @@ There are a number of ways of looking at the code, but first, let's look at it a
 Below I've highlighted the text of the sections of the program that you might want to modify.
 
 <pre style="color:gray">
-import praw
+import discord
 
-username="<strong style="color:black;background-color:lightgreen">fake_reddit_username</strong>"
-password="<strong style="color:black;background-color:lightgreen">sa@#4*fdf_fake_password_$%DSG#%DG</strong>"
-client_id="<strong style="color:black;background-color:lightgreen">45adf$TW_fake_client_id_JESdsg1O</strong>"
-client_secret="<strong style="color:black;background-color:lightgreen">56sd_fake_client_secret_%Yh%</strong>"
+discord_token = "<strong style="color:black;background-color:lightgreen">m#5@_fake_discord_token_$%Ds</strong>"
 
-reddit = praw.Reddit(
-    username=username, password=password,
-    client_id=client_id, client_secret=client_secret,
-    user_agent="a custom python script"
-)
+client = discord.Client(intents=discord.Intents.default())
 
-reddit.subreddit(
-   "<strong style="color:black;background-color:lightgreen">soc_media_ethics_auto</strong>"
-).submit(
-   "<strong style="color:black;background-color:lightgreen">A bot post</strong>", 
-   selftext = "<strong style="color:black;background-color:lightgreen">This post was made by a computer program!</strong>"
-)
-
-
+@client.event
+async def on_ready():
+    channel_id = <strong style="color:black;background-color:lightgreen">123456789</strong>
+    channel = client.get_channel(channel_id)
+    channel.send("<strong style="color:black;background-color:lightgreen">This post was made by a computer program!</strong>")
+    await client.close()
+    
+client.run(discord_token)
 </pre>
 
-The first four highlighted pieces of code are for the special passwords that let you run a bot. You can get when you get those passwords by following these steps to get [developer access to reddit](../../appendix/bot_set_ups/making_reddit_account.md) (I've put fake values in them for now):
-- username
-- password
-- client_id
-- client_secret
+The first highlighted pieces of code is the discord token (your bot's special passwords), so your bot can log in. You can get when you get those passwords by following these steps to get [developer access to reddit](../../appendix/bot_set_ups/making_reddit_account.md) (I've put fake values in them for now).
 
-The final three highlighted pieces of code are the information for what to post on reddit. First, in the parentheses after `subreddit` is which subreddit to post on. In the parentheses after the `submit` is first the title of the post, and next is the text of the post itself. You can change any of these values ot change which subreddit you post to, and what title and text to post.
+The second highlighted piece of code is the id number for the discord channel you want to post to. Instructions for getting a channel's id number are also on the [developer access to reddit page](../../appendix/bot_set_ups/making_reddit_account.md)
 
-So, by changing those sections of code, you run this program to post whatever reddit you want to post on a subreddit. It is, of course, much easier to just open reddit and post something, but as we get to more complicated programs, we'll start to see more of the power (and pitfalls) of automation on social media.
+The final highlighted pieces of code is what text to post to Discord.
 
-_Note: all the highlighted sections of code are surrounded by double quotes. In the Python programming language, putting something in quotes indicates that you want the computer to think of the things inside the quotes as pieces of text, in this case passwords and reddit post information._
+So, by changing those sections of code, you run this program to post whatever message you want to post on the Discord channel of your choosing. It is, of course, much easier to just open Discord and post something, but as we get to more complicated programs, we'll start to see more of the power (and pitfalls) of automation on social media.
+
+_Note: two of the highlighted sections of code are surrounded by double quotes. In the Python programming language, putting something in quotes indicates that you want the computer to think of the things inside the quotes as pieces of text, in this case passwords and reddit post information. The highlighted code that doesn't have quotes is a number._
 
 ## Adding code comments
 
-The goal of programming language code is to be readable by both humans and computers, but sometimes the meaning of code isn't always clear to humans trying to read it. In order to aid humans reading the code, programming languages allow programmers to do things to make the code more readable, such as adding extra blank lines between sections of code. Blank lines can be used to have some lines of code be visually grouped together, and some be separated, so humans can better follow the outline of the code.
+The goal of programming language code is to be readable by both humans and computers, but sometimes the meaning of code isn't always clear to humans trying to read it. In order to aid humans reading the code, programming languages allow programmers to do things to make the code more readable, such as adding extra blank lines between sections of code. Blank lines can be used to have some lines of code be visually grouped together, and some be separated, so humans can better follow the outline of the code. (We'll add or remove some blank lines to emphasize different things in the code below).
 
 Most programming languages also allow "comments," which are pieces of code that the computer will ignore. These comments allow the person writing the code to leave a note to future people reading the code, knowing that the computer won't read it (like an [aside](https://en.wikipedia.org/wiki/Aside) in a play).
 
 In Python, you can add a comment by using the `#` symbol. Python will ignore everything on a line that comes after the `#`. But human programmers will often look for the meaning of the program in these comments.
 
-So, in order to make the program above easier for future humans to understand, let's add two comments telling these future humans where to add their special passwords and where they can change the text of the tweet:
+So, in order to make the program above easier for future humans to understand, let's add three comments telling these future humans where to add their special bot password, where to put the id for the Discord channel to post to, and where they can change the text of the post:
 
 ```python
-import praw
+import discord
 
-# TODO: Put your reddit username, password, and special developer access passwords below:
-username="fake_reddit_username"
-password="sa@#4*fdf_fake_password_$%DSG#%DG"
-client_id="45adf$TW_fake_client_id_JESdsg1O"
-client_secret="56sd_fake_client_secret_%Yh%"
+# TODO: put the discord token for your bot below
+discord_token = "m#5@_fake_discord_token_$%Ds"
 
-reddit = praw.Reddit(
-    username=username, password=password,
-    client_id=client_id, client_secret=client_secret,
-    user_agent="a custom python script"
-)
+client = discord.Client(intents=discord.Intents.default())
 
+@client.event
+async def on_ready():
+    # TODO: put the discord channel id number below
+    channel_id = 123456789
 
+    channel = client.get_channel(channel_id)
 
-# TODO: modify the text in the quotes below to change what and where this bot posts to reddit:
-reddit.subreddit(
-   "soc_media_ethics_auto"
-).submit(
-   "A bot post", 
-   selftext = "This post was made by a computer program!"
-)
+    # TODO: put the message you want to post to discord below
+    channel.send("This post was made by a computer program!")
 
+    await client.close()
+    
+client.run(discord_token)
 ```
 
 With those, hopefully a future human reader will have a better chance of understanding how to modify the program to do what they want.
@@ -94,80 +83,82 @@ _Note: It's normal if you don't understand everything here. Over the course of t
 
 The first line of code is:
 ```python
-import praw
+import discord
 ```
 
-The purpose of this line of code that loads another set of code. The code it loads is called [praw](https://praw.readthedocs.io/en/stable/) (The Python Reddit API Wrapper), which is code specially written to help make programs that work with Reddit.
+The purpose of this line of code that loads another set of code. The code it loads is called [discord.py](https://discordpy.readthedocs.io/en/stable/), which is code specially written to help make programs that work with Discord.
 
 
-The next section of code is four lines long:
+The next section of code is two lines long:
 ```python
-username="fake_reddit_username"
-password="sa@#4*fdf_fake_password_$%DSG#%DG"
-client_id="45adf$TW_fake_client_id_JESdsg1O"
-client_secret="56sd_fake_client_secret_%Yh%"
+discord_token = "m#5@_fake_discord_token_$%Ds"
+client = discord.Client(intents=discord.Intents.default())
 ```
 
-This is code to store all of the reddit password information we need to use a bot. You need your reddit username and password, and then a special client_id and client_secret for the bot. Again, you'll have to get your actual developer access passwords and replace the fake ones currently in the code.
+This is code is starting the setup of our bot. It first line of code stores the discord token, so our bot can log in (Again, you'll have to get your actual discord token for your bot and replace the fake one currently in the code). Then second line of code it creates a bot program with some default settings.
 
-The next section of code is five lines long:
+The next section of code is six lines long (plus two added blank lines to help group related actions):
 
 ```python
-reddit = praw.Reddit(
-    username=username, password=password,
-    client_id=client_id, client_secret=client_secret,
-    user_agent="a custom python script"
-)
+@client.event
+async def on_ready():
+    channel_id = 123456789
+    channel = client.get_channel(channel_id)
+
+    channel.send("This post was made by a computer program!")
+
+    await client.close()
 ```
 
-The purpose of this code is to take all the developer access passwords you entered above, and give them to the praw code so that the praw code can log into your reddit account and provide the needed passwords for running a reddit bot. 
+The purpose of this code is to provide instructions for what your discord bot should do once it has logged in, specifically to make a post to a given channel and then close the bot.
 
-Note that the last line is setting the `user_agent` which is a description of which program is being used to post from. For example, it might be "Reddit web page" or "Reddit iPhone app" or "Sprout social media manager." For our programs, I've just labeled our posts as being from "a custom python script."
+The first two lines (`@client.event` and `async def on_ready():`) are just an indication that these are instructions for what the bot should do once it has logged in. Note: `def` means define, and `on_ready` means we are defining what the bot should do once it is ready (that is, logged in). The rest of the lines in this section are indented, indicating that they are the things we want the bot to do once it is logged in and ready.
 
-The final lines of code are:
+The next two lines of code (`channel_id = 123456789` and `channel = client.get_channel(channel_id)`) are for loading a specific discord channel. The first line is where a specific channel id is saved into python, and the second line is where the `discord` code finds that specific channel.
+
+The next line of code is what actually makes the post on the given channel (`channel.send("This post was made by a computer program!")`). 
+
+The final line of code in this section (`await client.close()`) tells the bot to shut down (note: there are other ways of writing bots where they keep running so that they can do things like automatically reply to someone).
+
+The final section of the code is this one line:
 ```python
-reddit.subreddit(
-   "soc_media_ethics_auto"
-).submit(
-   "A bot post", 
-   selftext = "This post was made by a computer program!"
-)
+client.run(discord_token)
 ```
 
-These are the lines of code where a reddit post is actually made. First, the `subreddit` section selects which subreddit an action will be taken on, and then `submit` creates a new post with the given title and text.
+This code uses the discord_token that was saved into Python to start running the bot, which will log in and then do the actions that we defined above to do once the bot is ready (find a channel, post to it, and close the bot).
 
 ## Adding more code comments
-Now that we've looked at the purpose of each section of code, we can add additional comments explaining what each section does, so that future humans reading the code are more likely to understand it.
+Now that we've looked at the purpose of each section of code, we can copy our bot code one more time, now adding comments explaining what each section does, so that future humans reading the code are more likely to understand it.
 
 Following the common practice of programmers, we will put the comment before the section of code that the comment is explaining. We can also make multiple comment lines as needed if our comments are long.
 
 ```python
-# Load some code called "praw" that will help us work with reddit
-import praw
+# Load some code called "discord" that will help us work with Discord
+import discord
 
-# Load all your developer access passwords into Python
-# TODO: Put your reddit username, password, and special developer access passwords below:
-username="fake_reddit_username"
-password="sa@#4*fdf_fake_password_$%DSG#%DG"
-client_id="45adf$TW_fake_client_id_JESdsg1O"
-client_secret="56sd_fake_client_secret_%Yh%"
+# Set up your Discord connection
+# TODO: put the discord token for your bot below
+discord_token = "m#5@_fake_discord_token_$%Ds"
+client = discord.Client(intents=discord.Intents.default())
 
-# Give the praw code your reddit account info so
-# it can perform reddit actions
-reddit = praw.Reddit(
-    username=username, password=password,
-    client_id=client_id, client_secret=client_secret,
-    user_agent="a custom python script"
-)
+# Provide instructions for what your discord bot should do once it has logged in
+@client.event
+async def on_ready():
+    # Load the discord channel you want to post to
+    # TODO: put the discord channel id number below
+    channel_id = 123456789
+    channel = client.get_channel(channel_id)
 
-# Post a reddit post
-# TODO: modify the text in the quotes below to change what and where this bot posts to reddit:
-reddit.subreddit(
-   "soc_media_ethics_auto"
-).submit(
-   "A bot post", 
-   selftext = "This post was made by a computer program!"
-)
+    # Post a message to your discord channel
+    # TODO: put the message you want to post to discord below
+    channel.send("This post was made by a computer program!")
+
+    # Tell your bot to stop running
+    await client.close()
+
+
+# Now that we've defined how the bot should work, start running your bot
+client.run(discord_token)
 ```
 
 Now that we've looked over the code and commented it, let's go to the next page, where you can try running it!

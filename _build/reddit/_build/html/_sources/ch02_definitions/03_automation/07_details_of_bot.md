@@ -1,4 +1,6 @@
 # Understanding the Reddit Bot Code
+_Choose Social Media Platform: __Reddit__ | <a href='../../../discord/ch02_definitions/03_automation/07_details_of_bot.html'>Discord</a>_
+
 
 Let's look more at that program that creates one Reddit post.
 
@@ -52,7 +54,7 @@ Most programming languages also allow "comments," which are pieces of code that 
 
 In Python, you can add a comment by using the `#` symbol. Python will ignore everything on a line that comes after the `#`. But human programmers will often look for the meaning of the program in these comments.
 
-So, in order to make the program above easier for future humans to understand, let's add two comments telling these future humans where to add their special passwords and where they can change the text of the tweet:
+So, in order to make the program above easier for future humans to understand, let's add two comments telling these future humans where to add their special passwords and where they can change the text of the post:
 
 ```python
 import praw
@@ -137,7 +139,7 @@ reddit.subreddit(
 These are the lines of code where a reddit post is actually made. First, the `subreddit` section selects which subreddit an action will be taken on, and then `submit` creates a new post with the given title and text.
 
 ## Adding more code comments
-Now that we've looked at the purpose of each section of code, we can add additional comments explaining what each section does, so that future humans reading the code are more likely to understand it.
+Now that we've looked at the purpose of each section of code, we can copy our bot code one more time, now adding comments explaining what each section does, so that future humans reading the code are more likely to understand it.
 
 Following the common practice of programmers, we will put the comment before the section of code that the comment is explaining. We can also make multiple comment lines as needed if our comments are long.
 
