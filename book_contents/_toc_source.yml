@@ -36,7 +36,7 @@ parts:
         - file: ch02_definitions/03_automation/05_compilers
         - file: ch02_definitions/03_automation/06_a_social_media_bot-***
         - file: ch02_definitions/03_automation/07_details_of_bot
-        - file: ch02_definitions/03_automation/08_demo-***
+        - file: ch02_definitions/03_automation/08_demo
         - file: ch02_definitions/03_automation/09_reflecting_on_programming
         - file: ch02_definitions/03_automation/10_automation_in_social_media
       - file: ch02_definitions/04_tying_them_together

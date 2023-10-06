@@ -1,45 +1,42 @@
 # A program that makes one Discord post
 
-TODO: Fix
-
-Below is a computer program written in the Python programming language. The program will make a Discord post in the subreddit "soc_media_ethics_auto". The post will be titled "A bot post" and say: "This post was made by a computer program!". Since this is a computer program that posts on reddit, we would call this program a reddit bot.
+Below is a computer program written in the Python programming language. The program will make a Discord post in the the discord channel that has an id of 123456789 (this is a fake channel number). The post will say: "This post was made by a computer program!". Since this is a computer program that posts on Discord, we would call this program a Discord bot.
 
 Don't worry if you don't understand any of this Python code yet; we will build an understanding of code like this throughout the book.
 
 ```python
-import praw
+import discord
 
-username="fake_reddit_username"
-password="sa@#4*fdf_fake_password_$%DSG#%DG"
-client_id="45adf$TW_fake_client_id_JESdsg1O"
-client_secret="56sd_fake_client_secret_%Yh%"
+discord_token = "m#5@_fake_discord_token_$%Ds"
 
-reddit = praw.Reddit(
-    username=username, password=password,
-    client_id=client_id, client_secret=client_secret,
-    user_agent="a custom python script"
-)
+client = discord.Client(intents=discord.Intents.default())
 
-reddit.subreddit(
-   "soc_media_ethics_auto"
-).submit(
-   "A bot post", 
-   selftext = "This post was made by a computer program!"
-)
+@client.event
+async def on_ready():
+    channel_id = 123456789
+    channel = client.get_channel(channel_id)
+    channel.send("This post was made by a computer program!")
+    await client.close()
+    
+client.run(discord_token)
+
 ```
 
 Though you may not understand anything in the above code yet, I want to point out a couple things:
-- The code above is full of English words like "import", "username", "password", and "secret," which may help you guess the meaning of the code.
-- There are also other symbols as well, though being used in a different way than in normal English, symbols like ``=``, `_`, `.`, `(`, and `)`
-- The final lines of code gives good hints as to what it is doing: `subreddit` chooses which subreddit the post will be made on, and `submit` has the information to submit as a new post.
-- There are four pieces of text with random numbers and letters that include things like "username" and "client_secret" inside. These pieces of text are meant to be replaced with your reddit username and password and a pair of special passwords for running a reddit bot. You can get these special passwords if you get developer access to reddit (see the page on [](../../appendix/bot_set_ups/making_reddit_account.md)). Once you put your special passwords in those locations then this code will post a tweet on your account.
+- The code above is full of English words like "import", "token", "ready", "channel", and "send," which may help you guess the meaning of the code.
+- There are also other symbols as well, though being used in a different way than in normal English, symbols like ``=``, `_`, `.`, `:`, `(`, and `)`, as well as some unusual spacing
 
-```{figure} bot_post.png
+
+
+- The indented lines of code gives good hints as to what it is doing: `get_channel` loads a specific discord channel to post on, and `send` has the information to make as a new post.
+- There is one pieces of text with random letters and numbers called the "discord_token" which is basically a password for your discord bot to log in. There is also a piece of text with a number called the "channel_id" which is a number that lets your bot look up a specific discord channel. You can get these special passwords and discord channel ids (see the page on [setting up your discord bot](../../appendix/bot_set_ups/making_reddit_account.md)).. Once you put your special token and channel ids in those locations, then this code will make a discord post
+
+```{figure} discord_bot_post.png
 ---
 name: bot_post_fig
-alt: Screenshot of a post on reddit, posted by "kthayer_teacher_bot" titled "a bot post" with the text of "This post was made by a computer program!"
+alt: Screenshot of a post on discord, posted by "info_103_teaching_example_app" with the text of "This post was made by a computer program!"
 ---
-A [reddit post](https://www.reddit.com/r/soc_media_ethics_auto/comments/zwm4mw/a_bot_post/) made by running the code above with the account information for "kthayer_teacher_bot".
+A discord post made by running the code above with the account information for "info_103_teaching_example_app".
 ```
 
 We will go through that example code in more detail next.
