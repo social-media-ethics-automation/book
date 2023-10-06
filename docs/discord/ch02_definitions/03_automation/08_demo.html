@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2.3.8. Demo: Try Running the Reddit Bot! &#8212; Social Media, Ethics, and Automation</title>
+    <title>2.3.8. Demo: Try Running the Discord Bot! &#8212; Social Media, Ethics, and Automation</title>
   
   
   
@@ -63,7 +63,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch02_definitions/03_automation/08_demo';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.3.9. Reflections on the Reddit Bot" href="09_reflecting_on_programming.html" />
+    <link rel="next" title="2.3.9. Reflections on the Bot" href="09_reflecting_on_programming.html" />
     <link rel="prev" title="2.3.7. Understanding the Discord Bot Code" href="07_details_of_bot.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
@@ -188,8 +188,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="05_compilers.html">2.3.5. Compilers and Programimng Languages</a></li>
 <li class="toctree-l3"><a class="reference internal" href="06_a_social_media_bot.html">2.3.6. A program that makes one Discord post</a></li>
 <li class="toctree-l3"><a class="reference internal" href="07_details_of_bot.html">2.3.7. Understanding the Discord Bot Code</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">2.3.8. Demo: Try Running the Reddit Bot!</a></li>
-<li class="toctree-l3"><a class="reference internal" href="09_reflecting_on_programming.html">2.3.9. Reflections on the Reddit Bot</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">2.3.8. Demo: Try Running the Discord Bot!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="09_reflecting_on_programming.html">2.3.9. Reflections on the Bot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="10_automation_in_social_media.html">2.3.10. Automation in Social Media</a></li>
 </ul>
 </li>
@@ -712,7 +712,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Demo: Try Running the Reddit Bot!</h1>
+    <h1>Demo: Try Running the Discord Bot!</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -727,7 +727,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-load-praw-code">Step 1: Load praw code</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-step-1b-make-a-fake-praw-connection-with-the-fake-praw-library">(Optional) Step 1b: Make a fake praw connection with the fake_praw library</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-load-your-developer-access-passwords">Step 2: Load your developer access passwords</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-give-praw-or-fake-praw-your-developer-access-passwords">Step 4: Give praw (or fake_praw) your developer access passwords</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4">Step 4: ????</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-submit-a-post-to-reddit">Step 5: Submit a post to Reddit</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-modify-the-code-above-to-create-a-different-reddit-post">Step 6: Modify the code above to create a different reddit post</a></li>
 </ul>
@@ -743,8 +743,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="demo-try-running-the-reddit-bot">
-<h1><span class="section-number">2.3.8. </span>Demo: Try Running the Reddit Bot!<a class="headerlink" href="#demo-try-running-the-reddit-bot" title="Permalink to this headline">#</a></h1>
+  <section id="demo-try-running-the-discord-bot">
+<h1><span class="section-number">2.3.8. </span>Demo: Try Running the Discord Bot!<a class="headerlink" href="#demo-try-running-the-discord-bot" title="Permalink to this headline">#</a></h1>
+<p><em>Choose Social Media Platform: <a href='../../../reddit/ch02_definitions/03_automation/08_demo.html'>Reddit</a> | <strong>Discord</strong></em></p>
 <section id="running-this-jupyter-notebook">
 <h2>Running this Jupyter Notebook<a class="headerlink" href="#running-this-jupyter-notebook" title="Permalink to this headline">#</a></h2>
 <p>This page is called a “Jupyter Notebook” which it is a text page that has runnable Python code in it.</p>
@@ -759,16 +760,16 @@ document.write(`
 </section>
 <section id="here-is-the-bot-code-you-can-run">
 <h2>Here is the bot code you can run!<a class="headerlink" href="#here-is-the-bot-code-you-can-run" title="Permalink to this headline">#</a></h2>
-<p>Our demo Reddit bot code is below, broken up into different sections.</p>
+<p>Our demo Discord bot code is below, broken up into different sections.</p>
 <p>You can select each section of the code below and run it to see what it does.</p>
-<p>By default this code uses a fake version of our reddit connection so it doesn’t connect to a real reddit account.</p>
-<p>If you want to actually connect to your reddit account, you can put your special developer access passwords in the right code section below, and then when you run the code make sure to skip the code section that makes a fake reddit connection with “fake_praw”.</p>
+<p>By default this code uses a fake version of our Discord connection so it doesn’t connect to a real Discord account.</p>
+<p>If you want to actually connect to your Discord account, you can put your discord token in the right code section below, and then when you run the code make sure to skip the code section that makes a fake discord connection with “fake_discord”.</p>
 <section id="step-1-load-praw-code">
 <h3>Step 1: Load praw code<a class="headerlink" href="#step-1-load-praw-code" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;praw&quot; that will help us work with reddit</span>
-<span class="kn">import</span> <span class="nn">praw</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;discord&quot; that will help us work with Discord</span>
+<span class="kn">import</span> <span class="nn">discord</span>
 </pre></div>
 </div>
 </div>
@@ -779,12 +780,47 @@ document.write(`
 <p>For testing purposes, we’ve added this line of code, which loads a fake version of praw, so it wont actually connect to reddit. <strong>If you want to try to actually connect to reddit, don’t run this line of code.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_apis/fake_praw.ipynb
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_apis/fake_discord.ipynb
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake praw is replacing the praw library. Fake praw doesn&#x27;t need real passwords, and prevents you from accessing real reddit</strong></div></div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">OSError</span><span class="g g-Whitespace">                                   </span>Traceback (most recent call last)
+<span class="nn">File C:\Python310\lib\site-packages\IPython\core\magics\execution.py:696,</span> in <span class="ni">ExecutionMagics.run</span><span class="nt">(self, parameter_s, runner, file_finder)</span>
+<span class="g g-Whitespace">    </span><span class="mi">695</span>     <span class="n">fpath</span> <span class="o">=</span> <span class="n">arg_lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="ne">--&gt; </span><span class="mi">696</span>     <span class="n">filename</span> <span class="o">=</span> <span class="n">file_finder</span><span class="p">(</span><span class="n">fpath</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">697</span> <span class="k">except</span> <span class="ne">IndexError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+<span class="nn">File C:\Python310\lib\site-packages\IPython\utils\path.py:91,</span> in <span class="ni">get_py_filename</span><span class="nt">(name)</span>
+<span class="g g-Whitespace">     </span><span class="mi">90</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">91</span>     <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s1">&#39;File `</span><span class="si">%r</span><span class="s1">` not found.&#39;</span> <span class="o">%</span> <span class="n">name</span><span class="p">)</span>
+
+<span class="ne">OSError</span>: File `&#39;../../fake_apis/fake_discord.ipynb.py&#39;` not found.
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">Exception</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [2],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;run&#39;</span><span class="p">,</span> <span class="s1">&#39;../../fake_apis/fake_discord.ipynb&#39;</span><span class="p">)</span>
+
+<span class="nn">File C:\Python310\lib\site-packages\IPython\core\interactiveshell.py:2305,</span> in <span class="ni">InteractiveShell.run_line_magic</span><span class="nt">(self, magic_name, line, _stack_depth)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2303</span>     <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;local_ns&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_local_scope</span><span class="p">(</span><span class="n">stack_depth</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2304</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">builtin_trap</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2305</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2306</span> <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">File C:\Python310\lib\site-packages\IPython\core\magics\execution.py:707,</span> in <span class="ni">ExecutionMagics.run</span><span class="nt">(self, parameter_s, runner, file_finder)</span>
+<span class="g g-Whitespace">    </span><span class="mi">705</span>     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;nt&#39;</span> <span class="ow">and</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;^&#39;.*&#39;$&quot;</span><span class="p">,</span><span class="n">fpath</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">706</span>         <span class="n">warn</span><span class="p">(</span><span class="s1">&#39;For Windows, use double quotes to wrap a filename: </span><span class="si">%r</span><span class="s1">un &quot;mypath</span><span class="se">\\</span><span class="s1">myfile.py&quot;&#39;</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">707</span>     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">e</span>
+<span class="g g-Whitespace">    </span><span class="mi">708</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">709</span>     <span class="k">if</span> <span class="n">fpath</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">meta_path</span><span class="p">:</span>
+
+<span class="ne">Exception</span>: File `&#39;../../fake_apis/fake_discord.ipynb.py&#39;` not found.
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="step-2-load-your-developer-access-passwords">
@@ -792,33 +828,26 @@ document.write(`
 <p>To use this on your real Reddot account, copy your <a class="reference internal" href="../../appendix/bot_set_ups/making_reddit_account.html"><span class="doc std std-doc">developer access passwords</span></a> into the code below, replacing our fake passwords.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load all your developer access passwords into Python</span>
-<span class="c1"># TODO: Put your reddit username, password, and special developer access passwords below:</span>
-<span class="n">username</span><span class="o">=</span><span class="s2">&quot;fake_reddit_username&quot;</span>
-<span class="n">password</span><span class="o">=</span><span class="s2">&quot;sa@#4*fdf_fake_password_$%DSG#%DG&quot;</span>
-<span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;45adf$TW_fake_client_id_JESdsg1O&quot;</span>
-<span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;56sd_fake_client_secret_%Yh%&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load all your discord token into Python</span>
+<span class="c1"># TODO: Put your discord token below:</span>
+<span class="n">discord_token</span> <span class="o">=</span> <span class="s2">&quot;m#5@_fake_discord_token_$%Ds&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="step-4-give-praw-or-fake-praw-your-developer-access-passwords">
-<h3>Step 4: Give praw (or fake_praw) your developer access passwords<a class="headerlink" href="#step-4-give-praw-or-fake-praw-your-developer-access-passwords" title="Permalink to this headline">#</a></h3>
+<section id="step-4">
+<h3>Step 4: ????<a class="headerlink" href="#step-4" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Give the praw code your reddit account info so</span>
 <span class="c1"># it can perform reddit actions</span>
-<span class="n">reddit</span> <span class="o">=</span> <span class="n">praw</span><span class="o">.</span><span class="n">Reddit</span><span class="p">(</span>
-    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
-    <span class="n">client_id</span><span class="o">=</span><span class="n">client_id</span><span class="p">,</span> <span class="n">client_secret</span><span class="o">=</span><span class="n">client_secret</span><span class="p">,</span>
-    <span class="n">user_agent</span><span class="o">=</span><span class="s2">&quot;a custom python script&quot;</span>
-<span class="p">)</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">intents</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">Intents</span><span class="o">.</span><span class="n">default</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to collect account info to use on reddit</strong></div></div>
+<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to log in to twitter</strong></div></div>
 </div>
 </section>
 <section id="step-5-submit-a-post-to-reddit">
@@ -837,19 +866,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to select the subreddit: soc_media_ethics_auto</strong></div><div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="nn">Input In [5],</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Post a reddit post</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># TODO: modify the text in the quotes below to change what and where this bot posts to reddit:</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>    <span class="s2">&quot;soc_media_ethics_auto&quot;</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="p">)</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>    <span class="s2">&quot;A bot post&quot;</span><span class="p">,</span> 
-<span class="g g-Whitespace">      </span><span class="mi">7</span>    <span class="n">selftext</span> <span class="o">=</span> <span class="s2">&quot;This post was made by a computer program!&quot;</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="p">)</span>
-
-<span class="ne">AttributeError</span>: &#39;NoneType&#39; object has no attribute &#39;submit&#39;
+<div class="output text_html"><strong style='color:darkred'>Fake Tweepy is pretending to post this tweet (note: real tweepy shows no output here when a tweet is posted): </strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This tweet was posted by a computer program!
 </pre></div>
 </div>
 </div>
@@ -906,7 +923,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.3.9. </span>Reflections on the Reddit Bot</p>
+        <p class="prev-next-title"><span class="section-number">2.3.9. </span>Reflections on the Bot</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -933,7 +950,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-load-praw-code">Step 1: Load praw code</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-step-1b-make-a-fake-praw-connection-with-the-fake-praw-library">(Optional) Step 1b: Make a fake praw connection with the fake_praw library</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-load-your-developer-access-passwords">Step 2: Load your developer access passwords</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-give-praw-or-fake-praw-your-developer-access-passwords">Step 4: Give praw (or fake_praw) your developer access passwords</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4">Step 4: ????</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-submit-a-post-to-reddit">Step 5: Submit a post to Reddit</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-modify-the-code-above-to-create-a-different-reddit-post">Step 6: Modify the code above to create a different reddit post</a></li>
 </ul>

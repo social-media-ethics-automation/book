@@ -83,7 +83,27 @@ for platform in platforms:
         file_contents = open(original_file_location, "r").read().split("\n")
 
         platform_selector = make_social_media_links(platform, destination_filename)
-        file_contents.insert(1, platform_selector + "\n")
+        if(file_extension == "ipynb"):
+            # WARNING: This is very brittle coding to find the right place to put the new code
+
+            # Find end of first cell
+            end_cell_index = file_contents.index("  },")
+            # Add a 
+            file_contents.insert(end_cell_index + 1,
+            """
+              {
+                "cell_type": "markdown",
+                "id": "123456789-930485093240532940945-0324095320945904325",
+                "metadata": {
+                    "tags": []
+                },
+                "source": [" """ + platform_selector +
+                """ "]
+                },
+                """ )
+        else: #probably md
+            file_contents.insert(1, platform_selector + "\n")
+        
 
         with open(destination_file_location, 'w') as file:
             file.write("\n".join(file_contents))
