@@ -1,4 +1,7 @@
-# Making a Reddit Bot Account
+# Making a Bot Account (Reddit)
+_Choose Social Media Platform: __Reddit__ | <a href='../../discord/appendix/making_bot_account.html'>Discord</a>_
+
+
 
 In using this textbook, you will have opportunities to create and run reddit bots on your own reddit account.
 
