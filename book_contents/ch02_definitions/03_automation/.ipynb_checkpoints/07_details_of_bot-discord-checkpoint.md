@@ -25,9 +25,9 @@ async def on_ready():
 client.run(discord_token)
 </pre>
 
-The first highlighted pieces of code is the discord token (your bot's special passwords), so your bot can log in. You can get when you get those passwords by following these steps to get [developer access to reddit](../../appendix/making_bot_account.md) (I've put fake values in them for now).
+The first highlighted pieces of code is the discord token (your bot's special passwords), so your bot can log in. You can get when you get those passwords by following these steps to get [developer access to reddit](../../appendix/bot_set_ups/making_reddit_account.md) (I've put fake values in them for now).
 
-The second highlighted piece of code is the id number for the discord channel you want to post to. Instructions for getting a channel's id number are also on the [developer access to reddit page](../../appendix/making_bot_account.md)
+The second highlighted piece of code is the id number for the discord channel you want to post to. Instructions for getting a channel's id number are also on the [developer access to reddit page](../../appendix/bot_set_ups/making_reddit_account.md)
 
 The final highlighted pieces of code is what text to post to Discord.
 

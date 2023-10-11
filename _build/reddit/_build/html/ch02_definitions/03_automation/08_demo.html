@@ -786,7 +786,7 @@ document.write(`
 </section>
 <section id="step-2-load-your-developer-access-passwords">
 <h3>Step 2: Load your developer access passwords<a class="headerlink" href="#step-2-load-your-developer-access-passwords" title="Permalink to this headline">#</a></h3>
-<p>To use this on your real Reddit account, copy your <span class="xref myst">developer access passwords</span> into the code below, replacing our fake passwords.</p>
+<p>To use this on your real Reddit account, copy your <a class="reference internal" href="../../appendix/making_bot_account.html"><span class="doc std std-doc">developer access passwords</span></a> into the code below, replacing our fake passwords.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load all your developer access passwords into Python</span>
@@ -834,22 +834,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to select the subreddit: soc_media_ethics_auto</strong></div><div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="nn">Input In [5],</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Post a reddit post</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># TODO: modify the text in the quotes below to change what and where this bot posts to reddit:</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>    <span class="s2">&quot;soc_media_ethics_auto&quot;</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="p">)</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>    <span class="s2">&quot;A bot post&quot;</span><span class="p">,</span> 
-<span class="g g-Whitespace">      </span><span class="mi">7</span>    <span class="n">selftext</span> <span class="o">=</span> <span class="s2">&quot;This post was made by a computer program!&quot;</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="p">)</span>
-
-<span class="ne">AttributeError</span>: &#39;NoneType&#39; object has no attribute &#39;submit&#39;
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to select the subreddit: soc_media_ethics_auto</strong></div><div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to submit a post with the title: &quot;A bot post&quot; and the content: This post was made by a computer program!</strong></div></div>
 </div>
 </section>
 <section id="step-6-modify-the-code-above-to-create-a-different-reddit-post">

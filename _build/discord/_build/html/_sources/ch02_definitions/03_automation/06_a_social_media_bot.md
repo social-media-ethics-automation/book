@@ -31,7 +31,7 @@ Though you may not understand anything in the above code yet, I want to point ou
 
 
 - The indented lines of code gives good hints as to what it is doing: `get_channel` loads a specific discord channel to post on, and `send` has the information to make as a new post.
-- There is one pieces of text with random letters and numbers called the "discord_token" which is basically a password for your discord bot to log in. There is also a piece of text with a number called the "channel_id" which is a number that lets your bot look up a specific discord channel. You can get these special passwords and discord channel ids (see the page on [setting up your discord bot](../../appendix/bot_set_ups/making_reddit_account.md)).. Once you put your special token and channel ids in those locations, then this code will make a discord post
+- There is one pieces of text with random letters and numbers called the "discord_token" which is basically a password for your discord bot to log in. There is also a piece of text with a number called the "channel_id" which is a number that lets your bot look up a specific discord channel. You can get these special passwords and discord channel ids (see the page on [setting up your discord bot](../../appendix/making_bot_account.md)).. Once you put your special token and channel ids in those locations, then this code will make a discord post
 
 ```{figure} discord_bot_post.png
 ---

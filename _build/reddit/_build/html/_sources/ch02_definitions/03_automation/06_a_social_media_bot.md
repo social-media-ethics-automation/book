@@ -31,7 +31,7 @@ Though you may not understand anything in the above code yet, I want to point ou
 - The code above is full of English words like "import", "username", "password", and "secret," which may help you guess the meaning of the code.
 - There are also other symbols as well, though being used in a different way than in normal English, symbols like ``=``, `_`, `.`, `(`, and `)`
 - The final lines of code gives good hints as to what it is doing: `subreddit` chooses which subreddit the post will be made on, and `submit` has the information to submit as a new post.
-- There are four pieces of text with random numbers and letters that include things like "username" and "client_secret" inside. These pieces of text are meant to be replaced with your reddit username and password and a pair of special passwords for running a reddit bot. You can get these special passwords if you get developer access to reddit (see the page on [](../../appendix/bot_set_ups/making_reddit_account.md)). Once you put your special passwords in those locations then this code will make a reddit post.
+- There are four pieces of text with random numbers and letters that include things like "username" and "client_secret" inside. These pieces of text are meant to be replaced with your reddit username and password and a pair of special passwords for running a reddit bot. You can get these special passwords if you get developer access to reddit (see the page on [](../../appendix/making_bot_account.md)). Once you put your special passwords in those locations then this code will make a reddit post.
 
 ```{figure} bot_post.png
 ---

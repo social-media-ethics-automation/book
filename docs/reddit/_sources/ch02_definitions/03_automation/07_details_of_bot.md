@@ -34,7 +34,7 @@ reddit.subreddit(
 
 </pre>
 
-The first four highlighted pieces of code are for the special passwords that let you run a bot. You can get when you get those passwords by following these steps to get [developer access to reddit](../../appendix/bot_set_ups/making_reddit_account.md) (I've put fake values in them for now):
+The first four highlighted pieces of code are for the special passwords that let you run a bot. You can get when you get those passwords by following these steps to get [developer access to reddit](../../appendix/making_bot_account.md) (I've put fake values in them for now):
 - username
 - password
 - client_id
