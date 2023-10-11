@@ -1,14 +1,15 @@
 # Making a Bot Account (Reddit)
 
 
-In using this textbook, you will have opportunities to create and run reddit bots on your own reddit account.
+
+In using this textbook, you will have opportunities to create and run social media bots. Here we will run through how to create a Reddit account and set it up for running your own bots.
 
 While we have made a fake version of Reddit for you to test all the code in this book, we highly encourage you to make a reddit bot account and try it out for real!
 
 ## Sign up for Reddit
 [https://www.reddit.com/register/](https://www.reddit.com/register/)
 
-You might want to make a new, separate Reddit account, just for making reddit bots, since you don't want to accidentally get your main reddit account banned or labeled as a bot.
+We suggest making a new, separate Reddit account, just for making reddit bots, since you don't want to accidentally get your main reddit account banned or labeled as a bot.
 
 Note: If you want to make a new account and you already have one, you may need to sign out from your current account, or use a different web browser (e.g., Mozilla, Google Chrome, Microsoft Edge, Safari).
 
@@ -56,7 +57,7 @@ alt: "Screenshot of the app information. Under the name and description of the a
 
 
 ##  Test your keys
-When you get to chapter 2.3.8 ([](../../ch02_definitions/03_automation/08_demo.ipynb)), you can try running the code and replacing the fake special passwords with the ones from your account, and see if you can use the code to post an actual tweet to your account.
+Now that you have your keys, and other info, you can test out your code in chapter 2.3.8 ([](../../ch02_definitions/03_automation/08_demo.ipynb)), you can try running the code and replacing the fake special passwords with the ones from your account, and see if you can use the code to post an actual tweet to your account.
 
 ## Understand Reddit Rules for Bots
 Before you try doing anything too creative with reddit  bots, make sure you look over the [Reddit API Terms of Use](https://docs.google.com/forms/d/e/1FAIpQLSezNdDNK1-P8mspSbmtC2r86Ee9ZRbC66u929cG2GX0T9UMyw/viewform) and the [Reddit API Rules](https://github.com/reddit-archive/reddit/wiki/API#rules), that way you don't get yourself banned.

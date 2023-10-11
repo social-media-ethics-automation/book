@@ -690,6 +690,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sign-up-for-discord">Sign up for Discord</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-your-own-discord-server">Create your own Discord Server</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-discord-application">Create a Discord “Application”</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-discord-token">Get Discord Token</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-bot-invite-link">Get Bot Invite Link</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-app-to-a-discord-server">Add app to a Discord Server</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-channel-id-number">Get Channel Id Number</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-your-tokens">Test your tokens</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understand-reddit-rules-for-bots">Understand Reddit Rules for Bots</a></li>
 </ul>
             </nav>
         </div>
@@ -717,20 +723,108 @@ document.write(`
 <p>It is easiest to test your bot by creating your own discord server.</p>
 <figure class="align-default" id="discord-create-server-fig">
 <a class="reference internal image-reference" href="../_images/discord_create_server.png"><img alt="Screenshot of the discord interface with the &quot;+&quot; add a server button highlighted, and then in the menu under &quot;Create a server&quot;, the &quot;Create my own&quot; button is highlighted." src="../_images/discord_create_server.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Create a Discord server</span><a class="headerlink" href="#discord-create-server-fig" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
 </section>
 <section id="create-a-discord-application">
 <h2>Create a Discord “Application”<a class="headerlink" href="#create-a-discord-application" title="Permalink to this headline">#</a></h2>
+<p><em>Note: Instructions are based on the official instructions here: https://discord.com/developers/docs/getting-started</em></p>
 <p>In order for your bot to run, you must create a Discord “Application.” Go to the <a class="reference external" href="https://discord.com/developers/">Discord Developer Portal</a> and click “New Application”:</p>
 <figure class="align-default" id="discord-new-app-button-fig">
-<a class="reference internal image-reference" href="../_images/discord_new_app_button.png"><img alt="Screenshot of the discord developer panel, with the &quot;application&quot; tab open, and the &quot;New Application&quot; button circled." src="../_images/discord_new_app_button.png" style="width: 400px;" /></a>
+<img alt="Screenshot of the discord developer panel, with the &quot;application&quot; tab open, and the &quot;New Application&quot; button circled." src="../_images/discord_new_app_button.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Create a new application in the developer portal.</span><a class="headerlink" href="#discord-new-app-button-fig" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
 <p>Make up a name for your app and press the “Create” button:</p>
 <figure class="align-default" id="discord-create-app-fig">
 <a class="reference internal image-reference" href="../_images/discord_create_app.png"><img alt="Screenshot of the discord create app dialog, with the name for the app being &quot;soc_media_bot_teaching_demo&quot;" src="../_images/discord_create_app.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Make up a name for your application (the name of your bot).</span><a class="headerlink" href="#discord-create-app-fig" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
-<p>https://discord.com/developers/docs/getting-started</p>
-<p>Create App: https://discord.com/developers/applications?new_application=true</p>
+</section>
+<section id="get-discord-token">
+<h2>Get Discord Token<a class="headerlink" href="#get-discord-token" title="Permalink to this headline">#</a></h2>
+<p>In order to make your bot work, you’ll need to create a special password for your bot to use, which is called a “token.” Reset your token and save it somewhere (e.g., email it to yourself). You’ll need it later to let your bot log in.</p>
+<figure class="align-default" id="discord-generate-token-fig">
+<a class="reference internal image-reference" href="../_images/discord_generate_token.png"><img alt="Screenshot of discord developer application screen with Bot tab selected and the &quot;Reset Token&quot; button circled." src="../_images/discord_generate_token.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Reset your token and save it somewhere.</span><a class="headerlink" href="#discord-generate-token-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="get-bot-invite-link">
+<h2>Get Bot Invite Link<a class="headerlink" href="#get-bot-invite-link" title="Permalink to this headline">#</a></h2>
+<p>Next we need to create an invite link so your bot can be added to different discord servers.</p>
+<p>To do this use the OAuth2 tab for your application. First, set Authorization method to “In-app Authorization.”</p>
+<figure class="align-default" id="discord-set-oath-inapp-authorize-fig">
+<img alt="Screenshot of discord developer application screen with OAuth2 General tab selected and the &quot;Authorization Method&quot; dropdown opened with the &quot;In-app Authorization&quot; option circled." src="../_images/discord_set_oath_inapp_authorize.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Set Authorization method to “In-app Authorization.”</span><a class="headerlink" href="#discord-set-oath-inapp-authorize-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Doing this will give you a bunch of options for permissions your bot might need. We’ve selected a good starting set of permissions to let you do most things you’ll probably want to do with your bot.</p>
+<figure class="align-default" id="discord-set-oath-permissions-fig">
+<img alt="Screenshot of discord developer application screen with OAuth2 General tab selected. In the Scopes section, both &quot;bot&quot; and &quot;applications.commands&quot; options selected. In the Bot Permissions section, under &quot;General Permissions&quot; one option is selected: &quot;Read Messages/View Channels&quot;, under &quot;Text Permissions&quot; all options are selected except for &quot;Use Embedded Activities&quot;, and under &quot;Voice Permissions&quot; no options are selected." src="../_images/discord_set_oath_permissions.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">A starting set of permissions for your bot.</span><a class="headerlink" href="#discord-set-oath-permissions-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Now go to URL Generator to create an invite link for your bot. You’ll get a permission set of options again, where we’ve chosen the same permissions as before. At the very bottom there is an option to copy a the url, which is an invite link to your bot. Copy this and save it.</p>
+<figure class="align-default" id="discord-generate-url-fig">
+<a class="reference internal image-reference" href="../_images/discord_generate_url.png"><img alt="Screenshot of discord developer application screen with OAuth2 General tab selected. In the Scopes section, only the &quot;bot&quot; options is selected. In the Bot Permissions section, the same permissions are selected as in the previous screenshot. At the very bottom there is a Generated URL with a &quot;Copy&quot; button, which is circled." src="../_images/discord_generate_url.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Copy the invite link (use same permissions as before).</span><a class="headerlink" href="#discord-generate-url-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>This invite link can be given to the owner of any discord server and they can use it to invite your bot to their server.</p>
+</section>
+<section id="add-app-to-a-discord-server">
+<h2>Add app to a Discord Server<a class="headerlink" href="#add-app-to-a-discord-server" title="Permalink to this headline">#</a></h2>
+<p>To add your bot to your own discord server, open a new browser tab and copy the link in to the url bar. Then you will have an option to add your bot to any servers you own.</p>
+<figure class="align-default" id="discord-add-app-to-server-fig">
+<a class="reference internal image-reference" href="../_images/discord_add_app_to_server.png"><img alt="A new browser tab is opened with the Generated URL copied into it. This opens a site saying &quot;An external application wants to access your Discord account.&quot; The &quot;Add To Server&quot; section is highlighted with a Discord server selected, and the &quot;Continue&quot; button is circled." src="../_images/discord_add_app_to_server.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Add your bot to one of your servers.</span><a class="headerlink" href="#discord-add-app-to-server-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Note: After adding app to server, there is a confirmation page about the permissions. “Authorize” your bot.</p>
+</section>
+<section id="get-channel-id-number">
+<h2>Get Channel Id Number<a class="headerlink" href="#get-channel-id-number" title="Permalink to this headline">#</a></h2>
+<p>One additional piece of information you might need for your bot is the channel ID for a channel in a discord server. In order to get a channel ID, open your settings menu.</p>
+<figure class="align-default" id="discord-enable-dev-mode-1-fig">
+<a class="reference internal image-reference" href="../_images/discord_enable_dev_mode_1.png"><img alt="The discord profile part of the screen with the username, and mute options. The gear options button is circled." src="../_images/discord_enable_dev_mode_1.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Open your settings menu.</span><a class="headerlink" href="#discord-enable-dev-mode-1-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Then enable developer mode in the advanced settings.</p>
+<figure class="align-default" id="discord-enable-dev-mode-2-fig">
+<a class="reference internal image-reference" href="../_images/discord_enable_dev_mode_2.png"><img alt="In the discord settings change, the advanced tab is selected. In the advanced tab &quot;Developer mode&quot; is circled to turn on." src="../_images/discord_enable_dev_mode_2.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Enable developer mode.</span><a class="headerlink" href="#discord-enable-dev-mode-2-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Once developer mode is on, you can get a channel ID by right-clicking on a channel.</p>
+<figure class="align-default" id="discord-get-channel-id-fig">
+<a class="reference internal image-reference" href="../_images/discord_get_channel_id.png"><img alt="A screenshot of a discord server page. One of the channels has been right-clicked on, and the very bottom of the right-click menu is the &quot;Copy Channel ID&quot; option, which is circled." src="../_images/discord_get_channel_id.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Copy the channel ID by right clicking.</span><a class="headerlink" href="#discord-get-channel-id-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Save the channel ID somewhere so you can have your bot reference it later (e.g., post to that channel).</p>
+</section>
+<section id="test-your-tokens">
+<h2>Test your tokens<a class="headerlink" href="#test-your-tokens" title="Permalink to this headline">#</a></h2>
+<p>Now that you have your token, and other info, you can test out your code in chapter 2.3.8 (<a class="reference internal" href="../ch02_definitions/03_automation/08_demo.html"><span class="doc std std-doc">Demo: Try Running the Discord Bot!</span></a>). You can try running the code and replacing the fake discord token and channel ids with the ones from your account, and see if you can use the code to post an actual tweet to your account.</p>
+</section>
+<section id="understand-reddit-rules-for-bots">
+<h2>Understand Reddit Rules for Bots<a class="headerlink" href="#understand-reddit-rules-for-bots" title="Permalink to this headline">#</a></h2>
+<p>Before you try doing anything too creative with reddit  bots, make sure you look over the <a class="reference external" href="https://discord.com/developers/docs/policies-and-agreements/developer-policy">Discord Developer Policy</a>, that way you don’t get yourself banned.</p>
 </section>
 </section>
 
@@ -804,6 +898,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sign-up-for-discord">Sign up for Discord</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-your-own-discord-server">Create your own Discord Server</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-discord-application">Create a Discord “Application”</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-discord-token">Get Discord Token</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-bot-invite-link">Get Bot Invite Link</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-app-to-a-discord-server">Add app to a Discord Server</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-channel-id-number">Get Channel Id Number</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-your-tokens">Test your tokens</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understand-reddit-rules-for-bots">Understand Reddit Rules for Bots</a></li>
 </ul>
   </nav></div>
 
