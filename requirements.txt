@@ -4,3 +4,4 @@ numpy
 tweepy
 jupyterquiz
 praw
+discord

@@ -1,0 +1,53 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title:  Social Media, Ethics, and Automation
+author: Kyle Thayer and Susan Notess
+logo: logo.png
+
+exclude_patterns: [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints", demo_jupyterbook_files, unused]
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: force
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: book.tex
+
+parse:
+  myst_enable_extensions:
+    # don't forget to list any other extensions you want enabled,
+    # including those that are enabled by default!
+    - deflist
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/social-media-ethics-automation/book/  # Online location of your book
+  path_to_book: book_contents  # Optional path to your book, relative to the repository root
+  branch: main  # Which branch of the repository should be used when creating links (optional)
+
+launch_buttons:
+  notebook_interface: "jupyterlab"  # or "classic"
+  # colab_url: "https://colab.research.google.com"
+  binderhub_url: "https://mybinder.org"  # The URL for your BinderHub (e.g., https://mybinder.org)
+  # thebe: true
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_issues_button: true
+  use_repository_button: true
+  extra_footer: >
+    <script type="application/json" class="js-hypothesis-config">
+      {
+        "showHighlights": "whenSidebarOpen"
+      }
+    </script>
+    <script async src="https://hypothes.is/embed.js"></script>

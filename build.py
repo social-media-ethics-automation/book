@@ -39,8 +39,12 @@ book_directory = "book_contents"
 
 
 toc_source = open(book_directory + '/_toc_source.yml', "r").read().split("\n")
+config_source = open(book_directory + '/_config_source.yml', "r").read().split("\n")
 
 
+# make new docs
+if not os.path.exists("docs"):
+    os.mkdir("docs")
 
 
 for platform in platforms:
@@ -51,6 +55,7 @@ for platform in platforms:
 
     
 
+    # Copy over Table of Contents and fix it for the specific platform
     new_toc = toc_source.copy()
 
     platform_specific_files = []
@@ -111,18 +116,43 @@ for platform in platforms:
     with open(book_directory + '/_toc.yml', 'w') as file:
         file.write("\n".join(new_toc))
 
-    #print("\n".join(new_toc))
+    # Copy over Table of Contents and fix it for the specific platform
+    new_config = config_source.copy()
+    for i, config_line in enumerate(new_config):
+        if "path_to_book:" in config_line:
+            line_parts = config_line.split(":")
+            new_config[i] = line_parts[0] + ": " + "docs/"+platform["file_name"] + "/_sources" + " # Optional path to your book, relative to the repository root"
 
+    with open(book_directory + '/_config.yml', 'w') as file:
+        file.write("\n".join(new_config))
+    
+    # Build the project
 
     build_path = "_build/" + platform["file_name"]
 
-    if "--clean" in sys.argv:
+    if "--clean" in sys.argv or "clean" in sys.argv:
         if os.path.exists(build_path) and os.path.isdir(build_path):
             shutil.rmtree(build_path)
 
     os.system('jupyter-book build book_contents --path-output ' + build_path)
 
+    #Copy files all over to the docs directory
+
+    # first clear old docs
+    if os.path.exists("docs/"+platform["file_name"]) and os.path.isdir("docs/"+platform["file_name"]):
+        shutil.rmtree("docs/"+platform["file_name"])
+
+    # copy website each platform
+    shutil.copytree("_build/"+platform["file_name"]+"/_build/html", "docs/"+platform["file_name"] + "/")
+
+    # copy source docs (so github links and code editor links work correctly)
+    # Maybe not needed?
+    shutil.copytree("book_contents", "docs/"+platform["file_name"] + "/_sources", dirs_exist_ok = True)
+
+
+    # Clean up
     os.remove(book_directory + '/_toc.yml')
+    os.remove(book_directory + '/_config.yml')
 
     for filename in platform_specific_files:
         destination_filename = book_directory + "/" + filename.replace("-***", "")
@@ -132,17 +162,6 @@ for platform in platforms:
 
 # make docs version of site
 
-# clear old docs
-if os.path.exists("docs") and os.path.isdir("docs"):
-    shutil.rmtree("docs/")
-
-# make new docs
-os.mkdir("docs")
-
-
-# copy each platform
-for platform in platforms:
-    shutil.copytree("_build/"+platform["file_name"]+"/_build/html", "docs/"+platform["file_name"] + "/")
 
 # make default forwarding in index.html
 with open('docs/index.html', 'w') as file:
