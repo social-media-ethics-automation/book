@@ -2,7 +2,7 @@
 There is no clear single definition for what counts as social media. John Hartley points out that you could consider almost all of culture as "social media."
 > “All media are social. All society is mediated.”
 >
-> - John Hartley, [The Sage Handbook of Social Media](http://sk.sagepub.com/reference/the-sage-handbook-of-social-media/i296.xml)
+> - John Hartley, [The Sage Handbook of Social Media](http://sk.sagepub.com/reference/the-sage-handbook-of-social-media/i296.xml) {cite:p}`hartley_sage_2018`
 
 This means that media, which includes painting, movies, books, speech, songs, dance, etc., all communicates in some way, and thus are social. And every social thing humans do is done through various mediums. So, for example, a war is enacted through the mediums of speech (e.g., threats, treaties, battle plans), coordinated movements, clothing (uniforms), and, of course, the mediums of weapons and violence.
 

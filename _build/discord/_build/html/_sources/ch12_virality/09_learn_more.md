@@ -3,3 +3,9 @@
 - [An anthropological introduction to youtube](https://www.youtube.com/watch?v=TPAO-lZ4_hU)
  - [On TikTok, instant fame often comes with a price: Sleepless nights, shadowbans and viral cruelty](https://www.washingtonpost.com/technology/interactive/2022/tiktok-viral-fame-harassment/)
  - [Sorry you went viral. TikTok’s explosive stardom has created a new kind of celebrity. But nothing goes viral like rage.](https://www.washingtonpost.com/technology/interactive/2022/tiktok-viral-fame-harassment/)
+
+
+## Bibliography
+```{bibliography} ch12_references.bib
+
+```

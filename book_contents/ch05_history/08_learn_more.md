@@ -5,3 +5,8 @@
 - See book: Writing on the Wall: Social Media - The First 2,000 Years by Tom Standage: [https://www.amazon.com/Writing-Wall-Social-Media-First/dp/1620402831](https://www.amazon.com/Writing-Wall-Social-Media-First/dp/1620402831)
 
 % - [A People’s History of Black Twitter](https://www.wired.com/story/black-twitter-oral-history-part-i-coming-together/)
+
+## Bibliography
+```{bibliography} ch05_references.bib
+
+```

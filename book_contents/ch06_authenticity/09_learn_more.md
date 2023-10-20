@@ -7,3 +7,9 @@
 -  [Brand Twitter Is Absurd, and It Will Only Get Worse](https://www.vice.com/en/article/pangw8/brand-twitter-is-absurd-and-it-will-only-get-worse)
 
 % TODO: Sarah Z on the person who wrote fan fiction and made accounts to attack themselves about it etc.
+
+
+## Bibliography
+```{bibliography} ch06_references.bib
+
+```

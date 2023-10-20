@@ -14,7 +14,7 @@ In 2013, Justine Sacco, a PR director at IAC, was boarding a flight to South Afr
    * ![Photo of Justine Sacco in an airport holding her phone up to her ear.](sacco_airport.png)
 1. Justine lost her job at IAC, apologized, and was later rehired by IAC.
 
-Sources: [Buzzfeed](https://www.buzzfeednews.com/article/alisonvingiano/this-is-how-a-womans-offensive-tweet-became-the-worlds-top-s), [IBTimes](https://www.ibtimes.com/justine-sacco-twitter-revolt-fierce-blowback-after-aids-africa-tweet-sent-iac-execs-1517670), later [Vox](https://www.vox.com/2018/1/19/16911074/justine-sacco-iac-match-group-return-tweet), later [New York Times profile](https://www.nytimes.com/2015/02/15/magazine/how-one-stupid-tweet-ruined-justine-saccos-life.html)
+Sources: [Buzzfeed](https://www.buzzfeednews.com/article/alisonvingiano/this-is-how-a-womans-offensive-tweet-became-the-worlds-top-s) {cite:p}`vingiano_this_2013`, [IBTimes](https://www.ibtimes.com/justine-sacco-twitter-revolt-fierce-blowback-after-aids-africa-tweet-sent-iac-execs-1517670), later [Vox](https://www.vox.com/2018/1/19/16911074/justine-sacco-iac-match-group-return-tweet), later [New York Times profile](https://www.nytimes.com/2015/02/15/magazine/how-one-stupid-tweet-ruined-justine-saccos-life.html)
 
 
 ## What our focus will be

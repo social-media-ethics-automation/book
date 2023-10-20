@@ -4,3 +4,9 @@
 
 
 % https://trustandsafety.fun/
+
+
+## Bibliography
+```{bibliography} ch14_references.bib
+
+```

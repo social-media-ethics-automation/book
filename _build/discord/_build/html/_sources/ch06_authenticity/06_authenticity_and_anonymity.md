@@ -22,3 +22,6 @@ We can next ask if authentic self-expression is a good thing or not. But that de
 
 
 [^tracing_back]: In reality, while many times people can remain anonymous, surprisingly often, anonymous users' identities can be discovered and revealed, whether through hacks or accidentally revealed information.
+
+
+% Anonymity links: https://womensmediacenter.com/speech-project/why-online-anonymity-is-critical-for-women  https://theconversation.com/online-abuse-banning-anonymous-social-media-accounts-is-not-the-answer-170224 https://www.eff.org/deeplinks/2020/03/right-anonymity-vital-free-expression-now-and-always  https://coralproject.net/blog/the-real-name-fallacy/ 

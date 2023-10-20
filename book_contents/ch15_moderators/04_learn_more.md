@@ -4,3 +4,8 @@
 
 
 % TODO: Add as activity the content moderation game
+
+## Bibliography
+```{bibliography} ch15_references.bib
+
+```

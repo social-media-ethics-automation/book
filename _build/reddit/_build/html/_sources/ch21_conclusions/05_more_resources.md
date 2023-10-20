@@ -49,3 +49,9 @@ Note: We haven't tried these out yet, but we are pointing to what looks like the
   - TikTok for developers appears to be geared toward making apps people can use on their accounts: [https://developers.tiktok.com/](https://developers.tiktok.com/)
 - QQ Weibo
   - Developer access (with some python code): [https://developers.weixin.qq.com/doc/offiaccount/en/Getting_Started/Getting_Started_Guide.html](https://developers.weixin.qq.com/doc/offiaccount/en/Getting_Started/Getting_Started_Guide.html)
+
+
+## Bibliography
+```{bibliography} ch21_references.bib
+
+```
