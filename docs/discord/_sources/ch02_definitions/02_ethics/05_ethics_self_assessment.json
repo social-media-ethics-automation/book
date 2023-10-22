@@ -1,0 +1,18 @@
+[{
+    "question": "Which ethics framework emphasizes that 'the ends justify the means'?",
+    "type": "multiple_choice",
+    "answers": [
+        {
+            "answer": "Deontology",
+            "correct": false
+        },
+        {
+            "answer": "Consequentialism",
+            "correct": true
+        },
+        {
+            "answer": "Virtue Ethics",
+            "correct": false
+        }
+    ]
+}]
