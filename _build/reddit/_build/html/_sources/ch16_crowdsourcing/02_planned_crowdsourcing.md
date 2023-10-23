@@ -8,7 +8,7 @@ Some online platforms are specifically created for crowdsourcing. For example:
 - [Stack Overflow](https://stackoverflow.com/):  A crowdsourced question-and-answer site specifically for programming questions.
 - [Amazon Mechanical Turk](https://www.mturk.com/): A site where you can pay for crowdsourcing small tasks (e.g., pay a small amount for each task, and then let a crowd of people choose to do the tasks and get paid).
 - [Upwork](https://www.upwork.com/): A site that lets people find and contract work with freelancers (generally larger and more specialized tasks than Amazon Mechanical Turk.
-- [Project Sidewalk](projectsidewalk.org): Crowdsourcing sidewalk information for mobility needs (e.g., wheelchair users).
+- [Project Sidewalk](https://projectsidewalk.org): Crowdsourcing sidewalk information for mobility needs (e.g., wheelchair users).
 
 ## Example Crowdsourcing Tasks
 

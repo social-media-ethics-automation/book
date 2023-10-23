@@ -20,7 +20,7 @@ Some reasons people engage in trolling behavior include:
 - __Gatekeeping__: Some trolling is done in a community to separate out an ingroup from outgroup (sometimes called newbies or normies). The ingroup knows that a post is just trolling, but the outgroup is not aware and will engage earnestly. This is sometimes known as trolling the newbies.
 - __Feeling Smart__: Going with the gatekeeping role above, trolling can make a troll or observer feel smarter than others, since they are able to see that it is trolling while others don't realize it.
 - __Feeling Powerful__: Trolling sometimes gives trolls a feeling of empowerment when they successfully cause disruption or cause pain.**
-- **Advance and argument / make a point**: Trolling is sometimes done in order to advance an argument or make a point. For example, proving that supposedly reliable news sources are gullible by [getting them to repeat an absurd gross story]((https://www.scientificamerican.com/article/internet-troll-sub-culture-s-savage-spoofing-of-mainstream-media-excerpt/)).
+- **Advance and argument / make a point**: Trolling is sometimes done in order to advance an argument or make a point. For example, proving that supposedly reliable news sources are gullible by [getting them to repeat an absurd gross story](https://www.scientificamerican.com/article/internet-troll-sub-culture-s-savage-spoofing-of-mainstream-media-excerpt/).
 - **Punish or stop**: Some trolling is in service of some view of justice, where a person, group or organization is viewed as doing something "bad" or "deserving" of punishment, and trolling is a way of fighting back.
 
 See also: [Wikipedia's summary](https://en.wikipedia.org/wiki/Internet_troll)

@@ -15,7 +15,7 @@ So, thanks to Grace Hopper, we now have a new set-up for computer programming, w
 
 ![diagram from earlier with person in English saying "Retweet all tweets that mention me", and computer using binary on the other side. Now in between is first a programmer which translates from English to a programming language, and then an interpreter or compiler, which translates from the programming language to the computer binary.](programming_language.png)
 
-When someone wants a computer to perform a task (that hasn't already been programmed), a human programmer will act as a translator to translate that task into a programming language. Next, a compiler (or interpreter) program will translate the programming language code into the binary code that the computer runs. In this set-up, the programming language acts as an intermediate language the way that French did in my [earlier analogy](02_language_translation.md).
+When someone wants a computer to perform a task (that hasn't already been programmed), a human programmer will act as a translator to translate that task into a programming language. Next, a compiler (or interpreter) program will translate the programming language code into the binary code that the computer runs. In this set-up, the programming language acts as an intermediate language the way that French did in my [earlier analogy](01_language_translation.md).
 
 In this set-up, a programmers basic task is to do these three things:
 1. Given a problem, break it down into steps for a computer

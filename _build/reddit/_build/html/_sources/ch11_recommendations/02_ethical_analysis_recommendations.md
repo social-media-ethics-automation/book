@@ -13,7 +13,7 @@ Similarly, recommendation algorithms are rules set in place that might produce b
 ```{figure} structural_problem_personal_choices.png
 ---
 width: 500px
-name: steal_meme_4_fig
+name: structural_problem_personal_choices_fig
 alt: "Tweet from Kelsey D. Atherton (@AthertonKD): Oh, you're experiencing a structural problem? Have you ever considered trying different personal choices instead?"
 ---
 [A tweet](https://twitter.com/AthertonKD/status/1120376944061583360) highlighting the difference between structural problems (systemic analysis) and personal choices (individual analysis).
@@ -24,7 +24,7 @@ Sometimes though, individuals are still blamed for systemic problems. For exampl
 ```{figure} musk_algorithm.png
 ---
 width: 500px
-name: steal_meme_4_fig
+name: musk_algorithm_fig
 alt: "Tweet from Elon Musk (@elonmusk): Trashing accounts that you hate will cause our algorithm to show you more of those accounts, as it is keying off of your interactions. Basically saying if you love trashing *that* account, then you will probably also love trashing *this* account. Not actually wrong lol."
 ---
 [A tweet](https://twitter.com/elonmusk/status/1615194151737520128) from current Twitter owner Elon Musk blaming users for how the recommendation algorithm interprets their behavior.

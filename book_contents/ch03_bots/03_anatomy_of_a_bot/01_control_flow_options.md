@@ -117,7 +117,7 @@ for user_to_block in users_to_block:
 ```
 ````
 
-We will show how to use statements in Python in the next section of this chapter: ([](02_demo_basic_flow.ipynb)).
+We will show how to use statements in Python in the next section of this chapter: ([](02_demo_statements_variables_sleep.ipynb)).
 
 ## Variables: Save information for later
 Variables are a way of saving information on the computer, so we can use it later in the computer program.
@@ -196,7 +196,7 @@ my_latest_tweet_conversation = client.Client.search_recent_tweets("conversation_
 ```
 ````
 
-We will show how to use variables in Python in the next section ([](02_demo_basic_flow.ipynb)).
+We will show how to use variables in Python in the next section ([](02_demo_statements_variables_sleep.ipynb)).
 
 
 ## Events: When you do something depends
@@ -313,7 +313,7 @@ while True:
 ````
 
 
-We will show how to use pausing in the next section ([](02_demo_basic_flow.ipynb)).
+We will show how to use pausing in the next section ([](02_demo_statements_variables_sleep.ipynb)).
 
 We will show how to use other Events and Scheduling in Python in Chapter 18: Public Shaming.
 
