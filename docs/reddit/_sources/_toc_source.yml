@@ -196,11 +196,12 @@ parts:
       - file: ch14_moderation/03_different_platforms
       - file: ch14_moderation/04_moderation_and_ethics
       - file: ch14_moderation/05_reflections
-      - file: ch14_moderation/06_tweets_and_replies/00_intro
+      - file: ch14_moderation/06_comments_and_replies/00_intro
         sections:
-        - file: ch14_moderation/06_tweets_and_replies/01_trees
-        - file: ch14_moderation/06_tweets_and_replies/02_demo_recursion
-        - file: ch14_moderation/06_tweets_and_replies/03_demo_hide_some_tweets
+        - file: ch14_moderation/06_comments_and_replies/01_trees
+        - file: ch14_moderation/06_comments_and_replies/02_demo_recursion
+        - file: ch14_moderation/06_comments_and_replies/03_demo_recursion_real
+        - file: ch14_moderation/06_comments_and_replies/04_demo_hide_some_replies
       - file: ch14_moderation/07_learn_more
     - file: ch15_moderators/00_moderators
       sections:
@@ -278,6 +279,5 @@ parts:
           - file: appendix/solutions/08_solution_sentiment_and_loop_vars
           - file: appendix/solutions/09_solution_functions
           - file: appendix/solutions/ch12_solution_dictionary_counters
-          - file: appendix/solutions/ch14_demo_recursion_on_twitter
       - file: appendix/teaching_with_this_book
       
