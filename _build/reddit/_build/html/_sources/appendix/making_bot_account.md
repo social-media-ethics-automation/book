@@ -1,4 +1,4 @@
-# Making a Bot Account (Reddit)
+# A1. Making a Bot Account (Reddit)
 _Choose Social Media Platform: __Reddit__ | <a href='../../discord/appendix/making_bot_account.html'>Discord</a>_
 
 

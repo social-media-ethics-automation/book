@@ -1,7 +1,7 @@
 jupyter-book
+jupyterquiz
 matplotlib
 numpy
-tweepy
-jupyterquiz
+pandas
 praw
 discord

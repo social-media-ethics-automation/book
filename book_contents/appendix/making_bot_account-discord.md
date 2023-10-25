@@ -1,4 +1,4 @@
-# Making a Bot Account (Discord)
+# A1. Making a Bot Account (Discord)
 
 In using this textbook, you will have opportunities to create and run social media bots. Here we will run through how to create a Discord account and set it up for running your own bots.
 

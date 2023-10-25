@@ -5,7 +5,7 @@ title:  Social Media, Ethics, and Automation
 author: Kyle Thayer and Susan Notess
 logo: logo.png
 
-exclude_patterns: [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints", demo_jupyterbook_files, unused, "**-discord.**", "**-reddit.**", "fake_apis"]
+exclude_patterns: [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints", demo_jupyterbook_files, unused, "**-discord.**", "**-reddit.**", "**-supporting_code.**", "fake_apis"]
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html

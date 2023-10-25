@@ -279,5 +279,21 @@ parts:
           - file: appendix/solutions/08_solution_sentiment_and_loop_vars
           - file: appendix/solutions/09_solution_functions
           - file: appendix/solutions/ch12_solution_dictionary_counters
-      - file: appendix/teaching_with_this_book
+      - file: appendix/teaching/00_intro
+        sections:
+          - file: appendix/teaching/01_course_work/00_intro 
+            sections:
+              - file: appendix/teaching/01_course_work/01_readings
+              - file: appendix/teaching/01_course_work/02_practice
+              - file: appendix/teaching/01_course_work/03_assignments/00_intro
+                sections:
+                  - file: appendix/teaching/01_course_work/03_assignments/a1_make_7_reddit_posts
+                  - file: appendix/teaching/01_course_work/03_assignments/a2_another_site
+                  - file: appendix/teaching/01_course_work/03_assignments/a3_troll_reply_bot
+                  - file: appendix/teaching/01_course_work/03_assignments/a4-political-bias
+                  - file: appendix/teaching/01_course_work/03_assignments/a5-best-comments
+              - file: appendix/teaching/01_course_work/04_group_project
+              - file: appendix/teaching/01_course_work/05_writing_assignment
+          - file: appendix/teaching/02_schedule
+          - file: appendix/teaching/03_pedagogy
       
