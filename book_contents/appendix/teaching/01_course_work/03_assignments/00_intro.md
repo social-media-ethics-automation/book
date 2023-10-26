@@ -1,4 +1,4 @@
-# A3.1.3 Programming Assignments
+# Programming Assignments
 
 All assignment files are in the github repository here:
 [https://github.com/social-media-ethics-automation/book/tree/main/docs/reddit/_sources/appendix/teaching/01_course_work/03_assignments](https://github.com/social-media-ethics-automation/book/tree/main/docs/reddit/_sources/appendix/teaching/01_course_work/03_assignments)

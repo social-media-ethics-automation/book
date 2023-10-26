@@ -292,8 +292,24 @@ parts:
                   - file: appendix/teaching/01_course_work/03_assignments/a3_troll_reply_bot
                   - file: appendix/teaching/01_course_work/03_assignments/a4-political-bias
                   - file: appendix/teaching/01_course_work/03_assignments/a5-best-comments
-              - file: appendix/teaching/01_course_work/04_group_project
-              - file: appendix/teaching/01_course_work/05_writing_assignment
+              - file: appendix/teaching/01_course_work/04_group_project/00_intro
+                sections:
+                - file: appendix/teaching/01_course_work/04_group_project/01_description
+                - file: appendix/teaching/01_course_work/04_group_project/02_project_proposal
+                - file: appendix/teaching/01_course_work/04_group_project/03_project_write_up
+                - file: appendix/teaching/01_course_work/04_group_project/04_project_presentation
+                - file: appendix/teaching/01_course_work/04_group_project/05_peer_eval
+                - file: appendix/teaching/01_course_work/04_group_project/06_favorite_projects
+              - file: appendix/teaching/01_course_work/05_writing_project/00_intro
+                sections:
+                - file: appendix/teaching/01_course_work/05_writing_project/01_writing_description
+                - file: appendix/teaching/01_course_work/05_writing_project/02_proposal
+                - file: appendix/teaching/01_course_work/05_writing_project/03_sourcing
+                - file: appendix/teaching/01_course_work/05_writing_project/04_ethics_background
+                - file: appendix/teaching/01_course_work/05_writing_project/05_outline
+                - file: appendix/teaching/01_course_work/05_writing_project/06_full_draft
+                - file: appendix/teaching/01_course_work/05_writing_project/07_final_project
+
           - file: appendix/teaching/02_schedule
           - file: appendix/teaching/03_pedagogy
       
