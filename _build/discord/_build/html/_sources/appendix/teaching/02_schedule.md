@@ -1,1 +1,1 @@
-# A3.2 Course Schedule
+# Course Schedule

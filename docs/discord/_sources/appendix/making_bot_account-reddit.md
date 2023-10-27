@@ -1,4 +1,4 @@
-# A1. Making a Bot Account (Reddit)
+# Making a Bot Account (Reddit)
 
 
 

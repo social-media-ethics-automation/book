@@ -1,1 +1,1 @@
-# A3.3 Pedagogy
+# Pedagogy

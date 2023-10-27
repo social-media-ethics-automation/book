@@ -1,4 +1,4 @@
-# A3.1 Assignments
+# Assignments
 
 ```{tableofcontents}
 ```

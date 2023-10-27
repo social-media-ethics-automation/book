@@ -1,4 +1,4 @@
-# A2. Practice Solutions
+# Practice Solutions
 
 These are solutions to the practice problems in the different chapters.
 

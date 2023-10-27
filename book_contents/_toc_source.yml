@@ -268,6 +268,7 @@ parts:
         - file: ch21_conclusions/05_more_resources
 
   - caption: Appendix
+    numbered: 3
     chapters:
       - file: appendix/making_bot_account-***
       - file: appendix/solutions/00_solutions
@@ -309,7 +310,6 @@ parts:
                 - file: appendix/teaching/01_course_work/05_writing_project/05_outline
                 - file: appendix/teaching/01_course_work/05_writing_project/06_full_draft
                 - file: appendix/teaching/01_course_work/05_writing_project/07_final_project
-
           - file: appendix/teaching/02_schedule
           - file: appendix/teaching/03_pedagogy
       
