@@ -1,4 +1,4 @@
-# (Incomplete) Teaching With This Book
+# Teaching With This Book
 
 ```{tableofcontents}
 ```
