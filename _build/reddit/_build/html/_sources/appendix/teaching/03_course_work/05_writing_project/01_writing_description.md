@@ -6,7 +6,7 @@ In this class we have practiced using different ethics frameworks to look at iss
 
 Your task is to create a project that explores the following: 
 - **Present a social media and automation issue or scenario**
-  -  You can choose whatever interests you. It can be from the book (feel free to look ahead at the outline and links in future chapters), or it can be something not addressed in the book.
+  -  You can choose whatever interests you. It can be from the book (feel free to look at future chapters), or it can be something not addressed in the book.
 - **Use two ethics frameworks to analyze a issue/scenario**
   - You can use the ethics frameworks from the book or ones that we didn't mention but you want to use.
 - **Compare and contrast how the two ethics frameworks applied to the issue/scenario**
