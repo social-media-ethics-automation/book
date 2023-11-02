@@ -19,6 +19,29 @@ Now, how these algorithms precisely work is hard to know, because social media s
 - They don't want malicious users to see the algorithm and figure out how to best make their content go viral
 
 
+## Choosing Recommendation Algorithms
+Sometimes social media platforms let users choose between different recommendation algorithms, like in the examples below:
+
+
+```{figure} reddit_recommendation_options.png
+---
+width: 150px
+name: reddit_recommendation_options_fig
+alt: "Reddit dropdown menu for \"sort by\" with options: hot, new, top, rising"
+---
+Reddit subreddit options for sort order of posts (according to different algorithms).
+```
+
+```{figure} pandora_recommendation_options.png
+---
+width: 400px
+name: pandora_recommendation_options_fig
+alt: "Pandora menu for \"choose a mode to fine-tune your station\" with options: My station, Crowd Faves, Discover, Deep Cuts, Newly Released, Artist Only"
+---
+Pandora music app recommendation options.
+```
+
+
 ## Reflections
 - What experiences do you have of social media sites making particularly good recommendations for you?
 - What experiences do you have of social media sites making particularly bad recommendations for you?
