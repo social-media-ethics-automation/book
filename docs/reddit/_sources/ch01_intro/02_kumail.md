@@ -1,9 +1,9 @@
 # Kumail Nanjiani's Reflections on Ethics in Tech
 
-![Photo of Kumail Nanjiani](kumail.png) [Image source](https://commons.wikimedia.org/wiki/File:Kumail_Nanjiani_by_Gage_Skidmore_2.jpg)
+![Photo of Kumail Nanjiani](kumail.png) [Image source](https://commons.wikimedia.org/wiki/File:Kumail_Nanjiani_by_Gage_Skidmore_2.jpg) {cite:p}`skidmore_english_2019`
 
 
-Kumail Nanjiani was a star of the [Silicon Valley](https://www.imdb.com/title/tt2575988/) TV Show, which was about the tech industry. He posted these reflections on ethics in tech on Twitter (@kumailn) on November 1, 2017:
+Kumail Nanjiani was a star of the [Silicon Valley](https://www.imdb.com/title/tt2575988/) {cite:p}`altschuler_silicon_2014` TV Show, which was about the tech industry. He posted these reflections on ethics in tech on Twitter (@kumailn) on November 1, 2017:
 
 
 > As a cast member on a show about tech, our job entails visiting tech companies/conferences etc. We meet ppl eager to show off new tech.
@@ -30,4 +30,4 @@ Kumail Nanjiani was a star of the [Silicon Valley](https://www.imdb.com/title/tt
 - Why do you think the people who Kumail talked with didn't have answers to his questions?
 
 
-% Add a see also torment nexus: https://twitter.com/alexblechman/status/1457842724128833538, technical debt
+% Add a see also [Torment nexus](https://twitter.com/alexblechman/status/1457842724128833538) {cite:p}`alex_blechman_alexblechman_sci-fi_2021`, technical debt

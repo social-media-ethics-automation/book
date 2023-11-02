@@ -18,7 +18,7 @@ Susan is a philosopher working in ethics (among other things). They did their Ph
 ```
 
 ## Contributors
-We would like to thank the following people for their contributions: Emily Giverts (who made the first version of the programming exercises) and Kristen Thayer (for programming ideas, explanations, and analogies)
+We would like to thank the following people for their contributions: Emily Giverts (who made the first version of the programming exercises), Kristen Thayer (for programming ideas, explanations, and analogies), and the UW iSchool GA Crew (for help with citations).
 
 ## Feedback and insights:
 We would like to thank the following people for their feedback and insights: Alannah Oleson, Anna Lauren Hoffmann and Professor Annie Searle.
