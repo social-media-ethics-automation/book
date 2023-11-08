@@ -1,5 +1,10 @@
 # Reflection Activities: Actions on Social Media Designs
 
+% Different activity: Pre-CIDER
+% Think of different uses of social media, and which platforms are used for it (dating, information seeking, entertain, validate views, find community, share to friends or family)
+% What about each platform lets people perform their use on it?
+% Pick a platform not used (or used less) for a specific purpose? Why do you think it is used less?
+
 ## Comparing social media actions
 Open two social media sites and choose equivalent views on each (e.g., a list of posts, an individual post, an author page etc.).
 
