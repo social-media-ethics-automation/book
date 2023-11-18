@@ -39,7 +39,7 @@ _Note: two of the highlighted sections of code are surrounded by double quotes. 
 
 The goal of programming language code is to be readable by both humans and computers, but sometimes the meaning of code isn't always clear to humans trying to read it. In order to aid humans reading the code, programming languages allow programmers to do things to make the code more readable, such as adding extra blank lines between sections of code. Blank lines can be used to have some lines of code be visually grouped together, and some be separated, so humans can better follow the outline of the code. (We'll add or remove some blank lines to emphasize different things in the code below).
 
-Most programming languages also allow "comments," which are pieces of code that the computer will ignore. These comments allow the person writing the code to leave a note to future people reading the code, knowing that the computer won't read it (like an [aside](https://en.wikipedia.org/wiki/Aside) in a play).
+Most programming languages also allow "comments," which are pieces of code that the computer will ignore. These comments allow the person writing the code to leave a note to future people reading the code, knowing that the computer won't read it (like an [aside](https://en.wikipedia.org/wiki/Aside) {citep}`Aside2023` in a play).
 
 In Python, you can add a comment by using the `#` symbol. Python will ignore everything on a line that comes after the `#`. But human programmers will often look for the meaning of the program in these comments.
 
@@ -84,7 +84,7 @@ The first line of code is:
 import discord
 ```
 
-The purpose of this line of code that loads another set of code. The code it loads is called [discord.py](https://discordpy.readthedocs.io/en/stable/), which is code specially written to help make programs that work with Discord.
+The purpose of this line of code that loads another set of code. The code it loads is called [discord.py](https://discordpy.readthedocs.io/en/stable/) {citep}`WelcomeDiscordPy`, which is code specially written to help make programs that work with Discord.
 
 
 The next section of code is two lines long:

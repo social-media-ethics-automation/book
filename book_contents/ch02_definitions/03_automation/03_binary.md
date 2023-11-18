@@ -28,19 +28,19 @@ These 0s and 1s, can then be used to represent numbers, like this:
 - decimal 10 &rarr; binary 1010
 - ...
 
-But these binary 0s and 1s can be used for more than just representing numbers. In 1842, [Ada Lovelace](https://en.wikipedia.org/wiki/Ada_Lovelace) realized that a [full computer](https://en.wikipedia.org/wiki/Turing_completeness) (which was only a theoretical possibility at the time) could represent and work with all sorts of things:
+But these binary 0s and 1s can be used for more than just representing numbers. In 1842, [Ada Lovelace](https://en.wikipedia.org/wiki/Ada_Lovelace) {citep}`AdaLovelace2023` realized that a [full computer](https://en.wikipedia.org/wiki/Turing_completeness) {citep}`TuringCompleteness2023` (which was only a theoretical possibility at the time) could represent and work with all sorts of things:
 > [Computers] might act upon other things besides _number_ [...] Supposing, for instance, that the fundamental relations of pitched sounds in the science of harmony and of musical composition were susceptible of such expression and adaptations, the [computer] might compose elaborate and scientific pieces of music of any degree of complexity or extent.
 >
-> ![painting of Ada Lovelace, with intricate and fancy hair and purple dress](ada_lovelace.jpg)
+> ![painting of Ada Lovelace, with intricate and fancy hair and purple dress](ada_lovelace.jpg) {citep}`FileAdaLovelace2015`
 >
 > Augusta Ada King, Countess of Lovelace (1815-1852). Fun fact for those of you who are interested English Poetry: Ada Lovelace was the daughter of the poet Lord Byron.
 
 Everything a modern computer does happens through binary. So all information is stored in binary, such as:
-  - Text (like in this book). [For example](https://en.wikipedia.org/wiki/ASCII#Printable_characters): "_A_" can be stored as "_1000001_" and "_B_" can be stored as "_1000010_"
-  - Images are represented as a grid of points called [pixels](https://en.wikipedia.org/wiki/Pixel), and each pixel has a number representing its color in terms of Red, Green, and Blue. So a pixel with the color of "_000000001111111100000000_" would be green.
+  - Text (like in this book). [For example](https://en.wikipedia.org/wiki/ASCII#Printable_characters) {citep}`ASCII2023`: "_A_" can be stored as "_1000001_" and "_B_" can be stored as "_1000010_"
+  - Images are represented as a grid of points called [pixels](https://en.wikipedia.org/wiki/Pixel) {citep}`Pixel2023`, and each pixel has a number representing its color in terms of Red, Green, and Blue. So a pixel with the color of "_000000001111111100000000_" would be green.
   - Social media connections. For example, somewhere in Facebook's computer systems is information stored with your ID number, and it has a list of the ID numbers of the people you are friends with.
 
-Additionally, all the instructions which tell a computer what to do are stored in binary as well. For example, in the [Intel 8080 computer](http://dunfield.classiccmp.org/r/8080.txt):
+Additionally, all the instructions which tell a computer what to do are stored in binary as well. For example, in the [Intel 8080 computer](http://dunfield.classiccmp.org/r/8080.txt) {citep}`zotero-7163`:
   - "_00010100_" means "_add 1 to the number stored in register #2_"
   - "_11010010_" means "_jump to another set of instructions if condition #2 is true_"
 
