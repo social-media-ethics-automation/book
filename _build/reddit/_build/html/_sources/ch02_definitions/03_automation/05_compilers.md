@@ -2,9 +2,9 @@
 
 ## History
 
-In the early 1950s, [Grace Hopper](https://en.wikipedia.org/wiki/Grace_Hopper) proposed a better way of programming a computer. She suggested creating a “programming language” based on English words with a “compiler” computer program that would turn the computer language code into binary computer instructions.
+In the early 1950s, [Grace Hopper](https://en.wikipedia.org/wiki/Grace_Hopper) {cite:p}`GraceHopper2023` proposed a better way of programming a computer. She suggested creating a “programming language” based on English words with a “compiler” computer program that would turn the computer language code into binary computer instructions.
 
-![Photo of Grace Hopper seated at a big board of switches (a computer), with several men around her](grace_hopper.jpg)
+![Photo of Grace Hopper seated at a big board of switches (a computer), with several men around her](grace_hopper.jpg) {cite:p}`unknownEnglishSINeg2004`
 - photo of Grace Hopper c. 1960, at that time a Commander in the US Navy.
 
 When Hopper's ideas were mostly ignored, she proceeded to create her own compiler and later helped design some of the most important and influential early programming languages and compilers.
@@ -26,7 +26,7 @@ In this set-up, a programmers basic task is to do these three things:
 
 Programming languages (e.g., Python, R, Java) are specially designed languages that attempt to split the difference between how a computer thinks and communicates and how people think and communicate. There are many programming languages, with different specializations and trade-offs.
 
-In this book, we will use [Python](https://www.python.org/), which is commonly used in data science tasks, and has support for writing programs that work with Reddit.
+In this book, we will use [Python](https://www.python.org/) {cite:p}`WelcomePythonOrg2023`, which is commonly used in data science tasks, and has support for writing programs that work with Reddit.
 
 ## Compilers / Interpreters
 Compilers are special programs that translate code written in a programming language into the binary 0s and 1s that a computer runs.

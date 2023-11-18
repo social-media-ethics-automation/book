@@ -3,7 +3,7 @@
 To practice using ethical frameworks as tools, here is an exercise.
 
 ## Scenario: A Parent With Alzheimer's
-Suppose you are in the position of needing to decide what to do to care for a parent. Although they are used to an active and independent life, it is clear that they have been showing signs of worsening, early stages [Alzheimer's](https://www.nia.nih.gov/health/alzheimers-disease-fact-sheet). You believe they are no longer able to safely live on their own, but they get upset at the suggestion that they might need help.
+Suppose you are in the position of needing to decide what to do to care for a parent. Although they are used to an active and independent life, it is clear that they have been showing signs of worsening, early stages [Alzheimer's](https://www.nia.nih.gov/health/alzheimers-disease-fact-sheet) {cite:p}`AlzheimerDiseaseFact`. You believe they are no longer able to safely live on their own, but they get upset at the suggestion that they might need help.
 
 You have two options. Either you can intervene, by ignoring your parent's wishes and securing a professional carer or care home to support them, or you can choose not to intervene, hoping that they will finally realize they need care. You have consulted with your siblings, and they left the final decision to you. The cost of professional care will come out of your parent's financial reserves (they can afford it), but you will need to spend their money for them against their will.
 

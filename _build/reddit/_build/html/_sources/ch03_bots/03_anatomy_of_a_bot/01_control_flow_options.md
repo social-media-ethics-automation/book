@@ -2,16 +2,16 @@
 
 In order to understand how a bot is built and can work, we will now look at the different ways computer programs can be organized. We will cover a bunch of examples quickly here, to hopefully give you an idea of many options for how to write a program. Don't worry if you don't follow all of it, as we will go back over these one at a time in more detail throughout the book.
 
-In this section, we will not show actual Python computer programs (that will be in the next section). Instead, here we will focus on what programmers call "[psuedocode](https://en.wikipedia.org/wiki/Pseudocode)," which is a human language outline of a program. Psuedocode is intended to be easier to read and write. Pseudocode is often used by programmers to plan how they want their programs to work, and once the programmer is somewhat confident in their pseudocode, they will then try to write it in actual programming language code.
+In this section, we will not show actual Python computer programs (that will be in the next section). Instead, here we will focus on what programmers call "[psuedocode](https://en.wikipedia.org/wiki/Pseudocode) {cite:p}`Pseudocode2023`," which is a human language outline of a program. Psuedocode is intended to be easier to read and write. Pseudocode is often used by programmers to plan how they want their programs to work, and once the programmer is somewhat confident in their pseudocode, they will then try to write it in actual programming language code.
 
 ```{note}
 The programs outlined below in pseudocode are meant to demonstrate what could be done with a computer program, not what should be done or what would necessarily be a good idea.
 ```
 
 ## Statements: Steps that Run In Order
-Python is in a group of programming languages called [imperative programming languages](https://en.wikipedia.org/wiki/Imperative_programming)[^language_types_footnote]. At their core, programs written in imperative programming languages consist of a list of "statements" to be run in order.
+Python is in a group of programming languages called [imperative programming languages](https://en.wikipedia.org/wiki/Imperative_programming) {cite:p}`ImperativeProgramming2023`[^language_types_footnote]. At their core, programs written in imperative programming languages consist of a list of "statements" to be run in order.
 
-[^language_types_footnote]: There are other types of programming organizations as well, such as [functional programming](https://en.wikipedia.org/wiki/Functional_programming) (like [Excel](https://www.microsoft.com/en-us/research/blog/lambda-the-ultimatae-excel-worksheet-function/) and [Google Sheets](https://www.google.com/sheets/about/)),  [visual programming](https://en.wikipedia.org/wiki/Visual_programming_language) (like the educational [Scratch](https://scratch.mit.edu/), or the 3D Graphics [Blender node editor](https://docs.blender.org/manual/en/2.79/editors/node_editor/introduction.html])), [declarative programming](https://en.wikipedia.org/wiki/Declarative_programming) (like HTML and CSS web content) [object oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming) (can be done in Python, JavaScript, and many others), and [many more](https://en.wikipedia.org/wiki/Programming_paradigm).
+[^language_types_footnote]: There are other types of programming organizations as well, such as [functional programming](https://en.wikipedia.org/wiki/Functional_programming) {cite:p}`FunctionalProgramming2023` (like [Excel](https://www.microsoft.com/en-us/research/blog/lambda-the-ultimatae-excel-worksheet-function/) {cite:p}`hagenEnrichingExcelHigherorder2021` and [Google Sheets](https://www.google.com/sheets/about/) {cite:p}`GoogleSheetsOnline`),  [visual programming](https://en.wikipedia.org/wiki/Visual_programming_language) {cite:p}`VisualProgrammingLanguage2023` (like the educational [Scratch](https://scratch.mit.edu/) {cite:p}`ScratchImagineProgram`, or the 3D Graphics [Blender node editor](https://docs.blender.org/manual/en/2.79/editors/node_editor/introduction.html]) {cite:p}`IntroductionBlenderManual`), [declarative programming](https://en.wikipedia.org/wiki/Declarative_programming) {cite:p}`DeclarativeProgramming2023` (like HTML and CSS web content) [object oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming) {cite:p}`ObjectorientedProgramming2023` (can be done in Python, JavaScript, and many others), and [many more](https://en.wikipedia.org/wiki/Programming_paradigm) {cite:p}`ProgrammingParadigm2023`.
 
 So a program in one of these languages would look like:
 ```text
@@ -34,7 +34,7 @@ You might recognize this as the same style of instructions as a cooking recipe, 
 In fact, the format of a cooking recipe is basically an imperative programming language where the cook acts as a "human computer" following the cooking instructions.
 
 > ![Photo of a man in a kitchen, looking at a notebook while mixing something in a bowl. The bowl is surrounded by eggs, strawberries and other ingredients.](cooking.jpg)
-> A human computer running a cooking program. In other words: "someone following a recipe" (but probably not a dumpling recipe) ([photo source](https://www.pexels.com/photo/a-man-cooking-at-the-kitchen-6944110/))
+> A human computer running a cooking program. In other words: "someone following a recipe" (but probably not a dumpling recipe) ([photo source](https://www.pexels.com/photo/a-man-cooking-at-the-kitchen-6944110/) {cite:p}`PhotoVladaKarpovich`)
 
 Twitter bots are generally organized in this same way, so one bot might be organized like this:
 ```text
@@ -446,7 +446,7 @@ Or a computer program can repeat an action until a condition is met:
 :class: dropdown
 Note: I am not going to directly give you code for harassing someone.
 
-As for repeating an action until a condition is met, those are done with [while loops](https://www.w3schools.com/python/python_while_loops.asp). Feel free to use while loops when you have a legitimate, non-harassment use.
+As for repeating an action until a condition is met, those are done with [while loops](https://www.w3schools.com/python/python_while_loops.asp) {cite:p}`PythonLoops`. Feel free to use while loops when you have a legitimate, non-harassment use.
 ````
 
 We will show how to use loops in Chapter 5: History of Social Media.
@@ -500,7 +500,7 @@ The recipe also could ask you to make a different version of a recipe from anoth
 
 In programming, a function is a small program that you can run from another place in the code (programmer call this "calling" a function). Functions also can accept data and options for how they run. Code libraries are a collection of functions and data that help with certain tasks.
 
-In this book, we will be using the [praw](https://praw.readthedocs.io/) code library, which comes with many pre-written functions that help us do actions on Reddit, functions like:
+In this book, we will be using the [praw](https://praw.readthedocs.io/) {cite:p}`PRAWDocumentationa` code library, which comes with many pre-written functions that help us do actions on Reddit, functions like:
 - `subreddit` (to select a subreddit)
 - `submit` (to submit to a subreddit)
 - `submit_image` (to submit an image to a subreddit)
@@ -508,7 +508,7 @@ In this book, we will be using the [praw](https://praw.readthedocs.io/) code lib
 - `upvote` (to upvote a post or comment)
 - etc.[^praw_functions_footnote]
 
-[^praw_functions_footnote]: You can get a full list of praw functions by starting from [this Praw documentation page](https://praw.readthedocs.io/en/latest/code_overview/praw_models.html). That page has links for each type of thing on reddit, such as a comment, redditor, submission, etc. If you follow one of those you will get information on the different things you can do with those on using praw. Unfortunately, it is not easy to read this information, but we will cover pieces of it as w ego in this book.
+[^praw_functions_footnote]: You can get a full list of praw functions by starting from [this Praw documentation page](https://praw.readthedocs.io/en/latest/code_overview/praw_models.html) {cite:p}`WorkingPRAWModels`. That page has links for each type of thing on reddit, such as a comment, redditor, submission, etc. If you follow one of those you will get information on the different things you can do with those on using praw. Unfortunately, it is not easy to read this information, but we will cover pieces of it as w ego in this book.
 
 If you look back over the various psuedocode and code examples above, most of them involve calling various functions, (though those examples use the tweepy library for Twitter). Additionally, the scheduling example code includes defining a new function and using it.
 
