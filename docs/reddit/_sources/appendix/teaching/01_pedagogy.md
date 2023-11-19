@@ -1,4 +1,4 @@
-# (Incomplete) Pedagogical Goals and Design
+# Pedagogical Goals and Design
 
 ## Combining Topics
 
@@ -17,7 +17,7 @@ To integrate ethical considerations throughout the textbook in an inclusive and 
 ## Activities and Interactivity
 
 ### Design Activities
-TODO: finish this
+We wanted to give students opportunities to critique designs of social media and consider their own ideas for designing social media. To support this we use the CIDER method for critiquing designs and thinking of design changes. We also give students some more open ended design opportunities for conceptual design, as well as freedom in their programming assignments to make design decisions and explain and critique their design decisions.
 
 
 ### Interactive Coding

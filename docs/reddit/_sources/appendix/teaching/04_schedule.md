@@ -1,7 +1,7 @@
 # Course Schedule
 
 ## Homework placements
-The programming assignments are dependent on prior chapter material as follows:
+The [](03_course_work/03_assignments/00_intro.md) are dependent on prior chapter material as follows:
 
 - [](03_course_work/03_assignments/a1_make_7_reddit_posts.ipynb) depends on Chapter 3 [](../../ch03_bots/00_bots.md)
 - [](03_course_work/03_assignments/a2_another_site.md) is basically a repeat of A1
@@ -9,7 +9,7 @@ The programming assignments are dependent on prior chapter material as follows:
 - [](03_course_work/03_assignments/a4-political-bias.ipynb) depends on Ch 8 [](../../ch08_data_mining/00_data_mining.md)
 - [](03_course_work/03_assignments/a5-best-comments.ipynb) depends on Ch 14 [](../../ch14_moderation/00_moderation.md)
 
-_Note: I haven't yet placed the project or writing assignments on the schedules below. You will have to look at those and back track how many weeks early you want students to start those_
+_Note: We haven't yet placed the project or writing assignments on the schedules below. You will have to look at those and back track how many weeks early you want students to start those_
 
 
 ## Combining Chapters
