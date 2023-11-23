@@ -9,6 +9,7 @@ The programming assignments are dependent on prior chapter material as follows:
 - [](03_course_work/03_assignments/a4-political-bias.ipynb) depends on Ch 8 [](../../ch08_data_mining/00_data_mining.md)
 - [](03_course_work/03_assignments/a5-best-comments.ipynb) depends on Ch 14 [](../../ch14_moderation/00_moderation.md)
 
+_Note: I haven't yet placed the project or writing assignments on the schedules below. You will have to look at those and back track how many weeks early you want students to start those_
 
 
 ## Combining Chapters
@@ -20,8 +21,31 @@ Depending on your specific schedule, you may need to double up some chapters in 
 - Ch 14 Content Moderation / Ch 15 Content Moderators
 - Ch 19 Capitalism / Ch 20 Colonialism
 
-## (Incomplete) Necessary and Skippable Programming Demos
-TODO: Some of the programming demos are necessary for understanding future content, and some are not
+## Necessary and Skippable Programming Demos
+
+Some of the programming demos are necessary for understanding future content programming demos and assignments, and some are not. Here is the current status of this:
+
+- Ch 1: _No demo_
+- Ch 2: **Necessary** (define programming, comments)
+- Ch 3: **Necessary** (program organization, specifically statements, variables, and sleep)
+- Ch 4: **Necessary** (data types)
+- Ch 5: **Necessary** (loops, lists, dictionaries)
+- Ch 6: Skippable (get author info)
+- Ch 7: **Necessary** (conditionals, string manipulation)
+- Ch 8: **Necessary** (sentiment analysis, loop variables)
+- Ch 9: **Necessary** (writing functions)
+- Ch 10: Skippable (alt-text)
+- Ch 11: **Necessary** (dictionary counters)
+- Ch 12: _No demo (yet)_
+- Ch 13: Skippable (only positive news)
+- Ch 14: **Necessary** (Display comment/reply tree recursively)
+- Ch 15: _No demo_
+- Ch 16: _No demo (yet)_
+- Ch 17: _No demo (yet)_
+- Ch 18: _No demo (yet)_
+- Ch 19: _No demo_
+- Ch 20: _No demo_
+- Ch 21: _No demo_
 
 ## Quarter System Schedule
 This schedule assumes a quarter system with:
@@ -114,12 +138,14 @@ This schedule assumes a quarter system with:
     - Activity: Student reflections on course
   - Lab: Work on Final Project
   - Lecture: **Project Fair**
+    - Due: Final group project
+    - Due: Final writing project
 
 
 
 
 
-##  (Incomplete) Semester System Schedule
+## Semester System Schedule
 This schedule assumes a semester system with:
  - ~16 weeks of class
  - ~3 hours of class per week
@@ -131,69 +157,129 @@ This schedule assumes a semester system with:
 48 lectures - .43 chapters per lecture
 
 
-- Week 1: Intro and Definitions (Chapters 1 & 2)
-  - Lecture: Intro + Social Media + Demo bot
-  - Lecture: Ethics + Instructions for creating bot account
-    - Reading Due: Ch 1 and Ch 2
-  - Lecture: Automation
-- Week 2: Bots (Chapter 3)
-  - Lecture: Initial Discussion
-  - Lecture: Design exercise
-  - Lecture: Programming demo and practice
-- Week 3: Data (Chapter 4)
+- Week 1: **Intro and Definitions** (Chapters 1 & 2)
+  - Lecture: **Intro / Social Media**
+    - Syllabus
+    - Define Social media
+    - Demo Bot
+  - Lecture: **Ethics**
+    - Due Ch 1 - 2.2 Reading
+    - Activity: Ethics chart
+    - Start students on creating bot account
+  - Lecture: **Automation**
+    - Due Finish Ch 2 Reading
+    - Demo Bot in detail
+- Week 2: **Bots** (Chapter 3)
   - Lecture: 
+   - Due Ch 3 Reading
   - Lecture: 
+    - Ch 3 Programming demo and practice
+    - Start [](03_course_work/03_assignments/a1_make_7_reddit_posts.ipynb)
   - Lecture:
-- Week 4: History of social Media (Chapter 5)
+    - Ch 3 Design/Reflection activity
+- Week 3: **Data** (Chapter 4)
   - Lecture: 
+    - Due Ch 4 Reading
   - Lecture: 
+    - Ch 4 Programming demo and practice
+    - Start [](03_course_work/03_assignments/a2_another_site.md)
   - Lecture:
-- Week 5: Authenticity and Trolling (Chapters 6 & 7)
+    - Ch 4 Design/Reflection activity
+- Week 4: **History of Social Media** (Chapter 5)
   - Lecture: 
-  - Lecture: 
+    - Due Ch 5 Reading
   - Lecture:
-- Week 6: Data Mining (Chapter 8)
-  - Lecture: 
-  - Lecture: 
+    - Ch 5 Programming demo and practice 
   - Lecture:
-- Week 7: Privacy and Security (Chapter 9)
+    - Ch 5 Design/Reflection activity
+- Week 5: **Authenticity and Trolling** (Chapters 6 & 7)
   - Lecture: 
+    - Due Ch 6 & 7 Reading
   - Lecture: 
+    - Ch 6 & 7 Programming demo and practice 
+    - Start [](03_course_work/03_assignments/a3_troll_reply_bot.ipynb)
   - Lecture:
-- Week 8: Accessibility (Chapter 10) 
+    - Ch 6 & 7 Design/Reflection activity
+- Week 6: **Data Mining** (Chapter 8)
   - Lecture: 
+    - Due Ch 8 Reading
   - Lecture: 
+    - Ch 8 Programming demo and practice 
   - Lecture:
-- Week 9: Recommendation Algorithms (Chapter 11)
+    - Ch 8 Design/Reflection activity
+- Week 7: **Privacy and Security** (Chapter 9)
   - Lecture: 
+    - Due Ch 9 Reading
   - Lecture: 
+    - Ch 9 Programming demo and practice 
   - Lecture:
-- Week 10: Virality (Chapter 12)
+    - Ch 9 Design/Reflection activity
+- Week 8: **Accessibility** (Chapter 10) 
   - Lecture: 
+    - Due Ch 10 Reading
   - Lecture: 
+    - Ch 10 Programming demo and practice 
   - Lecture:
-- Week 11: Mental Health (Chapter 13)
+    - Ch 10 Design/Reflection activity
+- Week 9: **Recommendation Algorithms** (Chapter 11)
   - Lecture: 
+    - Due Ch 11 Reading
   - Lecture: 
+    - Ch 11 Programming demo and practice 
+    - Start [](03_course_work/03_assignments/a4-political-bias.ipynb)
   - Lecture:
-- Week 12: Content Moderation and Moderators (Chapters 14 & 15)
+    - Ch 11 Design/Reflection activity
+- Week 10: **Virality** (Chapter 12)
   - Lecture: 
+    - Due Ch 12 Reading
   - Lecture: 
+    - Ch 12 Programming demo and practice 
   - Lecture:
-- Week 13: Crowdsourcing (Chapter 16)
+    - Ch 12 Design/Reflection activity
+- Week 11: **Mental Health** (Chapter 13)
   - Lecture: 
+    - Due Ch 13 Reading
   - Lecture: 
+    - Ch 13 Programming demo and practice 
   - Lecture:
-- Week 14: Harassment (Chapter 17)
+    - Ch 13 Design/Reflection activity
+- Week 12: **Content Moderation and Moderators** (Chapters 14 & 15)
   - Lecture: 
+    - Due Ch 14 & 15 Reading
   - Lecture: 
+    - Ch 14 & 15 Programming demo and practice 
+    - Start [](03_course_work/03_assignments/a5-best-comments.ipynb)
   - Lecture:
-- Week 15: Public Criticism and Public Shaming (Chapter 18)
+    - Ch 14 & 15 Design/Reflection activity
+- Week 13: **Crowdsourcing** (Chapter 16)
   - Lecture: 
+    - Due Ch 16 Reading
   - Lecture: 
+    - Ch 16 Programming demo and practice 
   - Lecture:
-- Week 16: Capitalism, Colonialism, Conclusions, and project fair (Chapters 19, 20, & 21)
-  - Lecture: Capitalism / Colonialism
-  - Lecture: Conclusions
-  - Lecture: Project Fair
+    - Ch 16 Design/Reflection activity
+- Week 14: **Harassment** (Chapter 17)
+  - Lecture: 
+    - Due Ch 17 Reading
+  - Lecture: 
+    - Ch 17 Programming demo and practice 
+  - Lecture:
+    - Ch 17 Design/Reflection activity
+- Week 15: **Public Criticism and Public Shaming** (Chapter 18)
+  - Lecture: 
+    - Due Ch 18 Reading
+  - Lecture: 
+    - Ch 18 Programming demo and practice 
+  - Lecture:
+    - Ch 18 Design/Reflection activity
+- Week 16: **Capitalism, Colonialism, Conclusions, and project fair** (Chapters 19, 20, & 21)
+  - Lecture: **Capitalism / Colonialism**
+    - Due Ch 19 & 20 Reading
+    - Ch 19 & 20 Design/Reflection activity
+  - Lecture: **Conclusions**
+    - Due Ch 21 Reading
+    - Activity: Student reflections on course
+  - Lecture: **Project Fair**
+    - Due: Final group project
+    - Due: Final writing project
 
