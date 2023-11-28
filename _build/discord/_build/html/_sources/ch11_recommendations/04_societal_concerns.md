@@ -11,6 +11,9 @@ The filter bubbles can be good or bad, such as forming bubbles for:
 - Marginalized communities can find safe spaces where they aren't constantly challenged or harassed (e.g., a [safe space](https://en.wikipedia.org/wiki/Safe_space))
 
 
+% TODO: include this Exposure to opposing views on social media can increase political polarization https://www.pnas.org/doi/abs/10.1073/pnas.1804840115 (related to citation below)
+% and this: https://www.cambridge.org/core/journals/episteme/article/abs/echo-chambers-and-epistemic-bubbles/5D4AC3A808C538E17C50A7C09EC706F0
+
 
 ## Amplifying Polarization and Negativity
 

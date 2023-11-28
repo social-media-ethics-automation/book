@@ -52,7 +52,7 @@ parts:
         sections:
           - file: ch03_bots/03_anatomy_of_a_bot/01_control_flow_options
           - file: ch03_bots/03_anatomy_of_a_bot/02_demo_statements_variables_sleep
-          - file: ch03_bots/03_anatomy_of_a_bot/03_practice_statements_variables_sleep
+          - file: ch03_bots/03_anatomy_of_a_bot/03_practice_statements_variables_sleep-***
       - file: ch03_bots/04_bots_and_responsibility
       - file: ch03_bots/05_bot_activity
       - file: ch03_bots/06_learn_more

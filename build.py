@@ -3,7 +3,8 @@ import sys
 import shutil
 import glob
 from colorama import Fore
-
+from colorama import init
+init(autoreset=True)
 
 
 platforms = [
@@ -90,21 +91,67 @@ for platform in platforms:
         platform_filename = book_directory + "/" + filename.replace("***", platform["file_name"])
         destination_filename = book_directory + "/" + filename.replace("-***", "")
         
-        # figure out file extensions!
+        # figure out file extensions and get contents
         matching_files = [f for f in glob.glob(platform_filename + ".*")]
 
         file_extension = ""
+        file_contents = ""
         if(len(matching_files) == 1):
             file_extension = matching_files[0].split(".")[1]
+
+            # Read old file to here
+            original_file_location = platform_filename + "." + file_extension
+            file_contents = open(original_file_location, "r").read().split("\n")
+
+        elif(len(matching_files) == 0):
+             
+
+            # find any file for any platform
+            any_platform_filename = book_directory + "/" + filename.replace("***", "*")
+            any_matching_files = [f for f in glob.glob(any_platform_filename)]
+
+            if(len(any_matching_files) == 0):
+                print(Fore.RED + 'Error: couldn\'t find any file matching ' + any_platform_filename + ', so can\'t make a stub version.')
+                continue
+
+            print(Fore.RED + 'Warning: couldn\'t find ' + platform_filename + '. Making a stub file.')
+            
+            # read contents of first open file
+            file_to_get_title_from = any_matching_files[0]
+            file_to_get_title_from_contents = open(file_to_get_title_from, "r").read().split("\n")
+            
+            file_to_get_title_from_extension = file_to_get_title_from.split(".")[1]
+            title_text = ""
+            # WARNING: Finding Titles is brittle code
+            if(file_to_get_title_from_extension == "ipynb"): #Try to find the title header in the ipynb file
+                title_line = ""
+                for line in file_to_get_title_from_contents:
+                    if '"# ' in line:
+                        title_line = line
+                        break
+                title_line = title_line.strip()
+                if title_line[0] != '"' and title_line[-1] != '"':
+                    print(Fore.RED + 'Error: alternate file ' + file_to_get_title_from_extension + '. title line didn\'t work: ' + title_line)
+                    continue
+                
+                title_text = title_line[1:-1]
+
+            else: #probably md, title should be first line
+                title_text = file_to_get_title_from_contents[0]
+            
+            # our new stub file will be an md file with a warning note
+            file_extension = "md"
+            file_contents = [title_text, 
+                             "__Content for the social media platform "+ platform["full_name"] +" hasn't been created yet. Please try another platform.__"]
+
         else:
             print(Fore.RED + 'Problem: found ' + len(matching_files) + 'files when looking for ' + platform_filename)
+            continue
 
-        #Copy file but add links to other versions
-        original_file_location = platform_filename + "." + file_extension
+        #Make new file (copied from old, if it existed), but with links
+
         destination_file_location =  destination_filename + "." + file_extension
         
-        file_contents = open(original_file_location, "r").read().split("\n")
-
         platform_selector = make_social_media_links(platform, destination_filename)
         if(file_extension == "ipynb"):
             # WARNING: This is very brittle coding to find the right place to put the new code

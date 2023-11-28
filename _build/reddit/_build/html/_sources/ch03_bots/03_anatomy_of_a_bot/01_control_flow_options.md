@@ -36,10 +36,10 @@ In fact, the format of a cooking recipe is basically an imperative programming l
 > ![Photo of a man in a kitchen, looking at a notebook while mixing something in a bowl. The bowl is surrounded by eggs, strawberries and other ingredients.](cooking.jpg)
 > A human computer running a cooking program. In other words: "someone following a recipe" (but probably not a dumpling recipe) ([photo source](https://www.pexels.com/photo/a-man-cooking-at-the-kitchen-6944110/) {cite:p}`PhotoVladaKarpovich`)
 
-Twitter bots are generally organized in this same way, so one bot might be organized like this:
+Social Media bots are generally organized in this same way, so one bot might be organized like this:
 ```text
-- Log into Twitter
-- Find any new tweets that mention me that also have curse words
+- Log into the social media app
+- Find any new posts that mention me that also have curse words
 - Look up the users who posted those tweets
 - Block those users
 ```
@@ -50,7 +50,7 @@ You are not expected to understand all this code. It is here to give you an exam
 
 Also, you'll notice that the actual code has a lot more steps then our psuedocode above has.
 
-Note: This code is untested and we may have made programming errors
+Note: This code is untested and we may have made programming errors, and Twitter (now called "X") doesn't allow free bot accounts anymore.
 ```python
 
 ########  Log Into Twitter  #######
