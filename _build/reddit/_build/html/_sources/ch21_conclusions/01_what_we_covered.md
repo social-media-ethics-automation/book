@@ -57,7 +57,7 @@ We also covered a number of topics in automation, such as:
 - JupyterHub and JupyterNotebooks
 - Variables
 - Data types (e.g., numbers, strings)
-- Reddit Praw library (posting, searching, etc.)
+- A Social Media API library (for posting, searching, etc.)
 - Other code libraries (e.g., time)
 - For Loops
 - Conditionals (if/else)

@@ -101,7 +101,17 @@ for platform in platforms:
 
             # Read old file to here
             original_file_location = platform_filename + "." + file_extension
-            file_contents = open(original_file_location, "r").read().split("\n")
+
+            try:
+                file_contents = open(original_file_location, "r").read()
+            except:
+                try: 
+                    file_contents = open(original_file_location, "r", encoding="utf8").read()
+                except:
+                    print(Fore.RED + 'ERROR READING FILE: ' + original_file_location)
+                    continue
+            
+            file_contents = file_contents.split("\n")
 
         elif(len(matching_files) == 0):
              
