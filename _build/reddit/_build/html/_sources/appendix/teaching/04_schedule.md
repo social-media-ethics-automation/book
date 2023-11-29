@@ -3,7 +3,7 @@
 ## Homework placements
 The [](03_course_work/03_assignments/00_intro.md) are dependent on prior chapter material as follows:
 
-- [](03_course_work/03_assignments/a1_make_7_reddit_posts.ipynb) depends on Chapter 3 [](../../ch03_bots/00_bots.md)
+- [](03_course_work/03_assignments/a1_make_7_posts.ipynb) depends on Chapter 3 [](../../ch03_bots/00_bots.md)
 - [](03_course_work/03_assignments/a2_another_site.md) is basically a repeat of A1
 - [](03_course_work/03_assignments/a3_troll_reply_bot.ipynb) depends on Chapter 7 [](../../ch07_trolling/00_trolling.md)
 - [](03_course_work/03_assignments/a4-political-bias.ipynb) depends on Ch 8 [](../../ch08_data_mining/00_data_mining.md)
@@ -68,7 +68,7 @@ This schedule assumes a quarter system with:
   - Lecture: **Bots**
     - Due Ch 3 Reading
     - Activity/Demo from Ch 3
-    - Start [](03_course_work/03_assignments/a1_make_7_reddit_posts.ipynb)
+    - Start [](03_course_work/03_assignments/a1_make_7_posts.ipynb)
   - Lab: Programming Practice Ch 2 & 3
   - Lecture: **Data**
     - Due Ch 4 Reading
@@ -174,7 +174,7 @@ This schedule assumes a semester system with:
    - Due Ch 3 Reading
   - Lecture: 
     - Ch 3 Programming demo and practice
-    - Start [](03_course_work/03_assignments/a1_make_7_reddit_posts.ipynb)
+    - Start [](03_course_work/03_assignments/a1_make_7_posts.ipynb)
   - Lecture:
     - Ch 3 Design/Reflection activity
 - Week 3: **Data** (Chapter 4)

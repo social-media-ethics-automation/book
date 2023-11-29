@@ -104,11 +104,12 @@ for platform in platforms:
 
             try:
                 file_contents = open(original_file_location, "r").read()
-            except:
+            except Exception as e:
                 try: 
                     file_contents = open(original_file_location, "r", encoding="utf8").read()
                 except:
                     print(Fore.RED + 'ERROR READING FILE: ' + original_file_location)
+                    print(e)
                     continue
             
             file_contents = file_contents.split("\n")
@@ -185,7 +186,7 @@ for platform in platforms:
             file_contents.insert(1, platform_selector + "\n")
         
 
-        with open(destination_file_location, 'w') as file:
+        with open(destination_file_location, 'w', encoding="utf8") as file:
             file.write("\n".join(file_contents))
 
     with open(book_directory + '/_toc.yml', 'w') as file:
