@@ -1,13 +1,23 @@
-# Design Example: Quoting
+# Design Example: Quoting Posts
 
-% TODO: change file name
+The way social media sites are designed can encourage or discourage different forms of harassment. One interaction type that many have pointed to as enabling harassment is quote posts.
 
+## Quote Posts
 
-## Quote Tweets
+A quote post (or on the site formerly known as Twitter, a "quote tweet"), which we saw examples of in the Virality chapter ([](../ch12_virality/04_viral_examples)), allows users to make a new post based on a previous post, but with added text or images. This new content can be used to express support, or add context, or in the example below, harass:
 
-The way social media sites are designed can encourage and discourage different forms of harassment.
+```{figure} punchable_face_qt.png
+---
+name: punchable_qt_fig
+width: 400px
+alt: "A tweet that says \"Try to smile today 😊\" with a photo (censored), that is quote tweeted by someone saying \"you have a very punchable face\". All identifying info is censored."
+---
+An example quote tweet used for harassment. The original tweet is a selfie of a smiling person, but the quote tweeter has responded with "you have a very punchable face." The harassing quote tweet has been liked 6 times. (Identifying parts of this tweet are redacted in order not to add to any harassment).
+```
 
-For example, people have made complaints about how [Quote Tweets Have Turned Us All Into Jerks](https://onezero.medium.com/quote-tweets-have-turned-us-all-into-jerks-d5776c807942) {cite:p}`adamsQuoteTweetsHave2020`. And the way that even trying to defend people can increase the harassment they face. One of the arguments is that by allowing quote Tweets, users will find a Tweet they disagree with, and quote the Tweet with a joke, insult, or comment to show how bad the original Tweet was ("dunking"). Then the original Tweet will spread through communities who disagree with it, all trying to do their own version of their best dunk or insult. As it spreads, some users may turn to other means of harassment, like direct messaging threats, or doxing the original Tweeter. Katherine Cross argues in [It's Not Your Fault You're a Jerk on Twitter: The design of the internet lets you harass and harm people without ever once interacting with them directly. Even if you're trying to defend them.](https://www.wired.com/story/social-media-harassment-platforms/) {cite:p}`crossItNotYour` that even people jumping in to defend the original Tweet may only cause it to go more viral and get even more negative attention. 
+% https://slate.com/technology/2017/12/dunking-is-delicious-and-also-probably-making-twitter-terrible.html
+
+Some people have argued that the quote post feature itself that is a problem: [Quote Tweets Have Turned Us All Into Jerks](https://onezero.medium.com/quote-tweets-have-turned-us-all-into-jerks-d5776c807942) {cite:p}`adamsQuoteTweetsHave2020`. One of the arguments is that by allowing quote Tweets, users will find a Tweet they disagree with, and quote the Tweet with a joke, insult, or comment to show how bad the original Tweet was ("dunking"). Then the original Tweet will spread through communities who disagree with it, all trying to do their own version of their best dunk or insult. As it spreads, some users may turn to other means of harassment, like direct messaging threats, or doxing the original Tweeter. Katherine Cross argued in [It's Not Your Fault You're a Jerk on Twitter: The design of the internet lets you harass and harm people without ever once interacting with them directly. Even if you're trying to defend them.](https://www.wired.com/story/social-media-harassment-platforms/) {cite:p}`crossItNotYour` that even people jumping in to defend the original Tweet may only cause it to go more viral and get even more negative attention.
 
 
 % Story: Neighbor Chili
@@ -20,19 +30,33 @@ For example, people have made complaints about how [Quote Tweets Have Turned Us 
 % [A woman made chili for neighbors, and outrage ensued. Was she wrong?](https://www.washingtonpost.com/food/2022/11/18/chili-neighbors-twitter-etiquette/) {cite:p}`heilWomanMadeChili2022`
 %   archive copy: https://web.archive.org/web/20221121094327/https://www.washingtonpost.com/food/2022/11/18/chili-neighbors-twitter-etiquette/
 
-In 2019 [Twitter began considering how to measure "health" of interactions](https://www.vox.com/2019/3/8/18245536/exclusive-twitter-healthy-conversations-dunking-research-product-incentives) {cite:p}`wagnerTwitterAmbitiousPlan2019` on the platform and figure out how to optimize their platform for healthier interactions. In 2020 [Twitter began giving users a warning before posting something that it's algorithm guessed could be offensive](https://www.theverge.com/2020/5/5/21248201/twitter-reply-warning-harmful-language-revise-tweet-moderation) {cite:p}`stattTwitterTestsWarning2020`, and [made further updates in 2021](https://www.theverge.com/2021/5/5/22420586/twitter-offensive-tweet-warning-prompt-updated-success-rate) {cite:p}`vincentTwitterUpdatesOffensive2021`.
+In 2019 [Twitter began considering how to measure "health" of interactions](https://www.vox.com/2019/3/8/18245536/exclusive-twitter-healthy-conversations-dunking-research-product-incentives) {cite:p}`wagnerTwitterAmbitiousPlan2019` on the platform to figure out how to optimize their platform for healthier interactions. In 2020 [Twitter began giving users a warning before posting something that it's algorithm guessed could be offensive](https://www.theverge.com/2020/5/5/21248201/twitter-reply-warning-harmful-language-revise-tweet-moderation) {cite:p}`stattTwitterTestsWarning2020`, and [made further updates in 2021](https://www.theverge.com/2021/5/5/22420586/twitter-offensive-tweet-warning-prompt-updated-success-rate) {cite:p}`vincentTwitterUpdatesOffensive2021`.
 
 
 ## Mastodon
-When creating the Twitter-like social media protocol Mastodon, its creator, Eugen Rochko, decided not to allow quote-tweet like posts:
+When creating the Twitter-like social media protocol Mastodon, its creator, Eugen Rochko, decided not to allow quote posts:
 
 > I've made a deliberate choice against a quoting feature because it inevitably adds toxicity to people's behaviours. You are tempted to quote when you should be replying, and so you speak at your audience instead of with the person you are talking to. It becomes performative. Even when doing it for "good" like ridiculing awful comments, you are giving awful comments more eyeballs that way. No quote toots. Thank's
 >
 > [Eugen](https://mastodon.social/@Gargron/99662106175542726) {cite:p}`EugenRochkoGargron2018` in 2018
 
-But others have argued that design decisions and community decisions made on Mastodon, such as no quotes (as well as their content-warning system) have made it more outwardly polite. But they also complain that this has made the platform very white, hostile to people of color talking about experiences of racism, and difficult to make a social movement. When masses of Twitter users migrated to Mastodon following Elon Musk's purchase of Twitter in the fall of 2022, there was renewed discussion:
 
-[@mekkaokereke@mastodon.cloud questions](https://mastodon.cloud/@mekkaokereke/109334079258663352) {cite:p}`MekkaVerifiedMekkaokereke2022`:
+But while quote posts can be used for harassment, the scientific evidence is unclear on if they actually increase harassment or are even the primary means of harassment (as opposed to replies or private messages) {cite:p}`QuoteTweeting302023`. 
+
+Furthermore, others have argued that various design decisions and community norms on Mastodon (lack of quote posts and expectations of content warnings on posts) make for an outwardly polite platform, but with toxic undercurrents and not serving diverse users. 
+
+In particular, Mastodon was built primarily by white men in tech enthusiasts (though there were some white queer groups that had a large role) {cite:p}`pincus_mastodon_2022`. The whiteness of Mastodon's developers and users made for an environment that was both hostile to people of color (e.g., they got direct harassment and white people complaining that people of color mentioned racism without using content warnings).
+
+When masses of Twitter users migrated to Mastodon following Elon Musk's purchase of Twitter in the fall of 2022, there was renewed discussion of quote posts and other aspects of Mastodon.
+
+[Dr. Jonathan Flowers argued](https://zirk.us/@shengokai/109347027270208314) {cite:p}`flowersQuoteTweetFunction2022`:
+> The quote tweet function in conjunction with the hashtag are what allow users to align with communities, and communities with conversations through how they enable cultural practices by means of a digital environment.
+>
+> On Black Twitter, the quote tweet and hashtag enable what Black cultural scholars call "call and response," something crucial to Black community practices. The hashtags curate the conversation and allow for its visibility.
+
+Various Mastodon users pointed out ways in which Mastodon's efforts to reduce harassment and make a more friendly (for its white userbase), prevent people of color (and other groups) from  organizing and sharing of necessary negative information.
+
+[Mekka Okereke questioned](https://mastodon.cloud/@mekkaokereke/109334079258663352) {cite:p}`MekkaVerifiedMekkaokereke2022`:
 > Is it possible to drive social change through Mastodon? Could "Black Lives Matter" have happened on Mastodon? Or do the "intentionally slow, pleasant conversation" features eliminate the possibility of this? Do the "interest silo" tendencies discourage cross pollination?
 >
 > [...]
@@ -41,13 +65,6 @@ But others have argued that design decisions and community decisions made on Mas
 >
 > What I'm unsure of, is if that means giving up on the capacity for social change. Are we Lotus eating?
 
-
-And [Dr. Jonathan Flowers argues](https://zirk.us/@shengokai/109347027270208314) {cite:p}`flowersQuoteTweetFunction2022`:
-> The quote tweet function in conjunction with the hashtag are what allow users to align with communities, and communities with conversations through how they enable cultural practices by means of a digital environment.
->
-> On Black Twitter, the quote tweet and hashtag enable what Black cultural scholars call "call and response," something crucial to Black community practices. The hashtags curate the conversation and allow for its visibility.
-
-(See also an interview with Dr. Jonathan Flowers on [The Whiteness of Mastodon](https://techpolicy.press/the-whiteness-of-mastodon/) {cite:p}`hendrixWhitenessMastodon2022`)
 
 
 Writer [Leslie Ye argued](https://twitter.com/lesliezye/status/1593631667037638660) {cite:p}`thisbarbieisacacklinghag[@lesliezye]HungOutThis2022` about some of the advantages of what Twitter:
@@ -71,14 +88,14 @@ Professor John R. Marks, IV argued that the [spread of negative content was actu
 
 <br>
 
-One example of how quote tweets were used to point out hypocrisy was the "[This you?](https://knowyourmeme.com/memes/this-you) {cite:p}`ThisYou2020`" style of quote tweet, as can be seen in the figure below:
+As one example of how quote posts were used on Twitter to point out hypocrisy was the "[This you?](https://knowyourmeme.com/memes/this-you) {cite:p}`ThisYou2020`" style of quote tweet, as can be seen in the figure below:
 ```{figure} this_you_fbi.png
 ---
 name: this_you_fbi_fig
 width: 300px
 alt: "Tweet from Marc Lamont Hill (@marclamonthill) quote Tweeting the FBI. The FBI tweet says \"On this 40th anniversary of #MLKDay as a federal holiday, the #FBI honors one of the most prominent leaders of the Civil Rights movement and reaffirms its commitment to Dr. King’s legacy of fairness and equal justice for all.\" Marc Lamont Hill quotes with the words \"This you?\" and a photo of a letter send to King to encourage him to commit suicide,"
 ---
-When the FBI account made a [Tweet in honor of Martin Luther King Jr. on the MLK holiday](https://twitter.com/FBI/status/1614986534318493696) {cite:p}`fbi[@fbi]This40thAnniversary2023`, author Marc Lamont Hill [used a quote tweet to dunk on the FBI Tweet by posting a copy of the letter the FBI sent Martin Luther King Jr. encouraging him to kill himself](https://twitter.com/marclamonthill/status/1615156250735435782) {cite:p}`marclamonthill[@marclamonthill]ThisYouHttps2023`. This is a different style of making the same point as the Tweet we showed in the Trolling chapter where Jaboukie Young-White impersonated the FBI account.
+When the FBI account made a [Tweet in honor of Martin Luther King Jr. on the MLK holiday](https://twitter.com/FBI/status/1614986534318493696) {cite:p}`fbi[@fbi]This40thAnniversary2023`, author Marc Lamont Hill [used a quote tweet to dunk on the FBI Tweet by posting a copy of the letter the FBI sent Martin Luther King Jr. encouraging him to kill himself](https://twitter.com/marclamonthill/status/1615156250735435782) {cite:p}`marclamonthill[@marclamonthill]ThisYouHttps2023`. This is a different style of making the same point as the Tweet we showed in the Trolling chapter ([](../ch07_trolling/01_what_is_trolling.md)) where Jaboukie Young-White impersonated the FBI account .
 ```
 
 <br>
@@ -107,5 +124,5 @@ Then on May 1st, 2023, [Eugen Rochko announced](https://mastodon.social/@Mastodo
 - How do you balance these different concerns?
 
 ## Further Reading
-- [Quote Tweeting: Over 30 Studies Dispel Some Myths](https://absolutelymaybe.plos.org/2023/01/12/quote-tweeting-over-30-studies-dispel-some-myths/) {cite:p}`QuoteTweeting302023`
+- Dr. Jonathan Flowers on [The Whiteness of Mastodon](https://techpolicy.press/the-whiteness-of-mastodon/) {cite:p}`hendrixWhitenessMastodon2022`
 - [Black Twitter, quoting, and white views of toxicity on Mastodon](https://privacy.thenexus.today/black-twitter-quoting-and-white-toxicity-on-mastodon/) {cite:p}`BlackTwitterQuoting2022`
