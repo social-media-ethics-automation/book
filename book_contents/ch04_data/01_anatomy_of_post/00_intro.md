@@ -1,6 +1,6 @@
 # Anatomy of a Social Media Post
 
-In order to understand how data is represented on a computer (following up on [Chapter 2.3.3: Computers Speak Binary](../../ch02_definitions/03_automation/03_binary.md)), we will look at all the data in an example social media post, in this case a tweet from the site formerly known as [Twitter](https://en.wikipedia.org/wiki/Twitter):
+In order to understand how data is represented on a computer (following up on [Chapter 2.3.3: Computers Speak Binary](../../ch02_definitions/03_automation/03_binary.md)), we will look at all the data in an example social media post, in this case a tweet from the site formerly known as [Twitter](https://en.wikipedia.org/wiki/Twitter) {cite:p}`Twitter2023`:
 
 ```{figure} dog_tweet.png
 ---
