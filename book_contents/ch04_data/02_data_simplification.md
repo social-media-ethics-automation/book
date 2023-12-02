@@ -4,19 +4,19 @@
 We've talked about how we represent data on a computer, but let's now step back and think about the nature of data itself.
 
 Note: This section was inspired by Kareem Carr
-- [https://twitter.com/kareem_carr/status/1551950155330600960](https://twitter.com/kareem_carr/status/1551950155330600960)
-- [Why Some People Think 2+2=5 ...and why they're right.](https://www.popularmechanics.com/science/math/a33547137/why-some-people-think-2-plus-2-equals-5/)
+- [https://twitter.com/kareem_carr/status/1551950155330600960](https://twitter.com/kareem_carr/status/1551950155330600960) {cite:p}`kareemcarr|datascientist[@kareem_carr]Summer2020Got2022`
+- [Why Some People Think 2+2=5 ...and why they're right.](https://www.popularmechanics.com/science/math/a33547137/why-some-people-think-2-plus-2-equals-5/) {cite:p}`PeopleThinkThey2023`
 
 ## Twitter Users vs. Bots
 
 Let's look at a debate around a specific data point:
 >" Twitter has repeatedly said that spam bots represent less than 5% of its total user base. [Elon] Musk, meanwhile, has complained that the number is much higher, and has threatened to walk away from his agreement to buy the company."
 >
-> [Musk’s Dispute With Twitter Over Bots Continues to Dog Deal](https://www.bloomberg.com/news/articles/2022-07-07/twitter-reiterates-that-spam-bots-are-well-under-5-of-users), by Kurt Wagner, Bloomberg July 7, 2022
+> [Musk’s Dispute With Twitter Over Bots Continues to Dog Deal](https://www.bloomberg.com/news/articles/2022-07-07/twitter-reiterates-that-spam-bots-are-well-under-5-of-users) {cite:p}`MuskDisputeTwitter`, by Kurt Wagner, Bloomberg July 7, 2022
 
 The data in question here is over what percentage of Twitter users are spam bots, which Twitter claimed was less than 5%, and Elon Musk claimed is higher than 5%.
 
-Data points often give the appearance of being concrete and reliable, especially if they are numerical. So when Twitter initially came out with a claim that less than 5% of users are spam bots, it may have been accepted by most people who heard it. Elon Musk then questioned that figure and attempted to [back out of buying Twitter](https://www.npr.org/2022/07/08/1110539504/twitter-elon-musk-deal-jeopardy), and Twitter is [accusing Musk's complaint of being an invented excuse](https://www.npr.org/transcripts/1111032233) to back out of the deal, and [the case is now in court](https://www.npr.org/transcripts/1111032233).
+Data points often give the appearance of being concrete and reliable, especially if they are numerical. So when Twitter initially came out with a claim that less than 5% of users are spam bots, it may have been accepted by most people who heard it. Elon Musk then questioned that figure and attempted to [back out of buying Twitter](https://www.npr.org/2022/07/08/1110539504/twitter-elon-musk-deal-jeopardy) {cite:p}`bondElonMuskWants2022`, and Twitter is [accusing Musk's complaint of being an invented excuse](https://www.npr.org/transcripts/1111032233) {cite:p}`TwitterTakesElon2022` to back out of the deal, and [the case is now in court](https://www.npr.org/transcripts/1111032233) {cite:p}`TwitterTakesElon2022`.
 
 When looking at real-life data claims and datasets, you will likely run into many different problems and pitfalls in using that data. Any dataset you find might have:
 - missing data
@@ -53,7 +53,7 @@ So, there was a simplification here. In this example, I decided that each of the
 
 As you can see in the apple example, any time we turn something into data, we are making a simplification.[^symbolic_data_not_simplified] If we are counting the number of something, like apples, we are deciding that each one is equivalent. If we are writing down what someone said, we are losing their tone of voice, accent, etc. If we are taking a photograph, it is only from one perspective, etc.
 - Different simplifications are useful for different tasks. Any given simplification will be helpful for some tasks and be unhelpful for others.
-  - See also, this saying in statistics: [All models are wrong, but some are useful](https://en.wikipedia.org/wiki/All_models_are_wrong)
+  - See also, this saying in statistics: [All models are wrong, but some are useful](https://en.wikipedia.org/wiki/All_models_are_wrong) {cite:p}`AllModelsAre2023`
 
 
 % TODO:
@@ -75,7 +75,7 @@ So all data that you might find is a simplification. There are many seemingly si
 - How many people live in this house?
   - _Does a college student returning home for the summer count as living in that house?_
 - How many words are in this chapter?
-  - _[Different programs use different rules for what counts as a "word"](https://thehappybeavers.com/blog/why-word-count-differ-programs/)_
+  - _[Different programs use different rules for what counts as a "word"](https://thehappybeavers.com/blog/why-word-count-differ-programs/) {cite:p}`WhyDoesWord`_
     - E.g., this page has "2 + 2 = 4", which Microsoft Word counts as 5 words, and Google Docs counts as 3 words.
 
 ## Revisiting Twitter Users vs. Bots
@@ -93,12 +93,12 @@ It depends on if we mean how many accounts have been registered vs. how many peo
 ### Measuring spam bots
 How do we count how many spam bots are on Twitter?
 
-The Bloomberg article we quoted mentions "spam bots" as what is being measured, but Elon Musk has used phrases like "[fake or spam](https://twitter.com/elonmusk/status/1555950698252181507?s=20&t=pY_aYXjSOzD-sUOW8E1e6A)" accounts and "[fake/spam/duplicates](https://twitter.com/elonmusk/status/1525723506805288962?s=20&t=aBUK4_IT354Y9TC69PMldg)," which might lead to different numbers.
+The Bloomberg article we quoted mentions "spam bots" as what is being measured, but Elon Musk has used phrases like "[fake or spam](https://twitter.com/elonmusk/status/1555950698252181507?s=20&t=pY_aYXjSOzD-sUOW8E1e6A) {cite:p}`elonmusk[@elonmusk]Andst7HerebyChallenge2022`" accounts and "[fake/spam/duplicates](https://twitter.com/elonmusk/status/1525723506805288962?s=20&t=aBUK4_IT354Y9TC69PMldg) {cite:p}`elonmusk[@elonmusk]PPatholeExactlyHave2022`," which might lead to different numbers.
 
 Parag Agrawal, the Twitter CEO, additionally clarified the complications of measuring "spam" accounts, saying:
 > Next, spam isn’t just ‘binary’ (human / not human). The most advanced spam campaigns use combinations of coordinated humans + automation. They also compromise real accounts, and then use them to advance their campaign. So – they are sophisticated and hard to catch.
 >
-> ([tweet link](https://twitter.com/paraga/status/1526237581419040768))
+> ([tweet link](https://twitter.com/paraga/status/1526237581419040768) {cite:p}`paragagrawal[@paraga]NextSpamIsn2022`)
 
 ### What changes with these measures?
 While we don't have direct access to all the data ourselves, we can imagine that different definitions would lead to different results. And there isn't a "best" or "unbiased" definition we should be using, since all definitions are simplifications that will help with some tasks and hurt with others.

@@ -66,9 +66,9 @@ average_tweet_length = 133.5
 
 When computers store numbers, there are limits to how much space is can be used to save each number. This limits how big (or small) the numbers can be, and causes rounding with floating-point numbers.
 
-% TODO: https://jvns.ca/blog/2023/01/13/examples-of-floating-point-problems/
+% TODO: [Examples of floating point problems](https://jvns.ca/blog/2023/01/13/examples-of-floating-point-problems/) {cite:p}`evansExamplesFloatingPoint2023`
 
-Additionally, programming languages might include other ways of storing numbers, such as fractions, [complex numbers](https://en.wikipedia.org/wiki/Complex_number), or limited number sets (like only positive integers).
+Additionally, programming languages might include other ways of storing numbers, such as fractions, [complex numbers](https://en.wikipedia.org/wiki/Complex_number) {cite:p}`ComplexNumber2023`, or limited number sets (like only positive integers).
 
 
 
@@ -108,6 +108,6 @@ twitter_handle = "This is Woods. He’s here to help with the dishes. Specifical
 ```
 ````
 
-Text can be stored with extra formatting information, such as fonts and colors, in different [document file formats](https://en.wikipedia.org/wiki/Document_file_format) like Word Documents, PDF files, [html website files](https://www.w3schools.com/html/html_intro.asp), etc.
+Text can be stored with extra formatting information, such as fonts and colors, in different [document file formats](https://en.wikipedia.org/wiki/Document_file_format) {cite:p}`DocumentFileFormat2023` like Word Documents, PDF files, [html website files](https://www.w3schools.com/html/html_intro.asp) {cite:p}`IntroductionHTML`, etc.
 
 Note: We'll demonstrate strings later in this chapter, and in more detail in Chapter 7: Trolling

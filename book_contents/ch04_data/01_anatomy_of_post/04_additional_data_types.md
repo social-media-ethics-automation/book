@@ -25,7 +25,7 @@ alt: "Two images of a fire emoji on a screen. The first is small and a little zo
 When viewing the fire emoji (🔥) close-up on a screen, you can see the bands of red, green, and blue that make up each pixel. If you try squinting your eyes or looking at the image from far away, it should blur back into the emoji.
 ```
 
-% TODO: Images can also be represented as lists of shapes, colors, lines, etc. that can be redrawn to make the image ([vector graphics](https://en.wikipedia.org/wiki/Vector_graphics)).
+% TODO: Images can also be represented as lists of shapes, colors, lines, etc. that can be redrawn to make the image ([vector graphics](https://en.wikipedia.org/wiki/Vector_graphics) {cite:p}`VectorGraphics2023`).
 
 __Sounds__ are represented as the electric current needed to move a speaker's diaphragm back and forth over time to make the specific sound waves. The electric current is saved as a number, and those electric current numbers are saved at each time point, so the sound information is saved as a list of numbers.
 
@@ -47,7 +47,7 @@ align: center
 How sound information turns into an electric signal, which then works with a magnet to push and pull on a [diaphragm inside a speaker](https://en.wikipedia.org/wiki/Electrodynamic_speaker_driver#Components) to create physical sound waves. Microphones do this process in exactly the reverse, the sound waves in the air make the speaker diaphragm go back and forth, making an electric current in the wire which gets measured and saved by the computer.
 ```
 
-% TODO: Sound can also be represented in other ways, such as music being represented by lists of which instrument should play which note at which time (see [MIDI files](https://en.wikipedia.org/wiki/MIDI)).
+% TODO: Sound can also be represented in other ways, such as music being represented by lists of which instrument should play which note at which time (see [MIDI files](https://en.wikipedia.org/wiki/MIDI) {cite:p}`MIDI2023`).
 
 % TODO: Mention Ada lovelace
 
