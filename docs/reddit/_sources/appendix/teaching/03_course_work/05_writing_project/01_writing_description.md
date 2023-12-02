@@ -23,10 +23,13 @@ Feel free to incorporate your own experiences with the issue/scenario, particula
 Your writing project can be in the social media format of your choice. For example you could make:
 * A series short of social media posts on Tumblr, Mastodon, Bluesky, etc.
 * A blog post or Reddit post (could be like a traditional essay)
-* A series of TikTok Short videos
-* A YouTube Video Essay
+* A series of TikTok short videos
+* A YouTube video essay
+* A podcast
 
-Note: You will need to cite sources in your project in whatever citation is appropriate for the format you are using (e.g., citations like MLA, hyperlinks, notes in the video description, holding up a book on screen, screenshots, etc.)
+WARNING: Some media formats take a deceptively large amount of work, particularly video with graphics or clips.
+
+Note: You will need to cite sources in your project in whatever citation is appropriate for the format you are using (e.g., citations like MLA, hyperlinks, notes in the video or podcast description, holding up a book on screen, screenshots, etc.)
 
 ## Project Stages
 You will be doing several intermediate steps to create your writing project. These steps are not meant to make you do any additional work, instead they are intended to be the work that you'd have to do anyway to write the final project. They are broken into different turn-ins (about 1 per week) to make sure you stay on track for finishing the paper at the end of the quarter, and so that you can get feedback on your progress and improve your writing.
@@ -36,7 +39,7 @@ You will be doing several intermediate steps to create your writing project. The
 - Ethics framework background
 - Outline of using frameworks
 - Full project draft
-- Final project paper
+- Final project
 
 ## Grading
 For each of the stages of the project (except the final project) you will have to get peer feedback on that stage from before it's due and turn in information on who you got feedback from and what feedback you got (we will give you time in class to do this).

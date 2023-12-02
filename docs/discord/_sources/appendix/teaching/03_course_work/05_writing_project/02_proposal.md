@@ -8,7 +8,8 @@ For this first step of your writing project, you have to write a short proposal 
   - You can use the ethics frameworks from the book or ones that we didn't mention but you want to use.
   - Include why you are choosing the frameworks (could be as simple as "I already know about Taoism" or “the Aztecs seem cool”) and how you think they will apply to the scenario.
 - **Your Social Media Format** what sort of social media content do you want to make?
-  - Include links to at least two examples you want to emulate (e.g., example video essays)
+  - Include links to at least two examples you want to emulate (e.g., example video essays, Reddit posts, podcasts)
+  - WARNING: Some media formats take a deceptively large amount of work, particularly video with graphics or clips.
 
 
 Your proposal can be a few paragraph, or a set of bullet points listing the details. 

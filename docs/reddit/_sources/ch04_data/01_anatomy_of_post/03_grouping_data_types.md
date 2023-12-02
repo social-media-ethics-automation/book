@@ -39,7 +39,7 @@ Additionally the text strings we saw before are actually stored internally as li
 
 The items in lists are normally numbered with an "index", so you can ask for the 1st item, or 2nd item, or any other.
 
-Note: Largely due to [historical peculiarities in the development of programming languages](https://en.wikipedia.org/wiki/Zero-based_numbering#Origin), most programming languages (including Python) number the 1st item in a list as item "0". So:
+Note: Largely due to [historical peculiarities in the development of programming languages](https://en.wikipedia.org/wiki/Zero-based_numbering#Origin) {cite:p}`ZerobasedNumbering2023`, most programming languages (including Python) number the 1st item in a list as item "0". So:
 - 1st item has index 0
 - 2nd item has index 1
 - 3rd item has index 2
@@ -70,7 +70,7 @@ second_letter = key_word[1]
 ```
 ````
 
-There are many types of list data structures in different programming languages with subtle differences (we won't worry about those in this book). Python has [lists](https://www.w3schools.com/python/python_lists.asp), [tuples](https://www.w3schools.com/python/python_tuples.asp), and [sets](https://www.w3schools.com/python/python_sets.asp). Other languages have a list type called [arrays](https://en.wikipedia.org/wiki/Array_data_type). We will just focus on lists and not worry about the other similar data types.
+There are many types of list data structures in different programming languages with subtle differences (we won't worry about those in this book). Python has [lists](https://www.w3schools.com/python/python_lists.asp) {cite:p}`PythonLists`, [tuples](https://www.w3schools.com/python/python_tuples.asp) {cite:p}`PythonTuples`, and [sets](https://www.w3schools.com/python/python_sets.asp) {cite:p}`PythonSets`. Other languages have a list type called [arrays](https://en.wikipedia.org/wiki/Array_data_type) {cite:p}`ArrayDataType2023`. We will just focus on lists and not worry about the other similar data types.
 
 We'll demonstrate lists later in Chapter 5: History of Social Media.
 
