@@ -1,6 +1,11 @@
 # Note: args that it can take: --clean, --pdf
 
-# Note: for Pdf building: need this fix
+# Note: for Pdf building: need this fix 
+#  edit pdf.py library
+#     -  await page.goto(f"file:///{html_file}", {"waitUntil": ["networkidle2"]})
+#        to
+#     -  await page.goto(f"file:///{html_file}", {"timeout": 0, "waitUntil": ["networkidle2"]})
+#  - https://github.com/executablebooks/jupyter-book/issues/1732
 # also TODO: make depth 0 and do  --builder pdflatex --individualpages for chapter files
 
 
@@ -215,7 +220,6 @@ for platform in platforms:
 
     # If we want pdf, first make single page version of site, then build the pdf, then do normal build
     if "--pdf" in sys.argv:
-        os.system('jupyter-book build book_contents --builder singlehtml --path-output ' + build_path)
         os.system('jupyter-book build book_contents --builder pdfhtml --path-output ' + build_path)
 
     os.system('jupyter-book build book_contents --path-output ' + build_path)
@@ -225,9 +229,9 @@ for platform in platforms:
     # copy website each platform
     shutil.copytree("_build/"+platform["file_name"]+"/_build/html", "docs/"+platform["file_name"] + "/")
 
-    #Copy pdfs (if pdf enabled)
+    #move pdf (if pdf enabled) (It's a big file, so move instead of copy)
     if "--pdf" in sys.argv:
-        shutil.copy("_build/"+platform["file_name"]+"/_build/pdf/book.pdf", "docs/"+platform["file_name"] + "/social_media_ethics_automation_" + platform["file_name"] + ".pdf")
+        shutil.move("_build/"+platform["file_name"]+"/_build/pdf/book.pdf", "docs/"+platform["file_name"] + "/social_media_ethics_automation_" + platform["file_name"] + ".pdf")
 
 
     # copy source docs (so github links and code editor links work correctly)
