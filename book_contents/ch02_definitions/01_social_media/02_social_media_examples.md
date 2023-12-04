@@ -10,9 +10,9 @@ Some platforms are primarily intended for forming connections and building netwo
 
 There are also platforms built around activities like gaming (Discord), and dating and hookups (e.g. Bumble, Tinder, OKCupid, etc.).
 
-Platforms can be minimalist, like [Yo](https://en.wikipedia.org/wiki/Yo_(app)) {cite:p}`noauthor_yo_2023`, which only lets you say "yo" to people and nothing else.
+Platforms can be minimalist, like [Yo](https://en.wikipedia.org/wiki/Yo_(app)) {cite:p}`YoApp2023`, which only lets you say "yo" to people and nothing else.
 
-Platforms can also be tailored for specific groups of people, like a [social media platforms for low-income blind people in India](https://www.adityavashistha.com/uploads/2/0/8/0/20800650/vism_assets_2015.pdf) {cite:p}`vashistha_social_2015`.
+Platforms can also be tailored for specific groups of people, like a [social media platforms for low-income blind people in India](https://www.adityavashistha.com/uploads/2/0/8/0/20800650/vism_assets_2015.pdf) {cite:p}`vashisthaSocialMediaPlatforms2015`.
 
 Additionally, some sites are primarily built for other purposes but have a social media component as well, such as the Amazon online store that has user reviews and customer questions & answers, or news sites that have comment sections.
 
