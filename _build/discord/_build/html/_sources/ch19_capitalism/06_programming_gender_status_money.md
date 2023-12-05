@@ -2,7 +2,7 @@
 While we've been talking about capitalism and social media platforms, we also want to look at the world of programming as well. In particular, we want to highlight how the profession of programming went from being a disrespected, low-pay job for women, to being a highly respected and high paying job for men.
 
 ## Programming as Women's Work
-As you may have noticed in chapter 2 of the book, the first programmers were almost all women. When computers were being invented, men put themselves in charge of building the physical devices (hardware), and then gave the work of programming the computer (software) to their assistants, often women. So, for example, you can see this at various stages of computer development, such as:
+As you may have noticed in chapter 2 of the book ([](../ch02_definitions/03_automation/00_automation.md)), the first programmers were almost all women. When computers were being invented, men put themselves in charge of building the physical devices (hardware), and then gave the work of programming the computer (software) to their assistants, often women. So, for example, you can see this at various stages of computer development, such as:
 - 1800s: [Charles Babbage](https://en.wikipedia.org/wiki/Charles_Babbage) describes the first full computer (Analytical Engine), and [Ada Lovelace](https://en.wikipedia.org/wiki/Ada_Lovelace) writes down the first computer program for it.
 - 1945: The first general-purpose electrical computer was created by men and programmed by women
 - 1950s: Grace Hopper invents the compiler to help with programming the computers (built by men)
