@@ -1,6 +1,6 @@
 # Design Example: Quoting Posts
 
-The way social media sites are designed can encourage or discourage different forms of harassment. One interaction type that many have pointed to as enabling harassment is quote posts.
+The way social media sites are designed can encourage or discourage different forms of harassment. One interaction type that many have blamed for enabling harassment is quote posts.
 
 ## Quote Posts
 
@@ -15,9 +15,7 @@ alt: "A tweet that says \"Try to smile today 😊\" with a photo (censored), tha
 An example quote tweet used for harassment. The original tweet is a selfie of a smiling person, but the quote tweeter has responded with "you have a very punchable face." The harassing quote tweet has been liked 6 times. (Identifying parts of this tweet are redacted in order not to add to any harassment).
 ```
 
-% https://slate.com/technology/2017/12/dunking-is-delicious-and-also-probably-making-twitter-terrible.html
-
-Some people have argued that the quote post feature itself that is a problem: [Quote Tweets Have Turned Us All Into Jerks](https://onezero.medium.com/quote-tweets-have-turned-us-all-into-jerks-d5776c807942) {cite:p}`adamsQuoteTweetsHave2020`. One of the arguments is that by allowing quote Tweets, users will find a Tweet they disagree with, and quote the Tweet with a joke, insult, or comment to show how bad the original Tweet was ("dunking"). Then the original Tweet will spread through communities who disagree with it, all trying to do their own version of their best dunk or insult. As it spreads, some users may turn to other means of harassment, like direct messaging threats, or doxing the original Tweeter. Katherine Cross argued in [It's Not Your Fault You're a Jerk on Twitter: The design of the internet lets you harass and harm people without ever once interacting with them directly. Even if you're trying to defend them.](https://www.wired.com/story/social-media-harassment-platforms/) {cite:p}`crossItNotYour` that even people jumping in to defend the original Tweet may only cause it to go more viral and get even more negative attention.
+Some people have argued that the quote post feature itself that is a problem: [Quote Tweets Have Turned Us All Into Jerks](https://onezero.medium.com/quote-tweets-have-turned-us-all-into-jerks-d5776c807942) {cite:p}`adamsQuoteTweetsHave2020` {cite:p}`schwedel_dunking_2017`. One of the arguments is that by allowing quote Tweets, users will find a Tweet they disagree with, and quote the Tweet with a joke, insult, or comment to show how bad the original Tweet was ("dunking"). Then the original Tweet will spread through communities who disagree with it, all trying to do their own version of their best dunk or insult. As it spreads, some users may turn to other means of harassment, like direct messaging threats, or doxing the original Tweeter. Katherine Cross argued in [It's Not Your Fault You're a Jerk on Twitter: The design of the internet lets you harass and harm people without ever once interacting with them directly. Even if you're trying to defend them.](https://www.wired.com/story/social-media-harassment-platforms/) {cite:p}`crossItNotYour` that even people jumping in to defend the original Tweet may only cause it to go more viral and get even more negative attention.
 
 
 % Story: Neighbor Chili
@@ -126,3 +124,6 @@ Then on May 1st, 2023, [Eugen Rochko announced](https://mastodon.social/@Mastodo
 ## Further Reading
 - Dr. Jonathan Flowers on [The Whiteness of Mastodon](https://techpolicy.press/the-whiteness-of-mastodon/) {cite:p}`hendrixWhitenessMastodon2022`
 - [Black Twitter, quoting, and white views of toxicity on Mastodon](https://privacy.thenexus.today/black-twitter-quoting-and-white-toxicity-on-mastodon/) {cite:p}`BlackTwitterQuoting2022`
+- The Neighbor Chili Incident:
+  - [Woman Cooks for Neighbors, Somehow Offends People on the Internet](https://cheezburger.com/18473221/woman-cooks-for-neighbors-insults-weirdos-on-the-internet) {cite:p}`WomanCooksNeighbors`
+  - [A woman made chili for neighbors, and outrage ensued. Was she wrong?](https://www.washingtonpost.com/food/2022/11/18/chili-neighbors-twitter-etiquette/) {cite:p}`heilWomanMadeChili2022`
