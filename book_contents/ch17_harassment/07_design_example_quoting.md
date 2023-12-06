@@ -43,7 +43,7 @@ But while quote posts can be used for harassment, the scientific evidence is unc
 
 Furthermore, others have argued that various design decisions and community norms on Mastodon (lack of quote posts and expectations of content warnings on posts) make for an outwardly polite platform, but with toxic undercurrents and not serving diverse users. 
 
-In particular, Mastodon was built primarily by white men in tech enthusiasts (though there were some white queer groups that had a large role) {cite:p}`pincus_mastodon_2022`. The whiteness of Mastodon's developers and users made for an environment that was both hostile to people of color (e.g., they got direct harassment and white people complaining that people of color mentioned racism without using content warnings).
+In particular, Mastodon was built mostly by white tech enthusiast men (though there were some white queer groups that had a large role) {cite:p}`pincus_mastodon_2022`. The whiteness of Mastodon's developers and users made for an environment that was hostile to people of color (e.g., they got direct harassment and white people complaining that people of color mentioned racism without using content warnings).
 
 When masses of Twitter users migrated to Mastodon following Elon Musk's purchase of Twitter in the fall of 2022, there was renewed discussion of quote posts and other aspects of Mastodon.
 
@@ -130,9 +130,9 @@ Then on May 1st, 2023, [Eugen Rochko announced](https://mastodon.social/@Mastodo
 % May 01, 2023
 
 ## Reflection Questions
-- How does social media design enable or reduce harassment?
-- What good things are lost in trying to reduce harassment?
-- How do you balance these different concerns?
+- What do you think are the benefits and drawbacks of quote posts?
+- Do you think there are ways of changing how quote posts work that would reduce harassment (e.g., changing who can do it, who can view it, whether the quoted post is displayed above the new comment or after)?
+- Would those changes which might reduce harassment also reduce beneficial uses of quote posts?
 
 ## Further Reading
 - Dr. Jonathan Flowers on [The Whiteness of Mastodon](https://techpolicy.press/the-whiteness-of-mastodon/) {cite:p}`hendrixWhitenessMastodon2022`

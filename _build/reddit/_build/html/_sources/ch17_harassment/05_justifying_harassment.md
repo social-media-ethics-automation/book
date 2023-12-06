@@ -11,7 +11,7 @@ One research paper ([Morally Motivated Networked Harassment as Normative Reinfor
 
 Does this sound bad? Let's look at some more specific examples and see what you think.
 
-## Examples Attempts at Justifying Harassment
+## Example Attempts at Justifying Harassment
 
 ### Doxing Racist Organization Members
 We'll start in a time before the Internet:

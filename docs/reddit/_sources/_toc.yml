@@ -228,7 +228,7 @@ parts:
       - file: ch17_harassment/05_justifying_harassment
       - file: ch17_harassment/06_stopping_harassment
       - file: ch17_harassment/07_design_example_quoting
-      - file: ch17_harassment/08_reflections
+      - file: ch17_harassment/08_design_activity
       - file: ch17_harassment/09_learn_more
     - file: ch18_public_shaming/00_public_shaming
       sections:
