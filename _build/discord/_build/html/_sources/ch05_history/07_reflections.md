@@ -21,7 +21,7 @@ Try brainstorming a list of different things people do on social media. See how 
 Choose one of your use cases. Describe in more detail what it means to do that activity (e.g., what the user would want to do, what information the user would need to provide, what would count as success, etc.).
 
 
-# Compare Different Platforms
+## Compare Different Platforms
 Now choose several social media platforms, with at least one where you think your use case is commonly done, and one where it is not.
 
 ````{admonition} Open this for a concrete example
