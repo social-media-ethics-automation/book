@@ -1,7 +1,10 @@
 # Note: args that it can take: --clean, --pdf
 
 # Note: for Pdf building: need this fix 
-#  edit pdf.py library
+# Find pdf.py: 
+#              import jupyter_book.pdf
+#              jupyter_book.pdf.__file__
+# edit pdf.py library
 #     -  await page.goto(f"file:///{html_file}", {"waitUntil": ["networkidle2"]})
 #        to
 #     -  await page.goto(f"file:///{html_file}", {"timeout": 0, "waitUntil": ["networkidle2"]})
@@ -71,10 +74,16 @@ if "--clean" in sys.argv or "clean" in sys.argv:
 # clear old docs directory
 if os.path.exists("docs/") and os.path.isdir("docs/"):
     if "--pdf" in sys.argv:
-        
-        pass
-    else:
-        shutil.rmtree("docs/") #TODO: remove all but pdfs if --pdf isn't in the options
+        shutil.rmtree("docs/") 
+    else:  # delete everything but pdfs (since we aren't rebuilding them)
+        for root, dirs, files in os.walk("docs/", topdown=False):
+            for name in files:
+                if(not name.endswith(".pdf")):
+                    os.remove(os.path.join(root, name))
+            for name in dirs:
+                dir = os.listdir(os.path.join(root, name)) 
+                if len(dir) == 0: 
+                    os.rmdir(os.path.join(root, name))
 
 # make a publish "docs" directory if it doesn't exist yet
 if not os.path.exists("docs"):
@@ -231,7 +240,7 @@ for platform in platforms:
     #Copy files all over to the docs directory
 
     # copy website each platform
-    shutil.copytree("_build/"+platform["file_name"]+"/_build/html", "docs/"+platform["file_name"] + "/")
+    shutil.copytree("_build/"+platform["file_name"]+"/_build/html", "docs/"+platform["file_name"] + "/", dirs_exist_ok=True)
 
     #move pdf (if pdf enabled) (It's a big file, so move instead of copy)
     if "--pdf" in sys.argv:
