@@ -70,7 +70,11 @@ if "--clean" in sys.argv or "clean" in sys.argv:
 
 # clear old docs directory
 if os.path.exists("docs/") and os.path.isdir("docs/"):
-    shutil.rmtree("docs/")
+    if "--pdf" in sys.argv:
+        
+        pass
+    else:
+        shutil.rmtree("docs/") #TODO: remove all but pdfs if --pdf isn't in the options
 
 # make a publish "docs" directory if it doesn't exist yet
 if not os.path.exists("docs"):
