@@ -21,7 +21,7 @@ This book is still being created and therefore has incomplete sections, missing 
 ## Download and Versions
 There are different versions of this book for making bots in different platforms: 
 
-_Choose Social Media Platform: __Reddit__ | <a href='../discord/intro.html.html'>Discord</a>_
+_Choose Social Media Platform: __Reddit__ | <a href='../discord/intro.html'>Discord</a>_
 
 You can <a href='./social_media_ethics_automation_reddit.pdf'>download this book as a pdf here </a> (though not everything will work correctly or be interactive as a pdf). (Also, if anyone knows how to make jupyterbooks make separate pdfs for each chapter, please let Kyle know.)
 

@@ -113,7 +113,7 @@ for platform in platforms:
 
     # Fix _intro_source.md
     intro_source = open(book_directory + '/_intro_source.md', "r").read().split("\n")
-    platform_selector = make_social_media_links(platform, book_directory + "/intro.html")
+    platform_selector = make_social_media_links(platform, book_directory + "/intro")
 
     fix_line = intro_source.index("% TODO: Auto-insert download link and versions")
     intro_source[fix_line] = "There are different versions of this book for making bots in different platforms: \n\n" + platform_selector + "\n" + \
