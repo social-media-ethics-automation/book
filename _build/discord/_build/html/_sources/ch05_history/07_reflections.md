@@ -32,6 +32,6 @@ If the use case is "finding a date"
 ````
 
 Now consider each social media platform, answer the following questions:
-- What are some ways someone might someone do your use case on the platform?
+- What are some ways someone might do your use case on the platform?
 - What (if anything) about the social media platform's design helps someone perform the use case?
 - What (if anything) about the social media platform's design makes it difficult for someone perform the use case?
