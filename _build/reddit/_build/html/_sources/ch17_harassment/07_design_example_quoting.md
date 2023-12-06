@@ -52,7 +52,7 @@ When masses of Twitter users migrated to Mastodon following Elon Musk's purchase
 >
 > On Black Twitter, the quote tweet and hashtag enable what Black cultural scholars call "call and response," something crucial to Black community practices. The hashtags curate the conversation and allow for its visibility.
 
-Various Mastodon users pointed out ways in which Mastodon's efforts to reduce harassment and make a more friendly (for its white userbase), prevent people of color (and other groups) from  organizing and sharing of necessary negative information.
+Various Mastodon users pointed out ways in which Mastodon's efforts to reduce harassment and make a more friendly experience (for its white userbase), prevent people of color (and other groups) from organizing and sharing of necessary negative information.
 
 [Mekka Okereke questioned](https://mastodon.cloud/@mekkaokereke/109334079258663352) {cite:p}`MekkaVerifiedMekkaokereke2022`:
 > Is it possible to drive social change through Mastodon? Could "Black Lives Matter" have happened on Mastodon? Or do the "intentionally slow, pleasant conversation" features eliminate the possibility of this? Do the "interest silo" tendencies discourage cross pollination?
@@ -63,7 +63,7 @@ Various Mastodon users pointed out ways in which Mastodon's efforts to reduce ha
 >
 > What I'm unsure of, is if that means giving up on the capacity for social change. Are we Lotus eating?
 
-[Mekka Okereke also pointed out](https://hachyderm.io/@mekkaokereke/111010421955145872) {cite:p}`okereke_content_2023` that Mastodon had much worse design problems for harassment than quote tweets due to [unintuitive rules](https://hachyderm.io/@mekkaokereke/111012743709881062) {cite:p}`okereke_zachnfine_2023` around who sees replies to threads, recalling a true story (which the author, Kyle, also witnessed):
+[Mekka Okereke also pointed out](https://hachyderm.io/@mekkaokereke/111010421955145872) {cite:p}`okereke_content_2023` that Mastodon had much worse design problems for harassment than quote posts due to [unintuitive rules](https://hachyderm.io/@mekkaokereke/111012743709881062) {cite:p}`okereke_zachnfine_2023` around who sees replies to posts, recalling a true story (which the author, Kyle, also witnessed):
 > A Black Twitter user joins the Fediverse in Nov 2022. She picks a random server (e.g. Mastodon.cloud) that does not block known nazi instances. A user on a Nazi instance finds her profile, and replies to her post with racist threats, along with gore gifs taken from video of a racist mass shooting.
 >
 > The racist users' followers see the hate, and pile on.
