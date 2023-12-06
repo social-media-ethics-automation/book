@@ -63,9 +63,22 @@ Various Mastodon users pointed out ways in which Mastodon's efforts to reduce ha
 >
 > What I'm unsure of, is if that means giving up on the capacity for social change. Are we Lotus eating?
 
+[Mekka Okereke also pointed out](https://hachyderm.io/@mekkaokereke/111010421955145872) {cite:p}`okereke_content_2023` that Mastodon had much worse design problems for harassment than quote tweets due to [unintuitive rules](https://hachyderm.io/@mekkaokereke/111012743709881062) {cite:p}`okereke_zachnfine_2023` around who sees replies to threads, recalling a true story (which the author, Kyle, also witnessed):
+> A Black Twitter user joins the Fediverse in Nov 2022. She picks a random server (e.g. Mastodon.cloud) that does not block known nazi instances. A user on a Nazi instance finds her profile, and replies to her post with racist threats, along with gore gifs taken from video of a racist mass shooting.
+>
+> The racist users' followers see the hate, and pile on.
+>
+> But good users on the Black woman's instance don't see any of this.😮
+>
+> The Black woman says "I can't believe how bad the racism is here!"
+>
+> Other users on her instance respond by saying, "🤔I've been here for 6 months and I haven't seen any? Can you send me some examples? Are you maybe overreacting?" Because the abuse doesn't show up in their timeline, or the local timeline.
+>
+> She feels unsupported, abused, and gaslit. She says, "This place is a whole mess. Nope. I'm going back to Twitter."
 
 
-Writer [Leslie Ye argued](https://twitter.com/lesliezye/status/1593631667037638660) {cite:p}`thisbarbieisacacklinghag[@lesliezye]HungOutThis2022` about some of the advantages of what Twitter:
+
+Writer [Leslie Ye argued](https://twitter.com/lesliezye/status/1593631667037638660) {cite:p}`thisbarbieisacacklinghag[@lesliezye]HungOutThis2022` about some of the advantages of what Twitter's system with quote tweets did allow:
 > many of us have spent our lives observing institutional power from the outside, how power behaves, how power acts, when confronted when communities like ours who are actually able to HOLD power to account, connect the dots across expertises and specialties
 >
 > [...]
