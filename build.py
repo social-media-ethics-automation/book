@@ -111,6 +111,19 @@ for platform in platforms:
             new_toc[i] = toc_line.replace("-***", "")
 
 
+    # Fix _intro_source.md
+    intro_source = open(book_directory + '/_intro_source.md', "r").read().split("\n")
+    platform_selector = make_social_media_links(platform, book_directory + "/intro.html")
+
+    fix_line = intro_source.index("% TODO: Auto-insert download link and versions")
+    intro_source[fix_line] = "There are different versions of this book for making bots in different platforms: \n\n" + platform_selector + "\n" + \
+                           "\n" + "You can <a href='./social_media_ethics_automation_"+platform["file_name"]+".pdf'>download this book as a pdf here </a> (though not everything will work correctly or be interactive as a pdf). (Also, if anyone knows how to make jupyterbooks make separate pdfs for each chapter, please let Kyle know.)"
+
+    with open(book_directory + '/intro.md', 'w') as file:
+            file.write("\n".join(intro_source))
+
+
+    # Fix rest of files
     for filename in platform_specific_files:
         platform_filename = book_directory + "/" + filename.replace("***", platform["file_name"])
         destination_filename = book_directory + "/" + filename.replace("-***", "")

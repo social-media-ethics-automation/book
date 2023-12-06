@@ -1,6 +1,6 @@
 # Social Media, Ethics, and Automation
 
-![](logo.png)
+!["Logo for the book, which looks like a phone with a social media post open, by Kyle Thayer and Susan Notess called \"Social Media, Ethics, and Automation\." There are various emoji reactions to it.](logo.png)
 
 Automation drives our experience of social media platforms, from timeline feeds to disinformation bots. This book examines social media phenomena, like viral memes, parasocial relationships, and harassment campaigns. This book then explores the ethics of automation on social media platforms by experimenting with computer programs that automate social media actions. We assume no prior programming experience.
 
@@ -17,6 +17,20 @@ We hope after completing this book you will be informed and engaged as social me
 ```{warning}
 This book is still being created and therefore has incomplete sections, missing citations, etc.
 ```
+
+## Download and Versions
+There are different versions of this book for making bots in different platforms: 
+
+_Choose Social Media Platform: <a href='../reddit/intro.html.html'>Reddit</a> | __Discord___
+
+You can <a href='./social_media_ethics_automation_discord.pdf'>download this book as a pdf here </a> (though not everything will work correctly or be interactive as a pdf). (Also, if anyone knows how to make jupyterbooks make separate pdfs for each chapter, please let Kyle know.)
+
+## Suggested Citation
+
+> Kyle Thayer, Susan Notess (2023). Social Media, Ethics, and Automation. https://social-media-ethics-automation.github.io/book
+
+
+
 
 
 
