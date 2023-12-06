@@ -258,7 +258,7 @@ with open('docs/index.html', 'w') as file:
 
 # make default 404 page that forwards in index.html
 with open('docs/404.html', 'w') as file:
-    file.write('<meta http-equiv="Refresh" content="0; url='+platforms[0]["file_name"]+'/intro.html" />')
+    file.write('<meta http-equiv="Refresh" content="0; url=/book/'+platforms[0]["file_name"]+'/intro.html" />')
 
 
 # github by default uses jekyll, which doesn't work with _ folders
