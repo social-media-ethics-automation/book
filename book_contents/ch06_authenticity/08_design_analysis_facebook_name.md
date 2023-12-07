@@ -5,7 +5,7 @@ In this activity, you will be looking at Facebook's name policy, and thinking th
 
 
 [^alternate_exercise]: You could also try this with different social media authenticity systems, like [How to Get Verified on Bumble](
-https://bumble.com/en-us/the-buzz/the-end-of-catfishing-introducing-photo-verification), which has the user take photos while mimicking poses.
+https://bumble.com/en-us/the-buzz/the-end-of-catfishing-introducing-photo-verification) {cite:p}`BumbleHowGeta`, which has the user take photos while mimicking poses.
 
 ```{figure} facebook_name_policy.png
 ---
@@ -33,7 +33,7 @@ Things to keep in mind
 The Facebook name policy as of 8/24/2022. You can see the current version [here](https://www.facebook.com/help/112146705538576/)
 ```
 
-This activity follows [the five-step CIDER method](https://medium.com/@OAlannah/beyond-average-users-building-inclusive-design-skills-with-the-cider-technique-413969544e6d?source=friends_link&sk=6c9184c8a88feae058cfb073a44985f7) (Critique, Imagine, Design, Expand, Repeat), created by [Alannah Oleson, et. al.](https://alannaholeson.com/). This activity works best if you can do it with others (like in a classroom), so you can learn from their observations as well.
+This activity follows [the five-step CIDER method](https://medium.com/@OAlannah/beyond-average-users-building-inclusive-design-skills-with-the-cider-technique-413969544e6d?source=friends_link&sk=6c9184c8a88feae058cfb073a44985f7) {citep}`olesonAverageUsersBuilding2022` (Critique, Imagine, Design, Expand, Repeat), created by [Alannah Oleson, et. al.](https://alannaholeson.com/) {citep}`AlannahOlesonPhD`. This activity works best if you can do it with others (like in a classroom), so you can learn from their observations as well.
 
 ![Diagram of the CIDER method. 5 steps in order from left to right: Critique (Identify embedded assumptions about users); Imagine (Pick one assumption and envision how it excludes users); Design (Brainstorm changes to improve inclusion); Expand (Learn about new types of bias from peers' assumptions); Repeat (Redo I and D using new-to-you assumptions from EXPAND list).](cider-method.jpeg)
 
@@ -59,7 +59,7 @@ Brainstorm ways to change Facebook's name policy to avoid the scenario you wrote
 ## Expand (5-10 minutes, with others):
 Combine your list of critiques with someone else's (or if possible, have a whole class combine theirs).
 
-You can also consider looking at the [Wikipedia page on the Facebook real-name policy controversy](https://en.wikipedia.org/wiki/Facebook_real-name_policy_controversy)
+You can also consider looking at the [Wikipedia page on the Facebook real-name policy controversy](https://en.wikipedia.org/wiki/Facebook_real-name_policy_controversy) {citep}`FacebookRealnamePolicy2023`
 
 ## Repeat the Imagine and Design Tasks:
 Select another assumption from the list above that you think is important to address. Make sure to choose a different assumption than you used before. Choose one that you didn’t come up with yourself, if possible. Repeat the Imagine and Design steps.

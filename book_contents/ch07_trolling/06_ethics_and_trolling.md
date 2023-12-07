@@ -8,8 +8,8 @@ One answer to this challenge is that we use various heuristics (that is, shortcu
 There is a reason why stereotypes are so tenacious: they work... sort of. Humans are brilliant at finding patterns, and we use pattern recognition to increase the efficiency of our cognitive processing. We also respond to patterns and absorb patterns of speech production and style of dress from the people around us. We do have a tendency to display elements of our history and identity, even if we have never thought about it before. This creates an issue, however, when the stereotype is not apt in some way. This might be because we diverge in some way from the categories that mark us, so the stereotype is inaccurate. Or this might be because the stereotype also encodes value judgments that are unwarranted, and which lead to problems with implicit bias. Some people do not need to think loads about how they present in order to come across to people in ways that are accurate and supportive of who they really are. Some people think very carefully about how they curate a set of signals that enable them to accurately let people know who they are or to conceal who they are from people outside their squad.
 
 Because patterns are so central to how our brains process information, patterns become extremely important to how societies change or stay the same.
-- [TV tropes](https://tvtropes.org/) is a website that tracks patterns in media, such as the [jump scare](https://tvtropes.org/pmwiki/pmwiki.php/Main/JumpScare)
-- [The Seven Basic Plots](https://en.wikipedia.org/wiki/The_Seven_Basic_Plots)
+- [TV tropes](https://tvtropes.org/) {cite:p}`TVTropes` is a website that tracks patterns in media, such as the [jump scare](https://tvtropes.org/pmwiki/pmwiki.php/Main/JumpScare) {cite:p}`JumpScare`
+- [The Seven Basic Plots](https://en.wikipedia.org/wiki/The_Seven_Basic_Plots) {cite:p}`SevenBasicPlots2023`
 
 % TODO: Not sure how to set this up properly without spoiling it- the gorilla in the basketball game? haven't seen it in ages not sure if it is racist TODO check if racist
 
@@ -41,17 +41,17 @@ We can see this nihilism show up in one of the versions of the self-contradictor
 > 
 > 42\. Nothing is Sacred
 
-Youtuber [Innuendo Studios](https://www.youtube.com/@InnuendoStudios) talks about the way arguments are made in a community like 4chan:
+Youtuber [Innuendo Studios](https://www.youtube.com/@InnuendoStudios) {cite:p}`InnuendoStudiosYouTube` talks about the way arguments are made in a community like 4chan:
 > You can't know whether they mean what they say, or are only arguing as though they mean what they say. And entire debates may just be a single person stirring the pot [e.g., sockpuppets]. Such a community will naturally attract people who enjoy argument for its own sake, and will naturally trend oward the most extremte version of any opinion. In short, this is the free marketplace of ideas. No code of ethics, no social mores, no accountability.
 >
 > ...
 > 
 > It's not that they're lying, it's that they just don't care. [...] When they make these kinds of arguments they legitimately do not care whether the words coming out of their mouths are true. If they cared, before they said something is true, they would look it up.
 >
-> - [The Alt-Right Playbook: The Card Says Moops](https://www.youtube.com/watch?v=xMabpBvtXr4&t=409s) by Innuendo Studios
+> - [The Alt-Right Playbook: The Card Says Moops](https://www.youtube.com/watch?v=xMabpBvtXr4&t=409s) {cite:p}`innuendostudiosAltRightPlaybookCard2019` by Innuendo Studios
 
 
-While there is a nihilistic worldview where nothing matters, we can see how this plays out practically, which is that they tend to protect their group (normally white and male), and tend to be extremely hostile to any other group. They will express extreme misogyny (like we saw in the [Rules of the Internet](https://knowyourmeme.com/memes/rules-of-the-internet): "Rule 30. There are no girls on the internet. Rule 31. TITS or GTFO - the choice is yours"), and extreme racism (like an [invented Nazi My Little Pony character](https://www.theatlantic.com/technology/archive/2020/06/my-little-pony-nazi-4chan-black-lives-matter/613348/)). 
+While there is a nihilistic worldview where nothing matters, we can see how this plays out practically, which is that they tend to protect their group (normally white and male), and tend to be extremely hostile to any other group. They will express extreme misogyny (like we saw in the [Rules of the Internet](https://knowyourmeme.com/memes/rules-of-the-internet) {cite:p}`RulesInternet2009`: "Rule 30. There are no girls on the internet. Rule 31. TITS or GTFO - the choice is yours"), and extreme racism (like an [invented Nazi My Little Pony character](https://www.theatlantic.com/technology/archive/2020/06/my-little-pony-nazi-4chan-black-lives-matter/613348/) {cite:p}`tiffanyMyLittlePony2020a`). 
 
 Is this just hypocritical, or is it ethically wrong? It depends, of course, on what tools we use to evaluate this kind of trolling. 
 

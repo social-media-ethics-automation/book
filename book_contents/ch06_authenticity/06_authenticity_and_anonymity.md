@@ -15,7 +15,7 @@ Anonymity can also encourage _authentic_ behavior. If there are aspects of yours
 ## Is authentic self-expression good?
 We can next ask if authentic self-expression is a good thing or not. But that depends, what is the authentic thing about yourself that you would be expressing?
 - Are you authentically expressing hate or cruelty? If so, perhaps authentic self-expression is morally bad.
-- Are you part of an oppressed or marginalized group that has been restricted from self-expression? Then perhaps expressing yourself is morally good. (See [Trans Twitter and the beauty of online anonymity](https://www.vox.com/culture/21432987/trans-twitter-reddit-online-anonymity))
+- Are you part of an oppressed or marginalized group that has been restricted from self-expression? Then perhaps expressing yourself is morally good. (See [Trans Twitter and the beauty of online anonymity](https://www.vox.com/culture/21432987/trans-twitter-reddit-online-anonymity) {cite:p}`jamesTransTwitterBeauty2020`)
 
 % TODO: Make a table
 % TODO: Add Vonnegut quote: "We are who we pretend to be"
@@ -24,4 +24,4 @@ We can next ask if authentic self-expression is a good thing or not. But that de
 [^tracing_back]: In reality, while many times people can remain anonymous, surprisingly often, anonymous users' identities can be discovered and revealed, whether through hacks or accidentally revealed information.
 
 
-% Anonymity links: https://womensmediacenter.com/speech-project/why-online-anonymity-is-critical-for-women  https://theconversation.com/online-abuse-banning-anonymous-social-media-accounts-is-not-the-answer-170224 https://www.eff.org/deeplinks/2020/03/right-anonymity-vital-free-expression-now-and-always  https://coralproject.net/blog/the-real-name-fallacy/ 
+% Anonymity links: [Why Online Anonymity is Critical for Women](https://womensmediacenter.com/speech-project/why-online-anonymity-is-critical-for-women) {citep}`march11WhyOnlineAnonymity`, [Online abuse: banning anonymous social media accounts is not the answer](https://theconversation.com/online-abuse-banning-anonymous-social-media-accounts-is-not-the-answer-170224) {citep}`dyerOnlineAbuseBanning2021`, [The Right to Anonymity is Vital to Free Expression: Now and Always](https://www.eff.org/deeplinks/2020/03/right-anonymity-vital-free-expression-now-and-always) {citep}`yorkRightAnonymityVital2020`, [The Real Name Fallacy](https://coralproject.net/blog/the-real-name-fallacy/) {citep}`coralprojectRealNameFallacy2017`
