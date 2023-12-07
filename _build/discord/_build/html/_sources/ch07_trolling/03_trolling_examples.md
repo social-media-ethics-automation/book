@@ -7,7 +7,7 @@ This page has several examples of trolling. For each one, consider the following
 These examples will range from mild to much more extreme.
 
 ## Banana Slicer Reviews
-In 2011, Amazon users started leaving parody reviews of a [banana slicer on Amazon](https://www.amazon.com/Hutzler-3571-571-Banana-Slicer/dp/B0047E0EII)
+In 2011, Amazon users started leaving parody reviews of a [banana slicer on Amazon](https://www.amazon.com/Hutzler-3571-571-Banana-Slicer/dp/B0047E0EII) {cite:p}`AmazonComHutzler`
 
 ```{figure} banana_1.png
 ---
@@ -35,7 +35,7 @@ alt: "Review by Emily S in 2018. The review has a photo of a couple holding a ba
 A review about the slicer and bananas being curved the wrong way (you could just rotate it)
 ```
 
-Read more at [knowyourmeme](https://knowyourmeme.com/memes/banana-slicer-reviews) and see also the related [Three Wolf Moon T-Shirt](https://www.youtube.com/watch?v=TbNQ746eLiU)
+Read more at [knowyourmeme](https://knowyourmeme.com/memes/banana-slicer-reviews) {cite:p}`BananaSlicerReviews2013` and see also the related [Three Wolf Moon T-Shirt](https://www.youtube.com/watch?v=TbNQ746eLiU) {cite:p}`knowyourmemeKnowYourMeme2011`
 
 ## Fake Pronunciation Guide
 
@@ -43,7 +43,7 @@ Below is a fake pronunciation guide on youtube for "Hors d'oeuvres":
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/o1-ndsRPxbM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Note: you can find the [real pronunciation guide here](https://dictionary.cambridge.org/us/pronunciation/english/hors-d-oeuvre), and for those who can't listen to the video, there is an explanation in this footnote[^fake_pronounce]
+Note: you can find the [real pronunciation guide here](https://dictionary.cambridge.org/us/pronunciation/english/hors-d-oeuvre) {cite:p}`HowPronounceHORS2023`, and for those who can't listen to the video, there is an explanation in this footnote[^fake_pronounce]
 
 [^fake_pronounce]: In American English, "Hors d'oeuvres" is pronounced like "or-dervs". In the fake pronunciation video they pronounce it: "haars-doovs-dees" and then give an example sentence: "MMmm, what a die-loose-us [instead of delicious (dee-lish-us)] haars-doovs-dees"
 
@@ -72,14 +72,14 @@ alt: "image in the form of a sort of flier with meme faces of foreveralone and t
 A meme spread on 4chan trying to recruit 4chan trolls to catfish single men and have all the single men show up to the same location at the same time with no one there to meet them. Then 4chan users can watch a webcam to laugh at the lonely men.
 ```
 
-Read more about what happened in [this Vice article](https://www.vice.com/en/article/wdyyny/forever-alone-involuntary-flashmob).
+Read more about what happened in [this Vice article](https://www.vice.com/en/article/wdyyny/forever-alone-involuntary-flashmob) {cite:p}`olsonForeverAloneInvoluntary2011`.
 
 
 ```{note}
 As we look at more cruel trolling examples, be aware of this online troll's explained the justification for trolling (though we, the authors, do not think this justifies the cruelty):
 > The purpose of the community … I guess is to exchange ideas and techniques, and to plan co-ordinated trolling. The underlying philosophical purpose or shared goal, anyway, would be to disrupt people’s rosy vision of the internet as their own personal emotional safe place that serves as a proxy for real-life interactions they are lacking (i.e. going online to demonstrate one’s grief over a public disaster like Japan [2011 Tsunami] with total strangers who have no real connection to the event).
 >
-> - From [Interview with a troll](http://www.indexoncensorship.org/2011/09/interview-with-a-troll/)
+> - From [Interview with a troll](http://www.indexoncensorship.org/2011/09/interview-with-a-troll/) {cite:p}`censorshipInterviewTroll2011`
 ```
 
 
@@ -92,7 +92,7 @@ RIP trolling is where trolls find a memorial page and then all work together to 
 >
 > One photo showed a submerged person's hand breaking through the water with text reading "LOL u drowned you fail at being a fish," according to a screen grab of the page shared with the Tribune after the post was removed.
 >
-> - [Cruel online posts known as RIP trolling add to Tinley Park family's grief](https://www.chicagotribune.com/suburbs/ct-xpm-2013-08-12-ct-met-rip-trolling-20130812-story.html) from the Chicago Tribune
+> - [Cruel online posts known as RIP trolling add to Tinley Park family's grief](https://www.chicagotribune.com/suburbs/ct-xpm-2013-08-12-ct-met-rip-trolling-20130812-story.html) {cite:p}`CruelOnlinePosts2013` from the Chicago Tribune
 
 
 
@@ -102,6 +102,6 @@ To go in a different direction for our last example, let's look at an example of
 
 In the Black Lives Matters protests of 2020, Dallas Police made an app where they asked people to upload videos of protesters doing anything illegal. In support of the protesters, K-pop fans swarmed the app and uploaded as many K-pop videos as they could eventually leading to the app crashing and becoming unusable, and thus protecting the protesters from this attempt at Police surveillance.
 
-Read more at the Verge: [K-pop stans overwhelm app after Dallas police ask for videos of protesters](https://www.theverge.com/2020/6/1/21277423/k-pop-dallas-pd-iwatch-app-flood-review-bomb-surveillance-protests-george-floyd)
+Read more at the Verge: [K-pop stans overwhelm app after Dallas police ask for videos of protesters](https://www.theverge.com/2020/6/1/21277423/k-pop-dallas-pd-iwatch-app-flood-review-bomb-surveillance-protests-george-floyd) {cite:p}`alexanderKpopStansOverwhelm2020`
 
-For another example of trolling as protests, this one with bots, see: [A TikToker said he wrote code to flood Kellogg with bogus job applications after the company announced it would permanently replace striking workers](https://www.businessinsider.com/tiktoker-wrote-code-spam-kellogg-strike-busting-job-ad-site-2021-12)
+For another example of trolling as protests, this one with bots, see: [A TikToker said he wrote code to flood Kellogg with bogus job applications after the company announced it would permanently replace striking workers](https://www.businessinsider.com/tiktoker-wrote-code-spam-kellogg-strike-busting-job-ad-site-2021-12) {cite:p}`jankowiczTikTokerSaidHe`

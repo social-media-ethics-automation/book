@@ -1,24 +1,24 @@
 # Parasocial Relationships
 
-Another phenomenon related to authenticity which is common on social media is the [parasocial relationship](https://en.wikipedia.org/wiki/Parasocial_interaction).
+Another phenomenon related to authenticity which is common on social media is the [parasocial relationship](https://en.wikipedia.org/wiki/Parasocial_interaction) {cite:p}`ParasocialInteraction2023`.
 
 Parasocial relationships are when a viewer or follower of a public figure (that is, a celebrity) feel like they know the public figure, and may even feel a sort of friendship with them, but the public figure doesn't know the viewer at all.
 
-Parasocial relationships are not a new phenomenon, but social media has increased our ability to form both sides of these bonds. As comedian Bo Burnham put it: "[This awful D-list celebrity pressure I had experienced onstage has now been democratized.](https://www.npr.org/2018/07/18/630238825/comic-bo-burnham-on-eighth-grade-social-media-anxiety)"
+Parasocial relationships are not a new phenomenon, but social media has increased our ability to form both sides of these bonds. As comedian Bo Burnham put it: "[This awful D-list celebrity pressure I had experienced onstage has now been democratized.](https://www.npr.org/2018/07/18/630238825/comic-bo-burnham-on-eighth-grade-social-media-anxiety)" {cite:p}`nComicBoBurnham2018`
 
 
 Learn more about parasocial relationships:
- - StrucciMovies: [Fake Friends YouTube Series](https://www.youtube.com/watch?v=x3vD_CAYt4g&list=PL7-HzFax9fcxbuDiKPZGdIV69N5-MszEa)
- - Sarah Z: [How Fans Treat Creators](https://www.youtube.com/watch?v=f0l_biTU3Vg) 33 min
+ - StrucciMovies: [Fake Friends YouTube Series](https://www.youtube.com/watch?v=x3vD_CAYt4g&list=PL7-HzFax9fcxbuDiKPZGdIV69N5-MszEa) {cite:p}`struccimoviesFAKEFRIENDSEPISODE2017`
+ - Sarah Z: [How Fans Treat Creators](https://www.youtube.com/watch?v=f0l_biTU3Vg) {cite:p}`sarahzHowFansTreat2020` 33 min
 
 
 ## Example: Mr. Rogers
-As an example of the ethically complicated nature of parasocial relationships, let's consider the case of [Fred Rogers](https://en.wikipedia.org/wiki/Fred_Rogers), who hosted a children's television program from 1968 to 2001.
+As an example of the ethically complicated nature of parasocial relationships, let's consider the case of [Fred Rogers](https://en.wikipedia.org/wiki/Fred_Rogers) {cite:p}`FredRogers2023`, who hosted a children's television program from 1968 to 2001.
 
 In his television program, Mr. Rogers wanted all children to feel cared for and loved. To do this, he intentionally fostered a parasocial relationship with the children in his audience (he called them his "television friends"):
 > I give an expression of care every day to each child, to help him realize that he is unique. I end the program by saying, "You've made this day a special day, by just your being you. There's no person in the whole world like you, and I like you, just the way you are."
 >
-> [Fred Rogers requesting funds for PBS at the US Senate in 1969](https://misterrogers.org/videos/pastore/)
+> [Fred Rogers requesting funds for PBS at the US Senate in 1969](https://misterrogers.org/videos/pastore/) {cite:p}`FredRogersTestifies`
 
 ![gif of Mr. Rogers looking straight into the camera and saying: "I like you just the way you are"](mr_rogers.gif)
 
@@ -63,7 +63,7 @@ Now, of the two of us at this time, I had some skepticism, but my younger sister
 - She believed Mr. Rogers knew her (or was at least close enough that he would come over to visit).
   - This belief was almost certainly false. He may have known who she was for a brief moment when responding to this letter (or signing one his secretary wrote or something).
 - She believed that if she saw Mr. Rogers (like if he came over to our house), he would like her.
-  - Based on [what is known publicly about Fred Rogers](https://www.esquire.com/entertainment/tv/a27134/can-you-say-hero-esq1198/), this was probably true.
+  - Based on [what is known publicly about Fred Rogers](https://www.esquire.com/entertainment/tv/a27134/can-you-say-hero-esq1198/) {cite:p}`DefinitiveMrRogers2017`, this was probably true.
 
 
 In the above example, you can see how Fred Rogers was trying to define and clarify the parasocial nature of the relationship (e.g., "television friends", "television visits"). We can then ask what was authentic or inauthentic about this relationship, and we can analyze the ethics of what Fred Rogers was doing.
