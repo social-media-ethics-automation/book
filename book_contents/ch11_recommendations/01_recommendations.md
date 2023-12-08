@@ -10,7 +10,7 @@ Some recommendation algorithms can be simple such as reverse chronological order
 - What people connected to me or similar to me have been liking, interacting with, or hovering over
 - What people near you have been liking, interacting with, or hovering over (they can find your approximate location, like your city, from your internet IP address, and they may know even more precisely)
   - This perhaps explains why sometimes when you talk about something out loud it gets recommended to you (because someone around you then searched for it). Or maybe they are actually recording what you are saying and recommending based on that.
-- Phone numbers or email addresses ([sometimes collected deceptively](https://techcrunch.com/2019/03/03/facebook-phone-number-look-up/)) can be used to suggest friends or contacts.
+- Phone numbers or email addresses ([sometimes collected deceptively](https://techcrunch.com/2019/03/03/facebook-phone-number-look-up/) {cite:p}`whittakerFacebookWonLet2019`) can be used to suggest friends or contacts.
 - And probably many more factors as well!
 
 Now, how these algorithms precisely work is hard to know, because social media sites keep these algorithms secret, probably for multiple reasons:

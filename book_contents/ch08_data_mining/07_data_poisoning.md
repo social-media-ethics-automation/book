@@ -7,13 +7,13 @@ Sometimes a dataset has so many problems that it is effectively __poisoned__ or 
 Datasets can be poisoned unintentionally. For example, many scientists posted online surveys that people can get paid to take. Getting useful results depended on a wide range of people taking them. But when one TikToker's video about taking them went viral, the surveys got filled out with mostly one narrow demographic, preventing many of the datasets from being used as intended.
 
 See more in
-- [A teenager on TikTok disrupted thousands of scientific studies with a single video -- The Verge](https://www.theverge.com/2021/9/24/22688278/tiktok-science-study-survey-prolific)
+- [A teenager on TikTok disrupted thousands of scientific studies with a single video -- The Verge](https://www.theverge.com/2021/9/24/22688278/tiktok-science-study-survey-prolific) {cite:p}`letzterTeenagerTikTokDisrupted2021`
 
 Additionally, spam and output from Large Language Models like ChatGPT can flood information spaces (e.g., email, Wikipedia) with nonsense, useless, or false content, making them hard to use or useless.
 
 See more in
-- [CNET Is Reviewing the Accuracy of All Its AI-Written Articles After Multiple Major Corrections](https://gizmodo.com/cnet-ai-chatgpt-news-robot-1849996151)
-- [Why posting GPT and ChatGPT generated answers is not currently acceptable - StackOverflow](https://stackoverflow.com/help/gpt-policy)
+- [CNET Is Reviewing the Accuracy of All Its AI-Written Articles After Multiple Major Corrections](https://gizmodo.com/cnet-ai-chatgpt-news-robot-1849996151) {cite:p}`CNETReviewingAccuracy2023`
+- [Why posting GPT and ChatGPT generated answers is not currently acceptable - StackOverflow](https://stackoverflow.com/help/gpt-policy) {cite:p}`WhyCanUse`
 
 
 ## Intentional Data Poisoning
@@ -24,10 +24,10 @@ Data can be poisoned intentionally as well. For example, in 2021, workers at Kel
 > 
 > Earlier this week, the company announced it would permanently replace 1,400 striking workers.  
 >
-> - [People Are Spamming Kellogg’s Job Applications in Solidarity with Striking Workers -- Vice MotherBoard](https://www.vice.com/en/article/v7dvy9/spamming-kelloggs-job-applications-strike)
+> - [People Are Spamming Kellogg’s Job Applications in Solidarity with Striking Workers -- Vice MotherBoard](https://www.vice.com/en/article/v7dvy9/spamming-kelloggs-job-applications-strike) {cite:p}`colePeopleAreSpamming2021`
 
 
-People in the [antiwork subreddit](https://www.reddit.com/r/antiwork/) found the website where Kellogg's posted their job listing to replace the workers. So those Redditors suggested they spam the site with fake applications, poisoning the job application data, so Kellogg's wouldn't be able to figure out which applications were legitimate or not (we could consider this a form of trolling). Then Kellogg's wouldn't be able to replace the striking workers, and they would have to agree to better working conditions.
+People in the [antiwork subreddit](https://www.reddit.com/r/antiwork/) {cite:p}`AntiworkUnemploymentAll` found the website where Kellogg's posted their job listing to replace the workers. So those Redditors suggested they spam the site with fake applications, poisoning the job application data, so Kellogg's wouldn't be able to figure out which applications were legitimate or not (we could consider this a form of trolling). Then Kellogg's wouldn't be able to replace the striking workers, and they would have to agree to better working conditions.
 
 Then Sean Black, a programmer on TikTok saw this and decided to contribute by creating a bot that would automatically log in and fill out applications with random user info, increasing the rate at which he (and others who used his code) could spam the Kellogg's job applications:
 
@@ -35,4 +35,4 @@ Then Sean Black, a programmer on TikTok saw this and decided to contribute by cr
 
 
 See also:
-- [How to poison the data that Big Tech uses to surveil you -- MIT Technology Review](https://www.technologyreview.com/2021/03/05/1020376/resist-big-tech-surveillance-data/)
+- [How to poison the data that Big Tech uses to surveil you -- MIT Technology Review](https://www.technologyreview.com/2021/03/05/1020376/resist-big-tech-surveillance-data/) {cite:p}`HowPoisonData`
