@@ -4,7 +4,7 @@ We want to provide you, the reader, a chance to explore accessibility more.
 
 In this activity you will be looking at a social media site on your device (e.g., your phone or computer).
 
-We will again follow the five step [CIDER method](https://medium.com/@OAlannah/beyond-average-users-building-inclusive-design-skills-with-the-cider-technique-413969544e6d?source=friends_link&sk=6c9184c8a88feae058cfb073a44985f7) (Critique, Imagine, Design, Expand, Repeat).
+We will again follow the five step [CIDER method](https://medium.com/@OAlannah/beyond-average-users-building-inclusive-design-skills-with-the-cider-technique-413969544e6d?source=friends_link&sk=6c9184c8a88feae058cfb073a44985f7) {cite:p}`olesonAverageUsersBuilding2022b` (Critique, Imagine, Design, Expand, Repeat).
 
 ![Diagram of the CIDER method. 5 steps in order from left to right: Critique (Identify embedded assumptions about users); Imagine (Pick one assumption and envision how it excludes users); Design (Brainstorm changes to improve inclusion); Expand (Learn about new types of bias from peers' assumptions); Repeat (Redo I and D using new-to-you assumptions from EXPAND list).](cider-method.jpeg)
 

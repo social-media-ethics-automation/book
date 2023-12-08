@@ -9,16 +9,16 @@ The following tweet has a video of a soap dispenser that apparently was only des
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">If you have ever had a problem grasping the importance of diversity in tech and its impact on society, watch this video <a href="https://t.co/ZJ1Je1C4NW">pic.twitter.com/ZJ1Je1C4NW</a></p>&mdash; Chukwuemeka Afigbo (@nke_ise) <a href="https://twitter.com/nke_ise/status/897756900753891328?ref_src=twsrc%5Etfw">August 16, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-% If Twitter goes down, the users' blog is https://nkeise.medium.com/, and the mp4 is in this folder
+% If Twitter goes down, the users' blog is available [here](https://nkeise.medium.com/) {cite:p}`ChukwuemekaAfigbo`, and the mp4 is in this folder
 <br>
 
-Similarly, [Twitter looked into bias in how their automatic image cropping algorithm worked](https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm).
+Similarly, [Twitter looked into bias in how their automatic image cropping algorithm worked](https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm) {cite:p}`SharingLearningsOur`.
 
 
 ## Who gets to be designers
-In how we've been talking about accessible design, the way we've been phrasing things has implied a separation between designers who make things, and the disabled people who things are made for. And unfortunately, as researcher [Dr. Cynthia Bennett](https://www.bennettc.com/) points out, disabled people are often excluded from designing for themselves, or even when they do participate in the design, they aren't considered to be the "real designers." You can see Dr. Bennet's research talk on this in the following Youtube Video:
+In how we've been talking about accessible design, the way we've been phrasing things has implied a separation between designers who make things, and the disabled people who things are made for. And unfortunately, as researcher [Dr. Cynthia Bennett](https://www.bennettc.com/) {cite:p}`CynthiaBennettHumanComputer` points out, disabled people are often excluded from designing for themselves, or even when they do participate in the design, they aren't considered to be the "real designers." You can see Dr. Bennet's research talk on this in the following Youtube Video:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2dG_919Nyeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Design Justice
-We mentioned [Design Justice](https://design-justice.pubpub.org/) earlier, but it is worth reiterating again here that design justice includes considering which groups get to be part of the design process itself.
+We mentioned [Design Justice](https://design-justice.pubpub.org/) {cite:p}`DesignJusticea` earlier, but it is worth reiterating again here that design justice includes considering which groups get to be part of the design process itself.

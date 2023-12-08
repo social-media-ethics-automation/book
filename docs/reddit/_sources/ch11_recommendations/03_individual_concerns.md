@@ -14,20 +14,20 @@ Recommendations can go poorly when they do something like recommend an ex or an 
 
 Automated reminders can go well in a situation such as when a user enjoys the nostalgia of seeing something from their past.
 
-Automated reminders can go poorly when they give users unwanted or painful reminders, such as for [miscarriages](https://www.theatlantic.com/family/archive/2018/11/digital-reminders-miscarriages/575050/), funerals, or [break-ups](https://www.wired.com/story/weddings-social-media-apps-photos-memories-miscarriage-problem/)
+Automated reminders can go poorly when they give users unwanted or painful reminders, such as for [miscarriages](https://www.theatlantic.com/family/archive/2018/11/digital-reminders-miscarriages/575050/) {cite:p}`tappDigitalRemindersLost2018`, funerals, or [break-ups](https://www.wired.com/story/weddings-social-media-apps-photos-memories-miscarriage-problem/) {cite:p}`goodeCalledMyWedding`
 
 
 ### Ads:
 Advertisements shown to users can go well for users when the users find products they are genuinely interested in, and for making the social media site free to use (since the site makes its money from ads).
 
-Advertisements can go poorly if they become part of discrimination ([like only showing housing ads to certain demographics of people](https://www.cnbc.com/2022/06/21/doj-settles-with-facebook-over-allegedly-discriminatory-housing-ads.html)), or reveal private information (like [revealing to a family that someone is pregnant](https://www.forbes.com/sites/kashmirhill/2012/02/16/how-target-figured-out-a-teen-girl-was-pregnant-before-her-father-did/))
+Advertisements can go poorly if they become part of discrimination ([like only showing housing ads to certain demographics of people](https://www.cnbc.com/2022/06/21/doj-settles-with-facebook-over-allegedly-discriminatory-housing-ads.html) {cite:p}`feinerDOJSettlesLawsuit2022`), or reveal private information (like [revealing to a family that someone is pregnant](https://www.forbes.com/sites/kashmirhill/2012/02/16/how-target-figured-out-a-teen-girl-was-pregnant-before-her-father-did/) {cite:p}`hillHowTargetFigured`)
 
 ### Content (posts, photos, articles, etc.)
-Content recommendations can go well when users find content they are interested in. Sometimes algorithms do a good job of it and users are appreciative. TikTok has been mentioned in particular as providing surprisingly accurate recommendations, though [Professor Arvind Narayanan argues](https://knightcolumbia.org/blog/tiktoks-secret-sauce) that TikTok's success with its recommendations relies less on advanced recommendation algorithms, and more on the design of the site making it very easy to skip the bad recommendations and get to the good ones.
+Content recommendations can go well when users find content they are interested in. Sometimes algorithms do a good job of it and users are appreciative. TikTok has been mentioned in particular as providing surprisingly accurate recommendations, though [Professor Arvind Narayanan argues](https://knightcolumbia.org/blog/tiktoks-secret-sauce) {cite:p}`TikTokSecretSauce` that TikTok's success with its recommendations relies less on advanced recommendation algorithms, and more on the design of the site making it very easy to skip the bad recommendations and get to the good ones.
 
-Content recommendations can go poorly when it sends people down problematic chains of content, like by [grouping videos of children in a convenient way for pedophiles](https://www.nytimes.com/2019/02/20/technology/youtube-pedophiles.html), or Amazon [recommending groups of materials for suicide](https://www.npr.org/2022/10/09/1127686507/amazon-suicide-teenagers-poison).
+Content recommendations can go poorly when it sends people down problematic chains of content, like by [grouping videos of children in a convenient way for pedophiles](https://www.nytimes.com/2019/02/20/technology/youtube-pedophiles.html) {cite:p}`wakabayashiAdvertisersBoycottYouTube2019`, or Amazon [recommending groups of materials for suicide](https://www.npr.org/2022/10/09/1127686507/amazon-suicide-teenagers-poison) {cite:p}`hernandezParentsLawsuitAccuses2022`.
 
-% https://knightcolumbia.org/blog/tiktoks-secret-sauce
+% [TikTok's Secret Sauce](https://knightcolumbia.org/blog/tiktoks-secret-sauce) {cite:p}`TikTokSecretSauce`
 
 ## Gaming the recommendation algorithm
 
