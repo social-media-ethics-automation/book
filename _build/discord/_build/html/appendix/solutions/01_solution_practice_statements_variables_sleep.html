@@ -231,7 +231,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../ch04_data/05_data_python_platform/00_intro.html">4.5. Data in Python and Discord</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../ch04_data/05_data_python_platform/01_demo_data.html">4.5.1. Demo: Python Basic Data Types</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../ch04_data/05_data_python_platform/02_practice_data.html">4.5.2. Practice: Python Basic Data Types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch04_data/05_data_python_platform/03_demo_data_from_platform.html">4.5.3. Demo: Data from a Reddit Post\n”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch04_data/05_data_python_platform/03_demo_data_from_platform.html">4.5.3. TODO Demo: Data from a Reddit Post</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../ch04_data/05_data_python_platform/04_activity.html">4.5.4. Design Activity: Data and Social media</a></li>
 </ul>
 </li>
@@ -554,6 +554,37 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/social-media-ethics-automation/book/main?urlpath=lab/tree/docs/discord/_sources/appendix/solutions/01_solution_practice_statements_variables_sleep.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -609,7 +640,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/appendix/solutions/01_solution_practice_statements_variables_sleep.md" target="_blank"
+      <li><a href="../../_sources/appendix/solutions/01_solution_practice_statements_variables_sleep.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -619,7 +650,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -678,7 +709,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -694,6 +727,29 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">2.1.1. Variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-variables-in-the-debugger">Viewing variables in the debugger</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-number-variables">Practice number variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#more-variable-practice">More variable practice</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sleep">2.1.2. Sleep</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discord-bot-practice">2.1.3. Discord Bot Practice</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-discord-library">Load Discord Library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-step-1b-make-a-fake-discord-connection-with-the-fake-discord-library">(Optional) Step 1b: Make a fake discord connection with the fake_discord library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-set-up-your-discord-connection">Step 2: Set up your Discord connection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-1-define-and-run-a-bot-that-will-post-to-discord">Practice 1: Define and run a bot that will post to Discord</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-2-define-and-run-a-bot-that-will-post-from-a-variable">Practice 2: Define and run a bot that will post from a variable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submit-multiple-posts">Submit multiple posts</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -706,7 +762,341 @@ document.write(`
   <section id="ch-3-practice-statements-and-variables">
 <h1><span class="section-number">2.1. </span>Ch 3 Practice: Statements and Variables<a class="headerlink" href="#ch-3-practice-statements-and-variables" title="Permalink to this headline">#</a></h1>
 <p><em>Choose Social Media Platform: <a href='../../../reddit/appendix/solutions/01_solution_practice_statements_variables_sleep.html'>Reddit</a> | <strong>Discord</strong></em></p>
-<p><strong>Content for the social media platform Discord hasn’t been created yet. Please try another platform.</strong></p>
+<p>This Python Notebook is a chance for you to try out the programming concepts we have covered thus far.</p>
+<p>As we mentioned previously in the first bot demo (2.3.8), in order to run the code, you can look for the rocket button at the top which will give you an option to “launch binder”</p>
+<p><img alt="screenshot of this page in the online textbook, with the launch binder link highlighted under the rocket button at the top." src="../../_images/binder_link1.png" /></p>
+<p>If you launch binder, it will take a while to load, but eventually show you a version of this page Jupyter Notebook in a code editor called Jupyter Lab</p>
+<p><img alt="a screenshot of this page viewed in jupyter_lab, with menus and options above the editable page" src="../../_images/jupyter_lab1.png" /></p>
+<p>In Jupyter Lab you can double click any section to edit it, and you can press the triangle “run” button to run the code (or display the text).</p>
+<p><img alt="a screenshot of this page viewed in jupyter_lab,with the triangle &quot;run&quot; button circled. Next to it are a square &quot;interrupt the kernal&quot; button and other options" src="../../_images/jupyter_run_code1.png" /></p>
+<p>When the code runs, the little number to the left of the code block should change. There might also be some output from your action displyed below the code block.</p>
+<p>So now you can go through the rest of this page and try out the practice exercises for yourself!</p>
+<section id="variables">
+<h2><span class="section-number">2.1.1. </span>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">#</a></h2>
+<p>You will first practice saving values into variables. Remember, the way we save a value into a variable is like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">variable_name</span> <span class="o">=</span> <span class="n">value</span>
+</pre></div>
+</div>
+<p>First, save the piece of text “I am writing a computer program!” into a variable called <code class="docutils literal notranslate"><span class="pre">my_progress</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_progress</span> <span class="o">=</span> <span class="s2">&quot;I am writing a computer program!&quot;</span><span class="c1"># TODO: enter your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="viewing-variables-in-the-debugger">
+<h3>Viewing variables in the debugger<a class="headerlink" href="#viewing-variables-in-the-debugger" title="Permalink to this headline">#</a></h3>
+<p>Before we continue, we are going to show you how to open the debugger so you can see what is being saved in your variables.</p>
+<p>On the tp right of this tab, press the small bug icon to “enable debugging”:</p>
+<p><img alt="screenshot of this tab in jupyterhub, with the &quot;enable debugging&quot; icon circled at the top right (after the &quot;git&quot; option and before the &quot;Python 3 (ipykernel)&quot; option)" src="../../_images/debugging_icon.png" /></p>
+<p>Then, if you did the step above correctly, you should see the variable <code class="docutils literal notranslate"><span class="pre">my_progress</span></code> with the value “I am writing a computer program!” next to it:</p>
+<p><img alt="screenshot of this tab in jupyterhub, with the debugger tab opened on the right. The top section of that tab is variables, which has &quot;special variables&quot; then &quot;function variables&quot; then &quot;my_progress:I am writing a computer program&quot;" src="../../_images/debugger_vars.png" /></p>
+</section>
+<section id="practice-number-variables">
+<h3>Practice number variables<a class="headerlink" href="#practice-number-variables" title="Permalink to this headline">#</a></h3>
+<p>First, write and run a line of code to save the value 5 into a variable named <code class="docutils literal notranslate"><span class="pre">number_of_pies</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number_of_pies</span> <span class="o">=</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, save the value 12.5 into a variable named <code class="docutils literal notranslate"><span class="pre">cost_per_pie</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cost_per_pie</span> <span class="o">=</span> <span class="mf">12.5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now make a new variable called <code class="docutils literal notranslate"><span class="pre">total_pie_cost</span></code> and save into the value of the number_of_pies multiplied by the cost_per_pie.</p>
+<p>Note: In python (and many programming languages), the symbol for multiply is <code class="docutils literal notranslate"><span class="pre">*</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">total_pie_cost</span> <span class="o">=</span> <span class="n">number_of_pies</span> <span class="o">*</span> <span class="n">cost_per_pie</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now use the <code class="docutils literal notranslate"><span class="pre">display</span></code> function to display what is saved in total_pie_cost</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">total_pie_cost</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>62.5
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="more-variable-practice">
+<h3>More variable practice<a class="headerlink" href="#more-variable-practice" title="Permalink to this headline">#</a></h3>
+<p>Now, make a new variable called <code class="docutils literal notranslate"><span class="pre">first_name</span></code> and assign your first name to it</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_name</span> <span class="o">=</span> <span class="s2">&quot;Kyle&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, make a variable calles <code class="docutils literal notranslate"><span class="pre">last_name</span></code> and save your last name to it</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">last_name</span> <span class="o">=</span> <span class="s2">&quot;Thayer&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create a variable called <code class="docutils literal notranslate"><span class="pre">age</span></code> and assign your age to it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">38</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>~ A year goes by ~</p>
+<p>Increase the <code class="docutils literal notranslate"><span class="pre">age</span></code> variable by 1.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now write three lines of code, with each line using <code class="docutils literal notranslate"><span class="pre">display</span></code> to show what is saved in <code class="docutils literal notranslate"><span class="pre">first_name</span></code>, <code class="docutils literal notranslate"><span class="pre">last_name</span></code>, and `age</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">first_name</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">last_name</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Kyle&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Thayer&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>39
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="sleep">
+<h2><span class="section-number">2.1.2. </span>Sleep<a class="headerlink" href="#sleep" title="Permalink to this headline">#</a></h2>
+<p>In order to use sleep, we must first import it from the time library</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now try displaying 5 messages of your choosing, with some pauses between each one:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;message 1&quot;</span><span class="p">)</span>
+<span class="n">sleep</span><span class="p">(</span><span class="mf">.01</span><span class="p">)</span> <span class="c1">#I am making these pauses small to make the book build faster</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;message 2&quot;</span><span class="p">)</span>
+<span class="n">sleep</span><span class="p">(</span><span class="mf">.02</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;message 3&quot;</span><span class="p">)</span>
+<span class="n">sleep</span><span class="p">(</span><span class="mf">.01</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;message 4&quot;</span><span class="p">)</span>
+<span class="n">sleep</span><span class="p">(</span><span class="mf">0.05</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;message 5&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;message 1&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;message 2&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;message 3&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;message 4&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;message 5&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="discord-bot-practice">
+<h2><span class="section-number">2.1.3. </span>Discord Bot Practice<a class="headerlink" href="#discord-bot-practice" title="Permalink to this headline">#</a></h2>
+<p>Now lets try a Discord bot with variables and sleep!</p>
+<section id="load-discord-library">
+<h3>Load Discord Library<a class="headerlink" href="#load-discord-library" title="Permalink to this headline">#</a></h3>
+<p>First, we need to load the discord library</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;discord&quot; that will help us work with Discord</span>
+<span class="kn">import</span> <span class="nn">discord</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="optional-step-1b-make-a-fake-discord-connection-with-the-fake-discord-library">
+<h3>(Optional) Step 1b: Make a fake discord connection with the fake_discord library<a class="headerlink" href="#optional-step-1b-make-a-fake-discord-connection-with-the-fake-discord-library" title="Permalink to this headline">#</a></h3>
+<p>For testing purposes, we’ve added this line of code, which loads a fake version of discord, so it wont actually connect to Discord. <strong>If you want to try to actually connect to Discord, don’t run this line of code.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_apis/fake_discord.ipynb
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake discord is replacing the discord.py library. Fake discord doesn&#x27;t need real passwords, and prevents you from accessing real discord</strong></div></div>
+</div>
+</section>
+<section id="step-2-set-up-your-discord-connection">
+<h3>Step 2: Set up your Discord connection<a class="headerlink" href="#step-2-set-up-your-discord-connection" title="Permalink to this headline">#</a></h3>
+<p>To use this on your real Discord account, copy your <a class="reference internal" href="../making_bot_account.html"><span class="doc std std-doc">discord token</span></a> into the code below, replacing our fake passwords.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set up your Discord connection</span>
+<span class="c1"># TODO: put the discord token for your bot below</span>
+<span class="n">discord_token</span> <span class="o">=</span> <span class="s2">&quot;m#5@_fake_discord_token_$%Ds&quot;</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">intents</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">Intents</span><span class="o">.</span><span class="n">default</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake discord is pretending to set up a client connection</strong></div></div>
+</div>
+</section>
+<section id="practice-1-define-and-run-a-bot-that-will-post-to-discord">
+<h3>Practice 1: Define and run a bot that will post to Discord<a class="headerlink" href="#practice-1-define-and-run-a-bot-that-will-post-to-discord" title="Permalink to this headline">#</a></h3>
+<p>These are the steps your bot will take when it loads (get the channel, post a message, and shut down). If you want to post on an actual Discord channel you will have to replace the fake channel_id below with your real channel id (see the <a class="reference internal" href="../making_bot_account.html"><span class="doc std std-doc">making bot instructions</span></a>)</p>
+<p>Where the code says: <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">TODO:</span> <span class="pre">put</span> <span class="pre">the</span> <span class="pre">message</span> <span class="pre">you</span> <span class="pre">want</span> <span class="pre">to</span> <span class="pre">post</span> <span class="pre">to</span> <span class="pre">discord</span> <span class="pre">below</span></code>, put code to post your message there with something like: <code class="docutils literal notranslate"><span class="pre">channel.send(&quot;This</span> <span class="pre">post</span> <span class="pre">was</span> <span class="pre">made</span> <span class="pre">by</span> <span class="pre">a</span> <span class="pre">computer</span> <span class="pre">program!&quot;)</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Provide instructions for what your discord bot should do once it has logged in</span>
+<span class="nd">@client</span><span class="o">.</span><span class="n">event</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_ready</span><span class="p">():</span>
+    <span class="c1"># Load the discord channel you want to post to</span>
+    <span class="c1"># TODO: put the discord channel id number below</span>
+    <span class="n">channel_id</span> <span class="o">=</span> <span class="mi">123456789</span>
+    <span class="n">channel</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_channel</span><span class="p">(</span><span class="n">channel_id</span><span class="p">)</span>
+
+    <span class="c1"># Post a message to your discord channel</span>
+    <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;I found a way to solve the practice problem from the answer key!&quot;</span><span class="p">)</span>
+   
+
+    <span class="c1"># Tell your bot to stop running</span>
+    <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    
+<span class="c1"># Now that we&#39;ve defined how the bot should work, start running your bot</span>
+<span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">discord_token</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake discord bot is fake logging in and starting to run</strong></div><div class="output text_html"><strong style='color:darkred'>Fake Discord is pretending to post:</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I found a way to solve the practice problem from the answer key!
+</pre></div>
+</div>
+<div class="output text_html"><strong style='color:darkred'>Fake discord bot is shutting down</strong></div></div>
+</div>
+</section>
+<section id="practice-2-define-and-run-a-bot-that-will-post-from-a-variable">
+<h3>Practice 2: Define and run a bot that will post from a variable<a class="headerlink" href="#practice-2-define-and-run-a-bot-that-will-post-from-a-variable" title="Permalink to this headline">#</a></h3>
+<p>Now try saving a piece of text in a variable for the title, and another for the content of a post, and then submitting a post of whatever you saved in the variables.</p>
+<p>To do this, save text in a variable (with a line of code like: <code class="docutils literal notranslate"><span class="pre">post_variable</span> <span class="pre">=</span> <span class="pre">&quot;This</span> <span class="pre">message</span> <span class="pre">is</span> <span class="pre">stored</span> <span class="pre">in</span> <span class="pre">a</span> <span class="pre">variable&quot;</span></code>).</p>
+<p>Then copy below that the code from Practice 1, but instead of making the posting code like <code class="docutils literal notranslate"><span class="pre">channel.send(&quot;This</span> <span class="pre">post</span> <span class="pre">was</span> <span class="pre">made</span> <span class="pre">by</span> <span class="pre">a</span> <span class="pre">computer</span> <span class="pre">program!&quot;)</span></code>, instead use the variable like <code class="docutils literal notranslate"><span class="pre">channel.send(post_variable)</span></code></p>
+<p>(note, you can call your variable whatever you want instead of <code class="docutils literal notranslate"><span class="pre">post_variable</span></code>, just make sure you call it the exact same thing in every place you use it)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">post_variable</span> <span class="o">=</span> <span class="s2">&quot;I can store a message in a variable and use that&quot;</span>
+
+<span class="c1"># Provide instructions for what your discord bot should do once it has logged in</span>
+<span class="nd">@client</span><span class="o">.</span><span class="n">event</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_ready</span><span class="p">():</span>
+    <span class="c1"># Load the discord channel you want to post to</span>
+    <span class="c1"># TODO: put the discord channel id number below</span>
+    <span class="n">channel_id</span> <span class="o">=</span> <span class="mi">123456789</span>
+    <span class="n">channel</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_channel</span><span class="p">(</span><span class="n">channel_id</span><span class="p">)</span>
+
+    <span class="c1"># Post a message to your discord channel</span>
+    <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">post_variable</span><span class="p">)</span>
+   
+
+    <span class="c1"># Tell your bot to stop running</span>
+    <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    
+<span class="c1"># Now that we&#39;ve defined how the bot should work, start running your bot</span>
+<span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">discord_token</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake discord bot is fake logging in and starting to run</strong></div><div class="output text_html"><strong style='color:darkred'>Fake Discord is pretending to post:</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I can store a message in a variable and use that
+</pre></div>
+</div>
+<div class="output text_html"><strong style='color:darkred'>Fake discord bot is shutting down</strong></div></div>
+</div>
+</section>
+<section id="submit-multiple-posts">
+<h3>Submit multiple posts<a class="headerlink" href="#submit-multiple-posts" title="Permalink to this headline">#</a></h3>
+<p>Next try submitting 3 posts, but use <code class="docutils literal notranslate"><span class="pre">sleep</span></code> to add pauses between each one (note that discord might limit how often you post, so you can sleep for 60 seconds or more before posting again).</p>
+<p>To do this, copy the code from Practice 1, but instead of one line with <code class="docutils literal notranslate"><span class="pre">channel.send(...)</span></code>, make multiple lines with <code class="docutils literal notranslate"><span class="pre">channel.send()</span></code> and add some lines with <code class="docutils literal notranslate"><span class="pre">sleep</span></code> in between.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Provide instructions for what your discord bot should do once it has logged in</span>
+<span class="nd">@client</span><span class="o">.</span><span class="n">event</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_ready</span><span class="p">():</span>
+    <span class="c1"># Load the discord channel you want to post to</span>
+    <span class="c1"># TODO: put the discord channel id number below</span>
+    <span class="n">channel_id</span> <span class="o">=</span> <span class="mi">123456789</span>
+    <span class="n">channel</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_channel</span><span class="p">(</span><span class="n">channel_id</span><span class="p">)</span>
+
+    <span class="c1"># Post messages to your discord channel</span>
+    <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;This is the first message&quot;</span><span class="p">)</span>
+    
+    <span class="n">sleep</span><span class="p">(</span><span class="mf">.01</span><span class="p">)</span> <span class="c1">#note: I am using short times since these pauses slow down compiling the book</span>
+    
+    <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;This is the second message&quot;</span><span class="p">)</span>
+    
+    <span class="n">sleep</span><span class="p">(</span><span class="mf">.02</span><span class="p">)</span>
+    
+    <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;This is the third message&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Tell your bot to stop running</span>
+    <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    
+<span class="c1"># Now that we&#39;ve defined how the bot should work, start running your bot</span>
+<span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">discord_token</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake discord bot is fake logging in and starting to run</strong></div><div class="output text_html"><strong style='color:darkred'>Fake Discord is pretending to post:</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is the first message
+</pre></div>
+</div>
+<div class="output text_html"><strong style='color:darkred'>Fake Discord is pretending to post:</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is the second message
+</pre></div>
+</div>
+<div class="output text_html"><strong style='color:darkred'>Fake Discord is pretending to post:</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is the third message
+</pre></div>
+</div>
+<div class="output text_html"><strong style='color:darkred'>Fake discord bot is shutting down</strong></div></div>
+</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -767,6 +1157,35 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">2.1.1. Variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-variables-in-the-debugger">Viewing variables in the debugger</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-number-variables">Practice number variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#more-variable-practice">More variable practice</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sleep">2.1.2. Sleep</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discord-bot-practice">2.1.3. Discord Bot Practice</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-discord-library">Load Discord Library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-step-1b-make-a-fake-discord-connection-with-the-fake-discord-library">(Optional) Step 1b: Make a fake discord connection with the fake_discord library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-set-up-your-discord-connection">Step 2: Set up your Discord connection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-1-define-and-run-a-bot-that-will-post-to-discord">Practice 1: Define and run a bot that will post to Discord</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-2-define-and-run-a-bot-that-will-post-from-a-variable">Practice 2: Define and run a bot that will post from a variable</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submit-multiple-posts">Submit multiple posts</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
