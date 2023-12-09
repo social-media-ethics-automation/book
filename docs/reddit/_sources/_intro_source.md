@@ -21,6 +21,10 @@ This book is still being created and therefore has incomplete sections, missing 
 ## Download and Versions
 % TODO: Auto-insert download link and versions
 
+
+## Support this Project
+We are happy to make this book available online for free, but if you find this textbook valuable and want to support our work, please donate to us through Susan's Ko-Fi account: [https://ko-fi.com/drsusannotess](https://ko-fi.com/drsusannotess).
+
 ## Suggested Citation
 
 > Kyle Thayer, Susan Notess (2023). Social Media, Ethics, and Automation. https://social-media-ethics-automation.github.io/book

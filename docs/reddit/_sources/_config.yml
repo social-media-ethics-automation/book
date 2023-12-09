@@ -3,6 +3,7 @@
 
 title:  Social Media, Ethics, and Automation
 author: Kyle Thayer and Susan Notess
+copyright: "2023"  # Copyright year to be placed in the footer
 logo: logo.png
 
 exclude_patterns: [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints", demo_jupyterbook_files, unused, "**-discord.**", "**-reddit.**", "**-supporting_code.**", "fake_apis", "_intro_source.md"]
