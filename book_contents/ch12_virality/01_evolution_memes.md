@@ -7,7 +7,7 @@
 name: whale_evolution_fig
 alt: "A sequence of 10 drawings of extinct animals: Indohys which looks sort of deer or dog like, Pakicetus which looks more like a dog, Ambulocetus which still looks sort of dog like but with a longer nose and slightly webbed feet, Kutchicetus which is swimming (as all the rest will be) looks more like an otter with a long tail and long snout, Remingtonocetus which now has shorter legs, Rodhocetus which has stubbier webbed legs and a shorter snout and tail, Protocetus, which looks like a dolphin with fins on the tail, but instead of front fins are small legs, Dorudon which has a longer body and stubby more fin-like legs, Squalodon which looks much like a thin dolphin, Kentriodon which just looks like a dolphin."
 ---
-A sequence of extinct animals in the chain of evolution from mammals related to hippos and deer into whales and dolphins. [From wikipedia](https://en.wikipedia.org/wiki/Evolution_of_cetaceans).
+A sequence of extinct animals in the chain of evolution from mammals related to hippos and deer into whales and dolphins. [From wikipedia](https://en.wikipedia.org/wiki/Evolution_of_cetaceans) {cite:p}`EvolutionCetaceans2023`.
 ```
 ````
 
@@ -34,9 +34,9 @@ When those three conditions are present, then over time successive generations o
 
 
 ## Memes
-In the 1976 book [The Selfish Gene](https://en.wikipedia.org/wiki/The_Selfish_Gene), evolutionary biologist Richard Dawkins[^dawkins_note] said rather than looking at the evolution of organisms, it made even more sense to look at the evolution of the genes of those organisms (sections of DNA that perform some functions and are inherited). For example, if a bee protects its nest by stinging an attacking animal and dying, then it can't reproduce and it might look like a failure of evolution. But if the gene that told the bee to die protecting the nest was shared by the other bees in the nest, then that one bee dying allows the gene to keep being replicated, so the gene is successful evolutionarily.
+In the 1976 book [The Selfish Gene](https://en.wikipedia.org/wiki/The_Selfish_Gene) {cite:p}`SelfishGene2023`, evolutionary biologist Richard Dawkins[^dawkins_note] said rather than looking at the evolution of organisms, it made even more sense to look at the evolution of the genes of those organisms (sections of DNA that perform some functions and are inherited). For example, if a bee protects its nest by stinging an attacking animal and dying, then it can't reproduce and it might look like a failure of evolution. But if the gene that told the bee to die protecting the nest was shared by the other bees in the nest, then that one bee dying allows the gene to keep being replicated, so the gene is successful evolutionarily.
 
-Since genes contained information about how organisms would grow and live, then biological evolution could be considered to be evolving information. Dawkins then took this idea of the evolution of information and applied it to culture, coining the term "meme" (intended to [sound like "gene"](https://en.wikipedia.org/wiki/Meme#Etymology)).
+Since genes contained information about how organisms would grow and live, then biological evolution could be considered to be evolving information. Dawkins then took this idea of the evolution of information and applied it to culture, coining the term "meme" (intended to [sound like "gene"](https://en.wikipedia.org/wiki/Meme#Etymology) {cite:p}`Meme2023`).
 
 A __meme__ is a piece of culture that might reproduce in an evolutionary fashion, like a hummable tune that someone hears and starts humming to themselves, perhaps changing it, and then others overhearing next. In this view, any piece of human culture can be considered a meme that is spreading (or failing to spread) according to evolutionary forces. So we can use an evolutionary perspective to consider the spread of:
 - Technology (languages, weapons, medicine, writing, math, computers, etc.),
@@ -47,6 +47,6 @@ A __meme__ is a piece of culture that might reproduce in an evolutionary fashion
 - organizations
 - etc.
 
-We can even consider the evolutionary forces that play in the spread of true and false information (like an old saying: "[A lie is halfway around the world before the truth has got its boots on.](https://interestingliterature.com/2021/06/lie-halfway-round-world-before-truth-boots-on-quote-origin-meaning/)")
+We can even consider the evolutionary forces that play in the spread of true and false information (like an old saying: "[A lie is halfway around the world before the truth has got its boots on.](https://interestingliterature.com/2021/06/lie-halfway-round-world-before-truth-boots-on-quote-origin-meaning/)" {cite:p}`WhoSaidLie2021`)
 
 [^dawkins_note]: While we value Dawkin's contribution to evolutionary theory, we don't want to make this an endorsement of any of his later statements or views.

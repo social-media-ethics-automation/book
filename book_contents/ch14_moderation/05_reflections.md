@@ -4,7 +4,7 @@
 
 Go to a social media site and try to find spam or some other disallowed comment and report it.
 
-YouTube comments can be a place to find these, particularly replies to comments. It's hard to know where the spammers are currently getting away with spam, but you might try the latest honest trailer from [ScreenJunkies](https://www.youtube.com/c/screenjunkies), sort comments by "newest first" and then look for replies and see if any are spam. If you find one, try reporting it.
+YouTube comments can be a place to find these, particularly replies to comments. It's hard to know where the spammers are currently getting away with spam, but you might try the latest honest trailer from [ScreenJunkies](https://www.youtube.com/c/screenjunkies) {cite:p}`ScreenJunkiesYouTube`, sort comments by "newest first" and then look for replies and see if any are spam. If you find one, try reporting it.
 
 * What did you think of the options you were given for reporting spam?
 
