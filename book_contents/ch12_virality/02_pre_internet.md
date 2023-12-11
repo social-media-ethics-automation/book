@@ -2,7 +2,7 @@
 Since we can look at any part of culture through an evolutionary perspective (memes), we can see how things "went viral" before the invention of the internet.
 
 ## Books
-The book [Writing on the Wall: Social Media - The First 2,000 Years](https://www.amazon.com/Writing-Wall-Social-Media-First/dp/1620402831) {cite:p}`standageWritingWallSocial` describes how, before the printing press, when someone wanted a book, they had to find someone who had a copy and have a scribe make a copy. So books that were popular spread through people having scribes copy each other's books. And with all this copying, there might be different versions of the book spreading around, because of scribal copying errors, added notes, or even the original author making an updated copy. So we can look at the evolution of these books: which got copied, and how they changed over time.
+The book [Writing on the Wall: Social Media - The First 2,000 Years](https://www.amazon.com/Writing-Wall-Social-Media-First/dp/1620402831) {cite:p}`standageWritingWallSocial2013-2` describes how, before the printing press, when someone wanted a book, they had to find someone who had a copy and have a scribe make a copy. So books that were popular spread through people having scribes copy each other's books. And with all this copying, there might be different versions of the book spreading around, because of scribal copying errors, added notes, or even the original author making an updated copy. So we can look at the evolution of these books: which got copied, and how they changed over time.
 
 
 ## Chain letters

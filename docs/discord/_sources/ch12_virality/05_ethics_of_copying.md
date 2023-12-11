@@ -1,6 +1,6 @@
 # Ethics of copying
 
-Elon Musk, who purchased Twitter in 2022 has long been known to copy others' images and jokes and post them as his own without attribution (often specifically cropping images to hide any attribution) ([source](https://www.nytimes.com/2021/05/07/style/elon-musk-memes.html), [source](https://www.sfgate.com/tech/article/2021-04-elon-musk-twitter-covid-19-meme-tesla-ceo-16118139.php), [source](https://www.forbes.com/sites/mattnovak/2023/02/05/18-jokes-elon-musk-stole-from-his-fans-on-twitter)). So let's consider ethical issues and complications around how content is copied on the internet.
+Elon Musk, who purchased Twitter in 2022 has long been known to copy others' images and jokes and post them as his own without attribution (often specifically cropping images to hide any attribution) ([source](https://www.nytimes.com/2021/05/07/style/elon-musk-memes.html) {cite:p}`lorenzElonMuskMemelord2021`, [source](https://www.sfgate.com/tech/article/2021-04-elon-musk-twitter-covid-19-meme-tesla-ceo-16118139.php) {cite:p}`kleeTeslaCEOElon2021`, [source](https://www.forbes.com/sites/mattnovak/2023/02/05/18-jokes-elon-musk-stole-from-his-fans-on-twitter) {cite:p}`novak18JokesElon`). So let's consider ethical issues and complications around how content is copied on the internet.
 
 ## Remixing
 
@@ -18,23 +18,23 @@ A meme about stealing memes. (It is unclear how we should or even could cite thi
 ```
 
 The meme above is composed of many pieces copied from elsewhere, and modified and put together. Here are the pieces we could identify:
-  - A painting: [SACRED HEART OF JESUS by Dona Gelsinger](https://www.glowdecor.com/products/sacred-heart-of-jesus-canvas-wall-art) (which itself is copying its form from centuries of paintings of the [sacred heart](https://en.wikipedia.org/wiki/Sacred_Heart))
-  - The background was switched out to make a yellow disk [halo](https://en.wikipedia.org/wiki/Halo_(religious_iconography)) behind the head of Jesus
-  - Jesus' face is replaced with Keanu Reeves' bearded face (perhaps from the [spongebob movie](https://youtu.be/CJJYewh4Nco?t=57))
-  - A laughing [emoticon](https://en.wikipedia.org/wiki/List_of_emoticons#Western) is placed in Jesus' hand.
+  - A painting: [SACRED HEART OF JESUS by Dona Gelsinger](https://www.glowdecor.com/products/sacred-heart-of-jesus-canvas-wall-art) {cite:p}`decorSacredHeartJesus` (which itself is copying its form from centuries of paintings of the [sacred heart](https://en.wikipedia.org/wiki/Sacred_Heart) {cite:p}`SacredHeart2023`)
+  - The background was switched out to make a yellow disk [halo](https://en.wikipedia.org/wiki/Halo_(religious_iconography) {cite:p}`HaloReligiousIconography2023`) behind the head of Jesus
+  - Jesus' face is replaced with Keanu Reeves' bearded face (perhaps from the [spongebob movie](https://youtu.be/CJJYewh4Nco?t=57) {cite:p}`SpongeBobMovieSponge`)
+  - A laughing [emoticon](https://en.wikipedia.org/wiki/List_of_emoticons#Western) {cite:p}`ListEmoticons2023` is placed in Jesus' hand.
   - A watermark from @AllMemes appears on Jesus' shoulder.
   - The text about stealing memes is added at the top
 
-Communities based on this type of remixing have existed outside the Internet before showing up in internet-based social media platforms, such as [sampling in hip-hop music](https://en.wikipedia.org/wiki/Sampling_(music)#Hip_hop) in the 1980s.
+Communities based on this type of remixing have existed outside the Internet before showing up in internet-based social media platforms, such as [sampling in hip-hop music](https://en.wikipedia.org/wiki/Sampling_(music)#Hip_hop) {cite:p}`SamplingMusic2023` in the 1980s.
 
-In an anthropological introduction to YouTube (from 2008), [Michael Wesch observes this phenomenon]( https://www.youtube.com/watch?v=TPAO-lZ4_hU):
+In an anthropological introduction to YouTube (from 2008), [Michael Wesch observes this phenomenon](https://www.youtube.com/watch?v=TPAO-lZ4_hU) {cite:p}`michaelweschAnthropologicalIntroductionYouTube2008`:
 > And this is something really quite profound that's happening. Where we can remix this culture that's being thrown at us, where we can take it, re-appropriate it and throw it back. [...] Most of what we do is actually illegal, any remixing is basically illegal. And I could talk more about the- the parameters of that, we have fair use laws that should protect it but the simple fact of ripping a DVD is actually illegal which makes virtually everything we do illegal.
 
 
 ## Cultural appropriation
-The online community activity of copying and remixing can be a means of __[cultural appropriation](https://en.wikipedia.org/wiki/Cultural_appropriation)__, which is when one cultural group adopts something from another culture in an unfair or disrespectful way (as opposed to a fair, respectful __[cultural exchange](https://www.youtube.com/watch?v=wQ45VpBB0rQ)__). For example, [many phrases from Black American culture have been appropriated by white Americans](https://www.buzzfeednews.com/article/sydneethompson/aave-language-appropriation) and had their meanings changed or altered (like "woke", "cancel", "shade", "sip/spill the tea", etc.).
+The online community activity of copying and remixing can be a means of __[cultural appropriation](https://en.wikipedia.org/wiki/Cultural_appropriation) {cite:p}`CulturalAppropriation2023`__, which is when one cultural group adopts something from another culture in an unfair or disrespectful way (as opposed to a fair, respectful __[cultural exchange](https://www.youtube.com/watch?v=wQ45VpBB0rQ) {cite:p}`t1jCulturalAppropriationRevisited2019`__). For example, [many phrases from Black American culture have been appropriated by white Americans](https://www.buzzfeednews.com/article/sydneethompson/aave-language-appropriation) {cite:p}`thompsonMuchModernSlang2021` and had their meanings changed or altered (like "woke", "cancel", "shade", "sip/spill the tea", etc.).
 
-Additionally, white Americans often use images and gifs of Black people reacting and expressing emotions. This modern practice with gifs [has been compared](https://www.teenvogue.com/story/digital-blackface-reaction-gifs) to the earlier (and racist) art forms of [blackface](https://en.wikipedia.org/wiki/Blackface), where white actors would paint their faces black and then act in exaggerated unintelligent ways.
+Additionally, white Americans often use images and gifs of Black people reacting and expressing emotions. This modern practice with gifs [has been compared](https://www.teenvogue.com/story/digital-blackface-reaction-gifs) {cite:p}`nastWeNeedTalk2017` to the earlier (and racist) art forms of [blackface](https://en.wikipedia.org/wiki/Blackface) {cite:p}`Blackface2023`, where white actors would paint their faces black and then act in exaggerated unintelligent ways.
 
 
 ## Citation and giving credit
@@ -46,9 +46,9 @@ width: 400px
 name: this_is_fine_fig
 alt: 'A dog is sitting at a table with coffee, while the house around is on fire. The dog says while smiling, "This is fine."'
 ---
-The ["This is fine" meme](https://knowyourmeme.com/memes/this-is-fine) image by K.C. Green
+The ["This is fine" meme](https://knowyourmeme.com/memes/this-is-fine) {cite:p}`ThisFine2015` image by K.C. Green
 ```
- On the 10th anniversary of the [webcomic](https://gunshowcomic.com/648) by K.C. Green where the "This is fine" meme came from, [he reflected on his feelings](https://kcggggg.tumblr.com/post/706263607432921088/we-passed-it-a-couple-of-days-ago-but-it-has-been) about how those frames from his comic became a viral meme:
+ On the 10th anniversary of the [webcomic](https://gunshowcomic.com/648) {cite:p}`GunshowFire` by K.C. Green where the "This is fine" meme came from, [he reflected on his feelings](https://kcggggg.tumblr.com/post/706263607432921088/we-passed-it-a-couple-of-days-ago-but-it-has-been) {cite:p}`kcgggggComicsKCGreen` about how those frames from his comic became a viral meme:
  > When a work gets as big as this has, is it still yours? Not talking about copyright and legal stuff. It says something larger that everyone can feel and relate to.
  >
  > [...]

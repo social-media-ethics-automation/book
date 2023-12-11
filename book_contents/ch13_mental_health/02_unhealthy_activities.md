@@ -16,7 +16,7 @@ name: doom_quality_fig
 width: 500px
 alt: 'Tweet by Ethan Jacobs (@ethanjacobslaw): OK doomscrolling is bad but have you SEEN the quality of the doom this week?'
 ---
-[Tweet on doomscrolling](https://twitter.com/ethanjacobslaw/status/1347434641540538368) {cite:p}`ethanjacobs[@ethanjacobslaw` the day after insurrectionists stormed the US Capital (while still in the middle of the COVID pandemic).
+[Tweet on doomscrolling](https://twitter.com/ethanjacobslaw/status/1347434641540538368) {cite:p}`ethanjacobs[@ethanjacobslaw]OKDoomscrollingBad2021` the day after insurrectionists stormed the US Capital (while still in the middle of the COVID pandemic).
 ```
 
 
@@ -45,7 +45,7 @@ Sometimes people will harm their bodies (called "[self-harm](https://www.mind.or
 Self-harm doesn't always have to be physical though, and some people find ways of causing emotional self-harm through the internet.
 
 ### Self-Bullying
-One form of digital self-harm is [self-bullying](https://www.npr.org/sections/health-shots/2018/04/21/604073315/when-teens-cyberbully-themselves) {cite:p}`fragaWhenTeensCyberbully2018a`, where people set up fake alternate accounts which they then use to post bullying messages at themselves.
+One form of digital self-harm is [self-bullying](https://www.npr.org/sections/health-shots/2018/04/21/604073315/when-teens-cyberbully-themselves) {cite:p}`fragaWhenTeensCyberbully2018`, where people set up fake alternate accounts which they then use to post bullying messages at themselves.
 
 ### Negative Communities
 Another form of digital self-harm is through joining toxic negative communities built around tearing each other down and reinforcing a hopeless worldview. (Content warning: sex and self-harm)

@@ -1,6 +1,6 @@
 # Moderation Tools
 
-We've looked at what type of content is moderated, now let's look at how it is moderated. Sometimes individuals are given very little control over content moderation or defense from the platform, and then the only advice that is useful is: "don't read the comments." But some have argued that this shifts responsibility onto the individual users getting negative comments, when [the responsibility should be on the people in charge of creating the platform](https://medium.com/humane-tech/against-don-t-read-the-comments-aee43ce515b9).
+We've looked at what type of content is moderated, now let's look at how it is moderated. Sometimes individuals are given very little control over content moderation or defense from the platform, and then the only advice that is useful is: "don't read the comments." But some have argued that this shifts responsibility onto the individual users getting negative comments, when [the responsibility should be on the people in charge of creating the platform](https://medium.com/humane-tech/against-don-t-read-the-comments-aee43ce515b9) {cite:p}`dashDonReadComments2016`.
 
 So let's look at the type of content moderation controls that might be given to individuals, and might be used by platforms.
 

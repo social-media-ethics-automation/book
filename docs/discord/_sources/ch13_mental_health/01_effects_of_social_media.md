@@ -4,12 +4,12 @@ In 2019 the company Facebook (now called Meta) presented an internal study that 
 
 So, what does social media do to the mental health of teenage girls, and to all its other users?
 
-The answer is of course complicated and varies. Some have argued that [Facebook's own data is not as conclusive as you think about teens and mental health](https://www.npr.org/2021/10/06/1043138622/facebook-instagram-teens-mental-health).
+The answer is of course complicated and varies. Some have argued that [Facebook's own data is not as conclusive as you think about teens and mental health](https://www.npr.org/2021/10/06/1043138622/facebook-instagram-teens-mental-health) {cite:p}`kamenetzFacebookOwnData2021`.
 
 Many have anecdotal experiences with their own mental health and those they talk to. For example, cosmetic surgeons have seen how photo manipulation on social media has influenced people's views of their appearance:
 > People historically came to cosmetic surgeons with photos of celebrities whose features they hoped to emulate. Now, they’re coming with edited selfies. They want to bring to life the version of themselves that they curate through apps like FaceTune and Snapchat.
 >
-> - [Selfies, Filters, and Snapchat Dysmorphia: How Photo-Editing Harms Body Image](https://www.psychologytoday.com/us/articles/202002/selfies-filters-and-snapchat-dysmorphia-how-photo-editing-harms-body-image)
+> - [Selfies, Filters, and Snapchat Dysmorphia: How Photo-Editing Harms Body Image](https://www.psychologytoday.com/us/articles/202002/selfies-filters-and-snapchat-dysmorphia-how-photo-editing-harms-body-image) {cite:p}`SelfiesFiltersSnapchat`
 
 Comedian and director Bo Burnham has his own observations about how social media is influencing mental health:
 
@@ -19,21 +19,21 @@ Comedian and director Bo Burnham has his own observations about how social media
 >
 > My sort of impulse is like when the 13 year olds of today grow up to be social scientists, I'll be very curious to hear what they have to say about it. But until then, it just feels like we just need to gather the data.”
 >
-> - [Director Bo Burnham On Growing Up With Anxiety — And An Audience](https://www.npr.org/transcripts/630069876) - NPR Fresh Air (10:15-11:20)
+> - [Director Bo Burnham On Growing Up With Anxiety — And An Audience](https://www.npr.org/transcripts/630069876) {cite:p}`DirectorBoBurnham2018` - NPR Fresh Air (10:15-11:20)
 
 It can be difficult to measure the effects of social media on mental health since there are so many types of social media, and it permeates our cultures even of people who don't use it directly.
 
-Some researchers have found that [people using social media may enter a dissociation state](https://www.sciencedaily.com/releases/2022/05/220523135018.htm), where they lose track of time (like what happens when someone is reading a good book).
+Some researchers have found that [people using social media may enter a dissociation state](https://www.sciencedaily.com/releases/2022/05/220523135018.htm) {cite:p}`DonEvenRemember`, where they lose track of time (like what happens when someone is reading a good book).
 
-Researchers at Facebook decided to try to measure how their recommendation algorithm was influencing people's mental health. So they changed their recommendation algorithm to show some people more negative posts and some people more positive posts. They found that people who were given more negative posts tended to post more negatively themselves. Now, this experiment was done without informing users that they were part of an experiment, and [when people found out that they might be part of a secret mood manipulation experiment, they were upset](https://www.theatlantic.com/technology/archive/2014/06/everything-we-know-about-facebooks-secret-mood-manipulation-experiment/373648/).
+Researchers at Facebook decided to try to measure how their recommendation algorithm was influencing people's mental health. So they changed their recommendation algorithm to show some people more negative posts and some people more positive posts. They found that people who were given more negative posts tended to post more negatively themselves. Now, this experiment was done without informing users that they were part of an experiment, and [when people found out that they might be part of a secret mood manipulation experiment, they were upset](https://www.theatlantic.com/technology/archive/2014/06/everything-we-know-about-facebooks-secret-mood-manipulation-experiment/373648/) {cite:p}`meyerEverythingWeKnow2014`.
 
 
 ## Digital Detox?
-Some people view internet-based social media (and other online activities) as inherently toxic and therefore encourage a [digital detox](https://en.wikipedia.org/wiki/Digital_detox), where people take some form of a break from social media platforms and digital devices.
+Some people view internet-based social media (and other online activities) as inherently toxic and therefore encourage a [digital detox](https://en.wikipedia.org/wiki/Digital_detox) {cite:p}`DigitalDetox2023`, where people take some form of a break from social media platforms and digital devices.
 
 While taking a break from parts or all of social media can be good for someone's mental health (e.g., doomscrolling is making them feel more anxious, or they are currently getting harassed online), viewing internet-based social media as inherently toxic and trying to return to an idyllic time from before the Internet is not a realistic or honest view of the matter. 
 
-In her essay "[The Great Offline](https://reallifemag.com/the-great-offline/)," Lauren Collee argues that this is just a repeat of earlier views of city living and the "wilderness." As white Americans were colonizing the American continent, they began idealizing "wilderness" as being uninhabited land (ignoring the Indigenous people who already lived there, or kicking them out or killing them).
+In her essay "[The Great Offline](https://reallifemag.com/the-great-offline/)," {cite:p}`GreatOffline` Lauren Collee argues that this is just a repeat of earlier views of city living and the "wilderness." As white Americans were colonizing the American continent, they began idealizing "wilderness" as being uninhabited land (ignoring the Indigenous people who already lived there, or kicking them out or killing them).
 > In the 19th century, as wilderness tourism was taking off as an industry, natural landscapes were figured as an antidote to the social pressures of urban living, offering truth in place of artifice, interiority in place of exteriority, solitude in place of small talk. 
 
 Similarly, advocates for digital detox build an idealized "offline" separate from the complications of modern life:

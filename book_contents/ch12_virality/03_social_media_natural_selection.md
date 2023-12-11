@@ -27,7 +27,7 @@ width: 400px
 name: lewinsky_tweet_fig
 alt: "Monica Lewinsky quote tweeting a tweet from UberFacts. The Uberfacts tweet says \"What's the most high-risk, low-reward thing you've ever done?\", and Monica Lewinsky's quote tweet just adds the side-eyes emoji."
 ---
-[Monica Lewinsky](https://en.wikipedia.org/wiki/Monica_Lewinsky) {cite:p}`MonicaLewinsky2023` posted [this quote tweet](https://twitter.com/MonicaLewinsky/status/1395734868407984136) {cite:p}`monicalewinskyshe/her[@monicalewinsky` that answers a question with a side-eye emoji, which her audiences will understand as referring to her [affair](https://en.wikipedia.org/wiki/Clinton%E2%80%93Lewinsky_scandal) {cite:p}`ClintonLewinskyScandal2023` with then-US-president Bill Clinton.
+[Monica Lewinsky](https://en.wikipedia.org/wiki/Monica_Lewinsky) {cite:p}`MonicaLewinsky2023` posted [this quote tweet](https://twitter.com/MonicaLewinsky/status/1395734868407984136) {cite:p}`monicalewinskyshe/her[@monicalewinsky]2021` that answers a question with a side-eye emoji, which her audiences will understand as referring to her [affair](https://en.wikipedia.org/wiki/Clinton%E2%80%93Lewinsky_scandal) {cite:p}`ClintonLewinskyScandal2023` with then-US-president Bill Clinton.
 
 Through quote tweeting, a modified version of the original tweet (now with Lewinsky's emoji response) spread as people liked, retweeted, replied, and put it in [Buzzfeed lists](https://www.buzzfeed.com/mjs538/monica-lewinsky-twitter-comebacks) {cite:p}`stoperaMonicaLewinskyHas2021`
 ```
