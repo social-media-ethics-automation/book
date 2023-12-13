@@ -173,7 +173,7 @@ parts:
       sections:
       - file: ch12_virality/01_evolution_memes
       - file: ch12_virality/02_pre_internet
-      - file: ch12_virality/03_social_media_natural_selection
+      - file: ch12_virality/03_social_media_evolution
       - file: ch12_virality/04_viral_examples
       - file: ch12_virality/05_ethics_of_copying
       - file: ch12_virality/06_going_viral
