@@ -1,11 +1,11 @@
 # Meta's Capitalist Strategy
 
-Now that we've looked at what capitalism is, let's pick a particular example of a social media company ([Meta](https://en.wikipedia.org/wiki/Meta), which owns Facebook, Instagram, WhatsApp, etc.), and look at its decisions through a capitalism lens.
+Now that we've looked at what capitalism is, let's pick a particular example of a social media company ([Meta](https://en.wikipedia.org/wiki/Meta) {cite:p}`Meta2023`, which owns Facebook, Instagram, WhatsApp, etc.), and look at its decisions through a capitalism lens.
 
 ## Surveillance Capitalism
-Meta's way of making profits fits in a category called __[Surveillance Capitalism](https://nymag.com/intelligencer/2019/02/shoshana-zuboff-q-and-a-the-age-of-surveillance-capital.html)__.
+Meta's way of making profits fits in a category called __[Surveillance Capitalism](https://nymag.com/intelligencer/2019/02/shoshana-zuboff-q-and-a-the-age-of-surveillance-capital.html) {cite:p}`kulwinShoshanaZuboffTalks2019`__.
 
-Surveillance capitalism began when internet companies started tracking user behavior data to make their sites more personally tailored to users. These companies realized that this data was something that they could profit from, so they began to collect more data than strictly necessary ("behavioral surplus") and see what more they could predict about users. Companies could then sell this data about users directly, or (more commonly), they could keep their data hidden, but use it to sell targeted advertisements. So, for example, Meta might let an advertiser say they want an ad to only go to people likely to be pregnant. Or they might [let advertizes make ads go only to "Jew Haters"](https://www.propublica.org/article/facebook-enabled-advertisers-to-reach-jew-haters) (which is ethically very bad, and something Meta allowed).
+Surveillance capitalism began when internet companies started tracking user behavior data to make their sites more personally tailored to users. These companies realized that this data was something that they could profit from, so they began to collect more data than strictly necessary ("behavioral surplus") and see what more they could predict about users. Companies could then sell this data about users directly, or (more commonly), they could keep their data hidden, but use it to sell targeted advertisements. So, for example, Meta might let an advertiser say they want an ad to only go to people likely to be pregnant. Or they might [let advertizes make ads go only to "Jew Haters"](https://www.propublica.org/article/facebook-enabled-advertisers-to-reach-jew-haters) {cite:p}`tobinFacebookEnabledAdvertisers2017` (which is ethically very bad, and something Meta allowed).
 
 % TODO: Mention grocery store discounts for getting an account (allowing them to track you)
 
@@ -22,10 +22,10 @@ The way that Meta can fulfill their fiduciary duty in maximizing profits is to t
 ## How Meta Tries to Corner the Market of Social Media
 To increase profits, Meta wants to corner the market on social media. This means they want to get the most users possible to use Meta (and only Meta) for social media. Before we discuss their strategy, we need a couple background concepts:
 
-- [Network effect](https://en.wikipedia.org/wiki/Network_effect): Something is more useful the more people use it (e.g., telephones, the metric system). For example, when the [Google+ social media network](https://en.wikipedia.org/wiki/Google%2B) started, not many people used it, which meant that if you visited it there wasn't much content, so people stopped using it, which meant there was even less content, and it was eventually shut down.
-- [Network power](https://alliance-primo.hosted.exlibrisgroup.com/permalink/f/kjtuig/CP71119582520001451): When more people start using something, it becomes harder to use alternatives. For example, Twitter's large user base makes it difficult for people to move to a new social media network, even if they are worried the new owner is going to ruin it, since the people they want to connect with aren't all on some other platform. This means Twitter can get much worse and people still won't benefit from leaving it.
+- [Network effect](https://en.wikipedia.org/wiki/Network_effect) {cite:p}`NetworkEffect2023`: Something is more useful the more people use it (e.g., telephones, the metric system). For example, when the [Google+ social media network](https://en.wikipedia.org/wiki/Google%2B) {cite:p}`Google2023` started, not many people used it, which meant that if you visited it there wasn't much content, so people stopped using it, which meant there was even less content, and it was eventually shut down.
+- [Network power](https://alliance-primo.hosted.exlibrisgroup.com/permalink/f/kjtuig/CP71119582520001451) {cite:p}`grewalNetworkPowerSocial2008`: When more people start using something, it becomes harder to use alternatives. For example, Twitter's large user base makes it difficult for people to move to a new social media network, even if they are worried the new owner is going to ruin it, since the people they want to connect with aren't all on some other platform. This means Twitter can get much worse and people still won't benefit from leaving it.
 
-Let's look at a scene from the movie The Social Network (about the origins of Facebook), where Sean Parker (who created the music-sharing app [Napster](https://en.wikipedia.org/wiki/Napster)) talks to Facebook founders Mark Zuckerberg and Eduardo Saverin about their strategy to grow Facebook:
+Let's look at a scene from the movie The Social Network (about the origins of Facebook), where Sean Parker (who created the music-sharing app [Napster](https://en.wikipedia.org/wiki/Napster) {cite:p}`Napster2023`) talks to Facebook founders Mark Zuckerberg and Eduardo Saverin about their strategy to grow Facebook:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/k5fJmkv02is?start=37" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -38,6 +38,6 @@ So, looking back at Meta's goal (getting the most users possible to use Meta, an
 - Obstacle: People speak different languages
   - Solution: Increase language support of Facebook so more people can use the site
 - Obstacle: Not everyone has the internet
-  -  Solution: [Give them free internet](https://time.com/facebook-world-plan/), but push them to Facebook while doing so (called [Free Basic](https://www.theguardian.com/technology/2017/jul/27/facebook-free-basics-developing-markets))
-- Obstacle:  A competing company social media company has a user base (e.g., [Instagram, Snapchat](https://www.businessinsider.com/mark-zuckerberg-grilled-on-facebook-copying-instagram-snapchat-2020-7))
+  -  Solution: [Give them free internet](https://time.com/facebook-world-plan/) {cite:p}`ExclusiveFacebookPlan`, but push them to Facebook while doing so (called [Free Basic](https://www.theguardian.com/technology/2017/jul/27/facebook-free-basics-developing-markets) {cite:p}`solonItDigitalColonialism2017`)
+- Obstacle:  A competing company social media company has a user base (e.g., [Instagram, Snapchat](https://www.businessinsider.com/mark-zuckerberg-grilled-on-facebook-copying-instagram-snapchat-2020-7) {cite:p}`eadiciccoMarkZuckerbergWas`)
   - Solution: Try to purchase the company, or copy their features

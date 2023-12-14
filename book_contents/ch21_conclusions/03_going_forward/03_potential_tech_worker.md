@@ -52,10 +52,10 @@ As an example of what someone in this position might do, let's consider this sto
 >
 > Sometimes it doesn’t work out, or you have to escalate and risk it back firing, but a good pocket veto is a tool to learn to wield well.
 >
-> - [Twitter Thread](https://twitter.com/stevekrenzel/status/1589700721121058817)
-> - [Business Insider Article](https://www.businessinsider.com/former-twitter-engineer-worried-how-elon-musk-treat-user-data-2022-11)
+> - [Twitter Thread](https://twitter.com/stevekrenzel/status/1589700721121058817) {cite:p}`stevekrenzel[@stevekrenzel]TwitterChangeOwnership2022`
+> - [Business Insider Article](https://www.businessinsider.com/former-twitter-engineer-worried-how-elon-musk-treat-user-data-2022-11) {cite:p}`nguyenExTwitterEngineerSays`
 
 
 You aren't likely to end up in a situation as dramatic as this. If you find yourself making a stand for ethical tech work, it would probably look more like arguing about what restrictions to put on a name field (e.g., minimum length), prioritizing accessibility, or arguing that a small piece of data about users is not really needed and shouldn't be tracked. But regardless, if you end up in a position to have an influence in tech, we want you to be able to think through the ethical implications of what you are asked to do and how you choose to respond.
 
-You can also look at how you can organize with other workers, through things like the [Alphabet Workers Union](https://alphabetworkersunion.org/people/our-union/) (Alphabet is the parent company of Google).
+You can also look at how you can organize with other workers, through things like the [Alphabet Workers Union](https://alphabetworkersunion.org/people/our-union/) {cite:p}`OurPeople` (Alphabet is the parent company of Google).
