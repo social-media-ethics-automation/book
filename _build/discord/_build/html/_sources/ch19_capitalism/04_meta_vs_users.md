@@ -15,7 +15,7 @@ name: tumblr_tweet_fig
 width: 450px
 alt: "Tweet from lesbian mothman (@verysmallriver)on April 14, 2022: i was on tumblr when yahoo had to sell it for $3 million after buying it for $1.1 billion. we were all a little bit responsible for losing yahoo a billion dollars. and with that type of collective effort, i believe we here on twitter can lose elon musk even more"
 ---
-[Tweet](https://twitter.com/verysmallriver/status/1514575288319070214) relating the crash of Tumblr value to the potential crash of Twitter value right after Elon Musk purchased Twitter.
+[Tweet](https://twitter.com/verysmallriver/status/1514575288319070214) {cite:p}`lesbianmothman[@verysmallriver]WasTumblrWhen2022` relating the crash of Tumblr value to the potential crash of Twitter value right after Elon Musk purchased Twitter.
 ```
 
 - Vote for government representatives (or pressure the government) so that they will regulate social media sites

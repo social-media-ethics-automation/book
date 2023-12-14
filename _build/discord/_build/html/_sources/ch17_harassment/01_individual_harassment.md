@@ -16,7 +16,7 @@ This can be done privately through things like:
 Individual harassment can also be done publicly before an audience (such as classmates or family). For example:
 - Bullying: like posting public mean messages
 - Impersonation: Making an account that appears to be from someone and having that account say things to embarrass or endanger the victim.
-- [Doxing](https://en.wikipedia.org/wiki/Doxing): Publicly posting identifying information about someone (e.g., full name, address, phone number, etc.).
+- [Doxing](https://en.wikipedia.org/wiki/Doxing) {cite:p}`Doxing2023`: Publicly posting identifying information about someone (e.g., full name, address, phone number, etc.).
 - Revenge porn / deep-fake porn
 - Etc.
 

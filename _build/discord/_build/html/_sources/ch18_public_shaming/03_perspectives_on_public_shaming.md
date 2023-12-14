@@ -14,21 +14,21 @@ Jennifer Jacquet argues that shame can be morally good as a tool the weak can us
 >
 > A good rule of thumb is to go after groups, but I don’t exempt individuals, especially not if they are politically powerful or sizeably impact society. But we must ask ourselves about the way those individuals are shamed and whether the punishment is proportional.
 >
-> - [Jennifer Jacquet: ‘The power of shame is that it can be used by the weak against the strong’](https://www.theguardian.com/books/2015/mar/06/is-shame-necessary-review)
+> - [Jennifer Jacquet: ‘The power of shame is that it can be used by the weak against the strong’](https://www.theguardian.com/books/2015/mar/06/is-shame-necessary-review) {cite:p}`corbynJenniferJacquetPower2015`
 
 ## Schadenfreude
 
-Another way of considering public shaming is as __schadenfreude__, meaning the [enjoyment obtained from the troubles of others](https://www.merriam-webster.com/dictionary/schadenfreude).
+Another way of considering public shaming is as __schadenfreude__, meaning the [enjoyment obtained from the troubles of others](https://www.merriam-webster.com/dictionary/schadenfreude) {cite:p}`DefinitionSCHADENFREUDE2023`.
 
 A 2009 satirical article from the parody news site The Onion satirizes public shaming as being for objectifying celebrities and being entertained by their misfortune:
 > Media experts have been warning for months that American consumers will face starvation if Hollywood does not provide someone for them to put on a pedestal, worship, envy, download sex tapes of, and then topple and completely destroy.
 >
-> -  [Nation Demands Fresh Celebrity Meat - The Onion](https://www.theonion.com/nation-demands-fresh-celebrity-meat-1819571041)
+> -  [Nation Demands Fresh Celebrity Meat - The Onion](https://www.theonion.com/nation-demands-fresh-celebrity-meat-1819571041) {cite:p}`NationDemandsFresh2009`
 
 
 ## Normal People
 While the example from The Onion above focuses on celebrity, in the time since it was written, social media has taken a larger role in society and democratized celebrity. As comedian Bo Burnham puts it:
-> “[This] celebrity pressure I had experienced on stage has now been democratized and given to everybody [through social media]. And everyone is feeling this pressure of having an audience, of having to perform, of having a sort of, like, proper noun version of your own name and then the self in your heart.” ([NPR Fresh Air Interview](https://www.npr.org/transcripts/630069876))
+> “[This] celebrity pressure I had experienced on stage has now been democratized and given to everybody [through social media]. And everyone is feeling this pressure of having an audience, of having to perform, of having a sort of, like, proper noun version of your own name and then the self in your heart.” ([NPR Fresh Air Interview](https://www.npr.org/transcripts/630069876) {cite:p}`DirectorBoBurnham2018a`)
 
 Also, Rebecca Jennings worries about how public shaming is used against "normal" people who are plucked out of obscurity to be shamed by huge crowds online:
 
@@ -42,10 +42,10 @@ Also, Rebecca Jennings worries about how public shaming is used against "normal"
 >
 > Platforms like TikTok, where even people with few or no followers often go viral overnight, expedite the shaming process.
 >
-> - - [Stop canceling normal people who go viral](https://www.vox.com/the-goods/22716772/west-elm-caleb-couch-guy-tiktok-cancel)
+> - - [Stop canceling normal people who go viral](https://www.vox.com/the-goods/22716772/west-elm-caleb-couch-guy-tiktok-cancel) {cite:p}`jenningsStopCancelingNormal2021`
 
 ## Enforcing Norms
-In the philosophy paper [Enforcing Social Norms: The Morality of Public Shaming](https://philpapers.org/archive/BILESN.pdf), Paul Billingham and Tom Parr discuss under what conditions public shaming would be morally permissible. They are concerned not with actions primarily intended to induce shame in the target, but rather actions that may cause a person to shame, but are motivated by "seeking to draw attention to a social norm violation, and to rally others to their cause."
+In the philosophy paper [Enforcing Social Norms: The Morality of Public Shaming](https://philpapers.org/archive/BILESN.pdf) {cite:p}`billinghamEnforcingSocialNorms2020`, Paul Billingham and Tom Parr discuss under what conditions public shaming would be morally permissible. They are concerned not with actions primarily intended to induce shame in the target, but rather actions that may cause a person to shame, but are motivated by "seeking to draw attention to a social norm violation, and to rally others to their cause."
 
 In this situation, they outline the following constraints that must be considered when publicly shaming someone in this way:
 - __Proportionality__: The negative consequences of shaming someone should not be worse than the positive consequences
