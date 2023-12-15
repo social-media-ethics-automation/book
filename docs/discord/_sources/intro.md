@@ -14,14 +14,10 @@ This book is about:
 
 We hope after completing this book you will be informed and engaged as social media user, as a member of a society where social media plays a large role, and potentially as a worker in a social media company.
 
-```{warning}
-This book is still being created and therefore has incomplete sections, missing citations, etc.
-```
-
 ## Download and Versions
 There are different versions of this book for making bots in different platforms: 
 
-_Choose Social Media Platform: <a href='../reddit/intro.html'>Reddit</a> | __Discord___
+_Choose Social Media Platform: <a href='../reddit/intro.html'>Reddit</a> | __Discord (incomplete)___
 
 You can <a href='./social_media_ethics_automation_discord.pdf'>download this book as a pdf here </a> (though not everything will work correctly or be interactive as a pdf). (Also, if anyone knows how to make jupyterbooks make separate pdfs for each chapter, please let Kyle know.)
 

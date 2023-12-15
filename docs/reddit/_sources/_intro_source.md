@@ -14,10 +14,6 @@ This book is about:
 
 We hope after completing this book you will be informed and engaged as social media user, as a member of a society where social media plays a large role, and potentially as a worker in a social media company.
 
-```{warning}
-This book is still being created and therefore has incomplete sections, missing citations, etc.
-```
-
 ## Download and Versions
 % TODO: Auto-insert download link and versions
 

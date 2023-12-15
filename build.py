@@ -22,12 +22,12 @@ init(autoreset=True)
 
 
 platforms = [
-    {"full_name": "Reddit", "file_name": "reddit"},
-    {"full_name": "Discord", "file_name": "discord"}
+    {"full_name": "Reddit", "file_name": "reddit", "status": ""},
+    {"full_name": "Discord", "file_name": "discord", "status": " (incomplete)"}
 ]
 
 # make function for creating social media list
-def make_social_media_links(platform, destination_filename):
+def make_social_media_links(platform, destination_filename, include_status = False):
     # figure out path to updated version of file
     path_parts = destination_filename.split("/")
     path_parts.pop(0) # get rid of the book_contents directory
@@ -38,12 +38,19 @@ def make_social_media_links(platform, destination_filename):
     platform_selector_options = []
     for target_platform in platforms:
         if target_platform == platform:
-            platform_selector_options.append("__" + target_platform["full_name"] + "__")
+            platform_string = target_platform["full_name"]
+            if(include_status):
+                platform_string += target_platform["status"]
+            platform_selector_options.append("__" + platform_string + "__")
         else:
             #  ../ for as many times as after the index, then new platform, then all the parts after the index
             relative_path = "../" * len(path_parts) + target_platform["file_name"] + "/" + "/".join(path_parts) + ".html"
-
-            platform_selector_options.append("<a href='"+relative_path+"'>"+target_platform["full_name"]+"</a>" )
+            
+            platform_string = target_platform["full_name"]
+            if(include_status):
+                platform_string += target_platform["status"]
+            
+            platform_selector_options.append("<a href='"+relative_path+"'>"+platform_string+"</a>" )
 
     platform_selector += " | ".join(platform_selector_options)
     platform_selector += "_"
@@ -113,7 +120,7 @@ for platform in platforms:
 
     # Fix _intro_source.md
     intro_source = open(book_directory + '/_intro_source.md', "r").read().split("\n")
-    platform_selector = make_social_media_links(platform, book_directory + "/intro")
+    platform_selector = make_social_media_links(platform, book_directory + "/intro", include_status=True)
 
     fix_line = intro_source.index("% TODO: Auto-insert download link and versions")
     intro_source[fix_line] = "There are different versions of this book for making bots in different platforms: \n\n" + platform_selector + "\n" + \
@@ -268,6 +275,7 @@ for platform in platforms:
     # Clean up
     os.remove(book_directory + '/_toc.yml')
     os.remove(book_directory + '/_config.yml')
+    os.remove(book_directory + '/intro.md')
 
     for filename in platform_specific_files:
         destination_filename = book_directory + "/" + filename.replace("-***", "")
