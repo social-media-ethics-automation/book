@@ -24,8 +24,8 @@ But, even though our focus is on internet-based social media platforms, since al
 % Moving our parts of our social media experience onto the Internet-based social media platforms does not fundamentally change how they work, but it can amplify different aspects of social media. 
 % TODO: Add amplification theory (Kentaro)
 % Perhaps restate part in colonialism
-% https://www.theguardian.com/commentisfree/2015/jun/11/age-of-machines-humans-save-the-world toyamaItMayBe2015
-% https://medium.com/not-evenly-distributed/amplifying-inequality-64479f9aee85 sydneyAmplifyingInequality2016
-% [1] Agre, Philip E. 1998. Yesterday’s tomorrow. Times Literary Supplement. July 3, 1998, pp. 3-4.  agreYesterdayTomorrow1998
-% [2] Agre, Philip E. 2002. “Real-Time Politics: The Internet and the Political Process.” The Information Society 18:311-331.  agreRealTimePoliticsInternet2002
+% [It may be the age of machines, but it's up to humans to save the world](https://www.theguardian.com/commentisfree/2015/jun/11/age-of-machines-humans-save-the-world) {cite:p}`toyamaItMayBe2015` 
+% [Amplifying Inequality](https://medium.com/not-evenly-distributed/amplifying-inequality-64479f9aee85) {cite:p}`sydneyAmplifyingInequality2016`
+% [1] [Agre, Philip E. 1998. Yesterday’s tomorrow. Times Literary Supplement. July 3, 1998, pp. 3-4.](https://pages.gseis.ucla.edu/faculty/agre/tls.html) {cite:p}`agreYesterdayTomorrow1998`
+% [2] [Agre, Philip E. 2002. “Real-Time Politics: The Internet and the Political Process.” The Information Society 18:311-331.](https://pages.gseis.ucla.edu/faculty/agre/real-time.html) {cite:p}`agreRealTimePoliticsInternet2002`
 % - "The Internet changes nothing on its own, but it can amplify existing forces, and those amplified forces might change something."
