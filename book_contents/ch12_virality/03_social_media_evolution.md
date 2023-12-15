@@ -2,7 +2,10 @@
 
 Let's now turn to social media and look at how evolution happens there.
 
-As we said before, evolution occurs when there is: replication (with inheritance), variations or mutations, and natural selection, so let's look at each of those.
+As we said before, evolution occurs when there is: replication (with inheritance), variations or mutations, and selection[^selection_note], so let's look at each of those.
+
+
+[^selection_note]: It isn't clear what should be considered as "natural" selection in a social media environment (human nature? cultural biases, like racism? the nature of the design of the social media platform? are bots unnatural?), so we'll just instead talk about __selection__.
 
 
 ## Replication (With Inheritance)
@@ -36,8 +39,8 @@ Additionally, content can be copied by being screenshotted, or photoshopped. Tex
 
 <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@lubalin/video/6909126447332347142" data-video-id="6909126447332347142" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@lubalin" href="https://www.tiktok.com/@lubalin?refer=embed">@lubalin</a> that escalated quickly... <a title="sodramatic" target="_blank" href="https://www.tiktok.com/tag/sodramatic?refer=embed">#sodramatic</a> <a title="humor" target="_blank" href="https://www.tiktok.com/tag/humor?refer=embed">#humor</a> <a title="oldpeoplefacebook" target="_blank" href="https://www.tiktok.com/tag/oldpeoplefacebook?refer=embed">#oldpeoplefacebook</a> <a title="boomer" target="_blank" href="https://www.tiktok.com/tag/boomer?refer=embed">#boomer</a> <a title="musician" target="_blank" href="https://www.tiktok.com/tag/musician?refer=embed">#musician</a> <a title="producer" target="_blank" href="https://www.tiktok.com/tag/producer?refer=embed">#producer</a> <a target="_blank" title="♬ original sound - Lubalin" href="https://www.tiktok.com/music/original-sound-6909126476889656070?refer=embed">♬ original sound - Lubalin</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
 
-## "Natural" Selection
-It isn't clear what should be considered as "nature" in a social media environment (human nature? the nature of the design of the social media platform? are bots unnatural?), so we'll just instead talk about __selection__.
+## Selection
+
 
 When content (and modified copies of content) is in a position to be replicated, there are factors that determine whether it gets __selected__ for replicated or not. As humans look at the content they see on social media they decide whether they want to replicate it for some reason, such as:
 - "that's funny, so I'll retweet it"
@@ -51,6 +54,6 @@ Additionally, content may be replicated because of:
 - Paid promotion and ads, where someone pays money to have their content replicated
 - Astroturfing: where crowds, often of bots, are paid to replicate social media content (e.g., like, retweet)
 
-Finally, social media platforms use algorithms and design layouts which determine what posts people see. There are various rules and designs social media sites can use, and they can amplify natural selection and unnatural selection in various ways. They can do this through recommendation algorithms as we saw last chapter, as well as choosing what actions are allowed and what amount of friction is given to those actions, as well as what data is collected and displayed.
+Finally, social media platforms use algorithms and design layouts which determine what posts people see. There are various rules and designs social media sites can use, and they can amplify human selection (including coordinated efforts like astroturfing) in various ways. They can do this through recommendation algorithms as we saw last chapter, as well as choosing what actions are allowed and what amount of friction is given to those actions, as well as what data is collected and displayed.
 
 Different designs of social media platforms will have different consequences in what content has viral, just like how different physical environments determine which forms of life thrive and how they adapt and fill [ecological niches](https://en.wikipedia.org/wiki/Ecological_niche) {cite:p}`EcologicalNiche2023`.

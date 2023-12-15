@@ -18,8 +18,19 @@ password=""
 client_id=""
 client_secret=""
 ```
+or
+
+`discord_keys.py`
+```
+discord_token=""
+```
 
 Then in your JupyterNotebook files, you can include it by including this line:
 ```
 %run reddit_keys.py
+```
+
+or
+```
+%run discord_keys.py
 ```
