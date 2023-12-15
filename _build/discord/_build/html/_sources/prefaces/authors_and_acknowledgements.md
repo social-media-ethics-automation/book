@@ -2,7 +2,7 @@
 ## Authors
 
 ### Dr. Kyle Thayer
-Kyle is an educator teaching classes that try to integrate social and ethical concerns with computer programming. Kyle is an Assistant Teaching Professor at the [University of Washington](https://www.washington.edu/) [Information School](https://ischool.uw.edu/), and he recieved his PhD from the [University of Washington](https://www.washington.edu/) [Paul G. Allen School of Computer Science & Engineering](https://www.cs.washington.edu/).
+Kyle is an educator teaching classes that try to integrate social and ethical concerns with computer programming. Kyle is an Assistant Teaching Professor at the [University of Washington](https://www.washington.edu/) [Information School](https://ischool.uw.edu/), and he received his PhD from the [University of Washington](https://www.washington.edu/) [Paul G. Allen School of Computer Science & Engineering](https://www.cs.washington.edu/).
 
 ```{image} kylethayer.jpg
 :alt: Photo of Kyle Thayer (a white person with glasses, short hair, and a beard)
@@ -18,10 +18,10 @@ Susan is a philosopher working in ethics (among other things). They did their Ph
 ```
 
 ## Contributors
-We would like to thank the following people for their contributions: Emily Giverts (who made the first version of the programming exercises), Kristen Thayer (for programming ideas, explanations, and analogies), and the UW iSchool GA Crew (for help with citations).
+We would like to thank the following people for their contributions: Emily Giverts (who made the first version of the programming exercises),the UW iSchool GA Crew (for significant help with citations), Alannah Oleson (for the CIDER design activities and feedback on those), and Kristen Thayer (for programming ideas, explanations, and analogies).
 
 ## Feedback and insights:
-We would like to thank the following people for their feedback and insights: Alannah Oleson, Anna Lauren Hoffmann and Professor Annie Searle.
+We would like to thank the following people for their feedback and insights: Anna Lauren Hoffmann, Professor Annie Searle, and the many students who have read and commented on the book.
 
 ## Image and Materials Attributions (placeholder)
 Logo phone image is from [pixabay](https://pixabay.com/vectors/smartphone-icon-modern-symbol-1557796/)
