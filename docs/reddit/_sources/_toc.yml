@@ -178,8 +178,8 @@ parts:
       - file: ch12_virality/05_ethics_of_copying
       - file: ch12_virality/06_going_viral
       - file: ch12_virality/07_activity_virality_values
-      - file: ch12_virality/08_reflections
-      - file: ch12_virality/09_learn_more
+      - file: ch12_virality/09_reflections
+      - file: ch12_virality/10_learn_more
     - file: ch13_mental_health/00_mental_health
       sections:
       - file: ch13_mental_health/01_effects_of_social_media
@@ -209,7 +209,8 @@ parts:
       - file: ch15_moderators/01_moderator_types
       - file: ch15_moderators/02_example_moderators
       - file: ch15_moderators/03_toll_on_moderators
-      - file: ch15_moderators/04_learn_more
+      - file: ch15_moderators/05_content_moderator_game
+      - file: ch15_moderators/06_learn_more
     - file: ch16_crowdsourcing/00_crowdsourcing
       sections:
       - file: ch16_crowdsourcing/01_crowdsourcing_definition
@@ -227,9 +228,9 @@ parts:
       - file: ch17_harassment/04_ethics_harassment
       - file: ch17_harassment/05_justifying_harassment
       - file: ch17_harassment/06_stopping_harassment
-      - file: ch17_harassment/07_design_example_quoting
-      - file: ch17_harassment/08_design_activity
-      - file: ch17_harassment/09_learn_more
+      - file: ch17_harassment/08_design_example_quoting
+      - file: ch17_harassment/09_design_activity
+      - file: ch17_harassment/10_learn_more
     - file: ch18_public_shaming/00_public_shaming
       sections:
       - file: ch18_public_shaming/01_shame_guilt_childhood
@@ -237,16 +238,17 @@ parts:
       - file: ch18_public_shaming/03_perspectives_on_public_shaming
       - file: ch18_public_shaming/04_repair_and_reintegration
       - file: ch18_public_shaming/05_design_retract
-      - file: ch18_public_shaming/06_learn_more
+      - file: ch18_public_shaming/07_learn_more
     - file: ch19_capitalism/00_capitalism
       sections:
         - file: ch19_capitalism/01_what_is_capitalism
         - file: ch19_capitalism/02_metas_strategy
         - file: ch19_capitalism/03_responses_to_meta
         - file: ch19_capitalism/04_meta_vs_users
-        - file: ch19_capitalism/05_imagining_alternatives
-        - file: ch19_capitalism/06_programming_gender_status_money
-        - file: ch19_capitalism/07_learn_more
+        - file: ch19_capitalism/05_social_media_simulator
+        - file: ch19_capitalism/06_imagining_alternatives
+        - file: ch19_capitalism/07_programming_gender_status_money
+        - file: ch19_capitalism/08_learn_more
     - file: ch20_colonialism/00_colonialism
       sections:
         - file: ch20_colonialism/01_what_is_colonialism
