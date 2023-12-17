@@ -22,3 +22,146 @@ We wanted to give students opportunities to critique designs of social media and
 
 ### Interactive Coding
 For the programming sections of each chapter, we provide Jupyter Notebook pages in our book for demos, practice problems, and assignments. This lets students load, run and experiment on these programming pages. We also created optional fake bot libraries so students can experiment with bot code without needing an account.
+
+## Outline of course content and activities
+<table class="table table-bordered table-hover table-condensed">
+<thead><tr><th title="Field #1">Ch</th>
+<th title="Field #2">Social Media Topic</th>
+<th title="Field #3">Programming Topics</th>
+<th title="Field #4">Programming Demo/Activity</th>
+<th title="Field #5">Other Activity</th>
+</tr></thead>
+<tbody><tr>
+<td align="right">2</td>
+<td>Definitions</td>
+<td>What is programming?</td>
+<td>Demo bot that posts</td>
+<td>Ethics Frameworks</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td>Bots</td>
+<td>Statements, vars, sleep</td>
+<td>Bot posts multiple times</td>
+<td>Find real bots</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td>Data</td>
+<td>Data types in python</td>
+<td>Get data from posts</td>
+<td>Design a view of posts</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td>Social Media History</td>
+<td>Looping w/ lists and dictionaries</td>
+<td>Loop through posts</td>
+<td>Social media use cases</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td>Authenticity</td>
+<td>N/A</td>
+<td>Look up info about post / poster</td>
+<td>Analyze Facebook name rules</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td>Trolling</td>
+<td>Conditionals, String manipulation</td>
+<td>Make reply bot and troll it</td>
+<td>Examples of trolling</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td>Data Mining</td>
+<td>Sentiment Analysis, loop counters</td>
+<td>Sentiment analysis on sets of posts</td>
+<td>Categories predicted for you</td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td>Privacy and Security</td>
+<td>Functions</td>
+<td>Track use of functions</td>
+<td>Analyze GDPR</td>
+</tr>
+<tr>
+<td align="right">10</td>
+<td>Accessibility</td>
+<td>N/A</td>
+<td>Look through alt text of posts</td>
+<td>Accessible design analysis</td>
+</tr>
+<tr>
+<td align="right">11</td>
+<td>Recommend. Algos.</td>
+<td>Dictionary counters</td>
+<td>Recommend a friend</td>
+<td>Think of recommendation algorithms</td>
+</tr>
+<tr>
+<td align="right">12</td>
+<td>Virality</td>
+<td>N/A</td>
+<td>None (yet)</td>
+<td>What values do you have for virality?</td>
+</tr>
+<tr>
+<td align="right">13</td>
+<td>Mental Health</td>
+<td>N/A</td>
+<td>Show only “positive” posts</td>
+<td>Mental health design analysis</td>
+</tr>
+<tr>
+<td align="right">14</td>
+<td>Content Moderation</td>
+<td>Trees, Recursion, DFS</td>
+<td>Display or hide comments/replies</td>
+<td>Try reporting a comment</td>
+</tr>
+<tr>
+<td align="right">15</td>
+<td>Content Moderators</td>
+<td>N/A</td>
+<td>None (yet)</td>
+<td>Content moderation game</td>
+</tr>
+<tr>
+<td align="right">16</td>
+<td>Crowdsourcing</td>
+<td>Force-directed graphs (planned)</td>
+<td>Visualize networks (planned)</td>
+<td>None (yet)</td>
+</tr>
+<tr>
+<td align="right">17</td>
+<td>Harassment</td>
+<td>N/A</td>
+<td>Group block (planned)</td>
+<td>Features used for harassment</td>
+</tr>
+<tr>
+<td align="right">18</td>
+<td>Public Shaming</td>
+<td>N/A</td>
+<td>None (yet)</td>
+<td>Design retract post</td>
+</tr>
+<tr>
+<td align="right">19</td>
+<td>Capitalism</td>
+<td>Programming &amp; gender</td>
+<td>None</td>
+<td>Game / Imagine alternatives</td>
+</tr>
+<tr>
+<td align="right">20</td>
+<td>Colonialism</td>
+<td>Colonialism in programming</td>
+<td>None</td>
+<td>Imagine alternatives</td>
+</tr>
+</tbody></table>
