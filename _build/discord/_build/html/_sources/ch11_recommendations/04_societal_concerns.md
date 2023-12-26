@@ -40,6 +40,11 @@ Building off of the amplification polarization and negativity, there are concern
 
 A [genocide of the Rohingya people in Myanmar](https://en.wikipedia.org/wiki/Rohingya_genocide) {cite:p}`RohingyaGenocide2023` started in 2016, and in 2018 [Facebook admitted it was used to 'incite offline violence' in Myanmar](https://www.bbc.com/news/world-asia-46105934) {cite:p}`FacebookAdmitsIt2018`. In 2021, the [Rohingya sued Facebook for £150bn](https://www.theguardian.com/technology/2021/dec/06/rohingya-sue-facebook-myanmar-genocide-us-uk-legal-action-social-media-violence) {cite:p}`milmoRohingyaSueFacebook2021` over how Facebook amplified hate speech and didn't take down inflammatory posts.
 
+See also: 
+- Erin Kissane's [series of posts on Facebook and Myanmar](https://erinkissane.com/meta-in-myanmar-full-series) {cite:p}`kissane_meta_2023`, including [part 4](https://erinkissane.com/meta-in-myanmar-part-iv-only-connect) {cite:p}`kissane_meta_2023-1` with implications for new social media networks like Mastodon and Bluesky.
+
+
+
 
 ### The Flat Earth Movement
 
