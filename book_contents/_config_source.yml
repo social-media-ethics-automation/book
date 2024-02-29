@@ -44,8 +44,7 @@ sphinx:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/social-media-ethics-automation/book/  # Online location of your book
-  path_to_book: book_contents  # Optional path to your book, relative to the repository root
+  url: https://github.com/social-media-ethics-automation/book/  # TODO Script updates this to platform specific copy
   branch: main  # Which branch of the repository should be used when creating links (optional)
 
 launch_buttons:

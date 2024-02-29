@@ -242,6 +242,12 @@ for platform in platforms:
         if "path_to_book:" in config_line:
             line_parts = config_line.split(":")
             new_config[i] = line_parts[0] + ": " + "docs/"+platform["file_name"] + "/_sources" + " # Optional path to your book, relative to the repository root"
+        
+    # Fix book source code link
+    for i, config_line in enumerate(new_config):
+        if "    url: https://github.com/social-media-ethics-automation/book/  # TODO Script updates this to platform specific copy" in config_line:
+            new_config[i] = "url: https://github.com/social-media-ethics-automation/book-src-"+platform["file_name"]+"/"
+
 
     with open(book_directory + '/_config.yml', 'w') as file:
         file.write("\n".join(new_config))
