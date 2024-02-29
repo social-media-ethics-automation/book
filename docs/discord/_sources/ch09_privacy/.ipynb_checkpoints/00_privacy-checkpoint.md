@@ -1,2 +1,0 @@
-# Privacy
-test 3

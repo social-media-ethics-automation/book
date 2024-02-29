@@ -267,9 +267,19 @@ for platform in platforms:
         shutil.move("_build/"+platform["file_name"]+"/_build/pdf/book.pdf", "docs/"+platform["file_name"] + "/social_media_ethics_automation_" + platform["file_name"] + ".pdf")
 
 
-    # copy source docs (so github links and code editor links work correctly)
-    # Maybe not needed?
-    shutil.copytree("book_contents", "docs/"+platform["file_name"] + "/_sources", dirs_exist_ok = True)
+    # copy source docs (so github links and code editor links work correctly) into module repos
+    # NOTE: To add a new submodule repo to hold the source copy run a command like this:
+    #  git submodule add -f https://github.com/social-media-ethics-automation/book-src-reddit.git src-copies/book-src-reddit
+    shutil.copytree("book_contents", 
+                    "src-copies/book-src-"+platform["file_name"], 
+                    dirs_exist_ok = True, 
+                    ignore=shutil.ignore_patterns('*.pptx', '*.ipynb_checkpoints*'))
+    # Make a README for the submodule copy of book source
+    with open("src-copies/book-src-"+platform["file_name"] + '/README.md', 'w') as file:
+        file.write("# Social Media, Ethics, and Automation - " + platform["full_name"] + " source\n" +
+                   "This is a copy of the book source for the "+ platform["full_name"] + "version of the book." + 
+                   "This copy was created to help make the interactive online code editors work better." + 
+                   "The original source code is at: https://github.com/social-media-ethics-automation/book")
 
 
     # Clean up

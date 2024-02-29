@@ -1,0 +1,6 @@
+[submodule "src-copies/book-src-reddit"]
+	path = src-copies/book-src-reddit
+	url = https://github.com/social-media-ethics-automation/book-src-reddit.git
+[submodule "src-copies/book-src-discord"]
+	path = src-copies/book-src-discord
+	url = https://github.com/social-media-ethics-automation/book-src-discord.git

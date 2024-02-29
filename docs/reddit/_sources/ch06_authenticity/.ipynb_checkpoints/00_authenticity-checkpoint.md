@@ -1,2 +1,0 @@
-# Authenticity
-test 3

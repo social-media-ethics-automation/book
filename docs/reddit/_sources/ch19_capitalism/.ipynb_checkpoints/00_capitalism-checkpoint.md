@@ -1,2 +1,0 @@
-# Capitalism
-test 3
