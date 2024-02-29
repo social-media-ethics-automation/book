@@ -30,6 +30,8 @@ Try this yourself and see what Google thinks of you!
 
 You can try social media sites as well. [Twitter's ad profile is located here](https://twitter.com/settings/your_twitter_data/twitter_interests) and [Facebook's Ad information is here](https://www.facebook.com/adpreferences/ad_settings).
 
+Note: Facebook used to allow users to see [many more of the categories kept about them](https://www.buzzfeednews.com/article/nicolenguyen/facebook-ad-preferences-pretty-accurate-tbh) {cite:p}`nguyen_heres_2016` {cite:p}`murray_heres_2017`.
+
 ## Reflection
 After looking at your ad profile, ask yourself the following:
 - What was accurate, inaccurate, or surprising about your ad profile?

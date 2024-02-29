@@ -482,8 +482,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/00_intro.html">3.3.3. Programming Assignments</a><input class="toctree-checkbox" id="toctree-checkbox-40" name="toctree-checkbox-40" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-40"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/a1_make_7_posts.html">A1: Make 7 Discord Posts</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/a2_another_site.html">A2: Try another site</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/a3_troll_reply_bot.html">A3: Trolling a Reply Bot\n”</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/a4-political-bias.html">A4: Political Bias\n”</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/a3_troll_reply_bot.html">A3: Trolling a Reply Bot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/a4-political-bias.html">A4: Political Bias</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/a5-best-comments.html">A5: Best Comments</a></li>
 </ul>
 </li>
@@ -758,7 +758,7 @@ document.write(`
 <p>Numbers are normally stored in two different ways:</p>
 <ul class="simple">
 <li><p>Integer: whole numbers like 5, 37, -10, and 0</p></li>
-<li><p>Floating point numbers: these can represent decimals like: 0.75, -1.333, and 3 x 10 ^ 8</p></li>
+<li><p>Floating point numbers: these can represent decimals like: 0.75, -1.333, and 6.626 × 10 ^ −34 (see more about <a class="reference external" href="https://jvns.ca/blog/2023/01/13/examples-of-floating-point-problems/">the complications of floating point numbers in binary</a> <span id="id1">[<a class="reference internal" href="../07_learn_more.html#id8" title="Julia Evans. Examples of floating point problems. January 2023. URL: https://jvns.ca/blog/2023/01/13/examples-of-floating-point-problems/ (visited on 2023-11-24).">d2</a>]</span>)</p></li>
 </ul>
 <figure class="align-default" id="tweet-numbers-fig">
 <img alt="Screenshot of the tweet from before, but with the numbers highlighted: replies, retweets, likes" src="../../_images/dog_tweet_with_numbers.png" />
@@ -781,7 +781,7 @@ document.write(`
 </div>
 </div>
 <p>When computers store numbers, there are limits to how much space is can be used to save each number. This limits how big (or small) the numbers can be, and causes rounding with floating-point numbers.</p>
-<p>Additionally, programming languages might include other ways of storing numbers, such as fractions, <a class="reference external" href="https://en.wikipedia.org/wiki/Complex_number">complex numbers</a> <span id="id1">[<a class="reference internal" href="../07_learn_more.html#id9" title="Complex number. November 2023. Page Version ID: 1186512779. URL: https://en.wikipedia.org/w/index.php?title=Complex_number&amp;oldid=1186512779 (visited on 2023-11-24).">d2</a>]</span>, or limited number sets (like only positive integers).</p>
+<p>Additionally, programming languages might include other ways of storing numbers, such as fractions, <a class="reference external" href="https://en.wikipedia.org/wiki/Complex_number">complex numbers</a> <span id="id2">[<a class="reference internal" href="../07_learn_more.html#id9" title="Complex number. November 2023. Page Version ID: 1186512779. URL: https://en.wikipedia.org/w/index.php?title=Complex_number&amp;oldid=1186512779 (visited on 2023-11-24).">d3</a>]</span>, or limited number sets (like only positive integers).</p>
 </section>
 <section id="strings-text">
 <h2>Strings (Text)<a class="headerlink" href="#strings-text" title="Permalink to this headline">#</a></h2>
@@ -812,7 +812,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<p>Text can be stored with extra formatting information, such as fonts and colors, in different <a class="reference external" href="https://en.wikipedia.org/wiki/Document_file_format">document file formats</a> <span id="id2">[<a class="reference internal" href="../07_learn_more.html#id10" title="Document file format. August 2023. Page Version ID: 1170388374. URL: https://en.wikipedia.org/w/index.php?title=Document_file_format&amp;oldid=1170388374 (visited on 2023-11-24).">d3</a>]</span> like Word Documents, PDF files, <a class="reference external" href="https://www.w3schools.com/html/html_intro.asp">html website files</a> <span id="id3">[<a class="reference internal" href="../07_learn_more.html#id11" title="W3Schools. Introduction to HTML. URL: https://www.w3schools.com/html/html_intro.asp (visited on 2023-11-24).">d4</a>]</span>, etc.</p>
+<p>Text can be stored with extra formatting information, such as fonts and colors, in different <a class="reference external" href="https://en.wikipedia.org/wiki/Document_file_format">document file formats</a> <span id="id3">[<a class="reference internal" href="../07_learn_more.html#id10" title="Document file format. August 2023. Page Version ID: 1170388374. URL: https://en.wikipedia.org/w/index.php?title=Document_file_format&amp;oldid=1170388374 (visited on 2023-11-24).">d4</a>]</span> like Word Documents, PDF files, <a class="reference external" href="https://www.w3schools.com/html/html_intro.asp">html website files</a> <span id="id4">[<a class="reference internal" href="../07_learn_more.html#id11" title="W3Schools. Introduction to HTML. URL: https://www.w3schools.com/html/html_intro.asp (visited on 2023-11-24).">d5</a>]</span>, etc.</p>
 <p>Note: We’ll demonstrate strings later in this chapter, and in more detail in Chapter 7: Trolling</p>
 </section>
 </section>

@@ -20,6 +20,8 @@ We can next ask if authentic self-expression is a good thing or not. But that de
 % TODO: Make a table
 % TODO: Add Vonnegut quote: "We are who we pretend to be"
 
+% TODO: Add: https://theconversation.com/online-anonymity-study-found-stable-pseudonyms-created-a-more-civil-environment-than-real-user-names-171374
+
 
 [^tracing_back]: In reality, while many times people can remain anonymous, surprisingly often, anonymous users' identities can be discovered and revealed, whether through hacks or accidentally revealed information.
 

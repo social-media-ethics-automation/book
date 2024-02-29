@@ -21,7 +21,7 @@ Susan is a philosopher working in ethics (among other things). They did their Ph
 We would like to thank the following people for their contributions: Emily Giverts (who made the first version of the programming exercises),the UW iSchool GA Crew (for significant help with citations), Alannah Oleson (for the CIDER design activities and feedback on those), and Kristen Thayer (for programming ideas, explanations, and analogies).
 
 ## Feedback and insights:
-We would like to thank the following people for their feedback and insights: Anna Lauren Hoffmann, Professor Annie Searle, and the many students who have read and commented on the book.
+We would like to thank the following people for their feedback and insights: Anna Lauren Hoffmann, Professor Annie Searle, the UW Center for Teaching and Learning, and the many students who have read, commented, and offered suggestions and corrections on the book.
 
 ## Image and Materials Attributions (placeholder)
 Logo phone image is from [pixabay](https://pixabay.com/vectors/smartphone-icon-modern-symbol-1557796/)

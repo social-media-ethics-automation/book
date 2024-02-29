@@ -8,7 +8,7 @@ In order to make social media sites usable and interesting to users, they may ba
 Without quality control moderation, the social media site will likely fill up with content that the target users of the site don't want, and those users will leave. What content is considered "quality" content will vary by site, with 4chan considering a lot of offensive and trolling content to be "quality" but still banning spam (because it would make the site repetitive in a boring way), while most sites would ban some offensive content.
 
 ## Legal Concerns
-Social media sites also might run into legal concerns with allowing some content to be left up on their sites, such as copyrighted material (like movie clips) or child pornography.
+Social media sites also might run into legal concerns with allowing some content to be left up on their sites, such as copyrighted material (like movie clips) or child sexual abuse material (CSAM).
 
 So most social media sites will often have rules about content moderation, and at least put on the appearance of trying to stop illegal content (though a few will try to move to countries that won't get them in trouble, like 8kun is getting hosted in Russia).
 

@@ -2,7 +2,7 @@
 Let's now look at how some different platforms have handled content moderation:
 
 ## 4chan/8chan (minimal moderation)
-Sites like 4chan and 8chan bill themselves as sites that support free-speech, in the sense that they don't ban trolling and hateful speech, though they may remove some illegal content, like child pornography.
+Sites like 4chan and 8chan bill themselves as sites that support free-speech, in the sense that they don't ban trolling and hateful speech, though they may remove some illegal content, like CSAM.
 
 One thing these sites do ban though, is spam. While much of spam is certainly legal, and a form of speech, this speech is restricted on these sites. If the chat boards filled up with spam, the users would find it boring and leave, so for practical reasons, these sites still moderate for spam (though they may allow some uses of ironic spam, [copypasta](https://knowyourmeme.com/memes/copypasta) {cite:p}`Copypasta2009`).
 
@@ -37,4 +37,4 @@ For a period of time, most news organizations allowed comments on their articles
 Twitter, Facebook, and other platforms had an [exception to their normal moderation policies for political leaders](https://help.twitter.com/en/rules-and-policies/public-interest) {cite:p}`PublicinterestExceptionsEnforcement`, where they wouldn’t ban them even if they violated site policies (most notably applied to Donald Trump). After the January 6th insurrection at the US Capital, Donald Trump was banned first from Twitter, then from Facebook, and [Facebook announced an end to special treatment for politicians](https://www.theverge.com/2021/6/3/22474738/facebook-ending-political-figure-exemption-moderation-policy) {cite:p}`heathFacebookEndSpecial2021`.
 
 # Government Censorship
-Governments might also have rules about content moderation and censorship, such as laws in the US against Child Sexual Abuse Material (CSAM). China additionally censors various news stories in their country, like stories about protests. In addition to banning news on their platforms, in late 2022 China took advantage of Elon Musk having fired almost all Twitter content moderators to hide news of protests by [flooding Twitter with spam and porn](https://techcrunch.com/2022/11/28/great-wall-of-porn-obscures-china-protest-news-on-twitter/) {cite:p}`shuGreatWallPorn2022`.
+Governments might also have rules about content moderation and censorship, such as laws in the US against CSAM. China additionally censors various news stories in their country, like stories about protests. In addition to banning news on their platforms, in late 2022 China took advantage of Elon Musk having fired almost all Twitter content moderators to hide news of protests by [flooding Twitter with spam and porn](https://techcrunch.com/2022/11/28/great-wall-of-porn-obscures-china-protest-news-on-twitter/) {cite:p}`shuGreatWallPorn2022`.

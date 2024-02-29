@@ -39,7 +39,7 @@ is_greeting = tweet_text.starts_with("Hello")
 ## Numbers
 Numbers are normally stored in two different ways:
 - Integer: whole numbers like 5, 37, -10, and 0
-- Floating point numbers: these can represent decimals like: 0.75, -1.333, and 3 x 10 ^ 8
+- Floating point numbers: these can represent decimals like: 0.75, -1.333, and 6.626 × 10 ^ −34 (see more about [the complications of floating point numbers in binary](https://jvns.ca/blog/2023/01/13/examples-of-floating-point-problems/) {cite:p}`evansExamplesFloatingPoint2023`)
 
 ```{figure} dog_tweet_with_numbers.png
 ---
@@ -65,8 +65,6 @@ average_tweet_length = 133.5
 ````
 
 When computers store numbers, there are limits to how much space is can be used to save each number. This limits how big (or small) the numbers can be, and causes rounding with floating-point numbers.
-
-% TODO: [Examples of floating point problems](https://jvns.ca/blog/2023/01/13/examples-of-floating-point-problems/) {cite:p}`evansExamplesFloatingPoint2023`
 
 Additionally, programming languages might include other ways of storing numbers, such as fractions, [complex numbers](https://en.wikipedia.org/wiki/Complex_number) {cite:p}`ComplexNumber2023`, or limited number sets (like only positive integers).
 

@@ -21,6 +21,8 @@ There are concerns that echo chambers increase polarization, where groups lose c
 
 Along those lines, ff social media sites simply amplify content that gets strong reactions, they will often amplify the most negative and polarizing content. Recommendation algorithms can make this even works. For example: [At one point, Facebook counted the default "like" reaction less than the "anger" reaction, which amplified negative content](https://www.washingtonpost.com/technology/2021/10/26/facebook-angry-emoji-algorithm/) {cite:p}`FivePointsAnger2021`.
 
+% TODO: contrast with Reddit upvote/downvote (though still often toxic)
+
 On Twitter, [one study found](https://www.economist.com/graphic-detail/2021/11/13/according-to-twitter-twitters-algorithm-favours-conservatives) {cite:p}`AccordingTwitterTwitter`:
 >  “Whereas Google gave higher rankings to more reliable sites, we found that Twitter boosted the least reliable sources, regardless of their politics.”
 

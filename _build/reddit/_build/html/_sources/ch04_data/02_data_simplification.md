@@ -100,6 +100,8 @@ Parag Agrawal, the Twitter CEO, additionally clarified the complications of meas
 >
 > ([tweet link](https://twitter.com/paraga/status/1526237581419040768) {cite:p}`paragagrawal[@paraga]NextSpamIsn2022`)
 
+% TODO: update: https://mashable.com/article/x-twitter-elon-musk-bots-fake-traffic
+
 ### What changes with these measures?
 While we don't have direct access to all the data ourselves, we can imagine that different definitions would lead to different results. And there isn't a "best" or "unbiased" definition we should be using, since all definitions are simplifications that will help with some tasks and hurt with others.
 

@@ -1,6 +1,6 @@
 # The Toll on Moderators
 
-When social media companies like Facebook hire moderators, they often hire teams in countries where they can pay workers less. The moderators then are given sets of content to moderate and have to make quick decisions about each item before looking at the next one. They have to get through many posts during their time, and given the nature of the content (e.g., hateful content, child porn, videos of murder, etc.), this can be traumatizing for the moderators:
+When social media companies like Facebook hire moderators, they often hire teams in countries where they can pay workers less. The moderators then are given sets of content to moderate and have to make quick decisions about each item before looking at the next one. They have to get through many posts during their time, and given the nature of the content (e.g., hateful content, CSAM, videos of murder, etc.), this can be traumatizing for the moderators:
 - [Facebook Is Ignoring Moderators’ Trauma: ‘They Suggest Karaoke and Painting’](https://www.vice.com/en/article/m7eva4/traumatized-facebook-moderators-told-to-suck-it-up-and-try-karaoke) {cite:p}`gilbertFacebookIgnoringModerators2021`
 
 

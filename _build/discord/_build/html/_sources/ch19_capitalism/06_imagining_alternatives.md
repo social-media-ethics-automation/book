@@ -14,4 +14,4 @@ Reflect on these prompts and try to work out what the consequences would be for 
 - What if there were a social media site funded by the government as a government service (e.g., democratic socialism)?
   - What could this social media site do differently? What do you think would work well, what would work poorly?
   - Private companies are allowed to restrict speech in ways government entities are not. How would this impact content moderation if government funds were used?
-- What if social media sites were publicly funded or crowd-funded (like NPR for radio, and PBS for TV, Wikipedia)? Note: Mastodon is trying to do this.
+- What if social media sites were publicly funded or crowd-funded (like NPR for radio, and PBS for TV, Wikipedia, Archive of Our Own for fan fiction)? Note: Mastodon is trying to do this.

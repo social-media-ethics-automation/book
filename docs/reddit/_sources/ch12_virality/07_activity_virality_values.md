@@ -7,6 +7,9 @@ When content goes viral there may be many people with a stake in it's going vira
 - Different audiences might have interests such as curiosity or desire to bring justice to a situation or desire to get attention for themselves or their ideas based on engaging the viral content, or desire to troll or harass others.
 - Social networking platforms might have interests such as increased attention to their platform or increased advertising, or increased or decreased reputation (in views of different audiences).
 
+% TODO Add: https://journals.sagepub.com/doi/full/10.1177/14614448241228851
+% TODO: Auto hide the above ideas
+
 List at least three different scenarios of content going viral and list out the interests of different groups and people in the content going viral.
 
 ## Create value statements
