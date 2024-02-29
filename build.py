@@ -245,8 +245,8 @@ for platform in platforms:
         
     # Fix book source code link
     for i, config_line in enumerate(new_config):
-        if "    url: https://github.com/social-media-ethics-automation/book/  # TODO Script updates this to platform specific copy" in config_line:
-            new_config[i] = "url: https://github.com/social-media-ethics-automation/book-src-"+platform["file_name"]+"/"
+        if "  url: https://github.com/social-media-ethics-automation/book/  # TODO Script updates this to platform specific copy" in config_line:
+            new_config[i] = "  url: https://github.com/social-media-ethics-automation/book-src-"+platform["file_name"]+"/"
 
 
     with open(book_directory + '/_config.yml', 'w') as file:
