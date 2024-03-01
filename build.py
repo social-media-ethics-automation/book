@@ -283,8 +283,8 @@ for platform in platforms:
     # Make a README for the submodule copy of book source
     with open("src-copies/book-src-"+platform["file_name"] + '/README.md', 'w') as file:
         file.write("# Social Media, Ethics, and Automation - " + platform["full_name"] + " source\n" +
-                   "This is a copy of the book source for the "+ platform["full_name"] + "version of the book." + 
-                   "This copy was created to help make the interactive online code editors work better." + 
+                   "This is a copy of the book source for the "+ platform["full_name"] + " version of the book.\n\n" + 
+                   "This copy was created to help make the interactive online code editors work better.\n\n" + 
                    "The original source code is at: https://github.com/social-media-ethics-automation/book")
 
 
