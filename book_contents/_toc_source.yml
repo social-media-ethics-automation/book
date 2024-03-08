@@ -15,7 +15,7 @@ parts:
       - file: ch01_intro/01_sacco_tweet
       - file: ch01_intro/02_kumail
       - file: ch01_intro/03_learning_goals
-      - file: ch01_intro/03_learn_more
+      - file: ch01_intro/04_bibliography
     - file: ch02_definitions/00_intro
       sections:
       - file: ch02_definitions/01_social_media/00_intro
@@ -43,7 +43,7 @@ parts:
         - file: ch02_definitions/03_automation/09_reflecting_on_programming
         - file: ch02_definitions/03_automation/10_automation_in_social_media
       - file: ch02_definitions/04_tying_them_together
-      - file: ch02_definitions/05_learn_more
+      - file: ch02_definitions/05_bibliography
     - file: ch03_bots/00_bots
       sections:
       - file: ch03_bots/01_bot_definition
@@ -55,7 +55,7 @@ parts:
           - file: ch03_bots/03_anatomy_of_a_bot/03_practice_statements_variables_sleep-***
       - file: ch03_bots/04_bots_and_responsibility
       - file: ch03_bots/05_bot_activity
-      - file: ch03_bots/06_learn_more
+      - file: ch03_bots/06_bibliography
     - file: ch04_data/00_data
       sections:
       - file: ch04_data/01_anatomy_of_post/00_intro
@@ -76,7 +76,7 @@ parts:
           - file: ch04_data/05_data_python_platform/03_demo_data_from_platform-***
           - file: ch04_data/05_data_python_platform/04_activity
       - file: ch04_data/06_reflection_in_data_design
-      - file: ch04_data/07_learn_more
+      - file: ch04_data/07_bibliography
     - file: ch05_history/00_history
       sections:
       - file: ch05_history/01_pre_internet
@@ -90,7 +90,7 @@ parts:
       - file: ch05_history/05_antisocial_media
       - file: ch05_history/06_social_media_design
       - file: ch05_history/07_reflections
-      - file: ch05_history/08_learn_more
+      - file: ch05_history/08_bibliography
     - file: ch06_authenticity/00_authenticity
       sections:
       - file: ch06_authenticity/01_authenticity
@@ -104,7 +104,7 @@ parts:
       - file: ch06_authenticity/06_authenticity_and_anonymity
       - file: ch06_authenticity/07_examples_of_complicated_authenticity
       - file: ch06_authenticity/08_design_analysis_facebook_name
-      - file: ch06_authenticity/09_learn_more
+      - file: ch06_authenticity/09_bibliography
     - file: ch07_trolling/00_trolling
       sections:
       - file: ch07_trolling/01_what_is_trolling
@@ -117,7 +117,7 @@ parts:
           - file: ch07_trolling/05_trolling_reply_bot/02_practice_strings_conditionals
           - file: ch07_trolling/05_trolling_reply_bot/03_demo_reply_bot-***
       - file: ch07_trolling/06_ethics_and_trolling
-      - file: ch07_trolling/07_learn_more
+      - file: ch07_trolling/07_bibliography
     - file: ch08_data_mining/00_data_mining
       sections:
       - file: ch08_data_mining/01_data_sources
@@ -132,7 +132,7 @@ parts:
           - file: ch08_data_mining/06_sentiment_analysis/03_demo_sentiment-***
       - file: ch08_data_mining/07_data_poisoning
       - file: ch08_data_mining/08_reflection_questions
-      - file: ch08_data_mining/09_learn_more
+      - file: ch08_data_mining/09_bibliography
     - file: ch09_privacy/00_privacy
       sections:
       - file: ch09_privacy/01_privacy_concerns
@@ -145,7 +145,7 @@ parts:
           - file: ch09_privacy/04_tracking_use/03_demo_track_use-***
       - file: ch09_privacy/05_activity_gdpr
       - file: ch09_privacy/06_reflections
-      - file: ch09_privacy/07_learn_more
+      - file: ch09_privacy/07_bibliography
     - file: ch10_accessibility/00_accessibility
       sections:
       - file: ch10_accessibility/01_disability
@@ -155,7 +155,7 @@ parts:
         sections:
         - file: ch10_accessibility/04_alt_text/01_alt_text
       - file: ch10_accessibility/05_accessibility_on_social_media
-      - file: ch10_accessibility/06_learn_more
+      - file: ch10_accessibility/06_bibliography
     - file: ch11_recommendations/00_recommendations
       sections:
       - file: ch11_recommendations/01_recommendations
@@ -168,7 +168,7 @@ parts:
           - file: ch11_recommendations/05_recommend_bot/02_practice_dictionary_counters
           - file: ch11_recommendations/05_recommend_bot/03_demo_recommend-***
       - file: ch11_recommendations/06_design_recommend
-      - file: ch11_recommendations/07_learn_more
+      - file: ch11_recommendations/07_bibliography
     - file: ch12_virality/00_virality
       sections:
       - file: ch12_virality/01_evolution_memes
@@ -179,7 +179,7 @@ parts:
       - file: ch12_virality/06_going_viral
       - file: ch12_virality/07_activity_virality_values
       - file: ch12_virality/09_reflections
-      - file: ch12_virality/10_learn_more
+      - file: ch12_virality/10_bibliography
     - file: ch13_mental_health/00_mental_health
       sections:
       - file: ch13_mental_health/01_effects_of_social_media
@@ -189,7 +189,7 @@ parts:
       - file: ch13_mental_health/05_demo_only_positive_news-***
       - file: ch13_mental_health/06_design_activity_mental_health
       - file: ch13_mental_health/07_reflections
-      - file: ch13_mental_health/08_learn_more
+      - file: ch13_mental_health/08_bibliography
     - file: ch14_moderation/00_moderation
       sections:
       - file: ch14_moderation/01_content
@@ -203,14 +203,14 @@ parts:
         - file: ch14_moderation/06_comments_and_replies/02_demo_recursion
         - file: ch14_moderation/06_comments_and_replies/03_demo_recursion_real-***
         - file: ch14_moderation/06_comments_and_replies/04_demo_hide_some_replies
-      - file: ch14_moderation/07_learn_more
+      - file: ch14_moderation/07_bibliography
     - file: ch15_moderators/00_moderators
       sections:
       - file: ch15_moderators/01_moderator_types
       - file: ch15_moderators/02_example_moderators
       - file: ch15_moderators/03_toll_on_moderators
       - file: ch15_moderators/05_content_moderator_game
-      - file: ch15_moderators/06_learn_more
+      - file: ch15_moderators/06_bibliography
     - file: ch16_crowdsourcing/00_crowdsourcing
       sections:
       - file: ch16_crowdsourcing/01_crowdsourcing_definition
@@ -219,7 +219,7 @@ parts:
       - file: ch16_crowdsourcing/04_power_users_lurkers
       - file: ch16_crowdsourcing/05_visualizing_networks
       - file: ch16_crowdsourcing/06_reflections
-      - file: ch16_crowdsourcing/07_learn_more
+      - file: ch16_crowdsourcing/07_bibliography
     - file: ch17_harassment/00_harassment
       sections:
       - file: ch17_harassment/01_individual_harassment
@@ -230,7 +230,7 @@ parts:
       - file: ch17_harassment/06_stopping_harassment
       - file: ch17_harassment/08_design_example_quoting
       - file: ch17_harassment/09_design_activity
-      - file: ch17_harassment/10_learn_more
+      - file: ch17_harassment/10_bibliography
     - file: ch18_public_shaming/00_public_shaming
       sections:
       - file: ch18_public_shaming/01_shame_guilt_childhood
@@ -238,7 +238,7 @@ parts:
       - file: ch18_public_shaming/03_perspectives_on_public_shaming
       - file: ch18_public_shaming/04_repair_and_reintegration
       - file: ch18_public_shaming/05_design_retract
-      - file: ch18_public_shaming/07_learn_more
+      - file: ch18_public_shaming/07_bibliography
     - file: ch19_capitalism/00_capitalism
       sections:
         - file: ch19_capitalism/01_what_is_capitalism
@@ -248,7 +248,7 @@ parts:
         - file: ch19_capitalism/05_social_media_simulator
         - file: ch19_capitalism/06_imagining_alternatives
         - file: ch19_capitalism/07_programming_gender_status_money
-        - file: ch19_capitalism/08_learn_more
+        - file: ch19_capitalism/08_bibliography
     - file: ch20_colonialism/00_colonialism
       sections:
         - file: ch20_colonialism/01_what_is_colonialism
@@ -257,7 +257,7 @@ parts:
         - file: ch20_colonialism/04_zuckerbergs_goals
         - file: ch20_colonialism/05_colonialism_and_meta
         - file: ch20_colonialism/06_imagining_alternatives
-        - file: ch20_colonialism/07_learn_more
+        - file: ch20_colonialism/07_bibliography
     - file: ch21_conclusions/00_conclusions
       sections:
         - file: ch21_conclusions/01_what_we_covered
@@ -269,6 +269,8 @@ parts:
           - file: ch21_conclusions/03_going_forward/03_potential_tech_worker
         - file: ch21_conclusions/04_final_reflections
         - file: ch21_conclusions/05_more_resources
+        - file: ch21_conclusions/06_bibliography
+        
 
   - caption: Appendix
     numbered: 3

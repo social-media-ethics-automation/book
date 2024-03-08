@@ -24,3 +24,6 @@ Some reasons people engage in trolling behavior include:
 - **Punish or stop**: Some trolling is in service of some view of justice, where a person, group or organization is viewed as doing something "bad" or "deserving" of punishment, and trolling is a way of fighting back.
 
 See also: [Wikipedia's summary](https://en.wikipedia.org/wiki/Internet_troll) {cite:p}`TrollSlang2023`
+
+## Learn more:
+- [Meet Dr. Troll](https://www.fastcompany.com/1838743/meet-dr-troll) {cite:p}`subbaramanMeetDrTroll2012` (Whitney Phillips) 

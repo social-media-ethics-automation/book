@@ -3,7 +3,7 @@
 We wanted to conclude by linking you to more resources that you might be interested, some of which we weren't able to delve into in this book.
 
 ## Recommended Articles
-- [A People’s History of Black Twitter](https://www.wired.com/story/black-twitter-oral-history-part-i-coming-together/) {cite:p}`parhamPeopleHistoryBlacka`
+- [A People’s History of Black Twitter](https://www.wired.com/story/black-twitter-oral-history-part-i-coming-together/) {cite:p}`parhamPeopleHistoryBlack2`
 - [There Is No Replacement for Black Twitter | WIRED](https://www.wired.com/story/black-twitter-elon-musk/) {cite:p}`parhamThereNoReplacement`
 - [Facebook won’t call itself a media company. Is it time to reimagine journalism for the digital age?](https://www.theverge.com/2016/11/16/13655102/facebook-journalism-ethics-media-company-algorithm-tax) {cite:p}`buniMediaCompanyBehemoth2016`
 - [Social media and science](https://www.theverge.com/2021/9/24/22688278/tiktok-science-study-survey-prolific) {cite:p}`letzterTeenagerTikTokDisrupted2021a`, etc.
@@ -51,7 +51,3 @@ Note: We haven't tried these out yet, but we are pointing to what looks like the
   - Developer access (with some python code): [https://developers.weixin.qq.com/doc/offiaccount/en/Getting_Started/Getting_Started_Guide.html](https://developers.weixin.qq.com/doc/offiaccount/en/Getting_Started/Getting_Started_Guide.html) {cite:p}`GettingStartedGetting`
 
 
-## Bibliography
-```{bibliography} ch21_references.bib
-:labelprefix: u
-```

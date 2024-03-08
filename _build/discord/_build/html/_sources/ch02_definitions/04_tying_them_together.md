@@ -68,3 +68,6 @@ While we show how these frameworks might argue for different approaches to image
 ```
 
 This is a small example of the kind of reflection that we will be returning to again and again throughout the course. As we get more deeply acquainted with the automation side of things, we will be able to use these ethical tools to look deeper into questions of Social Media, Ethics, and Automation.
+
+## Learn more
+- [Ethical Tech Starts With Addressing Ethical Debt](https://www.wired.com/story/opinion-ethical-tech-starts-with-addressing-ethical-debt/) {cite:p}`fiesler_ethical_2020`

@@ -21,3 +21,7 @@ The offense that someone is being canceled for can range from sexual assault of 
 The consequences for being "canceled" can range from simply the experience of being criticized, to loss of job or criminal charges.
 
 Given the huge range of things "cancel culture" can be referring to, we'll mostly stick to talking here about "public shaming," and "public criticism."
+
+## Learn More
+- [Twitter, the Intimacy Machine](https://ravenmagazine.org/magazine/twitter-the-intimacy-machine/) {cite:p}`nguyenTwitterIntimacyMachine2021`
+  - “Twitter incentivizes its users to take trust falls, and then it rewards other users for blocking the catch. Twitter is a technology finely tuned to call forth, and then crush, intimacy.”

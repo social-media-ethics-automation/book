@@ -27,3 +27,7 @@ Letting individuals moderate their own spaces is expecting individuals to put in
 
 ## Automated Moderators (bots)
 Another strategy for content moderation is using bots, that is computer programs that look through posts or other content and try to automatically detect problems. These bots might remove content, or they might flag things for human moderators to review.
+
+## Learn More
+- Book: [Behind the Screen](https://yalebooks.yale.edu/book/9780300261479/behind-the-screen/) {cite:p}`Screen` by Sarah Roberts
+- Book: [Custodians of the Internet](https://yalebooks.yale.edu/book/9780300261431/custodians-of-the-internet/) {cite:p}`CustodiansInternet` by Tarleton Gillespie

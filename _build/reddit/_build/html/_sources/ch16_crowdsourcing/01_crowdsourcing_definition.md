@@ -20,3 +20,10 @@ Some of the different characteristics that means of communication can have inclu
 Because of these (and other) differences, different forms of communication might be preferable for different tasks. For example, you might send an email to the person sitting next at work to you if you want to keep an archive of the communication (which is also conveniently grouped into email threads). Or you might send a text message to the person sitting next to you if you are criticizing the teacher, but want to do so discretely, so the teacher doesn't notice.
 
 These different forms of communication can then support different methods of crowdsourcing.
+
+
+## Learn More
+If you want to learn more about crowdsourcing, you can look at the research from the [ACM Conference On Computer-Supported Cooperative Work And Social Computing](https://cscw.acm.org/) {cite:p}`CSCW2023`. For example, you can see:
+- [Best paper awards from 2022](https://programs.sigchi.org/cscw/2022/awards/best-papers) {cite:p}`CSCW22Awards`
+- [Best paper awards from 2021](https://programs.sigchi.org/cscw/2021/awards/best-papers) {cite:p}`CSCW21Awards`
+- [Best paper awards from 2020](https://programs.sigchi.org/cscw/2020/awards/best-papers) {cite:p}`CSCW20Awards`

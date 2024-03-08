@@ -47,6 +47,8 @@ Self-harm doesn't always have to be physical though, and some people find ways o
 ### Self-Bullying
 One form of digital self-harm is [self-bullying](https://www.npr.org/sections/health-shots/2018/04/21/604073315/when-teens-cyberbully-themselves) {cite:p}`fragaWhenTeensCyberbully2018`, where people set up fake alternate accounts which they then use to post bullying messages at themselves.
 
+% TODO: Sarah Z on the person who wrote fan fiction and made accounts to attack themselves about it etc.
+
 ### Negative Communities
 Another form of digital self-harm is through joining toxic negative communities built around tearing each other down and reinforcing a hopeless worldview. (Content warning: sex and self-harm)
 

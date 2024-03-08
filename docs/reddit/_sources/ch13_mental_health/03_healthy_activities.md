@@ -19,3 +19,6 @@ One of the ways social media can be beneficial to mental health is in finding co
 
 
 So you might find a safe space online to explore part of yourself that isn't safe in public (e.g., [Trans Twitter and the beauty of online anonymity](https://www.vox.com/culture/21432987/trans-twitter-reddit-online-anonymity) {cite:p}`jamesTransTwitterBeauty2020a`). Or you might find [places to share or learn about mental health](https://www.npr.org/2019/11/13/779015105/social-media-has-become-a-place-to-talk-about-mental-illness-but-is-that-helpful) {cite:p}`tribbetSocialMediaHas2019` (in fact, from seeing social media posts, Kyle realized that ADHD was causing many more problems in his life than just having trouble sitting still, and he sought diagnosis and treatment). There are also support groups for various issues people might be struggling with, like [ADHD](https://www.facebook.com/groups/778098019379268), or having been [raised by narcissistic parents](https://www.reddit.com/r/raisedbynarcissists/) {cite:p}`RaisedbynarcissistsChildrenAbusive`.
+
+
+% TODO: https://yimregister.medium.com/are-you-insecurely-attached-to-the-instagram-algorithm-c6c19e5f7ad5

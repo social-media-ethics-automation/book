@@ -22,3 +22,8 @@ Individual harassment can also be done publicly before an audience (such as clas
 
 ## Reflections
 - Have you experienced or witnessed harassment on social media (that you are willing to share about)?
+
+
+## Learn more
+- [I’ve Had a Cyberstalker Since I Was 12](https://www.wired.com/2016/02/ive-had-a-cyberstalker-since-i-was-12/) {cite:p}`jacobsonVeHadCyberstalker`
+- [Chrissy Teigen’s fall from grace: The rise and fall of Chrissy Teigen shows how drastically Twitter changed in 10 years.](https://www.vox.com/culture/22451970/chrissy-teigen-courtney-stodden-controversy-explained) {cite:p}`gradyChrissyTeigenFall2021`
