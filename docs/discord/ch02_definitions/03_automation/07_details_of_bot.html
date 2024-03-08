@@ -729,6 +729,8 @@ document.write(`
 <p>Below I’ve highlighted the text of the sections of the program that you might want to modify.</p>
 <pre style="color:gray">
 import discord
+import nest_asyncio
+nest_asyncio.apply()
 
 discord_token = "<strong style="color:black;background-color:lightgreen">m#5@_fake_discord_token_$%Ds</strong>"
 
@@ -756,6 +758,8 @@ client.run(discord_token)
 <p>In Python, you can add a comment by using the <code class="docutils literal notranslate"><span class="pre">#</span></code> symbol. Python will ignore everything on a line that comes after the <code class="docutils literal notranslate"><span class="pre">#</span></code>. But human programmers will often look for the meaning of the program in these comments.</p>
 <p>So, in order to make the program above easier for future humans to understand, let’s add three comments telling these future humans where to add their special bot password, where to put the id for the Discord channel to post to, and where they can change the text of the post:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">discord</span>
+<span class="kn">import</span> <span class="nn">nest_asyncio</span>
+<span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span>
 
 <span class="c1"># TODO: put the discord token for your bot below</span>
 <span class="n">discord_token</span> <span class="o">=</span> <span class="s2">&quot;m#5@_fake_discord_token_$%Ds&quot;</span>
@@ -784,11 +788,13 @@ client.run(discord_token)
 <h2>Purpose of each section of code<a class="headerlink" href="#purpose-of-each-section-of-code" title="Permalink to this headline">#</a></h2>
 <p>Now that we’ve looked at the code as a modifiable template, let’s break the code into sections and look at what the purpose of each part is. The code is run starting at the top and going down from there, so we will go through the code in that order.</p>
 <p><em>Note: It’s normal if you don’t understand everything here. Over the course of this book you will learn to understand more of how programs work, but also, even professional programmers often don’t understand parts of the programs they are working on, they just understand enough to modify the parts they need to.</em></p>
-<p>The first line of code is:</p>
+<p>The first lines of code is:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">discord</span>
+<span class="kn">import</span> <span class="nn">nest_asyncio</span>
+<span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>The purpose of this line of code that loads another set of code. The code it loads is called <a class="reference external" href="https://discordpy.readthedocs.io/en/stable/">discord.py</a> <span id="id2">[<a class="reference internal" href="../05_learn_more.html#id113" title="Rapptz. Welcome to discord.py. URL: https://discordpy.readthedocs.io/en/stable/ (visited on 2023-11-16).">b103</a>]</span>, which is code specially written to help make programs that work with Discord.</p>
+<p>The purpose of these line of code that loads other sets of code. The first code it loads is called <a class="reference external" href="https://discordpy.readthedocs.io/en/stable/">discord.py</a> <span id="id2">[<a class="reference internal" href="../05_learn_more.html#id113" title="Rapptz. Welcome to discord.py. URL: https://discordpy.readthedocs.io/en/stable/ (visited on 2023-11-16).">b103</a>]</span>, which is code specially written to help make programs that work with Discord. It next loads a library <code class="docutils literal notranslate"><span class="pre">nest_asyncio</span></code> that helps our bots run correctly in Jupyter Notebooks, and the next line applies that library to the rest of the code we run.</p>
 <p>The next section of code is two lines long:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">discord_token</span> <span class="o">=</span> <span class="s2">&quot;m#5@_fake_discord_token_$%Ds&quot;</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">intents</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">Intents</span><span class="o">.</span><span class="n">default</span><span class="p">())</span>
@@ -823,6 +829,10 @@ client.run(discord_token)
 <p>Following the common practice of programmers, we will put the comment before the section of code that the comment is explaining. We can also make multiple comment lines as needed if our comments are long.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;discord&quot; that will help us work with Discord</span>
 <span class="kn">import</span> <span class="nn">discord</span>
+
+<span class="c1"># Load another library that helps the bot work in Jupyter Noteboook</span>
+<span class="kn">import</span> <span class="nn">nest_asyncio</span>
+<span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span>
 
 <span class="c1"># Set up your Discord connection</span>
 <span class="c1"># TODO: put the discord token for your bot below</span>

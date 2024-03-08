@@ -10,6 +10,8 @@ Below I've highlighted the text of the sections of the program that you might wa
 
 <pre style="color:gray">
 import discord
+import nest_asyncio
+nest_asyncio.apply()
 
 discord_token = "<strong style="color:black;background-color:lightgreen">m#5@_fake_discord_token_$%Ds</strong>"
 
@@ -47,6 +49,8 @@ So, in order to make the program above easier for future humans to understand, l
 
 ```python
 import discord
+import nest_asyncio
+nest_asyncio.apply()
 
 # TODO: put the discord token for your bot below
 discord_token = "m#5@_fake_discord_token_$%Ds"
@@ -79,12 +83,14 @@ Now that we've looked at the code as a modifiable template, let's break the code
 
 _Note: It's normal if you don't understand everything here. Over the course of this book you will learn to understand more of how programs work, but also, even professional programmers often don't understand parts of the programs they are working on, they just understand enough to modify the parts they need to._
 
-The first line of code is:
+The first lines of code is:
 ```python
 import discord
+import nest_asyncio
+nest_asyncio.apply()
 ```
 
-The purpose of this line of code that loads another set of code. The code it loads is called [discord.py](https://discordpy.readthedocs.io/en/stable/) {cite:p}`WelcomeDiscordPy`, which is code specially written to help make programs that work with Discord.
+The purpose of these line of code that loads other sets of code. The first code it loads is called [discord.py](https://discordpy.readthedocs.io/en/stable/) {cite:p}`WelcomeDiscordPy`, which is code specially written to help make programs that work with Discord. It next loads a library `nest_asyncio` that helps our bots run correctly in Jupyter Notebooks, and the next line applies that library to the rest of the code we run.
 
 
 The next section of code is two lines long:
@@ -133,6 +139,10 @@ Following the common practice of programmers, we will put the comment before the
 ```python
 # Load some code called "discord" that will help us work with Discord
 import discord
+
+# Load another library that helps the bot work in Jupyter Noteboook
+import nest_asyncio
+nest_asyncio.apply()
 
 # Set up your Discord connection
 # TODO: put the discord token for your bot below

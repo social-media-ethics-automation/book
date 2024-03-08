@@ -8,6 +8,8 @@ Don't worry if you don't understand any of this Python code yet; we will build a
 
 ```python
 import discord
+import nest_asyncio
+nest_asyncio.apply()
 
 discord_token = "m#5@_fake_discord_token_$%Ds"
 
