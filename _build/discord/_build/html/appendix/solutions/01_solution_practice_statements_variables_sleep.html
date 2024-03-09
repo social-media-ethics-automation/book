@@ -1015,7 +1015,9 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake discord bot is fake logging in and starting to run</strong></div><div class="output text_html"><strong style='color:darkred'>Fake Discord is pretending to post:</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I found a way to solve the practice problem from the answer key!
+<div class="output text_html"><strong style='color:darkred'>Fake discord bot is fake logging in and starting to run</strong></div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kmthayer\AppData\Local\Temp\ipykernel_36968\2351957123.py:10: RuntimeWarning: coroutine &#39;FakeDiscordChannel.send&#39; was never awaited
+  channel.send(&quot;I found a way to solve the practice problem from the answer key!&quot;)
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
 </pre></div>
 </div>
 <div class="output text_html"><strong style='color:darkred'>Fake discord bot is shutting down</strong></div></div>
@@ -1025,7 +1027,7 @@ document.write(`
 <h3>Practice 2: Define and run a bot that will post from a variable<a class="headerlink" href="#practice-2-define-and-run-a-bot-that-will-post-from-a-variable" title="Permalink to this headline">#</a></h3>
 <p>Now try saving a piece of text in a variable for the title, and another for the content of a post, and then submitting a post of whatever you saved in the variables.</p>
 <p>To do this, save text in a variable (with a line of code like: <code class="docutils literal notranslate"><span class="pre">post_variable</span> <span class="pre">=</span> <span class="pre">&quot;This</span> <span class="pre">message</span> <span class="pre">is</span> <span class="pre">stored</span> <span class="pre">in</span> <span class="pre">a</span> <span class="pre">variable&quot;</span></code>).</p>
-<p>Then copy below that the code from Practice 1, but instead of making the posting code like <code class="docutils literal notranslate"><span class="pre">channel.send(&quot;This</span> <span class="pre">post</span> <span class="pre">was</span> <span class="pre">made</span> <span class="pre">by</span> <span class="pre">a</span> <span class="pre">computer</span> <span class="pre">program!&quot;)</span></code>, instead use the variable like <code class="docutils literal notranslate"><span class="pre">channel.send(post_variable)</span></code></p>
+<p>Then copy below that the code from Practice 1, but instead of making the posting code like <code class="docutils literal notranslate"><span class="pre">await</span> <span class="pre">channel.send(&quot;This</span> <span class="pre">post</span> <span class="pre">was</span> <span class="pre">made</span> <span class="pre">by</span> <span class="pre">a</span> <span class="pre">computer</span> <span class="pre">program!&quot;)</span></code>, instead use the variable like <code class="docutils literal notranslate"><span class="pre">await</span> <span class="pre">channel.send(post_variable)</span></code></p>
 <p>(note, you can call your variable whatever you want instead of <code class="docutils literal notranslate"><span class="pre">post_variable</span></code>, just make sure you call it the exact same thing in every place you use it)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1040,7 +1042,7 @@ document.write(`
     <span class="n">channel</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_channel</span><span class="p">(</span><span class="n">channel_id</span><span class="p">)</span>
 
     <span class="c1"># Post a message to your discord channel</span>
-    <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">post_variable</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">post_variable</span><span class="p">)</span>
    
 
     <span class="c1"># Tell your bot to stop running</span>
@@ -1061,7 +1063,7 @@ document.write(`
 <section id="submit-multiple-posts">
 <h3>Submit multiple posts<a class="headerlink" href="#submit-multiple-posts" title="Permalink to this headline">#</a></h3>
 <p>Next try submitting 3 posts, but use <code class="docutils literal notranslate"><span class="pre">sleep</span></code> to add pauses between each one (note that discord might limit how often you post, so you can sleep for 60 seconds or more before posting again).</p>
-<p>To do this, copy the code from Practice 1, but instead of one line with <code class="docutils literal notranslate"><span class="pre">channel.send(...)</span></code>, make multiple lines with <code class="docutils literal notranslate"><span class="pre">channel.send()</span></code> and add some lines with <code class="docutils literal notranslate"><span class="pre">sleep</span></code> in between.</p>
+<p>To do this, copy the code from Practice 1, but instead of one line with <code class="docutils literal notranslate"><span class="pre">await</span> <span class="pre">channel.send(...)</span></code>, make multiple lines with <code class="docutils literal notranslate"><span class="pre">await</span> <span class="pre">channel.send()</span></code> and add some lines with <code class="docutils literal notranslate"><span class="pre">sleep</span></code> in between.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Provide instructions for what your discord bot should do once it has logged in</span>
@@ -1073,15 +1075,15 @@ document.write(`
     <span class="n">channel</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_channel</span><span class="p">(</span><span class="n">channel_id</span><span class="p">)</span>
 
     <span class="c1"># Post messages to your discord channel</span>
-    <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;This is the first message&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;This is the first message&quot;</span><span class="p">)</span>
     
     <span class="n">sleep</span><span class="p">(</span><span class="mf">.01</span><span class="p">)</span> <span class="c1">#note: I am using short times since these pauses slow down compiling the book</span>
     
-    <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;This is the second message&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;This is the second message&quot;</span><span class="p">)</span>
     
     <span class="n">sleep</span><span class="p">(</span><span class="mf">.02</span><span class="p">)</span>
     
-    <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;This is the third message&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;This is the third message&quot;</span><span class="p">)</span>
 
     <span class="c1"># Tell your bot to stop running</span>
     <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>

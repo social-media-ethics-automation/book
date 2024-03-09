@@ -17,7 +17,7 @@ client = discord.Client(intents=discord.Intents.default())
 async def on_ready():
     channel_id = 123456789
     channel = client.get_channel(channel_id)
-    channel.send("This post was made by a computer program!")
+    await channel.send("This post was made by a computer program!")
     await client.close()
     
 client.run(discord_token)

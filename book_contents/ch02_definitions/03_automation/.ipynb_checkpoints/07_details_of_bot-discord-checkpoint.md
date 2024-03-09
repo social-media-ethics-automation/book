@@ -21,7 +21,7 @@ client = discord.Client(intents=discord.Intents.default())
 async def on_ready():
     channel_id = <strong style="color:black;background-color:lightgreen">123456789</strong>
     channel = client.get_channel(channel_id)
-    channel.send("<strong style="color:black;background-color:lightgreen">This post was made by a computer program!</strong>")
+    await channel.send("<strong style="color:black;background-color:lightgreen">This post was made by a computer program!</strong>")
     await client.close()
     
 client.run(discord_token)
@@ -65,7 +65,7 @@ async def on_ready():
     channel = client.get_channel(channel_id)
 
     # TODO: put the message you want to post to discord below
-    channel.send("This post was made by a computer program!")
+    await channel.send("This post was made by a computer program!")
 
     await client.close()
     
@@ -109,7 +109,7 @@ async def on_ready():
     channel_id = 123456789
     channel = client.get_channel(channel_id)
 
-    channel.send("This post was made by a computer program!")
+    await channel.send("This post was made by a computer program!")
 
     await client.close()
 ```
@@ -120,7 +120,7 @@ The first two lines (`@client.event` and `async def on_ready():`) are just an in
 
 The next two lines of code (`channel_id = 123456789` and `channel = client.get_channel(channel_id)`) are for loading a specific discord channel. The first line is where a specific channel id is saved into python, and the second line is where the `discord` code finds that specific channel.
 
-The next line of code is what actually makes the post on the given channel (`channel.send("This post was made by a computer program!")`). 
+The next line of code is what actually makes the post on the given channel (`await channel.send("This post was made by a computer program!")`). 
 
 The final line of code in this section (`await client.close()`) tells the bot to shut down (note: there are other ways of writing bots where they keep running so that they can do things like automatically reply to someone).
 
@@ -159,7 +159,7 @@ async def on_ready():
 
     # Post a message to your discord channel
     # TODO: put the message you want to post to discord below
-    channel.send("This post was made by a computer program!")
+    await channel.send("This post was made by a computer program!")
 
     # Tell your bot to stop running
     await client.close()

@@ -741,7 +741,7 @@ client = discord.Client(intents=discord.Intents.default())
 async def on_ready():
     channel_id = <strong style="color:black;background-color:lightgreen">123456789</strong>
     channel = client.get_channel(channel_id)
-    channel.send("<strong style="color:black;background-color:lightgreen">This post was made by a computer program!</strong>")
+    await channel.send("<strong style="color:black;background-color:lightgreen">This post was made by a computer program!</strong>")
     await client.close()
     
 client.run(discord_token)
@@ -775,7 +775,7 @@ client.run(discord_token)
     <span class="n">channel</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_channel</span><span class="p">(</span><span class="n">channel_id</span><span class="p">)</span>
 
     <span class="c1"># TODO: put the message you want to post to discord below</span>
-    <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;This post was made by a computer program!&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;This post was made by a computer program!&quot;</span><span class="p">)</span>
 
     <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     
@@ -808,7 +808,7 @@ client.run(discord_token)
     <span class="n">channel_id</span> <span class="o">=</span> <span class="mi">123456789</span>
     <span class="n">channel</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_channel</span><span class="p">(</span><span class="n">channel_id</span><span class="p">)</span>
 
-    <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;This post was made by a computer program!&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;This post was made by a computer program!&quot;</span><span class="p">)</span>
 
     <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
@@ -816,7 +816,7 @@ client.run(discord_token)
 <p>The purpose of this code is to provide instructions for what your discord bot should do once it has logged in, specifically to make a post to a given channel and then close the bot.</p>
 <p>The first two lines (<code class="docutils literal notranslate"><span class="pre">&#64;client.event</span></code> and <code class="docutils literal notranslate"><span class="pre">async</span> <span class="pre">def</span> <span class="pre">on_ready():</span></code>) are just an indication that these are instructions for what the bot should do once it has logged in. Note: <code class="docutils literal notranslate"><span class="pre">def</span></code> means define, and <code class="docutils literal notranslate"><span class="pre">on_ready</span></code> means we are defining what the bot should do once it is ready (that is, logged in). The rest of the lines in this section are indented, indicating that they are the things we want the bot to do once it is logged in and ready.</p>
 <p>The next two lines of code (<code class="docutils literal notranslate"><span class="pre">channel_id</span> <span class="pre">=</span> <span class="pre">123456789</span></code> and <code class="docutils literal notranslate"><span class="pre">channel</span> <span class="pre">=</span> <span class="pre">client.get_channel(channel_id)</span></code>) are for loading a specific discord channel. The first line is where a specific channel id is saved into python, and the second line is where the <code class="docutils literal notranslate"><span class="pre">discord</span></code> code finds that specific channel.</p>
-<p>The next line of code is what actually makes the post on the given channel (<code class="docutils literal notranslate"><span class="pre">channel.send(&quot;This</span> <span class="pre">post</span> <span class="pre">was</span> <span class="pre">made</span> <span class="pre">by</span> <span class="pre">a</span> <span class="pre">computer</span> <span class="pre">program!&quot;)</span></code>).</p>
+<p>The next line of code is what actually makes the post on the given channel (<code class="docutils literal notranslate"><span class="pre">await</span> <span class="pre">channel.send(&quot;This</span> <span class="pre">post</span> <span class="pre">was</span> <span class="pre">made</span> <span class="pre">by</span> <span class="pre">a</span> <span class="pre">computer</span> <span class="pre">program!&quot;)</span></code>).</p>
 <p>The final line of code in this section (<code class="docutils literal notranslate"><span class="pre">await</span> <span class="pre">client.close()</span></code>) tells the bot to shut down (note: there are other ways of writing bots where they keep running so that they can do things like automatically reply to someone).</p>
 <p>The final section of the code is this one line:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">discord_token</span><span class="p">)</span>
@@ -850,7 +850,7 @@ client.run(discord_token)
 
     <span class="c1"># Post a message to your discord channel</span>
     <span class="c1"># TODO: put the message you want to post to discord below</span>
-    <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;This post was made by a computer program!&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;This post was made by a computer program!&quot;</span><span class="p">)</span>
 
     <span class="c1"># Tell your bot to stop running</span>
     <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
