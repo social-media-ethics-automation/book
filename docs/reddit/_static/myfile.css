@@ -3,3 +3,7 @@
         visibility: hidden;
     }
 }
+
+.transparent-background {
+    background-color: transparent !important;
+}

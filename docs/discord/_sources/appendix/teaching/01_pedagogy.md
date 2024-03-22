@@ -26,145 +26,145 @@ For the programming sections of each chapter, we provide Jupyter Notebook pages 
 ## Outline of course content and activities
 <table class="table table-bordered table-hover table-condensed">
 <thead>
-    <tr><th title="Chapter">Ch</th>
-    <th title="Social Media Topic">Social Media Topic</th>
-    <th title="Programming Topic">Programming Topic</th>
-    <th title="Programming Demo and Activity">Programming Demo/Activity</th>
-    <th title="Other Activity">Other Activity</th>
+    <tr><th title="Chapter"><p>Ch</p></th>
+    <th title="Social Media Topic"><p>Social Media Topic</p></th>
+    <th title="Programming Topic"><p>Programming Topic</p></th>
+    <th title="Programming Demo and Activity"><p>Programming Demo/Activity</p></th>
+    <th title="Other Activity"><p>Other Activity</p></th>
     </tr>
 </thead>
 <tbody>
     <tr>
-        <td align="right">2</td>
-        <td><strong>Definitions</strong></td>
-        <td>What is programming?</td>
-        <td>Demo bot that posts</td>
-        <td>Ethics Frameworks</td>
+        <td align="right"><p>2</p></td>
+        <td><p><strong>Definitions</strong></p></td>
+        <td><p>What is programming?</p></td>
+        <td><p>Demo bot that posts</p></td>
+        <td><p>Ethics Frameworks</p></td>
     </tr>
     <tr>
-        <td align="right">3</td>
-        <td><strong>Bots</strong></td>
-        <td>Statements, vars, sleep</td>
-        <td>Bot posts multiple times</td>
-        <td>Find real bots</td>
+        <td align="right"><p>3</p></td>
+        <td><p><strong>Bots</strong></p></td>
+        <td><p>Statements, vars, sleep</p></td>
+        <td><p>Bot posts multiple times</p></td>
+        <td><p>Find real bots</p></td>
     </tr>
     <tr>
-        <td align="right">4</td>
-        <td><strong>Data</strong></td>
-        <td>Data types in python</td>
-        <td>Get data from posts</td>
-        <td>Design a view of posts</td>
+        <td align="right"><p>4</p></td>
+        <td><p><strong>Data</strong></p></td>
+        <td><p>Data types in python</p></td>
+        <td><p>Get data from posts</p></td>
+        <td><p>Design a view of posts</p></td>
     </tr>
     <tr>
-        <td align="right">5</td>
-        <td><strong>History of Social Media</strong></td>
-        <td>Looping w/ lists and dictionaries</td>
-        <td>Loop through posts</td>
-        <td>Social media use cases</td>
+        <td align="right"><p>5</p></td>
+        <td><p><strong>History of Social Media</strong></p></td>
+        <td><p>Looping w/ lists and dictionaries</p></td>
+        <td><p>Loop through posts</p></td>
+        <td><p>Social media use cases</p></td>
     </tr>
     <tr>
-        <td align="right">6</td>
-        <td><strong>Authenticity</strong></td>
-        <td>N/A</td>
-        <td>Look up info about post / poster</td>
-        <td>Analyze Facebook name rules</td>
+        <td align="right"><p>6</p></td>
+        <td><p><strong>Authenticity</strong></p></td>
+        <td><p>N/A</p></td>
+        <td><p>Look up info about post / poster</p></td>
+        <td><p>Analyze Facebook name rules</p></td>
     </tr>
     <tr>
-        <td align="right">7</td>
-        <td><strong>Trolling</strong></td>
-        <td>Conditionals, String manipulation</td>
-        <td>Make reply bot and troll it</td>
-        <td>Examples of trolling</td>
+        <td align="right"><p>7</p></td>
+        <td><p><strong>Trolling</strong></p></td>
+        <td><p>Conditionals, String manipulation</p></td>
+        <td><p>Make reply bot and troll it</p></td>
+        <td><p>Examples of trolling</p></td>
     </tr>
     <tr>
-        <td align="right">8</td>
-        <td><strong>Data Mining</strong></td>
-        <td>Sentiment Analysis, loop counters</td>
-        <td>Sentiment analysis on sets of posts</td>
-        <td>Categories predicted for you</td>
+        <td align="right"><p>8</p></td>
+        <td><p><strong>Data Mining</strong></p></td>
+        <td><p>Sentiment Analysis, loop counters</p></td>
+        <td><p>Sentiment analysis on sets of posts</p></td>
+        <td><p>Categories predicted for you</p></td>
     </tr>
     <tr>
-        <td align="right">9</td>
-        <td><strong>Privacy and Security</strong></td>
-        <td>Functions</td>
-        <td>Track use of functions</td>
-        <td>Analyze GDPR</td>
+        <td align="right"><p>9</p></td>
+        <td><p><strong>Privacy and Security</strong></p></td>
+        <td><p>Functions</p></td>
+        <td><p>Track use of functions</p></td>
+        <td><p>Analyze GDPR</p></td>
     </tr>
     <tr>
-        <td align="right">10</td>
-        <td><strong>Accessibility</strong></td>
-        <td>N/A</td>
-        <td>Look through alt text of posts</td>
-        <td>Accessible design analysis</td>
+        <td align="right"><p>10</p></td>
+        <td><p><strong>Accessibility</strong></p></td>
+        <td><p>N/A</p></td>
+        <td><p>Look through alt text of posts</p></td>
+        <td><p>Accessible design analysis</p></td>
     </tr>
     <tr>
-        <td align="right">11</td>
-        <td><strong>Recommendation Algorithms</strong></td>
-        <td>Dictionary counters</td>
-        <td>Recommend a friend</td>
-        <td>Think of recommendation algorithms</td>
+        <td align="right"><p>11</p></td>
+        <td><p><strong>Recommendation Algorithms</strong></p></td>
+        <td><p>Dictionary counters</p></td>
+        <td><p>Recommend a friend</p></td>
+        <td><p>Think of recommendation algorithms</p></td>
     </tr>
     <tr>
-        <td align="right">12</td>
-        <td><strong>Virality</strong></td>
-        <td>N/A</td>
-        <td>None (yet)</td>
-        <td>What values do you have for virality?</td>
+        <td align="right"><p>12</p></td>
+        <td><p><strong>Virality</strong></p></td>
+        <td><p>N/A</p></td>
+        <td><p>None (yet)</p></td>
+        <td><p>What values do you have for virality?</p></td>
     </tr>
     <tr>
-        <td align="right">13</td>
-        <td><strong>Mental Health</strong></td>
-        <td>N/A</td>
-        <td>Show only “positive” posts</td>
-        <td>Mental health design analysis</td>
+        <td align="right"><p>13</p></td>
+        <td><p><strong>Mental Health</strong></p></td>
+        <td><p>N/A</p></td>
+        <td><p>Show only “positive” posts</p></td>
+        <td><p>Mental health design analysis</p></td>
     </tr>
     <tr>
-        <td align="right">14</td>
-        <td><strong>Content Moderation</strong></td>
-        <td>Trees, Recursion, DFS</td>
-        <td>Display or hide comments/replies</td>
-        <td>Try reporting a comment</td>
+        <td align="right"><p>14</p></td>
+        <td><p><strong>Content Moderation</strong></p></td>
+        <td><p>Trees, Recursion, DFS</p></td>
+        <td><p>Display or hide comments/replies</p></td>
+        <td><p>Try reporting a comment</p></td>
     </tr>
     <tr>
-        <td align="right">15</td>
-        <td><strong>Content Moderators</strong></td>
-        <td>N/A</td>
-        <td>None (yet)</td>
-        <td>Content moderation game</td>
+        <td align="right"><p>15</p></td>
+        <td><p><strong>Content Moderators</strong></p></td>
+        <td><p>N/A</p></td>
+        <td><p>None (yet)</p></td>
+        <td><p>Content moderation game</p></td>
     </tr>
     <tr>
-        <td align="right">16</td>
-        <td><strong>Crowdsourcing</strong></td>
-        <td>Force-directed graphs (planned)</td>
-        <td>Visualize networks (planned)</td>
-        <td>None (yet)</td>
+        <td align="right"><p>16</p></td>
+        <td><p><strong>Crowdsourcing</strong></p></td>
+        <td><p>Force-directed graphs (planned)</p></td>
+        <td><p>Visualize networks (planned)</p></td>
+        <td><p>None (yet)</p></td>
     </tr>
     <tr>
-        <td align="right">17</td>
-        <td><strong>Harassment</strong></td>
-        <td>N/A</td>
-        <td>Group block (planned)</td>
-        <td>Features used for harassment</td>
+        <td align="right"><p>17</p></td>
+        <td><p><strong>Harassment</strong></p></td>
+        <td><p>N/A</p></td>
+        <td><p>Group block (planned)</p></td>
+        <td><p>Features used for harassment</p></td>
     </tr>
     <tr>
-        <td align="right">18</td>
-        <td><strong>Public Criticism and Public Shaming</strong></td>
-        <td>N/A</td>
-        <td>None (yet)</td>
-        <td>Design retract post</td>
+        <td align="right"><p>18</p></td>
+        <td><p><strong>Public Criticism and Public Shaming</strong></p></td>
+        <td><p>N/A</p></td>
+        <td><p>None (yet)</p></td>
+        <td><p>Design retract post</p></td>
     </tr>
     <tr>
-        <td align="right">19</td>
-        <td><strong>Capitalism</strong></td>
-        <td>Programming &amp; gender</td>
-        <td>None</td>
-        <td>Game / Imagine alternatives</td>
+        <td align="right"><p>19</p></td>
+        <td><p><strong>Capitalism</strong></p></td>
+        <td><p>Programming &amp; gender</p></td>
+        <td><p>None</p></td>
+        <td><p>Game / Imagine alternatives</p></td>
     </tr>
     <tr>
-        <td align="right">20</td>
-        <td><strong>Colonialism</strong>ss</td>
-        <td>Colonialism in programming</td>
-        <td>None</td>
-        <td>Imagine alternatives</td>
+        <td align="right"><p>20</p></td>
+        <td><p><strong>Colonialism</strong></p></td>
+        <td><p>Colonialism in programming</p></td>
+        <td><p>None</p></td>
+        <td><p>Imagine alternatives</p></td>
     </tr>
 </tbody></table>

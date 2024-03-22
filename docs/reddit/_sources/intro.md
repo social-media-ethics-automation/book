@@ -1,6 +1,9 @@
 # Social Media, Ethics, and Automation
 
-!["Logo for the book, which looks like a phone with a social media post open, by Kyle Thayer and Susan Notess called \"Social Media, Ethics, and Automation\." There are various emoji reactions to it.](logo.png)
+```{image} logo.png
+:alt: Logo for the book, which looks like a phone with a social media post open, by Kyle Thayer and Susan Notess called "Social Media, Ethics, and Automation." There are various emoji reactions to it.
+:class: "transparent-background"
+```
 
 Automation drives our experience of social media platforms, from timeline feeds to disinformation bots. This book examines social media phenomena, like viral memes, parasocial relationships, and harassment campaigns. This book then explores the ethics of automation on social media platforms by experimenting with computer programs that automate social media actions. This book assume no prior programming experience.
 
