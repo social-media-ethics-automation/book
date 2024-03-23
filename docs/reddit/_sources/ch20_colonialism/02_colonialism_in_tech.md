@@ -30,3 +30,10 @@ OLPC wanted to give every child in the world a laptop, so they could learn compu
 In the end, this project fell apart, and most of tech moved on to whatever next big idea to save the world.
 
 
+% TODO: Add amplification theory (Kentaro)
+% Perhaps restate part in colonialism
+% [It may be the age of machines, but it's up to humans to save the world](https://www.theguardian.com/commentisfree/2015/jun/11/age-of-machines-humans-save-the-world) {cite:p}`toyamaItMayBe2015` 
+% [Amplifying Inequality](https://medium.com/not-evenly-distributed/amplifying-inequality-64479f9aee85) {cite:p}`sydneyAmplifyingInequality2016`
+% [1] [Agre, Philip E. 1998. Yesterday’s tomorrow. Times Literary Supplement. July 3, 1998, pp. 3-4.](https://pages.gseis.ucla.edu/faculty/agre/tls.html) {cite:p}`agreYesterdayTomorrow1998`
+% [2] [Agre, Philip E. 2002. “Real-Time Politics: The Internet and the Political Process.” The Information Society 18:311-331.](https://pages.gseis.ucla.edu/faculty/agre/real-time.html) {cite:p}`agreRealTimePoliticsInternet2002`
+% - "The Internet changes nothing on its own, but it can amplify existing forces, and those amplified forces might change something."
