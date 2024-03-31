@@ -57,12 +57,12 @@ As you can see in the apple example, any time we turn something into data, we ar
 
 
 % TODO:
-  % Arhie Phinney (Nez Perce)
+% Arhie Phinney (Nez Perce)
 
-	% A sad thing in recording these animal stories is the loss of spirit — the fascination furnished by the peculiar Indian vocal rendition for humor.  Indians are better storytellers than whites.  When I read my story mechanically I find only the cold corpse.
+% A sad thing in recording these animal stories is the loss of spirit — the fascination furnished by the peculiar Indian vocal rendition for humor.  Indians are better storytellers than whites.  When I read my story mechanically I find only the cold corpse.
 
-	% https://thebcreview.ca/2016/12/15/chapter-seven/#_ftn11
-	% Archie Phinney to Franz Boas, 20 November 1929.  2394. PHINNEY, ARCHIE. Correspondence with Franz Boas 1929-1934. Courtesy C. Greifenstein, Manuscripts Library, American Philosophical Society. Phinney was a Nez Perce anthropologist who worked with Boas at Columbia University. See “Archie Phinney obituary”. American Anthropologists 52:3, pp. 442 (1950).
+% https://thebcreview.ca/2016/12/15/chapter-seven/#_ftn11
+% Archie Phinney to Franz Boas, 20 November 1929.  2394. PHINNEY, ARCHIE. Correspondence with Franz Boas 1929-1934. Courtesy C. Greifenstein, Manuscripts Library, American Philosophical Society. Phinney was a Nez Perce anthropologist who worked with Boas at Columbia University. See “Archie Phinney obituary”. American Anthropologists 52:3, pp. 442 (1950).
 
 
 [^symbolic_data_not_simplified]: There is one exception where you can have data that isn't a simplification, and that is if the data source is symbolic (e.g., numbers) and you are applying unambiguous rules (e.g., math). Since it starts out as a symbol, it doesn't need to be simplified to be represented with symbols. For example, data that can be made without simplification include: <ul><li>A list of the first 10 prime numbers.</li> <li>The number of times the letter 'a' (capital or lowercase) appears in this sentence.</li>
@@ -100,7 +100,7 @@ Parag Agrawal, the Twitter CEO, additionally clarified the complications of meas
 >
 > ([tweet link](https://twitter.com/paraga/status/1526237581419040768) {cite:p}`paragagrawal[@paraga]NextSpamIsn2022`)
 
-% TODO: update: https://mashable.com/article/x-twitter-elon-musk-bots-fake-traffic
+Since Elon Musk purchased Twitter (and rebranded it as "X"), the bot problem has reportedly gotten [much](https://www.npr.org/2024/03/07/1235784919/twitter-x-bots-social-media-elon-musk),[much](https://mashable.com/article/x-twitter-elon-musk-bots-fake-traffic), worse {cite:p}`restrepo_how_2024` {cite:p}`binder_majority_2024`. 
 
 ### What changes with these measures?
 While we don't have direct access to all the data ourselves, we can imagine that different definitions would lead to different results. And there isn't a "best" or "unbiased" definition we should be using, since all definitions are simplifications that will help with some tasks and hurt with others.
