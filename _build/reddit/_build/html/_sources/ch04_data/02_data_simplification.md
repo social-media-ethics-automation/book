@@ -100,7 +100,7 @@ Parag Agrawal, the Twitter CEO, additionally clarified the complications of meas
 >
 > ([tweet link](https://twitter.com/paraga/status/1526237581419040768) {cite:p}`paragagrawal[@paraga]NextSpamIsn2022`)
 
-Since Elon Musk purchased Twitter (and rebranded it as "X"), the bot problem has reportedly gotten [much](https://www.npr.org/2024/03/07/1235784919/twitter-x-bots-social-media-elon-musk),[much](https://mashable.com/article/x-twitter-elon-musk-bots-fake-traffic), worse {cite:p}`restrepo_how_2024` {cite:p}`binder_majority_2024`. 
+Since Elon Musk purchased Twitter (and rebranded it as "X"), the bot problem has reportedly gotten [much](https://www.npr.org/2024/03/07/1235784919/twitter-x-bots-social-media-elon-musk), [much](https://mashable.com/article/x-twitter-elon-musk-bots-fake-traffic), worse {cite:p}`restrepo_how_2024` {cite:p}`binder_majority_2024`. 
 
 ### What changes with these measures?
 While we don't have direct access to all the data ourselves, we can imagine that different definitions would lead to different results. And there isn't a "best" or "unbiased" definition we should be using, since all definitions are simplifications that will help with some tasks and hurt with others.
