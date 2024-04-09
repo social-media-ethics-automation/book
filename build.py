@@ -23,7 +23,8 @@ init(autoreset=True)
 
 platforms = [
     {"full_name": "Reddit", "file_name": "reddit", "status": ""},
-    {"full_name": "Discord", "file_name": "discord", "status": " (incomplete)"}
+    {"full_name": "Discord", "file_name": "discord", "status": " (incomplete)"},
+    {"full_name": "Bluesky", "file_name": "bsky", "status": " (incomplete)"}
 ]
 
 # make function for creating social media list
@@ -169,11 +170,11 @@ for platform in platforms:
                 print(Fore.RED + 'Error: couldn\'t find any file matching ' + any_platform_filename + ', so can\'t make a stub version.')
                 continue
 
-            print(Fore.RED + 'Warning: couldn\'t find ' + platform_filename + '. Making a stub file.')
-            
             # read contents of first open file
             file_to_get_title_from = any_matching_files[0]
-            file_to_get_title_from_contents = open(file_to_get_title_from, "r").read().split("\n")
+            print(Fore.RED + 'Warning: couldn\'t find ' + platform_filename + '. Making a stub file from:' + file_to_get_title_from)
+            
+            file_to_get_title_from_contents = open(file_to_get_title_from, "r", encoding='cp437').read().split("\n")
             
             file_to_get_title_from_extension = file_to_get_title_from.split(".")[1]
             title_text = ""

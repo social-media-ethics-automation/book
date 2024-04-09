@@ -1,5 +1,5 @@
 # Data From the Reddit API
-_Choose Social Media Platform: __Reddit__ | <a href='../../discord/ch08_data_mining/02_platform_api_data.html'>Discord</a>_
+_Choose Social Media Platform: __Reddit__ | <a href='../../discord/ch08_data_mining/02_platform_api_data.html'>Discord</a> | <a href='../../bsky/ch08_data_mining/02_platform_api_data.html'>Bluesky</a>_
 
 
 When we've been accessing Reddit through Python and the "PRAW" code library. The praw code library works by sending requests across the internet to Reddit, using what is called an "[application programming interface](https://en.wikipedia.org/wiki/API)" {cite:p}`API2023a` or API for short. APIs have a set of rules for what requests you can make, what happens when you make the request, and what information you can get back.

@@ -1,7 +1,7 @@
 # Human Computers
 ![Black and white photo of rows of desks. At each desk is a woman with a pile of papers and some sort of large machine with buttons on it, perhaps a calculator.](human_computers_3.jpg) {cite:p}`WhenComputersWere`
 
-Before electronic computers were generally available, when scientists wanted the results of some calculations, they sometimes hired "[computers](https://en.wikipedia.org/wiki/Computer_(occupation) {cite:p}`ComputerOccupation2023`)," which were people trained to perform the calculations.
+Before electronic computers were generally available, when scientists wanted the results of some calculations, they sometimes hired "[computers](https://en.wikipedia.org/wiki/Computer_(occupation))" {cite:p}`ComputerOccupation2023`, which were people trained to perform the calculations.
 
 ![Black and white photo of two rows of women standing for a group photo. They appear to be all white women except one in the center, who is Black (Janez Lawson).](human_computers_cropped.jpg) {cite:p}`HumanComputersEarly2023`
 

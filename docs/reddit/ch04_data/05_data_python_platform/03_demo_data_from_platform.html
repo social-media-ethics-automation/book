@@ -749,7 +749,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-id">submission id</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-author-name">submission author name</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-edited">submission edited</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tweet-created-at">tweet created at</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-created-at">post created at</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#number-of-upvotes-score">number of upvotes (score)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upvote-ratio">upvote ratio</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#number-of-comments">number of comments</a></li>
@@ -777,7 +777,7 @@ document.write(`
 <h2>Log into Praw (or fake praw)<a class="headerlink" href="#log-into-praw-or-fake-praw" title="Permalink to this headline">#</a></h2>
 <section id="load-praw-library">
 <h3>Load Praw library<a class="headerlink" href="#load-praw-library" title="Permalink to this headline">#</a></h3>
-<p><em>Choose Social Media Platform: <strong>Reddit</strong> | <a href='../../../discord/ch04_data/05_data_python_platform/03_demo_data_from_platform.html'>Discord</a></em></p>
+<p><em>Choose Social Media Platform: <strong>Reddit</strong> | <a href='../../../discord/ch04_data/05_data_python_platform/03_demo_data_from_platform.html'>Discord</a> | <a href='../../../bsky/ch04_data/05_data_python_platform/03_demo_data_from_platform.html'>Bluesky</a></em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;praw&quot; that will help us work with reddit</span>
@@ -939,11 +939,11 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 </div>
 <p>The “edited” field represents whether a submission has been edited or not. It is a boolean true/false value (<code class="docutils literal notranslate"><span class="pre">bool</span></code>).</p>
 </section>
-<section id="tweet-created-at">
-<h3>tweet created at<a class="headerlink" href="#tweet-created-at" title="Permalink to this headline">#</a></h3>
+<section id="post-created-at">
+<h3>post created at<a class="headerlink" href="#post-created-at" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the tweet created_utc at is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">created_utc</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the post created_utc at is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">created_utc</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="s2">&quot;The created_utc at is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">created_utc</span><span class="p">))</span>
 
 <span class="c1"># convert the utc to a different datetime</span>
@@ -955,7 +955,7 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the tweet created_utc at is: int&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the post created_utc at is: int&#39;
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The created_utc at is: 1673327625&#39;
@@ -1159,7 +1159,7 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-id">submission id</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-author-name">submission author name</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-edited">submission edited</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tweet-created-at">tweet created at</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-created-at">post created at</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#number-of-upvotes-score">number of upvotes (score)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upvote-ratio">upvote ratio</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#number-of-comments">number of comments</a></li>

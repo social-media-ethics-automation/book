@@ -1,5 +1,5 @@
 # A program that makes one Discord post
-_Choose Social Media Platform: <a href='../../../reddit/ch02_definitions/03_automation/06_a_social_media_bot.html'>Reddit</a> | __Discord___
+_Choose Social Media Platform: <a href='../../../reddit/ch02_definitions/03_automation/06_a_social_media_bot.html'>Reddit</a> | __Discord__ | <a href='../../../bsky/ch02_definitions/03_automation/06_a_social_media_bot.html'>Bluesky</a>_
 
 
 Below is a computer program written in the Python programming language. The program will make a Discord post in the the discord channel that has an id of 123456789 (this is a fake channel number). The post will say: "This post was made by a computer program!". Since this is a computer program that posts on Discord, we would call this program a Discord bot.
