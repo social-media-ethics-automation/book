@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>1. Making a Bot Account (Discord) &#8212; Social Media, Ethics, and Automation</title>
+    <title>1. Making a Bot Account (Bluesky) &#8212; Social Media, Ethics, and Automation</title>
   
   
   
@@ -463,7 +463,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Making a Bot Account (Discord)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Making a Bot Account (Bluesky)</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="solutions/00_solutions.html">2. Practice Solutions</a><input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-37"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="solutions/01_solution_practice_statements_variables_sleep.html">2.1. Ch 3 Practice: Statements and Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="solutions/02_solution_practice_data.html">2.2. Ch 4 Practice: Python Basic Data Types</a></li>
@@ -682,7 +682,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -693,11 +695,21 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Making a Bot Account (Discord)</h1>
+    <h1>Making a Bot Account (Bluesky)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sign-up-for-bluesky">1.1. Sign up for Bluesky</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-your-keys">1.2. Test your keys</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understand-reddit-rules-for-bots">1.3. Understand Reddit Rules for Bots</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -707,10 +719,27 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="making-a-bot-account-discord">
-<h1><span class="section-number">1. </span>Making a Bot Account (Discord)<a class="headerlink" href="#making-a-bot-account-discord" title="Permalink to this headline">#</a></h1>
+  <section id="making-a-bot-account-bluesky">
+<h1><span class="section-number">1. </span>Making a Bot Account (Bluesky)<a class="headerlink" href="#making-a-bot-account-bluesky" title="Permalink to this headline">#</a></h1>
 <p><em>Choose Social Media Platform: <a href='../../reddit/appendix/making_bot_account.html'>Reddit</a> | <a href='../../discord/appendix/making_bot_account.html'>Discord</a> | <strong>Bluesky</strong></em></p>
-<p><strong>Content for the social media platform Bluesky hasn’t been created yet. Please try another platform.</strong></p>
+<p>In using this textbook, you will have opportunities to create and run social media bots. Here we will run through how to create a Bluesky account (note: unlike most social media sites, we don’t have to do extra steps to get bots to enable bots on Bluesky accounts).</p>
+<p>While we have made a fake version of Bluesky for you to test all the code in this book, we highly encourage you to make a Bluesky bot account and try it out for real!</p>
+<section id="sign-up-for-bluesky">
+<h2><span class="section-number">1.1. </span>Sign up for Bluesky<a class="headerlink" href="#sign-up-for-bluesky" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://bsky.app/">https://bsky.app/</a></p>
+<p>We suggest making a new, separate Bluesky account, just for making Bluesky bots, since you don’t want to accidentally get your main Bluesky account banned or labeled as a bot. Also we suggest using a different password than you use for other accounts, since you might accidentally share it with your code.</p>
+<p>Make sure you record your full handle (should look something like: “info103-teacher.bsky.social”) and your password.</p>
+<p>Note 1: When I chose a handle, I got warnings about “handle too long” though I think the actual problem might have been that they didn’t accept a handle that included the words “bot” or “test.”</p>
+<p>Note 2: If you want to make a new account and you already have one, you may need to sign out from your current account, or use a different web browser (e.g., Mozilla, Google Chrome, Microsoft Edge, Safari).</p>
+</section>
+<section id="test-your-keys">
+<h2><span class="section-number">1.2. </span>Test your keys<a class="headerlink" href="#test-your-keys" title="Permalink to this headline">#</a></h2>
+<p>Now that you have your Bluesky handle and password, you can test out your code in chapter 2.3.8 (<a class="reference internal" href="../ch02_definitions/03_automation/08_demo.html"><span class="doc std std-doc">Demo: Try Running the Bluesky Bot!</span></a>). Try running the code and replacing the fake handle and password with the ones from your account, and see if you can use the code to make an actual Bluesky post to your account.</p>
+</section>
+<section id="understand-reddit-rules-for-bots">
+<h2><span class="section-number">1.3. </span>Understand Reddit Rules for Bots<a class="headerlink" href="#understand-reddit-rules-for-bots" title="Permalink to this headline">#</a></h2>
+<p>Before you try doing anything too creative with reddit  bots, make sure you look over the <a class="reference external" href="https://docs.google.com/forms/d/e/1FAIpQLSezNdDNK1-P8mspSbmtC2r86Ee9ZRbC66u929cG2GX0T9UMyw/viewform">Reddit API Terms of Use</a> and the <a class="reference external" href="https://github.com/reddit-archive/reddit/wiki/API#rules">Reddit API Rules</a>, that way you don’t get yourself banned.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -771,6 +800,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sign-up-for-bluesky">1.1. Sign up for Bluesky</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-your-keys">1.2. Test your keys</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understand-reddit-rules-for-bots">1.3. Understand Reddit Rules for Bots</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

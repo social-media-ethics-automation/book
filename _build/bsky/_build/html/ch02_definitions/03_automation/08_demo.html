@@ -463,7 +463,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../appendix/making_bot_account.html">1. Making a Bot Account (Discord)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/making_bot_account.html">1. Making a Bot Account (Bluesky)</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../appendix/solutions/00_solutions.html">2. Practice Solutions</a><input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-37"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../appendix/solutions/01_solution_practice_statements_variables_sleep.html">2.1. Ch 3 Practice: Statements and Variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../appendix/solutions/02_solution_practice_data.html">2.2. Ch 4 Practice: Python Basic Data Types</a></li>
@@ -775,7 +775,7 @@ document.write(`
 <h2>Here is the bot code you can run!<a class="headerlink" href="#here-is-the-bot-code-you-can-run" title="Permalink to this headline">#</a></h2>
 <p>Our demo Bluesky bot code is below, broken up into different sections.</p>
 <p>You can select each section of the code below and run it to see what it does.</p>
-<p>By default this code uses a fake version of our Bluesky connection so it doesn’t connect to a real Bluesky account.</p>
+<p>By default this code uses a fake version of our Bluesky connection so it doesn”t connect to a real Bluesky account.</p>
 <p>If you want to actually connect to your Bluesky account, you can put your Bluesky account name and password in the right code section below, and then when you run the code make sure to skip the code section that makes a fake Bluesky connection with “fake_atproto”.</p>
 <section id="step-1-load-atproto-bluesky-code">
 <h3>Step 1: Load atproto (Bluesky) code<a class="headerlink" href="#step-1-load-atproto-bluesky-code" title="Permalink to this headline">#</a></h3>
@@ -790,7 +790,7 @@ document.write(`
 </section>
 <section id="optional-step-1b-make-a-fake-bluesky-connection-with-the-fake-atproto-library">
 <h3>(Optional) Step 1b: Make a fake Bluesky connection with the fake_atproto library<a class="headerlink" href="#optional-step-1b-make-a-fake-bluesky-connection-with-the-fake-atproto-library" title="Permalink to this headline">#</a></h3>
-<p>For testing purposes, we’ve added this line of code, which loads a fake version of atproto, so it wont actually connect to Bluesky. <strong>If you want to try to actually connect to Bluesky, don’t run this line of code.</strong></p>
+<p>For testing purposes, we”ve added this line of code, which loads a fake version of atproto, so it wont actually connect to Bluesky. <strong>If you want to try to actually connect to Bluesky, don’t run this line of code.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_apis/fake_atproto.ipynb
@@ -809,8 +809,8 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Login to Bluesk</span>
 <span class="c1"># TODO: put your account name and password below</span>
 
-<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="s1">&#39;https://bsky.social&#39;</span><span class="p">)</span>
-<span class="n">client</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="s1">&#39;your_account_name.bsky.social&#39;</span><span class="p">,</span> <span class="s1">&#39;m#5@_fake_bsky_password_$%Ds&#39;</span><span class="p">)</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="s2">&quot;https://bsky.social&quot;</span><span class="p">)</span>
+<span class="n">client</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="s2">&quot;your_account_name.bsky.social&quot;</span><span class="p">,</span> <span class="s2">&quot;m#5@_fake_bsky_password_$%Ds&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -823,8 +823,8 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Send a Bluesky post</span>
-<span class="c1"># TODO: modify the text in the quotes below to change what and where this bot posts to Bluesky:</span>
-<span class="n">post</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">send_post</span><span class="p">(</span><span class="s1">&#39;This post was made by a computer program!&#39;</span><span class="p">)</span>
+<span class="c1"># TODO: modify the text in the quotes below to change what this bot posts to Bluesky:</span>
+<span class="n">client</span><span class="o">.</span><span class="n">send_post</span><span class="p">(</span><span class="s2">&quot;This post was made by a computer program!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
