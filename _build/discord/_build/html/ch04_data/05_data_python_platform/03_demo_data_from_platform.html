@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>4.5.3. TODO Demo: Data from a Reddit Post &#8212; Social Media, Ethics, and Automation</title>
+    <title>4.5.3. Demo: Data from a Reddit Post\n” &#8212; Social Media, Ethics, and Automation</title>
   
   
   
@@ -232,7 +232,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="00_intro.html">4.5. Data in Python and Discord</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="01_demo_data.html">4.5.1. Demo: Python Basic Data Types</a></li>
 <li class="toctree-l3"><a class="reference internal" href="02_practice_data.html">4.5.2. Practice: Python Basic Data Types</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">4.5.3. TODO Demo: Data from a Reddit Post</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">4.5.3. Demo: Data from a Reddit Post\n”</a></li>
 <li class="toctree-l3"><a class="reference internal" href="04_activity.html">4.5.4. Design Activity: Data and Social media</a></li>
 </ul>
 </li>
@@ -558,37 +558,6 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<div class="dropdown dropdown-launch-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
-    <i class="fas fa-rocket"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://mybinder.org/v2/gh/social-media-ethics-automation/book-src-discord/main?urlpath=lab/tree/ch04_data/05_data_python_platform/03_demo_data_from_platform.ipynb" target="_blank"
-   class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  
-    <img src="../../_static/images/logo_binder.svg">
-  </span>
-<span class="btn__text-container">Binder</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -644,7 +613,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/ch04_data/05_data_python_platform/03_demo_data_from_platform.ipynb" target="_blank"
+      <li><a href="../../_sources/ch04_data/05_data_python_platform/03_demo_data_from_platform.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -654,7 +623,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -713,9 +682,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -726,40 +693,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>TODO Demo: Data from a Reddit Post</h1>
+    <h1>Demo: Data from a Reddit Post\n”</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log-into-praw-or-fake-praw">Log into Praw (or fake praw)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-praw-library">Load Praw library</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-step-1b-make-a-fake-praw-connection-with-the-fake-praw-library">(Optional) Step 1b: Make a fake praw connection with the fake_praw library</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-load-your-developer-access-passwords">Step 2: Load your developer access passwords</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-give-praw-or-fake-praw-your-developer-access-passwords">Step 4: Give praw (or fake_praw) your developer access passwords</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-a-reddit-submission">Find a Reddit submission</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#look-at-data-in-reddit-submission">Look at data in Reddit submission</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-title">submission title:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-id">submission id</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-author-name">submission author name</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-edited">submission edited</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tweet-created-at">tweet created at</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#number-of-upvotes-score">number of upvotes (score)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upvote-ratio">upvote ratio</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#number-of-comments">number of comments</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-text-selftext">submission text (selftext)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-url-link">submission url (link)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#still-more">Still more!</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -769,314 +707,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="todo-demo-data-from-a-reddit-post">
-<h1><span class="section-number">4.5.3. </span>TODO Demo: Data from a Reddit Post<a class="headerlink" href="#todo-demo-data-from-a-reddit-post" title="Permalink to this headline">#</a></h1>
-<p>Let’s see what the data actually looks like from a Reddit Post!</p>
-<p>First we need to do our normal Reddit login steps (and optional fake praw step)</p>
-<section id="log-into-praw-or-fake-praw">
-<h2>Log into Praw (or fake praw)<a class="headerlink" href="#log-into-praw-or-fake-praw" title="Permalink to this headline">#</a></h2>
-<section id="load-praw-library">
-<h3>Load Praw library<a class="headerlink" href="#load-praw-library" title="Permalink to this headline">#</a></h3>
+  <section id="demo-data-from-a-reddit-post-n">
+<h1><span class="section-number">4.5.3. </span>Demo: Data from a Reddit Post\n”<a class="headerlink" href="#demo-data-from-a-reddit-post-n" title="Permalink to this headline">#</a></h1>
 <p><em>Choose Social Media Platform: <a href='../../../reddit/ch04_data/05_data_python_platform/03_demo_data_from_platform.html'>Reddit</a> | <strong>Discord</strong> | <a href='../../../bsky/ch04_data/05_data_python_platform/03_demo_data_from_platform.html'>Bluesky</a></em></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;praw&quot; that will help us work with reddit</span>
-<span class="kn">import</span> <span class="nn">praw</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="optional-step-1b-make-a-fake-praw-connection-with-the-fake-praw-library">
-<h3>(Optional) Step 1b: Make a fake praw connection with the fake_praw library<a class="headerlink" href="#optional-step-1b-make-a-fake-praw-connection-with-the-fake-praw-library" title="Permalink to this headline">#</a></h3>
-<p>For testing purposes, we’ve added this line of code, which loads a fake version of praw, so it wont actually connect to reddit. <strong>If you want to try to actually connect to reddit, don’t run this line of code.</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_apis/fake_praw.ipynb
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake praw is replacing the praw library. Fake praw doesn&#x27;t need real passwords, and prevents you from accessing real reddit</strong></div></div>
-</div>
-</section>
-<section id="step-2-load-your-developer-access-passwords">
-<h3>Step 2: Load your developer access passwords<a class="headerlink" href="#step-2-load-your-developer-access-passwords" title="Permalink to this headline">#</a></h3>
-<p>To use this on your real Reddit account, copy your <a class="reference internal" href="../../appendix/making_bot_account.html"><span class="doc std std-doc">developer access passwords</span></a> into the code below, replacing our fake passwords.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load all your developer access passwords into Python</span>
-<span class="c1"># TODO: Put your reddit username, password, and special developer access passwords below:</span>
-<span class="n">username</span><span class="o">=</span><span class="s2">&quot;fake_reddit_username&quot;</span>
-<span class="n">password</span><span class="o">=</span><span class="s2">&quot;sa@#4*fdf_fake_password_$%DSG#%DG&quot;</span>
-<span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;45adf$TW_fake_client_id_JESdsg1O&quot;</span>
-<span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;56sd_fake_client_secret_%Yh%&quot;</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="step-4-give-praw-or-fake-praw-your-developer-access-passwords">
-<h3>Step 4: Give praw (or fake_praw) your developer access passwords<a class="headerlink" href="#step-4-give-praw-or-fake-praw-your-developer-access-passwords" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Give the praw code your reddit account info so</span>
-<span class="c1"># it can perform reddit actions</span>
-<span class="n">reddit</span> <span class="o">=</span> <span class="n">praw</span><span class="o">.</span><span class="n">Reddit</span><span class="p">(</span>
-    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
-    <span class="n">client_id</span><span class="o">=</span><span class="n">client_id</span><span class="p">,</span> <span class="n">client_secret</span><span class="o">=</span><span class="n">client_secret</span><span class="p">,</span>
-    <span class="n">user_agent</span><span class="o">=</span><span class="s2">&quot;a custom python script&quot;</span>
-<span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to collect account info to use on reddit</strong></div></div>
-</div>
-</section>
-</section>
-<section id="find-a-reddit-submission">
-<h2>Find a Reddit submission<a class="headerlink" href="#find-a-reddit-submission" title="Permalink to this headline">#</a></h2>
-<p>Below I have the code to find a recent Reddit submission on the subreddit “<a class="reference external" href="https://www.reddit.com/r/cuteanimals">cuteanimals</a>” (we’ll get the top post on the default reddit view, called “hot”)..</p>
-<p>Don’t worry if you don’t understand this part yet. We are
-just doing this, so we can get to the point of seeing what tweet data looks like.</p>
-<p><em>Note: If you run this on real reddit, we can’t gurantee anything about how offensive what you might find is.</em></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Look up the subreddit &quot;cuteanimals&quot;, then find the &quot;hot&quot; list, getting up to 1 submission</span>
-<span class="n">submissions</span> <span class="o">=</span> <span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span><span class="s2">&quot;cuteanimals&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">hot</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="c1"># get the first submission off the list (should only be one anyway)</span>
-<span class="n">recent_submission</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">submissions</span><span class="p">)</span> 
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to select the subreddit: cuteanimals</strong></div></div>
-</div>
-</section>
-<section id="look-at-data-in-reddit-submission">
-<h2>Look at data in Reddit submission<a class="headerlink" href="#look-at-data-in-reddit-submission" title="Permalink to this headline">#</a></h2>
-<p>Now we will look at some of the data that came back!</p>
-<p>Again, don’t worry too much about the code, we want to look at the data and data types.</p>
-<section id="submission-title">
-<h3>submission title:<a class="headerlink" href="#submission-title" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the submission title is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">title</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The submission title is: &quot;</span> <span class="o">+</span> <span class="n">recent_submission</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the submission title is: str&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The submission title is: Look at my cute dog!&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>As you can see above, the title of a submission is a string (<code class="docutils literal notranslate"><span class="pre">str</span></code>) data type.</p>
-</section>
-<section id="submission-id">
-<h3>submission id<a class="headerlink" href="#submission-id" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the submission id is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">id</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The submission id is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the submission id is: str&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The submission id is: 904tjwdf093j&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>The submission id is a piece of text (<code class="docutils literal notranslate"><span class="pre">str</span></code>) that looks like random letters and numbers. This is how the submission is referred to inside Reddit’s computers. So if someone is commenting on a submission, Reddit just puts uses submission ID they were commenting on to see where to display it.</p>
-</section>
-<section id="submission-author-name">
-<h3>submission author name<a class="headerlink" href="#submission-author-name" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the author name is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The author name is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the author name is: str&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The author name is: fake_user&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>The author name is an string (<code class="docutils literal notranslate"><span class="pre">str</span></code>). Note recent_submission.author has other information about the author as well as the name.</p>
-</section>
-<section id="submission-edited">
-<h3>submission edited<a class="headerlink" href="#submission-edited" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of edited is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">edited</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The submission edited is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">edited</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of edited is: bool&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The submission edited is: False&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>The “edited” field represents whether a submission has been edited or not. It is a boolean true/false value (<code class="docutils literal notranslate"><span class="pre">bool</span></code>).</p>
-</section>
-<section id="tweet-created-at">
-<h3>tweet created at<a class="headerlink" href="#tweet-created-at" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the tweet created_utc at is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">created_utc</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The created_utc at is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">created_utc</span><span class="p">))</span>
-
-<span class="c1"># convert the utc to a different datetime</span>
-<span class="kn">import</span> <span class="nn">datetime</span>
-<span class="n">converted_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">created_utc</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the converted_time at is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">converted_time</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The converted_time at is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">converted_time</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the tweet created_utc at is: int&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The created_utc at is: 1673327625&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the converted_time at is: datetime&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The converted_time at is: 2023-01-09 21:13:45&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>The created at time for the submission is a floating point number (<code class="docutils literal notranslate"><span class="pre">float</span></code>), which is in <a class="reference external" href="https://en.wikipedia.org/wiki/Unix_time">Unix Time</a>, which is the number of seconds since Jan 1, 1970 in the <a class="reference external" href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time">Coordinated Universal Time</a> zone.</p>
-<p>This is not a very useful number, so we use a python library called <code class="docutils literal notranslate"><span class="pre">datetime</span></code> to convert it into a more readable <code class="docutils literal notranslate"><span class="pre">datetime</span></code> data type, which we then can display and read easier.</p>
-</section>
-<section id="number-of-upvotes-score">
-<h3>number of upvotes (score)<a class="headerlink" href="#number-of-upvotes-score" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the score is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">score</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The submission score is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">score</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the score is: int&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The submission score is: 23&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>The number of upvotes is called <code class="docutils literal notranslate"><span class="pre">score</span></code> and it is a whole number (<code class="docutils literal notranslate"><span class="pre">int</span></code>).</p>
-</section>
-<section id="upvote-ratio">
-<h3>upvote ratio<a class="headerlink" href="#upvote-ratio" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the upvote ratio is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">upvote_ratio</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The submission upvote ratio is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">upvote_ratio</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the upvote ratio is: float&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The submission upvote ratio is: 0.93&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>The upvote ratio (how many upvotes divided by total number of votes including downvotes) is a floating point number (<code class="docutils literal notranslate"><span class="pre">float</span></code>).</p>
-</section>
-<section id="number-of-comments">
-<h3>number of comments<a class="headerlink" href="#number-of-comments" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of num_comments is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">num_comments</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The submission number of comments is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">num_comments</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of num_comments is: int&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The submission number of comments is: 7&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>The number of comments is a whole number (<code class="docutils literal notranslate"><span class="pre">int</span></code>). Note: You can also get a data structure of all the comments, but we will look at that later.</p>
-</section>
-<section id="submission-text-selftext">
-<h3>submission text (selftext)<a class="headerlink" href="#submission-text-selftext" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of selftext is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">selftext</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The submission selftext is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">selftext</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of selftext is: str&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The submission selftext is: &#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>The submission selftext (the contents of the post if the post isn’t a link url), is a string (<code class="docutils literal notranslate"><span class="pre">str</span></code>). Note that a submission can either be text saved as <code class="docutils literal notranslate"><span class="pre">selftext</span></code>, or a link (e.g., image or news story) saved as <code class="docutils literal notranslate"><span class="pre">url</span></code>.</p>
-</section>
-<section id="submission-url-link">
-<h3>submission url (link)<a class="headerlink" href="#submission-url-link" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of url is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The submission url is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_submission</span><span class="o">.</span><span class="n">url</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of url is: str&#39;
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The submission url is: example.com/fake_image.jpg&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<p>The submission url is a string (<code class="docutils literal notranslate"><span class="pre">str</span></code>).</p>
-</section>
-</section>
-<section id="still-more">
-<h2>Still more!<a class="headerlink" href="#still-more" title="Permalink to this headline">#</a></h2>
-<p>In addition to the data we looked at above, there are even more options for reddit submissions, which you can see in the table of “attributes” at the top of the <a class="reference external" href="https://praw.readthedocs.io/en/stable/code_overview/models/submission.html">PRAW library page on Submissions</a>. You can also see the “attributes tables in the PRAW library pages for <a class="reference external" href="https://praw.readthedocs.io/en/stable/code_overview/models/redditor.html">Redditors</a> and <a class="reference external" href="https://praw.readthedocs.io/en/stable/code_overview/models/comment.html">Comments</a></p>
-</section>
+<p><strong>Content for the social media platform Discord hasn’t been created yet. Please try another platform.</strong></p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1137,41 +771,6 @@ just doing this, so we can get to the point of seeing what tweet data looks like
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log-into-praw-or-fake-praw">Log into Praw (or fake praw)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-praw-library">Load Praw library</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-step-1b-make-a-fake-praw-connection-with-the-fake-praw-library">(Optional) Step 1b: Make a fake praw connection with the fake_praw library</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-load-your-developer-access-passwords">Step 2: Load your developer access passwords</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-give-praw-or-fake-praw-your-developer-access-passwords">Step 4: Give praw (or fake_praw) your developer access passwords</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-a-reddit-submission">Find a Reddit submission</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#look-at-data-in-reddit-submission">Look at data in Reddit submission</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-title">submission title:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-id">submission id</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-author-name">submission author name</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-edited">submission edited</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tweet-created-at">tweet created at</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#number-of-upvotes-score">number of upvotes (score)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upvote-ratio">upvote ratio</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#number-of-comments">number of comments</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-text-selftext">submission text (selftext)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-url-link">submission url (link)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#still-more">Still more!</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
