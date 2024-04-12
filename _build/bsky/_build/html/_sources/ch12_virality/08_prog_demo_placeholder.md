@@ -1,1 +1,0 @@
-# Programming Demo Placeholder

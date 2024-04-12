@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>4.5.3. Demo: Data from a Reddit Post\n” &#8212; Social Media, Ethics, and Automation</title>
+    <title>4.5.3. Demo: Data from a Bluesky Post &#8212; Social Media, Ethics, and Automation</title>
   
   
   
@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="4.5.4. Design Activity: Data and Social media" href="04_activity.html" />
+    <link rel="next" title="4.6. Design Activity: Data and Social media" href="../06_data_design_activity.html" />
     <link rel="prev" title="4.5.2. Practice: Python Basic Data Types" href="02_practice_data.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
@@ -232,12 +232,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="00_intro.html">4.5. Data in Python and Bluesky</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="01_demo_data.html">4.5.1. Demo: Python Basic Data Types</a></li>
 <li class="toctree-l3"><a class="reference internal" href="02_practice_data.html">4.5.2. Practice: Python Basic Data Types</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">4.5.3. Demo: Data from a Reddit Post\n”</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_activity.html">4.5.4. Design Activity: Data and Social media</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">4.5.3. Demo: Data from a Bluesky Post</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../06_reflection_in_data_design.html">4.6. Reflection: Ethics of Choosing Data Representation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../07_bibliography.html">4.7. Bibliography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_data_design_activity.html">4.6. Design Activity: Data and Social media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_reflection_in_data_design.html">4.7. Reflection: Ethics of Choosing Data Representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../08_bibliography.html">4.8. Bibliography</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../ch05_history/00_history.html">5. History of Social Media</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -558,6 +558,37 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/social-media-ethics-automation/book-src-bsky/main?urlpath=lab/tree/ch04_data/05_data_python_platform/03_demo_data_from_platform.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -613,7 +644,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/ch04_data/05_data_python_platform/03_demo_data_from_platform.md" target="_blank"
+      <li><a href="../../_sources/ch04_data/05_data_python_platform/03_demo_data_from_platform.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -623,7 +654,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -682,7 +713,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -693,11 +726,36 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Demo: Data from a Reddit Post\n”</h1>
+    <h1>Demo: Data from a Bluesky Post</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log-into-atproto-or-fake-atproto">Log into atproto (or fake atproto)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-atproto-library">Load atproto library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-step-1b-make-a-fake-bluesky-connection-with-the-fake-atproto-library">(Optional) Step 1b: Make a fake Bluesky connection with the fake_atproto library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-login-to-bluesky">Step 2: Login to Bluesky</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-a-blueskydata">Find a Blueskydata</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#look-at-data-in-bluesky-submission">Look at data in Bluesky submission</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-text">post text:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-content-id-cid">post content id (cid)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-author-handle">submission author handle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-created-at">post created at</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#number-of-likes-score">number of likes (score)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#number-of-replies">number of replies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#number-of-reposts">number of reposts</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#still-more">Still more!</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -707,10 +765,220 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="demo-data-from-a-reddit-post-n">
-<h1><span class="section-number">4.5.3. </span>Demo: Data from a Reddit Post\n”<a class="headerlink" href="#demo-data-from-a-reddit-post-n" title="Permalink to this headline">#</a></h1>
+  <section id="demo-data-from-a-bluesky-post">
+<h1><span class="section-number">4.5.3. </span>Demo: Data from a Bluesky Post<a class="headerlink" href="#demo-data-from-a-bluesky-post" title="Permalink to this headline">#</a></h1>
+<p>Let’s see what the data actually looks like from a Bluesky Post!</p>
+<p>First we need to do our normal Bluesky login steps (and optional fake atproto step)</p>
+<section id="log-into-atproto-or-fake-atproto">
+<h2>Log into atproto (or fake atproto)<a class="headerlink" href="#log-into-atproto-or-fake-atproto" title="Permalink to this headline">#</a></h2>
+<section id="load-atproto-library">
+<h3>Load atproto library<a class="headerlink" href="#load-atproto-library" title="Permalink to this headline">#</a></h3>
 <p><em>Choose Social Media Platform: <a href='../../../reddit/ch04_data/05_data_python_platform/03_demo_data_from_platform.html'>Reddit</a> | <a href='../../../discord/ch04_data/05_data_python_platform/03_demo_data_from_platform.html'>Discord</a> | <strong>Bluesky</strong></em></p>
-<p><strong>Content for the social media platform Bluesky hasn’t been created yet. Please try another platform.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;Client&quot; from the &quot;atproto&quot; library that will help us work with Bluesky</span>
+<span class="kn">from</span> <span class="nn">atproto</span> <span class="kn">import</span> <span class="n">Client</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="optional-step-1b-make-a-fake-bluesky-connection-with-the-fake-atproto-library">
+<h3>(Optional) Step 1b: Make a fake Bluesky connection with the fake_atproto library<a class="headerlink" href="#optional-step-1b-make-a-fake-bluesky-connection-with-the-fake-atproto-library" title="Permalink to this headline">#</a></h3>
+<p>For testing purposes, we”ve added this line of code, which loads a fake version of atproto, so it wont actually connect to Bluesky. <strong>If you want to try to actually connect to Bluesky, don’t run this line of code.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_apis/fake_atproto.ipynb
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake atproto (bsky.app) is replacing the atproto.blue library. Fake atproto doesn&#x27;t need real passwords, and prevents you from accessing real Bluesky</strong></div></div>
+</div>
+</section>
+<section id="step-2-login-to-bluesky">
+<h3>Step 2: Login to Bluesky<a class="headerlink" href="#step-2-login-to-bluesky" title="Permalink to this headline">#</a></h3>
+<p>To use this on your real Bluesky account, copy your <a class="reference internal" href="../../appendix/making_bot_account.html"><span class="doc std std-doc">bluesky account name and login</span></a> into the code below, replacing our fake bluesky name and password.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Login to Bluesky</span>
+<span class="c1"># TODO: put your account name and password below</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="s2">&quot;https://bsky.social&quot;</span><span class="p">)</span>
+<span class="n">client</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="s2">&quot;your_account_name.bsky.social&quot;</span><span class="p">,</span> <span class="s2">&quot;m#5@_fake_bsky_password_$%Ds&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake atproto is pretending to set up a client connection to: https://bsky.social</strong></div><div class="output text_html"><strong style='color:darkred'>Fake atproto is pretending log into your account: your_account_name.bsky.social</strong></div></div>
+</div>
+</section>
+</section>
+<section id="find-a-blueskydata">
+<h2>Find a Blueskydata<a class="headerlink" href="#find-a-blueskydata" title="Permalink to this headline">#</a></h2>
+<p>Below I have the code to find a recent Bluesky post from the feed <a class="reference external" href="https://bsky.app/profile/did:plc:2m44csq7rgph66s2kltbypxh/feed/aaab56iiatpdo">Animal</a> by the user <a class="reference external" href="https://bsky.app/profile/shouldhaveanimal.bsky.social">shouldhaveanimal.bsky.social</a>.</p>
+<p>Don’t worry if you don’t understand this part yet. We are
+just doing this, so we can get to the point of seeing what tweet data looks like.</p>
+<p><em>Note: If you run this on real Bluesky, we can’t gurantee anything about how offensive what you might find is.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feed</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">bsky</span><span class="o">.</span><span class="n">feed</span><span class="o">.</span><span class="n">get_feed</span><span class="p">({</span><span class="s1">&#39;feed&#39;</span><span class="p">:</span> <span class="s1">&#39;at://did:plc:2m44csq7rgph66s2kltbypxh/app.bsky.feed.generator/aaab56iiatpdo&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">feed</span>
+<span class="n">recent_post</span> <span class="o">=</span> <span class="n">feed</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">post</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="look-at-data-in-bluesky-submission">
+<h2>Look at data in Bluesky submission<a class="headerlink" href="#look-at-data-in-bluesky-submission" title="Permalink to this headline">#</a></h2>
+<p>Now we will look at some of the data that came back!</p>
+<p>Again, don’t worry too much about the code, we want to look at the data and data types.</p>
+<section id="post-text">
+<h3>post text:<a class="headerlink" href="#post-text" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the post text is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The post text is: &quot;</span> <span class="o">+</span> <span class="n">recent_post</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the post text is: str&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The post text is: Look at my cute dog!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you can see above, the text of a post is a string (<code class="docutils literal notranslate"><span class="pre">str</span></code>) data type.</p>
+</section>
+<section id="post-content-id-cid">
+<h3>post content id (cid)<a class="headerlink" href="#post-content-id-cid" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the post content id is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">cid</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The post content id is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">cid</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the post content id is: str&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The post content id is: 904tjwdf093j&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The post content id is a piece of text (<code class="docutils literal notranslate"><span class="pre">str</span></code>) that looks like random letters and numbers. This is how the post is referred to inside Bluesky’s computers. So if someone is commenting on a post, Bluesky just puts uses content ID they were commenting on to see where to display it.</p>
+</section>
+<section id="submission-author-handle">
+<h3>submission author handle<a class="headerlink" href="#submission-author-handle" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the author handle is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">handle</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The author handle is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">handle</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the author handle is: str&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The author handle is: fake_user.bsky.social&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The author name is an string (<code class="docutils literal notranslate"><span class="pre">str</span></code>). Note recent_post.author.author has other information about the author as well as the name.</p>
+</section>
+<section id="post-created-at">
+<h3>post created at<a class="headerlink" href="#post-created-at" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the post created_at is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">created_at</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The created_at at is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">created_at</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the post created_at is: str&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The created_at at is: 2014-01-01&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The created at time for the submission is a string (<code class="docutils literal notranslate"><span class="pre">str</span></code>), which is in <a class="reference external" href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time">Coordinated Universal Time</a> zone.</p>
+</section>
+<section id="number-of-likes-score">
+<h3>number of likes (score)<a class="headerlink" href="#number-of-likes-score" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the number of likes is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">like_count</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The number of likes is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">like_count</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the number of likes is: int&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The number of likes is: 23&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The number of likes is is a whole number (<code class="docutils literal notranslate"><span class="pre">int</span></code>).</p>
+</section>
+<section id="number-of-replies">
+<h3>number of replies<a class="headerlink" href="#number-of-replies" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the number of replies is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">reply_count</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The number of replies is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">reply_count</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the number of replies is: int&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The number of replies is: 7&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The number of replies is is a whole number (<code class="docutils literal notranslate"><span class="pre">int</span></code>). Note: You can also get a data structure of all the comments, but we will look at that later.</p>
+</section>
+<section id="number-of-reposts">
+<h3>number of reposts<a class="headerlink" href="#number-of-reposts" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the number of reposts is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">repost_count</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The number of reposts is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">repost_count</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the number of reposts is: int&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The number of reposts is: 5&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The number of reposts is a whole number (<code class="docutils literal notranslate"><span class="pre">int</span></code>).</p>
+<p>The submission url is a string (<code class="docutils literal notranslate"><span class="pre">str</span></code>).</p>
+</section>
+</section>
+<section id="still-more">
+<h2>Still more!<a class="headerlink" href="#still-more" title="Permalink to this headline">#</a></h2>
+<p>In addition to the data we looked at above, there are even more options for bluesky posts. The documentation seems them seems a bit incomplete, but you can see <a class="reference external" href="https://atprotodart.com/docs/lexicons/app/bsky/feed/defs#postview">more info about posts here</a>:</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -754,11 +1022,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="04_activity.html"
+       href="../06_data_design_activity.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.5.4. </span>Design Activity: Data and Social media</p>
+        <p class="prev-next-title"><span class="section-number">4.6. </span>Design Activity: Data and Social media</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -771,6 +1039,37 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log-into-atproto-or-fake-atproto">Log into atproto (or fake atproto)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-atproto-library">Load atproto library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-step-1b-make-a-fake-bluesky-connection-with-the-fake-atproto-library">(Optional) Step 1b: Make a fake Bluesky connection with the fake_atproto library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-login-to-bluesky">Step 2: Login to Bluesky</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-a-blueskydata">Find a Blueskydata</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#look-at-data-in-bluesky-submission">Look at data in Bluesky submission</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-text">post text:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-content-id-cid">post content id (cid)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-author-handle">submission author handle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-created-at">post created at</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#number-of-likes-score">number of likes (score)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#number-of-replies">number of replies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#number-of-reposts">number of reposts</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#still-more">Still more!</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
