@@ -24,7 +24,8 @@ init(autoreset=True)
 platforms = [
     {"full_name": "Reddit", "file_name": "reddit", "status": ""},
     {"full_name": "Discord", "file_name": "discord", "status": " (incomplete)"},
-    {"full_name": "Bluesky", "file_name": "bsky", "status": " (incomplete)"}
+    {"full_name": "Bluesky", "file_name": "bsky", "status": " (incomplete)"},
+    {"full_name": "No Coding", "file_name": "nocode", "status": ""},
 ]
 
 # make function for creating social media list
@@ -108,15 +109,39 @@ for platform in platforms:
 
     # Copy over Table of Contents and fix it for the specific platform
     new_toc = toc_source.copy()
-
+    
     platform_specific_files = []
-    for i, toc_line in enumerate(new_toc):
 
-        if(toc_line.endswith("***")):
-            platform_specific_files.append(
-                toc_line.split(": ")[1]
-            )
-            new_toc[i] = toc_line.replace("-***", "")
+    if(platform["file_name"] == "nocode"):
+        for i, toc_line in enumerate(new_toc):
+            # make replacement files for ++noprogkeep and ++noprogrem
+            if toc_line.endswith("++noprogkeep"):
+                toc_line = toc_line.replace("++noprogkeep", "")
+                platform_specific_files.append(
+                    toc_line.split(": ")[1]
+                )
+                toc_line = toc_line.replace("-***", "")
+                new_toc[i] = toc_line
+            elif toc_line.endswith("++noprogremove"):
+                new_toc[i] = ""
+            else:
+                new_toc[i] = toc_line.replace("-***", "")
+        
+    else: # it's one of the coding options
+        for i, toc_line in enumerate(new_toc):
+
+            # Remove any ++noprogkeep and ++noprogrem
+            toc_line = toc_line.replace("++noprogkeep", "")
+            toc_line = toc_line.replace("++noprogremove", "")
+
+            # if it is platform specific, 
+            if(toc_line.endswith("***")):
+                platform_specific_files.append(
+                    toc_line.split(": ")[1]
+                )
+                new_toc[i] = toc_line.replace("-***", "")
+            else:
+                new_toc[i] = toc_line
 
 
     # Fix _intro_source.md
@@ -133,7 +158,10 @@ for platform in platforms:
 
     # Fix rest of files
     for filename in platform_specific_files:
-        platform_filename = book_directory + "/" + filename.replace("***", platform["file_name"])
+        platform_filename = "no_file_to_be_found"
+        if(platform["file_name"] != "nocode"):
+            platform_filename = book_directory + "/" + filename.replace("***", platform["file_name"])
+        
         destination_filename = book_directory + "/" + filename.replace("-***", "")
         
         # figure out file extensions and get contents
@@ -197,8 +225,13 @@ for platform in platforms:
             
             # our new stub file will be an md file with a warning note
             file_extension = "md"
-            file_contents = [title_text, 
-                             "__Content for the social media platform "+ platform["full_name"] +" hasn't been created yet. Please try another platform.__"]
+            file_contents = []
+            if(platform["file_name"] == "nocode"):
+                file_contents = [title_text, 
+                                "__This section is for coding versions of this course only. If you want to look at code, please try one of the platforms.__"]
+            else:
+                file_contents = [title_text, 
+                                "__Content for the social media platform "+ platform["full_name"] +" hasn't been created yet. Please try another platform.__"]
 
         else:
             print(Fore.RED + 'Problem: found ' + len(matching_files) + 'files when looking for ' + platform_filename)
