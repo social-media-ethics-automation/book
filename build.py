@@ -25,7 +25,8 @@ platforms = [
     {"full_name": "Reddit", "file_name": "reddit", "status": ""},
     {"full_name": "Discord", "file_name": "discord", "status": " (incomplete)"},
     {"full_name": "Bluesky", "file_name": "bsky", "status": " (incomplete)"},
-    {"full_name": "No Coding", "file_name": "nocode", "status": ""},
+    {"full_name": "No Coding", "file_name": "nocode", "status": "", "keep_all_files": True, "exclude_from_options": True}, # First pass makes copies of all coding files (so they can be linked to) 
+    {"full_name": "No Coding", "file_name": "nocode", "status": "", "keep_all_files": False, "second_pass": True} # Second pass gets rid of some of the coding files (for better flow)
 ]
 
 # make function for creating social media list
@@ -39,20 +40,21 @@ def make_social_media_links(platform, destination_filename, include_status = Fal
 
     platform_selector_options = []
     for target_platform in platforms:
-        if target_platform == platform:
-            platform_string = target_platform["full_name"]
-            if(include_status):
-                platform_string += target_platform["status"]
-            platform_selector_options.append("__" + platform_string + "__")
-        else:
-            #  ../ for as many times as after the index, then new platform, then all the parts after the index
-            relative_path = "../" * len(path_parts) + target_platform["file_name"] + "/" + "/".join(path_parts) + ".html"
-            
-            platform_string = target_platform["full_name"]
-            if(include_status):
-                platform_string += target_platform["status"]
-            
-            platform_selector_options.append("<a href='"+relative_path+"'>"+platform_string+"</a>" )
+        if(not "exclude_from_options" in target_platform):
+            if target_platform["file_name"] == platform["file_name"]:
+                platform_string = target_platform["full_name"]
+                if(include_status):
+                    platform_string += target_platform["status"]
+                platform_selector_options.append("__" + platform_string + "__")
+            else:
+                #  ../ for as many times as after the index, then new platform, then all the parts after the index
+                relative_path = "../" * len(path_parts) + target_platform["file_name"] + "/" + "/".join(path_parts) + ".html"
+                
+                platform_string = target_platform["full_name"]
+                if(include_status):
+                    platform_string += target_platform["status"]
+                
+                platform_selector_options.append("<a href='"+relative_path+"'>"+platform_string+"</a>" )
 
     platform_selector += " | ".join(platform_selector_options)
     platform_selector += "_"
@@ -80,7 +82,7 @@ if "--clean" in sys.argv or "clean" in sys.argv:
 
 
 
-# clear old docs directory
+# clear old docs directory 
 if os.path.exists("docs/") and os.path.isdir("docs/"):
     if "--pdf" in sys.argv:
         shutil.rmtree("docs/") 
@@ -103,23 +105,32 @@ for platform in platforms:
 
     print("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
     print("platform: " + platform["full_name"])
+    if "keep_all_files" in platform:
+        print("keep_all_files: " + str(platform["keep_all_files"]))
     print("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
 
-    
+    # if second pass, clear the build directory (to hopefully make new, updated files)
+    if("second_pass" in platform and ("--clean" in sys.argv or "clean" in sys.argv) ):
+        build_path = "_build/" + platform["file_name"]
+        if os.path.exists(build_path) and os.path.isdir(build_path):
+            shutil.rmtree(build_path)
 
     # Copy over Table of Contents and fix it for the specific platform
     new_toc = toc_source.copy()
     
     platform_specific_files = []
+    platform_specific_files_to_clean = []
 
     if(platform["file_name"] == "nocode"):
         for i, toc_line in enumerate(new_toc):
             # make replacement files for ++noprogkeep and ++noprogrem
-            if toc_line.endswith("++noprogkeep"):
+            if toc_line.endswith("++noprogkeep") or (platform["keep_all_files"] and toc_line.endswith("++noprogremove")):
                 toc_line = toc_line.replace("++noprogkeep", "")
-                platform_specific_files.append(
-                    toc_line.split(": ")[1]
-                )
+                toc_line = toc_line.replace("++noprogremove", "")
+                if "sections:" not in toc_line: # don't include "sections:" lines
+                    platform_specific_files.append(
+                        toc_line.split(": ")[1]
+                    )
                 toc_line = toc_line.replace("-***", "")
                 new_toc[i] = toc_line
             elif toc_line.endswith("++noprogremove"):
@@ -263,7 +274,7 @@ for platform in platforms:
         else: #probably md
             file_contents.insert(1, platform_selector + "\n")
         
-
+        platform_specific_files_to_clean.append(destination_file_location)
         with open(destination_file_location, 'w', encoding="utf8") as file:
             file.write("\n".join(file_contents))
 
@@ -327,10 +338,8 @@ for platform in platforms:
     os.remove(book_directory + '/_config.yml')
     os.remove(book_directory + '/intro.md')
 
-    for filename in platform_specific_files:
-        destination_filename = book_directory + "/" + filename.replace("-***", "")
-        for f in glob.glob(destination_filename + ".*"):
-            os.remove(f)
+    for filename in platform_specific_files_to_clean:
+        os.remove(filename)
 
 
 # make docs version of site
