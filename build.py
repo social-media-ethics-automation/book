@@ -22,25 +22,32 @@ init(autoreset=True)
 
 
 platforms = [
-    {"full_name": "Reddit", "file_name": "reddit", "status": ""},
-    {"full_name": "Discord", "file_name": "discord", "status": " (incomplete)"},
+    #{"full_name": "Reddit", "file_name": "reddit", "status": ""},
+    #{"full_name": "Discord", "file_name": "discord", "status": " (incomplete)"},
     {"full_name": "Bluesky", "file_name": "bsky", "status": " (incomplete)"},
     {"full_name": "No Coding", "file_name": "nocode", "status": "", "keep_all_files": True, "exclude_from_options": True}, # First pass makes copies of all coding files (so they can be linked to) 
     {"full_name": "No Coding", "file_name": "nocode", "status": "", "keep_all_files": False, "second_pass": True} # Second pass gets rid of some of the coding files (for better flow)
 ]
 
+
+############ Helper Function ############################
+
 # make function for creating social media list
-def make_social_media_links(platform, destination_filename, include_status = False):
+def make_social_media_links(platform, destination_filename, include_status = False, isGenericCodeVersion = False):
     # figure out path to updated version of file
     path_parts = destination_filename.split("/")
     path_parts.pop(0) # get rid of the book_contents directory
 
     # create markdown list of social media sites
     platform_selector = "_Choose Social Media Platform: "
+    if isGenericCodeVersion:
+        platform_selector = "_If you don't want the coding version of this online textbook go here: "
+    
 
     platform_selector_options = []
     for target_platform in platforms:
-        if(not "exclude_from_options" in target_platform):
+        if(not "exclude_from_options" in target_platform and
+           not (isGenericCodeVersion and target_platform["file_name"] != "nocode")):
             if target_platform["file_name"] == platform["file_name"]:
                 platform_string = target_platform["full_name"]
                 if(include_status):
@@ -60,6 +67,32 @@ def make_social_media_links(platform, destination_filename, include_status = Fal
     platform_selector += "_"
 
     return platform_selector
+
+
+# try to find specific version file, if not version and not nocode, try to find "code" version
+# Returns matching files array (if any matched), the platform_filename, and isGenericCodeVersion 
+def find_platform_specific_source_file(filename, platform):
+    platform_filename = "no_file_to_be_found"
+
+    # try to find specific version file, if not version and not nocode, try to find "code" version
+    if(platform["file_name"] == "nocode"):
+        platform_filename = book_directory + "/" + filename.replace("***", platform["file_name"])
+        matching_files = [f for f in glob.glob(platform_filename + ".*")]
+        return (matching_files, platform_filename, False)
+
+    else: # one of the code versions
+        platform_filename = book_directory + "/" + filename.replace("***", platform["file_name"])
+        matching_files = [f for f in glob.glob(platform_filename + ".*")]
+        if(len(matching_files) > 0):
+            return (matching_files, platform_filename, False)
+        #if we couldn't find specific code version, try generic "code" version
+        platform_filename = book_directory + "/" + filename.replace("***", "code")
+        matching_files = [f for f in glob.glob(platform_filename + ".*")]
+        return (matching_files, platform_filename, True)
+
+
+
+############ Main Code ############################
 
 book_directory = "book_contents"
 
@@ -169,114 +202,114 @@ for platform in platforms:
 
     # Fix rest of files
     for filename in platform_specific_files:
-        platform_filename = "no_file_to_be_found"
-        if(platform["file_name"] != "nocode"):
-            platform_filename = book_directory + "/" + filename.replace("***", platform["file_name"])
-        
-        destination_filename = book_directory + "/" + filename.replace("-***", "")
-        
-        # figure out file extensions and get contents
-        matching_files = [f for f in glob.glob(platform_filename + ".*")]
+        if "***" in filename: # only try to fill in filenames where that is requested
+            # try to find specific version file, if not version and not nocode, try to find "code" version
+            (matching_files, platform_filename, isGenericCodeVersion) = find_platform_specific_source_file(filename, platform)
 
-        file_extension = ""
-        file_contents = ""
-        if(len(matching_files) == 1):
-            file_extension = matching_files[0].split(".")[1]
-
-            # Read old file to here
-            original_file_location = platform_filename + "." + file_extension
-
-            try:
-                file_contents = open(original_file_location, "r").read()
-            except Exception as e:
-                try: 
-                    file_contents = open(original_file_location, "r", encoding="utf8").read()
-                except:
-                    print(Fore.RED + 'ERROR READING FILE: ' + original_file_location)
-                    print(e)
-                    continue
+            destination_filename = book_directory + "/" + filename.replace("-***", "")
             
-            file_contents = file_contents.split("\n")
+            # figure out file extensions and get contents
+            file_extension = ""
+            file_contents = ""
+            if(len(matching_files) == 1):
+                file_extension = matching_files[0].split(".")[1]
 
-        elif(len(matching_files) == 0):
-             
+                # Read old file to here
+                original_file_location = platform_filename + "." + file_extension
 
-            # find any file for any platform
-            any_platform_filename = book_directory + "/" + filename.replace("***", "*")
-            any_matching_files = [f for f in glob.glob(any_platform_filename)]
+                try:
+                    file_contents = open(original_file_location, "r").read()
+                except Exception as e:
+                    try: 
+                        file_contents = open(original_file_location, "r", encoding="utf8").read()
+                    except:
+                        print(Fore.RED + 'ERROR READING FILE: ' + original_file_location)
+                        print(e)
+                        continue
+                
+                file_contents = file_contents.split("\n")
 
-            if(len(any_matching_files) == 0):
-                print(Fore.RED + 'Error: couldn\'t find any file matching ' + any_platform_filename + ', so can\'t make a stub version.')
+            elif(len(matching_files) == 0):
+                
+
+                # find any file for any platform
+                any_platform_filename = book_directory + "/" + filename.replace("***", "*")
+                any_matching_files = [f for f in glob.glob(any_platform_filename)]
+
+                if(len(any_matching_files) == 0):
+                    print(Fore.RED + 'Error: couldn\'t find any file matching ' + any_platform_filename + ', so can\'t make a stub version.')
+                    continue
+
+
+                # read contents of first open file
+                file_to_get_title_from = any_matching_files[0]
+                print(Fore.RED + 'Warning: couldn\'t find ' + platform_filename + '. Making a stub file from:' + file_to_get_title_from)
+                
+                file_to_get_title_from_contents = open(file_to_get_title_from, "r", encoding='cp437').read().split("\n")
+                
+                file_to_get_title_from_extension = file_to_get_title_from.split(".")[1]
+                title_text = ""
+                # WARNING: Finding Titles is brittle code
+                if(file_to_get_title_from_extension == "ipynb"): #Try to find the title header in the ipynb file
+                    title_line = ""
+                    for line in file_to_get_title_from_contents:
+                        if '"# ' in line:
+                            title_line = line
+                            break
+                    title_line = title_line.strip()
+                    if title_line[0] != '"' and title_line[-1] != '"':
+                        print(Fore.RED + 'Error: alternate file ' + file_to_get_title_from_extension + '. title line didn\'t work: ' + title_line)
+                        continue
+                    
+                    title_text = title_line[1:-1]
+
+                else: #probably md, title should be first line
+                    title_text = file_to_get_title_from_contents[0]
+                
+                # our new stub file will be an md file with a warning note
+                file_extension = "md"
+                file_contents = []
+                if(platform["file_name"] == "nocode"):
+                    file_contents = [title_text, 
+                                    "__This section is for coding versions of this course only. If you want to look at code, please try one of the platforms.__"]
+                else:
+                    file_contents = [title_text, 
+                                    "__Content for the social media platform "+ platform["full_name"] +" hasn't been created yet. Please try another platform.__"]
+
+            else:
+                print(Fore.RED + 'Problem: found ' + len(matching_files) + 'files when looking for ' + platform_filename)
                 continue
 
-            # read contents of first open file
-            file_to_get_title_from = any_matching_files[0]
-            print(Fore.RED + 'Warning: couldn\'t find ' + platform_filename + '. Making a stub file from:' + file_to_get_title_from)
+            #Make new file (copied from old, if it existed), but with links
+
+            destination_file_location =  destination_filename + "." + file_extension
             
-            file_to_get_title_from_contents = open(file_to_get_title_from, "r", encoding='cp437').read().split("\n")
+            platform_selector = make_social_media_links(platform, destination_filename, isGenericCodeVersion = isGenericCodeVersion)
+            if(file_extension == "ipynb"):
+                # WARNING: This is very brittle coding to find the right place to put the new code
+
+                # Find end of first cell
+                end_cell_index = file_contents.index("  },")
+                # Add a 
+                file_contents.insert(end_cell_index + 1,
+                """
+                {
+                    "cell_type": "markdown",
+                    "id": "123456789-930485093240532940945-0324095320945904325",
+                    "metadata": {
+                        "tags": []
+                    },
+                    "source": [" """ + platform_selector +
+                    """ "]
+                    },
+                    """ )
+            else: #probably md
+                file_contents.insert(1, platform_selector + "\n")
             
-            file_to_get_title_from_extension = file_to_get_title_from.split(".")[1]
-            title_text = ""
-            # WARNING: Finding Titles is brittle code
-            if(file_to_get_title_from_extension == "ipynb"): #Try to find the title header in the ipynb file
-                title_line = ""
-                for line in file_to_get_title_from_contents:
-                    if '"# ' in line:
-                        title_line = line
-                        break
-                title_line = title_line.strip()
-                if title_line[0] != '"' and title_line[-1] != '"':
-                    print(Fore.RED + 'Error: alternate file ' + file_to_get_title_from_extension + '. title line didn\'t work: ' + title_line)
-                    continue
-                
-                title_text = title_line[1:-1]
-
-            else: #probably md, title should be first line
-                title_text = file_to_get_title_from_contents[0]
-            
-            # our new stub file will be an md file with a warning note
-            file_extension = "md"
-            file_contents = []
-            if(platform["file_name"] == "nocode"):
-                file_contents = [title_text, 
-                                "__This section is for coding versions of this course only. If you want to look at code, please try one of the platforms.__"]
-            else:
-                file_contents = [title_text, 
-                                "__Content for the social media platform "+ platform["full_name"] +" hasn't been created yet. Please try another platform.__"]
-
-        else:
-            print(Fore.RED + 'Problem: found ' + len(matching_files) + 'files when looking for ' + platform_filename)
-            continue
-
-        #Make new file (copied from old, if it existed), but with links
-
-        destination_file_location =  destination_filename + "." + file_extension
-        
-        platform_selector = make_social_media_links(platform, destination_filename)
-        if(file_extension == "ipynb"):
-            # WARNING: This is very brittle coding to find the right place to put the new code
-
-            # Find end of first cell
-            end_cell_index = file_contents.index("  },")
-            # Add a 
-            file_contents.insert(end_cell_index + 1,
-            """
-              {
-                "cell_type": "markdown",
-                "id": "123456789-930485093240532940945-0324095320945904325",
-                "metadata": {
-                    "tags": []
-                },
-                "source": [" """ + platform_selector +
-                """ "]
-                },
-                """ )
-        else: #probably md
-            file_contents.insert(1, platform_selector + "\n")
-        
-        platform_specific_files_to_clean.append(destination_file_location)
-        with open(destination_file_location, 'w', encoding="utf8") as file:
-            file.write("\n".join(file_contents))
+            print("saving file (and marking to be deleted): " + destination_file_location)
+            platform_specific_files_to_clean.append(destination_file_location)
+            with open(destination_file_location, 'w', encoding="utf8") as file:
+                file.write("\n".join(file_contents))
 
     with open(book_directory + '/_toc.yml', 'w') as file:
         file.write("\n".join(new_toc))
