@@ -22,8 +22,8 @@ init(autoreset=True)
 
 
 platforms = [
-    #{"full_name": "Reddit", "file_name": "reddit", "status": ""},
-    #{"full_name": "Discord", "file_name": "discord", "status": " (incomplete)"},
+    {"full_name": "Reddit", "file_name": "reddit", "status": ""},
+    {"full_name": "Discord", "file_name": "discord", "status": " (incomplete)"},
     {"full_name": "Bluesky", "file_name": "bsky", "status": " (incomplete)"},
     {"full_name": "No Coding", "file_name": "nocode", "status": "", "keep_all_files": True, "exclude_from_options": True}, # First pass makes copies of all coding files (so they can be linked to) 
     {"full_name": "No Coding", "file_name": "nocode", "status": "", "keep_all_files": False, "second_pass": True} # Second pass gets rid of some of the coding files (for better flow)
@@ -271,7 +271,7 @@ for platform in platforms:
                 file_contents = []
                 if(platform["file_name"] == "nocode"):
                     file_contents = [title_text, 
-                                    "__This section is for coding versions of this course only. If you want to look at code, please try one of the platforms.__"]
+                                    "__This section is for coding versions of this book only. If you want to look at code, please select one of the platforms.__"]
                 else:
                     file_contents = [title_text, 
                                     "__Content for the social media platform "+ platform["full_name"] +" hasn't been created yet. Please try another platform.__"]
