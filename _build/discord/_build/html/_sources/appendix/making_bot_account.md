@@ -1,5 +1,5 @@
 # Making a Bot Account (Discord)
-_Choose Social Media Platform: <a href='../../reddit/appendix/making_bot_account.html'>Reddit</a> | __Discord__ | <a href='../../bsky/appendix/making_bot_account.html'>Bluesky</a>_
+_Choose Social Media Platform: <a href='../../reddit/appendix/making_bot_account.html'>Reddit</a> | __Discord__ | <a href='../../bsky/appendix/making_bot_account.html'>Bluesky</a> | <a href='../../nocode/appendix/making_bot_account.html'>No Coding</a>_
 
 
 In using this textbook, you will have opportunities to create and run social media bots. Here we will run through how to create a Discord account and set it up for running your own bots.

@@ -1,5 +1,5 @@
 # A program that makes one reddit post
-_Choose Social Media Platform: __Reddit__ | <a href='../../../discord/ch02_definitions/03_automation/06_a_social_media_bot.html'>Discord</a> | <a href='../../../bsky/ch02_definitions/03_automation/06_a_social_media_bot.html'>Bluesky</a>_
+_Choose Social Media Platform: __Reddit__ | <a href='../../../discord/ch02_definitions/03_automation/06_a_social_media_bot.html'>Discord</a> | <a href='../../../bsky/ch02_definitions/03_automation/06_a_social_media_bot.html'>Bluesky</a> | <a href='../../../nocode/ch02_definitions/03_automation/06_a_social_media_bot.html'>No Coding</a>_
 
 Below is a computer program written in the Python programming language. The program will make a reddit post in the subreddit "soc_media_ethics_auto". The post will be titled "A bot post" and say: "This post was made by a computer program!". Since this is a computer program that posts on reddit, we would call this program a reddit bot.
 
