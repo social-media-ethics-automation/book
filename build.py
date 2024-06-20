@@ -85,10 +85,15 @@ def find_platform_specific_source_file(filename, platform):
         matching_files = [f for f in glob.glob(platform_filename + ".*")]
         if(len(matching_files) > 0):
             return (matching_files, platform_filename, False)
+        
         #if we couldn't find specific code version, try generic "code" version
         platform_filename = book_directory + "/" + filename.replace("***", "code")
         matching_files = [f for f in glob.glob(platform_filename + ".*")]
-        return (matching_files, platform_filename, True)
+
+        if(len(matching_files) > 0): #if we found a generic "code" version, it is return with generic set to true
+            return (matching_files, platform_filename, True)
+        
+        return (matching_files, platform_filename, False)
 
 
 
