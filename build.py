@@ -341,7 +341,7 @@ for platform in platforms:
 
 
     # If we want pdf, first make single page version of site, then build the pdf, then do normal build
-    if "--pdf" in sys.argv:
+    if "--pdf" in sys.argv and not ("exclude_from_options" in platform and platform["exclude_from_options"] == True):
         os.system('jupyter-book build book_contents --builder pdfhtml --path-output ' + build_path)
 
     os.system('jupyter-book build book_contents --path-output ' + build_path)
@@ -352,7 +352,7 @@ for platform in platforms:
     shutil.copytree("_build/"+platform["file_name"]+"/_build/html", "docs/"+platform["file_name"] + "/", dirs_exist_ok=True)
 
     #move pdf (if pdf enabled) (It's a big file, so move instead of copy)
-    if "--pdf" in sys.argv:
+    if "--pdf" in sys.argv and not ("exclude_from_options" in platform and platform["exclude_from_options"] == True):
         shutil.move("_build/"+platform["file_name"]+"/_build/pdf/book.pdf", "docs/"+platform["file_name"] + "/social_media_ethics_automation_" + platform["file_name"] + ".pdf")
 
 
