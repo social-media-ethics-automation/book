@@ -246,7 +246,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../ch05_history/03_web_2.html">5.3. Web 2.0 Social Media</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../ch05_history/04_list_data_python/00_intro.html">5.4. Looping with Lists and Dictionaries in Social Media</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../ch05_history/04_list_data_python/01_demo_lists.html">5.4.1. Demo: Lists and Loops</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch05_history/04_list_data_python/02_demo_dictionaries.html">5.4.2. Demo: Dictionaries\n”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch05_history/04_list_data_python/02_demo_dictionaries.html">5.4.2. Demo: Dictionaries</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../ch05_history/04_list_data_python/03_practice_lists_dictionaries.html">5.4.3. Practice: Looping through lists and dictionaries</a></li>
 </ul>
 </li>
@@ -803,6 +803,7 @@ document.write(`
 <section id="step-2-set-up-your-discord-connection">
 <h3>Step 2: Set up your Discord connection<a class="headerlink" href="#step-2-set-up-your-discord-connection" title="Permalink to this headline">#</a></h3>
 <p>To use this on your real Discord account, copy your <a class="reference internal" href="../../appendix/making_bot_account.html"><span class="doc std std-doc">discord token</span></a> into the code below, replacing our fake passwords.</p>
+<p><strong>Note: you’ll have to re-run this step if you want to re-run your bot</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set up your Discord connection</span>
@@ -820,10 +821,10 @@ document.write(`
 </section>
 <section id="find-a-discord-post">
 <h2>Find a Discord Post<a class="headerlink" href="#find-a-discord-post" title="Permalink to this headline">#</a></h2>
-<p>Below I have the code to find a recent Bluesky post from the feed <a class="reference external" href="https://bsky.app/profile/did:plc:2m44csq7rgph66s2kltbypxh/feed/aaab56iiatpdo">Animal</a> by the user <a class="reference external" href="https://bsky.app/profile/shouldhaveanimal.bsky.social">shouldhaveanimal.bsky.social</a>.</p>
+<p>Below is  code to find a recent Discord post from a discord channel with the id <code class="docutils literal notranslate"><span class="pre">123456789</span></code> (if you want to load a real channel, you’ll have to <span class="xref myst">get the channel id</span>)</p>
 <p>Don’t worry if you don’t understand this part yet. We are
-just doing this, so we can get to the point of seeing what tweet data looks like.</p>
-<p><em>Note: If you run this on real Bluesky, we can’t gurantee anything about how offensive what you might find is.</em></p>
+just doing this, so we can get to the point of seeing what discord data looks like.</p>
+<p><em>Note: If you run this on real Discord, we can’t gurantee anything about how offensive what you might find is.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: put the discord channel id number below for the channel you want to use</span>
@@ -895,7 +896,7 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 </div>
 </div>
 </div>
-<p>The post content id is a piece of text (<code class="docutils literal notranslate"><span class="pre">str</span></code>) that looks like random letters and numbers. This is how the post is referred to inside Bluesky’s computers. So if someone is commenting on a post, Bluesky just puts uses content ID they were commenting on to see where to display it.</p>
+<p>The post content id is a whole number (<code class="docutils literal notranslate"><span class="pre">int</span></code>) that looks like random number. This is how the post is referred to inside Discords’ computers. So if someone is commenting on a post, Discord just puts uses content ID they were commenting on to see where to display it.</p>
 </section>
 <section id="submission-author-display-name">
 <h3>submission author display name<a class="headerlink" href="#submission-author-display-name" title="Permalink to this headline">#</a></h3>
@@ -915,7 +916,7 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 </div>
 </div>
 </div>
-<p>The author name is an string (<code class="docutils literal notranslate"><span class="pre">str</span></code>). Note recent_post.author.author has other information about the author as well as the name.</p>
+<p>The author name is an string (<code class="docutils literal notranslate"><span class="pre">str</span></code>). Note recent_post.author has other information about the author as well as the name.</p>
 </section>
 <section id="message-author-id">
 <h3>message author id<a class="headerlink" href="#message-author-id" title="Permalink to this headline">#</a></h3>
@@ -935,6 +936,7 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 </div>
 </div>
 </div>
+<p>The author name is a number (<code class="docutils literal notranslate"><span class="pre">int</span></code>).</p>
 </section>
 <section id="post-created-at">
 <h3>post created at<a class="headerlink" href="#post-created-at" title="Permalink to this headline">#</a></h3>
