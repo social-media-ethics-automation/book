@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>4.5.3. Demo: Data from a Bluesky Post\n &#8212; Social Media, Ethics, and Automation</title>
+    <title>4.5.3. Demo: Data from a Discord Post &#8212; Social Media, Ethics, and Automation</title>
   
   
   
@@ -232,7 +232,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="00_intro.html">4.5. Data in Python and Discord</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="01_demo_data.html">4.5.1. Demo: Python Basic Data Types</a></li>
 <li class="toctree-l3"><a class="reference internal" href="02_practice_data.html">4.5.2. Practice: Python Basic Data Types</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">4.5.3. Demo: Data from a Bluesky Post\n</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">4.5.3. Demo: Data from a Discord Post</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../06_data_design_activity.html">4.6. Design Activity: Data and Social media</a></li>
@@ -558,6 +558,37 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/social-media-ethics-automation/book-src-discord/main?urlpath=lab/tree/ch04_data/05_data_python_platform/03_demo_data_from_platform.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -613,7 +644,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/ch04_data/05_data_python_platform/03_demo_data_from_platform.md" target="_blank"
+      <li><a href="../../_sources/ch04_data/05_data_python_platform/03_demo_data_from_platform.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -623,7 +654,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -682,7 +713,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -693,11 +726,36 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Demo: Data from a Bluesky Post\n</h1>
+    <h1>Demo: Data from a Discord Post</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log-into-discord-or-fake-discord">Log into Discord  (or fake Discord)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-discord-and-nest-asyncio-libraries">Load “discord” and nest_asyncio libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-step-1b-make-a-fake-discord-connection-with-the-fake-discord-library">(Optional) Step 1b: Make a fake Discord connection with the fake_discord library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-set-up-your-discord-connection">Step 2: Set up your Discord connection</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-a-discord-post">Find a Discord Post</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#look-at-data-in-discord-post">Look at data in Discord post</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-content">post content:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-id">post id</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-author-display-name">submission author display name</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#message-author-id">message author id</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-created-at">post created at</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#message-reactions">message reactions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#message-is-pinned">message is pinned?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#still-more">Still more!</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -707,10 +765,242 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="demo-data-from-a-bluesky-post-n">
-<h1><span class="section-number">4.5.3. </span>Demo: Data from a Bluesky Post\n<a class="headerlink" href="#demo-data-from-a-bluesky-post-n" title="Permalink to this headline">#</a></h1>
+  <section id="demo-data-from-a-discord-post">
+<h1><span class="section-number">4.5.3. </span>Demo: Data from a Discord Post<a class="headerlink" href="#demo-data-from-a-discord-post" title="Permalink to this headline">#</a></h1>
 <p><em>Choose Social Media Platform: <a href='../../../reddit/ch04_data/05_data_python_platform/03_demo_data_from_platform.html'>Reddit</a> | <strong>Discord</strong> | <a href='../../../bsky/ch04_data/05_data_python_platform/03_demo_data_from_platform.html'>Bluesky</a> | <a href='../../../nocode/ch04_data/05_data_python_platform/03_demo_data_from_platform.html'>No Coding</a></em></p>
-<p><strong>Content for the social media platform Discord hasn’t been created yet. Please try another platform.</strong></p>
+<p>Let’s see what the data actually looks like from a Discord Post!</p>
+<p>First we need to do our normal Discord login steps (and optional fake discord step)</p>
+<section id="log-into-discord-or-fake-discord">
+<h2>Log into Discord  (or fake Discord)<a class="headerlink" href="#log-into-discord-or-fake-discord" title="Permalink to this headline">#</a></h2>
+<section id="load-discord-and-nest-asyncio-libraries">
+<h3>Load “discord” and nest_asyncio libraries<a class="headerlink" href="#load-discord-and-nest-asyncio-libraries" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;discord&quot; that will help us work with Discord</span>
+<span class="kn">import</span> <span class="nn">discord</span>
+
+<span class="c1"># Load another library that helps the bot work in Jupyter Noteboook</span>
+<span class="kn">import</span> <span class="nn">nest_asyncio</span>
+<span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="optional-step-1b-make-a-fake-discord-connection-with-the-fake-discord-library">
+<h3>(Optional) Step 1b: Make a fake Discord connection with the fake_discord library<a class="headerlink" href="#optional-step-1b-make-a-fake-discord-connection-with-the-fake-discord-library" title="Permalink to this headline">#</a></h3>
+<p>For testing purposes, we’ve added this line of code, which loads a fake version of Discord, so it wont actually connect to Discord. <strong>If you want to try to actually connect to Discord, don’t run this line of code.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_apis/fake_discord.ipynb
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake discord is replacing the discord.py library. Fake discord doesn&#x27;t need real passwords, and prevents you from accessing real discord</strong></div></div>
+</div>
+</section>
+<section id="step-2-set-up-your-discord-connection">
+<h3>Step 2: Set up your Discord connection<a class="headerlink" href="#step-2-set-up-your-discord-connection" title="Permalink to this headline">#</a></h3>
+<p>To use this on your real Discord account, copy your <a class="reference internal" href="../../appendix/making_bot_account.html"><span class="doc std std-doc">discord token</span></a> into the code below, replacing our fake passwords.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set up your Discord connection</span>
+<span class="c1"># TODO: put the discord token for your bot below</span>
+<span class="n">discord_token</span> <span class="o">=</span> <span class="s2">&quot;m#5@_fake_discord_token_$%Ds&quot;</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">intents</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">Intents</span><span class="o">.</span><span class="n">default</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake discord is pretending to set up a client connection</strong></div></div>
+</div>
+</section>
+</section>
+<section id="find-a-discord-post">
+<h2>Find a Discord Post<a class="headerlink" href="#find-a-discord-post" title="Permalink to this headline">#</a></h2>
+<p>Below I have the code to find a recent Bluesky post from the feed <a class="reference external" href="https://bsky.app/profile/did:plc:2m44csq7rgph66s2kltbypxh/feed/aaab56iiatpdo">Animal</a> by the user <a class="reference external" href="https://bsky.app/profile/shouldhaveanimal.bsky.social">shouldhaveanimal.bsky.social</a>.</p>
+<p>Don’t worry if you don’t understand this part yet. We are
+just doing this, so we can get to the point of seeing what tweet data looks like.</p>
+<p><em>Note: If you run this on real Bluesky, we can’t gurantee anything about how offensive what you might find is.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: put the discord channel id number below for the channel you want to use</span>
+<span class="n">channel_id</span> <span class="o">=</span> <span class="mi">123456789</span>
+
+<span class="c1"># Provide instructions for what your discord bot should do once it has logged in</span>
+<span class="nd">@client</span><span class="o">.</span><span class="n">event</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_ready</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">recent_post</span> <span class="c1"># Save the recent_post variable outside our running bot</span>
+    
+    <span class="c1"># Load the discord channel you want to post to</span>
+    <span class="n">channel</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_channel</span><span class="p">(</span><span class="n">channel_id</span><span class="p">)</span>
+
+    <span class="c1"># Get the latest post in the channel history</span>
+    <span class="n">post_history</span> <span class="o">=</span> <span class="n">channel</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">recent_post</span> <span class="o">=</span> <span class="k">await</span> <span class="n">anext</span><span class="p">(</span><span class="n">post_history</span><span class="p">)</span>
+
+    <span class="c1"># Tell your bot to stop running</span>
+    <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    
+<span class="c1"># Now that we&#39;ve defined how the bot should work, start running your bot</span>
+<span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">discord_token</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake discord bot is fake logging in and starting to run</strong></div><div class="output text_html"><strong style='color:darkred'>Fake discord bot is shutting down</strong></div></div>
+</div>
+</section>
+<section id="look-at-data-in-discord-post">
+<h2>Look at data in Discord post<a class="headerlink" href="#look-at-data-in-discord-post" title="Permalink to this headline">#</a></h2>
+<p>Now we will look at some of the data that came back!</p>
+<p>Again, don’t worry too much about the code, we want to look at the data and data types.</p>
+<section id="post-content">
+<h3>post content:<a class="headerlink" href="#post-content" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the message content is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">content</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The post content is: &quot;</span> <span class="o">+</span> <span class="n">recent_post</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the message content is: str&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The post content is: Scientists have cloned dangerous dinosaurs!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you can see above, the text of a post is a string (<code class="docutils literal notranslate"><span class="pre">str</span></code>) data type.</p>
+</section>
+<section id="post-id">
+<h3>post id<a class="headerlink" href="#post-id" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the message id is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">id</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The message id is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the message id is: int&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The message id is: 12345&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The post content id is a piece of text (<code class="docutils literal notranslate"><span class="pre">str</span></code>) that looks like random letters and numbers. This is how the post is referred to inside Bluesky’s computers. So if someone is commenting on a post, Bluesky just puts uses content ID they were commenting on to see where to display it.</p>
+</section>
+<section id="submission-author-display-name">
+<h3>submission author display name<a class="headerlink" href="#submission-author-display-name" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the author display name is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">display_name</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The author display name is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">display_name</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the author display name is: str&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The author display name is: fake_user&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The author name is an string (<code class="docutils literal notranslate"><span class="pre">str</span></code>). Note recent_post.author.author has other information about the author as well as the name.</p>
+</section>
+<section id="message-author-id">
+<h3>message author id<a class="headerlink" href="#message-author-id" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the author id is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">id</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The author id is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the author id is: int&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The author id is: 4589435&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="post-created-at">
+<h3>post created at<a class="headerlink" href="#post-created-at" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the post created_at is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">created_at</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The created_at at is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">created_at</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the post created_at is: datetime&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The created_at at is: 2024-07-25 01:23:04&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The created at time for the submission is a <a class="reference external" href="https://www.w3schools.com/python/python_datetime.asp"><code class="docutils literal notranslate"><span class="pre">datetime</span></code></a>, which may be in <a class="reference external" href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time">Coordinated Universal Time</a> zone.</p>
+</section>
+<section id="message-reactions">
+<h3>message reactions<a class="headerlink" href="#message-reactions" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the reactions to the message is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">reactions</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The reactions to the message are: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">reactions</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the reactions to the message is: list&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;The reactions to the message are: [FakeReaction(emoji=&#39;👍&#39;, me=False, count=2), FakeReaction(emoji=&#39;🥳&#39;, me=True, count=1)]&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The reactions to a message are saved as list. Each item is the list has the emoji reaction, if the current user did this reaction, and the count of how many users gave that emoji reaction.</p>
+</section>
+<section id="message-is-pinned">
+<h3>message is pinned?<a class="headerlink" href="#message-is-pinned" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the message pinned: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">pinned</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;Is this message pinned?: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">pinned</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the message pinned: bool&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Is this message pinned?: False&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The status of whether or not a messaged is pinned is a true/false value (bool).</p>
+</section>
+</section>
+<section id="still-more">
+<h2>Still more!<a class="headerlink" href="#still-more" title="Permalink to this headline">#</a></h2>
+<p>In addition to the data we looked at above, there are even more options for Discord messages. The documentation is formatted in a not very friendly way, but you can see <a class="reference external" href="https://discordpy.readthedocs.io/en/stable/api.html#discord.Message">more info about messages here</a>:</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -771,6 +1061,37 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log-into-discord-or-fake-discord">Log into Discord  (or fake Discord)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-discord-and-nest-asyncio-libraries">Load “discord” and nest_asyncio libraries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-step-1b-make-a-fake-discord-connection-with-the-fake-discord-library">(Optional) Step 1b: Make a fake Discord connection with the fake_discord library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-set-up-your-discord-connection">Step 2: Set up your Discord connection</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-a-discord-post">Find a Discord Post</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#look-at-data-in-discord-post">Look at data in Discord post</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-content">post content:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-id">post id</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-author-display-name">submission author display name</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#message-author-id">message author id</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-created-at">post created at</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#message-reactions">message reactions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#message-is-pinned">message is pinned?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#still-more">Still more!</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
