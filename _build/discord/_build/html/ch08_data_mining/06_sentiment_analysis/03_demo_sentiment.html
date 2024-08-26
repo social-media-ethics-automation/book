@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>8.6.3. Demo: Sentiment Analysis on Reddit\n” &#8212; Social Media, Ethics, and Automation</title>
+    <title>8.6.3. Demo: Sentiment Analysis on Discord &#8212; Social Media, Ethics, and Automation</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/myfile.css?v=ed2eb8a4" />
@@ -320,7 +320,7 @@
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="00_intro.html">8.6. Sentiment Analysis on Social Media</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="01_demo_sentiment_and_loop_vars.html">8.6.1. Demo: Sentiment Analysis and Loop Variables</a></li>
 <li class="toctree-l3"><a class="reference internal" href="02_practice_sentiment_and_loop_vars.html">8.6.2. Practice: Sentiment Analysis and Loop Variables</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">8.6.3. Demo: Sentiment Analysis on Reddit\n”</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">8.6.3. Demo: Sentiment Analysis on Discord</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../07_data_poisoning.html">8.7. Data Poisoning</a></li>
@@ -582,6 +582,37 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/social-media-ethics-automation/book-src-discord/main?urlpath=lab/tree/ch08_data_mining/06_sentiment_analysis/03_demo_sentiment.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -637,7 +668,7 @@
       
       
       
-      <li><a href="../../_sources/ch08_data_mining/06_sentiment_analysis/03_demo_sentiment.md" target="_blank"
+      <li><a href="../../_sources/ch08_data_mining/06_sentiment_analysis/03_demo_sentiment.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -647,7 +678,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -708,7 +739,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -719,11 +752,29 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Demo: Sentiment Analysis on Reddit\n”</h1>
+    <h1>Demo: Sentiment Analysis on Discord</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-discord-and-nest-asyncio-libraries">Load “discord” and nest_asyncio libraries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-make-a-fake-discord-connection-with-the-fake-discord-library">(optional) make a fake Discord connection with the fake_discord library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-your-discord-connection">set up your Discord connection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#find-a-list-of-discord-posts">find a list of discord posts</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentiment-analysis">Sentiment Analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-sentiment-analysis-library-and-make-analyzer">load sentiment analysis library and make analyzer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loop-through-submissions-finding-average-sentiment">loop through submissions, finding average sentiment</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -733,10 +784,165 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="demo-sentiment-analysis-on-reddit-n">
-<h1><span class="section-number">8.6.3. </span>Demo: Sentiment Analysis on Reddit\n”<a class="headerlink" href="#demo-sentiment-analysis-on-reddit-n" title="Link to this heading">#</a></h1>
+  <section id="demo-sentiment-analysis-on-discord">
+<h1><span class="section-number">8.6.3. </span>Demo: Sentiment Analysis on Discord<a class="headerlink" href="#demo-sentiment-analysis-on-discord" title="Link to this heading">#</a></h1>
 <p><em>Choose Social Media Platform: <a href='../../../reddit/ch08_data_mining/06_sentiment_analysis/03_demo_sentiment.html'>Reddit</a> | <strong>Discord</strong> | <a href='../../../bsky/ch08_data_mining/06_sentiment_analysis/03_demo_sentiment.html'>Bluesky</a> | <a href='../../../nocode/ch08_data_mining/06_sentiment_analysis/03_demo_sentiment.html'>No Coding</a></em></p>
-<p><strong>Content for the social media platform Discord hasn’t been created yet. Please try another platform.</strong></p>
+<p>Now let’s try using sentiment analysis (and loop variables) on Discord:</p>
+<p>We’ll start by doing our normal steps to load the discord library (or fake discord)</p>
+<section id="load-discord-and-nest-asyncio-libraries">
+<h2>Load “discord” and nest_asyncio libraries<a class="headerlink" href="#load-discord-and-nest-asyncio-libraries" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;discord&quot; that will help us work with Discord</span>
+<span class="kn">import</span> <span class="nn">discord</span>
+
+<span class="c1"># Load another library that helps the bot work in Jupyter Noteboook</span>
+<span class="kn">import</span> <span class="nn">nest_asyncio</span>
+<span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="optional-make-a-fake-discord-connection-with-the-fake-discord-library">
+<h3>(optional) make a fake Discord connection with the fake_discord library<a class="headerlink" href="#optional-make-a-fake-discord-connection-with-the-fake-discord-library" title="Link to this heading">#</a></h3>
+<p>For testing purposes, we’ve added this line of code, which loads a fake version of Discord, so it wont actually connect to Discord. <strong>If you want to try to actually connect to Discord, don’t run this line of code.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_apis/fake_discord.ipynb
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake discord is replacing the discord.py library. Fake discord doesn&#x27;t need real passwords, and prevents you from accessing real discord</strong></div></div>
+</div>
+</section>
+<section id="set-up-your-discord-connection">
+<h3>set up your Discord connection<a class="headerlink" href="#set-up-your-discord-connection" title="Link to this heading">#</a></h3>
+<p>To use this on your real Discord account, copy your <a class="reference internal" href="../../appendix/making_bot_account.html"><span class="std std-doc">discord token</span></a> into the code below, replacing our fake passwords.</p>
+<p><em><strong>Note: you’ll have to re-run this step if you want to re-run your bot</strong></em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set up your Discord connection</span>
+<span class="c1"># TODO: put the discord token for your bot below</span>
+<span class="n">discord_token</span> <span class="o">=</span> <span class="s2">&quot;m#5@_fake_discord_token_$%Ds&quot;</span>
+
+<span class="c1"># set up Discord client with permissions to read message_contents</span>
+<span class="n">intents</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Intents</span><span class="o">.</span><span class="n">default</span><span class="p">()</span>
+<span class="n">intents</span><span class="o">.</span><span class="n">message_content</span> <span class="o">=</span> <span class="kc">True</span> 
+<span class="n">client</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">intents</span><span class="o">=</span><span class="n">intents</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake discord is pretending to set up a client connection</strong></div></div>
+</div>
+</section>
+<section id="find-a-list-of-discord-posts">
+<h3>find a list of discord posts<a class="headerlink" href="#find-a-list-of-discord-posts" title="Link to this heading">#</a></h3>
+<p>We can now make a bot that loads a list of discord posts.</p>
+<p><em>Note: If you run this on real discord, we canâ€™t gurantee anything about how offensive what you might find is.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: put the discord channel id number below for the channel you want to use</span>
+<span class="n">channel_id</span> <span class="o">=</span> <span class="mi">123456789</span>
+
+<span class="c1"># Provide instructions for what your discord bot should do once it has logged in</span>
+<span class="nd">@client</span><span class="o">.</span><span class="n">event</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_ready</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">recent_posts</span> <span class="c1"># Save the recent_posts variable outside our running bot</span>
+    
+    <span class="c1"># Load the discord channel you want to post to</span>
+    <span class="n">channel</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_channel</span><span class="p">(</span><span class="n">channel_id</span><span class="p">)</span>
+
+    <span class="c1"># Get the latest post in the channel history</span>
+    <span class="n">post_history</span> <span class="o">=</span> <span class="n">channel</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    
+    <span class="c1">#special code to turn the post_history from discord into a python list</span>
+    <span class="n">recent_posts</span> <span class="o">=</span> <span class="p">[</span><span class="n">post</span> <span class="k">async</span> <span class="k">for</span> <span class="n">post</span> <span class="ow">in</span> <span class="n">post_history</span><span class="p">]</span>
+
+    <span class="c1"># Tell your bot to stop running</span>
+    <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    
+<span class="c1"># Now that we&#39;ve defined how the bot shoould work, start running your bot</span>
+<span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">discord_token</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake discord bot is fake logging in and starting to run</strong></div><div class="output text_html"><strong style='color:darkred'>Fake discord bot is shutting down</strong></div></div>
+</div>
+</section>
+</section>
+<section id="sentiment-analysis">
+<h2>Sentiment Analysis<a class="headerlink" href="#sentiment-analysis" title="Link to this heading">#</a></h2>
+<section id="load-sentiment-analysis-library-and-make-analyzer">
+<h3>load sentiment analysis library and make analyzer<a class="headerlink" href="#load-sentiment-analysis-library-and-make-analyzer" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">([</span><span class="s2">&quot;vader_lexicon&quot;</span><span class="p">])</span>
+<span class="kn">from</span> <span class="nn">nltk.sentiment</span> <span class="kn">import</span> <span class="n">SentimentIntensityAnalyzer</span>
+<span class="n">sia</span> <span class="o">=</span> <span class="n">SentimentIntensityAnalyzer</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package vader_lexicon to
+[nltk_data]     C:\Users\kmthayer\AppData\Roaming\nltk_data...
+[nltk_data]   Package vader_lexicon is already up-to-date!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="loop-through-submissions-finding-average-sentiment">
+<h3>loop through submissions, finding average sentiment<a class="headerlink" href="#loop-through-submissions-finding-average-sentiment" title="Link to this heading">#</a></h3>
+<p>We can now combine our previous examples of looping through reddit submissions with what we just learned of sentiment analysis and looping variables to find the average sentiment of a set of submission titles.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_posts</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">total_sentiment</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">post</span> <span class="ow">in</span> <span class="n">recent_posts</span><span class="p">:</span>
+    
+    <span class="c1">#calculate sentiment</span>
+    <span class="n">post_sentiment</span> <span class="o">=</span> <span class="n">sia</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">content</span><span class="p">)[</span><span class="s2">&quot;compound&quot;</span><span class="p">]</span>
+    <span class="n">num_posts</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">total_sentiment</span> <span class="o">+=</span> <span class="n">post_sentiment</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sentiment: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post_sentiment</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   post content: &quot;</span> <span class="o">+</span> <span class="n">post</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+
+
+<span class="n">average_sentiment</span> <span class="o">=</span> <span class="n">total_sentiment</span> <span class="o">/</span> <span class="n">num_posts</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average sentiment was &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">average_sentiment</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sentiment: 0.784
+   post content: Breaking news: A lovely cat took a nice long nap today!
+
+Sentiment: 0.0
+   post content: Breaking news: Someone said a really mean thing on the internet today!
+
+Sentiment: 0.7088
+   post content: Breaking news: Some grandparents made some yummy cookies for all the kids to share!
+
+Sentiment: -0.6114
+   post content: Breaking news: All the horrors of the universe revealed at last!
+
+Average sentiment was 0.22034999999999996
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can now see the average sentiment of a set of discord posts!</p>
+<p>If you use your reddit bot keys, you can change the <code class="docutils literal notranslate"><span class="pre">channel_id</span></code> to be whatever one you want and see whether people are posting positively or negatively in it.</p>
+<p><em>note: You can change <code class="docutils literal notranslate"><span class="pre">limit=10</span></code> to go up higher to get more submissions at a time to find the average of</em></p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -793,6 +999,31 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-discord-and-nest-asyncio-libraries">Load “discord” and nest_asyncio libraries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-make-a-fake-discord-connection-with-the-fake-discord-library">(optional) make a fake Discord connection with the fake_discord library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-your-discord-connection">set up your Discord connection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#find-a-list-of-discord-posts">find a list of discord posts</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentiment-analysis">Sentiment Analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-sentiment-analysis-library-and-make-analyzer">load sentiment analysis library and make analyzer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loop-through-submissions-finding-average-sentiment">loop through submissions, finding average sentiment</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

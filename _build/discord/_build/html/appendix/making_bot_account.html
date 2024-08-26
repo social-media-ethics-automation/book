@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/myfile.css?v=ed2eb8a4" />
@@ -320,7 +320,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../ch08_data_mining/06_sentiment_analysis/00_intro.html">8.6. Sentiment Analysis on Social Media</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ch08_data_mining/06_sentiment_analysis/01_demo_sentiment_and_loop_vars.html">8.6.1. Demo: Sentiment Analysis and Loop Variables</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ch08_data_mining/06_sentiment_analysis/02_practice_sentiment_and_loop_vars.html">8.6.2. Practice: Sentiment Analysis and Loop Variables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ch08_data_mining/06_sentiment_analysis/03_demo_sentiment.html">8.6.3. Demo: Sentiment Analysis on Reddit\n”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ch08_data_mining/06_sentiment_analysis/03_demo_sentiment.html">8.6.3. Demo: Sentiment Analysis on Discord</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch08_data_mining/07_data_poisoning.html">8.7. Data Poisoning</a></li>
@@ -735,7 +735,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-your-own-discord-server">22.2. Create your own Discord Server</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-discord-application">22.3. Create a Discord “Application”</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-discord-token">22.4. Get Discord Token</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-bot-invite-link">22.5. Get Bot Invite Link</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-bot-invite-link-and-set-permissions">22.5. Get Bot Invite Link and Set Permissions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-app-to-a-discord-server">22.6. Add app to a Discord Server</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-channel-id-and-server-id-numbers">22.7. Get Channel Id and Server Id Numbers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-your-tokens">22.8. Test your tokens</a></li>
@@ -800,14 +800,21 @@ document.write(`
 </figcaption>
 </figure>
 </section>
-<section id="get-bot-invite-link">
-<h2><span class="section-number">22.5. </span>Get Bot Invite Link<a class="headerlink" href="#get-bot-invite-link" title="Link to this heading">#</a></h2>
+<section id="get-bot-invite-link-and-set-permissions">
+<h2><span class="section-number">22.5. </span>Get Bot Invite Link and Set Permissions<a class="headerlink" href="#get-bot-invite-link-and-set-permissions" title="Link to this heading">#</a></h2>
 <p>Next we need to create an invite link so your bot can be added to different discord servers.</p>
-<p>To do this, go to the installation tab where you will be able to get an invite link.</p>
+<p>First, go to the “Bot” tab and enable “Message Content Intent” so that our bot will be able to read messages on discord in the future.</p>
+<figure class="align-default" id="discord-message-content-intent-fig">
+<img alt="Screenshot of discord developer application screen with the Bot tab selected and within there, under 'Privileged Gateway Intents' the 'Message Content Intent' is enabled." src="../_images/discord_message_content_intent.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 22.5 </span><span class="caption-text">Enable “Message Content Intent”</span><a class="headerlink" href="#discord-message-content-intent-fig" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Now, to get a bot invite link, go to the installation tab where you will be able to get an invite link.</p>
 <figure class="align-default" id="discord-install-tab-fig">
 <img alt="Screenshot of discord developer application screen with the Install tab selected." src="../_images/discord_install_tab.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 22.5 </span><span class="caption-text">Select the install tab</span><a class="headerlink" href="#discord-install-tab-fig" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 22.6 </span><span class="caption-text">Select the install tab</span><a class="headerlink" href="#discord-install-tab-fig" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>For this textbook, we suggest only using “Guild Install,” then scroll down and set default scopes to:</p>
@@ -827,7 +834,7 @@ document.write(`
 <figure class="align-default" id="discord-set-permissions-fig">
 <img alt="In the Install tab, under 'select methods' only 'Guild Install' is selected. Then below in 'Default Install Settings' under 'Guild Install' the scopes selected are 'application.commands' and 'bot'. Under permissions are 'Attach Files', 'Create Public Threads', 'Read Message History', Send Messages', 'Send Messages in Threads' and 'View Channels'." src="../_images/discord_set_permissions.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 22.6 </span><span class="caption-text">Set default permissions</span><a class="headerlink" href="#discord-set-permissions-fig" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 22.7 </span><span class="caption-text">Set default permissions</span><a class="headerlink" href="#discord-set-permissions-fig" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p><em>Note: We are new to Discord bots and don’t know the permission structure wells. If you are looking at doing more with your bots, you can see more about <a class="reference external" href="https://discord.com/developers/docs/topics/oauth2#shared-resources-oauth2-scopes">the different permissions here</a>, and in particular we recommend looking into adding <a class="reference external" href="https://discord.com/developers/docs/interactions/application-commands">application commands</a>.</em></p>
@@ -836,7 +843,7 @@ document.write(`
 <figure class="align-default" id="discord-copy-link-fig">
 <img alt="In the Install tab, under 'install link' is the 'Discord Provided Link', with 'copy' highlighted." src="../_images/discord_copy_link.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 22.7 </span><span class="caption-text">Copy the install link</span><a class="headerlink" href="#discord-copy-link-fig" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 22.8 </span><span class="caption-text">Copy the install link</span><a class="headerlink" href="#discord-copy-link-fig" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>This invite link can be given to the owner of any discord server and they can use it to invite your bot to their server.</p>
@@ -847,7 +854,7 @@ document.write(`
 <figure class="align-default" id="discord-add-app-to-server-fig">
 <a class="reference internal image-reference" href="../_images/discord_add_app_to_server.png"><img alt="A new browser tab is opened with the Generated URL copied into it. This opens a site saying &quot;An external application wants to access your Discord account.&quot; The &quot;Add To Server&quot; section is highlighted with a Discord server selected, and the &quot;Continue&quot; button is circled." src="../_images/discord_add_app_to_server.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 22.8 </span><span class="caption-text">Add your bot to one of your servers.</span><a class="headerlink" href="#discord-add-app-to-server-fig" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 22.9 </span><span class="caption-text">Add your bot to one of your servers.</span><a class="headerlink" href="#discord-add-app-to-server-fig" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Note: After adding app to server, there is a confirmation page about the permissions. “Authorize” your bot.</p>
@@ -858,35 +865,35 @@ document.write(`
 <figure class="align-default" id="discord-enable-dev-mode-1-fig">
 <a class="reference internal image-reference" href="../_images/discord_enable_dev_mode_1.png"><img alt="The discord profile part of the screen with the username, and mute options. The gear options button is circled." src="../_images/discord_enable_dev_mode_1.png" style="width: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 22.9 </span><span class="caption-text">Open your settings menu.</span><a class="headerlink" href="#discord-enable-dev-mode-1-fig" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 22.10 </span><span class="caption-text">Open your settings menu.</span><a class="headerlink" href="#discord-enable-dev-mode-1-fig" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Then enable developer mode in the advanced settings.</p>
 <figure class="align-default" id="discord-enable-dev-mode-2-fig">
 <a class="reference internal image-reference" href="../_images/discord_enable_dev_mode_2.png"><img alt="In the discord settings change, the advanced tab is selected. In the advanced tab &quot;Developer mode&quot; is circled to turn on." src="../_images/discord_enable_dev_mode_2.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 22.10 </span><span class="caption-text">Enable developer mode.</span><a class="headerlink" href="#discord-enable-dev-mode-2-fig" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 22.11 </span><span class="caption-text">Enable developer mode.</span><a class="headerlink" href="#discord-enable-dev-mode-2-fig" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Once developer mode is on, you can get a channel ID by right-clicking on a channel.</p>
 <figure class="align-default" id="discord-get-channel-id-fig">
 <a class="reference internal image-reference" href="../_images/discord_get_channel_id.png"><img alt="A screenshot of a discord server page. One of the channels has been right-clicked on, and the very bottom of the right-click menu is the &quot;Copy Channel ID&quot; option, which is circled." src="../_images/discord_get_channel_id.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 22.11 </span><span class="caption-text">Copy the channel ID by right clicking.</span><a class="headerlink" href="#discord-get-channel-id-fig" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 22.12 </span><span class="caption-text">Copy the channel ID by right clicking.</span><a class="headerlink" href="#discord-get-channel-id-fig" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>You can also get the server ID (or “Guild ID”) by right-clicking on a channel.</p>
 <figure class="align-default" id="discord-copy-server-id-fig">
 <a class="reference internal image-reference" href="../_images/discord_copy_server_id.png"><img alt="A screenshot of a discord server page. One of the servers has been right-clicked on, and the very bottom of the right-click menu is the &quot;Copy Server ID&quot; option, which is circled." src="../_images/discord_copy_server_id.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 22.12 </span><span class="caption-text">Copy the server ID by right clicking.</span><a class="headerlink" href="#discord-copy-server-id-fig" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 22.13 </span><span class="caption-text">Copy the server ID by right clicking.</span><a class="headerlink" href="#discord-copy-server-id-fig" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Save the channel IDs and server IDs somewhere so you can have your bot reference it later (e.g., post to that channel).</p>
 </section>
 <section id="test-your-tokens">
 <h2><span class="section-number">22.8. </span>Test your tokens<a class="headerlink" href="#test-your-tokens" title="Link to this heading">#</a></h2>
-<p>Now that you have your token, and other info, you can test out your code in chapter 2.3.8 (<a class="reference internal" href="#../../ch02_definitions/03_automation/08_demo.ipynb"><code class="xref myst docutils literal notranslate"><span class="pre">../../ch02_definitions/03_automation/08_demo.ipynb</span></code></a>). You can try running the code and replacing the fake discord token and channel ids with the ones from your account, and see if you can use the code to make an actual post to your account.</p>
+<p>Now that you have your token, and other info, you can test out your code in chapter 2.3.8 (<a class="reference internal" href="../ch02_definitions/03_automation/08_demo.html"><span class="std std-doc">Demo: Try Running the Discord Bot!</span></a>). You can try running the code and replacing the fake discord token and channel ids with the ones from your account, and see if you can use the code to make an actual post to your account.</p>
 </section>
 <section id="understand-discord-rules-for-bots">
 <h2><span class="section-number">22.9. </span>Understand Discord Rules for Bots<a class="headerlink" href="#understand-discord-rules-for-bots" title="Link to this heading">#</a></h2>
@@ -962,7 +969,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-your-own-discord-server">22.2. Create your own Discord Server</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-discord-application">22.3. Create a Discord “Application”</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-discord-token">22.4. Get Discord Token</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-bot-invite-link">22.5. Get Bot Invite Link</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-bot-invite-link-and-set-permissions">22.5. Get Bot Invite Link and Set Permissions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-app-to-a-discord-server">22.6. Add app to a Discord Server</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-channel-id-and-server-id-numbers">22.7. Get Channel Id and Server Id Numbers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-your-tokens">22.8. Test your tokens</a></li>

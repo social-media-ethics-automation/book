@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/myfile.css?v=ed2eb8a4" />
@@ -320,7 +320,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../ch08_data_mining/06_sentiment_analysis/00_intro.html">8.6. Sentiment Analysis on Social Media</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../ch08_data_mining/06_sentiment_analysis/01_demo_sentiment_and_loop_vars.html">8.6.1. Demo: Sentiment Analysis and Loop Variables</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../ch08_data_mining/06_sentiment_analysis/02_practice_sentiment_and_loop_vars.html">8.6.2. Practice: Sentiment Analysis and Loop Variables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch08_data_mining/06_sentiment_analysis/03_demo_sentiment.html">8.6.3. Demo: Sentiment Analysis on Reddit\n”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch08_data_mining/06_sentiment_analysis/03_demo_sentiment.html">8.6.3. Demo: Sentiment Analysis on Discord</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch08_data_mining/07_data_poisoning.html">8.7. Data Poisoning</a></li>
@@ -785,6 +785,7 @@ document.write(`
                   
   <section id="demo-dictionaries">
 <h1><span class="section-number">5.4.2. </span>Demo: Dictionaries<a class="headerlink" href="#demo-dictionaries" title="Link to this heading">#</a></h1>
+<p><em>Choose Social Media Platform: <a href='../../../reddit/ch05_history/04_list_data_python/02_demo_dictionaries.html'>Reddit</a> | <strong>Discord</strong> | <a href='../../../bsky/ch05_history/04_list_data_python/02_demo_dictionaries.html'>Bluesky</a> | <a href='../../../nocode/ch05_history/04_list_data_python/02_demo_dictionaries.html'>No Coding</a></em></p>
 <p>We’ve talked about lists, but the other data organization we need to work with social media data is <code class="docutils literal notranslate"><span class="pre">dictionaries</span></code>.</p>
 <p>As we mentioned in chapter 4, dictionaries allow us to combine pieces of information by naming them (sort of like variables).</p>
 <p>So for example, the information about a user might have the following pieces of data:</p>
@@ -795,7 +796,6 @@ document.write(`
 <li><p>Follows</p></li>
 </ul>
 <p>Python has two ways of doing these types of dictionaries: <code class="docutils literal notranslate"><span class="pre">dict</span></code> and objects</p>
-<p><em>Choose Social Media Platform: <a href='../../../reddit/ch05_history/04_list_data_python/02_demo_dictionaries.html'>Reddit</a> | <strong>Discord</strong> | <a href='../../../bsky/ch05_history/04_list_data_python/02_demo_dictionaries.html'>Bluesky</a> | <a href='../../../nocode/ch05_history/04_list_data_python/02_demo_dictionaries.html'>No Coding</a></em></p>
 <section id="dictionaries-dict">
 <h2>Dictionaries (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)<a class="headerlink" href="#dictionaries-dict" title="Link to this heading">#</a></h2>
 <p>We can create dictionaries in Python by storing values into <code class="docutils literal notranslate"><span class="pre">key</span></code>s inside of curly braces <code class="docutils literal notranslate"><span class="pre">{</span></code> <code class="docutils literal notranslate"><span class="pre">}</span></code>, like this:</p>
@@ -919,7 +919,10 @@ document.write(`
 <span class="n">discord_token</span> <span class="o">=</span> <span class="s2">&quot;m#5@_fake_discord_token_$%Ds&quot;</span>
 
 
-<span class="n">client</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">intents</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">Intents</span><span class="o">.</span><span class="n">default</span><span class="p">())</span>
+<span class="c1"># set up Discord client with permissions to read message_contents</span>
+<span class="n">intents</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Intents</span><span class="o">.</span><span class="n">default</span><span class="p">()</span>
+<span class="n">intents</span><span class="o">.</span><span class="n">message_content</span> <span class="o">=</span> <span class="kc">True</span> 
+<span class="n">client</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">intents</span><span class="o">=</span><span class="n">intents</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -969,14 +972,14 @@ document.write(`
 <p>For each of the tweets, we will use <code class="docutils literal notranslate"><span class="pre">print</span></code> to display information about the tweet</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">posts</span> <span class="ow">in</span> <span class="n">recent_posts</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Info for post with id: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">posts</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  content: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">posts</span><span class="o">.</span><span class="n">content</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  author display name: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">posts</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">display_name</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  author id: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">posts</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  created at: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">posts</span><span class="o">.</span><span class="n">created_at</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  reactions: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">posts</span><span class="o">.</span><span class="n">reactions</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  is pinned?: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">posts</span><span class="o">.</span><span class="n">pinned</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">post</span> <span class="ow">in</span> <span class="n">recent_posts</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Info for post with id: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  content: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">content</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  author display name: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">display_name</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  author id: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  created at: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">created_at</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  reactions: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">reactions</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  is pinned?: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">pinned</span><span class="p">))</span>
     <span class="nb">print</span><span class="p">()</span>
 </pre></div>
 </div>
