@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/myfile.css?v=ed2eb8a4" />
@@ -62,7 +62,7 @@
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="10.5. Design Analysis: Accessibility" href="../05_accessibility_on_social_media.html" />
+    <link rel="next" title="10.4.2. Demo: Alt-text From Bluesky" href="02_demo_alt_text.html" />
     <link rel="prev" title="10.4. Alt-text on Social Media" href="00_intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -320,7 +320,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../ch08_data_mining/06_sentiment_analysis/00_intro.html">8.6. Sentiment Analysis on Social Media</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../ch08_data_mining/06_sentiment_analysis/01_demo_sentiment_and_loop_vars.html">8.6.1. Demo: Sentiment Analysis and Loop Variables</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../ch08_data_mining/06_sentiment_analysis/02_practice_sentiment_and_loop_vars.html">8.6.2. Practice: Sentiment Analysis and Loop Variables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch08_data_mining/06_sentiment_analysis/03_demo_sentiment.html">8.6.3. Demo: Sentiment Analysis on Reddit\n”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch08_data_mining/06_sentiment_analysis/03_demo_sentiment.html">8.6.3. Demo: Sentiment Analysis on Discord</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch08_data_mining/07_data_poisoning.html">8.7. Data Poisoning</a></li>
@@ -335,7 +335,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/00_intro.html">9.4. Tracking Use</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/01_demo_functions.html">9.4.1. Demo: Writing Functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/02_practice_functions.html">9.4.2. Practice: Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/03_demo_track_use.html">9.4.3. Demo: Track Use of Sentiment Analysis Code\n”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/03_demo_track_use.html">9.4.3. Demo: Track Use of Sentiment Analysis Code</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch09_privacy/05_activity_gdpr.html">9.5. Design Analysis: GDPR</a></li>
@@ -349,6 +349,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../03_who_designs.html">10.3. Why It Matters Who Designs</a></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="00_intro.html">10.4. Alt-text on Social Media</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">10.4.1. Alt-text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_demo_alt_text.html">10.4.2. Demo: Alt-text From Bluesky</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../05_accessibility_on_social_media.html">10.5. Design Analysis: Accessibility</a></li>
@@ -737,7 +738,6 @@ document.write(`
 <h1><span class="section-number">10.4.1. </span>Alt-text<a class="headerlink" href="#alt-text" title="Link to this heading">#</a></h1>
 <p>Some users might not be able to see images on websites for a variety of reasons. The user might be blind or low-vision. Their device or internet connection might not support images. Or perhaps all the images got deleted (like <a class="reference external" href="https://www.gawker.com/media/analysis-semafor-reinvents-news-by-making-it-more-confusing-to-read">what happened to The Onion</a>).</p>
 <p>In order for these users to still get the information intended from the images, the image can come with alt-text. You can read more about alt-text in <a class="reference external" href="https://www.nytimes.com/interactive/2022/02/18/arts/alt-text-images-descriptions.html">this New York Times feature</a> <span id="id1">[<a class="reference internal" href="../06_bibliography.html#id29" title="Meg Miller and Ilaria Parogni. The Hidden Image Descriptions Making the Internet Accessible. The New York Times, February 2022. URL: https://www.nytimes.com/interactive/2022/02/18/arts/alt-text-images-descriptions.html (visited on 2023-12-07).">j23</a>]</span></p>
-<p>Reddit unfortunately doesn’t allow alt-text for their images. So while we were going to have a programming demo here to look up the alt-text, there is no alt-text on images uploaded to Reddit to look up, meaning this site is unfriendly to blind or low-vision users.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -780,11 +780,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="../05_accessibility_on_social_media.html"
+       href="02_demo_alt_text.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">10.5. </span>Design Analysis: Accessibility</p>
+        <p class="prev-next-title"><span class="section-number">10.4.2. </span>Demo: Alt-text From Bluesky</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
