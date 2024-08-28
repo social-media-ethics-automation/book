@@ -335,7 +335,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/00_intro.html">9.4. Tracking Use</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/01_demo_functions.html">9.4.1. Demo: Writing Functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/02_practice_functions.html">9.4.2. Practice: Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/03_demo_track_use.html">9.4.3. Demo: Track Use of Sentiment Analysis Code\n”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/03_demo_track_use.html">9.4.3. Demo: Track Use of Sentiment Analysis Code</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch09_privacy/05_activity_gdpr.html">9.5. Design Analysis: GDPR</a></li>
@@ -772,7 +772,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discord-bot-practice">23.1.3. Discord Bot Practice</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-discord-library">Load Discord Library</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-step-1b-make-a-fake-discord-connection-with-the-fake-discord-library">(Optional) Step 1b: Make a fake discord connection with the fake_discord library</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-set-up-your-discord-connection">Step 2: Set up your Discord connection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-save-your-discord-connection-info">Step 2: Save your Discord connection Info</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-1-define-and-run-a-bot-that-will-post-to-discord">Practice 1: Define and run a bot that will post to Discord</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-2-define-and-run-a-bot-that-will-post-from-a-variable">Practice 2: Define and run a bot that will post from a variable</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submit-multiple-posts">Submit multiple posts</a></li>
@@ -998,20 +998,17 @@ document.write(`
 <div class="output text_html"><strong style='color:darkred'>Fake discord is replacing the discord.py library. Fake discord doesn&#x27;t need real passwords, and prevents you from accessing real discord</strong></div></div>
 </div>
 </section>
-<section id="step-2-set-up-your-discord-connection">
-<h3>Step 2: Set up your Discord connection<a class="headerlink" href="#step-2-set-up-your-discord-connection" title="Link to this heading">#</a></h3>
+<section id="step-2-save-your-discord-connection-info">
+<h3>Step 2: Save your Discord connection Info<a class="headerlink" href="#step-2-save-your-discord-connection-info" title="Link to this heading">#</a></h3>
 <p>To use this on your real Discord account, copy your <a class="reference internal" href="../making_bot_account.html"><span class="std std-doc">discord token</span></a> into the code below, replacing our fake passwords.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set up your Discord connection</span>
 <span class="c1"># TODO: put the discord token for your bot below</span>
 <span class="n">discord_token</span> <span class="o">=</span> <span class="s2">&quot;m#5@_fake_discord_token_$%Ds&quot;</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">intents</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">Intents</span><span class="o">.</span><span class="n">default</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake discord is pretending to set up a client connection</strong></div></div>
 </div>
 </section>
 <section id="practice-1-define-and-run-a-bot-that-will-post-to-discord">
@@ -1020,7 +1017,10 @@ document.write(`
 <p>Where the code says: <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">TODO:</span> <span class="pre">put</span> <span class="pre">the</span> <span class="pre">message</span> <span class="pre">you</span> <span class="pre">want</span> <span class="pre">to</span> <span class="pre">post</span> <span class="pre">to</span> <span class="pre">discord</span> <span class="pre">below</span></code>, put code to post your message there with something like: <code class="docutils literal notranslate"><span class="pre">channel.send(&quot;This</span> <span class="pre">post</span> <span class="pre">was</span> <span class="pre">made</span> <span class="pre">by</span> <span class="pre">a</span> <span class="pre">computer</span> <span class="pre">program!&quot;)</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Provide instructions for what your discord bot should do once it has logged in</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set up discord connection</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">intents</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">Intents</span><span class="o">.</span><span class="n">default</span><span class="p">())</span>
+
+<span class="c1"># Provide instructions for what your discord bot should do once it has logged in</span>
 <span class="nd">@client</span><span class="o">.</span><span class="n">event</span>
 <span class="k">async</span> <span class="k">def</span> <span class="nf">on_ready</span><span class="p">():</span>
     <span class="c1"># Load the discord channel you want to post to</span>
@@ -1029,7 +1029,7 @@ document.write(`
     <span class="n">channel</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_channel</span><span class="p">(</span><span class="n">channel_id</span><span class="p">)</span>
 
     <span class="c1"># Post a message to your discord channel</span>
-    <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;I found a way to solve the practice problem from the answer key!&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">channel</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;I found a way to solve the practice problem from the answer key!&quot;</span><span class="p">)</span>
    
 
     <span class="c1"># Tell your bot to stop running</span>
@@ -1041,9 +1041,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake discord bot is fake logging in and starting to run</strong></div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kmthayer\AppData\Local\Temp\ipykernel_13360\2351957123.py:10: RuntimeWarning: coroutine &#39;FakeDiscordChannel.send&#39; was never awaited
-  channel.send(&quot;I found a way to solve the practice problem from the answer key!&quot;)
-RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+<div class="output text_html"><strong style='color:darkred'>Fake discord is pretending to set up a client connection</strong></div><div class="output text_html"><strong style='color:darkred'>Fake discord bot is fake logging in and starting to run</strong></div><div class="output text_html"><strong style='color:darkred'>Fake Discord is pretending to post:</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I found a way to solve the practice problem from the answer key!
 </pre></div>
 </div>
 <div class="output text_html"><strong style='color:darkred'>Fake discord bot is shutting down</strong></div></div>
@@ -1058,6 +1056,9 @@ RuntimeWarning: Enable tracemalloc to get the object allocation traceback
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">post_variable</span> <span class="o">=</span> <span class="s2">&quot;I can store a message in a variable and use that&quot;</span>
+
+<span class="c1"># set up discord connection</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">intents</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">Intents</span><span class="o">.</span><span class="n">default</span><span class="p">())</span>
 
 <span class="c1"># Provide instructions for what your discord bot should do once it has logged in</span>
 <span class="nd">@client</span><span class="o">.</span><span class="n">event</span>
@@ -1080,7 +1081,7 @@ RuntimeWarning: Enable tracemalloc to get the object allocation traceback
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake discord bot is fake logging in and starting to run</strong></div><div class="output text_html"><strong style='color:darkred'>Fake Discord is pretending to post:</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I can store a message in a variable and use that
+<div class="output text_html"><strong style='color:darkred'>Fake discord is pretending to set up a client connection</strong></div><div class="output text_html"><strong style='color:darkred'>Fake discord bot is fake logging in and starting to run</strong></div><div class="output text_html"><strong style='color:darkred'>Fake Discord is pretending to post:</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I can store a message in a variable and use that
 </pre></div>
 </div>
 <div class="output text_html"><strong style='color:darkred'>Fake discord bot is shutting down</strong></div></div>
@@ -1092,7 +1093,10 @@ RuntimeWarning: Enable tracemalloc to get the object allocation traceback
 <p>To do this, copy the code from Practice 1, but instead of one line with <code class="docutils literal notranslate"><span class="pre">await</span> <span class="pre">channel.send(...)</span></code>, make multiple lines with <code class="docutils literal notranslate"><span class="pre">await</span> <span class="pre">channel.send()</span></code> and add some lines with <code class="docutils literal notranslate"><span class="pre">sleep</span></code> in between.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Provide instructions for what your discord bot should do once it has logged in</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set up discord connection</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">intents</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">Intents</span><span class="o">.</span><span class="n">default</span><span class="p">())</span>
+
+<span class="c1"># Provide instructions for what your discord bot should do once it has logged in</span>
 <span class="nd">@client</span><span class="o">.</span><span class="n">event</span>
 <span class="k">async</span> <span class="k">def</span> <span class="nf">on_ready</span><span class="p">():</span>
     <span class="c1"># Load the discord channel you want to post to</span>
@@ -1120,7 +1124,7 @@ RuntimeWarning: Enable tracemalloc to get the object allocation traceback
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake discord bot is fake logging in and starting to run</strong></div><div class="output text_html"><strong style='color:darkred'>Fake Discord is pretending to post:</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is the first message
+<div class="output text_html"><strong style='color:darkred'>Fake discord is pretending to set up a client connection</strong></div><div class="output text_html"><strong style='color:darkred'>Fake discord bot is fake logging in and starting to run</strong></div><div class="output text_html"><strong style='color:darkred'>Fake Discord is pretending to post:</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is the first message
 </pre></div>
 </div>
 <div class="output text_html"><strong style='color:darkred'>Fake Discord is pretending to post:</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is the second message
@@ -1209,7 +1213,7 @@ RuntimeWarning: Enable tracemalloc to get the object allocation traceback
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discord-bot-practice">23.1.3. Discord Bot Practice</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-discord-library">Load Discord Library</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-step-1b-make-a-fake-discord-connection-with-the-fake-discord-library">(Optional) Step 1b: Make a fake discord connection with the fake_discord library</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-set-up-your-discord-connection">Step 2: Set up your Discord connection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-save-your-discord-connection-info">Step 2: Save your Discord connection Info</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-1-define-and-run-a-bot-that-will-post-to-discord">Practice 1: Define and run a bot that will post to Discord</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-2-define-and-run-a-bot-that-will-post-from-a-variable">Practice 2: Define and run a bot that will post from a variable</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submit-multiple-posts">Submit multiple posts</a></li>

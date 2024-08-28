@@ -335,7 +335,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/00_intro.html">9.4. Tracking Use</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/01_demo_functions.html">9.4.1. Demo: Writing Functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/02_practice_functions.html">9.4.2. Practice: Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/03_demo_track_use.html">9.4.3. Demo: Track Use of Sentiment Analysis Code\n”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/03_demo_track_use.html">9.4.3. Demo: Track Use of Sentiment Analysis Code</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch09_privacy/05_activity_gdpr.html">9.5. Design Analysis: GDPR</a></li>
@@ -911,7 +911,6 @@ document.write(`
 <section id="set-up-your-discord-connection">
 <h3>set up your Discord connection<a class="headerlink" href="#set-up-your-discord-connection" title="Link to this heading">#</a></h3>
 <p>To use this on your real Discord account, copy your <a class="reference internal" href="../../appendix/making_bot_account.html"><span class="std std-doc">discord token</span></a> into the code below, replacing our fake passwords.</p>
-<p><em><strong>Note: you’ll have to re-run this step if you want to re-run your bot</strong></em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set up your Discord connection</span>
@@ -922,12 +921,9 @@ document.write(`
 <span class="c1"># set up Discord client with permissions to read message_contents</span>
 <span class="n">intents</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Intents</span><span class="o">.</span><span class="n">default</span><span class="p">()</span>
 <span class="n">intents</span><span class="o">.</span><span class="n">message_content</span> <span class="o">=</span> <span class="kc">True</span> 
-<span class="n">client</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">intents</span><span class="o">=</span><span class="n">intents</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake discord is pretending to set up a client connection</strong></div></div>
 </div>
 </section>
 <section id="find-a-list-of-discord-posts">
@@ -936,7 +932,10 @@ document.write(`
 <p><em>Note: If you run this on real discord, we can’t gurantee anything about how offensive what you might find is.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: put the discord channel id number below for the channel you want to use</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set up discord connection</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">intents</span><span class="o">=</span><span class="n">intents</span><span class="p">)</span>
+
+<span class="c1"># TODO: put the discord channel id number below for the channel you want to use</span>
 <span class="n">channel_id</span> <span class="o">=</span> <span class="mi">123456789</span>
 
 <span class="c1"># Provide instructions for what your discord bot should do once it has logged in</span>
@@ -962,7 +961,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake discord bot is fake logging in and starting to run</strong></div><div class="output text_html"><strong style='color:darkred'>Fake discord bot is shutting down</strong></div></div>
+<div class="output text_html"><strong style='color:darkred'>Fake discord is pretending to set up a client connection</strong></div><div class="output text_html"><strong style='color:darkred'>Fake discord bot is fake logging in and starting to run</strong></div><div class="output text_html"><strong style='color:darkred'>Fake discord bot is shutting down</strong></div></div>
 </div>
 </section>
 </section>

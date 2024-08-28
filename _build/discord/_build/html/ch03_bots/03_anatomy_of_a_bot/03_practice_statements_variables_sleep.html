@@ -335,7 +335,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/00_intro.html">9.4. Tracking Use</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/01_demo_functions.html">9.4.1. Demo: Writing Functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/02_practice_functions.html">9.4.2. Practice: Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/03_demo_track_use.html">9.4.3. Demo: Track Use of Sentiment Analysis Code\n”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/03_demo_track_use.html">9.4.3. Demo: Track Use of Sentiment Analysis Code</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch09_privacy/05_activity_gdpr.html">9.5. Design Analysis: GDPR</a></li>
@@ -772,7 +772,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discord-bot-practice">Discord Bot Practice</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-load-discord-library">Step 1: load discord library</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-step-1b-make-a-fake-discord-connection-with-the-fake-discord-library">(Optional) Step 1b: Make a fake discord connection with the fake_discord library</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-set-up-your-discord-connection">Step 2: Set up your Discord connection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-save-your-discord-connection-info">Step 2: Save your Discord connection Info</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-1-define-and-run-a-bot-that-will-post-to-discord">Practice 1: Define and run a bot that will post to Discord</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-2-define-and-run-a-bot-that-will-post-from-a-variable">Practice 2: Define and run a bot that will post from a variable</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submit-multiple-posts">Submit multiple posts</a></li>
@@ -955,29 +955,28 @@ document.write(`
 <div class="output text_html"><strong style='color:darkred'>Fake discord is replacing the discord.py library. Fake discord doesn&#x27;t need real passwords, and prevents you from accessing real discord</strong></div></div>
 </div>
 </section>
-<section id="step-2-set-up-your-discord-connection">
-<h3>Step 2: Set up your Discord connection<a class="headerlink" href="#step-2-set-up-your-discord-connection" title="Link to this heading">#</a></h3>
+<section id="step-2-save-your-discord-connection-info">
+<h3>Step 2: Save your Discord connection Info<a class="headerlink" href="#step-2-save-your-discord-connection-info" title="Link to this heading">#</a></h3>
 <p>To use this on your real Discord account, copy your <a class="reference internal" href="../../appendix/making_bot_account.html"><span class="std std-doc">discord token</span></a> into the code below, replacing our fake passwords.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set up your Discord connection</span>
-<span class="c1"># TODO: put the discord token for your bot below</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: put the discord token for your bot below</span>
 <span class="n">discord_token</span> <span class="o">=</span> <span class="s2">&quot;m#5@_fake_discord_token_$%Ds&quot;</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">intents</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">Intents</span><span class="o">.</span><span class="n">default</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake discord is pretending to set up a client connection</strong></div></div>
 </div>
 </section>
 <section id="practice-1-define-and-run-a-bot-that-will-post-to-discord">
 <h3>Practice 1: Define and run a bot that will post to Discord<a class="headerlink" href="#practice-1-define-and-run-a-bot-that-will-post-to-discord" title="Link to this heading">#</a></h3>
 <p>These are the steps your bot will take when it loads (get the channel, post a message, and shut down). If you want to post on an actual Discord channel you will have to replace the fake channel_id below with your real channel id (see the <a class="reference internal" href="../../appendix/making_bot_account.html"><span class="std std-doc">making bot instructions</span></a>)</p>
-<p>Where the code says: <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">TODO:</span> <span class="pre">put</span> <span class="pre">the</span> <span class="pre">message</span> <span class="pre">you</span> <span class="pre">want</span> <span class="pre">to</span> <span class="pre">post</span> <span class="pre">to</span> <span class="pre">discord</span> <span class="pre">below</span></code>, put code to post your message there with something like: <code class="docutils literal notranslate"><span class="pre">channel.send(&quot;This</span> <span class="pre">post</span> <span class="pre">was</span> <span class="pre">made</span> <span class="pre">by</span> <span class="pre">a</span> <span class="pre">computer</span> <span class="pre">program!&quot;)</span></code></p>
+<p>Where the code says: <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">TODO:</span> <span class="pre">put</span> <span class="pre">the</span> <span class="pre">message</span> <span class="pre">you</span> <span class="pre">want</span> <span class="pre">to</span> <span class="pre">post</span> <span class="pre">to</span> <span class="pre">discord</span> <span class="pre">below</span></code>, put code to post your message there with something like: <code class="docutils literal notranslate"><span class="pre">await</span> <span class="pre">channel.send(&quot;This</span> <span class="pre">post</span> <span class="pre">was</span> <span class="pre">made</span> <span class="pre">by</span> <span class="pre">a</span> <span class="pre">computer</span> <span class="pre">program!&quot;)</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Provide instructions for what your discord bot should do once it has logged in</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set up discord connection</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">intents</span><span class="o">=</span><span class="n">discord</span><span class="o">.</span><span class="n">Intents</span><span class="o">.</span><span class="n">default</span><span class="p">())</span>
+
+<span class="c1"># Provide instructions for what your discord bot should do once it has logged in</span>
 <span class="nd">@client</span><span class="o">.</span><span class="n">event</span>
 <span class="k">async</span> <span class="k">def</span> <span class="nf">on_ready</span><span class="p">():</span>
     <span class="c1"># Load the discord channel you want to post to</span>
@@ -998,7 +997,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake discord bot is fake logging in and starting to run</strong></div><div class="output text_html"><strong style='color:darkred'>Fake discord bot is shutting down</strong></div></div>
+<div class="output text_html"><strong style='color:darkred'>Fake discord is pretending to set up a client connection</strong></div><div class="output text_html"><strong style='color:darkred'>Fake discord bot is fake logging in and starting to run</strong></div><div class="output text_html"><strong style='color:darkred'>Fake discord bot is shutting down</strong></div></div>
 </div>
 </section>
 <section id="practice-2-define-and-run-a-bot-that-will-post-from-a-variable">
@@ -1104,7 +1103,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discord-bot-practice">Discord Bot Practice</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-load-discord-library">Step 1: load discord library</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-step-1b-make-a-fake-discord-connection-with-the-fake-discord-library">(Optional) Step 1b: Make a fake discord connection with the fake_discord library</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-set-up-your-discord-connection">Step 2: Set up your Discord connection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-save-your-discord-connection-info">Step 2: Save your Discord connection Info</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-1-define-and-run-a-bot-that-will-post-to-discord">Practice 1: Define and run a bot that will post to Discord</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-2-define-and-run-a-bot-that-will-post-from-a-variable">Practice 2: Define and run a bot that will post from a variable</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submit-multiple-posts">Submit multiple posts</a></li>
