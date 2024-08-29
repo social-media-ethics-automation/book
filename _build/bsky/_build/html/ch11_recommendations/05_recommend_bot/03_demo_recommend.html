@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>11.5.3. Demo: Recommend a Subreddit &#8212; Social Media, Ethics, and Automation</title>
+    <title>11.5.3. Demo: Recommend Users to Follow &#8212; Social Media, Ethics, and Automation</title>
   
   
   
@@ -364,7 +364,7 @@
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="00_intro.html">11.5. Recommendation Bot</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="01_demo_dictionary_counters.html">11.5.1. Demo: Dictionary Counters</a></li>
 <li class="toctree-l3"><a class="reference internal" href="02_practice_dictionary_counters.html">11.5.2. Practice: Dictionary Counters</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">11.5.3. Demo: Recommend a Subreddit</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">11.5.3. Demo: Recommend Users to Follow</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../06_design_recommend.html">11.6. Design Activity</a></li>
@@ -583,6 +583,37 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/social-media-ethics-automation/book-src-bsky/main?urlpath=lab/tree/ch11_recommendations/05_recommend_bot/03_demo_recommend.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -638,7 +669,7 @@
       
       
       
-      <li><a href="../../_sources/ch11_recommendations/05_recommend_bot/03_demo_recommend.md" target="_blank"
+      <li><a href="../../_sources/ch11_recommendations/05_recommend_bot/03_demo_recommend.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -648,7 +679,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -709,7 +740,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -720,11 +753,22 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Demo: Recommend a Subreddit</h1>
+    <h1>Demo: Recommend Users to Follow</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-bluesky-setup">Normal Bluesky Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-a-function-to-get-follow-suggestions">Make a function to get follow suggestions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-our-function-suggest-follows">Test our function (suggest follows)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#try-it-youself">Try it youself!</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -734,10 +778,146 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="demo-recommend-a-subreddit">
-<h1><span class="section-number">11.5.3. </span>Demo: Recommend a Subreddit<a class="headerlink" href="#demo-recommend-a-subreddit" title="Link to this heading">#</a></h1>
+  <section id="demo-recommend-users-to-follow">
+<h1><span class="section-number">11.5.3. </span>Demo: Recommend Users to Follow<a class="headerlink" href="#demo-recommend-users-to-follow" title="Link to this heading">#</a></h1>
 <p><em>Choose Social Media Platform: <a href='../../../reddit/ch11_recommendations/05_recommend_bot/03_demo_recommend.html'>Reddit</a> | <a href='../../../discord/ch11_recommendations/05_recommend_bot/03_demo_recommend.html'>Discord</a> | <strong>Bluesky</strong> | <a href='../../../nocode/ch11_recommendations/05_recommend_bot/03_demo_recommend.html'>No Coding</a></em></p>
-<p><strong>Content for the social media platform Bluesky hasn’t been created yet. Please try another platform.</strong></p>
+<p>Now let’s look at a recommendation algorithm for new users to follow. Our algorithm will be</p>
+<p>For a given user:</p>
+<ol class="arabic simple">
+<li><p>Look at the people this user follows</p></li>
+<li><p>For each of those follows, look at who they follow</p></li>
+<li><p>While doing this, keep track of what accounts showed up most</p></li>
+<li><p>Recommend the accounts that showed up the most (the users most followed by people followed by our given user)</p></li>
+</ol>
+<section id="normal-bluesky-setup">
+<h2>Normal Bluesky Setup<a class="headerlink" href="#normal-bluesky-setup" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;Client&quot; from the &quot;atproto&quot; library that will help us work with Bluesky</span>
+<span class="kn">from</span> <span class="nn">atproto</span> <span class="kn">import</span> <span class="n">Client</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>(Optional) Step 1b: Make a fake Bluesky connection with the fake_atproto library</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_apis/fake_atproto.ipynb
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake atproto (bsky.app) is replacing the atproto.blue library. Fake atproto doesn&#x27;t need real passwords, and prevents you from accessing real Bluesky</strong></div></div>
+</div>
+<p>Login to Bluesky</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Login to Bluesky</span>
+<span class="c1"># TODO: put your account name and password below</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="s2">&quot;https://bsky.social&quot;</span><span class="p">)</span>
+<span class="n">client</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="s2">&quot;your_account_name.bsky.social&quot;</span><span class="p">,</span> <span class="s2">&quot;m#5@_fake_bsky_password_$%Ds&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake atproto is pretending to set up a client connection to: https://bsky.social</strong></div><div class="output text_html"><strong style='color:darkred'>Fake atproto is pretending log into your account: your_account_name.bsky.social</strong></div></div>
+</div>
+</section>
+<section id="make-a-function-to-get-follow-suggestions">
+<h2>Make a function to get follow suggestions<a class="headerlink" href="#make-a-function-to-get-follow-suggestions" title="Link to this heading">#</a></h2>
+<p>Now we make a function that will generate follow suggestions.</p>
+<p>The function takes a username (who we are making suggestions for), and a num_followers_to_check, which limits how many follows of our user we check (to limit how many requests to Bluesky we make at a time)</p>
+<p>We then get a list of the follows for our user, and we create a dictionary counter (<code class="docutils literal notranslate"><span class="pre">possible_suggestion_counts</span></code>).</p>
+<p>For each of our user’s follows, we get a list of who they follow (the follow-follows). Then for each of the follow_follows, we see if that user is in the <code class="docutils literal notranslate"><span class="pre">possible_suggestion_counts</span></code> dictionary, and add it if it wasn’t there (starting with 1), or add 1 to it if it was already there.</p>
+<p>After the for loop we have counts for our possible suggestions (how often the follow-follows appeared). So we sort the list to put the most common ones at the top, and we return the results.client.get_follows(username, limit=num_followers_to_check)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_follow_suggestions</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">num_followers_to_check</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+
+    <span class="c1"># find the people that user currently follows</span>
+    <span class="n">follow_users</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_follows</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="n">num_followers_to_check</span><span class="p">)</span><span class="o">.</span><span class="n">follows</span>
+
+    <span class="c1"># dictionary to track who my follow follows are, as possible suggestions</span>
+    <span class="c1"># The keys will be the username, and the values will be how often they</span>
+    <span class="c1"># appeared as follow follows</span>
+    <span class="n">possible_suggestion_counts</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="c1"># for each of those people, see who they follow</span>
+    <span class="k">for</span> <span class="n">follow_user</span> <span class="ow">in</span> <span class="n">follow_users</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;looking for followings of user: &quot;</span> <span class="o">+</span> <span class="n">follow_user</span><span class="o">.</span><span class="n">handle</span><span class="p">)</span>
+        <span class="c1"># Get followers of the follow_user (note: 100 is the max follows you can get at a time)</span>
+        <span class="n">follow_follow_users</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_follows</span><span class="p">(</span><span class="n">follow_user</span><span class="o">.</span><span class="n">handle</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">follows</span>
+        
+        <span class="c1"># print out the follow-follows (using some python tricks to make it display nicer)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  the follow-follows are: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">handle</span><span class="p">,</span> <span class="n">follow_follow_users</span><span class="p">))))</span>
+
+        <span class="k">for</span> <span class="n">follow_follow_user</span> <span class="ow">in</span> <span class="n">follow_follow_users</span><span class="p">:</span>
+            <span class="n">possible_suggestion</span> <span class="o">=</span> <span class="n">follow_follow_user</span><span class="o">.</span><span class="n">handle</span>
+
+            <span class="c1"># If this possible suggestion is not yet in the dictionary,</span>
+            <span class="c1"># add it with a count of one</span>
+            <span class="k">if</span> <span class="n">possible_suggestion</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">possible_suggestion_counts</span><span class="p">:</span>
+                <span class="n">possible_suggestion_counts</span><span class="p">[</span><span class="n">possible_suggestion</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span> <span class="c1">#otherwise, update the count in the dictionary</span>
+                <span class="n">possible_suggestion_counts</span><span class="p">[</span><span class="n">possible_suggestion</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="nb">print</span><span class="p">()</span>
+
+    <span class="c1"># sort the suggestions by who appeared the most</span>
+    <span class="n">ordered_suggestions</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">possible_suggestion_counts</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="c1"># recommend that I follow the people who those people follow most</span>
+    <span class="k">return</span> <span class="n">ordered_suggestions</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="test-our-function-suggest-follows">
+<h2>Test our function (suggest follows)<a class="headerlink" href="#test-our-function-suggest-follows" title="Link to this heading">#</a></h2>
+<p>Now that our function is ready, we can test it out and see who we suggest our “fake_user” should follow (if you skip fake_atproto and log into real Bluesky, you can do this for real users)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">suggestions</span> <span class="o">=</span> <span class="n">get_follow_suggestions</span><span class="p">(</span><span class="s2">&quot;fake_user&quot;</span><span class="p">,</span> <span class="n">num_followers_to_check</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">suggestions</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fake_user
+looking for followings of user: unreal_user
+unreal_user
+  the follow-follows are: [&#39;great_user&#39;, &#39;awesome_user&#39;]
+
+looking for followings of user: imaginary_user
+imaginary_user
+  the follow-follows are: [&#39;ok_user&#39;, &#39;awesome_user&#39;]
+
+looking for followings of user: false_user
+false_user
+  the follow-follows are: [&#39;great_user&#39;, &#39;awesome_user&#39;, &#39;mediocre_user&#39;, &#39;another_user&#39;]
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;awesome_user&#39;, 3),
+ (&#39;great_user&#39;, 2),
+ (&#39;ok_user&#39;, 1),
+ (&#39;mediocre_user&#39;, 1),
+ (&#39;another_user&#39;, 1)]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="try-it-youself">
+<h2>Try it youself!<a class="headerlink" href="#try-it-youself" title="Link to this heading">#</a></h2>
+<p>If you skip the fake_atproto step and run this on real Discord, you might see some issues with the suggestions that we haven’t accounted for, such as:</p>
+<ul class="simple">
+<li><p>it might suggest the user follow themself, or someone they already follow</p></li>
+<li><p>the follow lists can be very long and you might not be getting the whole list in the <code class="docutils literal notranslate"><span class="pre">client.get_follows()</span></code> function call (you could use track a <a class="reference external" href="https://atproto.blue/en/latest/atproto_client/client.html#atproto_client.client.client.Client.get_followers">cursor</a> value and repeat calls to the <code class="docutils literal notranslate"><span class="pre">client.get_follows()</span></code> to get more)</p></li>
+</ul>
+<p>We could of course add more code to deal with those issues, but hopefully you can at least get the idea of how this recommendation algorithm works :)</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -794,6 +974,24 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-bluesky-setup">Normal Bluesky Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-a-function-to-get-follow-suggestions">Make a function to get follow suggestions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-our-function-suggest-follows">Test our function (suggest follows)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#try-it-youself">Try it youself!</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
