@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>14.7.3. Demo: Display Real Reddit Comments and Replies &#8212; Social Media, Ethics, and Automation</title>
+    <title>14.7.3. Demo: Display Real Discord Comments and Replies &#8212; Social Media, Ethics, and Automation</title>
   
   
   
@@ -388,7 +388,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ch13_mental_health/02_unhealthy_activities.html">13.2. Unhealthy Activities on Social Media</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch13_mental_health/03_healthy_activities.html">13.3. Healthy Activities on Social Media</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch13_mental_health/04_mental_health_detection.html">13.4. Mental Health Detection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ch13_mental_health/05_demo_only_positive_news.html">13.5. Demo: Only positive news</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch13_mental_health/05_demo_only_positive_news.html">13.5. Demo: Only positive posts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch13_mental_health/06_design_activity_mental_health.html">13.6. Design Analysis: Mental Health</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch13_mental_health/07_reflections.html">13.7. Reflection questions on mental health</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch13_mental_health/08_bibliography.html">13.8. Bibliography</a></li>
@@ -404,7 +404,7 @@
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="00_intro.html">14.7. Viewing Comments and Replies</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="01_trees.html">14.7.1. Tree Structures</a></li>
 <li class="toctree-l3"><a class="reference internal" href="02_demo_recursion.html">14.7.2. Demo: Navigating Trees (recursion)</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">14.7.3. Demo: Display Real Reddit Comments and Replies</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">14.7.3. Demo: Display Real Discord Comments and Replies</a></li>
 <li class="toctree-l3"><a class="reference internal" href="04_demo_hide_some_replies.html">14.7.4. Demo: Hide Some Comments</a></li>
 </ul>
 </details></li>
@@ -583,6 +583,37 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/social-media-ethics-automation/book-src-discord/main?urlpath=lab/tree/ch14_moderation/06_comments_and_replies/03_demo_recursion_real.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -638,7 +669,7 @@
       
       
       
-      <li><a href="../../_sources/ch14_moderation/06_comments_and_replies/03_demo_recursion_real.md" target="_blank"
+      <li><a href="../../_sources/ch14_moderation/06_comments_and_replies/03_demo_recursion_real.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -648,7 +679,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -709,7 +740,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -720,11 +753,24 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Demo: Display Real Reddit Comments and Replies</h1>
+    <h1>Demo: Display Real Discord Comments and Replies</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discord-setup">Discord Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#helper-function-to-display-text-in-an-indented-box">Helper function to display text in an indented box</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#helper-function-to-reconstruct-reply-tree">Helper function to reconstruct reply tree</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#helper-function-to-load-the-recent-posts-from-channel-return-the-reply-tree">Helper function to load the recent posts from channel return the reply tree</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-to-print-a-channel-s-recent-posts-and-replies">Code to print a channel’s recent posts and replies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-our-code-on-discord-channel">Test our code on discord channel</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -734,10 +780,235 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="demo-display-real-reddit-comments-and-replies">
-<h1><span class="section-number">14.7.3. </span>Demo: Display Real Reddit Comments and Replies<a class="headerlink" href="#demo-display-real-reddit-comments-and-replies" title="Link to this heading">#</a></h1>
+  <section id="demo-display-real-discord-comments-and-replies">
+<h1><span class="section-number">14.7.3. </span>Demo: Display Real Discord Comments and Replies<a class="headerlink" href="#demo-display-real-discord-comments-and-replies" title="Link to this heading">#</a></h1>
 <p><em>Choose Social Media Platform: <a href='../../../reddit/ch14_moderation/06_comments_and_replies/03_demo_recursion_real.html'>Reddit</a> | <strong>Discord</strong> | <a href='../../../bsky/ch14_moderation/06_comments_and_replies/03_demo_recursion_real.html'>Bluesky</a> | <a href='../../../nocode/ch14_moderation/06_comments_and_replies/03_demo_recursion_real.html'>No Coding</a></em></p>
-<p><strong>Content for the social media platform Discord hasn’t been created yet. Please try another platform.</strong></p>
+<p>Now lets do the same thing we did on the last page (using recursion to display comments and replies), but do it on Discord! (Either for real or faked with the fake_praw library).</p>
+<p>Note: Discord has different mechanisms to officially indicate “replies.” They can either be a new post that is in reply to a previous post, or they can be part of a thread. Additionally, in discord, simply posting after a previous post can informally indicate a reply, but it is hard to automatically deduce what is a reply in this way.</p>
+<p>For the purposes of this example, we will only be using posts that are directly “replies” to previous posts. We will ignore threads in this demo.</p>
+<section id="discord-setup">
+<h2>Discord Setup<a class="headerlink" href="#discord-setup" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;discord&quot; that will help us work with Discord</span>
+<span class="kn">import</span> <span class="nn">discord</span>
+
+<span class="c1"># Load another library that helps the bot work in Jupyter Noteboook</span>
+<span class="kn">import</span> <span class="nn">nest_asyncio</span>
+<span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>(optional) make a fake Discord connection with the fake_discord library</p>
+<p>For testing purposes, we’ve added this line of code, which loads a fake version of discord, so it wont actually connect to Discord. <strong>If you want to try to actually connect to Discord, don’t run this line of code.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_apis/fake_discord.ipynb
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake discord is replacing the discord.py library. Fake discord doesn&#x27;t need real passwords, and prevents you from accessing real discord</strong></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set up your Discord connection</span>
+<span class="c1"># TODO: put the discord token for your bot below</span>
+<span class="n">discord_token</span> <span class="o">=</span> <span class="s2">&quot;m#5@_fake_discord_token_$%Ds&quot;</span>
+
+<span class="c1"># set up Discord client with permissions to read message_contents</span>
+<span class="n">intents</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Intents</span><span class="o">.</span><span class="n">default</span><span class="p">()</span>
+<span class="n">intents</span><span class="o">.</span><span class="n">message_content</span> <span class="o">=</span> <span class="kc">True</span> 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="helper-function-to-display-text-in-an-indented-box">
+<h2>Helper function to display text in an indented box<a class="headerlink" href="#helper-function-to-display-text-in-an-indented-box" title="Link to this heading">#</a></h2>
+<p>(You don’t need to worry about how this works. This is that function that helps display posts in indented boxes)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span>
+<span class="kn">import</span> <span class="nn">html</span>
+<span class="k">def</span> <span class="nf">display_indented</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">left_margin</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="n">display</span><span class="p">(</span>
+        <span class="n">HTML</span><span class="p">(</span>
+            <span class="s2">&quot;&lt;pre style=&#39;border:solid 1px;padding:3px;margin-left:&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">left_margin</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;px&#39;&gt;&quot;</span> <span class="o">+</span> 
+            <span class="n">html</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">+</span> 
+            <span class="s2">&quot;&lt;/pre&gt;&quot;</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="helper-function-to-reconstruct-reply-tree">
+<h2>Helper function to reconstruct reply tree<a class="headerlink" href="#helper-function-to-reconstruct-reply-tree" title="Link to this heading">#</a></h2>
+<p>(You don’t need to worry about how this works. This is that function that helps take the list of posts from the channel history and organize it into a proper reply tree structure)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">def</span> <span class="nf">reconstruct_reply_tree</span><span class="p">(</span><span class="n">recent_posts</span><span class="p">):</span>
+    <span class="c1"># make a post + replies entry for each post (replies empty for now)</span>
+    <span class="n">posts_with_replies_info</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;post&quot;</span><span class="p">:</span> <span class="n">recent_post</span><span class="p">,</span> <span class="s2">&quot;replies&quot;</span><span class="p">:</span> <span class="p">[]}</span> <span class="k">for</span> <span class="n">recent_post</span> <span class="ow">in</span> <span class="n">recent_posts</span><span class="p">]</span>
+    
+    <span class="c1"># create look-up dictionary for the post+replies entries based on the post id</span>
+    <span class="n">post_with_replies_lookup</span> <span class="o">=</span> <span class="p">{</span><span class="n">post_with_replies</span><span class="p">[</span><span class="s2">&quot;post&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">id</span><span class="p">:</span> <span class="n">post_with_replies</span> <span class="k">for</span> <span class="n">post_with_replies</span> <span class="ow">in</span> <span class="n">posts_with_replies_info</span><span class="p">}</span>
+    
+    <span class="c1"># start a list that will become our post tree</span>
+    <span class="n">post_tree</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="c1"># go through all the posts_with_replies_info, and either add them to the post they are in </span>
+    <span class="c1"># reply to (if htey are a reply), or add them directly to the post_tree otherwise</span>
+    <span class="k">for</span> <span class="n">post_with_replies</span> <span class="ow">in</span> <span class="n">posts_with_replies_info</span><span class="p">:</span>
+        
+        <span class="k">if</span><span class="p">(</span><span class="n">post_with_replies</span><span class="p">[</span><span class="s2">&quot;post&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">discord</span><span class="o">.</span><span class="n">MessageType</span><span class="o">.</span><span class="n">reply</span><span class="p">):</span>
+            <span class="c1"># if post is a reply, find what it is a reply to and add it to the replies list of that post</span>
+            <span class="n">reply_to_id</span> <span class="o">=</span> <span class="n">post_with_replies</span><span class="p">[</span><span class="s2">&quot;post&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">reference</span><span class="o">.</span><span class="n">message_id</span>
+
+            <span class="k">if</span> <span class="n">reply_to_id</span> <span class="ow">in</span> <span class="n">post_with_replies_lookup</span><span class="p">:</span>
+                <span class="c1"># if we find the post this was a reply to, </span>
+                <span class="c1"># add this post_with_replies to the replies of that post_with_replies info</span>
+                <span class="n">reply_to_post_with_replies_info</span> <span class="o">=</span> <span class="n">post_with_replies_lookup</span><span class="p">[</span><span class="n">reply_to_id</span><span class="p">]</span>
+
+                <span class="n">reply_to_post_with_replies_info</span><span class="p">[</span><span class="s1">&#39;replies&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">post_with_replies</span><span class="p">)</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># if we couldn&#39;t find the post this was in reply to, print warning and</span>
+                <span class="c1"># just add it as a regular post</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warning could not find post: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">reply_to_id</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;, which message &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post_with_replies</span><span class="p">[</span><span class="s2">&quot;post&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">id</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; replied to&quot;</span><span class="p">)</span>
+                <span class="n">post_tree</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">post_with_replies</span><span class="p">)</span>
+        
+        <span class="k">else</span><span class="p">:</span> <span class="c1"># not a reply, just add to post_tree directly</span>
+            <span class="n">post_tree</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">post_with_replies</span><span class="p">)</span>
+            
+    <span class="k">return</span> <span class="n">post_tree</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="helper-function-to-load-the-recent-posts-from-channel-return-the-reply-tree">
+<h2>Helper function to load the recent posts from channel return the reply tree<a class="headerlink" href="#helper-function-to-load-the-recent-posts-from-channel-return-the-reply-tree" title="Link to this heading">#</a></h2>
+<p>(You don’t need to worry about how this works. This is that function that gets the recent history from a channel, and then uses the <code class="docutils literal notranslate"><span class="pre">reconstruct_reply_tree</span></code> function to turn them into a reply tree data structure. By default, the <code class="docutils literal notranslate"><span class="pre">hist_limit</span></code> is set to get the most recent 30 posts.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_channel_post_tree</span><span class="p">(</span><span class="n">channel_id</span><span class="p">,</span> <span class="n">hist_limit</span><span class="o">=</span><span class="mi">30</span><span class="p">):</span>
+    <span class="c1"># set up discord connection</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">intents</span><span class="o">=</span><span class="n">intents</span><span class="p">)</span>
+
+    <span class="c1"># Provide instructions for what your discord bot should do once it has logged in</span>
+    <span class="nd">@client</span><span class="o">.</span><span class="n">event</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">on_ready</span><span class="p">():</span>
+        <span class="k">global</span> <span class="n">reply_tree</span> <span class="c1"># Save the reply_tree variable outside our running bot</span>
+
+        <span class="c1"># Load the discord channel you want to read from</span>
+        <span class="n">channel</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_channel</span><span class="p">(</span><span class="n">channel_id</span><span class="p">)</span>
+
+        <span class="c1"># Get the latest post in the channel history</span>
+        <span class="n">post_history</span> <span class="o">=</span> <span class="n">channel</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="n">hist_limit</span><span class="p">)</span>
+
+        <span class="c1">#special code to turn the post_history from discord into a python list</span>
+        <span class="n">recent_posts</span> <span class="o">=</span> <span class="p">[</span><span class="n">post</span> <span class="k">async</span> <span class="k">for</span> <span class="n">post</span> <span class="ow">in</span> <span class="n">post_history</span><span class="p">]</span>
+
+        <span class="n">reply_tree</span> <span class="o">=</span> <span class="k">await</span> <span class="n">reconstruct_reply_tree</span><span class="p">(</span><span class="n">recent_posts</span><span class="p">)</span>
+
+        <span class="c1"># Tell your bot to stop running</span>
+        <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="c1"># Now that we&#39;ve defined how the bot shoould work, start running your bot</span>
+    <span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">discord_token</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">reply_tree</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="code-to-print-a-channel-s-recent-posts-and-replies">
+<h2>Code to print a channel’s recent posts and replies<a class="headerlink" href="#code-to-print-a-channel-s-recent-posts-and-replies" title="Link to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">print_channel_post_and_replies</span></code> is a function that takes a channel_id, loads the reply post_tree from that channel, and then uses the <code class="docutils literal notranslate"><span class="pre">print_post_and_replies</span></code> function to print out all posts and replies. By default, <code class="docutils literal notranslate"><span class="pre">hist_limit</span></code> is set to load the most recent 30 posts (but you can change it up to 100).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_channel_post_and_replies</span><span class="p">(</span><span class="n">channel_id</span><span class="p">,</span> <span class="n">hist_limit</span><span class="o">=</span><span class="mi">30</span><span class="p">):</span>
+    <span class="n">post_tree</span> <span class="o">=</span> <span class="n">get_channel_post_tree</span><span class="p">(</span><span class="n">channel_id</span><span class="p">,</span> <span class="n">hist_limit</span><span class="o">=</span><span class="n">hist_limit</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Below are the posts and replies for post from channel &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">channel_id</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">post_with_replies_info</span> <span class="ow">in</span> <span class="n">post_tree</span><span class="p">:</span>
+        <span class="n">print_post_and_replies</span><span class="p">(</span><span class="n">post_with_replies_info</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">print_post_and_replies</span></code> function takes a given <code class="docutils literal notranslate"><span class="pre">post_with_replies_info</span></code> and recursively prints that post as well as all replies to that post (which will as well as all replies to those replies, etc.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_post_and_replies</span><span class="p">(</span><span class="n">post_with_replies_info</span><span class="p">,</span> <span class="n">num_indents</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    
+    <span class="c1"># for convenience save the post and replies info in variables</span>
+    <span class="n">post</span> <span class="o">=</span> <span class="n">post_with_replies_info</span><span class="p">[</span><span class="s2">&quot;post&quot;</span><span class="p">]</span>
+    <span class="n">replies</span> <span class="o">=</span> <span class="n">post_with_replies_info</span><span class="p">[</span><span class="s2">&quot;replies&quot;</span><span class="p">]</span>
+
+    <span class="c1"># save the text to display in a post box</span>
+    <span class="n">display_text</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">content</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+        <span class="s2">&quot;-- &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">author</span><span class="p">)</span>
+    <span class="p">)</span>
+    
+    <span class="c1"># display the text of this post, indented over</span>
+    <span class="n">display_indented</span><span class="p">(</span><span class="n">display_text</span><span class="p">,</span> <span class="n">num_indents</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span>
+
+    <span class="c1">#print replies (and the replies of those, etc.)</span>
+    <span class="k">for</span> <span class="n">reply</span> <span class="ow">in</span> <span class="n">replies</span><span class="p">:</span>
+        <span class="n">print_post_and_replies</span><span class="p">(</span><span class="n">reply</span><span class="p">,</span> <span class="n">num_indents</span> <span class="o">=</span> <span class="n">num_indents</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="test-our-code-on-discord-channel">
+<h2>Test our code on discord channel<a class="headerlink" href="#test-our-code-on-discord-channel" title="Link to this heading">#</a></h2>
+<p>In order to test it out, we just need to get a discord channel id and pass it to the <code class="docutils literal notranslate"><span class="pre">print_post_and_replies</span></code> function. If there are any replies (not threads) in the recent history, we will see them formatted as a reply tree.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_channel_post_and_replies</span><span class="p">(</span><span class="mi">5432167890</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake discord is pretending to set up a client connection</strong></div><div class="output text_html"><strong style='color:darkred'>Fake discord bot is fake logging in and starting to run</strong></div><div class="output text_html"><strong style='color:darkred'>Fake discord bot is shutting down</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Below are the posts and replies for post from channel 5432167890:
+</pre></div>
+</div>
+<div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-left:0px'>I saw a movie once!
+-- fake_user</pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-left:20px'>I saw one too!
+-- pretend_user</pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-left:40px'>What a coincidence!
+-- fake_user</pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-left:40px'>I never saw a movie :(
+-- imaginary_user</pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-left:0px'>Good morning everyone!
+-- imaginary_user</pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-left:20px'>Actually, it&#x27;s night where I am right now.
+-- pretend_user</pre></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_channel_post_and_replies</span><span class="p">(</span><span class="mi">5432167890</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake discord is pretending to set up a client connection</strong></div><div class="output text_html"><strong style='color:darkred'>Fake discord bot is fake logging in and starting to run</strong></div><div class="output text_html"><strong style='color:darkred'>Fake discord bot is shutting down</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Below are the posts and replies for post from channel 5432167890:
+</pre></div>
+</div>
+<div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-left:0px'>I saw a movie once!
+-- fake_user</pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-left:20px'>I saw one too!
+-- pretend_user</pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-left:40px'>What a coincidence!
+-- fake_user</pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-left:40px'>I never saw a movie :(
+-- imaginary_user</pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-left:0px'>Good morning everyone!
+-- imaginary_user</pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-left:20px'>Actually, it&#x27;s night where I am right now.
+-- pretend_user</pre></div></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -794,6 +1065,26 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discord-setup">Discord Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#helper-function-to-display-text-in-an-indented-box">Helper function to display text in an indented box</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#helper-function-to-reconstruct-reply-tree">Helper function to reconstruct reply tree</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#helper-function-to-load-the-recent-posts-from-channel-return-the-reply-tree">Helper function to load the recent posts from channel return the reply tree</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-to-print-a-channel-s-recent-posts-and-replies">Code to print a channel’s recent posts and replies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-our-code-on-discord-channel">Test our code on discord channel</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

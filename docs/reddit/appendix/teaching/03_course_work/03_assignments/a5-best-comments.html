@@ -770,7 +770,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-to-print-a-post-with-all-comments-and-replies">Code to print a post with all comments and replies</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-create-your-content-moderation-algorithm">TODO: Create Your Content Moderation Algorithm</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-post-ids-and-testing-our-code">Finding post IDs and testing our code</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-test-it-with-3-tweet-threads">TODO! Test it with 3 tweet threads</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-test-it-with-3-reddid-threads">TODO! Test it with 3 reddid threads</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-print-reddit-thread-1">TODO: Print reddit thread 1</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-reddit-thread-1-follow-up-questions">TODO: Reddit thread 1 follow-up questions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-print-reddit-thread-2">TODO: Print reddit thread 2</a></li>
@@ -894,7 +894,7 @@ document.write(`
         <span class="s2">&quot; (score &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">comment</span><span class="o">.</span><span class="n">score</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span>
     <span class="p">)</span>
     
-    <span class="k">if</span><span class="p">(</span><span class="n">should_display</span><span class="p">(</span><span class="n">comment</span><span class="p">)):</span><span class="c1"># should_display(tweet_with_replies, tweet_info, replies, author_info, public_metrics)):</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">should_display</span><span class="p">(</span><span class="n">comment</span><span class="p">)):</span><span class="c1"># check if we should display this comment</span>
         <span class="n">display_indented</span><span class="p">(</span><span class="n">display_text</span><span class="p">,</span> <span class="n">num_indents</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span>
 
         <span class="c1">#print replies (and the replies of those, etc.)</span>
@@ -914,14 +914,14 @@ document.write(`
 <p>When you are making your rule you may want to use different comparison operators (like == for equals, &gt; for greater than, etc.) and different logical operators (like <code class="docutils literal notranslate"><span class="pre">and</span></code> for both things must be true, <code class="docutils literal notranslate"><span class="pre">or</span></code> for at least one thing must be true, etc.). See a list of operators here: https://www.w3schools.com/python/python_operators.asp</p>
 <p>Some things you can use when you are deciding whether to display a tweet or not:</p>
 <ul class="simple">
-<li><p>The text of the commnet: <code class="docutils literal notranslate"><span class="pre">comment.body</span></code></p></li>
+<li><p>The text of the comment: <code class="docutils literal notranslate"><span class="pre">comment.body</span></code></p></li>
 <li><p>The score of the comment: <code class="docutils literal notranslate"><span class="pre">comment.score</span></code></p></li>
 <li><p>If the comment is “distinguished”: <code class="docutils literal notranslate"><span class="pre">comment.distinguished</span></code></p></li>
 <li><p>If the comment was edited: <code class="docutils literal notranslate"><span class="pre">comment.edited</span></code></p></li>
 <li><p>If the comment was made by the author of the original post: <code class="docutils literal notranslate"><span class="pre">comment.is_submitter</span></code></p></li>
 <li><p>The number of replies: <code class="docutils literal notranslate"><span class="pre">len(comment.replies)</span></code></p></li>
 </ul>
-<p>You can see more by looking at the official documentation for [lists of attributes of a comment](https://praw.readthedocs.io/en/stable/code_overview/models/comment.html.</p>
+<p>You can see more by looking at the official documentation for <a class="reference external" href="https://praw.readthedocs.io/en/stable/code_overview/models/comment.html">lists of attributes of a comment</a></p>
 <p>You can also look at attributes of the author such as (though you’ll have to do an extra <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">comment.author</span></code> check to make sure the author exists):</p>
 <ul class="simple">
 <li><p>author name: <code class="docutils literal notranslate"><span class="pre">comment.author.name</span></code></p></li>
@@ -986,8 +986,8 @@ document.write(`
 -- PretendAuthor (score 1)</pre></div></div>
 </div>
 </section>
-<section id="todo-test-it-with-3-tweet-threads">
-<h2>TODO! Test it with 3 tweet threads<a class="headerlink" href="#todo-test-it-with-3-tweet-threads" title="Link to this heading">#</a></h2>
+<section id="todo-test-it-with-3-reddid-threads">
+<h2>TODO! Test it with 3 reddid threads<a class="headerlink" href="#todo-test-it-with-3-reddid-threads" title="Link to this heading">#</a></h2>
 <p>Now, after you’ve modified the <code class="docutils literal notranslate"><span class="pre">should_display</span></code>, try testing out your algorithm on three new posts, answering follow up questions after each one.</p>
 <p>In the sections below, replace the <code class="docutils literal notranslate"><span class="pre">?????</span></code>s with a reddit post id, and run the code. Then answer the questions about how that went.</p>
 <p>At the very end will be more reflection questions.</p>
@@ -1012,9 +1012,9 @@ document.write(`
 <h3>TODO: Reddit thread 1 follow-up questions<a class="headerlink" href="#todo-reddit-thread-1-follow-up-questions" title="Link to this heading">#</a></h3>
 <p>Write an answer in response to each of these questions (you can edit this text by double clicking it):</p>
 <p>Look through the output of <code class="docutils literal notranslate"><span class="pre">print_post_and_replies()</span></code> based on your modified <code class="docutils literal notranslate"><span class="pre">should_display</span></code> function.</p>
-<p>Did your function tend to keep most tweets or tend to hide most tweets?</p>
+<p>Did your function tend to keep most posts or tend to hide most posts?</p>
 <p>TODO: Your answer here</p>
-<p>Do you see any pattern to the contents of the tweets you showed versus hid (e.g., did it actually select better quality or more interesting tweets)?</p>
+<p>Do you see any pattern to the contents of the posts you showed versus hid (e.g., did it actually select better quality or more interesting posts)?</p>
 <p>TODO: Your answer here</p>
 </section>
 <section id="todo-print-reddit-thread-2">
@@ -1038,9 +1038,9 @@ document.write(`
 <h3>TODO: Reddit thread 2 follow-up questions<a class="headerlink" href="#todo-reddit-thread-2-follow-up-questions" title="Link to this heading">#</a></h3>
 <p>Write an answer in response to each of these questions (you can edit this text by double clicking it):</p>
 <p>Look through the output of <code class="docutils literal notranslate"><span class="pre">print_post_and_replies()</span></code> based on your modified <code class="docutils literal notranslate"><span class="pre">should_display</span></code> function.</p>
-<p>Did your function tend to keep most tweets or tend to hide most tweets?</p>
+<p>Did your function tend to keep most posts or tend to hide most posts?</p>
 <p>TODO: Your answer here</p>
-<p>Do you see any pattern to the contents of the tweets you showed versus hid (e.g., did it actually select better quality or more interesting tweets)?</p>
+<p>Do you see any pattern to the contents of the posts you showed versus hid (e.g., did it actually select better quality or more interesting posts)?</p>
 <p>TODO: Your answer here</p>
 </section>
 <section id="todo-print-reddit-thread-3">
@@ -1064,9 +1064,9 @@ document.write(`
 <h3>TODO: Reddit thread 3 follow-up questions<a class="headerlink" href="#todo-reddit-thread-3-follow-up-questions" title="Link to this heading">#</a></h3>
 <p>Write an answer in response to each of these questions (you can edit this text by double clicking it):</p>
 <p>Look through the output of <code class="docutils literal notranslate"><span class="pre">print_post_and_replies()</span></code> based on your modified <code class="docutils literal notranslate"><span class="pre">should_display</span></code> function.</p>
-<p>Did your function tend to keep most tweets or tend to hide most tweets?</p>
+<p>Did your function tend to keep most posts tend to hide most posts?</p>
 <p>TODO: Your answer here</p>
-<p>Do you see any pattern to the contents of the tweets you showed versus hid (e.g., did it actually select better quality or more interesting tweets)?</p>
+<p>Do you see any pattern to the contents of the posts you showed versus hid (e.g., did it actually select better quality or more interesting posts)?</p>
 <p>TODO: Your answer here</p>
 </section>
 </section>
@@ -1159,7 +1159,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-to-print-a-post-with-all-comments-and-replies">Code to print a post with all comments and replies</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-create-your-content-moderation-algorithm">TODO: Create Your Content Moderation Algorithm</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-post-ids-and-testing-our-code">Finding post IDs and testing our code</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-test-it-with-3-tweet-threads">TODO! Test it with 3 tweet threads</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-test-it-with-3-reddid-threads">TODO! Test it with 3 reddid threads</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-print-reddit-thread-1">TODO: Print reddit thread 1</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-reddit-thread-1-follow-up-questions">TODO: Reddit thread 1 follow-up questions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-print-reddit-thread-2">TODO: Print reddit thread 2</a></li>

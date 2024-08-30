@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>13.5. Demo: Only positive news &#8212; Social Media, Ethics, and Automation</title>
+    <title>13.5. Demo: Only positive posts &#8212; Social Media, Ethics, and Automation</title>
   
   
   
@@ -388,7 +388,7 @@
 <li class="toctree-l2"><a class="reference internal" href="02_unhealthy_activities.html">13.2. Unhealthy Activities on Social Media</a></li>
 <li class="toctree-l2"><a class="reference internal" href="03_healthy_activities.html">13.3. Healthy Activities on Social Media</a></li>
 <li class="toctree-l2"><a class="reference internal" href="04_mental_health_detection.html">13.4. Mental Health Detection</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">13.5. Demo: Only positive news</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">13.5. Demo: Only positive posts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="06_design_activity_mental_health.html">13.6. Design Analysis: Mental Health</a></li>
 <li class="toctree-l2"><a class="reference internal" href="07_reflections.html">13.7. Reflection questions on mental health</a></li>
 <li class="toctree-l2"><a class="reference internal" href="08_bibliography.html">13.8. Bibliography</a></li>
@@ -404,7 +404,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../ch14_moderation/06_comments_and_replies/00_intro.html">14.7. Viewing Comments and Replies</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ch14_moderation/06_comments_and_replies/01_trees.html">14.7.1. Tree Structures</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ch14_moderation/06_comments_and_replies/02_demo_recursion.html">14.7.2. Demo: Navigating Trees (recursion)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ch14_moderation/06_comments_and_replies/03_demo_recursion_real.html">14.7.3. Demo: Display Real Reddit Comments and Replies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ch14_moderation/06_comments_and_replies/03_demo_recursion_real.html">14.7.3. Demo: Display Real Discord Comments and Replies</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ch14_moderation/06_comments_and_replies/04_demo_hide_some_replies.html">14.7.4. Demo: Hide Some Comments</a></li>
 </ul>
 </details></li>
@@ -583,6 +583,37 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/social-media-ethics-automation/book-src-discord/main?urlpath=lab/tree/ch13_mental_health/05_demo_only_positive_news.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -638,7 +669,7 @@
       
       
       
-      <li><a href="../_sources/ch13_mental_health/05_demo_only_positive_news.md" target="_blank"
+      <li><a href="../_sources/ch13_mental_health/05_demo_only_positive_news.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -648,7 +679,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -709,7 +740,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -720,11 +753,24 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Demo: Only positive news</h1>
+    <h1>Demo: Only positive posts</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discord-setup">13.5.1. Discord Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-sentiment-analyis-code">13.5.2. Load sentiment analyis code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-posts-from-a-discord-channel">13.5.3. Load posts from a discord channel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todo">13.5.4. TODO:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loop-through-posts-and-only-display-good-news">13.5.5. Loop through posts and only display good news</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#try-it-out-on-real-discord">13.5.6. Try it out on real Discord</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -734,10 +780,146 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="demo-only-positive-news">
-<h1><span class="section-number">13.5. </span>Demo: Only positive news<a class="headerlink" href="#demo-only-positive-news" title="Link to this heading">#</a></h1>
+  <section id="demo-only-positive-posts">
+<h1><span class="section-number">13.5. </span>Demo: Only positive posts<a class="headerlink" href="#demo-only-positive-posts" title="Link to this heading">#</a></h1>
 <p><em>Choose Social Media Platform: <a href='../../reddit/ch13_mental_health/05_demo_only_positive_news.html'>Reddit</a> | <strong>Discord</strong> | <a href='../../bsky/ch13_mental_health/05_demo_only_positive_news.html'>Bluesky</a> | <a href='../../nocode/ch13_mental_health/05_demo_only_positive_news.html'>No Coding</a></em></p>
-<p><strong>Content for the social media platform Discord hasn’t been created yet. Please try another platform.</strong></p>
+<p>Let’s look at something we could try to do to improve the mental health for our users: Only show positive posts!</p>
+<p>We’ll use sentiment analysis again, but this time we’ll only display the tweets with a positive sentiment.</p>
+<p>Would this actually improve someone’s mental health? It’s hard to say! But we can see something that we might try out if we wanted to improve mental health of our users.</p>
+<section id="discord-setup">
+<h2><span class="section-number">13.5.1. </span>Discord Setup<a class="headerlink" href="#discord-setup" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;discord&quot; that will help us work with Discord</span>
+<span class="kn">import</span> <span class="nn">discord</span>
+
+<span class="c1"># Load another library that helps the bot work in Jupyter Noteboook</span>
+<span class="kn">import</span> <span class="nn">nest_asyncio</span>
+<span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>(optional) make a fake Discord connection with the fake_discord library</p>
+<p>For testing purposes, we’ve added this line of code, which loads a fake version of discord, so it wont actually connect to Discord. <strong>If you want to try to actually connect to Discord, don’t run this line of code.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../fake_apis/fake_discord.ipynb
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake discord is replacing the discord.py library. Fake discord doesn&#x27;t need real passwords, and prevents you from accessing real discord</strong></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set up your Discord connection</span>
+<span class="c1"># TODO: put the discord token for your bot below</span>
+<span class="n">discord_token</span> <span class="o">=</span> <span class="s2">&quot;m#5@_fake_discord_token_$%Ds&quot;</span>
+
+<span class="c1"># set up Discord client with permissions to read message_contents</span>
+<span class="n">intents</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Intents</span><span class="o">.</span><span class="n">default</span><span class="p">()</span>
+<span class="n">intents</span><span class="o">.</span><span class="n">message_content</span> <span class="o">=</span> <span class="kc">True</span> 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="load-sentiment-analyis-code">
+<h2><span class="section-number">13.5.2. </span>Load sentiment analyis code<a class="headerlink" href="#load-sentiment-analyis-code" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">([</span><span class="s2">&quot;vader_lexicon&quot;</span><span class="p">])</span>
+<span class="kn">from</span> <span class="nn">nltk.sentiment</span> <span class="kn">import</span> <span class="n">SentimentIntensityAnalyzer</span>
+<span class="n">sia</span> <span class="o">=</span> <span class="n">SentimentIntensityAnalyzer</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package vader_lexicon to
+[nltk_data]     C:\Users\kmthayer\AppData\Roaming\nltk_data...
+[nltk_data]   Package vader_lexicon is already up-to-date!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="load-posts-from-a-discord-channel">
+<h2><span class="section-number">13.5.3. </span>Load posts from a discord channel<a class="headerlink" href="#load-posts-from-a-discord-channel" title="Link to this heading">#</a></h2>
+<p>We’ll load a set of posts from a discord channel (if you are doing this on real discord, you’ll have to put the correct <code class="docutils literal notranslate"><span class="pre">channel_id</span></code> in the code). Hopefully the posts will have some images.</p>
+</section>
+<section id="todo">
+<h2><span class="section-number">13.5.4. </span>TODO:<a class="headerlink" href="#todo" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Load history of channel</p></li>
+<li><p>go through all messages and reconstruct reply tree (not in reply means root message, otherwise put in tree)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set up discord connection</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">intents</span><span class="o">=</span><span class="n">intents</span><span class="p">)</span>
+
+<span class="c1"># TODO: put the discord channel id number below for the channel you want to use</span>
+<span class="n">channel_id</span> <span class="o">=</span> <span class="mi">123456789</span>
+
+<span class="c1"># Provide instructions for what your discord bot should do once it has logged in</span>
+<span class="nd">@client</span><span class="o">.</span><span class="n">event</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_ready</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">recent_posts</span> <span class="c1"># Save the recent_posts variable outside our running bot</span>
+    
+    <span class="c1"># Load the discord channel you want to read from</span>
+    <span class="n">channel</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_channel</span><span class="p">(</span><span class="n">channel_id</span><span class="p">)</span>
+
+    <span class="c1"># Get the latest post in the channel history</span>
+    <span class="n">post_history</span> <span class="o">=</span> <span class="n">channel</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    
+    <span class="c1">#special code to turn the post_history from discord into a python list</span>
+    <span class="n">recent_posts</span> <span class="o">=</span> <span class="p">[</span><span class="n">post</span> <span class="k">async</span> <span class="k">for</span> <span class="n">post</span> <span class="ow">in</span> <span class="n">post_history</span><span class="p">]</span>
+
+    <span class="c1"># Tell your bot to stop running</span>
+    <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    
+<span class="c1"># Now that we&#39;ve defined how the bot shoould work, start running your bot</span>
+<span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">discord_token</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake discord is pretending to set up a client connection</strong></div><div class="output text_html"><strong style='color:darkred'>Fake discord bot is fake logging in and starting to run</strong></div><div class="output text_html"><strong style='color:darkred'>Fake discord bot is shutting down</strong></div></div>
+</div>
+</section>
+<section id="loop-through-posts-and-only-display-good-news">
+<h2><span class="section-number">13.5.5. </span>Loop through posts and only display good news<a class="headerlink" href="#loop-through-posts-and-only-display-good-news" title="Link to this heading">#</a></h2>
+<p>Now we will make a modified version of the code that computed the sentiment of each post (in the Data Mining chapter) and only displays the posts with positive sentiment.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">post</span> <span class="ow">in</span> <span class="n">recent_posts</span><span class="p">:</span>
+    
+    <span class="c1">#calculate sentiment</span>
+    <span class="n">post_sentiment</span> <span class="o">=</span> <span class="n">sia</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">content</span><span class="p">)[</span><span class="s2">&quot;compound&quot;</span><span class="p">]</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">post_sentiment</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Breaking news: A lovely cat took a nice long nap today!
+
+Breaking news: Some grandparents made some yummy cookies for all the kids to share!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="try-it-out-on-real-discord">
+<h2><span class="section-number">13.5.6. </span>Try it out on real Discord<a class="headerlink" href="#try-it-out-on-real-discord" title="Link to this heading">#</a></h2>
+<p>If you want, you can skip the fake_discord step and try it out on real Discord, from whatever channel you want</p>
+<p>Did it work like you expected?</p>
+<p>You can also only show negative sentiment submissions (sentiment &lt; 0) if you want to see only negative posts.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -794,6 +976,26 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discord-setup">13.5.1. Discord Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-sentiment-analyis-code">13.5.2. Load sentiment analyis code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-posts-from-a-discord-channel">13.5.3. Load posts from a discord channel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todo">13.5.4. TODO:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loop-through-posts-and-only-display-good-news">13.5.5. Loop through posts and only display good news</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#try-it-out-on-real-discord">13.5.6. Try it out on real Discord</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
