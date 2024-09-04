@@ -313,7 +313,7 @@
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../ch08_data_mining/00_data_mining.html">8. Data Mining</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../ch08_data_mining/01_data_sources.html">8.1. Sources of Social Media Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ch08_data_mining/02_platform_api_data.html">8.2. Data From a Social Media API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch08_data_mining/02_platform_api_data.html">8.2. Data From the Discord API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch08_data_mining/03_data_mining.html">8.3. Mining Social Media Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch08_data_mining/04_data_uses.html">8.4. How is this data used</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch08_data_mining/05_what_platforms_think_of_you.html">8.5. Activity: What platforms think of you</a></li>
@@ -508,7 +508,7 @@
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/00_intro.html">24.3.3. Programming Assignments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/a1_make_7_posts.html">A1: Make 7 Discord Posts</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/a2_another_site.html">A2: Try another site</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/a3_troll_reply_bot.html">A3: Trolling a Reply Bot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/a3_troll_reply_bot.html">A3: Trolling a Discord Command Bot</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/a4-political-bias.html">A4: Political Bias</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/a5-best-comments.html">A5: Best Comments</a></li>
 </ul>
@@ -972,24 +972,6 @@ document.write(`
 <section id="test-our-code-on-discord-channel">
 <h2>Test our code on discord channel<a class="headerlink" href="#test-our-code-on-discord-channel" title="Link to this heading">#</a></h2>
 <p>In order to test it out, we just need to get a discord channel id and pass it to the <code class="docutils literal notranslate"><span class="pre">print_post_and_replies</span></code> function. If there are any replies (not threads) in the recent history, we will see them formatted as a reply tree.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_channel_post_and_replies</span><span class="p">(</span><span class="mi">5432167890</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake discord is pretending to set up a client connection</strong></div><div class="output text_html"><strong style='color:darkred'>Fake discord bot is fake logging in and starting to run</strong></div><div class="output text_html"><strong style='color:darkred'>Fake discord bot is shutting down</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Below are the posts and replies for post from channel 5432167890:
-</pre></div>
-</div>
-<div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-left:0px'>I saw a movie once!
--- fake_user</pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-left:20px'>I saw one too!
--- pretend_user</pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-left:40px'>What a coincidence!
--- fake_user</pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-left:40px'>I never saw a movie :(
--- imaginary_user</pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-left:0px'>Good morning everyone!
--- imaginary_user</pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-left:20px'>Actually, it&#x27;s night where I am right now.
--- pretend_user</pre></div></div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_channel_post_and_replies</span><span class="p">(</span><span class="mi">5432167890</span><span class="p">)</span>

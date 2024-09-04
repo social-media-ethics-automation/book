@@ -63,7 +63,7 @@
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="A5: Best Comments" href="a5-best-comments.html" />
-    <link rel="prev" title="A3: Trolling a Reply Bot" href="a3_troll_reply_bot.html" />
+    <link rel="prev" title="A3: Trolling a Discord Command Bot" href="a3_troll_reply_bot.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -313,7 +313,7 @@
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../../ch08_data_mining/00_data_mining.html">8. Data Mining</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../ch08_data_mining/01_data_sources.html">8.1. Sources of Social Media Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../ch08_data_mining/02_platform_api_data.html">8.2. Data From a Social Media API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../ch08_data_mining/02_platform_api_data.html">8.2. Data From the Discord API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../ch08_data_mining/03_data_mining.html">8.3. Mining Social Media Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../ch08_data_mining/04_data_uses.html">8.4. How is this data used</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../ch08_data_mining/05_what_platforms_think_of_you.html">8.5. Activity: What platforms think of you</a></li>
@@ -508,7 +508,7 @@
 <li class="toctree-l3 current active has-children"><a class="reference internal" href="00_intro.html">24.3.3. Programming Assignments</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="a1_make_7_posts.html">A1: Make 7 Discord Posts</a></li>
 <li class="toctree-l4"><a class="reference internal" href="a2_another_site.html">A2: Try another site</a></li>
-<li class="toctree-l4"><a class="reference internal" href="a3_troll_reply_bot.html">A3: Trolling a Reply Bot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="a3_troll_reply_bot.html">A3: Trolling a Discord Command Bot</a></li>
 <li class="toctree-l4 current active"><a class="current reference internal" href="#">A4: Political Bias</a></li>
 <li class="toctree-l4"><a class="reference internal" href="a5-best-comments.html">A5: Best Comments</a></li>
 </ul>
@@ -583,6 +583,37 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/social-media-ethics-automation/book-src-discord/main?urlpath=lab/tree/appendix/teaching/03_course_work/03_assignments/a4-political-bias.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -638,7 +669,7 @@
       
       
       
-      <li><a href="../../../../_sources/appendix/teaching/03_course_work/03_assignments/a4-political-bias.md" target="_blank"
+      <li><a href="../../../../_sources/appendix/teaching/03_course_work/03_assignments/a4-political-bias.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -648,7 +679,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -709,7 +740,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -725,6 +758,19 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discord-setup">Discord Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-fill-in-bias-and-reliability-info">TODO: Fill in Bias and Reliability Info</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-bias-and-reliability-info">Load Bias and Reliability Info</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-a-list-of-discord-posts">find a List of discord posts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-modify-the-code-below-run-search">TODO: Modify the code below (Run Search)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection-tasks">Reflection tasks</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -737,7 +783,215 @@ document.write(`
   <section id="a4-political-bias">
 <h1>A4: Political Bias<a class="headerlink" href="#a4-political-bias" title="Link to this heading">#</a></h1>
 <p><em>Choose Social Media Platform: <a href='../../../../../reddit/appendix/teaching/03_course_work/03_assignments/a4-political-bias.html'>Reddit</a> | <strong>Discord</strong> | <a href='../../../../../bsky/appendix/teaching/03_course_work/03_assignments/a4-political-bias.html'>Bluesky</a> | <a href='../../../../../nocode/appendix/teaching/03_course_work/03_assignments/a4-political-bias.html'>No Coding</a></em></p>
-<p><strong>Content for the social media platform Discord hasn’t been created yet. Please try another platform.</strong></p>
+<p>In this assignment, you will be trying to calculate the average political bias and reliability of posts in a Discord channel.</p>
+<p><strong>Note: It may be hard to get your bot permission to read the history of a discord channel that would have interesting data. You may consider doing this assignment in another social media platform, or, if you may consider having your instructor copy content from another social media platform into discord channels you can more easily get access to.</strong></p>
+<p>The code you are starting with here already does a search on a (fake) discord channel and finds the reliability and political bias of url web addresses posted to the channel. You will need to add loop variables to calculate these averages (see chapter 8 practice and demos).</p>
+<p>After you get the averages to work, you wll then try your code on other discord channels, and then you will answer some reflection questions.</p>
+<p>First, we’ll do our normal Discord login steps.</p>
+<section id="discord-setup">
+<h2>Discord Setup<a class="headerlink" href="#discord-setup" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;discord&quot; that will help us work with Discord</span>
+<span class="kn">import</span> <span class="nn">discord</span>
+
+<span class="c1"># Load another library that helps the bot work in Jupyter Noteboook</span>
+<span class="kn">import</span> <span class="nn">nest_asyncio</span>
+<span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>(optional) make a fake Discord connection with the fake_discord library</p>
+<p>For testing purposes, we’ve added this line of code, which loads a fake version of discord, so it wont actually connect to Discord. <strong>If you want to try to actually connect to Discord, don’t run this line of code.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../../../fake_apis/fake_discord.ipynb
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake discord is replacing the discord.py library. Fake discord doesn&#x27;t need real passwords, and prevents you from accessing real discord</strong></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> discord_keys.py
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set up Discord client with permissions to read message_contents</span>
+<span class="n">intents</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Intents</span><span class="o">.</span><span class="n">default</span><span class="p">()</span>
+<span class="n">intents</span><span class="o">.</span><span class="n">message_content</span> <span class="o">=</span> <span class="kc">True</span> 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="todo-fill-in-bias-and-reliability-info">
+<h2>TODO: Fill in Bias and Reliability Info<a class="headerlink" href="#todo-fill-in-bias-and-reliability-info" title="Link to this heading">#</a></h2>
+<p>The first step to make this work is to fill in info for the bias and reliability of different websites.</p>
+<p>If you open <code class="docutils literal notranslate"><span class="pre">media_info.csv</span></code>, you’ll see a bunch of partial website links (enough to identify which site the link is for), and then blank spots for the reliability and bias of that website news sources.</p>
+<p>You’ll use the <a class="reference external" href="https://adfontesmedia.com/interactive-media-bias-chart/">Media Bias chart</a> to look up one organizations ratings of bias and reliability info for each of those sites.</p>
+<p><img alt="A small preview of the media bias chart with bias on the top axis, and reliability on the left axis." src="../../../../_images/media_bias_chart_small.png" /></p>
+<p>So, open that file and then for each of the sites listed, fill in a number for the bias and reliability of the site (you’ll have to figure out how you want to turn bias and reliability into numbers). You can add additional sites as well if you want.</p>
+</section>
+<section id="load-bias-and-reliability-info">
+<h2>Load Bias and Reliability Info<a class="headerlink" href="#load-bias-and-reliability-info" title="Link to this heading">#</a></h2>
+<p>The code to load the bias and reliability info is in another file: <code class="docutils literal notranslate"><span class="pre">a4-supporting_code.ipynb</span></code>. You can look at that file if you are interested, but you are not required to.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># You can look in this file if you want to see more</span>
+<span class="c1"># about how the file information is loaded</span>
+<span class="o">%</span><span class="k">run</span> a4-supporting_code.ipynb
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="find-a-list-of-discord-posts">
+<h2>find a List of discord posts<a class="headerlink" href="#find-a-list-of-discord-posts" title="Link to this heading">#</a></h2>
+<p>We can now make a bot that loads a list of discord posts.</p>
+<p><em>Note: If you run this on real discord, we canâ€™t gurantee anything about how offensive what you might find is.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set up discord connection</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">discord</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">intents</span><span class="o">=</span><span class="n">intents</span><span class="p">)</span>
+
+<span class="c1"># TODO: put the discord channel id number below for the channel you want to use</span>
+<span class="n">channel_id</span> <span class="o">=</span> <span class="mi">123456789</span>
+
+<span class="c1"># Provide instructions for what your discord bot should do once it has logged in</span>
+<span class="nd">@client</span><span class="o">.</span><span class="n">event</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_ready</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">recent_posts</span> <span class="c1"># Save the recent_posts variable outside our running bot</span>
+    
+    <span class="c1"># Load the discord channel you want to post to</span>
+    <span class="n">channel</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_channel</span><span class="p">(</span><span class="n">channel_id</span><span class="p">)</span>
+
+    <span class="c1"># Get the latest post in the channel history</span>
+    <span class="n">post_history</span> <span class="o">=</span> <span class="n">channel</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    
+    <span class="c1">#special code to turn the post_history from discord into a python list</span>
+    <span class="n">recent_posts</span> <span class="o">=</span> <span class="p">[</span><span class="n">post</span> <span class="k">async</span> <span class="k">for</span> <span class="n">post</span> <span class="ow">in</span> <span class="n">post_history</span><span class="p">]</span>
+
+    <span class="c1"># Tell your bot to stop running</span>
+    <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    
+<span class="c1"># Now that we&#39;ve defined how the bot shoould work, start running your bot</span>
+<span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">discord_token</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake discord is pretending to set up a client connection</strong></div><div class="output text_html"><strong style='color:darkred'>Fake discord bot is fake logging in and starting to run</strong></div><div class="output text_html"><strong style='color:darkred'>Fake discord bot is shutting down</strong></div></div>
+</div>
+</section>
+<section id="todo-modify-the-code-below-run-search">
+<h2>TODO: Modify the code below (Run Search)<a class="headerlink" href="#todo-modify-the-code-below-run-search" title="Link to this heading">#</a></h2>
+<p>The code below loops through each reddit submission, and if the submission was a website url, the program checks to see if we have reliability/bias info on the site. If we have that info we calculate the bias and reliability and display it.</p>
+<p><strong>Your job</strong> is to add loop variables to the code to calculate the number of urls we had info for (<code class="docutils literal notranslate"><span class="pre">number_matched_urls</span></code>) and then the total bias and total reliability for those urls. Then you can use that at the end to calculate the average bias and average reliability.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#### TODO: make three loop variables here: ####</span>
+<span class="c1">#   number_matched_urls</span>
+<span class="c1">#   total_url_bias</span>
+<span class="c1">#   total_url_reliability</span>
+
+
+<span class="c1"># go through all the tweets</span>
+<span class="k">for</span> <span class="n">post</span> <span class="ow">in</span> <span class="n">recent_posts</span><span class="p">:</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+
+    <span class="c1"># go through any embedded website links in the post</span>
+    <span class="k">for</span> <span class="n">embed</span> <span class="ow">in</span> <span class="n">post</span><span class="o">.</span><span class="n">embeds</span><span class="p">:</span>
+        <span class="c1"># try to find the source website in our dataset</span>
+        <span class="n">matching_site</span> <span class="o">=</span> <span class="n">find_matching_site</span><span class="p">(</span><span class="n">embed</span><span class="o">.</span><span class="n">url</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">matching_site</span><span class="p">)</span>
+
+        <span class="c1"># if we found the matching site, then we have info for it</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">matching_site</span><span class="p">):</span>
+
+            <span class="c1"># look up the bias and reliability for the site the url is from</span>
+            <span class="n">url_bias</span> <span class="o">=</span> <span class="n">media_bias_lookup</span><span class="p">[</span><span class="n">matching_site</span><span class="p">]</span>
+            <span class="n">url_reliability</span> <span class="o">=</span> <span class="n">media_reliability_lookup</span><span class="p">[</span><span class="n">matching_site</span><span class="p">]</span>
+
+            <span class="c1">#### TODO: Update the three loop variables here #### </span>
+
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  bias: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">url_bias</span><span class="p">))</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  reliability: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">url_reliability</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># We didn&#39;t have info on this site</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;**did not recognize site!&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">()</span>
+        
+
+<span class="c1">####  TODO: Use the loop variables to calculate the total number of urls #### </span>
+<span class="c1">#  we cold measure and then the average bias and reliability for those</span>
+<span class="c1"># Then display them with the print statements below</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--------------------------------------&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total number of urls we could measure: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average bias: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average reliability: &quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Breaking news: A lovely cat took a nice long nap today!
+None
+**did not recognize site!
+
+Breaking news: Someone said a really mean thing on the internet today!
+None
+**did not recognize site!
+
+Breaking news: Some grandparents made some yummy cookies for all the kids to share!
+None
+**did not recognize site!
+
+Breaking news: All the horrors of the universe revealed at last!
+None
+**did not recognize site!
+
+--------------------------------------
+Total number of urls we could measure: 
+Average bias: 
+Average reliability: 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="reflection-tasks">
+<h2>Reflection tasks<a class="headerlink" href="#reflection-tasks" title="Link to this heading">#</a></h2>
+<p>Once you get the code above working and finding an average bias and reliability, modify the search to try at least three more subreddits (and get more posts at a time, like 100). Open up the subreddit separately and look at your results, then answer the questions below.</p>
+<p>Note: For searches, you can search for different subreddits that might have different views and post links to news articles, like: “news”, “science”, “politics”, “liberal”, “conservative”, “tech”, “BlackLivesMatter”,  etc.</p>
+<ol class="arabic simple">
+<li><p>What additional searches did you run (at least 3)?</p></li>
+</ol>
+<p>TODO: Answer the question here</p>
+<ol class="arabic simple" start="2">
+<li><p>When doing those searches, what were your observations about the calculations of media bias and reliability? (For example: were there a lot of urls that you didn’t measure? Do you feel like the final calculated bias and reliability match the search results?). Answer with at least 3 sentences</p></li>
+</ol>
+<p>TODO: Answer the question here with at least 3 sentences</p>
+<ol class="arabic simple" start="3">
+<li><p>If you could redesign the Media Bias Chart, what would you want to do (e.g., add some other dimension besides just bias/responsibility, change how it is evaluated, add more news sources, consider different countries)? Feel free to search online for critiques of the Media Bias Chart. Answer with at least 3 sentences.</p></li>
+</ol>
+<p>TODO: Answer the question here with at least 3 sentences</p>
+<ol class="arabic simple" start="4">
+<li><p>What might a social media companies or advertizers (including political campaigns) want to do with information on a users’ political views and susceptibility to consipracy theories? Answer with at least 3 sentences.</p></li>
+</ol>
+<p>TODO: Answer the question here with at least 3 sentences</p>
+<ol class="arabic simple" start="5">
+<li><p>Choose two ethics frameworks and use the frameworks to consider the different uses of the media bias and reliability information. Answer with at least 6 sentences total (e.g., 3 per framework).</p></li>
+</ol>
+<p>TODO: Answer the question here with at least 6 sentences</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -776,7 +1030,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">A3: Trolling a Reply Bot</p>
+        <p class="prev-next-title">A3: Trolling a Discord Command Bot</p>
       </div>
     </a>
     <a class="right-next"
@@ -794,6 +1048,26 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discord-setup">Discord Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-fill-in-bias-and-reliability-info">TODO: Fill in Bias and Reliability Info</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-bias-and-reliability-info">Load Bias and Reliability Info</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-a-list-of-discord-posts">find a List of discord posts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-modify-the-code-below-run-search">TODO: Modify the code below (Run Search)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection-tasks">Reflection tasks</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
