@@ -12,7 +12,7 @@
 # also TODO: make depth 0 and do  --builder pdflatex --individualpages for chapter files
 
 
-
+# Note: requires sphinxext-opengraph
 
 import os
 import sys
@@ -25,10 +25,10 @@ init(autoreset=True)
 
 platforms = [
     {"full_name": "Reddit", "file_name": "reddit", "status": ""},
-    {"full_name": "Discord", "file_name": "discord", "status": ""},
-    {"full_name": "Bluesky", "file_name": "bsky", "status": " (incomplete)"},
-    {"full_name": "No Coding", "file_name": "nocode", "status": "", "keep_all_files": True, "exclude_from_options": True}, # First pass makes copies of all coding files (so they can be linked to) 
-    {"full_name": "No Coding", "file_name": "nocode", "status": "", "keep_all_files": False, "second_pass": True} # Second pass gets rid of some of the coding files (for better flow)
+   {"full_name": "Discord", "file_name": "discord", "status": ""},
+   {"full_name": "Bluesky", "file_name": "bsky", "status": " (incomplete)"},
+   {"full_name": "No Coding", "file_name": "nocode", "status": "", "keep_all_files": True, "exclude_from_options": True}, # First pass makes copies of all coding files (so they can be linked to) 
+   {"full_name": "No Coding", "file_name": "nocode", "status": "", "keep_all_files": False, "second_pass": True} # Second pass gets rid of some of the coding files (for better flow)
 ]
 
 
