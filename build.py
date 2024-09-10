@@ -387,7 +387,19 @@ for platform in platforms:
 
 # make default forwarding in index.html
 with open('docs/index.html', 'w') as file:
-    file.write('<meta http-equiv="Refresh" content="0; url='+platforms[0]["file_name"]+'/intro.html" />')
+    file.write("""<head>
+            <meta http-equiv="Refresh" content="0; url={platform}/intro.html" />
+            <meta property="og:title" content="Social Media, Ethics, and Automation" />
+            <meta property="og:type" content="book" />
+            <meta property="og:url" content="intro.html" />
+            <meta property="og:site_name" content="Social Media, Ethics, and Automation" />
+            <meta property="og:description" content="Free textbook on programming social media bots and considering the ethical implications of having done so. Automation drives our experience of social media platforms, from timeline feeds to disinfo..." />
+            <meta property="og:image" content="https://social-media-ethics-automation.github.io/book/reddit/_images/logo.png" />
+            <meta property="og:image:alt" content="Social Media, Ethics, and Automation" />
+            <meta name="description" content="Free textbook on programming social media bots and considering the ethical implications of having done so. Automation drives our experience of social media platforms, from timeline feeds to disinfo..." />
+
+            <title>Social Media, Ethics, and Automation &#8212; by Kyle Thayer and Susan Notess</title>
+        </head>""".format(platform=platforms[0]["file_name"]))
 
 # make default 404 page that forwards in index.html
 with open('docs/404.html', 'w') as file:
