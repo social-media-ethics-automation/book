@@ -11,10 +11,10 @@
 <meta property="og:type" content="book" />
 <meta property="og:url" content="ch05_history/04_list_data_python/02_demo_dictionaries.html" />
 <meta property="og:site_name" content="Social Media, Ethics, and Automation" />
-<meta property="og:description" content="Choose Social Media Platform: Reddit| Discord| Bluesky| No Coding Content for the social media platform Bluesky hasn’t been created yet. Please try another platform." />
+<meta property="og:description" content="Choose Social Media Platform: Reddit| Discord| Bluesky| No Coding We’ve talked about lists, but the other data organization we need to work with social media data is dictionaries. As we mentioned i..." />
 <meta property="og:image" content="https://social-media-ethics-automation.github.io/book/reddit/_images/logo.png" />
 <meta property="og:image:alt" content="Social Media, Ethics, and Automation" />
-<meta name="description" content="Choose Social Media Platform: Reddit| Discord| Bluesky| No Coding Content for the social media platform Bluesky hasn’t been created yet. Please try another platform." />
+<meta name="description" content="Choose Social Media Platform: Reddit| Discord| Bluesky| No Coding We’ve talked about lists, but the other data organization we need to work with social media data is dictionaries. As we mentioned i..." />
 
     <title>5.4.2. Demo: Dictionaries &#8212; Social Media, Ethics, and Automation</title>
   
@@ -40,7 +40,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/myfile.css?v=ed2eb8a4" />
@@ -591,6 +591,37 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/social-media-ethics-automation/book-src-bsky/main?urlpath=lab/tree/ch05_history/04_list_data_python/02_demo_dictionaries.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -646,7 +677,7 @@
       
       
       
-      <li><a href="../../_sources/ch05_history/04_list_data_python/02_demo_dictionaries.md" target="_blank"
+      <li><a href="../../_sources/ch05_history/04_list_data_python/02_demo_dictionaries.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -656,7 +687,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -717,7 +748,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -733,6 +766,24 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionaries-dict">Dictionaries (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objects">Objects</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looping-through-lists-of-dictionaries">Looping through lists of dictionaries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#helper-function-for-atproto-links">helper function for atproto links</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-atproto-library">load atproto library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-make-a-fake-bluesky-connection-with-the-fake-atproto-library">(optional) make a fake Bluesky connection with the fake_atproto library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#login-to-bluesky">login to Bluesky</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#find-a-list-of-posts-from-a-feed">find a list of posts from a feed</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loop-through-the-list-of-posts">Loop through the list of posts</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -745,7 +796,252 @@ document.write(`
   <section id="demo-dictionaries">
 <h1><span class="section-number">5.4.2. </span>Demo: Dictionaries<a class="headerlink" href="#demo-dictionaries" title="Link to this heading">#</a></h1>
 <p><em>Choose Social Media Platform: <a href='../../../reddit/ch05_history/04_list_data_python/02_demo_dictionaries.html'>Reddit</a> | <a href='../../../discord/ch05_history/04_list_data_python/02_demo_dictionaries.html'>Discord</a> | <strong>Bluesky</strong> | <a href='../../../nocode/ch05_history/04_list_data_python/02_demo_dictionaries.html'>No Coding</a></em></p>
-<p><strong>Content for the social media platform Bluesky hasn’t been created yet. Please try another platform.</strong></p>
+<p>We’ve talked about lists, but the other data organization we need to work with social media data is <code class="docutils literal notranslate"><span class="pre">dictionaries</span></code>.</p>
+<p>As we mentioned in chapter 4, dictionaries allow us to combine pieces of information by naming them (sort of like variables).</p>
+<p>So for example, the information about a user might have the following pieces of data:</p>
+<ul class="simple">
+<li><p>Username</p></li>
+<li><p>Twitter handle</p></li>
+<li><p>Profile Picture:</p></li>
+<li><p>Follows</p></li>
+</ul>
+<p>Python has two ways of doing these types of dictionaries: <code class="docutils literal notranslate"><span class="pre">dict</span></code> and objects</p>
+<section id="dictionaries-dict">
+<h2>Dictionaries (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)<a class="headerlink" href="#dictionaries-dict" title="Link to this heading">#</a></h2>
+<p>We can create dictionaries in Python by storing values into <code class="docutils literal notranslate"><span class="pre">key</span></code>s inside of curly braces <code class="docutils literal notranslate"><span class="pre">{</span></code> <code class="docutils literal notranslate"><span class="pre">}</span></code>, like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_1</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;kylethayer&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;twitter_handle&quot;</span><span class="p">:</span> <span class="s2">&quot;@kylemthayer&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;profile_picture&quot;</span><span class="p">:</span> <span class="s2">&quot;kylethayer.jpg&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;follows&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;@SusanNotess&quot;</span><span class="p">,</span> <span class="s2">&quot;@UW&quot;</span><span class="p">,</span> <span class="s2">&quot;@UW_iSchool&quot;</span><span class="p">,</span> <span class="s2">&quot;@ajlunited&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the code above, inside of the curly braces are a set of lines. Each line has a string (the <code class="docutils literal notranslate"><span class="pre">key</span></code>, or name of the value), followed by a colon (<code class="docutils literal notranslate"><span class="pre">:</span></code>), followed by a value that is to be saved for the key. At the end of all but the last line is a comma (<code class="docutils literal notranslate"><span class="pre">,</span></code>) which indicates that another <code class="docutils literal notranslate"><span class="pre">key</span></code> and value will come next.</p>
+<p>Now that we’ve saved some values for some keys in the dictionary now saved in user_1, we can look up the values by using square brackets (<code class="docutils literal notranslate"><span class="pre">[</span></code>, <code class="docutils literal notranslate"><span class="pre">]</span></code>) with the key name inside, like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_1_username</span> <span class="o">=</span> <span class="n">user_1</span><span class="p">[</span><span class="s2">&quot;username&quot;</span><span class="p">]</span>
+<span class="n">display</span><span class="p">(</span><span class="n">user_1_username</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;kylethayer&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_1_handle</span> <span class="o">=</span> <span class="n">user_1</span><span class="p">[</span><span class="s2">&quot;twitter_handle&quot;</span><span class="p">]</span>
+<span class="n">display</span><span class="p">(</span><span class="n">user_1_handle</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;@kylemthayer&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_1_picture</span> <span class="o">=</span> <span class="n">user_1</span><span class="p">[</span><span class="s2">&quot;profile_picture&quot;</span><span class="p">]</span>
+<span class="n">display</span><span class="p">(</span><span class="n">user_1_picture</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;kylethayer.jpg&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_1_follows</span> <span class="o">=</span> <span class="n">user_1</span><span class="p">[</span><span class="s2">&quot;follows&quot;</span><span class="p">]</span>
+<span class="n">display</span><span class="p">(</span><span class="n">user_1_follows</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;@SusanNotess&#39;, &#39;@UW&#39;, &#39;@UW_iSchool&#39;, &#39;@ajlunited&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="objects">
+<h2>Objects<a class="headerlink" href="#objects" title="Link to this heading">#</a></h2>
+<p>The other way of saving information that works similarly in Python is through an object. We won’t be creating any in this book, but we will have to get data from some.</p>
+<p>The main difference from what we will need is that while in dictionaries we use square brackets and put the key name in quotes as a string (e.g., <code class="docutils literal notranslate"><span class="pre">user_1[&quot;profile_picture&quot;]</span></code>), in an object you use a period (<code class="docutils literal notranslate"><span class="pre">.</span></code>) and don’t put they key name (called a <code class="docutils literal notranslate"><span class="pre">field</span></code>) in quotes (e.g., <code class="docutils literal notranslate"><span class="pre">user_1.profile_picture</span></code>)</p>
+<p>We have already seen code that used this period to get something from an object a few times, specifically getting functions from them, like:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">client.send_post(...</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">normal_message.upper()</span></code></p></li>
+</ul>
+<p>When we go through data from Bluesky, sometimes we will need to use <code class="docutils literal notranslate"><span class="pre">.</span></code> to get parts of the information out of objects, and sometimes we will need to use <code class="docutils literal notranslate"><span class="pre">[&quot;</span> <span class="pre">&quot;]</span></code> to get information out of dictionaries.</p>
+</section>
+<section id="looping-through-lists-of-dictionaries">
+<h2>Looping through lists of dictionaries<a class="headerlink" href="#looping-through-lists-of-dictionaries" title="Link to this heading">#</a></h2>
+<p>Now that we’ve seen loops, lists, and dictionaries, we can go to Bluesky, load a feed and look through multiple posts.</p>
+<p>But first, we need our helper functions for converting Bluesky feed weblink urls and atproto uris:</p>
+<section id="helper-function-for-atproto-links">
+<h3>helper function for atproto links<a class="headerlink" href="#helper-function-for-atproto-links" title="Link to this heading">#</a></h3>
+<p><em>NOTE: You don’t need to worry about the details of how this works, it just is here to make the code later easier to use.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span> <span class="c1">#load a &quot;regular expression&quot; library for helping to parse text</span>
+<span class="kn">from</span> <span class="nn">atproto</span> <span class="kn">import</span> <span class="n">IdResolver</span> <span class="c1"># Load the atproto IdResolver library to get offical ATProto user IDs</span>
+
+<span class="c1"># function to convert a feed from a weblink url to the special atproto &quot;at&quot; URI</span>
+<span class="k">def</span> <span class="nf">getATFeedLinkFromURL</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    
+    <span class="c1"># Get the user did and feed id from the weblink url</span>
+    <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;https://bsky.app/profile/([^/]+)/feed/([^/]+)&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">match</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid Bluesky feed URL format.&quot;</span><span class="p">)</span>
+    <span class="n">user_handle</span><span class="p">,</span> <span class="n">feed_id</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
+
+    <span class="c1"># Get the official atproto user ID (did) from the handle</span>
+    <span class="n">resolver</span> <span class="o">=</span> <span class="n">IdResolver</span><span class="p">()</span>
+    <span class="n">did</span> <span class="o">=</span> <span class="n">resolver</span><span class="o">.</span><span class="n">handle</span><span class="o">.</span><span class="n">resolve</span><span class="p">(</span><span class="n">user_handle</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">did</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Could not resolve DID for handle &quot;</span><span class="si">{</span><span class="n">user_handle</span><span class="si">}</span><span class="s1">&quot;.&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Construct the at:// URI</span>
+    <span class="n">post_uri</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;at://</span><span class="si">{</span><span class="n">did</span><span class="si">}</span><span class="s2">/app.bsky.feed.generator/</span><span class="si">{</span><span class="n">feed_id</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="k">return</span> <span class="n">post_uri</span>
+
+<span class="c1"># function to convert a post&#39;s special atproto &quot;at&quot; URI to a weblink url</span>
+<span class="k">def</span> <span class="nf">getWebLinkFromPost</span><span class="p">(</span><span class="n">post</span><span class="p">):</span>
+    <span class="c1"># Get the user id and post id from the weblink url</span>
+    <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;at://([^/]+)/app.bsky.feed.post/([^/]+)&#39;</span><span class="p">,</span> <span class="n">post</span><span class="o">.</span><span class="n">uri</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">match</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid Bluesky atproto post URL format.&quot;</span><span class="p">)</span>
+    <span class="n">user_id</span><span class="p">,</span> <span class="n">post_id</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
+
+    <span class="n">post_uri</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://bsky.app/profile/</span><span class="si">{</span><span class="n">user_id</span><span class="si">}</span><span class="s2">/post/</span><span class="si">{</span><span class="n">post_id</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="n">post_uri</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we can continue logging in to Bluesky and look through multiple posts.</p>
+</section>
+<section id="load-atproto-library">
+<h3>load atproto library<a class="headerlink" href="#load-atproto-library" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;Client&quot; from the &quot;atproto&quot; library that will help us work with Bluesky</span>
+<span class="kn">from</span> <span class="nn">atproto</span> <span class="kn">import</span> <span class="n">Client</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="optional-make-a-fake-bluesky-connection-with-the-fake-atproto-library">
+<h3>(optional) make a fake Bluesky connection with the fake_atproto library<a class="headerlink" href="#optional-make-a-fake-bluesky-connection-with-the-fake-atproto-library" title="Link to this heading">#</a></h3>
+<p>For testing purposes, we”ve added this line of code, which loads a fake version of atproto, so it wont actually connect to Bluesky. <strong>If you want to try to actually connect to Bluesky, don’t run this line of code.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_apis/fake_atproto.ipynb
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake atproto (bsky.app) is replacing the atproto.blue library. Fake atproto doesn&#x27;t need real passwords, and prevents you from accessing real Bluesky</strong></div></div>
+</div>
+</section>
+<section id="login-to-bluesky">
+<h3>login to Bluesky<a class="headerlink" href="#login-to-bluesky" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Login to Bluesky</span>
+<span class="c1"># TODO: put your account name and password below</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="s2">&quot;https://bsky.social&quot;</span><span class="p">)</span>
+<span class="n">client</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="s2">&quot;your_account_name.bsky.social&quot;</span><span class="p">,</span> <span class="s2">&quot;m#5@_fake_bsky_password_$%Ds&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake atproto is pretending to set up a client connection to: https://bsky.social</strong></div><div class="output text_html"><strong style='color:darkred'>Fake atproto is pretending log into your account: your_account_name.bsky.social</strong></div></div>
+</div>
+</section>
+<section id="find-a-list-of-posts-from-a-feed">
+<h3>find a list of posts from a feed<a class="headerlink" href="#find-a-list-of-posts-from-a-feed" title="Link to this heading">#</a></h3>
+<p>We can now load a feed and find a list of posts.</p>
+<p><em>Note: If you run this on real Bluesky, we canâ€™t gurantee anything about how offensive what you might find is.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feedUrl</span> <span class="o">=</span> <span class="s2">&quot;https://bsky.app/profile/shouldhaveanimal.bsky.social/feed/aaab56iiatpdo&quot;</span>
+<span class="n">atFeedLink</span> <span class="o">=</span> <span class="n">getATFeedLinkFromURL</span><span class="p">(</span><span class="n">feedUrl</span><span class="p">)</span>
+
+<span class="n">post_info_list</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">bsky</span><span class="o">.</span><span class="n">feed</span><span class="o">.</span><span class="n">get_feed</span><span class="p">({</span><span class="s1">&#39;feed&#39;</span><span class="p">:</span> <span class="n">atFeedLink</span><span class="p">})</span><span class="o">.</span><span class="n">feed</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="loop-through-the-list-of-posts">
+<h2>Loop through the list of posts<a class="headerlink" href="#loop-through-the-list-of-posts" title="Link to this heading">#</a></h2>
+<p>The variable <code class="docutils literal notranslate"><span class="pre">post_info_list</span></code> now has a list of Bluesky post info. So we can use a for loop to go through each post, and then use <code class="docutils literal notranslate"><span class="pre">.</span></code> to access info from each post (other pieces of information would need <code class="docutils literal notranslate"><span class="pre">[&quot;</span> <span class="pre">&quot;]</span></code> to access).</p>
+<p>For each of the post, we will use <code class="docutils literal notranslate"><span class="pre">print</span></code> to display information about the tweet</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">post_info</span> <span class="ow">in</span> <span class="n">post_info_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Info for submission with cid: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post_info</span><span class="o">.</span><span class="n">post</span><span class="o">.</span><span class="n">cid</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  author handle: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post_info</span><span class="o">.</span><span class="n">post</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">handle</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  text: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post_info</span><span class="o">.</span><span class="n">post</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  created at: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post_info</span><span class="o">.</span><span class="n">post</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">created_at</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  number of likes: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post_info</span><span class="o">.</span><span class="n">post</span><span class="o">.</span><span class="n">like_count</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  number of replies: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post_info</span><span class="o">.</span><span class="n">post</span><span class="o">.</span><span class="n">reply_count</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  number of reposts: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post_info</span><span class="o">.</span><span class="n">post</span><span class="o">.</span><span class="n">repost_count</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  url: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">getWebLinkFromPost</span><span class="p">(</span><span class="n">post_info</span><span class="o">.</span><span class="n">post</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Info for submission with cid: 904tjwdf093j
+  author handle: fake_user.bsky.social
+  text: Look at my cute dog!
+  created at: 2014-01-01
+  number of likes: 23
+  number of replies: 7
+  number of reposts: 5
+  url: https://bsky.app/profile/did:plc:fake_user/post/fake_post_id
+
+Info for submission with cid: 704tjwdf093j
+  author handle: pretend_user.bsky.social
+  text: I like lizards
+  created at: 2014-02-01
+  number of likes: 23
+  number of replies: 7
+  number of reposts: 5
+  url: https://bsky.app/profile/did:plc:pretend_user/post/fake_post_id
+
+Info for submission with cid: 534tjwdf093j
+  author handle: imaginary_user.bsky.social
+  text: Look at my cute cat!
+  created at: 2014-03-01
+  number of likes: 23
+  number of replies: 7
+  number of reposts: 5
+  url: https://bsky.app/profile/did:plc:imaginary_user/post/fake_post_id
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -802,6 +1098,31 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionaries-dict">Dictionaries (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objects">Objects</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looping-through-lists-of-dictionaries">Looping through lists of dictionaries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#helper-function-for-atproto-links">helper function for atproto links</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-atproto-library">load atproto library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-make-a-fake-bluesky-connection-with-the-fake-atproto-library">(optional) make a fake Bluesky connection with the fake_atproto library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#login-to-bluesky">login to Bluesky</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#find-a-list-of-posts-from-a-feed">find a list of posts from a feed</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loop-through-the-list-of-posts">Loop through the list of posts</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
