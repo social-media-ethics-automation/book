@@ -7,16 +7,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="7.5.3. Demo: Trolling a Discord Command Bot" />
+<meta property="og:title" content="7.5.3. Demo: Trolling a Reply Bot" />
 <meta property="og:type" content="book" />
 <meta property="og:url" content="ch07_trolling/05_trolling_reply_bot/03_demo_reply_bot.html" />
 <meta property="og:site_name" content="Social Media, Ethics, and Automation" />
-<meta property="og:description" content="Choose Social Media Platform: Reddit| Discord| Bluesky| No Coding Content for the social media platform Bluesky hasn’t been created yet. Please try another platform." />
+<meta property="og:description" content="Choose Social Media Platform: Reddit| Discord| Bluesky| No Coding We are later going to build a bot that, if you post at it: “Hi @mybotname.bsky.social, please ___” (where the ___ is some action), ..." />
 <meta property="og:image" content="https://social-media-ethics-automation.github.io/book/reddit/_images/logo.png" />
 <meta property="og:image:alt" content="Social Media, Ethics, and Automation" />
-<meta name="description" content="Choose Social Media Platform: Reddit| Discord| Bluesky| No Coding Content for the social media platform Bluesky hasn’t been created yet. Please try another platform." />
+<meta name="description" content="Choose Social Media Platform: Reddit| Discord| Bluesky| No Coding We are later going to build a bot that, if you post at it: “Hi @mybotname.bsky.social, please ___” (where the ___ is some action), ..." />
 
-    <title>7.5.3. Demo: Trolling a Discord Command Bot &#8212; Social Media, Ethics, and Automation</title>
+    <title>7.5.3. Demo: Trolling a Reply Bot &#8212; Social Media, Ethics, and Automation</title>
   
   
   
@@ -312,7 +312,7 @@
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="00_introduction.html">7.5. Trolling a Reply Bot</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="01_demo_strings_conditionals.html">7.5.1. Demo: Conditionals and String Manipulation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="02_practice_strings_conditionals.html">7.5.2. Practice: Conditionals and String Manipulation</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">7.5.3. Demo: Trolling a Discord Command Bot</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">7.5.3. Demo: Trolling a Reply Bot</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../06_ethics_and_trolling.html">7.6. Ethics and Trolling</a></li>
@@ -591,6 +591,37 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/social-media-ethics-automation/book-src-bsky/main?urlpath=lab/tree/ch07_trolling/05_trolling_reply_bot/03_demo_reply_bot.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -646,7 +677,7 @@
       
       
       
-      <li><a href="../../_sources/ch07_trolling/05_trolling_reply_bot/03_demo_reply_bot.md" target="_blank"
+      <li><a href="../../_sources/ch07_trolling/05_trolling_reply_bot/03_demo_reply_bot.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -656,7 +687,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -717,7 +748,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -728,11 +761,31 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Demo: Trolling a Discord Command Bot</h1>
+    <h1>Demo: Trolling a Reply Bot</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log-into-bluesky-atproto">Log into Bluesky (atproto)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bot-1-do-whatever-we-are-told">Bot 1: do whatever we are told</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#find-my-latest-mention">find my latest mention</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-post-matches-our-pattern-reply">If post matches our pattern, reply</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trolling-bot-1">Trolling bot 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bot-2-trying-to-limit-actions">Bot 2: Trying to limit actions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">find my latest mention</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-message-matches-our-pattern-reply">If message matches our pattern, reply</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trolling-bot-2">Trolling bot 2</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -742,10 +795,420 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="demo-trolling-a-discord-command-bot">
-<h1><span class="section-number">7.5.3. </span>Demo: Trolling a Discord Command Bot<a class="headerlink" href="#demo-trolling-a-discord-command-bot" title="Link to this heading">#</a></h1>
+  <section id="demo-trolling-a-reply-bot">
+<h1><span class="section-number">7.5.3. </span>Demo: Trolling a Reply Bot<a class="headerlink" href="#demo-trolling-a-reply-bot" title="Link to this heading">#</a></h1>
 <p><em>Choose Social Media Platform: <a href='../../../reddit/ch07_trolling/05_trolling_reply_bot/03_demo_reply_bot.html'>Reddit</a> | <a href='../../../discord/ch07_trolling/05_trolling_reply_bot/03_demo_reply_bot.html'>Discord</a> | <strong>Bluesky</strong> | <a href='../../../nocode/ch07_trolling/05_trolling_reply_bot/03_demo_reply_bot.html'>No Coding</a></em></p>
-<p><strong>Content for the social media platform Bluesky hasn’t been created yet. Please try another platform.</strong></p>
+<p>We are later going to build a bot that, if you post at it:</p>
+<ul class="simple">
+<li><p>“Hi &#64;mybotname.bsky.social, please ___” (where the ___ is some action)</p></li>
+<li><p>then the bot will reply, “I will now ____” (where the ___ is that same action).</p></li>
+</ul>
+<p>Then we will try trolling it, and fixing it, and trolling it again.</p>
+<p>First though we need to do our bluesky atproto setup:</p>
+<section id="log-into-bluesky-atproto">
+<h2>Log into Bluesky (atproto)<a class="headerlink" href="#log-into-bluesky-atproto" title="Link to this heading">#</a></h2>
+<p>These are our normal steps get atproto loaded and logged into Bluesky</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">atproto</span> <span class="kn">import</span> <span class="n">Client</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>(optional) make a fake Bluesky connection with the fake_atproto library
+For testing purposes, we”ve added this line of code, which loads a fake version of atproto, so it wont actually connect to Bluesky. <strong>If you want to try to actually connect to Bluesky, don’t run this line of code.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_apis/fake_atproto.ipynb
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake atproto (bsky.app) is replacing the atproto.blue library. Fake atproto doesn&#x27;t need real passwords, and prevents you from accessing real Bluesky</strong></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Login to Bluesky</span>
+<span class="c1"># TODO: put your account name and password below</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="s2">&quot;https://bsky.social&quot;</span><span class="p">)</span>
+<span class="n">client</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="s2">&quot;your_account_name.bsky.social&quot;</span><span class="p">,</span> <span class="s2">&quot;m#5@_fake_bsky_password_$%Ds&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake atproto is pretending to set up a client connection to: https://bsky.social</strong></div><div class="output text_html"><strong style='color:darkred'>Fake atproto is pretending log into your account: your_account_name.bsky.social</strong></div></div>
+</div>
+</section>
+<section id="bot-1-do-whatever-we-are-told">
+<h2>Bot 1: do whatever we are told<a class="headerlink" href="#bot-1-do-whatever-we-are-told" title="Link to this heading">#</a></h2>
+<p>Our first bot will find our latest mention, and then reply with whatever it is told to do.</p>
+<p>First we need to look up our Bluesky handle</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># look up my Bluesky handle</span>
+<span class="n">my_handle</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">me</span><span class="o">.</span><span class="n">handle</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we will create a string with the pattern we are looking for, but with our actual bot name</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expected_pattern</span> <span class="o">=</span> <span class="s2">&quot;Hi @&quot;</span> <span class="o">+</span> <span class="n">my_handle</span> <span class="o">+</span> <span class="s2">&quot;, please &quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">expected_pattern</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hi @mybotname.bsky.social, please 
+</pre></div>
+</div>
+</div>
+</div>
+<section id="find-my-latest-mention">
+<h3>find my latest mention<a class="headerlink" href="#find-my-latest-mention" title="Link to this heading">#</a></h3>
+<p>We need to find the latest bluesky post that mentions us and match our expected pattern.</p>
+<p>We do this by first finding our user handle, then requesting</p>
+<p>We do this by looking in our reddit inbox for messages (we limit it to one, since we just want the latest).</p>
+<p>It doesn’t directly give us the one message (instead it is in something called an “iterator”), but we can use the <code class="docutils literal notranslate"><span class="pre">next</span></code> function to get the message out.</p>
+<p>We then display the subject of the message just so we can see that it found something..</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># search posts that mention my handle</span>
+<span class="n">mentions</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">bsky</span><span class="o">.</span><span class="n">feed</span><span class="o">.</span><span class="n">search_posts</span><span class="p">({</span>
+    <span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="n">expected_pattern</span><span class="p">,</span> 
+    <span class="s1">&#39;mentions&#39;</span><span class="p">:</span> <span class="n">my_handle</span>
+<span class="p">})</span><span class="o">.</span><span class="n">posts</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mentions</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error: Could not find matching mentions!&quot;</span><span class="p">)</span>
+    
+<span class="n">latest_mention</span> <span class="o">=</span> <span class="n">mentions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="if-post-matches-our-pattern-reply">
+<h3>If post matches our pattern, reply<a class="headerlink" href="#if-post-matches-our-pattern-reply" title="Link to this heading">#</a></h3>
+<p>Now, if the mention text starts with that expected pattern, then we will find the action from the end of the mention text (based on the expected_pattern length), and reply using that action:</p>
+<p>We also add “else” cases for when we didn’t match the patter, and display a message saying what didn’t match.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># check if the mention text starts with our set phrase</span>
+<span class="k">if</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">expected_pattern</span><span class="p">):</span>
+    
+    <span class="c1"># get the action, which should be the end of the string after the expected pattern</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">expected_pattern</span><span class="p">):]</span>
+
+    <span class="c1"># make a new message which says we will do the action</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;I will now &quot;</span> <span class="o">+</span> <span class="n">action</span>
+
+    <span class="c1"># send our message in reply</span>
+    <span class="n">client</span><span class="o">.</span><span class="n">send_post</span><span class="p">(</span>
+        <span class="n">message</span><span class="p">,</span> 
+        <span class="n">reply_to</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;root&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;uri&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">uri</span><span class="p">,</span> <span class="s1">&#39;cid&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">cid</span><span class="p">},</span> 
+                  <span class="s1">&#39;parent&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;uri&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">uri</span><span class="p">,</span> <span class="s1">&#39;cid&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">cid</span><span class="p">}}</span>
+    <span class="p">)</span>
+    
+<span class="k">else</span><span class="p">:</span> <span class="c1"># else code for if the message subject didn&#39;t match</span>
+    <span class="n">display</span><span class="p">(</span><span class="s2">&quot;The message (&quot;</span> <span class="o">+</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span> <span class="o">+</span> <span class="s2">&quot;) didn&#39;t match our expected pattern (&quot;</span> <span class="o">+</span> <span class="n">expected_pattern</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake atproto is pretending to post: </strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I will now jump
+</pre></div>
+</div>
+</div>
+</div>
+<p>Yay! It worked!</p>
+<p>But there is a problem with our bot!</p>
+</section>
+</section>
+<section id="trolling-bot-1">
+<h2>Trolling bot 1<a class="headerlink" href="#trolling-bot-1" title="Link to this heading">#</a></h2>
+<p>This bot is really easy to troll, so if I repeat my steps and get a new mention (this code is just a duplication of the code above):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># search posts that mention my handle</span>
+<span class="n">mentions</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">bsky</span><span class="o">.</span><span class="n">feed</span><span class="o">.</span><span class="n">search_posts</span><span class="p">({</span>
+    <span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="n">expected_pattern</span><span class="p">,</span> 
+    <span class="s1">&#39;mentions&#39;</span><span class="p">:</span> <span class="n">my_handle</span>
+<span class="p">})</span><span class="o">.</span><span class="n">posts</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mentions</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error: Could not find matching mentions!&quot;</span><span class="p">)</span>
+    
+<span class="n">latest_mention</span> <span class="o">=</span> <span class="n">mentions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+
+<span class="c1"># check if the mention text starts with our set phrase</span>
+<span class="k">if</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">expected_pattern</span><span class="p">):</span>
+    
+    <span class="c1"># get the action, which should be the end of the string after the expected pattern</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">expected_pattern</span><span class="p">):]</span>
+
+    <span class="c1"># make a new message which says we will do the action</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;I will now &quot;</span> <span class="o">+</span> <span class="n">action</span>
+
+    <span class="c1"># send our message in reply</span>
+    <span class="n">client</span><span class="o">.</span><span class="n">send_post</span><span class="p">(</span>
+        <span class="n">message</span><span class="p">,</span> 
+        <span class="n">reply_to</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;root&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;uri&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">uri</span><span class="p">,</span> <span class="s1">&#39;cid&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">cid</span><span class="p">},</span> 
+                  <span class="s1">&#39;parent&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;uri&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">uri</span><span class="p">,</span> <span class="s1">&#39;cid&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">cid</span><span class="p">}}</span>
+    <span class="p">)</span>
+    
+<span class="k">else</span><span class="p">:</span> <span class="c1"># else code for if the message subject didn&#39;t match</span>
+    <span class="n">display</span><span class="p">(</span><span class="s2">&quot;The message (&quot;</span> <span class="o">+</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span> <span class="o">+</span> <span class="s2">&quot;) didn&#39;t match our expected pattern (&quot;</span> <span class="o">+</span> <span class="n">expected_pattern</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake atproto is pretending to post: </strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I will now do something horrible!
+</pre></div>
+</div>
+</div>
+</div>
+<p>Someone messaged us saying: <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">want</span> <span class="pre">you</span> <span class="pre">to</span> <span class="pre">do</span> <span class="pre">something</span> <span class="pre">horrible!</span></code>, and we replied <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">will</span> <span class="pre">now</span> <span class="pre">do</span> <span class="pre">something</span> <span class="pre">horrible!</span></code>.</p>
+<p>They could have made us post much worse!</p>
+</section>
+<section id="bot-2-trying-to-limit-actions">
+<h2>Bot 2: Trying to limit actions<a class="headerlink" href="#bot-2-trying-to-limit-actions" title="Link to this heading">#</a></h2>
+<p>Let’s try this again, but limit the actions we will do.</p>
+<ul class="simple">
+<li><p>If someone asks us to “run”, “jump”, or “fly”, we will do it</p></li>
+<li><p>If someone asks us to do something else we will say:</p>
+<ul>
+<li><p>“I do not recognize the command ___” (with __ being whatever they said)</p></li>
+</ul>
+</li>
+</ul>
+<p>So, to go back through our steps:</p>
+<section id="id1">
+<h3>find my latest mention<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># search posts that mention my handle</span>
+<span class="n">mentions</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">bsky</span><span class="o">.</span><span class="n">feed</span><span class="o">.</span><span class="n">search_posts</span><span class="p">({</span>
+    <span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="n">expected_pattern</span><span class="p">,</span> 
+    <span class="s1">&#39;mentions&#39;</span><span class="p">:</span> <span class="n">my_handle</span>
+<span class="p">})</span><span class="o">.</span><span class="n">posts</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mentions</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error: Could not find matching mentions!&quot;</span><span class="p">)</span>
+    
+<span class="n">latest_mention</span> <span class="o">=</span> <span class="n">mentions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
+
+<span class="c1"># display the subject and body of the message, so we can see what we found</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;latest post text: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">latest_mention</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;latest post text: Hi @mybotname.bsky.social, please fly&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="if-message-matches-our-pattern-reply">
+<h3>If message matches our pattern, reply<a class="headerlink" href="#if-message-matches-our-pattern-reply" title="Link to this heading">#</a></h3>
+<p>We do the same code for this as before, but after we get the action we are told to do, we put another <code class="docutils literal notranslate"><span class="pre">if</span></code>/<code class="docutils literal notranslate"><span class="pre">else</span></code> to either do the action if we recognize it, or say we didn’t recognize the action.</p>
+<p>We will use <code class="docutils literal notranslate"><span class="pre">in</span></code> to see if the action is in our list of allowed actions (called an allow_list)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">actions_allow_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;run&quot;</span><span class="p">,</span> <span class="s2">&quot;jump&quot;</span><span class="p">,</span> <span class="s2">&quot;fly&quot;</span><span class="p">]</span>
+
+
+<span class="c1"># check if the mention text starts with our set phrase</span>
+<span class="k">if</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">expected_pattern</span><span class="p">):</span>
+    
+    <span class="c1"># get the action, which should be the end of the string after the expected pattern</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">expected_pattern</span><span class="p">):]</span>
+
+    <span class="c1"># See if it is one of our recognized actions</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">action</span> <span class="ow">in</span> <span class="n">actions_allow_list</span><span class="p">):</span>
+        <span class="c1"># make a new message which says we will do the action</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;I will now &quot;</span> <span class="o">+</span> <span class="n">action</span>
+
+        <span class="c1"># send our message in reply</span>
+        <span class="n">client</span><span class="o">.</span><span class="n">send_post</span><span class="p">(</span>
+            <span class="n">message</span><span class="p">,</span> 
+            <span class="n">reply_to</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;root&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;uri&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">uri</span><span class="p">,</span> <span class="s1">&#39;cid&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">cid</span><span class="p">},</span> 
+                      <span class="s1">&#39;parent&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;uri&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">uri</span><span class="p">,</span> <span class="s1">&#39;cid&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">cid</span><span class="p">}}</span>
+        <span class="p">)</span>
+        
+    <span class="k">else</span><span class="p">:</span> <span class="c1"># we didn&#39;t recognize the action</span>
+        <span class="c1"># make a new message which says we will NOT do the action</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;I do not recognize the command &quot;</span> <span class="o">+</span> <span class="n">action</span>
+
+        <span class="c1"># send our message in reply</span>
+        <span class="n">client</span><span class="o">.</span><span class="n">send_post</span><span class="p">(</span>
+            <span class="n">message</span><span class="p">,</span> 
+            <span class="n">reply_to</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;root&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;uri&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">uri</span><span class="p">,</span> <span class="s1">&#39;cid&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">cid</span><span class="p">},</span> 
+                      <span class="s1">&#39;parent&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;uri&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">uri</span><span class="p">,</span> <span class="s1">&#39;cid&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">cid</span><span class="p">}}</span>
+        <span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span> <span class="c1"># else code for if the message subject didn&#39;t match</span>
+    <span class="n">display</span><span class="p">(</span><span class="s2">&quot;The message (&quot;</span> <span class="o">+</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span> <span class="o">+</span> <span class="s2">&quot;) didn&#39;t match our expected pattern (&quot;</span> <span class="o">+</span> <span class="n">expected_pattern</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake atproto is pretending to post: </strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I will now fly
+</pre></div>
+</div>
+</div>
+</div>
+<p>That one was in our allow list so it worked. Let’s do it all again, with the tweet that caused us problems last time</p>
+<p><em>Note: the code below is just copied from the code sections above</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># search posts that mention my handle</span>
+<span class="n">mentions</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">bsky</span><span class="o">.</span><span class="n">feed</span><span class="o">.</span><span class="n">search_posts</span><span class="p">({</span>
+    <span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="n">expected_pattern</span><span class="p">,</span> 
+    <span class="s1">&#39;mentions&#39;</span><span class="p">:</span> <span class="n">my_handle</span>
+<span class="p">})</span><span class="o">.</span><span class="n">posts</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mentions</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error: Could not find matching mentions!&quot;</span><span class="p">)</span>
+    
+<span class="n">latest_mention</span> <span class="o">=</span> <span class="n">mentions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
+
+<span class="c1"># display the subject and body of the message, so we can see what we found</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;latest post text: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">latest_mention</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
+
+
+<span class="n">actions_allow_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;run&quot;</span><span class="p">,</span> <span class="s2">&quot;jump&quot;</span><span class="p">,</span> <span class="s2">&quot;fly&quot;</span><span class="p">]</span>
+
+
+<span class="c1"># check if the mention text starts with our set phrase</span>
+<span class="k">if</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">expected_pattern</span><span class="p">):</span>
+    
+    <span class="c1"># get the action, which should be the end of the string after the expected pattern</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">expected_pattern</span><span class="p">):]</span>
+
+    <span class="c1"># See if it is one of our recognized actions</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">action</span> <span class="ow">in</span> <span class="n">actions_allow_list</span><span class="p">):</span>
+        <span class="c1"># make a new message which says we will do the action</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;I will now &quot;</span> <span class="o">+</span> <span class="n">action</span>
+
+        <span class="c1"># send our message in reply</span>
+        <span class="n">client</span><span class="o">.</span><span class="n">send_post</span><span class="p">(</span>
+            <span class="n">message</span><span class="p">,</span> 
+            <span class="n">reply_to</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;root&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;uri&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">uri</span><span class="p">,</span> <span class="s1">&#39;cid&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">cid</span><span class="p">},</span> 
+                      <span class="s1">&#39;parent&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;uri&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">uri</span><span class="p">,</span> <span class="s1">&#39;cid&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">cid</span><span class="p">}}</span>
+        <span class="p">)</span>
+        
+    <span class="k">else</span><span class="p">:</span> <span class="c1"># we didn&#39;t recognize the action</span>
+        <span class="c1"># make a new message which says we will NOT do the action</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;I do not recognize the command &quot;</span> <span class="o">+</span> <span class="n">action</span>
+
+        <span class="c1"># send our message in reply</span>
+        <span class="n">client</span><span class="o">.</span><span class="n">send_post</span><span class="p">(</span>
+            <span class="n">message</span><span class="p">,</span> 
+            <span class="n">reply_to</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;root&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;uri&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">uri</span><span class="p">,</span> <span class="s1">&#39;cid&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">cid</span><span class="p">},</span> 
+                      <span class="s1">&#39;parent&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;uri&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">uri</span><span class="p">,</span> <span class="s1">&#39;cid&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">cid</span><span class="p">}}</span>
+        <span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span> <span class="c1"># else code for if the message subject didn&#39;t match</span>
+    <span class="n">display</span><span class="p">(</span><span class="s2">&quot;The message (&quot;</span> <span class="o">+</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span> <span class="o">+</span> <span class="s2">&quot;) didn&#39;t match our expected pattern (&quot;</span> <span class="o">+</span> <span class="n">expected_pattern</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;latest post text: Hi @mybotname.bsky.social, please do something horrible!&#39;
+</pre></div>
+</div>
+<div class="output text_html"><strong style='color:darkred'>Fake atproto is pretending to post: </strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I do not recognize the command do something horrible!
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ok, this time we said <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">do</span> <span class="pre">not</span> <span class="pre">recognize</span> <span class="pre">the</span> <span class="pre">command</span> <span class="pre">do</span> <span class="pre">something</span> <span class="pre">horrible!</span></code>.</p>
+<p>That looks a little better! Are we safe now?</p>
+</section>
+</section>
+<section id="trolling-bot-2">
+<h2>Trolling bot 2<a class="headerlink" href="#trolling-bot-2" title="Link to this heading">#</a></h2>
+<p>No, it turns out we are not safe.</p>
+<p>Let’s find the latest mention again and see what happens</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># search posts that mention my handle</span>
+<span class="n">mentions</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">bsky</span><span class="o">.</span><span class="n">feed</span><span class="o">.</span><span class="n">search_posts</span><span class="p">({</span>
+    <span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="n">expected_pattern</span><span class="p">,</span> 
+    <span class="s1">&#39;mentions&#39;</span><span class="p">:</span> <span class="n">my_handle</span>
+<span class="p">})</span><span class="o">.</span><span class="n">posts</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mentions</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error: Could not find matching mentions!&quot;</span><span class="p">)</span>
+    
+<span class="n">latest_mention</span> <span class="o">=</span> <span class="n">mentions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
+
+<span class="c1"># display the subject and body of the message, so we can see what we found</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;latest post text: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">latest_mention</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
+
+
+<span class="n">actions_allow_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;run&quot;</span><span class="p">,</span> <span class="s2">&quot;jump&quot;</span><span class="p">,</span> <span class="s2">&quot;fly&quot;</span><span class="p">]</span>
+
+
+<span class="c1"># check if the mention text starts with our set phrase</span>
+<span class="k">if</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">expected_pattern</span><span class="p">):</span>
+    
+    <span class="c1"># get the action, which should be the end of the string after the expected pattern</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">expected_pattern</span><span class="p">):]</span>
+
+    <span class="c1"># See if it is one of our recognized actions</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">action</span> <span class="ow">in</span> <span class="n">actions_allow_list</span><span class="p">):</span>
+        <span class="c1"># make a new message which says we will do the action</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;I will now &quot;</span> <span class="o">+</span> <span class="n">action</span>
+
+        <span class="c1"># send our message in reply</span>
+        <span class="n">client</span><span class="o">.</span><span class="n">send_post</span><span class="p">(</span>
+            <span class="n">message</span><span class="p">,</span> 
+            <span class="n">reply_to</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;root&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;uri&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">uri</span><span class="p">,</span> <span class="s1">&#39;cid&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">cid</span><span class="p">},</span> 
+                      <span class="s1">&#39;parent&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;uri&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">uri</span><span class="p">,</span> <span class="s1">&#39;cid&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">cid</span><span class="p">}}</span>
+        <span class="p">)</span>
+        
+    <span class="k">else</span><span class="p">:</span> <span class="c1"># we didn&#39;t recognize the action</span>
+        <span class="c1"># make a new message which says we will NOT do the action</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;I do not recognize the command &quot;</span> <span class="o">+</span> <span class="n">action</span>
+
+        <span class="c1"># send our message in reply</span>
+        <span class="n">client</span><span class="o">.</span><span class="n">send_post</span><span class="p">(</span>
+            <span class="n">message</span><span class="p">,</span> 
+            <span class="n">reply_to</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;root&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;uri&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">uri</span><span class="p">,</span> <span class="s1">&#39;cid&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">cid</span><span class="p">},</span> 
+                      <span class="s1">&#39;parent&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;uri&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">uri</span><span class="p">,</span> <span class="s1">&#39;cid&#39;</span><span class="p">:</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">cid</span><span class="p">}}</span>
+        <span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span> <span class="c1"># else code for if the message subject didn&#39;t match</span>
+    <span class="n">display</span><span class="p">(</span><span class="s2">&quot;The message (&quot;</span> <span class="o">+</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span> <span class="o">+</span> <span class="s2">&quot;) didn&#39;t match our expected pattern (&quot;</span> <span class="o">+</span> <span class="n">expected_pattern</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;latest post text: Hi @mybotname.bsky.social, please stop talking. But that doesn&#39;t mean I won&#39;t say horrible things like: I hate everybody!&quot;
+</pre></div>
+</div>
+<div class="output text_html"><strong style='color:darkred'>Fake atproto is pretending to post: </strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I do not recognize the command stop talking. But that doesn&#39;t mean I won&#39;t say horrible things like: I hate everybody!
+</pre></div>
+</div>
+</div>
+</div>
+<p>Oh no! Someone messaged at us:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Hi</span> <span class="pre">&#64;mybotname.bsky.social,</span> <span class="pre">please</span> <span class="pre">jump</span> <span class="pre">stop</span> <span class="pre">talking.</span> <span class="pre">But</span> <span class="pre">that</span> <span class="pre">doesn't</span> <span class="pre">mean</span> <span class="pre">I</span> <span class="pre">won't</span> <span class="pre">say</span> <span class="pre">horrible</span> <span class="pre">things</span> <span class="pre">like:</span> <span class="pre">I</span> <span class="pre">hate</span> <span class="pre">everybody!</span></code></p></li>
+</ul>
+<p>And we replied:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">do</span> <span class="pre">not</span> <span class="pre">recognize</span> <span class="pre">the</span> <span class="pre">command</span> <span class="pre">stop</span> <span class="pre">talking.</span> <span class="pre">But</span> <span class="pre">that</span> <span class="pre">doesn't</span> <span class="pre">mean</span> <span class="pre">I</span> <span class="pre">won't</span> <span class="pre">say</span> <span class="pre">horrible</span> <span class="pre">things</span> <span class="pre">like:</span> <span class="pre">I</span> <span class="pre">hate</span> <span class="pre">everybody!</span></code></p></li>
+</ul>
+<p>Making a bot that is troll proof is very difficult! You either need to severely limit how your bot engages with people, or do a ton of work trying to prevent trolling and fix problems when people find a new way of trolling you.</p>
+<p>If you want to learn more, you can revisit the story of what went wrong with the Microsoft Tay bot: <a class="reference external" href="https://www.vice.com/en_us/article/mg7g3y/how-to-make-a-not-racist-bot">How to Make a Bot That Isn’t Racist</a></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -802,6 +1265,33 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log-into-bluesky-atproto">Log into Bluesky (atproto)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bot-1-do-whatever-we-are-told">Bot 1: do whatever we are told</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#find-my-latest-mention">find my latest mention</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-post-matches-our-pattern-reply">If post matches our pattern, reply</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trolling-bot-1">Trolling bot 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bot-2-trying-to-limit-actions">Bot 2: Trying to limit actions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">find my latest mention</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-message-matches-our-pattern-reply">If message matches our pattern, reply</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trolling-bot-2">Trolling bot 2</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
