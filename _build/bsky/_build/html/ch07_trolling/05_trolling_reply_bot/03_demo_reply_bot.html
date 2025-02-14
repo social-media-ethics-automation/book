@@ -379,7 +379,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ch11_recommendations/07_bibliography.html">11.7. Bibliography</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch12_virality/00_virality.html">12. Virality</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ch12_virality/00_virality.html">12. Virality and Memes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../ch12_virality/01_evolution_memes.html">12.1. Evolution and Memes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch12_virality/02_pre_internet.html">12.2. Pre-internet Virality Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch12_virality/03_social_media_evolution.html">12.3. Evolution in social media</a></li>
@@ -396,7 +396,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ch13_mental_health/02_unhealthy_activities.html">13.2. Unhealthy Activities on Social Media</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch13_mental_health/03_healthy_activities.html">13.3. Healthy Activities on Social Media</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch13_mental_health/04_mental_health_detection.html">13.4. Mental Health Detection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ch13_mental_health/05_demo_only_positive_news.html">13.5. Demo: Only positive posts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch13_mental_health/05_demo_only_positive_news.html">13.5. Demo: Only positive news</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch13_mental_health/06_design_activity_mental_health.html">13.6. Design Analysis: Mental Health</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch13_mental_health/07_reflections.html">13.7. Reflection questions on mental health</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch13_mental_health/08_bibliography.html">13.8. Bibliography</a></li>
@@ -516,7 +516,7 @@
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/00_intro.html">24.3.3. Programming Assignments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/a1_make_7_posts.html">A1: Make 7 Bluesky Posts</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/a2_another_site.html">A2: Try another site</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/a3_troll_reply_bot.html">A3: Trolling a Discord Command Bot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/a3_troll_reply_bot.html">A3: Trolling a Reply Bot</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/a4-political-bias.html">A4: Political Bias</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/a5-best-comments.html">A5: Best Comments</a></li>
 </ul>
@@ -869,9 +869,8 @@ For testing purposes, we”ve added this line of code, which loads a fake versio
 <section id="find-my-latest-mention">
 <h3>find my latest mention<a class="headerlink" href="#find-my-latest-mention" title="Link to this heading">#</a></h3>
 <p>We need to find the latest bluesky post that mentions us and match our expected pattern.</p>
-<p>We do this by first finding our user handle, then requesting</p>
-<p>We do this by looking in our reddit inbox for messages (we limit it to one, since we just want the latest).</p>
-<p>It doesn’t directly give us the one message (instead it is in something called an “iterator”), but we can use the <code class="docutils literal notranslate"><span class="pre">next</span></code> function to get the message out.</p>
+<p>We do this by first doing a search for posts that match our expected pattern and mention our handle (to make sure we don’t interact with any user that doesn’t want us to).</p>
+<p>We then get the first mention (index 0), which should be the latest mention.</p>
 <p>We then display the subject of the message just so we can see that it found something..</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -885,6 +884,14 @@ For testing purposes, we”ve added this line of code, which loads a fake versio
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error: Could not find matching mentions!&quot;</span><span class="p">)</span>
     
 <span class="n">latest_mention</span> <span class="o">=</span> <span class="n">mentions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># display the text of the post, so we can see what we found</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;latest post text: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">latest_mention</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;latest post text: Hi @mybotname.bsky.social, please jump&#39;
 </pre></div>
 </div>
 </div>
@@ -943,6 +950,9 @@ For testing purposes, we”ve added this line of code, which loads a fake versio
     
 <span class="n">latest_mention</span> <span class="o">=</span> <span class="n">mentions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
+<span class="c1"># display the text of the post, so we can see what we found</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;latest post text: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">latest_mention</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
+
 
 <span class="c1"># check if the mention text starts with our set phrase</span>
 <span class="k">if</span> <span class="n">latest_mention</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">expected_pattern</span><span class="p">):</span>
@@ -966,6 +976,9 @@ For testing purposes, we”ve added this line of code, which loads a fake versio
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;latest post text: Hi @mybotname.bsky.social, please do something horrible!&#39;
+</pre></div>
+</div>
 <div class="output text_html"><strong style='color:darkred'>Fake atproto is pretending to post: </strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I will now do something horrible!
 </pre></div>
 </div>
@@ -1001,7 +1014,7 @@ For testing purposes, we”ve added this line of code, which loads a fake versio
     
 <span class="n">latest_mention</span> <span class="o">=</span> <span class="n">mentions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
 
-<span class="c1"># display the subject and body of the message, so we can see what we found</span>
+<span class="c1"># display the text of the post, so we can see what we found</span>
 <span class="n">display</span><span class="p">(</span><span class="s2">&quot;latest post text: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">latest_mention</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -1077,7 +1090,7 @@ For testing purposes, we”ve added this line of code, which loads a fake versio
     
 <span class="n">latest_mention</span> <span class="o">=</span> <span class="n">mentions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
 
-<span class="c1"># display the subject and body of the message, so we can see what we found</span>
+<span class="c1"># display the text of the post, so we can see what we found</span>
 <span class="n">display</span><span class="p">(</span><span class="s2">&quot;latest post text: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">latest_mention</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
 
 
@@ -1148,7 +1161,7 @@ For testing purposes, we”ve added this line of code, which loads a fake versio
     
 <span class="n">latest_mention</span> <span class="o">=</span> <span class="n">mentions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
 
-<span class="c1"># display the subject and body of the message, so we can see what we found</span>
+<span class="c1"># display the text of the post, so we can see what we found</span>
 <span class="n">display</span><span class="p">(</span><span class="s2">&quot;latest post text: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">latest_mention</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
 
 
