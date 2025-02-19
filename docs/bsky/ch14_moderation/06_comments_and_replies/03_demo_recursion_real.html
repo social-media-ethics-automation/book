@@ -7,16 +7,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="14.7.3. Demo: Display Real Discord Comments and Replies" />
+<meta property="og:title" content="14.7.3. Demo: Display Real Bluesky Comments and Replies" />
 <meta property="og:type" content="book" />
 <meta property="og:url" content="ch14_moderation/06_comments_and_replies/03_demo_recursion_real.html" />
 <meta property="og:site_name" content="Social Media, Ethics, and Automation" />
-<meta property="og:description" content="Choose Social Media Platform: Reddit| Discord| Bluesky| No Coding Content for the social media platform Bluesky hasn’t been created yet. Please try another platform." />
+<meta property="og:description" content="Choose Social Media Platform: Reddit| Discord| Bluesky| No Coding Now lets do the same thing we did on the last page (using recursion to display comments and replies), but do it on Bluesky! (Either..." />
 <meta property="og:image" content="https://social-media-ethics-automation.github.io/book/reddit/_images/logo.png" />
 <meta property="og:image:alt" content="Social Media, Ethics, and Automation" />
-<meta name="description" content="Choose Social Media Platform: Reddit| Discord| Bluesky| No Coding Content for the social media platform Bluesky hasn’t been created yet. Please try another platform." />
+<meta name="description" content="Choose Social Media Platform: Reddit| Discord| Bluesky| No Coding Now lets do the same thing we did on the last page (using recursion to display comments and replies), but do it on Bluesky! (Either..." />
 
-    <title>14.7.3. Demo: Display Real Discord Comments and Replies &#8212; Social Media, Ethics, and Automation</title>
+    <title>14.7.3. Demo: Display Real Bluesky Comments and Replies &#8212; Social Media, Ethics, and Automation</title>
   
   
   
@@ -40,7 +40,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/myfile.css?v=ed2eb8a4" />
@@ -412,7 +412,7 @@
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="00_intro.html">14.7. Viewing Comments and Replies</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="01_trees.html">14.7.1. Tree Structures</a></li>
 <li class="toctree-l3"><a class="reference internal" href="02_demo_recursion.html">14.7.2. Demo: Navigating Trees (recursion)</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">14.7.3. Demo: Display Real Discord Comments and Replies</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">14.7.3. Demo: Display Real Bluesky Comments and Replies</a></li>
 <li class="toctree-l3"><a class="reference internal" href="04_demo_hide_some_replies.html">14.7.4. Demo: Hide Some Comments</a></li>
 </ul>
 </details></li>
@@ -591,6 +591,37 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/social-media-ethics-automation/book-src-bsky/main?urlpath=lab/tree/ch14_moderation/06_comments_and_replies/03_demo_recursion_real.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -646,7 +677,7 @@
       
       
       
-      <li><a href="../../_sources/ch14_moderation/06_comments_and_replies/03_demo_recursion_real.md" target="_blank"
+      <li><a href="../../_sources/ch14_moderation/06_comments_and_replies/03_demo_recursion_real.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -656,7 +687,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -717,7 +748,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -728,11 +761,28 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Demo: Display Real Discord Comments and Replies</h1>
+    <h1>Demo: Display Real Bluesky Comments and Replies</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-bluesky-setup">Normal Bluesky Setup</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#helper-function-for-atproto-links">helper function for atproto links</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-atproto-library">load atproto library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-make-a-fake-bluesky-connection-with-the-fake-atproto-library">(optional) make a fake Bluesky connection with the fake_atproto library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#login-to-bluesky">login to Bluesky</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#helper-function-to-display-text-in-an-indented-box">Helper function to display text in an indented box</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-to-print-a-post-with-replies">Code to print a post with replies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-post-ids-and-testing-our-code">Finding post IDs and testing our code</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -742,10 +792,201 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="demo-display-real-discord-comments-and-replies">
-<h1><span class="section-number">14.7.3. </span>Demo: Display Real Discord Comments and Replies<a class="headerlink" href="#demo-display-real-discord-comments-and-replies" title="Link to this heading">#</a></h1>
+  <section id="demo-display-real-bluesky-comments-and-replies">
+<h1><span class="section-number">14.7.3. </span>Demo: Display Real Bluesky Comments and Replies<a class="headerlink" href="#demo-display-real-bluesky-comments-and-replies" title="Link to this heading">#</a></h1>
 <p><em>Choose Social Media Platform: <a href='../../../reddit/ch14_moderation/06_comments_and_replies/03_demo_recursion_real.html'>Reddit</a> | <a href='../../../discord/ch14_moderation/06_comments_and_replies/03_demo_recursion_real.html'>Discord</a> | <strong>Bluesky</strong> | <a href='../../../nocode/ch14_moderation/06_comments_and_replies/03_demo_recursion_real.html'>No Coding</a></em></p>
-<p><strong>Content for the social media platform Bluesky hasn’t been created yet. Please try another platform.</strong></p>
+<p>Now lets do the same thing we did on the last page (using recursion to display comments and replies), but do it on Bluesky! (Either for real or faked with the fake_atproto library).</p>
+<section id="normal-bluesky-setup">
+<h2>Normal Bluesky Setup<a class="headerlink" href="#normal-bluesky-setup" title="Link to this heading">#</a></h2>
+<p>We’ll start by doing our normal steps including these helper functions:</p>
+<section id="helper-function-for-atproto-links">
+<h3>helper function for atproto links<a class="headerlink" href="#helper-function-for-atproto-links" title="Link to this heading">#</a></h3>
+<p><em>NOTE: You don’t need to worry about the details of how this works, it just is here to make the code later easier to use.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span> <span class="c1">#load a &quot;regular expression&quot; library for helping to parse text</span>
+<span class="kn">from</span> <span class="nn">atproto</span> <span class="kn">import</span> <span class="n">IdResolver</span> <span class="c1"># Load the atproto IdResolver library to get offical ATProto user IDs</span>
+
+<span class="k">def</span> <span class="nf">get_at_post_link_from_url</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="c1"># Initialize and log in with the client</span>
+
+    <span class="c1"># Extract username and post ID from the URL</span>
+    <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;https://bsky.app/profile/([^/]+)/post/([^/]+)&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">match</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid Bluesky post URL format.&quot;</span><span class="p">)</span>
+    <span class="n">user_handle</span><span class="p">,</span> <span class="n">post_id</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
+
+    <span class="c1"># Construct the at:// URI</span>
+    <span class="n">post_uri</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;at://</span><span class="si">{</span><span class="n">user_handle</span><span class="si">}</span><span class="s2">/app.bsky.feed.post/</span><span class="si">{</span><span class="n">post_id</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="k">return</span> <span class="n">post_uri</span>
+
+<span class="c1"># function to convert a feed from a weblink url to the special atproto &quot;at&quot; URI</span>
+<span class="k">def</span> <span class="nf">getATFeedLinkFromURL</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    
+    <span class="c1"># Get the user did and feed id from the weblink url</span>
+    <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;https://bsky.app/profile/([^/]+)/feed/([^/]+)&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">match</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid Bluesky feed URL format.&quot;</span><span class="p">)</span>
+    <span class="n">user_handle</span><span class="p">,</span> <span class="n">feed_id</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
+
+    <span class="c1"># Get the official atproto user ID (did) from the handle</span>
+    <span class="n">resolver</span> <span class="o">=</span> <span class="n">IdResolver</span><span class="p">()</span>
+    <span class="n">did</span> <span class="o">=</span> <span class="n">resolver</span><span class="o">.</span><span class="n">handle</span><span class="o">.</span><span class="n">resolve</span><span class="p">(</span><span class="n">user_handle</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">did</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Could not resolve DID for handle &quot;</span><span class="si">{</span><span class="n">user_handle</span><span class="si">}</span><span class="s1">&quot;.&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Construct the at:// URI</span>
+    <span class="n">post_uri</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;at://</span><span class="si">{</span><span class="n">did</span><span class="si">}</span><span class="s2">/app.bsky.feed.generator/</span><span class="si">{</span><span class="n">feed_id</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we can continue logging in to Bluesky and look through multiple posts.</p>
+</section>
+<section id="load-atproto-library">
+<h3>load atproto library<a class="headerlink" href="#load-atproto-library" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;Client&quot; from the &quot;atproto&quot; library that will help us work with Bluesky</span>
+<span class="kn">from</span> <span class="nn">atproto</span> <span class="kn">import</span> <span class="n">Client</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="optional-make-a-fake-bluesky-connection-with-the-fake-atproto-library">
+<h3>(optional) make a fake Bluesky connection with the fake_atproto library<a class="headerlink" href="#optional-make-a-fake-bluesky-connection-with-the-fake-atproto-library" title="Link to this heading">#</a></h3>
+<p>For testing purposes, we”ve added this line of code, which loads a fake version of atproto, so it wont actually connect to Bluesky. <strong>If you want to try to actually connect to Bluesky, don’t run this line of code.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../fake_apis/fake_atproto.ipynb
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake atproto (bsky.app) is replacing the atproto.blue library. Fake atproto doesn&#x27;t need real passwords, and prevents you from accessing real Bluesky</strong></div></div>
+</div>
+</section>
+<section id="login-to-bluesky">
+<h3>login to Bluesky<a class="headerlink" href="#login-to-bluesky" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Login to Bluesky</span>
+<span class="c1"># TODO: put your account name and password below</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="s2">&quot;https://bsky.social&quot;</span><span class="p">)</span>
+<span class="n">client</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="s2">&quot;your_account_name.bsky.social&quot;</span><span class="p">,</span> <span class="s2">&quot;m#5@_fake_bsky_password_$%Ds&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake atproto is pretending to set up a client connection to: https://bsky.social</strong></div><div class="output text_html"><strong style='color:darkred'>Fake atproto is pretending log into your account: your_account_name.bsky.social</strong></div></div>
+</div>
+</section>
+</section>
+<section id="helper-function-to-display-text-in-an-indented-box">
+<h2>Helper function to display text in an indented box<a class="headerlink" href="#helper-function-to-display-text-in-an-indented-box" title="Link to this heading">#</a></h2>
+<p>(You don’t need to worry about how this works. This is that function that helps display posts in indented boxes)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span>
+<span class="kn">import</span> <span class="nn">html</span>
+<span class="k">def</span> <span class="nf">display_indented</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">left_margin</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="n">display</span><span class="p">(</span>
+        <span class="n">HTML</span><span class="p">(</span>
+            <span class="s2">&quot;&lt;pre style=&#39;border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">left_margin</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;px&#39;&gt;&quot;</span> <span class="o">+</span> 
+            <span class="n">html</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">+</span> 
+            <span class="s2">&quot;&lt;/pre&gt;&quot;</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="code-to-print-a-post-with-replies">
+<h2>Code to print a post with replies<a class="headerlink" href="#code-to-print-a-post-with-replies" title="Link to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">print_post_and_replies</span></code> is a function that takes a postId (instructions on where to get one below), prints information about that post, and then uses the <code class="docutils literal notranslate"><span class="pre">print_comment_and_replies</span></code> function to print out all comments and replies.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_post_thread</span><span class="p">(</span><span class="n">postUrl</span><span class="p">,</span> <span class="n">show_hidden</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+    <span class="n">at_post_link</span> <span class="o">=</span> <span class="n">get_at_post_link_from_url</span><span class="p">(</span><span class="n">postUrl</span><span class="p">)</span>
+    
+    <span class="c1"># Fetch the post details</span>
+    <span class="n">post_data</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_post_thread</span><span class="p">(</span><span class="n">at_post_link</span><span class="p">)</span>
+    
+    <span class="n">print_post_and_replies</span><span class="p">(</span><span class="n">post_data</span><span class="o">.</span><span class="n">thread</span><span class="p">,</span> <span class="n">show_hidden</span><span class="o">=</span><span class="n">show_hidden</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">print_comment_and_replies</span></code> function takes a given comment and recursively prints that comment as well as all replies to that comment (which will as well as all replies to those replies, etc.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_post_and_replies</span><span class="p">(</span><span class="n">postInfo</span><span class="p">,</span> <span class="n">num_indents</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">show_hidden</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    
+    <span class="c1"># make sure this post isn&#39;t blocked (since we can&#39;t read blocked posts)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="nb">hasattr</span><span class="p">(</span><span class="n">postInfo</span><span class="p">,</span><span class="s1">&#39;blocked&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">postInfo</span><span class="o">.</span><span class="n">blocked</span><span class="p">):</span>
+        
+        <span class="n">post</span> <span class="o">=</span> <span class="n">postInfo</span><span class="o">.</span><span class="n">post</span>
+        <span class="n">replies</span> <span class="o">=</span> <span class="n">postInfo</span><span class="o">.</span><span class="n">replies</span>
+
+        <span class="c1"># If replies is None, make it an empty array (so the for loop later doesn&#39;t crash)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">replies</span><span class="p">:</span>
+            <span class="n">replies</span> <span class="o">=</span> <span class="p">[]</span>
+    
+        <span class="n">display_text</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">post</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+            <span class="s2">&quot;-- &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">display_name</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; (&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">handle</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;)</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> 
+            <span class="s2">&quot; (likes: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">like_count</span><span class="p">)</span> <span class="o">+</span> 
+            <span class="s2">&quot;, replies: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">reply_count</span><span class="p">)</span> <span class="o">+</span>
+            <span class="s2">&quot;, reposts: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">repost_count</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;) - &quot;</span> 
+        <span class="p">)</span>
+        
+        <span class="n">display_indented</span><span class="p">(</span><span class="n">display_text</span><span class="p">,</span> <span class="n">num_indents</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span>
+    
+        <span class="c1">#print replies (and the replies of those, etc.)</span>
+        <span class="k">for</span> <span class="n">reply</span> <span class="ow">in</span> <span class="n">replies</span><span class="p">:</span>
+            <span class="n">print_post_and_replies</span><span class="p">(</span><span class="n">reply</span><span class="p">,</span> <span class="n">num_indents</span> <span class="o">=</span> <span class="n">num_indents</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">show_hidden</span><span class="o">=</span><span class="n">show_hidden</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="finding-post-ids-and-testing-our-code">
+<h2>Finding post IDs and testing our code<a class="headerlink" href="#finding-post-ids-and-testing-our-code" title="Link to this heading">#</a></h2>
+<p>In order to test it out, we need to find a link to a Bluesky post with replies. Once you find the post, find the ‘Copy Link to Post’ option to get a web url for the post.</p>
+<p><img alt="Bluesky Post. The three dot &quot;Open post options menu&quot; is opened, and from there the &quot;Copy Link to Post&quot; option is selected." src="../../_images/bsky_copy_link.png" /></p>
+<p>It should be something like: <a class="reference external" href="https://bsky.app/profile/realgdt.bsky.social/post/3lihunicmds2y">https://bsky.app/profile/realgdt.bsky.social/post/3lihunicmds2y</a></p>
+<p>Now we can test it out by calling the <code class="docutils literal notranslate"><span class="pre">print_post_thread</span></code>, passing it the url as a string. Then you should see the comment tree.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_post_thread</span><span class="p">(</span><span class="s1">&#39;https://bsky.app/profile/realgdt.bsky.social/post/3lihunicmds2y&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:0px'>This is a fake fact about movie costuming!
+-- Imaginary User (imaginary_user.bsky.social)
+ (likes: 25, replies: 2, reposts: 13) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:20px'>Wow! That is a cool fake fact!
+-- Fake User (fake_user.bsky.social)
+ (likes: 6, replies: 2, reposts: 5) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:40px'>You&#x27;re totally right! I never saw that before!
+-- False User (false_user.bsky.social)
+ (likes: 3, replies: 1, reposts: 0) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:60px'>Yeah, and did you see this other detail too?
+-- Fake User (fake_user.bsky.social)
+ (likes: 7, replies: 1, reposts: 4) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:80px'>Wow! No way!
+-- False User (false_user.bsky.social)
+ (likes: 4, replies: 0, reposts: 0) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:40px'>It&#x27;s not cool! You are a bad person for saying it&#x27;s cool!
+-- Troll User (troll_user.bsky.social)
+ (likes: 0, replies: 0, reposts: 0) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:20px'>I saw a completely unrelated movie once!
+-- Pretend User (pretend_user.bsky.social)
+ (likes: 1, replies: 1, reposts: 0) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:40px'>I don&#x27;t see how that&#x27;s relevant
+-- Fake User (fake_user.bsky.social)
+ (likes: 2, replies: 0, reposts: 1) - </pre></div></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -802,6 +1043,30 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-bluesky-setup">Normal Bluesky Setup</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#helper-function-for-atproto-links">helper function for atproto links</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-atproto-library">load atproto library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-make-a-fake-bluesky-connection-with-the-fake-atproto-library">(optional) make a fake Bluesky connection with the fake_atproto library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#login-to-bluesky">login to Bluesky</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#helper-function-to-display-text-in-an-indented-box">Helper function to display text in an indented box</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-to-print-a-post-with-replies">Code to print a post with replies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-post-ids-and-testing-our-code">Finding post IDs and testing our code</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
