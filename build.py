@@ -371,6 +371,9 @@ for platform in platforms:
                    "This is a copy of the book source for the "+ platform["full_name"] + " version of the book.\n\n" + 
                    "This copy was created to help make the interactive online code editors work better.\n\n" + 
                    "The original source code is at: https://github.com/social-media-ethics-automation/book")
+        
+    # copy .gitignore
+    shutil.copy(".gitignore", "src-copies/book-src-"+platform["file_name"] + "/.gitignore")
 
 
     # Clean up
