@@ -40,7 +40,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/myfile.css?v=ed2eb8a4" />
@@ -907,25 +907,25 @@ document.write(`
 </section>
 <section id="code-to-print-a-post-with-replies">
 <h2>Code to print a post with replies<a class="headerlink" href="#code-to-print-a-post-with-replies" title="Link to this heading">#</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">print_post_and_replies</span></code> is a function that takes a postId (instructions on where to get one below), prints information about that post, and then uses the <code class="docutils literal notranslate"><span class="pre">print_comment_and_replies</span></code> function to print out all comments and replies.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">print_post_thread</span></code> is a function that takes a Bluesky Post weblink (url) (instructions on where to get one below), downloads the thread that follows that post, and then uses the <code class="docutils literal notranslate"><span class="pre">print_post_and_replies</span></code> function to print out that post and the replies to that post.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_post_thread</span><span class="p">(</span><span class="n">postUrl</span><span class="p">,</span> <span class="n">show_hidden</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_post_thread</span><span class="p">(</span><span class="n">postUrl</span><span class="p">):</span>
 
     <span class="n">at_post_link</span> <span class="o">=</span> <span class="n">get_at_post_link_from_url</span><span class="p">(</span><span class="n">postUrl</span><span class="p">)</span>
     
     <span class="c1"># Fetch the post details</span>
     <span class="n">post_data</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_post_thread</span><span class="p">(</span><span class="n">at_post_link</span><span class="p">)</span>
     
-    <span class="n">print_post_and_replies</span><span class="p">(</span><span class="n">post_data</span><span class="o">.</span><span class="n">thread</span><span class="p">,</span> <span class="n">show_hidden</span><span class="o">=</span><span class="n">show_hidden</span><span class="p">)</span>
+    <span class="n">print_post_and_replies</span><span class="p">(</span><span class="n">post_data</span><span class="o">.</span><span class="n">thread</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">print_comment_and_replies</span></code> function takes a given comment and recursively prints that comment as well as all replies to that comment (which will as well as all replies to those replies, etc.)</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">print_post_and_replies</span></code> function takes a given post and recursively prints that post as well as all replies to that post (which will also print all the replies to those replies, etc.)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_post_and_replies</span><span class="p">(</span><span class="n">postInfo</span><span class="p">,</span> <span class="n">num_indents</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">show_hidden</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_post_and_replies</span><span class="p">(</span><span class="n">postInfo</span><span class="p">,</span> <span class="n">num_indents</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
     
     <span class="c1"># make sure this post isn&#39;t blocked (since we can&#39;t read blocked posts)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="nb">hasattr</span><span class="p">(</span><span class="n">postInfo</span><span class="p">,</span><span class="s1">&#39;blocked&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">postInfo</span><span class="o">.</span><span class="n">blocked</span><span class="p">):</span>
@@ -942,14 +942,15 @@ document.write(`
             <span class="s2">&quot;-- &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">display_name</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; (&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">handle</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;)</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> 
             <span class="s2">&quot; (likes: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">like_count</span><span class="p">)</span> <span class="o">+</span> 
             <span class="s2">&quot;, replies: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">reply_count</span><span class="p">)</span> <span class="o">+</span>
-            <span class="s2">&quot;, reposts: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">repost_count</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;) - &quot;</span> 
+            <span class="s2">&quot;, reposts: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">repost_count</span><span class="p">)</span> <span class="o">+</span> 
+            <span class="s2">&quot;, quotes: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">quote_count</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;) - &quot;</span> 
         <span class="p">)</span>
         
         <span class="n">display_indented</span><span class="p">(</span><span class="n">display_text</span><span class="p">,</span> <span class="n">num_indents</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span>
     
         <span class="c1">#print replies (and the replies of those, etc.)</span>
         <span class="k">for</span> <span class="n">reply</span> <span class="ow">in</span> <span class="n">replies</span><span class="p">:</span>
-            <span class="n">print_post_and_replies</span><span class="p">(</span><span class="n">reply</span><span class="p">,</span> <span class="n">num_indents</span> <span class="o">=</span> <span class="n">num_indents</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">show_hidden</span><span class="o">=</span><span class="n">show_hidden</span><span class="p">)</span>
+            <span class="n">print_post_and_replies</span><span class="p">(</span><span class="n">reply</span><span class="p">,</span> <span class="n">num_indents</span> <span class="o">=</span> <span class="n">num_indents</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -968,23 +969,23 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:0px'>This is a fake fact about movie costuming!
+<div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:0px'>This is a fake fact about movie costuming and I find it so interesting!
 -- Imaginary User (imaginary_user.bsky.social)
- (likes: 25, replies: 2, reposts: 13) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:20px'>Wow! That is a cool fake fact!
+ (likes: 25, replies: 2, reposts: 13, quotes: 7) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:20px'>Wow! That is a cool fake fact!
 -- Fake User (fake_user.bsky.social)
- (likes: 6, replies: 2, reposts: 5) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:40px'>You&#x27;re totally right! I never saw that before!
+ (likes: 6, replies: 2, reposts: 5, quotes: 1) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:40px'>You&#x27;re totally right! I never saw that before!
 -- False User (false_user.bsky.social)
- (likes: 3, replies: 1, reposts: 0) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:60px'>Yeah, and did you see this other detail too?
+ (likes: 3, replies: 1, reposts: 0, quotes: 0) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:60px'>Yeah, and did you see this other detail too?
 -- Fake User (fake_user.bsky.social)
- (likes: 7, replies: 1, reposts: 4) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:80px'>Wow! No way!
+ (likes: 7, replies: 1, reposts: 4, quotes: 10) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:80px'>Wow! No way!
 -- False User (false_user.bsky.social)
- (likes: 4, replies: 0, reposts: 0) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:40px'>It&#x27;s not cool! You are a bad person for saying it&#x27;s cool!
+ (likes: 4, replies: 0, reposts: 0, quotes: 0) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:40px'>It&#x27;s not cool! You are a bad person for saying it&#x27;s cool!
 -- Troll User (troll_user.bsky.social)
- (likes: 0, replies: 0, reposts: 0) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:20px'>I saw a completely unrelated movie once!
+ (likes: 0, replies: 0, reposts: 0, quotes: 2) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:20px'>I saw a completely unrelated movie once and I liked it!
 -- Pretend User (pretend_user.bsky.social)
- (likes: 1, replies: 1, reposts: 0) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:40px'>I don&#x27;t see how that&#x27;s relevant
+ (likes: 1, replies: 1, reposts: 0, quotes: 0) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:40px'>I don&#x27;t see how that&#x27;s relevant
 -- Fake User (fake_user.bsky.social)
- (likes: 2, replies: 0, reposts: 1) - </pre></div></div>
+ (likes: 2, replies: 0, reposts: 1, quotes: 1) - </pre></div></div>
 </div>
 </section>
 </section>
