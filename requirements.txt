@@ -8,4 +8,5 @@ discord
 discord-py-interactions
 atproto
 nltk
+nest_asyncio
 pyppeteer # Note: modify this library to not restrict version requirements on "websockets", and update __chromium_revision__ to latest stable here (https://chromiumdash.appspot.com/releases?platform=Windows, https://storage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/)
