@@ -7,16 +7,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="8.2. Data From the Discord API" />
+<meta property="og:title" content="8.2. Data From the Bluesky API" />
 <meta property="og:type" content="book" />
 <meta property="og:url" content="ch08_data_mining/02_platform_api_data.html" />
 <meta property="og:site_name" content="Social Media, Ethics, and Automation" />
-<meta property="og:description" content="Choose Social Media Platform: Reddit| Discord| Bluesky| No Coding Content for the social media platform Bluesky hasn’t been created yet. Please try another platform." />
+<meta property="og:description" content="Choose Social Media Platform: Reddit| Discord| Bluesky| No Coding We’ve been accessing Bluesky through Python and the “atproto” code library. The atproto code library works by sending requests acro..." />
 <meta property="og:image" content="https://social-media-ethics-automation.github.io/book/reddit/_images/logo.png" />
 <meta property="og:image:alt" content="Social Media, Ethics, and Automation" />
-<meta name="description" content="Choose Social Media Platform: Reddit| Discord| Bluesky| No Coding Content for the social media platform Bluesky hasn’t been created yet. Please try another platform." />
+<meta name="description" content="Choose Social Media Platform: Reddit| Discord| Bluesky| No Coding We’ve been accessing Bluesky through Python and the “atproto” code library. The atproto code library works by sending requests acro..." />
 
-    <title>8.2. Data From the Discord API &#8212; Social Media, Ethics, and Automation</title>
+    <title>8.2. Data From the Bluesky API &#8212; Social Media, Ethics, and Automation</title>
   
   
   
@@ -321,7 +321,7 @@
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="00_data_mining.html">8. Data Mining</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="01_data_sources.html">8.1. Sources of Social Media Data</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">8.2. Data From the Discord API</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">8.2. Data From the Bluesky API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="03_data_mining.html">8.3. Mining Social Media Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="04_data_uses.html">8.4. How is this data used</a></li>
 <li class="toctree-l2"><a class="reference internal" href="05_what_platforms_think_of_you.html">8.5. Activity: What platforms think of you</a></li>
@@ -728,7 +728,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Data From the Discord API</h1>
+    <h1>Data From the Bluesky API</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -742,10 +742,14 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="data-from-the-discord-api">
-<h1><span class="section-number">8.2. </span>Data From the Discord API<a class="headerlink" href="#data-from-the-discord-api" title="Link to this heading">#</a></h1>
+  <section id="data-from-the-bluesky-api">
+<h1><span class="section-number">8.2. </span>Data From the Bluesky API<a class="headerlink" href="#data-from-the-bluesky-api" title="Link to this heading">#</a></h1>
 <p><em>Choose Social Media Platform: <a href='../../reddit/ch08_data_mining/02_platform_api_data.html'>Reddit</a> | <a href='../../discord/ch08_data_mining/02_platform_api_data.html'>Discord</a> | <strong>Bluesky</strong> | <a href='../../nocode/ch08_data_mining/02_platform_api_data.html'>No Coding</a></em></p>
-<p><strong>Content for the social media platform Bluesky hasn’t been created yet. Please try another platform.</strong></p>
+<p>We’ve been accessing Bluesky through Python and the “atproto” code library. The atproto code library works by sending requests across the internet to Bluesky, using what is called an “<a class="reference external" href="https://en.wikipedia.org/wiki/API">application programming interface</a>” <span id="id1">[<a class="reference internal" href="09_bibliography.html#id4" title="API. November 2023. Page Version ID: 1187436026. URL: https://en.wikipedia.org/w/index.php?title=API&amp;oldid=1187436026 (visited on 2023-12-05).">h3</a>]</span> or API for short. APIs have a set of rules for what requests you can make, what happens when you make the request, and what information you can get back.</p>
+<p>If you are interested in learning more about what you can do with atproto and what information you can get back, you can look at the official documentation for those. But be warned they are not organized in a friendly way for newcomers and take some getting used to to figure out what these documentation pages are talking about.</p>
+<p>So, if you are interested, you can look at <a class="reference external" href="https://atproto.blue/en/latest/readme.html">the atproto library documentation</a> <span id="id2">[<a class="reference internal" href="09_bibliography.html#id12" title="Ilya (Marshal) Siamionau. Getting Started: The AT Protocol SDK. 2024. URL: https://atproto.blue/readme.html (visited on 2025-04-03).">h4</a>]</span> to find out what the library can do (again, not organized in a beginner-friendly way). You can learn a little more about <a class="reference external" href="https://atproto.blue/en/latest/atproto_client/client.html">what actions the client can do here</a> <span id="id3">[<a class="reference internal" href="09_bibliography.html#id14" title="Ilya (Marshal) Siamionau. Client - atproto. 2024. URL: https://atproto.blue/atproto_client/client.html (visited on 2025-04-03).">h5</a>]</span>. You can also reference some <a class="reference external" href="https://github.com/MarshalX/atproto/tree/main/examples">official example programs</a> <span id="id4">[<a class="reference internal" href="09_bibliography.html#id13" title="Atproto/examples at main · MarshalX/atproto. 2025. URL: https://github.com/MarshalX/atproto/tree/main/examples (visited on 2025-04-03).">h6</a>]</span>.</p>
+<p>You can also look up information on the data that you can get from the AT Protocol API (apart from any programming languages) by looking at the <a class="reference external" href="https://atproto.com/">AT Protocol API Documentation</a> <span id="id5">[<a class="reference internal" href="09_bibliography.html#id15" title="AT Protocol. 2025. URL: https://atproto.com/ (visited on 2025-04-03).">h7</a>]</span>.</p>
+<p>The AT Protocol API lets you access a lot of the data that Bluesky tracks (since Bluesky is a more open social media protocol), but Bluesky probably track much more than they let you have access to (like what other social media platforms do).</p>
 </section>
 
     <script type="text/x-thebe-config">
