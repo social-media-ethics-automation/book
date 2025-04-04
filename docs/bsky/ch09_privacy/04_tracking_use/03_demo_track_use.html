@@ -773,7 +773,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log-into-bluesky-atproto">Log into Bluesky (atproto)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-sentiment-analysis-library-and-make-analyzer">load sentiment analysis library and make analyzer</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#original-code-to-loop-through-submissions-finding-average-sentiment">original code to loop through submissions, finding average sentiment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#original-code-to-run-a-search-and-loop-through-posts-finding-average-sentiment">original code to run a search and loop through posts, finding average sentiment</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-a-function-using-the-code-above-for-finding-the-average-sentiment">Make a function using the code above for finding the average sentiment</a></li>
@@ -896,48 +896,52 @@ For testing purposes, we”ve added this line of code, which loads a fake versio
 </div>
 </div>
 </section>
-<section id="original-code-to-loop-through-submissions-finding-average-sentiment">
-<h3>original code to loop through submissions, finding average sentiment<a class="headerlink" href="#original-code-to-loop-through-submissions-finding-average-sentiment" title="Link to this heading">#</a></h3>
-<p>This is the code from chapter 8 that loops through submissions in the “cuteanimals” subreddit and calculates the average sentiment</p>
+<section id="original-code-to-run-a-search-and-loop-through-posts-finding-average-sentiment">
+<h3>original code to run a search and loop through posts, finding average sentiment<a class="headerlink" href="#original-code-to-run-a-search-and-loop-through-posts-finding-average-sentiment" title="Link to this heading">#</a></h3>
+<p>This is the code from chapter 8 that loops through posts from a search for “news” and calculates the average sentiment</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_submissions</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">total_sentiment</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="c1"># Look up the subreddit &quot;cuteanimals&quot;, then find the &quot;hot&quot; list, getting up to 10 submission</span>
-<span class="n">submissions</span> <span class="o">=</span> <span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span><span class="s2">&quot;cuteanimals&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">hot</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="c1"># Run a search for the word &quot;news&quot; on bluesky</span>
+<span class="n">search_query</span> <span class="o">=</span> <span class="s2">&quot;news&quot;</span>
+<span class="n">search_results</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">bsky</span><span class="o">.</span><span class="n">feed</span><span class="o">.</span><span class="n">search_posts</span><span class="p">({</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="n">search_query</span><span class="p">})</span><span class="o">.</span><span class="n">posts</span>
 
-<span class="c1"># Turn the submission results into a Python List</span>
-<span class="n">submissions_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">submissions</span><span class="p">)</span>
+<span class="n">num_posts</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">total_sentiment</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="k">for</span> <span class="n">submission</span> <span class="ow">in</span> <span class="n">submissions_list</span><span class="p">:</span>
+<span class="k">for</span> <span class="n">post</span> <span class="ow">in</span> <span class="n">search_results</span><span class="p">:</span>
+    
     <span class="c1">#calculate sentiment</span>
-    <span class="n">submission_sentiment</span> <span class="o">=</span> <span class="n">sia</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">submission</span><span class="o">.</span><span class="n">title</span><span class="p">)[</span><span class="s2">&quot;compound&quot;</span><span class="p">]</span>
-    <span class="n">num_submissions</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="n">total_sentiment</span> <span class="o">+=</span> <span class="n">submission_sentiment</span>
+    <span class="n">post_sentiment</span> <span class="o">=</span> <span class="n">sia</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">)[</span><span class="s2">&quot;compound&quot;</span><span class="p">]</span>
+    <span class="n">num_posts</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">total_sentiment</span> <span class="o">+=</span> <span class="n">post_sentiment</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sentiment: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">submission_sentiment</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   Submission Title: &quot;</span> <span class="o">+</span> <span class="n">submission</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sentiment: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post_sentiment</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   post text: &quot;</span> <span class="o">+</span> <span class="n">post</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">()</span>
 
 
-
-<span class="n">average_sentiment</span> <span class="o">=</span> <span class="n">total_sentiment</span> <span class="o">/</span> <span class="n">num_submissions</span>
+<span class="n">average_sentiment</span> <span class="o">=</span> <span class="n">total_sentiment</span> <span class="o">/</span> <span class="n">num_posts</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average sentiment was &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">average_sentiment</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">total_sentiment</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Look up the subreddit &quot;cuteanimals&quot;, then find the &quot;hot&quot; list, getting up to 10 submission</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">submissions</span> <span class="o">=</span> <span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span><span class="s2">&quot;cuteanimals&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">hot</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># Turn the submission results into a Python List</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">submissions_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">submissions</span><span class="p">)</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sentiment: 0.784
+   post text: Breaking news: A lovely cat took a nice long nap today!
 
-<span class="ne">NameError</span>: name &#39;reddit&#39; is not defined
+Sentiment: 0.0
+   post text: Breaking news: Someone said a really mean thing on the internet today!
+
+Sentiment: 0.7088
+   post text: Breaking news: Some grandparents made some yummy cookies for all the kids to share!
+
+Sentiment: -0.6114
+   post text: Breaking news: All the horrors of the universe revealed at last!
+
+Average sentiment was 0.22034999999999996
 </pre></div>
 </div>
 </div>
@@ -952,7 +956,7 @@ For testing purposes, we”ve added this line of code, which loads a fake versio
 <li><p>Indent all the old code so that it becomes the contents of the function <code class="docutils literal notranslate"><span class="pre">find_average_sentiment</span></code></p></li>
 <li><p>Make the function take two arguments:</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">subreddit_name</span></code>, which takes place of “cuteanimals”, so the person calling the function can choose which subreddit to search</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">search_query</span></code>, which takes place of “news”, so the person calling the function can choose what search to run</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">display_progress</span></code> which defaults to False. This decides whether or not the print statements are run when the function is run, so we can see the progress if we want, or just get the answer by default</p></li>
 </ul>
 </li>
@@ -960,30 +964,30 @@ For testing purposes, we”ve added this line of code, which loads a fake versio
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="k">def</span> <span class="nf">find_average_sentiment</span><span class="p">(</span><span class="n">subreddit_name</span><span class="p">,</span> <span class="n">display_progress</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_average_sentiment</span><span class="p">(</span><span class="n">search_query</span><span class="p">,</span> <span class="n">display_progress</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
     <span class="n">num_submissions</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">total_sentiment</span> <span class="o">=</span> <span class="mi">0</span>
-
-    <span class="c1"># Look up the subreddit given as a parameter, then find the &quot;hot&quot; list, getting up to 10 submission</span>
-    <span class="n">submissions</span> <span class="o">=</span> <span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span><span class="n">subreddit_name</span><span class="p">)</span><span class="o">.</span><span class="n">hot</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-
-    <span class="c1"># Turn the submission results into a Python List</span>
-    <span class="n">submissions_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">submissions</span><span class="p">)</span>
-
-    <span class="k">for</span> <span class="n">submission</span> <span class="ow">in</span> <span class="n">submissions_list</span><span class="p">:</span>
+    
+    <span class="c1"># Run a search for on bluesky for the passed in &quot;search_query&quot;</span>
+    <span class="n">search_results</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">bsky</span><span class="o">.</span><span class="n">feed</span><span class="o">.</span><span class="n">search_posts</span><span class="p">({</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="n">search_query</span><span class="p">})</span><span class="o">.</span><span class="n">posts</span>
+    
+    <span class="n">num_posts</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">total_sentiment</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">for</span> <span class="n">post</span> <span class="ow">in</span> <span class="n">search_results</span><span class="p">:</span>
+        
         <span class="c1">#calculate sentiment</span>
-        <span class="n">submission_sentiment</span> <span class="o">=</span> <span class="n">sia</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">submission</span><span class="o">.</span><span class="n">title</span><span class="p">)[</span><span class="s2">&quot;compound&quot;</span><span class="p">]</span>
-        <span class="n">num_submissions</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="n">total_sentiment</span> <span class="o">+=</span> <span class="n">submission_sentiment</span>
+        <span class="n">post_sentiment</span> <span class="o">=</span> <span class="n">sia</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">)[</span><span class="s2">&quot;compound&quot;</span><span class="p">]</span>
+        <span class="n">num_posts</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">total_sentiment</span> <span class="o">+=</span> <span class="n">post_sentiment</span>
 
         <span class="k">if</span><span class="p">(</span><span class="n">display_progress</span><span class="p">):</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sentiment: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">submission_sentiment</span><span class="p">))</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   Submission Title: &quot;</span> <span class="o">+</span> <span class="n">submission</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sentiment: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post_sentiment</span><span class="p">))</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   post text: &quot;</span> <span class="o">+</span> <span class="n">post</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
             <span class="nb">print</span><span class="p">()</span>
-
-
-
-    <span class="n">average_sentiment</span> <span class="o">=</span> <span class="n">total_sentiment</span> <span class="o">/</span> <span class="n">num_submissions</span>
+    
+    
+    <span class="n">average_sentiment</span> <span class="o">=</span> <span class="n">total_sentiment</span> <span class="o">/</span> <span class="n">num_posts</span>
     <span class="k">if</span><span class="p">(</span><span class="n">display_progress</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average sentiment was &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">average_sentiment</span><span class="p">))</span>
     
@@ -995,31 +999,31 @@ For testing purposes, we”ve added this line of code, which loads a fake versio
 <p>Now let’s try using the function</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">find_average_sentiment</span><span class="p">(</span><span class="s2">&quot;cuteanimals&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">find_average_sentiment</span><span class="p">(</span><span class="s2">&quot;news&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to select the subreddit: cuteanimals</strong></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.3777333333333333
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.22034999999999996
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">find_average_sentiment</span><span class="p">(</span><span class="s2">&quot;science&quot;</span><span class="p">,</span> <span class="n">display_progress</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">find_average_sentiment</span><span class="p">(</span><span class="s2">&quot;scientists&quot;</span><span class="p">,</span> <span class="n">display_progress</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to select the subreddit: science</strong></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sentiment: -0.5255
-   Submission Title: Scientists have cloned dangerous dinosaurs!
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sentiment: -0.5255
+   post text: Scientists have cloned dangerous dinosaurs!
 
 Sentiment: 0.7574
-   Submission Title: Scientists have created the best tasting food ever!
+   post text: Scientists have created the best tasting food ever!
 
 Sentiment: 0.0
-   Submission Title: F*** magnets, how do they work? And I don&#39;t wanna talk to a scientist
+   post text: F*** magnets, how do they work? And I don&#39;t wanna talk to any scientists
 
 Average sentiment was 0.0773
 </pre></div>
@@ -1035,7 +1039,7 @@ Average sentiment was 0.0773
 <p>Now we make another version of the same function, but with a small difference:</p>
 <ul class="simple">
 <li><p>We make a list variable called <code class="docutils literal notranslate"><span class="pre">sentiment_searches</span></code> which exists outside the function.</p></li>
-<li><p>At the start of the function we add the subreddit being searched to that list.
+<li><p>At the start of the function we add the search_query being searched to that list.
 This way, as the function gets used, we’ll keep a history of its use in the <code class="docutils literal notranslate"><span class="pre">sentiment_searches</span></code> list</p></li>
 </ul>
 <div class="cell docutils container">
@@ -1043,34 +1047,34 @@ This way, as the function gets used, we’ll keep a history of its use in the <c
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make a list to save what subreddit was used for each time `find_average_sentiment` is run</span>
 <span class="n">sentiment_searches</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="k">def</span> <span class="nf">find_average_sentiment</span><span class="p">(</span><span class="n">subreddit_name</span><span class="p">,</span> <span class="n">display_progress</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-    
-    <span class="c1"># Add the current subreddit being searched to the sentiment_searches list</span>
-    <span class="n">sentiment_searches</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">subreddit_name</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">find_average_sentiment</span><span class="p">(</span><span class="n">search_query</span><span class="p">,</span> <span class="n">display_progress</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+
+    <span class="c1"># Add the current search_query being searched to the sentiment_searches list</span>
+    <span class="n">sentiment_searches</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">search_query</span><span class="p">)</span>
     
     <span class="n">num_submissions</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">total_sentiment</span> <span class="o">=</span> <span class="mi">0</span>
-
-    <span class="c1"># Look up the subreddit name given as a parameter, then find the &quot;hot&quot; list, getting up to 10 submission</span>
-    <span class="n">submissions</span> <span class="o">=</span> <span class="n">reddit</span><span class="o">.</span><span class="n">subreddit</span><span class="p">(</span><span class="n">subreddit_name</span><span class="p">)</span><span class="o">.</span><span class="n">hot</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-
-    <span class="c1"># Turn the submission results into a Python List</span>
-    <span class="n">submissions_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">submissions</span><span class="p">)</span>
-
-    <span class="k">for</span> <span class="n">submission</span> <span class="ow">in</span> <span class="n">submissions_list</span><span class="p">:</span>
+    
+    <span class="c1"># Run a search for on bluesky for the passed in &quot;search_query&quot;</span>
+    <span class="n">search_results</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">bsky</span><span class="o">.</span><span class="n">feed</span><span class="o">.</span><span class="n">search_posts</span><span class="p">({</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="n">search_query</span><span class="p">})</span><span class="o">.</span><span class="n">posts</span>
+    
+    <span class="n">num_posts</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">total_sentiment</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">for</span> <span class="n">post</span> <span class="ow">in</span> <span class="n">search_results</span><span class="p">:</span>
+        
         <span class="c1">#calculate sentiment</span>
-        <span class="n">submission_sentiment</span> <span class="o">=</span> <span class="n">sia</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">submission</span><span class="o">.</span><span class="n">title</span><span class="p">)[</span><span class="s2">&quot;compound&quot;</span><span class="p">]</span>
-        <span class="n">num_submissions</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="n">total_sentiment</span> <span class="o">+=</span> <span class="n">submission_sentiment</span>
+        <span class="n">post_sentiment</span> <span class="o">=</span> <span class="n">sia</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">)[</span><span class="s2">&quot;compound&quot;</span><span class="p">]</span>
+        <span class="n">num_posts</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">total_sentiment</span> <span class="o">+=</span> <span class="n">post_sentiment</span>
 
         <span class="k">if</span><span class="p">(</span><span class="n">display_progress</span><span class="p">):</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sentiment: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">submission_sentiment</span><span class="p">))</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   Submission Title: &quot;</span> <span class="o">+</span> <span class="n">submission</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sentiment: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post_sentiment</span><span class="p">))</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   post text: &quot;</span> <span class="o">+</span> <span class="n">post</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
             <span class="nb">print</span><span class="p">()</span>
-
-
-
-    <span class="n">average_sentiment</span> <span class="o">=</span> <span class="n">total_sentiment</span> <span class="o">/</span> <span class="n">num_submissions</span>
+    
+    
+    <span class="n">average_sentiment</span> <span class="o">=</span> <span class="n">total_sentiment</span> <span class="o">/</span> <span class="n">num_posts</span>
     <span class="k">if</span><span class="p">(</span><span class="n">display_progress</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average sentiment was &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">average_sentiment</span><span class="p">))</span>
     
@@ -1082,24 +1086,24 @@ This way, as the function gets used, we’ll keep a history of its use in the <c
 <p>Now let’s run this version of the function</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">find_average_sentiment</span><span class="p">(</span><span class="s2">&quot;cuteanimals&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">find_average_sentiment</span><span class="p">(</span><span class="s2">&quot;news&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to select the subreddit: cuteanimals</strong></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.3777333333333333
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.22034999999999996
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">find_average_sentiment</span><span class="p">(</span><span class="s2">&quot;science&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">find_average_sentiment</span><span class="p">(</span><span class="s2">&quot;scientists&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><strong style='color:darkred'>Fake praw is pretending to select the subreddit: science</strong></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0773
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0773
 </pre></div>
 </div>
 </div>
@@ -1112,7 +1116,7 @@ This way, as the function gets used, we’ll keep a history of its use in the <c
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;cuteanimals&#39;, &#39;science&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;news&#39;, &#39;scientists&#39;]
 </pre></div>
 </div>
 </div>
@@ -1121,7 +1125,7 @@ This way, as the function gets used, we’ll keep a history of its use in the <c
 </section>
 <section id="how-can-we-trust-code-libraries">
 <h2>How can we trust code libraries?<a class="headerlink" href="#how-can-we-trust-code-libraries" title="Link to this heading">#</a></h2>
-<p>If people can make code libraries track us and violate our privacy, how can we trust them? We could try looking at the <a class="reference external" href="https://github.com/praw-dev/praw/">source code for the PRAW library</a> to try and make sure the library we are using isn’t doing anything bad, but no programmer can be expected to read through all the libraries they use. There is unfortunately no simple answer to this.</p>
+<p>If people can make code libraries track us and violate our privacy, how can we trust them? We could try looking at the <a class="reference external" href="https://github.com/MarshalX/atproto">source code for the atproto library</a> to try and make sure the library we are using isn’t doing anything bad, but no programmer can be expected to read through all the libraries they use. There is unfortunately no simple answer to this.</p>
 <p>In fact, there are cases where people have messed with code libraries:</p>
 <ul class="simple">
 <li><p>The United States National Security Agency “<a class="reference external" href="https://gizmodo.com/nsa-paid-security-firm-10-million-bribe-to-keep-encryp-1487442397">paid massive computer security firm RSA $10 million to promote a flawed encryption system so that the surveillance organization could wiggle its way around security.</a>”</p>
@@ -1205,7 +1209,7 @@ This way, as the function gets used, we’ll keep a history of its use in the <c
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log-into-bluesky-atproto">Log into Bluesky (atproto)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-sentiment-analysis-library-and-make-analyzer">load sentiment analysis library and make analyzer</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#original-code-to-loop-through-submissions-finding-average-sentiment">original code to loop through submissions, finding average sentiment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#original-code-to-run-a-search-and-loop-through-posts-finding-average-sentiment">original code to run a search and loop through posts, finding average sentiment</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-a-function-using-the-code-above-for-finding-the-average-sentiment">Make a function using the code above for finding the average sentiment</a></li>
