@@ -813,30 +813,24 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span> <span class="c1">#load a &quot;regular expression&quot; library for helping to parse text</span>
-<span class="kn">from</span> <span class="nn">atproto</span> <span class="kn">import</span> <span class="n">IdResolver</span> <span class="c1"># Load the atproto IdResolver library to get offical ATProto user IDs</span>
 
-<span class="c1"># function to convert a feed from a weblink url to the special atproto &quot;at&quot; URI</span>
-<span class="k">def</span> <span class="nf">getATFeedLinkFromURL</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
-    
-    <span class="c1"># Get the user did and feed id from the weblink url</span>
-    <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;https://bsky.app/profile/([^/]+)/feed/([^/]+)&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">get_at_post_link_from_url</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+
+    <span class="c1"># Extract username and post ID from the URL</span>
+    <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;https://bsky.app/profile/([^/]+)/post/([^/]+)&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">match</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid Bluesky feed URL format.&quot;</span><span class="p">)</span>
-    <span class="n">user_handle</span><span class="p">,</span> <span class="n">feed_id</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid Bluesky post URL format.&quot;</span><span class="p">)</span>
+    <span class="n">user_handle</span><span class="p">,</span> <span class="n">post_id</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
 
-    <span class="c1"># Get the official atproto user ID (did) from the handle</span>
-    <span class="n">resolver</span> <span class="o">=</span> <span class="n">IdResolver</span><span class="p">()</span>
-    <span class="n">did</span> <span class="o">=</span> <span class="n">resolver</span><span class="o">.</span><span class="n">handle</span><span class="o">.</span><span class="n">resolve</span><span class="p">(</span><span class="n">user_handle</span><span class="p">)</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">did</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Could not resolve DID for handle &quot;</span><span class="si">{</span><span class="n">user_handle</span><span class="si">}</span><span class="s1">&quot;.&#39;</span><span class="p">)</span>
-
+    <span class="n">author_profile</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">bsky</span><span class="o">.</span><span class="n">actor</span><span class="o">.</span><span class="n">get_profile</span><span class="p">({</span><span class="s1">&#39;actor&#39;</span><span class="p">:</span> <span class="n">user_handle</span><span class="p">})</span>
+    
     <span class="c1"># Construct the at:// URI</span>
-    <span class="n">post_uri</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;at://</span><span class="si">{</span><span class="n">did</span><span class="si">}</span><span class="s2">/app.bsky.feed.generator/</span><span class="si">{</span><span class="n">feed_id</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">post_uri</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;at://</span><span class="si">{</span><span class="n">author_profile</span><span class="o">.</span><span class="n">did</span><span class="si">}</span><span class="s2">/app.bsky.feed.post/</span><span class="si">{</span><span class="n">post_id</span><span class="si">}</span><span class="s2">&quot;</span>
 
     <span class="k">return</span> <span class="n">post_uri</span>
 
 <span class="c1"># function to convert a post&#39;s special atproto &quot;at&quot; URI to a weblink url</span>
-<span class="k">def</span> <span class="nf">getWebLinkFromPost</span><span class="p">(</span><span class="n">post</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">get_weblink_from_post</span><span class="p">(</span><span class="n">post</span><span class="p">):</span>
     <span class="c1"># Get the user id and post id from the weblink url</span>
     <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;at://([^/]+)/app.bsky.feed.post/([^/]+)&#39;</span><span class="p">,</span> <span class="n">post</span><span class="o">.</span><span class="n">uri</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">match</span><span class="p">:</span>
@@ -897,17 +891,21 @@ document.write(`
 </section>
 <section id="find-bluesky-data">
 <h2>Find Bluesky data<a class="headerlink" href="#find-bluesky-data" title="Link to this heading">#</a></h2>
-<p>Below I have the code to find a recent Bluesky post from the feed <a class="reference external" href="https://bsky.app/profile/did:plc:2m44csq7rgph66s2kltbypxh/feed/aaab56iiatpdo">Animal</a> by the user <a class="reference external" href="https://bsky.app/profile/shouldhaveanimal.bsky.social">shouldhaveanimal.bsky.social</a>.</p>
+<p>Below we have the code to find data about a specific post on BlueSky. You can get these web link urls for posts by pressing the “share” button on BlueSky.</p>
 <p>Don’t worry if you don’t understand this part yet. We are
-just doing this, so we can get to the point of seeing what tweet data looks like.</p>
-<p><em>Note: If you run this on real Bluesky, we can’t gurantee anything about how offensive what you might find is.</em></p>
+just doing this, so we can get to the point of seeing what bluesky post data looks like.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feedUrl</span> <span class="o">=</span> <span class="s2">&quot;https://bsky.app/profile/shouldhaveanimal.bsky.social/feed/aaab56iiatpdo&quot;</span>
-<span class="n">atFeedLink</span> <span class="o">=</span> <span class="n">getATFeedLinkFromURL</span><span class="p">(</span><span class="n">feedUrl</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The weblink url of a specific post</span>
+<span class="n">post_url</span> <span class="o">=</span> <span class="s2">&quot;https://bsky.app/profile/realgdt.bsky.social/post/3lihunicmds2y&quot;</span>
+<span class="c1"># Get the special at version of the weblink</span>
+<span class="n">post_at_link</span> <span class="o">=</span> <span class="n">get_at_post_link_from_url</span><span class="p">(</span><span class="n">post_url</span><span class="p">)</span>
 
-<span class="n">feed</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">bsky</span><span class="o">.</span><span class="n">feed</span><span class="o">.</span><span class="n">get_feed</span><span class="p">({</span><span class="s1">&#39;feed&#39;</span><span class="p">:</span> <span class="n">atFeedLink</span><span class="p">})</span><span class="o">.</span><span class="n">feed</span>
-<span class="n">recent_post</span> <span class="o">=</span> <span class="n">feed</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">post</span>
+
+<span class="c1"># load data for the post we linked (the function lets us load multiple posts)</span>
+<span class="n">post_results</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_posts</span><span class="p">([</span><span class="n">post_at_link</span><span class="p">])</span>
+<span class="c1"># get the first result (since we know we only asked about one post)</span>
+<span class="n">post</span> <span class="o">=</span> <span class="n">post_results</span><span class="o">.</span><span class="n">posts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -921,8 +919,8 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 <h3>post text:<a class="headerlink" href="#post-text" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the post text is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The post text is: &quot;</span> <span class="o">+</span> <span class="n">recent_post</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the post text is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The post text is: &quot;</span> <span class="o">+</span> <span class="n">post</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -930,7 +928,7 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the post text is: str&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The post text is: Look at my cute dog!&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The post text is: This is a fake fact about movie costuming and I find it so interesting!&#39;
 </pre></div>
 </div>
 </div>
@@ -941,8 +939,8 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 <h3>post content id (cid)<a class="headerlink" href="#post-content-id-cid" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the post content id is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">cid</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The post content id is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">cid</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the post content id is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">cid</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The post content id is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">cid</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -961,8 +959,8 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 <h3>submission author handle<a class="headerlink" href="#submission-author-handle" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the author handle is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">handle</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The author handle is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">handle</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the author handle is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">handle</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The author handle is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">handle</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -981,8 +979,8 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 <h3>post created at<a class="headerlink" href="#post-created-at" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the post created_at is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">created_at</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The created_at at is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">created_at</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the post created_at is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">created_at</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The created_at at is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">created_at</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1001,8 +999,8 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 <h3>number of likes<a class="headerlink" href="#number-of-likes" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the number of likes is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">like_count</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The number of likes is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">like_count</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the number of likes is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">like_count</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The number of likes is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">like_count</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1010,7 +1008,7 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the number of likes is: int&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The number of likes is: 23&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The number of likes is: 25&#39;
 </pre></div>
 </div>
 </div>
@@ -1021,8 +1019,8 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 <h3>number of replies<a class="headerlink" href="#number-of-replies" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the number of replies is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">reply_count</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The number of replies is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">reply_count</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the number of replies is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">reply_count</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The number of replies is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">reply_count</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1030,7 +1028,7 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the number of replies is: int&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The number of replies is: 7&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The number of replies is: 2&#39;
 </pre></div>
 </div>
 </div>
@@ -1041,8 +1039,8 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 <h3>number of reposts<a class="headerlink" href="#number-of-reposts" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the number of reposts is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">repost_count</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The number of reposts is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">recent_post</span><span class="o">.</span><span class="n">repost_count</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the number of reposts is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">repost_count</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The number of reposts is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">repost_count</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1050,7 +1048,7 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the number of reposts is: int&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The number of reposts is: 5&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The number of reposts is: 13&#39;
 </pre></div>
 </div>
 </div>
@@ -1063,9 +1061,9 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 <p>We can use one of our helper functions to get a website url link to the post.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">webLink</span> <span class="o">=</span> <span class="n">getWebLinkFromPost</span><span class="p">(</span><span class="n">recent_post</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the post url weblink is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">webLink</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The number of the post url weblink is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">webLink</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">web_link</span> <span class="o">=</span> <span class="n">get_weblink_from_post</span><span class="p">(</span><span class="n">post</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The data type of the post url weblink is: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">web_link</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;The number of the post url weblink is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">web_link</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1073,7 +1071,7 @@ just doing this, so we can get to the point of seeing what tweet data looks like
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The data type of the post url weblink is: str&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The number of the post url weblink is: https://bsky.app/profile/did:plc:fake_user/post/fake_post_id&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The number of the post url weblink is: https://bsky.app/profile/did:plc:fake_user.bsky.social/post/fake_post_id&#39;
 </pre></div>
 </div>
 </div>

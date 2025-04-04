@@ -799,52 +799,6 @@ document.write(`
 <section id="log-into-bluesky-atproto">
 <h2>Log into Bluesky (atproto)<a class="headerlink" href="#log-into-bluesky-atproto" title="Link to this heading">#</a></h2>
 <p>These are our normal steps get atproto loaded and logged into Bluesky</p>
-<p>helper function for atproto links</p>
-<p><em>NOTE: You don’t need to worry about the details of how this works, it just is here to make the code later easier to use.</em></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span> <span class="c1">#load a &quot;regular expression&quot; library for helping to parse text</span>
-<span class="kn">from</span> <span class="nn">atproto</span> <span class="kn">import</span> <span class="n">IdResolver</span> <span class="c1"># Load the atproto IdResolver library to get offical ATProto user IDs</span>
-
-<span class="c1"># function to convert a feed from a weblink url to the special atproto &quot;at&quot; URI</span>
-<span class="k">def</span> <span class="nf">getATFeedLinkFromURL</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
-    
-    <span class="c1"># Get the user did and feed id from the weblink url</span>
-    <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;https://bsky.app/profile/([^/]+)/feed/([^/]+)&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">match</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid Bluesky feed URL format.&quot;</span><span class="p">)</span>
-    <span class="n">user_handle</span><span class="p">,</span> <span class="n">feed_id</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
-
-    <span class="c1"># Get the official atproto user ID (did) from the handle</span>
-    <span class="n">resolver</span> <span class="o">=</span> <span class="n">IdResolver</span><span class="p">()</span>
-    <span class="n">did</span> <span class="o">=</span> <span class="n">resolver</span><span class="o">.</span><span class="n">handle</span><span class="o">.</span><span class="n">resolve</span><span class="p">(</span><span class="n">user_handle</span><span class="p">)</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">did</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Could not resolve DID for handle &quot;</span><span class="si">{</span><span class="n">user_handle</span><span class="si">}</span><span class="s1">&quot;.&#39;</span><span class="p">)</span>
-
-    <span class="c1"># Construct the at:// URI</span>
-    <span class="n">post_uri</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;at://</span><span class="si">{</span><span class="n">did</span><span class="si">}</span><span class="s2">/app.bsky.feed.generator/</span><span class="si">{</span><span class="n">feed_id</span><span class="si">}</span><span class="s2">&quot;</span>
-
-    <span class="k">return</span> <span class="n">post_uri</span>
-
-<span class="c1"># function to convert a post&#39;s special atproto &quot;at&quot; URI to a weblink url</span>
-<span class="k">def</span> <span class="nf">getWebLinkFromPost</span><span class="p">(</span><span class="n">post</span><span class="p">):</span>
-    <span class="c1"># Get the user id and post id from the weblink url</span>
-    <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;at://([^/]+)/app.bsky.feed.post/([^/]+)&#39;</span><span class="p">,</span> <span class="n">post</span><span class="o">.</span><span class="n">uri</span><span class="p">)</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">match</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid Bluesky atproto post URL format.&quot;</span><span class="p">)</span>
-    <span class="n">user_id</span><span class="p">,</span> <span class="n">post_id</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
-
-    <span class="n">post_uri</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://bsky.app/profile/</span><span class="si">{</span><span class="n">user_id</span><span class="si">}</span><span class="s2">/post/</span><span class="si">{</span><span class="n">post_id</span><span class="si">}</span><span class="s2">&quot;</span>
-    <span class="k">return</span> <span class="n">post_uri</span>
-    
-<span class="c1"># function to take an author profile and generate a weblink url</span>
-<span class="k">def</span> <span class="nf">getWebLinkFromProfile</span><span class="p">(</span><span class="n">authorInfo</span><span class="p">):</span>
-    <span class="n">author_uri</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://bsky.app/profile/</span><span class="si">{</span><span class="n">authorInfo</span><span class="o">.</span><span class="n">did</span><span class="si">}</span><span class="s2">&quot;</span>
-    <span class="k">return</span> <span class="n">author_uri</span>
-</pre></div>
-</div>
-</div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">atproto</span> <span class="kn">import</span> <span class="n">Client</span>
