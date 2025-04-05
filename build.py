@@ -22,11 +22,11 @@ from colorama import Fore
 from colorama import init
 init(autoreset=True)
 
-
+# Note: status can be something like: " (incomplete)"
 platforms = [
-    {"full_name": "Reddit", "file_name": "reddit", "status": ""},
+   {"full_name": "Reddit", "file_name": "reddit", "status": ""},
    {"full_name": "Discord", "file_name": "discord", "status": ""},
-   {"full_name": "Bluesky", "file_name": "bsky", "status": " (incomplete)"},
+   {"full_name": "Bluesky", "file_name": "bsky", "status": ""},
    {"full_name": "No Coding", "file_name": "nocode", "status": "", "keep_all_files": True, "exclude_from_options": True}, # First pass makes copies of all coding files (so they can be linked to) 
    {"full_name": "No Coding", "file_name": "nocode", "status": "", "keep_all_files": False, "second_pass": True} # Second pass gets rid of some of the coding files (for better flow)
 ]

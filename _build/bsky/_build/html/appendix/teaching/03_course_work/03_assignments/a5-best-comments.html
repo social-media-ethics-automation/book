@@ -11,10 +11,10 @@
 <meta property="og:type" content="book" />
 <meta property="og:url" content="appendix/teaching/03_course_work/03_assignments/a5-best-comments.html" />
 <meta property="og:site_name" content="Social Media, Ethics, and Automation" />
-<meta property="og:description" content="Choose Social Media Platform: Reddit| Discord| Bluesky| No Coding Content for the social media platform Bluesky hasn’t been created yet. Please try another platform." />
+<meta property="og:description" content="In this assignment you will be modifying a recursive function that prints replies on a Bluesky post. Your goal will be to only show the best replies. It will be up to you to decide what rules you u..." />
 <meta property="og:image" content="https://social-media-ethics-automation.github.io/book/reddit/_images/logo.png" />
 <meta property="og:image:alt" content="Social Media, Ethics, and Automation" />
-<meta name="description" content="Choose Social Media Platform: Reddit| Discord| Bluesky| No Coding Content for the social media platform Bluesky hasn’t been created yet. Please try another platform." />
+<meta name="description" content="In this assignment you will be modifying a recursive function that prints replies on a Bluesky post. Your goal will be to only show the best replies. It will be up to you to decide what rules you u..." />
 
     <title>A5: Best Comments &#8212; Social Media, Ethics, and Automation</title>
   
@@ -591,6 +591,37 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/social-media-ethics-automation/book-src-bsky/main?urlpath=lab/tree/appendix/teaching/03_course_work/03_assignments/a5-best-comments.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -646,7 +677,7 @@
       
       
       
-      <li><a href="../../../../_sources/appendix/teaching/03_course_work/03_assignments/a5-best-comments.md" target="_blank"
+      <li><a href="../../../../_sources/appendix/teaching/03_course_work/03_assignments/a5-best-comments.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -656,7 +687,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -717,7 +748,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -733,6 +766,37 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#helper-functions">Helper functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#helper-function-to-display-text-in-an-indented-box">helper function to display text in an indented box</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#helper-function-for-atproto-links">helper function for atproto links</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bluesky-setup">Bluesky Setup</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-atproto-library">load atproto library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-make-a-fake-bluesky-connection-with-the-fake-atproto-library">(optional) make a fake Bluesky connection with the fake_atproto library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#login-to-bluesky">login to Bluesky</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-to-print-a-post-with-all-comments-and-replies">Code to print a post with all comments and replies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-create-your-content-moderation-algorithm">TODO: Create Your Content Moderation Algorithm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-urls-to-test">Getting urls to test</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-it-out-with-3-bluesky-threads">Test it out with 3 Bluesky threads!</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-print-bluesky-thread-1">TODO: Print bluesky thread 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-bluesky-thread-1-follow-up-questions">TODO: Bluesky thread 1 follow-up questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-print-bluesky-thread-2">TODO: Print bluesky thread 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-bluesky-thread-2-follow-up-questions">TODO: Bluesky thread 2 follow-up questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-print-bluesky-thread-3">TODO: Print bluesky thread 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-bluesky-thread-3-follow-up-questions">TODO: Bluesky thread 3 follow-up questions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-final-reflection-questions">TODO: Final Reflection questions</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -744,8 +808,375 @@ document.write(`
                   
   <section id="a5-best-comments">
 <h1>A5: Best Comments<a class="headerlink" href="#a5-best-comments" title="Link to this heading">#</a></h1>
+<p>In this assignment you will be modifying a recursive function that prints replies on a Bluesky post. Your goal will be to only show the best replies. It will be up to you to decide what rules you use to decide which comments are the best comments.</p>
 <p><em>Choose Social Media Platform: <a href='../../../../../reddit/appendix/teaching/03_course_work/03_assignments/a5-best-comments.html'>Reddit</a> | <a href='../../../../../discord/appendix/teaching/03_course_work/03_assignments/a5-best-comments.html'>Discord</a> | <strong>Bluesky</strong> | <a href='../../../../../nocode/appendix/teaching/03_course_work/03_assignments/a5-best-comments.html'>No Coding</a></em></p>
-<p><strong>Content for the social media platform Bluesky hasn’t been created yet. Please try another platform.</strong></p>
+<section id="helper-functions">
+<h2>Helper functions<a class="headerlink" href="#helper-functions" title="Link to this heading">#</a></h2>
+<p>We’ll need a few helper functions before we get started</p>
+<section id="helper-function-to-display-text-in-an-indented-box">
+<h3>helper function to display text in an indented box<a class="headerlink" href="#helper-function-to-display-text-in-an-indented-box" title="Link to this heading">#</a></h3>
+<p>(You don’t need to worry about how this works. This is that function that helps display posts in indented boxes)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span>
+<span class="kn">import</span> <span class="nn">html</span>
+<span class="k">def</span> <span class="nf">display_indented</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">left_margin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">):</span>
+    <span class="n">display</span><span class="p">(</span>
+        <span class="n">HTML</span><span class="p">(</span>
+            <span class="s2">&quot;&lt;pre style=&#39;border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">left_margin</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;px;background-color:&quot;</span><span class="o">+</span><span class="n">color</span><span class="o">+</span><span class="s2">&quot;&#39;&gt;&quot;</span> <span class="o">+</span> 
+            <span class="n">html</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">+</span> 
+            <span class="s2">&quot;&lt;/pre&gt;&quot;</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="helper-function-for-atproto-links">
+<h3>helper function for atproto links<a class="headerlink" href="#helper-function-for-atproto-links" title="Link to this heading">#</a></h3>
+<p><em>NOTE: You don’t need to worry about the details of how this works, it just is here to make the code later easier to use.</em></p>
+<p>In order to make this as simple as possible, we’re providing a helper function to turn the url for a bluesky post (easy to get) into a uri that the bluesky API understands (not as easy to get). You also don’t need to worry about how this works!</p>
+<p>We’ll also a provide a helper function to get the author of a post (you can use this in your should_display() function!)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span> <span class="c1">#load a &quot;regular expression&quot; library for helping to parse text</span>
+<span class="kn">from</span> <span class="nn">atproto</span> <span class="kn">import</span> <span class="n">IdResolver</span> <span class="c1"># Load the atproto IdResolver library to get offical ATProto user IDs</span>
+
+<span class="k">def</span> <span class="nf">get_at_post_link_from_url</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="c1"># Initialize and log in with the client</span>
+
+    <span class="c1"># Extract username and post ID from the URL</span>
+    <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;https://bsky.app/profile/([^/]+)/post/([^/]+)&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">match</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid Bluesky post URL format.&quot;</span><span class="p">)</span>
+    <span class="n">user_handle</span><span class="p">,</span> <span class="n">post_id</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
+
+    <span class="c1"># Construct the at:// URI</span>
+    <span class="n">post_uri</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;at://</span><span class="si">{</span><span class="n">user_handle</span><span class="si">}</span><span class="s2">/app.bsky.feed.post/</span><span class="si">{</span><span class="n">post_id</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="k">return</span> <span class="n">post_uri</span>
+
+
+<span class="k">def</span> <span class="nf">get_author_profle_from_post</span><span class="p">(</span><span class="n">post</span><span class="p">):</span>
+    <span class="n">author_did</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">did</span>
+    <span class="n">author_profile</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">bsky</span><span class="o">.</span><span class="n">actor</span><span class="o">.</span><span class="n">get_profile</span><span class="p">({</span><span class="s1">&#39;actor&#39;</span><span class="p">:</span> <span class="n">author_did</span><span class="p">})</span>
+    <span class="k">return</span> <span class="n">author_profile</span>
+
+<span class="c1"># function to convert a feed from a weblink url to the special atproto &quot;at&quot; URI</span>
+<span class="k">def</span> <span class="nf">get_at_feed_link_from_url</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    
+    <span class="c1"># Get the user did and feed id from the weblink url</span>
+    <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;https://bsky.app/profile/([^/]+)/feed/([^/]+)&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">match</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid Bluesky feed URL format.&quot;</span><span class="p">)</span>
+    <span class="n">user_handle</span><span class="p">,</span> <span class="n">feed_id</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
+
+    <span class="c1"># Get the official atproto user ID (did) from the handle</span>
+    <span class="n">resolver</span> <span class="o">=</span> <span class="n">IdResolver</span><span class="p">()</span>
+    <span class="n">did</span> <span class="o">=</span> <span class="n">resolver</span><span class="o">.</span><span class="n">handle</span><span class="o">.</span><span class="n">resolve</span><span class="p">(</span><span class="n">user_handle</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">did</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Could not resolve DID for handle &quot;</span><span class="si">{</span><span class="n">user_handle</span><span class="si">}</span><span class="s1">&quot;.&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Construct the at:// URI</span>
+    <span class="n">post_uri</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;at://</span><span class="si">{</span><span class="n">did</span><span class="si">}</span><span class="s2">/app.bsky.feed.generator/</span><span class="si">{</span><span class="n">feed_id</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="bluesky-setup">
+<h2>Bluesky Setup<a class="headerlink" href="#bluesky-setup" title="Link to this heading">#</a></h2>
+<p>Now we can continue logging in to Bluesky and look through multiple posts.</p>
+<section id="load-atproto-library">
+<h3>load atproto library<a class="headerlink" href="#load-atproto-library" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load some code called &quot;Client&quot; from the &quot;atproto&quot; library that will help us work with Bluesky</span>
+<span class="kn">from</span> <span class="nn">atproto</span> <span class="kn">import</span> <span class="n">Client</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="optional-make-a-fake-bluesky-connection-with-the-fake-atproto-library">
+<h3>(optional) make a fake Bluesky connection with the fake_atproto library<a class="headerlink" href="#optional-make-a-fake-bluesky-connection-with-the-fake-atproto-library" title="Link to this heading">#</a></h3>
+<p>For testing purposes, we”ve added this line of code, which loads a fake version of atproto, so it wont actually connect to Bluesky. <strong>If you want to try to actually connect to Bluesky, don’t run this line of code.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../../../fake_apis/fake_atproto.ipynb
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake atproto (bsky.app) is replacing the atproto.blue library. Fake atproto doesn&#x27;t need real passwords, and prevents you from accessing real Bluesky</strong></div></div>
+</div>
+</section>
+<section id="login-to-bluesky">
+<h3>login to Bluesky<a class="headerlink" href="#login-to-bluesky" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Login to Bluesky</span>
+<span class="c1"># TODO: Put your bluesky account info in the bluesky_keys.py file</span>
+<span class="o">%</span><span class="k">run</span> bluesky_keys.py
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="s2">&quot;https://bsky.social&quot;</span><span class="p">)</span>
+<span class="n">client</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake atproto is pretending to set up a client connection to: https://bsky.social</strong></div><div class="output text_html"><strong style='color:darkred'>Fake atproto is pretending log into your account: </strong></div></div>
+</div>
+</section>
+</section>
+<section id="code-to-print-a-post-with-all-comments-and-replies">
+<h2>Code to print a post with all comments and replies<a class="headerlink" href="#code-to-print-a-post-with-all-comments-and-replies" title="Link to this heading">#</a></h2>
+<p>We are providing these function that recursively prints a post and all replies, but depends on whether a <code class="docutils literal notranslate"><span class="pre">should_display</span></code> function returns True or False to decide if it actually displays a post. (Note: the <code class="docutils literal notranslate"><span class="pre">should_display</span></code> function is defined later in this notebook. If a <code class="docutils literal notranslate"><span class="pre">should_display</span></code> comes back false for a post, the post wont be displayed, nor will any replies to it)</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">print_post_thread</span></code> is a function that takes a Bluesky Post weblink (url) (instructions on where to get one below), downloads the thread that follows that post, and then uses the <code class="docutils literal notranslate"><span class="pre">print_post_and_replies</span></code> function to print out that post and the replies to that post.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_post_thread</span><span class="p">(</span><span class="n">postUrl</span><span class="p">,</span> <span class="n">show_hidden</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+    <span class="n">at_post_link</span> <span class="o">=</span> <span class="n">get_at_post_link_from_url</span><span class="p">(</span><span class="n">postUrl</span><span class="p">)</span>
+    
+    <span class="c1"># Fetch the post details</span>
+    <span class="n">post_data</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_post_thread</span><span class="p">(</span><span class="n">at_post_link</span><span class="p">)</span>
+    
+    <span class="n">print_post_and_replies</span><span class="p">(</span><span class="n">post_data</span><span class="o">.</span><span class="n">thread</span><span class="p">,</span> <span class="n">show_hidden</span><span class="o">=</span><span class="n">show_hidden</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">print_post_and_replies</span></code> function takes a given post and recursively prints that post as well as all replies to that post (which will also print all the replies to those replies, etc.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_post_and_replies</span><span class="p">(</span><span class="n">postInfo</span><span class="p">,</span> <span class="n">num_indents</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">show_hidden</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    
+    <span class="c1"># make sure this post isn&#39;t blocked (since we can&#39;t read blocked posts)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="nb">hasattr</span><span class="p">(</span><span class="n">postInfo</span><span class="p">,</span><span class="s1">&#39;blocked&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">postInfo</span><span class="o">.</span><span class="n">blocked</span><span class="p">):</span>
+        
+        <span class="n">post</span> <span class="o">=</span> <span class="n">postInfo</span><span class="o">.</span><span class="n">post</span>
+        <span class="n">replies</span> <span class="o">=</span> <span class="n">postInfo</span><span class="o">.</span><span class="n">replies</span>
+
+        <span class="c1"># If replies is None, make it an empty array (so the for loop later doesn&#39;t crash)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">replies</span><span class="p">:</span>
+            <span class="n">replies</span> <span class="o">=</span> <span class="p">[]</span>
+    
+        <span class="n">display_text</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">post</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span>
+            <span class="s2">&quot;-- &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">display_name</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; (&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">handle</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;)</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> 
+            <span class="s2">&quot; (likes: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">like_count</span><span class="p">)</span> <span class="o">+</span> 
+            <span class="s2">&quot;, replies: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">reply_count</span><span class="p">)</span> <span class="o">+</span>
+            <span class="s2">&quot;, reposts: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">repost_count</span><span class="p">)</span> <span class="o">+</span>
+            <span class="s2">&quot;, quotes: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">quote_count</span><span class="p">)</span> <span class="o">+</span>
+            <span class="s2">&quot;) - &quot;</span> 
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">should_display</span><span class="p">(</span><span class="n">post</span><span class="p">):</span>
+            <span class="n">display_indented</span><span class="p">(</span><span class="n">display_text</span><span class="p">,</span> <span class="n">num_indents</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">reply</span> <span class="ow">in</span> <span class="n">replies</span><span class="p">:</span>
+                <span class="n">print_post_and_replies</span><span class="p">(</span><span class="n">reply</span><span class="p">,</span> <span class="n">num_indents</span> <span class="o">=</span> <span class="n">num_indents</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">show_hidden</span><span class="o">=</span><span class="n">show_hidden</span><span class="p">)</span>
+                
+        <span class="k">elif</span><span class="p">(</span><span class="n">show_hidden</span><span class="p">):</span>
+            <span class="n">display_indented</span><span class="p">(</span><span class="n">display_text</span><span class="p">,</span> <span class="n">num_indents</span><span class="o">*</span><span class="mi">20</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;LightCoral&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="todo-create-your-content-moderation-algorithm">
+<h2>TODO: Create Your Content Moderation Algorithm<a class="headerlink" href="#todo-create-your-content-moderation-algorithm" title="Link to this heading">#</a></h2>
+<p>Your job is to invent and implement your own rule inside the <code class="docutils literal notranslate"><span class="pre">should_display</span></code> function for what post count as the “best posts” and therefore should be displayed. The rule can be complicated or simple, it just can’t be the same as the current rule. You can aim for focusing on only hiding a few posts that you judge are bad, or for only showing a few posts you judge are the very best, or a combination of those.</p>
+<p>When you are making your rule you may want to use different comparison operators (like == for equals, &gt; for greater than, etc.) and different logical operators (like <code class="docutils literal notranslate"><span class="pre">and</span></code> for both things must be true, <code class="docutils literal notranslate"><span class="pre">or</span></code> for at least one thing must be true, etc.). See a <a class="reference external" href="https://www.w3schools.com/python/python_operators.asp">list of python operators at w3schools</a></p>
+<p>Some things you can use when you are deciding whether to display a post or not:</p>
+<ul class="simple">
+<li><p>The text of the commnet: post.record.text</p></li>
+<li><p>The likes of the comment: post.like_count</p></li>
+<li><p>The number of replies: post.reply_count</p></li>
+<li><p>The number of reposts: post.repost_count</p></li>
+<li><p>The number of quotes: post.quote_count</p></li>
+<li><p>author display name: post.author.display_name</p></li>
+<li><p>author handle: post.author.handle</p></li>
+</ul>
+<p>You can also look up more about the author by uncommenting the optional author_profile lookup line (<code class="docutils literal notranslate"><span class="pre">author_profile</span> <span class="pre">=</span> <span class="pre">get_author_profle_from_post(post)</span></code>). Then you can get:</p>
+<ul class="simple">
+<li><p>author bio/description: author.description</p></li>
+<li><p>author’s number of followers: author.followers_count</p></li>
+<li><p>author’s number of people they folllow: author.follows_count</p></li>
+<li><p>author’s number of posts: author.posts_count</p></li>
+<li><p>You can use any other information you can figure out about the post as well, such as the sentiment analysis that was demoed previously.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">should_display</span><span class="p">(</span><span class="n">post</span><span class="p">):</span>
+    <span class="c1">#TODO: Make your own rule</span>
+
+    <span class="c1"># optional code below: Get the full author profile (uncomment to use)</span>
+    <span class="c1"># author_profile = get_author_profle_from_post(post)</span>
+    
+    <span class="c1"># for a demonstration, we only display comments with the lower case letters &quot;and&quot; </span>
+    <span class="c1"># Note: that the way we are checking here, a comment that has the word &quot;sand&quot; would show up</span>
+    <span class="c1">#       since &quot;and&quot; appears in &quot;sand&quot;</span>
+    <span class="n">has_letters_and</span> <span class="o">=</span> <span class="s2">&quot;and&quot;</span> <span class="ow">in</span> <span class="n">post</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">text</span>
+    
+    <span class="k">if</span><span class="p">(</span><span class="n">has_letters_and</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="getting-urls-to-test">
+<h2>Getting urls to test<a class="headerlink" href="#getting-urls-to-test" title="Link to this heading">#</a></h2>
+<p>In order to use our function, we need to grab the url of a Bluesky post to test it with. Once you find the post, find the ‘Copy Link to Post’ option to get a web url for the post.</p>
+<p><img alt="Bluesky Post. The three dot &quot;Open post options menu&quot; is opened, and from there the &quot;Copy Link to Post&quot; option is selected." src="../../../../_images/bsky_copy_link1.png" /></p>
+<p>It should be something like: <a class="reference external" href="https://bsky.app/profile/realgdt.bsky.social/post/3lihunicmds2y">https://bsky.app/profile/realgdt.bsky.social/post/3lihunicmds2y</a></p>
+<p>Then paste the entire URL in as the string for the first argument to the <code class="docutils literal notranslate"><span class="pre">print_post_thread</span></code> function, as in the example below. Try it out!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_post_thread</span><span class="p">(</span><span class="s2">&quot;https://bsky.app/profile/realgdt.bsky.social/post/3lihunicmds2y&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:0px;background-color:white'>This is a fake fact about movie costuming and I find it so interesting!
+-- Imaginary User (imaginary_user.bsky.social)
+ (likes: 25, replies: 2, reposts: 13, quotes: 7) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:20px;background-color:white'>I saw a completely unrelated movie once and I liked it!
+-- Pretend User (pretend_user.bsky.social)
+ (likes: 1, replies: 1, reposts: 0, quotes: 0) - </pre></div></div>
+</div>
+<p>If we also want to see what comments are being skipped, we can use an optional argument for <code class="docutils literal notranslate"><span class="pre">print_post_and_replies</span></code> by setting <code class="docutils literal notranslate"><span class="pre">show_hidden</span> <span class="pre">=</span> <span class="pre">True</span></code>, and the comments that are being skipped will show up with a reddish background.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_post_thread</span><span class="p">(</span><span class="s2">&quot;https://bsky.app/profile/realgdt.bsky.social/post/3lihunicmds2y&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:0px;background-color:white'>This is a fake fact about movie costuming and I find it so interesting!
+-- Imaginary User (imaginary_user.bsky.social)
+ (likes: 25, replies: 2, reposts: 13, quotes: 7) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:20px;background-color:LightCoral'>Wow! That is a cool fake fact!
+-- Fake User (fake_user.bsky.social)
+ (likes: 6, replies: 2, reposts: 5, quotes: 1) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:20px;background-color:white'>I saw a completely unrelated movie once and I liked it!
+-- Pretend User (pretend_user.bsky.social)
+ (likes: 1, replies: 1, reposts: 0, quotes: 0) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:40px;background-color:LightCoral'>I don&#x27;t see how that&#x27;s relevant
+-- Fake User (fake_user.bsky.social)
+ (likes: 2, replies: 0, reposts: 1, quotes: 1) - </pre></div></div>
+</div>
+</section>
+<section id="test-it-out-with-3-bluesky-threads">
+<h2>Test it out with 3 Bluesky threads!<a class="headerlink" href="#test-it-out-with-3-bluesky-threads" title="Link to this heading">#</a></h2>
+<p>Now, after you’ve modified the <code class="docutils literal notranslate"><span class="pre">should_display</span></code>, try testing out your algorithm on three new posts (make sure they have replies!), answering follow up questions after each one.</p>
+<p>In the sections below, replace the <code class="docutils literal notranslate"><span class="pre">?????</span></code>s with a bluesky url, and run the code. Then answer the questions about how that went.</p>
+<p>At the very end will be more reflection questions.</p>
+<section id="todo-print-bluesky-thread-1">
+<h3>TODO: Print bluesky thread 1<a class="headerlink" href="#todo-print-bluesky-thread-1" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_post_thread</span><span class="p">(</span><span class="s1">&#39;https://bsky.app/profile/realgdt.bsky.social/post/3lihunicmds2y&#39;</span><span class="p">,</span> <span class="n">show_hidden</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:0px;background-color:white'>This is a fake fact about movie costuming and I find it so interesting!
+-- Imaginary User (imaginary_user.bsky.social)
+ (likes: 25, replies: 2, reposts: 13, quotes: 7) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:20px;background-color:LightCoral'>Wow! That is a cool fake fact!
+-- Fake User (fake_user.bsky.social)
+ (likes: 6, replies: 2, reposts: 5, quotes: 1) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:20px;background-color:white'>I saw a completely unrelated movie once and I liked it!
+-- Pretend User (pretend_user.bsky.social)
+ (likes: 1, replies: 1, reposts: 0, quotes: 0) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:40px;background-color:LightCoral'>I don&#x27;t see how that&#x27;s relevant
+-- Fake User (fake_user.bsky.social)
+ (likes: 2, replies: 0, reposts: 1, quotes: 1) - </pre></div></div>
+</div>
+</section>
+<section id="todo-bluesky-thread-1-follow-up-questions">
+<h3>TODO: Bluesky thread 1 follow-up questions<a class="headerlink" href="#todo-bluesky-thread-1-follow-up-questions" title="Link to this heading">#</a></h3>
+<p>Write an answer in response to each of these questions (you can edit this text by double clicking it):</p>
+<p>Look through the output of <code class="docutils literal notranslate"><span class="pre">print_post_thread()</span></code> based on your modified <code class="docutils literal notranslate"><span class="pre">should_display</span></code> function.</p>
+<p>Did your function tend to keep most posts or tend to hide most posts?</p>
+<p>TODO: Your answer here</p>
+<p>Do you see any pattern to the contents of the posts you showed versus hid (e.g., did it actually select better quality or more interesting posts)?</p>
+<p>TODO: Your answer here</p>
+</section>
+<section id="todo-print-bluesky-thread-2">
+<h3>TODO: Print bluesky thread 2<a class="headerlink" href="#todo-print-bluesky-thread-2" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_post_thread</span><span class="p">(</span><span class="s1">&#39;https://bsky.app/profile/realgdt.bsky.social/post/3lihunicmds2y&#39;</span><span class="p">,</span> <span class="n">show_hidden</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:0px;background-color:white'>This is a fake fact about movie costuming and I find it so interesting!
+-- Imaginary User (imaginary_user.bsky.social)
+ (likes: 25, replies: 2, reposts: 13, quotes: 7) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:20px;background-color:LightCoral'>Wow! That is a cool fake fact!
+-- Fake User (fake_user.bsky.social)
+ (likes: 6, replies: 2, reposts: 5, quotes: 1) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:20px;background-color:white'>I saw a completely unrelated movie once and I liked it!
+-- Pretend User (pretend_user.bsky.social)
+ (likes: 1, replies: 1, reposts: 0, quotes: 0) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:40px;background-color:LightCoral'>I don&#x27;t see how that&#x27;s relevant
+-- Fake User (fake_user.bsky.social)
+ (likes: 2, replies: 0, reposts: 1, quotes: 1) - </pre></div></div>
+</div>
+</section>
+<section id="todo-bluesky-thread-2-follow-up-questions">
+<h3>TODO: Bluesky thread 2 follow-up questions<a class="headerlink" href="#todo-bluesky-thread-2-follow-up-questions" title="Link to this heading">#</a></h3>
+<p>Write an answer in response to each of these questions (you can edit this text by double clicking it):</p>
+<p>Look through the output of <code class="docutils literal notranslate"><span class="pre">print_post_thread()</span></code> based on your modified <code class="docutils literal notranslate"><span class="pre">should_display</span></code> function.</p>
+<p>Did your function tend to keep most posts or tend to hide most posts?</p>
+<p>TODO: Your answer here</p>
+<p>Do you see any pattern to the contents of the posts you showed versus hid (e.g., did it actually select better quality or more interesting posts)?</p>
+<p>TODO: Your answer here</p>
+</section>
+<section id="todo-print-bluesky-thread-3">
+<h3>TODO: Print bluesky thread 3<a class="headerlink" href="#todo-print-bluesky-thread-3" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_post_thread</span><span class="p">(</span><span class="s1">&#39;https://bsky.app/profile/realgdt.bsky.social/post/3lihunicmds2y&#39;</span><span class="p">,</span> <span class="n">show_hidden</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:0px;background-color:white'>This is a fake fact about movie costuming and I find it so interesting!
+-- Imaginary User (imaginary_user.bsky.social)
+ (likes: 25, replies: 2, reposts: 13, quotes: 7) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:20px;background-color:LightCoral'>Wow! That is a cool fake fact!
+-- Fake User (fake_user.bsky.social)
+ (likes: 6, replies: 2, reposts: 5, quotes: 1) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:20px;background-color:white'>I saw a completely unrelated movie once and I liked it!
+-- Pretend User (pretend_user.bsky.social)
+ (likes: 1, replies: 1, reposts: 0, quotes: 0) - </pre></div><div class="output text_html"><pre style='border:solid 1px;padding:3px;margin-top:3px;margin-bottom:3px;margin-left:40px;background-color:LightCoral'>I don&#x27;t see how that&#x27;s relevant
+-- Fake User (fake_user.bsky.social)
+ (likes: 2, replies: 0, reposts: 1, quotes: 1) - </pre></div></div>
+</div>
+</section>
+<section id="todo-bluesky-thread-3-follow-up-questions">
+<h3>TODO: Bluesky thread 3 follow-up questions<a class="headerlink" href="#todo-bluesky-thread-3-follow-up-questions" title="Link to this heading">#</a></h3>
+<p>Write an answer in response to each of these questions (you can edit this text by double clicking it):</p>
+<p>Look through the output of <code class="docutils literal notranslate"><span class="pre">print_post_thread()</span></code> based on your modified <code class="docutils literal notranslate"><span class="pre">should_display</span></code> function.</p>
+<p>Did your function tend to keep most posts or tend to hide most posts?</p>
+<p>TODO: Your answer here</p>
+<p>Do you see any pattern to the contents of the posts you showed versus hid (e.g., did it actually select better quality or more interesting posts)?</p>
+<p>TODO: Your answer here</p>
+</section>
+</section>
+<section id="todo-final-reflection-questions">
+<h2>TODO: Final Reflection questions<a class="headerlink" href="#todo-final-reflection-questions" title="Link to this heading">#</a></h2>
+<p>Write an answer in response in response to each of these questions:</p>
+<p>Explain why you chose the rules you did for selecting the best comments?</p>
+<p>TODO: Your answer here</p>
+<p>What was most challenging about coming up with your rules?</p>
+<p>TODO: Your answer here</p>
+<p>What additional information or rules do you wish you could have used?</p>
+<p>TODO: Your answer here</p>
+<p>If someone or some group wanted to make sure their comments were shown by your function, what would they do? How hard would this be?</p>
+<p>TODO: Your answer here</p>
+<p>If someone or some group wanted to make sure someone else’s comments were NOT shown by your function, what would they do (if anything)? How hard would this be?</p>
+<p>TODO: Your answer here</p>
+<p>If Bluesky adopted this rule as a universal rule for which posts to display, what do you think would happen? (e.g., Would people change posting strategies? Would posting look different than currently? Would it get overwhelmed with spam?)</p>
+<p>TODO: Your answer here</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -802,6 +1233,44 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#helper-functions">Helper functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#helper-function-to-display-text-in-an-indented-box">helper function to display text in an indented box</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#helper-function-for-atproto-links">helper function for atproto links</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bluesky-setup">Bluesky Setup</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-atproto-library">load atproto library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-make-a-fake-bluesky-connection-with-the-fake-atproto-library">(optional) make a fake Bluesky connection with the fake_atproto library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#login-to-bluesky">login to Bluesky</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-to-print-a-post-with-all-comments-and-replies">Code to print a post with all comments and replies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-create-your-content-moderation-algorithm">TODO: Create Your Content Moderation Algorithm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-urls-to-test">Getting urls to test</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-it-out-with-3-bluesky-threads">Test it out with 3 Bluesky threads!</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-print-bluesky-thread-1">TODO: Print bluesky thread 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-bluesky-thread-1-follow-up-questions">TODO: Bluesky thread 1 follow-up questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-print-bluesky-thread-2">TODO: Print bluesky thread 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-bluesky-thread-2-follow-up-questions">TODO: Bluesky thread 2 follow-up questions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-print-bluesky-thread-3">TODO: Print bluesky thread 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-bluesky-thread-3-follow-up-questions">TODO: Bluesky thread 3 follow-up questions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-final-reflection-questions">TODO: Final Reflection questions</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

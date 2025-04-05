@@ -11,10 +11,10 @@
 <meta property="og:type" content="book" />
 <meta property="og:url" content="appendix/teaching/03_course_work/03_assignments/a4-political-bias.html" />
 <meta property="og:site_name" content="Social Media, Ethics, and Automation" />
-<meta property="og:description" content="Choose Social Media Platform: Reddit| Discord| Bluesky| No Coding Content for the social media platform Bluesky hasn’t been created yet. Please try another platform." />
+<meta property="og:description" content="In this assignment, you will be trying to calculate the average political bias and reliability of posts on Bluesky. The code you are starting with here already does a search on a Bluesky and finds ..." />
 <meta property="og:image" content="https://social-media-ethics-automation.github.io/book/reddit/_images/logo.png" />
 <meta property="og:image:alt" content="Social Media, Ethics, and Automation" />
-<meta name="description" content="Choose Social Media Platform: Reddit| Discord| Bluesky| No Coding Content for the social media platform Bluesky hasn’t been created yet. Please try another platform." />
+<meta name="description" content="In this assignment, you will be trying to calculate the average political bias and reliability of posts on Bluesky. The code you are starting with here already does a search on a Bluesky and finds ..." />
 
     <title>A4: Political Bias &#8212; Social Media, Ethics, and Automation</title>
   
@@ -591,6 +591,37 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/social-media-ethics-automation/book-src-bsky/main?urlpath=lab/tree/appendix/teaching/03_course_work/03_assignments/a4-political-bias.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -646,7 +677,7 @@
       
       
       
-      <li><a href="../../../../_sources/appendix/teaching/03_course_work/03_assignments/a4-political-bias.md" target="_blank"
+      <li><a href="../../../../_sources/appendix/teaching/03_course_work/03_assignments/a4-political-bias.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -656,7 +687,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -717,7 +748,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -733,6 +766,19 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-fill-in-bias-and-reliability-info">TODO: Fill in Bias and Reliability Info</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-bias-and-reliability-info">Load Bias and Reliability Info</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#helper-function-for-looking-up-urls">Helper function for looking up urls</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-a-list-of-search-results-from-bluesky">Get a list of search results from Bluesky</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-modify-the-code-below-run-search">TODO: Modify the code below (Run Search)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection-tasks">Reflection tasks</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -744,8 +790,227 @@ document.write(`
                   
   <section id="a4-political-bias">
 <h1>A4: Political Bias<a class="headerlink" href="#a4-political-bias" title="Link to this heading">#</a></h1>
+<p>In this assignment, you will be trying to calculate the average political bias and reliability of posts on Bluesky.</p>
+<p>The code you are starting with here already does a search on a Bluesky and finds the reliability and political bias of url web addresses posted there. You will need to add loop variables to calculate these averages (see chapter 8 practice and demos).</p>
+<p>After you get the averages to work, you wll then try your code with other search terms, and then you will answer some reflection questions.</p>
+<p>First, we’ll do our normal Bluesky login steps.</p>
 <p><em>Choose Social Media Platform: <a href='../../../../../reddit/appendix/teaching/03_course_work/03_assignments/a4-political-bias.html'>Reddit</a> | <a href='../../../../../discord/appendix/teaching/03_course_work/03_assignments/a4-political-bias.html'>Discord</a> | <strong>Bluesky</strong> | <a href='../../../../../nocode/appendix/teaching/03_course_work/03_assignments/a4-political-bias.html'>No Coding</a></em></p>
-<p><strong>Content for the social media platform Bluesky hasn’t been created yet. Please try another platform.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">atproto</span> <span class="kn">import</span> <span class="n">Client</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>(optional) make a fake praw connection with the fake_praw library</p>
+<p>For testing purposes, we’ve added this line of code, which loads a fake version of praw, so it wont actually connect to reddit. If you want to try to actually connect to reddit, don’t run this line of code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> ../../../../fake_apis/fake_atproto.ipynb
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake atproto (bsky.app) is replacing the atproto.blue library. Fake atproto doesn&#x27;t need real passwords, and prevents you from accessing real Bluesky</strong></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> bluesky_keys.py
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="s2">&quot;https://bsky.social&quot;</span><span class="p">)</span>
+<span class="n">client</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><strong style='color:darkred'>Fake atproto is pretending to set up a client connection to: https://bsky.social</strong></div><div class="output text_html"><strong style='color:darkred'>Fake atproto is pretending log into your account: </strong></div></div>
+</div>
+<section id="todo-fill-in-bias-and-reliability-info">
+<h2>TODO: Fill in Bias and Reliability Info<a class="headerlink" href="#todo-fill-in-bias-and-reliability-info" title="Link to this heading">#</a></h2>
+<p>The first step to make this work is to fill in info for the bias and reliability of different websites.</p>
+<p>If you open <code class="docutils literal notranslate"><span class="pre">media_info.csv</span></code>, you’ll see a bunch of partial website links (enough to identify which site the link is for), and then blank spots for the reliability and bias of that website news sources.</p>
+<p>You’ll use the <a class="reference external" href="https://adfontesmedia.com/interactive-media-bias-chart/">Media Bias chart</a> to look up one organizations ratings of bias and reliability info for each of those sites.</p>
+<p><img alt="A small preview of the media bias chart with bias on the top axis, and reliability on the left axis." src="../../../../_images/media_bias_chart_small.png" /></p>
+<p>So, open that file and then for each of the sites listed, fill in a number for the bias and reliability of the site (you’ll have to figure out how you want to turn bias and reliability into numbers). You can add additional sites as well if you want.</p>
+</section>
+<section id="load-bias-and-reliability-info">
+<h2>Load Bias and Reliability Info<a class="headerlink" href="#load-bias-and-reliability-info" title="Link to this heading">#</a></h2>
+<p>The code to load the bias and reliability info is in another file: <code class="docutils literal notranslate"><span class="pre">a4-supporting_code.ipynb</span></code>. You can look at that file if you are interested, but you are not required to.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># You can look in this file if you want to see more</span>
+<span class="c1"># about how the file information is loaded</span>
+<span class="o">%</span><span class="k">run</span> a4-supporting_code.ipynb
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="helper-function-for-looking-up-urls">
+<h2>Helper function for looking up urls<a class="headerlink" href="#helper-function-for-looking-up-urls" title="Link to this heading">#</a></h2>
+<p><em>Note: You don’t have to worry about the details of how this works, but the basic idea is it takes url shortener links and turns them into the actual links</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This helper function will help us look up full urls, since some posts come with shortened ones</span>
+<span class="c1"># It has a bunch of checks to timeout on DNS connections and reads, and tries 3 times to find the URL</span>
+<span class="c1"># If it fails, it just gives up and gives you the short url</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+
+<span class="k">def</span> <span class="nf">get_full_url</span><span class="p">(</span><span class="n">short_url</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">retries</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">retries</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">short_url</span><span class="p">,</span> <span class="n">allow_redirects</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">url</span>
+        <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">Timeout</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Timeout on attempt </span><span class="si">{</span><span class="n">attempt</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2"> for URL: </span><span class="si">{</span><span class="n">short_url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">attempt</span> <span class="o">&lt;</span> <span class="n">retries</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Optional: wait before retrying</span>
+        <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">RequestException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error retrieving URL: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">short_url</span>
+    <span class="k">return</span> <span class="n">short_url</span>  <span class="c1"># Return the original if all attempts fail</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="get-a-list-of-search-results-from-bluesky">
+<h2>Get a list of search results from Bluesky<a class="headerlink" href="#get-a-list-of-search-results-from-bluesky" title="Link to this heading">#</a></h2>
+<p>We will now get a list of results from Bluesky. To start with, we’ll try to get 100 with the search term “Seattle.”</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The &quot;params&quot; variable is what we send as a search request to bluesky</span>
+<span class="c1"># &#39;q&#39; is the search query; edit this if you want to try different search terms</span>
+<span class="c1"># &#39;limit&#39; is the maximum number of posts you&#39;ll extract. </span>
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s2">&quot;news&quot;</span><span class="p">,</span>
+        <span class="s1">&#39;limit&#39;</span><span class="p">:</span> <span class="mi">100</span>
+    <span class="p">}</span>
+
+<span class="n">posts</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">bsky</span><span class="o">.</span><span class="n">feed</span><span class="o">.</span><span class="n">search_posts</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span><span class="o">.</span><span class="n">posts</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="todo-modify-the-code-below-run-search">
+<h2>TODO: Modify the code below (Run Search)<a class="headerlink" href="#todo-modify-the-code-below-run-search" title="Link to this heading">#</a></h2>
+<p>The code below loops through each bluesky post, and if the submission was a website url, the program checks to see if we have reliability/bias info on the site. If we have that info we calculate the bias and reliability and display it.</p>
+<p><strong>Your job</strong> is to add loop variables to the code to calculate the number of urls we had info for (<code class="docutils literal notranslate"><span class="pre">number_matched_urls</span></code>) and then the total bias and total reliability for those urls. Then you can use that at the end to calculate the average bias and average reliability.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#### TODO: Create your loop variables here</span>
+
+<span class="c1"># Go through all the posts</span>
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">posts</span><span class="p">:</span>
+    <span class="n">embed</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">record</span><span class="o">.</span><span class="n">embed</span>
+    
+    <span class="c1"># Check if the post has an external link</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">embed</span><span class="p">,</span> <span class="s1">&#39;external&#39;</span><span class="p">):</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="n">embed</span><span class="o">.</span><span class="n">external</span><span class="o">.</span><span class="n">uri</span>
+
+        <span class="c1">#Need to check if we can find the full url, so our lookup is more accurate</span>
+        <span class="c1">#Note </span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Checking for full url...&quot;</span><span class="p">)</span>
+        <span class="n">full_url</span> <span class="o">=</span> <span class="n">get_full_url</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">full_url</span><span class="p">)</span>
+        <span class="c1"># try to find the source website in our dataset</span>
+        <span class="n">matching_site</span> <span class="o">=</span> <span class="n">find_matching_site</span><span class="p">(</span><span class="n">full_url</span><span class="p">)</span>
+
+         <span class="c1"># if we found the matching site, then we have info for it</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">matching_site</span><span class="p">):</span>
+            
+            <span class="c1"># look up the bias and reliability for the site the url is from</span>
+            <span class="n">url_bias</span> <span class="o">=</span> <span class="n">media_bias_lookup</span><span class="p">[</span><span class="n">matching_site</span><span class="p">]</span>
+            <span class="n">url_reliability</span> <span class="o">=</span> <span class="n">media_reliability_lookup</span><span class="p">[</span><span class="n">matching_site</span><span class="p">]</span>
+
+            <span class="c1">#### TODO: Update the three loop variables here #### </span>
+
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  bias: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">url_bias</span><span class="p">))</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  reliability: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">url_reliability</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># We didn&#39;t have info on this site</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;**did not recognize site!&quot;</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">()</span>
+
+<span class="c1">#### TODO: calculate the averages below and output the total and averages</span>
+<span class="c1"># Note: It&#39;s ok if the code gives an error when no urls are found</span>
+<span class="c1">#  (since trying to find the average might cause a divide by 0 error)    </span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--------------------------------------&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total number of urls we could measure: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average bias: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average reliability: &quot;</span><span class="p">)</span>
+        
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Checking for full url...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>http://example.com/fake_news_story
+**did not recognize site!
+
+Checking for full url...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>http://example.com/pretend_news_story
+**did not recognize site!
+
+Checking for full url...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>http://example.com/imaginary_news_story
+**did not recognize site!
+
+Checking for full url...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>http://example.com/mysterious_news_story
+**did not recognize site!
+
+--------------------------------------
+Total number of urls we could measure: 
+Average bias: 
+Average reliability: 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="reflection-tasks">
+<h2>Reflection tasks<a class="headerlink" href="#reflection-tasks" title="Link to this heading">#</a></h2>
+<p>Once you get the code above working and finding an average bias and reliability, modify the search to try at least three different searches. Open up the bluesky separately and try the same searches look at your results, then answer the questions below.</p>
+<p>Note: For searches, you can search try different search terms that might have different views and post links to news articles, like: “news”, “science”, “politics”, “liberal”, “conservative”, “tech”, “BlackLivesMatter”, etc.</p>
+<ol class="arabic simple">
+<li><p>What additional searches did you run (at least 3)?</p></li>
+</ol>
+<p>TODO: Answer question here</p>
+<ol class="arabic simple" start="2">
+<li><p>When doing those searches, what were your observations about the calculations of media bias and reliability? (For example: were there a lot of urls that you didn’t measure? Do you feel like the final calculated bias and reliability match the search results?). Answer with at least 3 sentences</p></li>
+</ol>
+<p>TODO: Answer question here</p>
+<ol class="arabic simple" start="3">
+<li><p>If you could redesign the Media Bias Chart, what would you want to do (e.g., add some other dimension besides just bias/responsibility, change how it is evaluated, add more news sources, consider different countries)? Answer with at least 3 sentences.</p></li>
+</ol>
+<p>TODO: Answer question here</p>
+<ol class="arabic simple" start="4">
+<li><p>What might a social media companies or advertizers (including political campaigns) want to do with information on a users’ political views and susceptibility to consipracy theories? Answer with at least 3 sentences.</p></li>
+</ol>
+<p>TODO: Answer question here</p>
+<ol class="arabic simple" start="5">
+<li><p>Choose two ethics frameworks and use the frameworks to consider the different uses of the media bias and reliability information. Answer with at least 6 sentences total (e.g., 3 per framework).</p></li>
+</ol>
+<p>TODO: Answer question here</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -802,6 +1067,26 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-fill-in-bias-and-reliability-info">TODO: Fill in Bias and Reliability Info</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-bias-and-reliability-info">Load Bias and Reliability Info</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#helper-function-for-looking-up-urls">Helper function for looking up urls</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-a-list-of-search-results-from-bluesky">Get a list of search results from Bluesky</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todo-modify-the-code-below-run-search">TODO: Modify the code below (Run Search)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection-tasks">Reflection tasks</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
