@@ -51,7 +51,7 @@
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
@@ -64,8 +64,6 @@
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch14_moderation/06_comments_and_replies/03_demo_recursion_real';</script>
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -941,7 +939,7 @@ document.write(`
 <section id="finding-post-ids-and-testing-our-code">
 <h2>Finding post IDs and testing our code<a class="headerlink" href="#finding-post-ids-and-testing-our-code" title="Link to this heading">#</a></h2>
 <p>In order to test it out, we need to find a link to a Bluesky post with replies. Once you find the post, find the ‘Copy Link to Post’ option to get a web url for the post.</p>
-<p><img alt="Bluesky Post. The three dot &quot;Open post options menu&quot; is opened, and from there the &quot;Copy Link to Post&quot; option is selected." src="../../_images/bsky_copy_link.png" /></p>
+<p><img alt="Bluesky Post. The three dot &quot;Open post options menu&quot; is opened, and from there the &quot;Copy Link to Post&quot; option is selected." src="../../_images/bsky_copy_link1.png" /></p>
 <p>It should be something like: <a class="reference external" href="https://bsky.app/profile/realgdt.bsky.social/post/3lihunicmds2y">https://bsky.app/profile/realgdt.bsky.social/post/3lihunicmds2y</a></p>
 <p>Now we can test it out by calling the <code class="docutils literal notranslate"><span class="pre">print_post_thread</span></code>, passing it the url as a string. Then you should see the comment tree.</p>
 <div class="cell docutils container">

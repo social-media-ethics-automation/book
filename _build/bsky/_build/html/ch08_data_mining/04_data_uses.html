@@ -40,7 +40,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/myfile.css?v=ed2eb8a4" />
@@ -51,7 +51,7 @@
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
@@ -64,8 +64,6 @@
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch08_data_mining/04_data_uses';</script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -321,7 +319,7 @@
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="00_data_mining.html">8. Data Mining</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="01_data_sources.html">8.1. Sources of Social Media Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02_platform_api_data.html">8.2. Data From the Discord API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_platform_api_data.html">8.2. Data From the Bluesky API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="03_data_mining.html">8.3. Mining Social Media Data</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">8.4. How is this data used</a></li>
 <li class="toctree-l2"><a class="reference internal" href="05_what_platforms_think_of_you.html">8.5. Activity: What platforms think of you</a></li>
@@ -756,11 +754,11 @@ document.write(`
 <h1><span class="section-number">8.4. </span>How is this data used<a class="headerlink" href="#how-is-this-data-used" title="Link to this heading">#</a></h1>
 <p>Social Media platforms use the data they collect on users and infer about users to increase their power and increase their profits.</p>
 <p>One of the main goals of social media sites is to increase the time users are spending on their social media sites. The more time users spend, the more money the site can get from ads, and also the more power and influence those social media sites have over those users. So social media sites use the data they collect to try and figure out what keeps people using their site, and what can they do to convince those users they need to open it again later.</p>
-<p>Social media sites then make their money by selling targeted advertising, meaning selling ads to specific groups of people with specific interests. So, for example, if you are selling spider stuffed animal toys, most people might not be interested, but if you could find the people who want those toys and only show your ads to them, your advertising campaign might be successful, and those users might be happy to find out about your stuffed animal toys. But targeting advertising can be used in less ethical ways, such as targeting gambling ads at children, or at users who are addicted to gambling, or the <a class="reference external" href="https://www.theguardian.com/us-news/2020/sep/28/trump-2016-campaign-targeted-35m-black-americans-to-deter-them-from-voting">2016 Trump campaign ‘target[ing] 3.5m black Americans to deter them from voting’</a> <span id="id1">[<a class="reference internal" href="09_bibliography.html#id23" title="Dan Sabbagh. Trump 2016 campaign 'targeted 3.5m black Americans to deter them from voting'. The Guardian, September 2020. URL: https://www.theguardian.com/us-news/2020/sep/28/trump-2016-campaign-targeted-35m-black-americans-to-deter-them-from-voting (visited on 2023-12-05).">h13</a>]</span>.</p>
+<p>Social media sites then make their money by selling targeted advertising, meaning selling ads to specific groups of people with specific interests. So, for example, if you are selling spider stuffed animal toys, most people might not be interested, but if you could find the people who want those toys and only show your ads to them, your advertising campaign might be successful, and those users might be happy to find out about your stuffed animal toys. But targeting advertising can be used in less ethical ways, such as targeting gambling ads at children, or at users who are addicted to gambling, or the <a class="reference external" href="https://www.theguardian.com/us-news/2020/sep/28/trump-2016-campaign-targeted-35m-black-americans-to-deter-them-from-voting">2016 Trump campaign ‘target[ing] 3.5m black Americans to deter them from voting’</a> <span id="id1">[<a class="reference internal" href="09_bibliography.html#id27" title="Dan Sabbagh. Trump 2016 campaign 'targeted 3.5m black Americans to deter them from voting'. The Guardian, September 2020. URL: https://www.theguardian.com/us-news/2020/sep/28/trump-2016-campaign-targeted-35m-black-americans-to-deter-them-from-voting (visited on 2023-12-05).">h18</a>]</span>.</p>
 <section id="learn-more">
 <h2><span class="section-number">8.4.1. </span>Learn more<a class="headerlink" href="#learn-more" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.washingtonpost.com/technology/2019/09/18/housing-companies-used-facebooks-ad-system-discriminate-against-older-people-according-new-human-rights-charges/">Housing companies used Facebook’s ad system to discriminate against older people, according to new human rights complaints</a> <span id="id2">[<a class="reference internal" href="09_bibliography.html#id32" title="Marie C. Baca. Housing companies used Facebook’s ad system to discriminate against older people, according to new human rights complaints. Washington Post, September 2020. URL: https://www.washingtonpost.com/technology/2019/09/18/housing-companies-used-facebooks-ad-system-discriminate-against-older-people-according-new-human-rights-charges/ (visited on 2023-12-05).">h14</a>]</span></p></li>
+<li><p><a class="reference external" href="https://www.washingtonpost.com/technology/2019/09/18/housing-companies-used-facebooks-ad-system-discriminate-against-older-people-according-new-human-rights-charges/">Housing companies used Facebook’s ad system to discriminate against older people, according to new human rights complaints</a> <span id="id2">[<a class="reference internal" href="09_bibliography.html#id36" title="Marie C. Baca. Housing companies used Facebook’s ad system to discriminate against older people, according to new human rights complaints. Washington Post, September 2020. URL: https://www.washingtonpost.com/technology/2019/09/18/housing-companies-used-facebooks-ad-system-discriminate-against-older-people-according-new-human-rights-charges/ (visited on 2023-12-05).">h19</a>]</span></p></li>
 </ul>
 </section>
 </section>

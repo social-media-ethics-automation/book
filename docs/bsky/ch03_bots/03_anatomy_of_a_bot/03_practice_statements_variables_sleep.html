@@ -51,7 +51,7 @@
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
@@ -64,8 +64,6 @@
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch03_bots/03_anatomy_of_a_bot/03_practice_statements_variables_sleep';</script>
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -813,7 +811,7 @@ document.write(`
 <section id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Link to this heading">#</a></h2>
 <p>You will first practice saving values into variables. Remember, the way we save a value into a variable is like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">variable_name</span> <span class="o">=</span> <span class="n">value</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>variable_name = value
 </pre></div>
 </div>
 <p>First, save the piece of text “I am writing a computer program!” into a variable called <code class="docutils literal notranslate"><span class="pre">my_progress</span></code></p>
@@ -981,7 +979,7 @@ document.write(`
 <h3>Practice 1: Submit a post to Bluesky<a class="headerlink" href="#practice-1-submit-a-post-to-bluesky" title="Link to this heading">#</a></h3>
 <p>Post something you learned in the class so far:</p>
 <p>Remember, the code to post to Bluesky looks like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">client</span><span class="o">.</span><span class="n">send_post</span><span class="p">(</span><span class="s2">&quot;This post was made by a computer program!&quot;</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>client.send_post(&quot;This post was made by a computer program!&quot;)
 </pre></div>
 </div>
 <div class="cell docutils container">
@@ -994,9 +992,9 @@ document.write(`
 </section>
 <section id="practice-2-post-from-a-variable">
 <h3>Practice 2: Post from a variable<a class="headerlink" href="#practice-2-post-from-a-variable" title="Link to this heading">#</a></h3>
-<p>Now try saving a piece of text in a variable for the title, and another for the content of a post, and then submitting a post of whatever you saved in the variables.</p>
+<p>Now try saving a piece of text in a variable for the content of a post, and then try submitting a post of whatever you saved in the variable.</p>
 <p>To do this, where the code has <code class="docutils literal notranslate"><span class="pre">send_post(</span> <span class="pre">...</span> <span class="pre">)</span></code>, you’ll replace the quoted text with the variable name, so it will look like:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">client</span><span class="o">.</span><span class="n">send_post</span><span class="p">(</span><span class="n">content_variable</span><span class="p">)</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>client.send_post(content_variable)
 </pre></div>
 </div>
 <p>(with whatever your variable name was instead of “content_variable”)</p>

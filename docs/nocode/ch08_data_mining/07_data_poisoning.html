@@ -40,7 +40,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/myfile.css?v=ed2eb8a4" />
@@ -51,7 +51,7 @@
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
@@ -64,14 +64,12 @@
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch08_data_mining/07_data_poisoning';</script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="8.8. Reflections on Data Mining" href="08_reflection_questions.html" />
-    <link rel="prev" title="8.6. Sentiment Analysis on Social Media" href="06_sentiment_analysis/00_intro.html" />
+    <link rel="prev" title="8.6.3. Demo: Sentiment Analysis on Bluesky" href="06_sentiment_analysis/03_demo_sentiment.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -224,7 +222,10 @@
 <li class="toctree-l3"><a class="reference internal" href="../ch02_definitions/03_automation/04_first_programmers.html">2.3.4. First Programmers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ch02_definitions/03_automation/05_compilers.html">2.3.5. Compilers and Programimng Languages</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ch02_definitions/03_automation/06_a_social_media_bot.html">2.3.6. A program that makes one post</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ch02_definitions/03_automation/10_automation_in_social_media.html">2.3.7. Automation in Social Media</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ch02_definitions/03_automation/07_details_of_bot.html">2.3.7. Understanding the Bluesky Bot Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ch02_definitions/03_automation/08_demo.html">2.3.8. Demo: Try Running the Bluesky Bot!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ch02_definitions/03_automation/09_reflecting_on_programming.html">2.3.9. Reflections on the Bot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ch02_definitions/03_automation/10_automation_in_social_media.html">2.3.10. Automation in Social Media</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch02_definitions/04_tying_them_together.html">2.4. Tying It Together</a></li>
@@ -237,6 +238,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../ch03_bots/03_anatomy_of_a_bot/00_intro.html">3.3. Anatomy of a Bot</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ch03_bots/03_anatomy_of_a_bot/01_control_flow_options.html">3.3.1. Organizing a Computer Program</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ch03_bots/03_anatomy_of_a_bot/02_demo_statements_variables_sleep.html">3.3.2. Demo: Statements, Variables, and Sleep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ch03_bots/03_anatomy_of_a_bot/03_practice_statements_variables_sleep.html">3.3.3. Practice: Statements and Variables</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch03_bots/04_bots_and_responsibility.html">3.4. Bots and Responsibility</a></li>
@@ -257,7 +259,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../ch04_data/02_data_simplification.html">4.2. All data is a simplification of reality</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch04_data/03_who_data_fits.html">4.3. Who does data fit?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch04_data/04_data_informing_ethics.html">4.4. How Data Informs Ethics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch04_data/05_data_python_platform/00_intro.html">4.5. Data in Python and Social Media</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ch04_data/05_data_python_platform/00_intro.html">4.5. Data in Python and Social Media</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ch04_data/05_data_python_platform/01_demo_data.html">4.5.1. Demo: Python Basic Data Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ch04_data/05_data_python_platform/02_practice_data.html">4.5.2. Practice: Python Basic Data Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ch04_data/05_data_python_platform/03_demo_data_from_platform.html">4.5.3. Demo: Data from a Bluesky Post\n</a></li>
+</ul>
+</details></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch04_data/06_data_design_activity.html">4.6. Design Activity: Data and Social media</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch04_data/07_reflection_in_data_design.html">4.7. Reflection: Ethics of Choosing Data Representation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch04_data/08_bibliography.html">4.8. Bibliography</a></li>
@@ -267,7 +274,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../ch05_history/01_pre_internet.html">5.1. Pre-Internet Social Media</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch05_history/02_web_1.html">5.2. Web 1.0 Social Media</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch05_history/03_web_2.html">5.3. Web 2.0 Social Media</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch05_history/04_list_data_python/00_intro.html">5.4. Looping with Lists and Dictionaries in Social Media</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ch05_history/04_list_data_python/00_intro.html">5.4. Looping with Lists and Dictionaries in Social Media</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ch05_history/04_list_data_python/01_demo_lists.html">5.4.1. Demo: Lists and Loops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ch05_history/04_list_data_python/02_demo_dictionaries.html">5.4.2. Demo: Dictionaries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ch05_history/04_list_data_python/03_practice_lists_dictionaries.html">5.4.3. Practice: Looping through lists and dictionaries</a></li>
+</ul>
+</details></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch05_history/05_antisocial_media.html">5.5. Antisocial Media</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch05_history/06_social_media_design.html">5.6. Social Media Design</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch05_history/07_reflections.html">5.7. Design Analysis: Use Cases and Social Media Designs</a></li>
@@ -295,7 +307,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../ch07_trolling/02_origins_trolling.html">7.2. Origins of trolling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch07_trolling/03_trolling_examples.html">7.3. Activity: Evaluating Trolling Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch07_trolling/04_responding_to_trolls.html">7.4. Responding to trolls?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch07_trolling/05_trolling_reply_bot/00_introduction.html">7.5. Trolling a Reply Bot</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ch07_trolling/05_trolling_reply_bot/00_introduction.html">7.5. Trolling a Reply Bot</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ch07_trolling/05_trolling_reply_bot/01_demo_strings_conditionals.html">7.5.1. Demo: Conditionals and String Manipulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ch07_trolling/05_trolling_reply_bot/02_practice_strings_conditionals.html">7.5.2. Practice: Conditionals and String Manipulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ch07_trolling/05_trolling_reply_bot/03_demo_reply_bot.html">7.5.3. Demo: Trolling a Reply Bot</a></li>
+</ul>
+</details></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch07_trolling/06_ethics_and_trolling.html">7.6. Ethics and Trolling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch07_trolling/07_bibliography.html">7.7. Bibliography</a></li>
 </ul>
@@ -306,7 +323,12 @@
 <li class="toctree-l2"><a class="reference internal" href="03_data_mining.html">8.3. Mining Social Media Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="04_data_uses.html">8.4. How is this data used</a></li>
 <li class="toctree-l2"><a class="reference internal" href="05_what_platforms_think_of_you.html">8.5. Activity: What platforms think of you</a></li>
-<li class="toctree-l2"><a class="reference internal" href="06_sentiment_analysis/00_intro.html">8.6. Sentiment Analysis on Social Media</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="06_sentiment_analysis/00_intro.html">8.6. Sentiment Analysis on Social Media</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="06_sentiment_analysis/01_demo_sentiment_and_loop_vars.html">8.6.1. Demo: Sentiment Analysis and Loop Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_sentiment_analysis/02_practice_sentiment_and_loop_vars.html">8.6.2. Practice: Sentiment Analysis and Loop Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_sentiment_analysis/03_demo_sentiment.html">8.6.3. Demo: Sentiment Analysis on Bluesky</a></li>
+</ul>
+</details></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">8.7. Data Poisoning</a></li>
 <li class="toctree-l2"><a class="reference internal" href="08_reflection_questions.html">8.8. Reflections on Data Mining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="09_bibliography.html">8.9. Bibliography</a></li>
@@ -316,7 +338,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../ch09_privacy/01_privacy_concerns.html">9.1. Privacy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch09_privacy/02_security.html">9.2. Security</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch09_privacy/03_privacy_violations.html">9.3. Additional Privacy Violations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch09_privacy/04_tracking_use/00_intro.html">9.4. Tracking Use</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ch09_privacy/04_tracking_use/00_intro.html">9.4. Tracking Use</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ch09_privacy/04_tracking_use/01_demo_functions.html">9.4.1. Demo: Writing Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ch09_privacy/04_tracking_use/02_practice_functions.html">9.4.2. Practice: Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ch09_privacy/04_tracking_use/03_demo_track_use.html">9.4.3. Demo: Track Use of Sentiment Analysis Code</a></li>
+</ul>
+</details></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch09_privacy/05_activity_gdpr.html">9.5. Design Analysis: GDPR</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch09_privacy/06_reflections.html">9.6. Reflection Questions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch09_privacy/07_bibliography.html">9.7. Bibliography</a></li>
@@ -340,7 +367,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../ch11_recommendations/02_ethical_analysis_recommendations.html">11.2. Ethical Analysis of Recommendation Algorithms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch11_recommendations/03_individual_concerns.html">11.3. Individual Concerns with Recommendation Algorithms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch11_recommendations/04_societal_concerns.html">11.4. Societal Concerns with Recommendation Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch11_recommendations/05_recommend_bot/00_intro.html">11.5. Recommendation Bot</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ch11_recommendations/05_recommend_bot/00_intro.html">11.5. Recommendation Bot</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ch11_recommendations/05_recommend_bot/01_demo_dictionary_counters.html">11.5.1. Demo: Dictionary Counters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ch11_recommendations/05_recommend_bot/02_practice_dictionary_counters.html">11.5.2. Practice: Dictionary Counters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ch11_recommendations/05_recommend_bot/03_demo_recommend.html">11.5.3. Demo: Recommend Users to Follow</a></li>
+</ul>
+</details></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch11_recommendations/06_design_recommend.html">11.6. Design Activity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch11_recommendations/07_bibliography.html">11.7. Bibliography</a></li>
 </ul>
@@ -375,7 +407,13 @@
 
 <li class="toctree-l2"><a class="reference internal" href="../ch14_moderation/04_moderation_and_ethics.html">14.5. Moderation and Ethics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch14_moderation/05_reflections.html">14.6. Activity and Reflections on Moderation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch14_moderation/06_comments_and_replies/00_intro.html">14.7. Viewing Comments and Replies</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ch14_moderation/06_comments_and_replies/00_intro.html">14.7. Viewing Comments and Replies</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ch14_moderation/06_comments_and_replies/01_trees.html">14.7.1. Tree Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ch14_moderation/06_comments_and_replies/02_demo_recursion.html">14.7.2. Demo: Navigating Trees (recursion)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ch14_moderation/06_comments_and_replies/03_demo_recursion_real.html">14.7.3. Demo: Display Real Bluesky Comments and Replies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ch14_moderation/06_comments_and_replies/04_demo_hide_some_replies.html">14.7.4. Demo: Hide Some Comments</a></li>
+</ul>
+</details></li>
 <li class="toctree-l2"><a class="reference internal" href="../ch14_moderation/07_bibliography.html">14.8. Bibliography</a></li>
 </ul>
 </details></li>
@@ -457,14 +495,30 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../appendix/making_bot_account.html">22. Making a Bot Account</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../appendix/solutions/00_solutions.html">23. Practice Solutions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/solutions/00_solutions.html">23. Practice Solutions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/solutions/01_solution_practice_statements_variables_sleep.html">23.1. Ch 3 Practice: Statements and Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/solutions/02_solution_practice_data.html">23.2. Ch 4 Practice: Python Basic Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/solutions/03_practice_lists_dictionaries.html">23.3. Ch 5 Practice: Looping through lists and dictionaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/solutions/07_practice_strings_conditionals.html">23.4. Ch 7 Practice: Conditionals and String Manipulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/solutions/08_solution_sentiment_and_loop_vars.html">23.5. Ch 8 Practice: Sentiment Analysis and Loop Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/solutions/09_solution_functions.html">23.6. Ch 9 Practice: Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/solutions/ch12_solution_dictionary_counters.html">23.7. Ch 12 Solution: Dictionary Counters</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/teaching/00_intro.html">24. Teaching With This Book</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../appendix/teaching/01_pedagogy.html">24.1. Pedagogical Goals and Design</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../appendix/teaching/02_tech_set_up.html">24.2. Tech Set-Up</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../appendix/teaching/03_course_work/00_intro.html">24.3. Assignments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../appendix/teaching/03_course_work/01_readings.html">24.3.1. Reading assignments</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../appendix/teaching/03_course_work/02_practice.html">24.3.2. Programming practice</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../appendix/teaching/03_course_work/03_assignments/00_intro.html">24.3.3. Programming Assignments</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../appendix/teaching/03_course_work/03_assignments/00_intro.html">24.3.3. Programming Assignments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../appendix/teaching/03_course_work/03_assignments/a1_make_7_posts.html">A1: Make 7 Bluesky Posts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../appendix/teaching/03_course_work/03_assignments/a2_another_site.html">A2: Try another site</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../appendix/teaching/03_course_work/03_assignments/a3_troll_reply_bot.html">A3: Trolling a Reply Bot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../appendix/teaching/03_course_work/03_assignments/a4-political-bias.html">A4: Political Bias\n”</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../appendix/teaching/03_course_work/03_assignments/a5-best-comments.html">A5: Best Comments\n”</a></li>
+</ul>
+</details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../appendix/teaching/03_course_work/04_group_project/00_intro.html">24.3.4. Group Final Project</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="../appendix/teaching/03_course_work/04_group_project/01_description.html">Project Description</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../appendix/teaching/03_course_work/04_group_project/02_project_proposal.html">Project Proposal</a></li>
@@ -706,13 +760,13 @@ document.write(`
 <p>Datasets can be poisoned unintentionally. For example, many scientists posted online surveys that people can get paid to take. Getting useful results depended on a wide range of people taking them. But when one TikToker’s video about taking them went viral, the surveys got filled out with mostly one narrow demographic, preventing many of the datasets from being used as intended.</p>
 <p>See more in</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.theverge.com/2021/9/24/22688278/tiktok-science-study-survey-prolific">A teenager on TikTok disrupted thousands of scientific studies with a single video – The Verge</a> <span id="id1">[<a class="reference internal" href="09_bibliography.html#id26" title="Rafi Letzter. A teenager on TikTok disrupted thousands of scientific studies with a single video. The Verge, September 2021. URL: https://www.theverge.com/2021/9/24/22688278/tiktok-science-study-survey-prolific (visited on 2023-12-05).">h17</a>]</span></p></li>
+<li><p><a class="reference external" href="https://www.theverge.com/2021/9/24/22688278/tiktok-science-study-survey-prolific">A teenager on TikTok disrupted thousands of scientific studies with a single video – The Verge</a> <span id="id1">[<a class="reference internal" href="09_bibliography.html#id30" title="Rafi Letzter. A teenager on TikTok disrupted thousands of scientific studies with a single video. The Verge, September 2021. URL: https://www.theverge.com/2021/9/24/22688278/tiktok-science-study-survey-prolific (visited on 2023-12-05).">h17</a>]</span></p></li>
 </ul>
 <p>Additionally, spam and output from Large Language Models like ChatGPT can flood information spaces (e.g., email, Wikipedia) with nonsense, useless, or false content, making them hard to use or useless.</p>
 <p>See more in</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://gizmodo.com/cnet-ai-chatgpt-news-robot-1849996151">CNET Is Reviewing the Accuracy of All Its AI-Written Articles After Multiple Major Corrections</a> <span id="id2">[<a class="reference internal" href="09_bibliography.html#id27" title="Lauren Leffer. CNET Is Reviewing the Accuracy of All Its AI-Written Articles After Multiple Major Corrections. Gizmodo, January 2023. URL: https://gizmodo.com/cnet-ai-chatgpt-news-robot-1849996151 (visited on 2023-12-05).">h18</a>]</span></p></li>
-<li><p><a class="reference external" href="https://stackoverflow.com/help/gpt-policy">Why posting GPT and ChatGPT generated answers is not currently acceptable - StackOverflow</a> <span id="id3">[<a class="reference internal" href="09_bibliography.html#id28" title="Why can't I use Artificial Intelligence tools to generate answers? - Help Center. 2023. URL: https://stackoverflow.com/help/ai-policy (visited on 2023-12-08).">h19</a>]</span></p></li>
+<li><p><a class="reference external" href="https://gizmodo.com/cnet-ai-chatgpt-news-robot-1849996151">CNET Is Reviewing the Accuracy of All Its AI-Written Articles After Multiple Major Corrections</a> <span id="id2">[<a class="reference internal" href="09_bibliography.html#id31" title="Lauren Leffer. CNET Is Reviewing the Accuracy of All Its AI-Written Articles After Multiple Major Corrections. Gizmodo, January 2023. URL: https://gizmodo.com/cnet-ai-chatgpt-news-robot-1849996151 (visited on 2023-12-05).">h18</a>]</span></p></li>
+<li><p><a class="reference external" href="https://stackoverflow.com/help/gpt-policy">Why posting GPT and ChatGPT generated answers is not currently acceptable - StackOverflow</a> <span id="id3">[<a class="reference internal" href="09_bibliography.html#id32" title="Why can't I use Artificial Intelligence tools to generate answers? - Help Center. 2023. URL: https://stackoverflow.com/help/ai-policy (visited on 2023-12-08).">h19</a>]</span></p></li>
 </ul>
 </section>
 <section id="intentional-data-poisoning">
@@ -722,15 +776,15 @@ document.write(`
 <div><p>Kellogg’s proposed pay and benefits cuts while forcing workers to work severe overtime as long as 16-hour-days for seven days a week. Some workers stayed on the job for months without a single day off. The company refuses to meet the union’s proposals for better pay, hours, and benefits, so they went on strike.</p>
 <p>Earlier this week, the company announced it would permanently replace 1,400 striking workers.</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.vice.com/en/article/v7dvy9/spamming-kelloggs-job-applications-strike">People Are Spamming Kellogg’s Job Applications in Solidarity with Striking Workers – Vice MotherBoard</a> <span id="id4">[<a class="reference internal" href="09_bibliography.html#id29" title="Samantha Cole. People Are Spamming Kellogg’s Job Applications in Solidarity with Striking Workers. Vice, December 2021. URL: https://www.vice.com/en/article/v7dvy9/spamming-kelloggs-job-applications-strike (visited on 2023-12-05).">h20</a>]</span></p></li>
+<li><p><a class="reference external" href="https://www.vice.com/en/article/v7dvy9/spamming-kelloggs-job-applications-strike">People Are Spamming Kellogg’s Job Applications in Solidarity with Striking Workers – Vice MotherBoard</a> <span id="id4">[<a class="reference internal" href="09_bibliography.html#id33" title="Samantha Cole. People Are Spamming Kellogg’s Job Applications in Solidarity with Striking Workers. Vice, December 2021. URL: https://www.vice.com/en/article/v7dvy9/spamming-kelloggs-job-applications-strike (visited on 2023-12-05).">h20</a>]</span></p></li>
 </ul>
 </div></blockquote>
-<p>People in the <a class="reference external" href="https://www.reddit.com/r/antiwork/">antiwork subreddit</a> <span id="id5">[<a class="reference internal" href="09_bibliography.html#id30" title="Antiwork: Unemployment for all, not just the rich! 2023. URL: https://www.reddit.com/r/antiwork/ (visited on 2023-12-05).">h21</a>]</span> found the website where Kellogg’s posted their job listing to replace the workers. So those Redditors suggested they spam the site with fake applications, poisoning the job application data, so Kellogg’s wouldn’t be able to figure out which applications were legitimate or not (we could consider this a form of trolling). Then Kellogg’s wouldn’t be able to replace the striking workers, and they would have to agree to better working conditions.</p>
+<p>People in the <a class="reference external" href="https://www.reddit.com/r/antiwork/">antiwork subreddit</a> <span id="id5">[<a class="reference internal" href="09_bibliography.html#id34" title="Antiwork: Unemployment for all, not just the rich! 2023. URL: https://www.reddit.com/r/antiwork/ (visited on 2023-12-05).">h21</a>]</span> found the website where Kellogg’s posted their job listing to replace the workers. So those Redditors suggested they spam the site with fake applications, poisoning the job application data, so Kellogg’s wouldn’t be able to figure out which applications were legitimate or not (we could consider this a form of trolling). Then Kellogg’s wouldn’t be able to replace the striking workers, and they would have to agree to better working conditions.</p>
 <p>Then Sean Black, a programmer on TikTok saw this and decided to contribute by creating a bot that would automatically log in and fill out applications with random user info, increasing the rate at which he (and others who used his code) could spam the Kellogg’s job applications:</p>
 <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@seandablack/video/7039823665294232878" data-video-id="7039823665294232878" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@seandablack" href="https://www.tiktok.com/@seandablack?refer=embed">@seandablack</a> Shortucut soon perhaps <a title="antiwork" target="_blank" href="https://www.tiktok.com/tag/antiwork?refer=embed">#antiwork</a> <a title="workersrights" target="_blank" href="https://www.tiktok.com/tag/workersrights?refer=embed">#workersrights</a> <a title="kelloggs" target="_blank" href="https://www.tiktok.com/tag/kelloggs?refer=embed">#kelloggs</a> <a title="strike" target="_blank" href="https://www.tiktok.com/tag/strike?refer=embed">#strike</a> <a title="unions" target="_blank" href="https://www.tiktok.com/tag/unions?refer=embed">#unions</a> <a title="leftist" target="_blank" href="https://www.tiktok.com/tag/leftist?refer=embed">#leftist</a> <a target="_blank" title="♬ original sound - Sean Black" href="https://www.tiktok.com/music/original-sound-7039823643236567854?refer=embed">♬ original sound - Sean Black</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
 <p>See also:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.technologyreview.com/2021/03/05/1020376/resist-big-tech-surveillance-data/">How to poison the data that Big Tech uses to surveil you – MIT Technology Review</a> <span id="id6">[<a class="reference internal" href="09_bibliography.html#id31" title="Karen Hao. How to poison the data that Big Tech uses to surveil you. MIT Technology Review, March 2021. URL: https://www.technologyreview.com/2021/03/05/1020376/resist-big-tech-surveillance-data/ (visited on 2023-12-05).">h22</a>]</span></p></li>
+<li><p><a class="reference external" href="https://www.technologyreview.com/2021/03/05/1020376/resist-big-tech-surveillance-data/">How to poison the data that Big Tech uses to surveil you – MIT Technology Review</a> <span id="id6">[<a class="reference internal" href="09_bibliography.html#id35" title="Karen Hao. How to poison the data that Big Tech uses to surveil you. MIT Technology Review, March 2021. URL: https://www.technologyreview.com/2021/03/05/1020376/resist-big-tech-surveillance-data/ (visited on 2023-12-05).">h22</a>]</span></p></li>
 </ul>
 </section>
 </section>
@@ -766,12 +820,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="06_sentiment_analysis/00_intro.html"
+       href="06_sentiment_analysis/03_demo_sentiment.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">8.6. </span>Sentiment Analysis on Social Media</p>
+        <p class="prev-next-title"><span class="section-number">8.6.3. </span>Demo: Sentiment Analysis on Bluesky</p>
       </div>
     </a>
     <a class="right-next"
