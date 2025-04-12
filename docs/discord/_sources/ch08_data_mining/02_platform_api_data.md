@@ -1,5 +1,5 @@
 # Data From the Discord API
-_Choose Social Media Platform: <a href='../../reddit/ch08_data_mining/02_platform_api_data.html'>Reddit</a> | __Discord__ | <a href='../../bsky/ch08_data_mining/02_platform_api_data.html'>Bluesky</a> | <a href='../../nocode/ch08_data_mining/02_platform_api_data.html'>No Coding</a>_
+_Choose Social Media Platform: <a href='../../bsky/ch08_data_mining/02_platform_api_data.html'>Bluesky</a> | <a href='../../reddit/ch08_data_mining/02_platform_api_data.html'>Reddit</a> | __Discord__ | <a href='../../nocode/ch08_data_mining/02_platform_api_data.html'>No Coding</a>_
 
 
 We've been accessing Discord through Python and the "discord" code library. The discord code library works by sending requests across the internet to Discord, using what is called an "[application programming interface](https://en.wikipedia.org/wiki/API)" {cite:p}`API2023a` or API for short. APIs have a set of rules for what requests you can make, what happens when you make the request, and what information you can get back.

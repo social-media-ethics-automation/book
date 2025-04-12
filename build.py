@@ -24,9 +24,9 @@ init(autoreset=True)
 
 # Note: status can be something like: " (incomplete)"
 platforms = [
+   {"full_name": "Bluesky", "file_name": "bsky", "status": ""},
    {"full_name": "Reddit", "file_name": "reddit", "status": ""},
    {"full_name": "Discord", "file_name": "discord", "status": ""},
-   {"full_name": "Bluesky", "file_name": "bsky", "status": ""},
    {"full_name": "No Coding", "file_name": "nocode", "status": "", "keep_all_files": True, "exclude_from_options": True}, # First pass makes copies of all coding files (so they can be linked to) 
    {"full_name": "No Coding", "file_name": "nocode", "status": "", "keep_all_files": False, "second_pass": True} # Second pass gets rid of some of the coding files (for better flow)
 ]
@@ -397,7 +397,7 @@ with open('docs/index.html', 'w') as file:
             <meta property="og:url" content="intro.html" />
             <meta property="og:site_name" content="Social Media, Ethics, and Automation" />
             <meta property="og:description" content="Free textbook on programming social media bots and considering the ethical implications of having done so. Automation drives our experience of social media platforms, from timeline feeds to disinfo..." />
-            <meta property="og:image" content="https://social-media-ethics-automation.github.io/book/reddit/_images/logo.png" />
+            <meta property="og:image" content="https://social-media-ethics-automation.github.io/book/{platform}/_images/logo.png" />
             <meta property="og:image:alt" content="Social Media, Ethics, and Automation" />
             <meta name="description" content="Free textbook on programming social media bots and considering the ethical implications of having done so. Automation drives our experience of social media platforms, from timeline feeds to disinfo..." />
 

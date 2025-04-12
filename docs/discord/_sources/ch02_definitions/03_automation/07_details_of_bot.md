@@ -1,5 +1,5 @@
 # Understanding the Discord Bot Code
-_Choose Social Media Platform: <a href='../../../reddit/ch02_definitions/03_automation/07_details_of_bot.html'>Reddit</a> | __Discord__ | <a href='../../../bsky/ch02_definitions/03_automation/07_details_of_bot.html'>Bluesky</a> | <a href='../../../nocode/ch02_definitions/03_automation/07_details_of_bot.html'>No Coding</a>_
+_Choose Social Media Platform: <a href='../../../bsky/ch02_definitions/03_automation/07_details_of_bot.html'>Bluesky</a> | <a href='../../../reddit/ch02_definitions/03_automation/07_details_of_bot.html'>Reddit</a> | __Discord__ | <a href='../../../nocode/ch02_definitions/03_automation/07_details_of_bot.html'>No Coding</a>_
 
 
 Let's look more at that program that creates one Discord post.

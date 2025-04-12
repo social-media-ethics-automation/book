@@ -1,5 +1,5 @@
 # Making a Bot Account (Reddit)
-_Choose Social Media Platform: __Reddit__ | <a href='../../discord/appendix/making_bot_account.html'>Discord</a> | <a href='../../bsky/appendix/making_bot_account.html'>Bluesky</a> | <a href='../../nocode/appendix/making_bot_account.html'>No Coding</a>_
+_Choose Social Media Platform: <a href='../../bsky/appendix/making_bot_account.html'>Bluesky</a> | __Reddit__ | <a href='../../discord/appendix/making_bot_account.html'>Discord</a> | <a href='../../nocode/appendix/making_bot_account.html'>No Coding</a>_
 
 
 

@@ -1,5 +1,5 @@
 # Understanding the Reddit Bot Code
-_Choose Social Media Platform: __Reddit__ | <a href='../../../discord/ch02_definitions/03_automation/07_details_of_bot.html'>Discord</a> | <a href='../../../bsky/ch02_definitions/03_automation/07_details_of_bot.html'>Bluesky</a> | <a href='../../../nocode/ch02_definitions/03_automation/07_details_of_bot.html'>No Coding</a>_
+_Choose Social Media Platform: <a href='../../../bsky/ch02_definitions/03_automation/07_details_of_bot.html'>Bluesky</a> | __Reddit__ | <a href='../../../discord/ch02_definitions/03_automation/07_details_of_bot.html'>Discord</a> | <a href='../../../nocode/ch02_definitions/03_automation/07_details_of_bot.html'>No Coding</a>_
 
 
 Let's look more at that program that creates one Reddit post.
