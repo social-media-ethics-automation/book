@@ -1,0 +1,46 @@
+[
+    {
+        "question": "Which of the following saves the text \"Time to go to class\" into a variable named \"alarm_message\" in the Python programming language?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "\"Time to go to class\" -> \"alarm_message\"",
+                "correct": false
+            },
+            {
+                "answer": "\"alarm_message\" <- \"Time to go to class\"",
+                "correct": false
+            },
+            {
+                "answer": "\"alarm_message\" = \"Time to go to class\"",
+                "correct": true
+            },
+            {
+                "answer": "\"Time to go to class\" = \"alarm_message\"",
+                "correct": false
+            }
+        ]
+    },
+    {
+        "question": "What happens when you run the following code: <pre>a = 2\ndisplay(a)\na = a + 1\ndisplay(a)",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Output: <pre>1\n2\n</pre>",
+                "correct": false
+            },
+            {
+                "answer": "Output: <pre>2\n</pre>",
+                "correct": false
+            },
+            {
+                "answer": "Output: <pre>2\n3\n</pre>",
+                "correct": true
+            },
+            {
+                "answer": "Output: <pre>3\n3\n</pre>",
+                "correct": false
+            }
+        ]
+    }
+]

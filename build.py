@@ -164,6 +164,8 @@ for platform in platforms:
     if(platform["file_name"] == "nocode"):
         for i, toc_line in enumerate(new_toc):
             # make replacement files for ++noprogkeep and ++noprogrem
+            # ++noprogkeep - if no-code version, keep some version of this file to indicate what is being removed
+            # ++noprogremove - if no-code version, remove the file
             if toc_line.endswith("++noprogkeep") or (platform["keep_all_files"] and toc_line.endswith("++noprogremove")):
                 toc_line = toc_line.replace("++noprogkeep", "")
                 toc_line = toc_line.replace("++noprogremove", "")
