@@ -235,6 +235,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../ch03_bots/03_anatomy_of_a_bot/00_intro.html">3.3. Anatomy of a Bot</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../ch03_bots/03_anatomy_of_a_bot/01_control_flow_options.html">3.3.1. Organizing a Computer Program</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../ch03_bots/03_anatomy_of_a_bot/02_demo_statements_variables_sleep.html">3.3.2. Demo: Statements, Variables, and Sleep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch03_bots/03_anatomy_of_a_bot/04_code_structure_self_assessment.html">3.3.3. Code Structure Self-Assessment</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch03_bots/04_bots_and_responsibility.html">3.4. Bots and Responsibility</a></li>
@@ -721,25 +722,16 @@ document.write(`
 <p><em>Note: These are based on our over-simplified definitions of these ethics frameworks.</em></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="jgtxbTuJXOeb" data-shufflequestions="False"
+<div class="output text_html"><div id="HjUQtQuvMbHj" data-shufflequestions="False"
                data-shuffleanswers="True"
-               data-preserveresponses="false"
-               data-numquestions="1000000"
-               data-maxwidth="600"
-               style="border-radius: 10px; text-align: left"> <style>
-#jgtxbTuJXOeb {
-   --jq-multiple-choice-bg: #6f78ffff;
-   --jq-mc-button-bg: #fafafa;
-   --jq-mc-button-border: #e0e0e0e0;
-   --jq-mc-button-inset-shadow: #555555;
-   --jq-many-choice-bg: #f75c03ff;
-   --jq-numeric-bg: #392061ff;
-   --jq-numeric-input-bg: #c0c0c0;
-   --jq-numeric-input-label: #101010;
-   --jq-numeric-input-shadow: #999999;
-   --jq-incorrect-color: #c80202;
-   --jq-correct-color: #009113;
-   --jq-text-color: #fafafa;
+               data-numquestions="1000000"> <style>:root {
+    --medium-slate-blue: #6f78ffff;
+    --orange-pantone: #f75c03ff;
+    --russian-violet: #392061ff;
+    --maximum-yellow-red: #ffc857ff;
+    --viridian-green: #119da4ff;
+    --incorrect-red: #c80202;
+    --correct-green: #009113;
 }
 
 .Quiz {
@@ -752,7 +744,6 @@ document.write(`
     padding-top: 4px;
     line-height: 1.1;
     font-size: 16pt;
-    border-radius: inherit;
 }
 
 .QuizCode {
@@ -769,9 +760,8 @@ document.write(`
 .Answer {
     margin: 10px 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
     grid-gap: 10px;
-    border-radius: inherit;
 }
 
 .Feedback {
@@ -790,8 +780,8 @@ document.write(`
     margin: 10px;
     color: inherit;
     width: 140px;
-    background-color: var(--jq-numeric-input-bg);
-    color: var(--jq-text-color);
+    background-color: #c0c0c0;
+    color: #fff;
     padding: 5px;
     padding-left: 10px;
     font-family: inherit;
@@ -805,21 +795,18 @@ document.write(`
 
 .Input-text:focus {
     outline: none;
-    background-color: var(--jq-numeric-input-bg);
-    box-shadow: 0.6rem 0.8rem 1.4rem -0.5rem var(--jq-numeric-input-shadow);
+    background-color: #c0c0c0;
+    box-shadow: 0.6rem 0.8rem 1.4rem -0.5rem #999999;
 }
 
 .MCButton {
-    background: var(--jq-mc-button-bg);
-    border: 1px solid var(--jq-mc-button-border);
-    border-radius: inherit;
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 10px;
     padding: 10px;
     font-size: 16px;
     cursor: pointer;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .MCButton p {
@@ -828,23 +815,23 @@ document.write(`
 
 .MultipleChoiceQn {
     padding: 10px;
-    background: var(--jq-multiple-choice-bg);
-    color: var(--jq-text-color);
-    border-radius: inherit;
+    background: var(--medium-slate-blue);
+    color: #fafafa;
+    border-radius: 10px;
 }
 
 .ManyChoiceQn {
     padding: 10px;
-    background: var(--jq-many-choice-bg);
-    color: var(--jq-text-color);
-    border-radius: inherit;
+    background: var(--orange-pantone);
+    color: #fafafa;
+    border-radius: 10px;
 }
 
 .NumericQn {
     padding: 10px;
-    background: var(--jq-numeric-bg);
-    color: var(--jq-text-color);
-    border-radius: inherit;
+    background: var(--russian-violet);
+    color: #fafafa;
+    border-radius: 10px;
 }
 
 .NumericQn p {
@@ -855,95 +842,48 @@ document.write(`
     line-height: 34px;
     float: left;
     margin-right: 10px;
-    color: var(--jq-numeric-input-label);
+    color: #101010;
     font-size: 15pt;
 }
 
 .incorrect {
-    color: var(--jq-incorrect-color);
+    color: var(--incorrect-red);
 }
 
 .correct {
-    color: var(--jq-correct-color);
+    color: var(--correct-green);
 }
 
 .correctButton {
     /*
-    background: var(--jq-correct-color);
+    background: var(--correct-green);
    */
     animation: correct-anim 0.6s ease;
     animation-fill-mode: forwards;
-    color: var(--jq-text-color);
-    box-shadow: inset 0px 0px 5px var(--jq-mc-button-inset-shadow);
+    color: #fafafa;
+    box-shadow: inset 0px 0px 5px #555555;
     outline: none;
 }
 
 .incorrectButton {
     animation: incorrect-anim 0.8s ease;
     animation-fill-mode: forwards;
-    color: var(--jq-text-color);
-    box-shadow: inset 0px 0px 5px var(--jq-mc-button-inset-shadow);
+    color: #fafafa;
+    box-shadow: inset 0px 0px 5px #555555;
     outline: none;
 }
 
 @keyframes incorrect-anim {
     100% {
-        background-color: var(--jq-incorrect-color);
+        background-color: var(--incorrect-red);
     }
 }
 
 @keyframes correct-anim {
     100% {
-        background-color: var(--jq-correct-color);
+        background-color: var(--correct-green);
     }
-}
-</style></div><script type="application/javascript">var questionsjgtxbTuJXOeb=[
-    {
-        "question": "Which of these common ethical principles is commonly called the \"Golden Rule\" in English?",
-        "type": "multiple_choice",
-        "answers": [
-            {
-                "answer": "Never lie",
-                "correct": false
-            },
-            {
-                "answer": "Treat others the way you would like to be treated",
-                "correct": true
-            },
-            {
-                "answer": "Take care of yourself and don't care about anyone else",
-                "correct": false
-            },
-            {
-                "answer": "Life sucks and then you die",
-                "correct": false
-            }
-        ]
-    },    
-    
-    {
-        "question": "Which ethics framework emphasizes says that 'Actions are right roughly insofar as they are a matter of living harmoniously with others or honouring communal relationships'?",
-        "type": "multiple_choice",
-        "answers": [
-            {
-                "answer": "Ubuntu Ethics",
-                "correct": true
-            },
-            {
-                "answer": "Deontology",
-                "correct": false
-            },
-            {
-                "answer": "Existentialism",
-                "correct": false
-            },
-            {
-                "answer": "Nihilism",
-                "correct": false
-            }
-        ]
-    },   
-    {
+}</style><script type="text/Javascript">var questionsHjUQtQuvMbHj=[{
     "question": "Which ethics framework emphasizes that 'the ends justify the means'?",
     "type": "multiple_choice",
     "answers": [
@@ -960,74 +900,7 @@ document.write(`
             "correct": false
         }
     ]
-},
-{
-    "question": "Which ethics framework emphasizes 'unforced actions in harmony with the natural cycles of the universe'?",
-    "type": "multiple_choice",
-    "answers": [
-        {
-            "answer": "Ubuntu Ethics",
-            "correct": false
-        },
-        {
-            "answer": "Confucianism",
-            "correct": false
-        },
-        {
-            "answer": "Nihilism",
-            "correct": false
-        },
-        {
-            "answer": "Taoism",
-            "correct": true
-        }
-    ]
-},
-{
-    "question": "Which ethics framework says the most ethical thing to do is be selfish?",
-    "type": "multiple_choice",
-    "answers": [
-        {
-            "answer": "Natural Rights",
-            "correct": false
-        },
-        {
-            "answer": "Egoism",
-            "correct": true
-        },
-        {
-            "answer": "Ubuntu Ethics",
-            "correct": false
-        },
-        {
-            "answer": "Ethics of Care",
-            "correct": false
-        }
-    ]
-},
-{
-    "question": "Which ethics framework includes equality not only for people, but also air, water, plants, etc.",
-    "type": "multiple_choice",
-    "answers": [
-        {
-            "answer": "Virtue Ethics",
-            "correct": false
-        },
-        {
-            "answer": "Natural Rights",
-            "correct": false
-        },
-        {
-            "answer": "American Indigenous Ethics",
-            "correct": true
-        },
-        {
-            "answer": "Egoism",
-            "correct": false
-        }
-    ]
-}
-];
+}];
     // Make a random ID
 function makeid(length) {
     var result = [];
@@ -1050,23 +923,9 @@ function getRandomSubarray(arr, size) {
     }
     return shuffled.slice(0, size);
 }
-
-function printResponses(responsesContainer) {
-    var responses=JSON.parse(responsesContainer.dataset.responses);
-    var stringResponses='<B>IMPORTANT!</B>To preserve this answer sequence for submission, when you have finalized your answers: <ol> <li> Copy the text in this cell below "Answer String"</li> <li> Double click on the cell directly below the Answer String, labeled "Replace Me"</li> <li> Select the whole "Replace Me" text</li> <li> Paste in your answer string and press shift-Enter.</li><li>Save the notebook using the save icon or File->Save Notebook menu item</li></ul><br><br><br><b>Answer String:</b><br> ';
-    console.log(responses);
-    responses.forEach((response, index) => {
-        if (response) {
-            console.log(index + ': ' + response);
-            stringResponses+= index + ': ' + response +"<BR>";
-        }
-    });
-    responsesContainer.innerHTML=stringResponses;
-}
 function check_mc() {
     var id = this.id.split('-')[0];
-    //var response = this.id.split('-')[1];
-    //console.log(response);
+
     //console.log("In check_mc(), id="+id);
     //console.log(event.srcElement.id)           
     //console.log(event.srcElement.dataset.correct)   
@@ -1090,33 +949,8 @@ function check_mc() {
 
     // Split behavior based on multiple choice vs many choice:
     var fb = document.getElementById("fb" + id);
-
-
-
-
+    //console.log(id, ", got numcorrect=",fb.dataset.numcorrect);
     if (fb.dataset.numcorrect == 1) {
-        // What follows is for the saved responses stuff
-        var outerContainer = fb.parentElement.parentElement;
-        var responsesContainer = document.getElementById("responses" + outerContainer.id);
-        if (responsesContainer) {
-            //console.log(responsesContainer);
-            var response = label.firstChild.innerText;
-            if (label.querySelector(".QuizCode")){
-                response+= label.querySelector(".QuizCode").firstChild.innerText;
-            }
-            console.log(response);
-            //console.log(document.getElementById("quizWrap"+id));
-            var qnum = document.getElementById("quizWrap"+id).dataset.qnum;
-            console.log("Question " + qnum);
-            //console.log(id, ", got numcorrect=",fb.dataset.numcorrect);
-            var responses=JSON.parse(responsesContainer.dataset.responses);
-            console.log(responses);
-            responses[qnum]= response;
-            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
-            printResponses(responsesContainer);
-        }
-        // End code to preserve responses
-        
         for (var i = 0; i < answers.length; i++) {
             var child = answers[i];
             //console.log(child);
@@ -1152,7 +986,7 @@ function check_mc() {
     else {
         var reset = false;
         var feedback;
-         if (label.dataset.correct == "true") {
+        if (label.dataset.correct == "true") {
             if ("feedback" in label.dataset) {
                 feedback = jaxify(label.dataset.feedback);
             } else {
@@ -1202,37 +1036,6 @@ function check_mc() {
             fb.className = "Feedback";
             fb.classList.add("incorrect");
         }
-        // What follows is for the saved responses stuff
-        var outerContainer = fb.parentElement.parentElement;
-        var responsesContainer = document.getElementById("responses" + outerContainer.id);
-        if (responsesContainer) {
-            //console.log(responsesContainer);
-            var response = label.firstChild.innerText;
-            if (label.querySelector(".QuizCode")){
-                response+= label.querySelector(".QuizCode").firstChild.innerText;
-            }
-            console.log(response);
-            //console.log(document.getElementById("quizWrap"+id));
-            var qnum = document.getElementById("quizWrap"+id).dataset.qnum;
-            console.log("Question " + qnum);
-            //console.log(id, ", got numcorrect=",fb.dataset.numcorrect);
-            var responses=JSON.parse(responsesContainer.dataset.responses);
-            if (label.dataset.correct == "true") {
-                if (typeof(responses[qnum]) == "object"){
-                    if (!responses[qnum].includes(response))
-                        responses[qnum].push(response);
-                } else{
-                    responses[qnum]= [ response ];
-                }
-            } else {
-                responses[qnum]= response;
-            }
-            console.log(responses);
-            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
-            printResponses(responsesContainer);
-        }
-        // End save responses stuff
-
 
 
         var numcorrect = fb.dataset.numcorrect;
@@ -1348,14 +1151,14 @@ function check_numeric(ths, event) {
 
         var submission = ths.value;
         if (submission.indexOf('/') != -1) {
-            var sub_parts = submission.split('/');
+            sub_parts = submission.split('/');
             //console.log(sub_parts);
             submission = sub_parts[0] / sub_parts[1];
         }
         //console.log("Reader entered", submission);
 
         if ("precision" in ths.dataset) {
-            var precision = ths.dataset.precision;
+            precision = ths.dataset.precision;
             // console.log("1:", submission)
             submission = Math.round((1 * submission + Number.EPSILON) * 10 ** precision) / 10 ** precision;
             // console.log("Rounded to ", submission, " precision=", precision  );
@@ -1370,7 +1173,7 @@ function check_numeric(ths, event) {
         fb.style.display = "none";
         fb.textContent = "Incorrect -- try again.";
 
-        var answers = JSON.parse(ths.dataset.answers);
+        answers = JSON.parse(ths.dataset.answers);
         //console.log(answers);
 
         var defaultFB = "";
@@ -1383,11 +1186,7 @@ function check_numeric(ths, event) {
             // if (answer.type=="value"){
             if ('value' in answer) {
                 if (submission == answer.value) {
-                    if ("feedback" in answer) {
-                        fb.textContent = jaxify(answer.feedback);
-                    } else {
-                        fb.textContent = jaxify("Correct");
-                    }
+                    fb.textContent = jaxify(answer.feedback);
                     correct = answer.correct;
                     //console.log(answer.correct);
                     done = true;
@@ -1428,27 +1227,6 @@ function check_numeric(ths, event) {
             fb.className = "Feedback";
             fb.classList.add("incorrect");
         }
-
-        // What follows is for the saved responses stuff
-        var outerContainer = fb.parentElement.parentElement;
-        var responsesContainer = document.getElementById("responses" + outerContainer.id);
-        if (responsesContainer) {
-            console.log(submission);
-            var qnum = document.getElementById("quizWrap"+id).dataset.qnum;
-            //console.log("Question " + qnum);
-            //console.log(id, ", got numcorrect=",fb.dataset.numcorrect);
-            var responses=JSON.parse(responsesContainer.dataset.responses);
-            console.log(responses);
-            if (submission == ths.value){
-                responses[qnum]= submission;
-            } else {
-                responses[qnum]= ths.value + "(" + submission +")";
-            }
-            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
-            printResponses(responsesContainer);
-        }
-        // End code to preserve responses
-
         if (typeof MathJax != 'undefined') {
             var version = MathJax.version;
             console.log('MathJax version', version);
@@ -1471,7 +1249,7 @@ function isValid(el, charC) {
         if (el.value.indexOf('.') === -1) {
             return true;
         } else if (el.value.indexOf('/') != -1) {
-            var parts = el.value.split('/');
+            parts = el.value.split('/');
             if (parts[1].indexOf('.') === -1) {
                 return true;
             }
@@ -1490,7 +1268,7 @@ function isValid(el, charC) {
             return false;
         }
     } else if (charC == 45) {
-        var edex = el.value.indexOf('e');
+        edex = el.value.indexOf('e');
         if (edex == -1) {
             edex = el.value.indexOf('E');
         }
@@ -1586,10 +1364,10 @@ function make_numeric(qa, outerqDiv, qDiv, aDiv, id) {
 function jaxify(string) {
     var mystring = string;
 
-    var count = 0;
+    count = 0;
     var loc = mystring.search(/([^\\]|^)(\$)/);
 
-    var count2 = 0;
+    count2 = 0;
     var loc2 = mystring.search(/([^\\]|^)(\$\$)/);
 
     //console.log(loc);
@@ -1623,12 +1401,10 @@ function jaxify(string) {
 
 
 function show_questions(json, mydiv) {
-    console.log('show_questions');
     //var mydiv=document.getElementById(myid);
     var shuffle_questions = mydiv.dataset.shufflequestions;
     var num_questions = mydiv.dataset.numquestions;
     var shuffle_answers = mydiv.dataset.shuffleanswers;
-    var max_width = mydiv.dataset.maxwidth;
 
     if (num_questions > json.length) {
         num_questions = json.length;
@@ -1654,27 +1430,22 @@ function show_questions(json, mydiv) {
 
         // Create Div to contain question and answers
         var iDiv = document.createElement('div');
-        //iDiv.id = 'quizWrap' + id + index;
-        iDiv.id = 'quizWrap' + id;
+        iDiv.id = 'quizWrap' + id + index;
         iDiv.className = 'Quiz';
-        iDiv.setAttribute('data-qnum', index);
-        iDiv.style.maxWidth  =max_width+"px";
         mydiv.appendChild(iDiv);
         // iDiv.innerHTML=qa.question;
-        
+
         var outerqDiv = document.createElement('div');
         outerqDiv.id = "OuterquizQn" + id + index;
+        //qDiv.textContent=qa.question;
+        iDiv.append(outerqDiv);
+
         // Create div to contain question part
         var qDiv = document.createElement('div');
         qDiv.id = "quizQn" + id + index;
-        
-        if (qa.question) {
-            iDiv.append(outerqDiv);
-
-            //qDiv.textContent=qa.question;
-            qDiv.innerHTML = jaxify(qa.question);
-            outerqDiv.append(qDiv);
-        }
+        //qDiv.textContent=qa.question;
+        qDiv.innerHTML = jaxify(qa.question);
+        outerqDiv.append(qDiv);
 
         // Create div for code inside question
         var codeDiv;
@@ -1701,12 +1472,10 @@ function show_questions(json, mydiv) {
         //console.log(qa.type);
 
         var num_correct;
-        if ((qa.type == "multiple_choice") || (qa.type == "many_choice") ) {
+        if (qa.type == "multiple_choice") {
             num_correct = make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id);
-            if ("answer_cols" in qa) {
-                //aDiv.style.gridTemplateColumns = 'auto '.repeat(qa.answer_cols);
-                aDiv.style.gridTemplateColumns = 'repeat(' + qa.answer_cols + ', 1fr)';
-            }
+        } else if (qa.type == "many_choice") {
+            num_correct = make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id);
         } else if (qa.type == "numeric") {
             //console.log("numeric");
             make_numeric(qa, outerqDiv, qDiv, aDiv, id);
@@ -1724,24 +1493,7 @@ function show_questions(json, mydiv) {
 
 
     });
-    var preserveResponses = mydiv.dataset.preserveresponses;
-    console.log(preserveResponses);
-    console.log(preserveResponses == "true");
-    if (preserveResponses == "true") {
-        console.log(preserveResponses);
-        // Create Div to contain record of answers
-        var iDiv = document.createElement('div');
-        iDiv.id = 'responses' + mydiv.id;
-        iDiv.className = 'JCResponses';
-        // Create a place to store responses as an empty array
-        iDiv.setAttribute('data-responses', '[]');
-
-        // Dummy Text
-        iDiv.innerHTML="<b>Select your answers and then follow the directions that will appear here.</b>"
-        //iDiv.className = 'Quiz';
-        mydiv.appendChild(iDiv);
-    }
-//console.log("At end of show_questions");
+    //console.log("At end of show_questions");
     if (typeof MathJax != 'undefined') {
         console.log("MathJax version", MathJax.version);
         var version = MathJax.version;
@@ -1768,30 +1520,12 @@ if (typeof version == 'undefined') {
     }
     return false;
 }
-/* This is to handle asynchrony issues in loading Jupyter notebooks
-           where the quiz has been previously run. The Javascript was generally
-           being run before the div was added to the DOM. I tried to do this
-           more elegantly using Mutation Observer, but I didn't get it to work.
 
-           Someone more knowledgeable could make this better ;-) */
-
-        function try_show() {
-          if(document.getElementById("jgtxbTuJXOeb")) {
-            show_questions(questionsjgtxbTuJXOeb,  jgtxbTuJXOeb); 
-          } else {
-             setTimeout(try_show, 200);
-          }
-        };
-    
         {
-        // console.log(element);
-
-        //console.log("jgtxbTuJXOeb");
-        // console.log(document.getElementById("jgtxbTuJXOeb"));
-
-        try_show();
+        show_questions(questionsHjUQtQuvMbHj,  HjUQtQuvMbHj);
         }
-        </script></div>
+        </script>
+        </div></div>
 </div>
 </section>
 
