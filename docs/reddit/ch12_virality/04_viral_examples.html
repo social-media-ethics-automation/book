@@ -24,46 +24,51 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/myfile.css?v=ed2eb8a4" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch12_virality/04_viral_examples';</script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -72,6 +77,7 @@
     <link rel="prev" title="12.3. Evolution in social media" href="03_social_media_evolution.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -87,19 +93,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -107,7 +102,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -115,8 +109,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -132,7 +126,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -162,21 +157,17 @@
     
     
     <img src="../_static/logo.png" class="logo__image only-light" alt="Social Media, Ethics, and Automation - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Social Media, Ethics, and Automation - Home"/>`);</script>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Social Media, Ethics, and Automation - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -553,9 +544,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -685,7 +681,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -699,25 +695,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -768,7 +756,8 @@ document.write(`
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">This thread is evidence of the way TikTok’s duet feature can result in the most hilarious and creative collaborations.<br><br>Pretty much a guy wrote a musical number about a grocery store and everyone is adding onto it and I am deceased. <br><br>Part 1 <a href="https://t.co/4z5Mqbscgp">pic.twitter.com/4z5Mqbscgp</a></p>&mdash; Emma Lynn (@emmaspacelynn) <a href="https://twitter.com/emmaspacelynn/status/1312952644193996800?ref_src=twsrc%5Etfw">October 5, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>As another example, this tweet is instructions for how to interact with it (add a picture), and people keep copying the instructions with their replies.</p>
 <figure class="align-default" id="reply-tweet-viral-fig">
-<a class="reference internal image-reference" href="../_images/reply_tweet_viral.png"><img alt="A quote tweet of a quote tweet of a quote tweet, etc. Each tweet has the text &quot;Without downloading any new pics, what's your energy going into 2022?&quot; The outer quote tweet by &#64;historyadjunct has a photo of a woman laying on a couch talking next to a cat with a notebook looking like a therapist. The photo includes the text: &quot;Wow that sounds stressful. Have you ever tried pushing a bunch of shit off the table?&quot;. The next quote tweet has an image of silverware messily jumbled in a silverware drawer. We can't see the next level tweet." src="../_images/reply_tweet_viral.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/reply_tweet_viral.png"><img alt="A quote tweet of a quote tweet of a quote tweet, etc. Each tweet has the text &quot;Without downloading any new pics, what's your energy going into 2022?&quot; The outer quote tweet by &#64;historyadjunct has a photo of a woman laying on a couch talking next to a cat with a notebook looking like a therapist. The photo includes the text: &quot;Wow that sounds stressful. Have you ever tried pushing a bunch of shit off the table?&quot;. The next quote tweet has an image of silverware messily jumbled in a silverware drawer. We can't see the next level tweet." src="../_images/reply_tweet_viral.png" style="width: 500px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 12.6 </span><span class="caption-text">A <a class="reference external" href="https://twitter.com/historyadjunct/status/1477282737430147073?s=20">quote-tweet thread</a> <span id="id3">[<a class="reference internal" href="10_bibliography.html#id21" title="Natalie [&#64;historyadjunct]. Without downloading any new pics, what’s your energy going into 2022? January 2022. URL: https://twitter.com/historyadjunct/status/1477282737430147073 (visited on 2023-12-09).">l20</a>]</span> with instructions to interact with it.</span><a class="headerlink" href="#reply-tweet-viral-fig" title="Link to this image">#</a></p>
 </figcaption>
@@ -785,21 +774,24 @@ document.write(`
 <h2><span class="section-number">12.4.3. </span>Viral for being “embarrassing”<a class="headerlink" href="#viral-for-being-embarrassing" title="Link to this heading">#</a></h2>
 <p>Similar to the previous example, social media content can go viral for being perceived as “embarrassing.” For example, in 2002, a 15-year-old kid made a video of himself swinging a pretend lightsaber, that went viral and was mocked:</p>
 <figure class="align-default" id="star-wars-kid-fig">
-<a class="reference internal image-reference" href="../_images/star_wars_kid.png"><img alt="Screenshot from a video of a kid swinging a long white stick" src="../_images/star_wars_kid.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="../_images/star_wars_kid.png"><img alt="Screenshot from a video of a kid swinging a long white stick" src="../_images/star_wars_kid.png" style="width: 300px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 12.7 </span><span class="caption-text">“On November 2nd, 2002, Raza recorded an 8mm movie of himself pretend-fighting with a club in his high school studio, but forgot to take the cassette tape home with him. Unbeknownst to Raza, the footage was eventually discovered by three of his classmates and posted online via Kazaa, a popular P2P file-sharing network, on April 14th, 2003.” - From the Know Your Meme entry on <a class="reference external" href="https://knowyourmeme.com/memes/star-wars-kid">Star Wars Kid</a> <span id="id4">[<a class="reference internal" href="10_bibliography.html#id22" title="Star Wars Kid. December 2008. URL: https://knowyourmeme.com/memes/star-wars-kid (visited on 2023-12-08).">l21</a>]</span></span><a class="headerlink" href="#star-wars-kid-fig" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Similarly, in 2011, 13-year-old Rebecca Black made a music video called “Friday,” which spread virally for being cheesy and bad.</p>
 <figure class="align-default" id="rebecca-black-fig">
-<a class="reference internal image-reference" href="../_images/rebecca_black.png"><img alt="Screenshot from a video of a kid swinging a long white stick" src="../_images/rebecca_black.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="../_images/rebecca_black.png"><img alt="Screenshot from a video of a kid swinging a long white stick" src="../_images/rebecca_black.png" style="width: 300px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 12.8 </span><span class="caption-text">“As of March 30th, 2011, Rebecca Black’s “Friday” YouTube video officially surpassed Justin Bieber’s “Baby” in total number of user downvotes with over 1.1 million downvotes.” - From the Know Your Meme entry on <a class="reference external" href="https://knowyourmeme.com/memes/rebecca-black-friday">Rebecca Black - Friday</a> <span id="id5">[<a class="reference internal" href="10_bibliography.html#id23" title="Rebecca Black - Friday. March 2011. URL: https://knowyourmeme.com/memes/rebecca-black-friday (visited on 2023-12-08).">l22</a>]</span></span><a class="headerlink" href="#rebecca-black-fig" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>For another example, in 2021, John Roderick (who became known as “bean dad”) posted on Twitter a story about how his 9-year-old daughter was hungry and had asked him to open a can of beans. He told her to figure out how to use the can-opener herself and refused to help her:</p>
 <figure class="align-default" id="bean-dad-fig">
-<a class="reference internal image-reference" href="../_images/bean_dad.png"><img alt="Tweet by &#64;johnroderick: I said, &quot;The tool is made to be pleasing but it doesn't have any superfluous qualities. Everything that moves does so for a reason.&quot; She said, &quot;I hate you.&quot; I'm sure she believes that she does. I said &quot;You understand everything except how the tool addresses the can.&quot; She sighed" src="../_images/bean_dad.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../_images/bean_dad.png"><img alt="Tweet by &#64;johnroderick: I said, &quot;The tool is made to be pleasing but it doesn't have any superfluous qualities. Everything that moves does so for a reason.&quot; She said, &quot;I hate you.&quot; I'm sure she believes that she does. I said &quot;You understand everything except how the tool addresses the can.&quot; She sighed" src="../_images/bean_dad.png" style="width: 600px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 12.9 </span><span class="caption-text">Part of John Roderick telling his story of refusing to help his daughter use a can opener.</span><a class="headerlink" href="#bean-dad-fig" title="Link to this image">#</a></p>
 </figcaption>
@@ -807,7 +799,8 @@ document.write(`
 <p>Roderick said that six hours later his daughter finally figured out how to open the can. This story went viral as many shared their criticisms. As <a class="reference external" href="https://knowyourmeme.com/memes/events/bean-dad">Know Your Meme puts it</a> <span id="id6">[<a class="reference internal" href="10_bibliography.html#id24" title="Bean Dad. January 2021. URL: https://knowyourmeme.com/memes/events/bean-dad (visited on 2023-12-08).">l23</a>]</span>, “While Roderick tweeted the story as though it were a proud parenting moment, many criticized the story for teaching poor lessons to the daughter with some going so far as to call it abuse and others made jokes about the story.”</p>
 <p>In response to this story going viral, a Twitter user related this to larger social trends on Twitter, which quickly became common wisdom on the platform:</p>
 <figure class="align-default" id="main-character-fig">
-<a class="reference internal image-reference" href="../_images/main_character.png"><img alt="Tweet by &#64;maplecocaine: Each day on twitter there is one main character. The goal is to never be it" src="../_images/main_character.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../_images/main_character.png"><img alt="Tweet by &#64;maplecocaine: Each day on twitter there is one main character. The goal is to never be it" src="../_images/main_character.png" style="width: 400px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 12.10 </span><span class="caption-text">The origin of the concept of the Twitter <a class="reference external" href="https://knowyourmeme.com/memes/twitters-main-character">main character of the day</a> <span id="id7">[<a class="reference internal" href="10_bibliography.html#id25" title="Twitter's Main Character. September 2020. URL: https://knowyourmeme.com/memes/twitters-main-character (visited on 2023-12-08).">l24</a>]</span> who the whole Twitter community piles on to criticize.</span><a class="headerlink" href="#main-character-fig" title="Link to this image">#</a></p>
 </figcaption>
@@ -832,7 +825,8 @@ document.write(`
 <p>Other times, the subject has no limited or no awareness of social media because they are a child (see the article: <a class="reference external" href="https://www.nbcnews.com/pop-culture/influencers-parents-posting-kids-online-privacy-security-concerns-rcna55318">Their children went viral. Now they wish they could wipe them from the internet.</a> <span id="id14">[<a class="reference internal" href="10_bibliography.html#id32" title="Morgan Sung. Their children went viral. Now they wish they could wipe them from the internet. NBC News, November 2022. URL: https://www.nbcnews.com/pop-culture/influencers-parents-posting-kids-online-privacy-security-concerns-rcna55318 (visited on 2023-12-08).">l31</a>]</span>)</p>
 <p>Content or recordings of others can also be shared in a way that may embarrass or harm the other person, such as is mocked in this parody headline from The Onion:</p>
 <figure class="align-default" id="onion-tiktok-ruin-life-fig">
-<a class="reference internal image-reference" href="../_images/onion_tiktok_ruin_life.png"><img alt="Onion headline for local news: '‘Do You Mind If I Put You In My TikTok?’ Asks Younger Cousin About To Ruin Your Life. Photo under headline is a white teenager holding up an iPhone." src="../_images/onion_tiktok_ruin_life.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../_images/onion_tiktok_ruin_life.png"><img alt="Onion headline for local news: '‘Do You Mind If I Put You In My TikTok?’ Asks Younger Cousin About To Ruin Your Life. Photo under headline is a white teenager holding up an iPhone." src="../_images/onion_tiktok_ruin_life.png" style="width: 400px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 12.11 </span><span class="caption-text"><a class="reference external" href="https://www.theonion.com/do-you-mind-if-i-put-you-in-my-tiktok-asks-younger-c-1840052744">Parody headline from The Onion</a> <span id="id15">[<a class="reference internal" href="10_bibliography.html#id33" title="The Onion. ‘Do You Mind If I Put You In My TikTok?’ Asks Younger Cousin About To Ruin Your Life. The Onion, November 2019. URL: https://www.theonion.com/do-you-mind-if-i-put-you-in-my-tiktok-asks-younger-c-1840052744 (visited on 2023-12-08).">l32</a>]</span>.</span><a class="headerlink" href="#onion-tiktok-ruin-life-fig" title="Link to this image">#</a></p>
 </figcaption>
@@ -908,14 +902,16 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-on-the-original-intention">12.4.1. Building on the original intention</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#antagonistic-to-original-intention">12.4.2. Antagonistic to original intention</a></li>
@@ -978,8 +974,8 @@ By Kyle Thayer and Susan Notess
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

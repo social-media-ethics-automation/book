@@ -24,46 +24,51 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/myfile.css?v=ed2eb8a4" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch18_public_shaming/04_repair_and_reintegration';</script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -72,6 +77,7 @@
     <link rel="prev" title="18.3. Perspectives on the Ethics of Public Shaming" href="03_perspectives_on_public_shaming.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -87,19 +93,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -107,7 +102,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -115,8 +109,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -132,7 +126,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -162,21 +157,17 @@
     
     
     <img src="../_static/logo.png" class="logo__image only-light" alt="Social Media, Ethics, and Automation - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Social Media, Ethics, and Automation - Home"/>`);</script>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Social Media, Ethics, and Automation - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -553,9 +544,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -685,7 +681,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -699,25 +695,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -806,20 +794,23 @@ document.write(`
 <h2><span class="section-number">18.4.3. </span>Repair Example<a class="headerlink" href="#repair-example" title="Link to this heading">#</a></h2>
 <p>On February 6, 2022, Jeremy Schneider became the Twitter “main character of the day” for posting the following Tweet, which was widely condemned as being mean and not understanding other people’s experiences:</p>
 <figure class="align-default" id="book-tweet-fig">
-<a class="reference internal image-reference" href="../_images/book_tweet.png"><img alt="Jeremy Schneider (&#64;J_Schneider) tweeted: Please know, if you’re someone who brings a book to the bar… nobody likes you" src="../_images/book_tweet.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../_images/book_tweet.png"><img alt="Jeremy Schneider (&#64;J_Schneider) tweeted: Please know, if you’re someone who brings a book to the bar… nobody likes you" src="../_images/book_tweet.png" style="width: 400px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 18.1 </span><span class="caption-text"><a class="reference external" href="https://twitter.com/J_Schneider/status/1490416476569968643">Jeremy Schneider’s Tweet</a> <span id="id10">[<a class="reference internal" href="07_bibliography.html#id22" title="Jeremy Schneider [&#64;J_Schneider]. Please know, if you’re someone who brings a book to the bar… nobody likes you. February 2022. URL: https://twitter.com/J_Schneider/status/1490416476569968643 (visited on 2023-12-10).">r20</a>]</span></span><a class="headerlink" href="#book-tweet-fig" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In what was an unusual turn of events for a Twitter “main character of the day,” Jeremy Schneider later made an apology that was mostly accepted by the Twitter users who had criticized his Tweet:</p>
 <figure class="align-default" id="book-tweet-apology-1-fig">
-<a class="reference internal image-reference" href="../_images/book_tweet_apology_1.png"><img alt="After three days of reflecting on this tweet and an evening spent reading at a bar, I have some thoughts. First off, this tweet was mean. Uncharacteristically mean. “Nobody likes you?” I don’t talk like that in real life, why would I tweet that? And saying it to people minding their own business reading a book? Yeah, that’s mean. I’m sorry. I'm glad I tried reading in the bar, I still don’t quite get it. I struggle to read if I don’t have quiet. That doesn’t mean other people don’t like it. I always say “don’t yuck somebody else’s yum,” why should I yuck somebody else’s bar behavior when it isn’t affecting me? I once had a friend tell me he brought a book to the bar to pick up girls. It was the most insufferable thing I have ever heard. I started seeing men reading at the bar through that lens. I thought they were being was conspicuous and pretentious. I was being presumptuous. Many pointed out that some people bring books to bars to ward off unwanted conversation or advances. This is not something I had considered. I’m especially ashamed I overlooked this. " src="../_images/book_tweet_apology_1.png" style="width: 450px;" /></a>
+<a class="reference internal image-reference" href="../_images/book_tweet_apology_1.png"><img alt="After three days of reflecting on this tweet and an evening spent reading at a bar, I have some thoughts. First off, this tweet was mean. Uncharacteristically mean. “Nobody likes you?” I don’t talk like that in real life, why would I tweet that? And saying it to people minding their own business reading a book? Yeah, that’s mean. I’m sorry. I'm glad I tried reading in the bar, I still don’t quite get it. I struggle to read if I don’t have quiet. That doesn’t mean other people don’t like it. I always say “don’t yuck somebody else’s yum,” why should I yuck somebody else’s bar behavior when it isn’t affecting me? I once had a friend tell me he brought a book to the bar to pick up girls. It was the most insufferable thing I have ever heard. I started seeing men reading at the bar through that lens. I thought they were being was conspicuous and pretentious. I was being presumptuous. Many pointed out that some people bring books to bars to ward off unwanted conversation or advances. This is not something I had considered. I’m especially ashamed I overlooked this. " src="../_images/book_tweet_apology_1.png" style="width: 450px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 18.2 </span><span class="caption-text">Part 1 of Jeremy Schneider’s apology</span><a class="headerlink" href="#book-tweet-apology-1-fig" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="book-tweet-apology-2-fig">
-<a class="reference internal image-reference" href="../_images/book_tweet_apology_2.png"><img alt="I love reading! This tweet somehow became construed as an attack on reading. If it weren’t for reading, I wouldn’t have a job. And I love books! I’d like to write one one day! I just prefer to read them in quiet places. This 77-character tweet made me The Main Character on Twitter, and it sucked. I was Brandon Knight, Twitter was DeAndre Jordan. My mean tweet was met with some funny tweets and lots of mean tweets. That sucked. I asked for it, but it sucked. Tweeting from the hip has served me well. People know me for my irreverent observational non sequiturs,  food pics, Marvel takes and love of the film Armageddon. I was trying to be funny. I clearly missed the mark. I’ll be thinking a little harder before I hit send from now on. So please know, if you’re someone who brings a book to the bar... people like you fine. In fact, you have numbers. And they’re ready to back you up on the internet. And if someone ever writes a book about the worst Twitter draggings of all time, I’ll be happy to sign your copy, right on the chapter about me.  I promise I won’t tweet about you if I see you reading it at a bar." src="../_images/book_tweet_apology_2.png" style="width: 450px;" /></a>
+<a class="reference internal image-reference" href="../_images/book_tweet_apology_2.png"><img alt="I love reading! This tweet somehow became construed as an attack on reading. If it weren’t for reading, I wouldn’t have a job. And I love books! I’d like to write one one day! I just prefer to read them in quiet places. This 77-character tweet made me The Main Character on Twitter, and it sucked. I was Brandon Knight, Twitter was DeAndre Jordan. My mean tweet was met with some funny tweets and lots of mean tweets. That sucked. I asked for it, but it sucked. Tweeting from the hip has served me well. People know me for my irreverent observational non sequiturs,  food pics, Marvel takes and love of the film Armageddon. I was trying to be funny. I clearly missed the mark. I’ll be thinking a little harder before I hit send from now on. So please know, if you’re someone who brings a book to the bar... people like you fine. In fact, you have numbers. And they’re ready to back you up on the internet. And if someone ever writes a book about the worst Twitter draggings of all time, I’ll be happy to sign your copy, right on the chapter about me.  I promise I won’t tweet about you if I see you reading it at a bar." src="../_images/book_tweet_apology_2.png" style="width: 450px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 18.3 </span><span class="caption-text">Part 2 of Jeremy Schneider’s apology</span><a class="headerlink" href="#book-tweet-apology-2-fig" title="Link to this image">#</a></p>
 </figcaption>
@@ -900,14 +891,16 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limits-of-reconciliation">18.4.1. Limits of Reconciliation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nuremberg-trials">Nuremberg Trials</a></li>
@@ -973,8 +966,8 @@ By Kyle Thayer and Susan Notess
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

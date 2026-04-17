@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="3.3.5. Python Basics Self-Assessment" />
+<meta property="og:title" content="Python Basics Self-Assessment" />
 <meta property="og:type" content="book" />
 <meta property="og:url" content="ch03_bots/03_anatomy_of_a_bot/05_python_basics_self_assessment.html" />
 <meta property="og:site_name" content="Social Media, Ethics, and Automation" />
@@ -16,7 +16,7 @@
 <meta property="og:image:alt" content="Social Media, Ethics, and Automation" />
 <meta name="description" content="In order to help you to review your first set of Python coding features, see if you can answer these questions:" />
 
-    <title>3.3.5. Python Basics Self-Assessment &#8212; Social Media, Ethics, and Automation</title>
+    <title>Python Basics Self-Assessment &#8212; Social Media, Ethics, and Automation</title>
   
   
   
@@ -24,54 +24,58 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/myfile.css?v=ed2eb8a4" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch03_bots/03_anatomy_of_a_bot/05_python_basics_self_assessment';</script>
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3.4. Bots and Responsibility" href="../04_bots_and_responsibility.html" />
-    <link rel="prev" title="3.3.4. Code Structure Self-Assessment" href="04_code_structure_self_assessment.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -87,19 +91,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -107,7 +100,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -115,8 +107,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -132,7 +124,10 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -162,21 +157,17 @@
     
     
     <img src="../../_static/logo.png" class="logo__image only-light" alt="Social Media, Ethics, and Automation - Home"/>
-    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Social Media, Ethics, and Automation - Home"/>`);</script>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Social Media, Ethics, and Automation - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -192,7 +183,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../prefaces/perspectives_and_biases.html">Perspectives and Biases</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Book</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../ch01_intro/00_intro.html">1. Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../ch01_intro/01_sacco_tweet.html">1.1. The case of Justine Sacco’s racist joke tweet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch01_intro/02_kumail.html">1.2. Kumail Nanjiani’s Reflections on Ethics in Tech</a></li>
@@ -222,25 +213,20 @@
 <li class="toctree-l3"><a class="reference internal" href="../../ch02_definitions/03_automation/04_first_programmers.html">2.3.4. First Programmers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../ch02_definitions/03_automation/05_compilers.html">2.3.5. Compilers and Programimng Languages</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../ch02_definitions/03_automation/06_a_social_media_bot.html">2.3.6. A program that makes one post</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch02_definitions/03_automation/07_details_of_bot.html">2.3.7. Understanding the Bluesky Bot Code</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch02_definitions/03_automation/08_demo.html">2.3.8. Demo: Try Running the Bluesky Bot!</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch02_definitions/03_automation/09_reflecting_on_programming.html">2.3.9. Reflections on the Bot</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch02_definitions/03_automation/10_automation_in_social_media.html">2.3.10. Automation in Social Media</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch02_definitions/03_automation/10_automation_in_social_media.html">2.3.7. Automation in Social Media</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch02_definitions/04_tying_them_together.html">2.4. Tying It Together</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch02_definitions/05_bibliography.html">2.5. Bibliography</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../00_bots.html">3. Bots</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../00_bots.html">3. Bots</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../01_bot_definition.html">3.1. Definition of a bot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../02_bot_examples.html">3.2. Examples of Bots (or apps)</a></li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="00_intro.html">3.3. Anatomy of a Bot</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="00_intro.html">3.3. Anatomy of a Bot</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="01_control_flow_options.html">3.3.1. Organizing a Computer Program</a></li>
 <li class="toctree-l3"><a class="reference internal" href="02_demo_statements_variables_sleep.html">3.3.2. Demo: Statements, Variables, and Sleep</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03_practice_statements_variables_sleep.html">3.3.3. Practice: Statements and Variables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_code_structure_self_assessment.html">3.3.4. Code Structure Self-Assessment</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">3.3.5. Python Basics Self-Assessment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_code_structure_self_assessment.html">3.3.3. Code Structure Self-Assessment</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../04_bots_and_responsibility.html">3.4. Bots and Responsibility</a></li>
@@ -261,12 +247,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ch04_data/02_data_simplification.html">4.2. All data is a simplification of reality</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch04_data/03_who_data_fits.html">4.3. Who does data fit?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch04_data/04_data_informing_ethics.html">4.4. How Data Informs Ethics</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch04_data/05_data_python_platform/00_intro.html">4.5. Data in Python and Social Media</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../ch04_data/05_data_python_platform/01_demo_data.html">4.5.1. Demo: Python Basic Data Types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch04_data/05_data_python_platform/02_practice_data.html">4.5.2. Practice: Python Basic Data Types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch04_data/05_data_python_platform/03_demo_data_from_platform.html">4.5.3. Demo: Data from a Bluesky Post\n</a></li>
-</ul>
-</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch04_data/05_data_python_platform/00_intro.html">4.5. Data in Python and Social Media</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch04_data/06_data_design_activity.html">4.6. Design Activity: Data and Social media</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch04_data/07_reflection_in_data_design.html">4.7. Reflection: Ethics of Choosing Data Representation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch04_data/08_bibliography.html">4.8. Bibliography</a></li>
@@ -276,12 +257,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ch05_history/01_pre_internet.html">5.1. Pre-Internet Social Media</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch05_history/02_web_1.html">5.2. Web 1.0 Social Media</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch05_history/03_web_2.html">5.3. Web 2.0 Social Media</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch05_history/04_list_data_python/00_intro.html">5.4. Looping with Lists and Dictionaries in Social Media</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../ch05_history/04_list_data_python/01_demo_lists.html">5.4.1. Demo: Lists and Loops</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch05_history/04_list_data_python/02_demo_dictionaries.html">5.4.2. Demo: Dictionaries</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch05_history/04_list_data_python/03_practice_lists_dictionaries.html">5.4.3. Practice: Looping through lists and dictionaries</a></li>
-</ul>
-</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch05_history/04_list_data_python/00_intro.html">5.4. Looping with Lists and Dictionaries in Social Media</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch05_history/05_antisocial_media.html">5.5. Antisocial Media</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch05_history/06_social_media_design.html">5.6. Social Media Design</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch05_history/07_reflections.html">5.7. Design Analysis: Use Cases and Social Media Designs</a></li>
@@ -309,12 +285,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ch07_trolling/02_origins_trolling.html">7.2. Origins of trolling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch07_trolling/03_trolling_examples.html">7.3. Activity: Evaluating Trolling Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch07_trolling/04_responding_to_trolls.html">7.4. Responding to trolls?</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch07_trolling/05_trolling_reply_bot/00_introduction.html">7.5. Trolling a Reply Bot</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../ch07_trolling/05_trolling_reply_bot/01_demo_strings_conditionals.html">7.5.1. Demo: Conditionals and String Manipulation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch07_trolling/05_trolling_reply_bot/02_practice_strings_conditionals.html">7.5.2. Practice: Conditionals and String Manipulation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch07_trolling/05_trolling_reply_bot/03_demo_reply_bot.html">7.5.3. Demo: Trolling a Reply Bot</a></li>
-</ul>
-</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch07_trolling/05_trolling_reply_bot/00_introduction.html">7.5. Trolling a Reply Bot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch07_trolling/06_ethics_and_trolling.html">7.6. Ethics and Trolling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch07_trolling/07_bibliography.html">7.7. Bibliography</a></li>
 </ul>
@@ -325,12 +296,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ch08_data_mining/03_data_mining.html">8.3. Mining Social Media Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch08_data_mining/04_data_uses.html">8.4. How is this data used</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch08_data_mining/05_what_platforms_think_of_you.html">8.5. Activity: What platforms think of you</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch08_data_mining/06_sentiment_analysis/00_intro.html">8.6. Sentiment Analysis on Social Media</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../ch08_data_mining/06_sentiment_analysis/01_demo_sentiment_and_loop_vars.html">8.6.1. Demo: Sentiment Analysis and Loop Variables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch08_data_mining/06_sentiment_analysis/02_practice_sentiment_and_loop_vars.html">8.6.2. Practice: Sentiment Analysis and Loop Variables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch08_data_mining/06_sentiment_analysis/03_demo_sentiment.html">8.6.3. Demo: Sentiment Analysis on Bluesky</a></li>
-</ul>
-</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch08_data_mining/06_sentiment_analysis/00_intro.html">8.6. Sentiment Analysis on Social Media</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch08_data_mining/07_data_poisoning.html">8.7. Data Poisoning</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch08_data_mining/08_reflection_questions.html">8.8. Reflections on Data Mining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch08_data_mining/09_bibliography.html">8.9. Bibliography</a></li>
@@ -340,12 +306,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ch09_privacy/01_privacy_concerns.html">9.1. Privacy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch09_privacy/02_security.html">9.2. Security</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch09_privacy/03_privacy_violations.html">9.3. Additional Privacy Violations</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/00_intro.html">9.4. Tracking Use</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/01_demo_functions.html">9.4.1. Demo: Writing Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/02_practice_functions.html">9.4.2. Practice: Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/03_demo_track_use.html">9.4.3. Demo: Track Use of Sentiment Analysis Code</a></li>
-</ul>
-</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch09_privacy/04_tracking_use/00_intro.html">9.4. Tracking Use</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch09_privacy/05_activity_gdpr.html">9.5. Design Analysis: GDPR</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch09_privacy/06_reflections.html">9.6. Reflection Questions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch09_privacy/07_bibliography.html">9.7. Bibliography</a></li>
@@ -369,12 +330,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ch11_recommendations/02_ethical_analysis_recommendations.html">11.2. Ethical Analysis of Recommendation Algorithms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch11_recommendations/03_individual_concerns.html">11.3. Individual Concerns with Recommendation Algorithms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch11_recommendations/04_societal_concerns.html">11.4. Societal Concerns with Recommendation Algorithms</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch11_recommendations/05_recommend_bot/00_intro.html">11.5. Recommendation Bot</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../ch11_recommendations/05_recommend_bot/01_demo_dictionary_counters.html">11.5.1. Demo: Dictionary Counters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch11_recommendations/05_recommend_bot/02_practice_dictionary_counters.html">11.5.2. Practice: Dictionary Counters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch11_recommendations/05_recommend_bot/03_demo_recommend.html">11.5.3. Demo: Recommend Users to Follow</a></li>
-</ul>
-</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch11_recommendations/05_recommend_bot/00_intro.html">11.5. Recommendation Bot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch11_recommendations/06_design_recommend.html">11.6. Design Activity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch11_recommendations/07_bibliography.html">11.7. Bibliography</a></li>
 </ul>
@@ -409,13 +365,7 @@
 
 <li class="toctree-l2"><a class="reference internal" href="../../ch14_moderation/04_moderation_and_ethics.html">14.5. Moderation and Ethics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch14_moderation/05_reflections.html">14.6. Activity and Reflections on Moderation</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../ch14_moderation/06_comments_and_replies/00_intro.html">14.7. Viewing Comments and Replies</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../ch14_moderation/06_comments_and_replies/01_trees.html">14.7.1. Tree Structures</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch14_moderation/06_comments_and_replies/02_demo_recursion.html">14.7.2. Demo: Navigating Trees (recursion)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch14_moderation/06_comments_and_replies/03_demo_recursion_real.html">14.7.3. Demo: Display Real Bluesky Comments and Replies</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../ch14_moderation/06_comments_and_replies/04_demo_hide_some_replies.html">14.7.4. Demo: Hide Some Comments</a></li>
-</ul>
-</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ch14_moderation/06_comments_and_replies/00_intro.html">14.7. Viewing Comments and Replies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ch14_moderation/07_bibliography.html">14.8. Bibliography</a></li>
 </ul>
 </details></li>
@@ -497,30 +447,14 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/making_bot_account.html">22. Making a Bot Account</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../appendix/solutions/00_solutions.html">23. Practice Solutions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../appendix/solutions/01_solution_practice_statements_variables_sleep.html">23.1. Ch 3 Practice: Statements and Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../appendix/solutions/02_solution_practice_data.html">23.2. Ch 4 Practice: Python Basic Data Types</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../appendix/solutions/03_practice_lists_dictionaries.html">23.3. Ch 5 Practice: Looping through lists and dictionaries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../appendix/solutions/07_practice_strings_conditionals.html">23.4. Ch 7 Practice: Conditionals and String Manipulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../appendix/solutions/08_solution_sentiment_and_loop_vars.html">23.5. Ch 8 Practice: Sentiment Analysis and Loop Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../appendix/solutions/09_solution_functions.html">23.6. Ch 9 Practice: Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../appendix/solutions/ch12_solution_dictionary_counters.html">23.7. Ch 12 Solution: Dictionary Counters</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/solutions/00_solutions.html">23. Practice Solutions</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../appendix/teaching/00_intro.html">24. Teaching With This Book</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../appendix/teaching/01_pedagogy.html">24.1. Pedagogical Goals and Design</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../appendix/teaching/02_tech_set_up.html">24.2. Tech Set-Up</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../appendix/teaching/03_course_work/00_intro.html">24.3. Assignments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../appendix/teaching/03_course_work/01_readings.html">24.3.1. Reading assignments</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../appendix/teaching/03_course_work/02_practice.html">24.3.2. Programming practice</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/00_intro.html">24.3.3. Programming Assignments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/a1_make_7_posts.html">A1: Make 7 Bluesky Posts</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/a2_another_site.html">A2: Try another site</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/a3_troll_reply_bot.html">A3: Trolling a Reply Bot</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/a4-political-bias.html">A4: Political Bias\n”</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/a5-best-comments.html">A5: Best Comments\n”</a></li>
-</ul>
-</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../../appendix/teaching/03_course_work/03_assignments/00_intro.html">24.3.3. Programming Assignments</a></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../appendix/teaching/03_course_work/04_group_project/00_intro.html">24.3.4. Group Final Project</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/04_group_project/01_description.html">Project Description</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../appendix/teaching/03_course_work/04_group_project/02_project_proposal.html">Project Proposal</a></li>
@@ -553,9 +487,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -716,7 +655,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -730,24 +669,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 
 </div></div>
       
@@ -774,18 +705,13 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="python-basics-self-assessment">
-<h1><span class="section-number">3.3.5. </span>Python Basics Self-Assessment<a class="headerlink" href="#python-basics-self-assessment" title="Link to this heading">#</a></h1>
+<h1>Python Basics Self-Assessment<a class="headerlink" href="#python-basics-self-assessment" title="Link to this heading">#</a></h1>
 <p>In order to help you to review your first set of Python coding features, see if you can answer these questions:</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="ejxyfGrXJWXM" data-shufflequestions="False"
-               data-shuffleanswers="True"
-               data-preserveresponses="false"
-               data-numquestions="1000000"
-               data-maxwidth="600"
-               style="border-radius: 10px; text-align: left"> <style>
-#ejxyfGrXJWXM {
-   --jq-multiple-choice-bg: #6f78ffff;
+<div class="output text_html"><div id="avXJXHzuNmxB" data-shufflequestions="False" data-shuffleanswers="True" data-preserveresponses="false" data-numquestions="1000000" data-maxwidth="600" style="border-radius: 10px; text-align: left"><style>
+#avXJXHzuNmxB {
+   --jq-multiple-choice-bg: #392061;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
    --jq-mc-button-inset-shadow: #555555;
@@ -794,9 +720,11 @@ document.write(`
    --jq-numeric-input-bg: #c0c0c0;
    --jq-numeric-input-label: #101010;
    --jq-numeric-input-shadow: #999999;
+   --jq-string-bg: #4c1a57;
    --jq-incorrect-color: #c80202;
    --jq-correct-color: #009113;
    --jq-text-color: #fafafa;
+   --jq-link-color: #9abafa;
 }
 
 .Quiz {
@@ -804,8 +732,8 @@ document.write(`
     margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 15px;
-    padding-bottom: 4px;
+/*    margin-bottom: 15px;*/
+/*    padding-bottom: 4px;*/
     padding-top: 4px;
     line-height: 1.1;
     font-size: 16pt;
@@ -823,18 +751,53 @@ document.write(`
     padding: 4px;
 }
 
+.Quiz code {
+    background-color: lightgray;
+    color: black;
+}
+
+.Quiz .QuizCode code {
+    background-color: inherit;
+    color: inherit;
+}
+
+
+.Quiz .MCButton code {
+    background-color: inherit;
+    color: inherit;
+}
+
+.MCButton .QuizCode {
+    text-align: left;
+}
+
+
+.Quiz .JQLink {
+    color: var(--jq-link-color) !important;
+    text-decoration: underline;
+}
+
+
+
 .Answer {
-    margin: 10px 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
     border-radius: inherit;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px 0;
+}
+
+@media only screen and (max-width:480px) {
+    .Answer {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 .Feedback {
     font-size: 16pt;
     text-align: center;
-    min-height: 2em;
+/*    min-height: 2em;*/
 }
 
 .Input {
@@ -846,7 +809,10 @@ document.write(`
     display: block;
     margin: 10px;
     color: inherit;
-    width: 140px;
+    width: unset;
+    min-width: 140px;
+    max-width: 93%;
+    field-sizing: content;
     background-color: var(--jq-numeric-input-bg);
     color: var(--jq-text-color);
     padding: 5px;
@@ -861,7 +827,7 @@ document.write(`
 }
 
 .Input-text:focus {
-    outline: none;
+    /*outline: none;*/
     background-color: var(--jq-numeric-input-bg);
     box-shadow: 0.6rem 0.8rem 1.4rem -0.5rem var(--jq-numeric-input-shadow);
 }
@@ -870,6 +836,7 @@ document.write(`
     background: var(--jq-mc-button-bg);
     border: 1px solid var(--jq-mc-button-border);
     border-radius: inherit;
+    color: #333333;
     padding: 10px;
     font-size: 16px;
     cursor: pointer;
@@ -898,22 +865,34 @@ document.write(`
 }
 
 .NumericQn {
-    padding: 10px;
     background: var(--jq-numeric-bg);
-    color: var(--jq-text-color);
     border-radius: inherit;
+    color: var(--jq-text-color);
+    padding: 10px;
 }
 
 .NumericQn p {
     color: inherit;
 }
 
+.StringQn {
+    background: var(--jq-string-bg);
+    border-radius: inherit;
+    color: var(--jq-text-color);
+    padding: 10px;
+}
+
+.StringQn p {
+    color: inherit;
+}
+
+
 .InpLabel {
-    line-height: 34px;
-    float: left;
-    margin-right: 10px;
     color: var(--jq-numeric-input-label);
+    float: left;
     font-size: 15pt;
+    line-height: 34px;
+    margin-right: 10px;
 }
 
 .incorrect {
@@ -930,17 +909,17 @@ document.write(`
    */
     animation: correct-anim 0.6s ease;
     animation-fill-mode: forwards;
+    box-shadow: inset 0 0 5px var(--jq-mc-button-inset-shadow);
     color: var(--jq-text-color);
-    box-shadow: inset 0px 0px 5px var(--jq-mc-button-inset-shadow);
-    outline: none;
+    /*outline: none;*/
 }
 
 .incorrectButton {
     animation: incorrect-anim 0.8s ease;
     animation-fill-mode: forwards;
+    box-shadow: inset 0 0 5px var(--jq-mc-button-inset-shadow);
     color: var(--jq-text-color);
-    box-shadow: inset 0px 0px 5px var(--jq-mc-button-inset-shadow);
-    outline: none;
+    /*outline: none;*/
 }
 
 @keyframes incorrect-anim {
@@ -954,7 +933,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsejxyfGrXJWXM=[
+</style></div><script type="application/javascript">var questionsavXJXHzuNmxB=[
     {
         "question": "Which of the following saves the text \"Time to go to class\" into a variable named \"alarm_message\" in the Python programming language?",
         "type": "multiple_choice",
@@ -1026,7 +1005,9 @@ document.write(`
         ]
     }
 ];
-    // Make a random ID
+
+if (typeof Question === 'undefined') {
+// Make a random ID
 function makeid(length) {
     var result = [];
     var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
@@ -1035,6 +1016,118 @@ function makeid(length) {
         result.push(characters.charAt(Math.floor(Math.random() * charactersLength)));
     }
     return result.join('');
+}
+// Convert LaTeX delimiters and markdown links to HTML
+function jaxify(string) {
+    let mystring = string;
+    let count = 0, count2 = 0;
+    let loc = mystring.search(/([^\\]|^)(\$)/);
+    let loc2 = mystring.search(/([^\\]|^)(\$\$)/);
+    while (loc >= 0 || loc2 >= 0) {
+        if (loc2 >= 0) {
+            mystring = mystring.replace(/([^\\]|^)(\$\$)/, count2 % 2 ? '$1\\]' : '$1\\[');
+            count2++;
+        } else {
+            mystring = mystring.replace(/([^\\]|^)(\$)/, count % 2 ? '$1\\)' : '$1\\(');
+            count++;
+        }
+        loc = mystring.search(/([^\\]|^)(\$)/);
+        loc2 = mystring.search(/([^\\]|^)(\$\$)/);
+    }
+    // Replace markdown links
+    mystring = mystring.replace(/<http(.*?)>/g, '<a href="http$1" target="_blank" class="Quiz JQLink">http$1</a>');
+    mystring = mystring.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" class="Quiz JQLink">$1</a>');
+    return mystring;
+}
+
+// Base class for question types
+class Question {
+    static registry = {};
+    static register(type, cls) {
+        Question.registry[type] = cls;
+    }
+    static create(qa, id, index, options, rootDiv) {
+        const Cls = Question.registry[qa.type];
+        if (!Cls) {
+            console.error(`No question class registered for type "${qa.type}"`);
+            return;
+        }
+        const q = new Cls(qa, id, index, options, rootDiv);
+        q.render();
+    }
+
+    constructor(qa, id, index, options, rootDiv) {
+        this.qa = qa;
+        this.id = id;
+        this.index = index;
+        this.options = options;
+        this.rootDiv = rootDiv;
+        // wrapper
+        this.wrapper = document.createElement('div');
+        this.wrapper.id = `quizWrap${id}`;
+        this.wrapper.className = 'Quiz';
+        this.wrapper.dataset.qnum = index;
+        this.wrapper.style.maxWidth = `${options.maxWidth}px`;
+        rootDiv.appendChild(this.wrapper);
+        // question container
+        this.outerqDiv = document.createElement('div');
+        this.outerqDiv.id = `OuterquizQn${id}${index}`;
+        this.wrapper.appendChild(this.outerqDiv);
+        // question text
+        this.qDiv = document.createElement('div');
+        this.qDiv.id = `quizQn${id}${index}`;
+        if (qa.question) {
+            this.qDiv.innerHTML = jaxify(qa.question);
+            this.outerqDiv.appendChild(this.qDiv);
+        }
+        // code block
+        if (qa.code) {
+            const codeDiv = document.createElement('div');
+            codeDiv.id = `code${id}${index}`;
+            codeDiv.className = 'QuizCode';
+            const pre = document.createElement('pre');
+            const codeEl = document.createElement('code');
+            codeEl.innerHTML = qa.code;
+            pre.appendChild(codeEl);
+            codeDiv.appendChild(pre);
+            this.outerqDiv.appendChild(codeDiv);
+        }
+        // answer container
+        this.aDiv = document.createElement('div');
+        this.aDiv.id = `quizAns${id}${index}`;
+        this.aDiv.className = 'Answer';
+        this.wrapper.appendChild(this.aDiv);
+        // feedback container (append after answers)
+        this.fbDiv = document.createElement('div');
+        this.fbDiv.id = `fb${id}`;
+        this.fbDiv.className = 'Feedback';
+        this.fbDiv.dataset.answeredcorrect = 0;
+    }
+
+    render() {
+        throw new Error('render() not implemented');
+    }
+
+    preserveResponse(val) {
+        if (!this.options.preserveResponses) return;
+        const resp = document.getElementById(`responses${this.rootDiv.id}`);
+        if (!resp) return;
+        const arr = JSON.parse(resp.dataset.responses);
+        arr[this.index] = val;
+        resp.dataset.responses = JSON.stringify(arr);
+        printResponses(resp);
+    }
+
+    typeset(container) {
+        if (typeof MathJax !== 'undefined') {
+            const v = MathJax.version;
+            if (v[0] === '2') {
+                MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
+            } else {
+                MathJax.typeset([container]);
+            }
+        }
+    }
 }
 
 // Choose a random subset of an array. Can also be used to shuffle the array
@@ -1061,6 +1154,9 @@ function printResponses(responsesContainer) {
     });
     responsesContainer.innerHTML=stringResponses;
 }
+/* Callback function to determine whether a selected multiple-choice
+   button corresponded to a correct answer and to provide feedback
+   based on the answer */
 function check_mc() {
     var id = this.id.split('-')[0];
     //var response = this.id.split('-')[1];
@@ -1082,17 +1178,16 @@ function check_mc() {
 
 
     var answers = label.parentElement.children;
-
     //console.log(answers);
-
 
     // Split behavior based on multiple choice vs many choice:
     var fb = document.getElementById("fb" + id);
 
 
 
-
-    if (fb.dataset.numcorrect == 1) {
+    /* Multiple choice (1 answer). Allow for 0 correct
+       answers as an edge case */
+    if (fb.dataset.numcorrect <= 1) {
         // What follows is for the saved responses stuff
         var outerContainer = fb.parentElement.parentElement;
         var responsesContainer = document.getElementById("responses" + outerContainer.id);
@@ -1114,7 +1209,7 @@ function check_mc() {
             printResponses(responsesContainer);
         }
         // End code to preserve responses
-        
+
         for (var i = 0; i < answers.length; i++) {
             var child = answers[i];
             //console.log(child);
@@ -1126,9 +1221,9 @@ function check_mc() {
         if (label.dataset.correct == "true") {
             // console.log("Correct action");
             if ("feedback" in label.dataset) {
-                fb.textContent = jaxify(label.dataset.feedback);
+                fb.innerHTML = jaxify(label.dataset.feedback);
             } else {
-                fb.textContent = "Correct!";
+                fb.innerHTML = "Correct!";
             }
             label.classList.add("correctButton");
 
@@ -1137,9 +1232,9 @@ function check_mc() {
 
         } else {
             if ("feedback" in label.dataset) {
-                fb.textContent = jaxify(label.dataset.feedback);
+                fb.innerHTML = jaxify(label.dataset.feedback);
             } else {
-                fb.textContent = "Incorrect -- try again.";
+                fb.innerHTML = "Incorrect -- try again.";
             }
             //console.log("Error action");
             label.classList.add("incorrectButton");
@@ -1147,7 +1242,7 @@ function check_mc() {
             fb.classList.add("incorrect");
         }
     }
-    else {
+    else { /* Many choice (more than 1 correct answer) */
         var reset = false;
         var feedback;
          if (label.dataset.correct == "true") {
@@ -1236,9 +1331,9 @@ function check_mc() {
         var numcorrect = fb.dataset.numcorrect;
         var answeredcorrect = fb.dataset.answeredcorrect;
         if (answeredcorrect >= 0) {
-            fb.textContent = feedback + " [" + answeredcorrect + "/" + numcorrect + "]";
+            fb.innerHTML = feedback + " [" + answeredcorrect + "/" + numcorrect + "]";
         } else {
-            fb.textContent = feedback + " [" + 0 + "/" + numcorrect + "]";
+            fb.innerHTML = feedback + " [" + 0 + "/" + numcorrect + "]";
         }
 
 
@@ -1258,9 +1353,14 @@ function check_mc() {
 
 }
 
+
+/* Function to produce the HTML buttons for a multiple choice/
+   many choice question  and to update the CSS tags based on
+   the question type */
 function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
+
     var shuffled;
-    if (shuffle_answers == "True") {
+    if (shuffle_answers == true) {
         //console.log(shuffle_answers+" read as true");
         shuffled = getRandomSubarray(qa.answers, qa.answers.length);
     } else {
@@ -1271,36 +1371,34 @@ function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
 
     var num_correct = 0;
 
-
-
     shuffled.forEach((item, index, ans_array) => {
         //console.log(answer);
+
+        // Make label for input element
+        var lab = document.createElement("label");
+        lab.className = "MCButton";
+        lab.id = id + '-' + index;
+        lab.onclick = check_mc;
 
         // Make input element
         var inp = document.createElement("input");
         inp.type = "radio";
         inp.id = "quizo" + id + index;
-        inp.style = "display:none;";
-        aDiv.append(inp);
+        inp.name = "mcgroup-" + id; // for grouping radios
+        inp.className = "sr-only"; // or "visually-hidden" or whatever you call it
 
-        //Make label for input element
-        var lab = document.createElement("label");
-        lab.className = "MCButton";
-        lab.id = id + '-' + index;
-        lab.onclick = check_mc;
+
+        lab.append(inp); // input is now inside the label
+
         var aSpan = document.createElement('span');
-        aSpan.classsName = "";
-        //qDiv.id="quizQn"+id+index;
         if ("answer" in item) {
             aSpan.innerHTML = jaxify(item.answer);
-            //aSpan.innerHTML=item.answer;
         }
         lab.append(aSpan);
 
         // Create div for code inside question
-        var codeSpan;
         if ("code" in item) {
-            codeSpan = document.createElement('span');
+            var codeSpan = document.createElement('span');
             codeSpan.id = "code" + id + index;
             codeSpan.className = "QuizCode";
             var codePre = document.createElement('pre');
@@ -1309,10 +1407,7 @@ function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
             codePre.append(codeCode);
             codeCode.innerHTML = item.code;
             lab.append(codeSpan);
-            //console.log(codeSpan);
         }
-
-        //lab.textContent=item.answer;
 
         // Set the data attributes for the answer
         lab.setAttribute('data-correct', item.correct);
@@ -1324,7 +1419,9 @@ function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
         }
         lab.setAttribute('data-answered', 0);
 
+        // Only append the label (input is inside)
         aDiv.append(lab);
+
 
     });
 
@@ -1337,6 +1434,29 @@ function make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id) {
     return num_correct;
 
 }
+// Object-oriented wrapper for MC/MANY choice
+class MCQuestion extends Question {
+    constructor(qa, id, idx, opts, rootDiv) { super(qa, id, idx, opts, rootDiv); }
+    render() {
+        //console.log("options.shuffleAnswers " + this.options.shuffleAnswers);
+        const numCorrect = make_mc(
+            this.qa,
+            this.options.shuffleAnswers,
+            this.outerqDiv,
+            this.qDiv,
+            this.aDiv,
+            this.id
+        );
+        if ('answer_cols' in this.qa) {
+            this.aDiv.style.gridTemplateColumns =
+                'repeat(' + this.qa.answer_cols + ', 1fr)';
+        }
+        this.fbDiv.dataset.numcorrect = numCorrect;
+        this.wrapper.appendChild(this.fbDiv);
+    }
+}
+Question.register('multiple_choice', MCQuestion);
+Question.register('many_choice', MCQuestion);
 function check_numeric(ths, event) {
 
     if (event.keyCode === 13) {
@@ -1352,11 +1472,9 @@ function check_numeric(ths, event) {
         }
         //console.log("Reader entered", submission);
 
-        if ("precision" in ths.dataset) {
+        if (("precision" in ths.dataset) && (ths.dataset.precision > 0)) {
             var precision = ths.dataset.precision;
-            // console.log("1:", submission)
-            submission = Math.round((1 * submission + Number.EPSILON) * 10 ** precision) / 10 ** precision;
-            // console.log("Rounded to ", submission, " precision=", precision  );
+            submission = Number(Number(submission).toPrecision(precision));
         }
 
 
@@ -1366,12 +1484,12 @@ function check_numeric(ths, event) {
 
         var fb = document.getElementById("fb" + id);
         fb.style.display = "none";
-        fb.textContent = "Incorrect -- try again.";
+        fb.innerHTML = "Incorrect -- try again.";
 
         var answers = JSON.parse(ths.dataset.answers);
         //console.log(answers);
 
-        var defaultFB = "";
+        var defaultFB = "Incorrect. Try again.";
         var correct;
         var done = false;
         answers.every(answer => {
@@ -1380,27 +1498,37 @@ function check_numeric(ths, event) {
             correct = false;
             // if (answer.type=="value"){
             if ('value' in answer) {
-                if (submission == answer.value) {
+                var value;
+                if ("precision" in ths.dataset) {
+                    value = answer.value.toPrecision(ths.dataset.precision);
+                } else {
+                    value = answer.value;
+                }
+                if (submission == value) {
                     if ("feedback" in answer) {
-                        fb.textContent = jaxify(answer.feedback);
+                        fb.innerHTML = jaxify(answer.feedback);
                     } else {
-                        fb.textContent = jaxify("Correct");
+                        fb.innerHTML = jaxify("Correct");
                     }
                     correct = answer.correct;
                     //console.log(answer.correct);
                     done = true;
                 }
+
                 // } else if (answer.type=="range") {
             } else if ('range' in answer) {
-                //console.log(answer.range);
+                console.log(answer.range);
+                console.log(submission, submission >=answer.range[0], submission < answer.range[1])
                 if ((submission >= answer.range[0]) && (submission < answer.range[1])) {
-                    fb.textContent = jaxify(answer.feedback);
+                    fb.innerHTML = jaxify(answer.feedback);
                     correct = answer.correct;
-                    //console.log(answer.correct);
+                    console.log(answer.correct);
                     done = true;
                 }
             } else if (answer.type == "default") {
-                defaultFB = answer.feedback;
+                if ("feedback" in answer) {
+                    defaultFB = answer.feedback;
+                } 
             }
             if (done) {
                 return false; // Break out of loop if this has been marked correct
@@ -1408,6 +1536,7 @@ function check_numeric(ths, event) {
                 return true; // Keep looking for case that includes this as a correct answer
             }
         });
+        console.log("done:", done);
 
         if ((!done) && (defaultFB != "")) {
             fb.innerHTML = jaxify(defaultFB);
@@ -1458,10 +1587,37 @@ function check_numeric(ths, event) {
         } else {
             console.log('MathJax not detected');
         }
+        // After correct answer, if next JupyterQuiz question exists and has a text input, scroll by current question height
+        if (correct) {
+            // find the current question wrapper
+            var wrapper = ths.closest('.Quiz');
+            if (wrapper) {
+                var nextWrapper = wrapper.nextElementSibling;
+                if (nextWrapper && nextWrapper.classList.contains('Quiz')) {
+                    var nextInput = nextWrapper.querySelector('input.Input-text');
+                    if (nextInput) {
+                        var height = wrapper.getBoundingClientRect().height;
+                        console.log(height);
+                        nextInput.focus();
+                    }
+                }
+            }
+        }
         return false;
     }
 
 }
+// Object-oriented wrapper for numeric questions
+class NumericQuestion extends Question {
+    constructor(qa, id, idx, opts, rootDiv) {
+        super(qa, id, idx, opts, rootDiv);
+    }
+    render() {
+        make_numeric(this.qa, this.outerqDiv, this.qDiv, this.aDiv, this.id);
+        this.wrapper.appendChild(this.fbDiv);
+    }
+}
+Question.register('numeric', NumericQuestion);
 
 function isValid(el, charC) {
     //console.log("Input char: ", charC);
@@ -1546,7 +1702,7 @@ function make_numeric(qa, outerqDiv, qDiv, aDiv, id) {
 
     var lab = document.createElement("label");
     lab.className = "InpLabel";
-    lab.textContent = "Type numeric answer here:";
+    lab.innerHTML = "Type numeric answer here:";
     aDiv.append(lab);
 
     var inp = document.createElement("input");
@@ -1581,165 +1737,49 @@ function make_numeric(qa, outerqDiv, qDiv, aDiv, id) {
 
 
 }
-function jaxify(string) {
-    var mystring = string;
-
-    var count = 0;
-    var loc = mystring.search(/([^\\]|^)(\$)/);
-
-    var count2 = 0;
-    var loc2 = mystring.search(/([^\\]|^)(\$\$)/);
-
-    //console.log(loc);
-
-    while ((loc >= 0) || (loc2 >= 0)) {
-
-        /* Have to replace all the double $$ first with current implementation */
-        if (loc2 >= 0) {
-            if (count2 % 2 == 0) {
-                mystring = mystring.replace(/([^\\]|^)(\$\$)/, "$1\\[");
-            } else {
-                mystring = mystring.replace(/([^\\]|^)(\$\$)/, "$1\\]");
-            }
-            count2++;
-        } else {
-            if (count % 2 == 0) {
-                mystring = mystring.replace(/([^\\]|^)(\$)/, "$1\\(");
-            } else {
-                mystring = mystring.replace(/([^\\]|^)(\$)/, "$1\\)");
-            }
-            count++;
-        }
-        loc = mystring.search(/([^\\]|^)(\$)/);
-        loc2 = mystring.search(/([^\\]|^)(\$\$)/);
-        //console.log(mystring,", loc:",loc,", loc2:",loc2);
+// Override show_questions to use object-oriented Question API
+function show_questions(json, container) {
+    // Accept container element or element ID
+    if (typeof container === 'string') {
+        container = document.getElementById(container);
+    }
+    if (!container) {
+        console.error('show_questions: invalid container', container);
+        return;
     }
 
-    //console.log(mystring);
-    return mystring;
-}
+    const shuffleQuestions = container.dataset.shufflequestions === 'True';
+    const shuffleAnswers = container.dataset.shuffleanswers === 'True';
+    const preserveResponses = container.dataset.preserveresponses === 'true';
+    const maxWidth = parseInt(container.dataset.maxwidth, 10) || 0;
+    let numQuestions = parseInt(container.dataset.numquestions, 10) || json.length;
+    if (numQuestions > json.length) numQuestions = json.length;
 
-
-function show_questions(json, mydiv) {
-    console.log('show_questions');
-    //var mydiv=document.getElementById(myid);
-    var shuffle_questions = mydiv.dataset.shufflequestions;
-    var num_questions = mydiv.dataset.numquestions;
-    var shuffle_answers = mydiv.dataset.shuffleanswers;
-    var max_width = mydiv.dataset.maxwidth;
-
-    if (num_questions > json.length) {
-        num_questions = json.length;
+    let questions = json;
+    if (shuffleQuestions || numQuestions < json.length) {
+        questions = getRandomSubarray(json, numQuestions);
     }
 
-    var questions;
-    if ((num_questions < json.length) || (shuffle_questions == "True")) {
-        //console.log(num_questions+","+json.length);
-        questions = getRandomSubarray(json, num_questions);
-    } else {
-        questions = json;
-    }
-
-    //console.log("SQ: "+shuffle_questions+", NQ: " + num_questions + ", SA: ", shuffle_answers);
-
-    // Iterate over questions
-    questions.forEach((qa, index, array) => {
-        //console.log(qa.question); 
-
-        var id = makeid(8);
-        //console.log(id);
-
-
-        // Create Div to contain question and answers
-        var iDiv = document.createElement('div');
-        //iDiv.id = 'quizWrap' + id + index;
-        iDiv.id = 'quizWrap' + id;
-        iDiv.className = 'Quiz';
-        iDiv.setAttribute('data-qnum', index);
-        iDiv.style.maxWidth  =max_width+"px";
-        mydiv.appendChild(iDiv);
-        // iDiv.innerHTML=qa.question;
-        
-        var outerqDiv = document.createElement('div');
-        outerqDiv.id = "OuterquizQn" + id + index;
-        // Create div to contain question part
-        var qDiv = document.createElement('div');
-        qDiv.id = "quizQn" + id + index;
-        
-        if (qa.question) {
-            iDiv.append(outerqDiv);
-
-            //qDiv.textContent=qa.question;
-            qDiv.innerHTML = jaxify(qa.question);
-            outerqDiv.append(qDiv);
-        }
-
-        // Create div for code inside question
-        var codeDiv;
-        if ("code" in qa) {
-            codeDiv = document.createElement('div');
-            codeDiv.id = "code" + id + index;
-            codeDiv.className = "QuizCode";
-            var codePre = document.createElement('pre');
-            codeDiv.append(codePre);
-            var codeCode = document.createElement('code');
-            codePre.append(codeCode);
-            codeCode.innerHTML = qa.code;
-            outerqDiv.append(codeDiv);
-            //console.log(codeDiv);
-        }
-
-
-        // Create div to contain answer part
-        var aDiv = document.createElement('div');
-        aDiv.id = "quizAns" + id + index;
-        aDiv.className = 'Answer';
-        iDiv.append(aDiv);
-
-        //console.log(qa.type);
-
-        var num_correct;
-        if ((qa.type == "multiple_choice") || (qa.type == "many_choice") ) {
-            num_correct = make_mc(qa, shuffle_answers, outerqDiv, qDiv, aDiv, id);
-            if ("answer_cols" in qa) {
-                //aDiv.style.gridTemplateColumns = 'auto '.repeat(qa.answer_cols);
-                aDiv.style.gridTemplateColumns = 'repeat(' + qa.answer_cols + ', 1fr)';
-            }
-        } else if (qa.type == "numeric") {
-            //console.log("numeric");
-            make_numeric(qa, outerqDiv, qDiv, aDiv, id);
-        }
-
-
-        //Make div for feedback
-        var fb = document.createElement("div");
-        fb.id = "fb" + id;
-        //fb.style="font-size: 20px;text-align:center;";
-        fb.className = "Feedback";
-        fb.setAttribute("data-answeredcorrect", 0);
-        fb.setAttribute("data-numcorrect", num_correct);
-        iDiv.append(fb);
-
-
+    questions.forEach((qa, index) => {
+        const id = makeid(8);
+        const options = {
+            shuffleAnswers: shuffleAnswers,
+            preserveResponses: preserveResponses,
+            maxWidth: maxWidth
+        };
+        Question.create(qa, id, index, options, container);
     });
-    var preserveResponses = mydiv.dataset.preserveresponses;
-    console.log(preserveResponses);
-    console.log(preserveResponses == "true");
-    if (preserveResponses == "true") {
-        console.log(preserveResponses);
-        // Create Div to contain record of answers
-        var iDiv = document.createElement('div');
-        iDiv.id = 'responses' + mydiv.id;
-        iDiv.className = 'JCResponses';
-        // Create a place to store responses as an empty array
-        iDiv.setAttribute('data-responses', '[]');
 
-        // Dummy Text
-        iDiv.innerHTML="<b>Select your answers and then follow the directions that will appear here.</b>"
-        //iDiv.className = 'Quiz';
-        mydiv.appendChild(iDiv);
+    if (preserveResponses) {
+        const respDiv = document.createElement('div');
+        respDiv.id = 'responses' + container.id;
+        respDiv.className = 'JCResponses';
+        respDiv.dataset.responses = JSON.stringify([]);
+        respDiv.innerHTML = '<b>Select your answers and then follow the directions that will appear here.</b>';
+        container.appendChild(respDiv);
     }
-//console.log("At end of show_questions");
+
+    // Trigger MathJax typesetting if available
     if (typeof MathJax != 'undefined') {
         console.log("MathJax version", MathJax.version);
         var version = MathJax.version;
@@ -1749,7 +1789,26 @@ function show_questions(json, mydiv) {
             if (version[0] == "2") {
                 MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
             } else if (version[0] == "3") {
-                MathJax.typeset([mydiv]);
+                if (MathJax.hasOwnProperty('typeset') ) {
+                    MathJax.typeset([container]);
+                } else {
+                    console.log('WARNING: Trying to force load MathJax 3');
+                    window.MathJax = {
+                        tex: {
+                            inlineMath: [['$', '$'], ['\\(', '\\)']]
+                        },
+                        svg: {
+                            fontCache: 'global'
+                        }
+                    };
+
+                    (function () {
+                        var script = document.createElement('script');
+                        script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';
+                        script.async = true;
+                        document.head.appendChild(script);
+                    })();
+                }
             }
         }, 500);
 if (typeof version == 'undefined') {
@@ -1758,38 +1817,267 @@ if (typeof version == 'undefined') {
             if (version[0] == "2") {
                 MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
             } else if (version[0] == "3") {
-                MathJax.typeset([mydiv]);
+                if (MathJax.hasOwnProperty('typeset') ) {
+                    MathJax.typeset([container]);
+                } else {
+                    console.log('WARNING: Trying to force load MathJax 3');
+                    window.MathJax = {
+                        tex: {
+                            inlineMath: [['$', '$'], ['\\(', '\\)']]
+                        },
+                        svg: {
+                            fontCache: 'global'
+                        }
+                    };
+
+                    (function () {
+                        var script = document.createElement('script');
+                        script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';
+                        script.async = true;
+                        document.head.appendChild(script);
+                    })();
+                }
             } else {
                 console.log("MathJax not found");
             }
         }
     }
-    return false;
+    // if (typeof MathJax !== 'undefined') {
+    //     const v = MathJax.version;
+    //     if (v[0] === '2') {
+    //         MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
+    //     } else if (v[0] === '3') {
+    //         MathJax.typeset([container]);
+    //     }
+    // }
+
+    // Prevent link clicks from bubbling up
+    Array.from(container.getElementsByClassName('Link')).forEach(link => {
+        link.addEventListener('click', e => e.stopPropagation());
+    });
 }
-/* This is to handle asynchrony issues in loading Jupyter notebooks
-           where the quiz has been previously run. The Javascript was generally
-           being run before the div was added to the DOM. I tried to do this
-           more elegantly using Mutation Observer, but I didn't get it to work.
+function levenshteinDistance(a, b) {
+    if (a.length === 0) return b.length;
+    if (b.length === 0) return a.length;
 
-           Someone more knowledgeable could make this better ;-) */
+    const matrix = Array(b.length + 1).fill(null).map(() => Array(a.length + 1).fill(null));
 
-        function try_show() {
-          if(document.getElementById("ejxyfGrXJWXM")) {
-            show_questions(questionsejxyfGrXJWXM,  ejxyfGrXJWXM); 
-          } else {
-             setTimeout(try_show, 200);
-          }
-        };
-    
-        {
-        // console.log(element);
+    for (let i = 0; i <= a.length; i++) {
+        matrix[0][i] = i;
+    }
 
-        //console.log("ejxyfGrXJWXM");
-        // console.log(document.getElementById("ejxyfGrXJWXM"));
+    for (let j = 0; j <= b.length; j++) {
+        matrix[j][0] = j;
+    }
 
-        try_show();
+    for (let j = 1; j <= b.length; j++) {
+        for (let i = 1; i <= a.length; i++) {
+            const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+            matrix[j][i] = Math.min(
+                matrix[j - 1][i] + 1, // Deletion
+                matrix[j][i - 1] + 1, // Insertion
+                matrix[j - 1][i - 1] + cost // Substitution
+            );
         }
-        </script></div>
+    }
+    return matrix[b.length][a.length];
+}
+// Object-oriented wrapper for string input questions
+class StringQuestion extends Question {
+    constructor(qa, id, idx, opts, rootDiv) {
+        super(qa, id, idx, opts, rootDiv);
+    }
+    render() {
+        make_string(this.qa, this.outerqDiv, this.qDiv, this.aDiv, this.id);
+        this.wrapper.appendChild(this.fbDiv);
+    }
+}
+Question.register('string', StringQuestion);
+
+function check_string(ths, event) {
+    if (event.keyCode === 13) {
+        ths.blur();
+
+        var id = ths.id.split('-')[0];
+        var submission = ths.value.trim();
+        var fb = document.getElementById("fb" + id);
+        fb.style.display = "none";
+        fb.innerHTML = "Incorrect -- try again.";
+
+        var answers = JSON.parse(ths.dataset.answers);
+        var defaultFB = "Incorrect. Try again.";
+        var correct;
+        var done = false;
+
+        // Handle default answer pattern: filter out and capture default feedback
+        var filteredAnswers = [];
+        answers.forEach(answer => {
+            if (answer.type === "default") {
+                defaultFB = answer.feedback;
+            } else {
+                filteredAnswers.push(answer);
+            }
+        });
+        answers = filteredAnswers;
+
+        answers.every(answer => {
+            correct = false;
+
+            let match = false;
+            if (answer.match_case) {
+                match = submission === answer.answer;
+            } else {
+                match = submission.toLowerCase() === answer.answer.toLowerCase();
+            }
+            console.log(submission);
+            console.log(answer.answer);
+            console.log(match);
+
+            if (match) {
+                if ("feedback" in answer) {
+                    fb.innerHTML = jaxify(answer.feedback);
+                } else {
+                    fb.innerHTML = jaxify("Correct");
+                }
+                correct = answer.correct;
+                done = true;
+            } else if (answer.fuzzy_threshold) {
+                var max_length = Math.max(submission.length, answer.answer.length);
+                var ratio;
+                if (answer.match_case) {
+                    ratio = 1- (levenshteinDistance(submission, answer.answer) / max_length);
+                } else {
+                    ratio = 1- (levenshteinDistance(submission.toLowerCase(),
+                                                    answer.answer.toLowerCase()) / max_length);
+                }
+                if (ratio >= answer.fuzzy_threshold) {
+                    if ("feedback" in answer) {
+                        fb.innerHTML = jaxify("(Fuzzy) " + answer.feedback);
+                    } else {
+                        fb.innerHTML = jaxify("Correct");
+                    }
+                    correct = answer.correct;
+                    done = true;
+                }
+
+            }
+
+            if (done) {
+                return false;
+            } else {
+                return true;
+            }
+        });
+
+        if ((!done) && (defaultFB != "")) {
+            fb.innerHTML = jaxify(defaultFB);
+        }
+
+        fb.style.display = "block";
+        if (correct) {
+            ths.className = "Input-text";
+            ths.classList.add("correctButton");
+            fb.className = "Feedback";
+            fb.classList.add("correct");
+        } else {
+            ths.className = "Input-text";
+            ths.classList.add("incorrectButton");
+            fb.className = "Feedback";
+            fb.classList.add("incorrect");
+        }
+
+        var outerContainer = fb.parentElement.parentElement;
+        var responsesContainer = document.getElementById("responses" + outerContainer.id);
+        if (responsesContainer) {
+            var qnum = document.getElementById("quizWrap" + id).dataset.qnum;
+            var responses = JSON.parse(responsesContainer.dataset.responses);
+            responses[qnum] = submission;
+            responsesContainer.setAttribute('data-responses', JSON.stringify(responses));
+            printResponses(responsesContainer);
+        }
+
+        if (typeof MathJax != 'undefined') {
+            var version = MathJax.version;
+            if (version[0] == "2") {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+            } else if (version[0] == "3") {
+                MathJax.typeset([fb]);
+            }
+        } else {
+            console.log('MathJax not detected');
+        }
+        // After correct answer, if next JupyterQuiz question exists and has a text input, scroll by current question height
+        if (correct) {
+            var wrapper = ths.closest('.Quiz');
+            if (wrapper) {
+                var nextWrapper = wrapper.nextElementSibling;
+                if (nextWrapper && nextWrapper.classList.contains('Quiz')) {
+                    var nextInput = nextWrapper.querySelector('input.Input-text');
+                    if (nextInput) {
+                        var height = wrapper.getBoundingClientRect().height;
+                        nextInput.focus();
+                    }
+                }
+            }
+        }
+        return false;
+    }
+}
+
+function string_keypress(evnt) {
+    var charC = (evnt.which) ? evnt.which : evnt.keyCode;
+
+    if (charC == 13) {
+        check_string(this, evnt);
+    } 
+}
+
+
+function make_string(qa, outerqDiv, qDiv, aDiv, id) {
+    outerqDiv.className = "StringQn";
+    aDiv.style.display = 'block';
+
+    var lab = document.createElement("label");
+    lab.className = "InpLabel";
+    lab.innerHTML = "Type your answer here:";
+    aDiv.append(lab);
+
+    var inp = document.createElement("input");
+    inp.type = "text";
+    inp.id = id + "-0";
+    inp.className = "Input-text";
+    inp.setAttribute('data-answers', JSON.stringify(qa.answers));
+    // Apply optional input width (approx. number of characters, in em units)
+    if (qa.input_width != null) {
+        inp.style['min-width'] = qa.input_width + 'em';
+    }
+    aDiv.append(inp);
+
+    inp.onkeypress = string_keypress;
+    inp.onpaste = event => false;
+
+    inp.addEventListener("focus", function (event) {
+        this.value = "";
+        return false;
+    });
+}
+/*
+ * Handle asynchrony issues when re-running quizzes in Jupyter notebooks.
+ * Ensures show_questions is called after the container div is in the DOM.
+ */
+function try_show() {
+  if (document.getElementById("avXJXHzuNmxB")) {
+    show_questions(questionsavXJXHzuNmxB, avXJXHzuNmxB);
+  } else {
+    setTimeout(try_show, 200);
+  }
+};
+// Invoke immediately
+{
+  try_show();
+}
+}
+</script></div>
 </div>
 </section>
 
@@ -1823,24 +2111,6 @@ if (typeof version == 'undefined') {
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="04_code_structure_self_assessment.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3.3.4. </span>Code Structure Self-Assessment</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="../04_bots_and_responsibility.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.4. </span>Bots and Responsibility</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -1899,8 +2169,8 @@ By Kyle Thayer and Susan Notess
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

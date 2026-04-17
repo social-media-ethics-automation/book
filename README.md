@@ -63,6 +63,7 @@ To build the website version, first you'll have to have some stuff installed:
 - Install python (https://www.python.org/downloads/)
 - Install jupyter-book by opening your command line (e.g. PowerShell on Windows, terminal on mac), and entering the command:
   - pip install -U jupyter-book  
+  - pip install -U "jupyter-book<2.0"
 
 
 To build the book:
