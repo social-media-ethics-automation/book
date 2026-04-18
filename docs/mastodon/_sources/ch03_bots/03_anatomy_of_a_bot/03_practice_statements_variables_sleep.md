@@ -1,0 +1,4 @@
+# Practice: Statements and Variables
+_Choose Social Media Platform: <a href='../../../bsky/ch03_bots/03_anatomy_of_a_bot/03_practice_statements_variables_sleep.html'>Bluesky</a> | <a href='../../../reddit/ch03_bots/03_anatomy_of_a_bot/03_practice_statements_variables_sleep.html'>Reddit</a> | <a href='../../../discord/ch03_bots/03_anatomy_of_a_bot/03_practice_statements_variables_sleep.html'>Discord</a> | __Mastodon__ | <a href='../../../nocode/ch03_bots/03_anatomy_of_a_bot/03_practice_statements_variables_sleep.html'>No Coding</a>_
+
+__Content for the social media platform Mastodon hasn't been created yet. Please try another platform.__

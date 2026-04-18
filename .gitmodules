@@ -7,3 +7,8 @@
 [submodule "src-copies/book-src-bsky"]
 	path = src-copies/book-src-bsky
 	url = https://github.com/social-media-ethics-automation/book-src-bsky.git
+
+[submodule "src-copies/book-src-mastodon"]
+	path = src-copies/book-src-mastodon
+	url = https://github.com/social-media-ethics-automation/book-src-mastodon.git
+	branch = main

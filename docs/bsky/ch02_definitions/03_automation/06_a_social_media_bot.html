@@ -11,10 +11,10 @@
 <meta property="og:type" content="book" />
 <meta property="og:url" content="ch02_definitions/03_automation/06_a_social_media_bot.html" />
 <meta property="og:site_name" content="Social Media, Ethics, and Automation" />
-<meta property="og:description" content="Choose Social Media Platform: Bluesky| Reddit| Discord| No Coding Below is a computer program written in the Python programming language. The program will make a Bleusky post. The post will say: “T..." />
+<meta property="og:description" content="Choose Social Media Platform: Bluesky| Reddit| Discord| Mastodon| No Coding Below is a computer program written in the Python programming language. The program will make a Bleusky post. The post wi..." />
 <meta property="og:image" content="https://social-media-ethics-automation.github.io/book/reddit/_images/logo.png" />
 <meta property="og:image:alt" content="Social Media, Ethics, and Automation" />
-<meta name="description" content="Choose Social Media Platform: Bluesky| Reddit| Discord| No Coding Below is a computer program written in the Python programming language. The program will make a Bleusky post. The post will say: “T..." />
+<meta name="description" content="Choose Social Media Platform: Bluesky| Reddit| Discord| Mastodon| No Coding Below is a computer program written in the Python programming language. The program will make a Bleusky post. The post wi..." />
 
     <title>2.3.6. A program that makes one Bluesky post &#8212; Social Media, Ethics, and Automation</title>
   
@@ -42,7 +42,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/myfile.css?v=ed2eb8a4" />
@@ -732,7 +732,7 @@
                   
   <section id="a-program-that-makes-one-bluesky-post">
 <h1><span class="section-number">2.3.6. </span>A program that makes one Bluesky post<a class="headerlink" href="#a-program-that-makes-one-bluesky-post" title="Link to this heading">#</a></h1>
-<p><em>Choose Social Media Platform: <strong>Bluesky</strong> | <a href='../../../reddit/ch02_definitions/03_automation/06_a_social_media_bot.html'>Reddit</a> | <a href='../../../discord/ch02_definitions/03_automation/06_a_social_media_bot.html'>Discord</a> | <a href='../../../nocode/ch02_definitions/03_automation/06_a_social_media_bot.html'>No Coding</a></em></p>
+<p><em>Choose Social Media Platform: <strong>Bluesky</strong> | <a href='../../../reddit/ch02_definitions/03_automation/06_a_social_media_bot.html'>Reddit</a> | <a href='../../../discord/ch02_definitions/03_automation/06_a_social_media_bot.html'>Discord</a> | <a href='../../../mastodon/ch02_definitions/03_automation/06_a_social_media_bot.html'>Mastodon</a> | <a href='../../../nocode/ch02_definitions/03_automation/06_a_social_media_bot.html'>No Coding</a></em></p>
 <p>Below is a computer program written in the Python programming language. The program will make a Bleusky post. The post will say: “This post was made by a computer program!”. Since this is a computer program that posts on Bluesky, we would call this program a Bluesky bot.</p>
 <p>Don’t worry if you don’t understand any of this Python code yet; we will build an understanding of code like this throughout the book.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">atproto</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
@@ -748,7 +748,7 @@
 <li><p>The code above is full of English words like “import”, “login”, “post”, and “send,” which may help you guess the meaning of the code.</p></li>
 <li><p>There are also other symbols as well, though being used in a different way than in normal English, symbols like <code class="docutils literal notranslate"><span class="pre">=</span></code>, <code class="docutils literal notranslate"><span class="pre">_</span></code>, <code class="docutils literal notranslate"><span class="pre">.</span></code>, <code class="docutils literal notranslate"><span class="pre">:</span></code>, <code class="docutils literal notranslate"><span class="pre">(</span></code>, and <code class="docutils literal notranslate"><span class="pre">)</span></code>, as well as some unusual spacing</p></li>
 <li><p>The indented lines of code gives good hints as to what it is doing: <code class="docutils literal notranslate"><span class="pre">login</span></code> is where you login to your Bluesky account, and <code class="docutils literal notranslate"><span class="pre">send_post</span></code> has the information to make as a new post.</p></li>
-<li><p>Note that the line with <code class="docutils literal notranslate"><span class="pre">login</span></code> is where you would put your Bluesky account handle (login name) and your password (see the page on <a class="reference internal" href="../../appendix/making_bot_account.html"><span class="std std-doc">setting up your Bluesky bot</span></a>). Once you put your own handle and password in those locations, then this code will make a discord post</p></li>
+<li><p>Note that the line with <code class="docutils literal notranslate"><span class="pre">login</span></code> is where you would put your Bluesky account handle (login name) and your password (see the page on <a class="reference internal" href="../../appendix/making_bot_account.html"><span class="std std-doc">setting up your Bluesky bot</span></a>). Once you put your own handle and password in those locations, then this code will make a Bluesky post</p></li>
 </ul>
 <figure class="align-default" id="bsky-bot-post-fig">
 <img alt="Screenshot of a post on Bluesky, posted by &quot;info103-teacher.bsky.social&quot; with the text of &quot;This post was made by a computer program!&quot;" src="../../_images/bsky_bot_post.png" />

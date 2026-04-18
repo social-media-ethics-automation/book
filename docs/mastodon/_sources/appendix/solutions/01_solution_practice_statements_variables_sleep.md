@@ -1,0 +1,4 @@
+# Ch 3 Practice: Statements and Variables
+_Choose Social Media Platform: <a href='../../../bsky/appendix/solutions/01_solution_practice_statements_variables_sleep.html'>Bluesky</a> | <a href='../../../reddit/appendix/solutions/01_solution_practice_statements_variables_sleep.html'>Reddit</a> | <a href='../../../discord/appendix/solutions/01_solution_practice_statements_variables_sleep.html'>Discord</a> | __Mastodon__ | <a href='../../../nocode/appendix/solutions/01_solution_practice_statements_variables_sleep.html'>No Coding</a>_
+
+__Content for the social media platform Mastodon hasn't been created yet. Please try another platform.__

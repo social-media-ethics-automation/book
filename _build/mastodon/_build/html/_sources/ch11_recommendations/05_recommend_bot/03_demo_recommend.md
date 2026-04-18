@@ -1,0 +1,4 @@
+# Demo: Recommend Users to Follow
+_Choose Social Media Platform: <a href='../../../bsky/ch11_recommendations/05_recommend_bot/03_demo_recommend.html'>Bluesky</a> | <a href='../../../reddit/ch11_recommendations/05_recommend_bot/03_demo_recommend.html'>Reddit</a> | <a href='../../../discord/ch11_recommendations/05_recommend_bot/03_demo_recommend.html'>Discord</a> | __Mastodon__ | <a href='../../../nocode/ch11_recommendations/05_recommend_bot/03_demo_recommend.html'>No Coding</a>_
+
+__Content for the social media platform Mastodon hasn't been created yet. Please try another platform.__

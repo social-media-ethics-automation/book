@@ -7,6 +7,7 @@ praw
 discord
 discord-py-interactions
 atproto
+Mastodon.py
 nltk
 nest_asyncio
 
